@@ -301,32 +301,6 @@
   </entry>
   
   <entry>
-    <title>运行相关</title>
-    <link href="http://www.hexiaojiao.top/2020/02/25/codeCollect2/"/>
-    <id>http://www.hexiaojiao.top/2020/02/25/codeCollect2/</id>
-    <published>2020-02-25T12:10:10.000Z</published>
-    <updated>2020-07-09T03:18:14.201Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="1-下载数据"><a href="#1-下载数据" class="headerlink" title="1 下载数据"></a>1 下载数据</h4><p><strong>描述</strong><br>根据链接下载文件<br><strong>代码</strong></p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">downloadOldFile</span><span class="params">($url,$rename,$ext)</span></span>&#123;</span><br><span class="line">    $file_path = <span class="string">'public/images/age_60-120/'</span>;</span><br><span class="line">    $ch = curl_init($url);</span><br><span class="line">    curl_setopt($ch, CURLOPT_HEADER, <span class="number">0</span>);</span><br><span class="line">    curl_setopt($ch, CURLOPT_RETURNTRANSFER, <span class="number">1</span>);</span><br><span class="line">    curl_setopt($ch, CURLOPT_BINARYTRANSFER, <span class="number">1</span>);</span><br><span class="line">    $rawdata=curl_exec ($ch);</span><br><span class="line">    curl_close ($ch);</span><br><span class="line">    <span class="comment">// 使用中文文件名需要转码</span></span><br><span class="line">    $fp = fopen($file_path. $rename .<span class="string">"."</span>.$ext,<span class="string">'w'</span>);</span><br><span class="line">    fwrite($fp, $rawdata);</span><br><span class="line">    fclose($fp);</span><br><span class="line">    <span class="comment">// 返回路径</span></span><br><span class="line">    <span class="keyword">return</span> $_SERVER[<span class="string">'DOCUMENT_ROOT'</span>].$file_path.$rename.<span class="string">"."</span>.$ext;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure><h4 id="2-按步骤执行方法"><a href="#2-按步骤执行方法" class="headerlink" title="2 按步骤执行方法"></a>2 按步骤执行方法</h4><p><strong>描述</strong><br>经常有需求：分页执行脚本，例如前1000条执行完后继续分页，此时就需要自动跳页执行<br><strong>代码</strong></p><p>```php<br>&lt;?php<br>    /**<br>     * @param mixed …$args<br>     * @return bool<br>     * @throws Exception<br>     */<br>    private function stepRun(…$args)<br>    {<br>        $count = $args[0];<br>        $method = $args[1];<br>        $step = array_key_exists(2, $args) ? $args[2] : 10;<br>        $limit = array_key_exists(3, $args) ? $args[3] : 10;<br>        $param = array_key_exists(4, $args) ? $args[4] : ‘’;<br>        $stepCount = ceil($count / $step);<br>        for ($nowStep = 0; $nowStep &lt; $stepCount; $nowStep ++) {<br>            $this-&gt;$method($limit, $nowStep * $step, $param);<br>            sleep(1);<br>        }<br>        sleep(1);<br>        return true;<br>    }<br>    // 调用<br>    //     $this-&gt;stepRun($exportCount, ‘loopChildData’, 1000, $ageId);</p><pre><code>// 执行方法/**    function loopChildData(int $limit = 1000, int $skip = 0, string $ageId = &apos;&apos;)    {        $data = $this-&gt;dao-&gt;conn-&gt;query([&apos;faceItems&apos; =&gt; [&apos;$in&apos; =&gt; [$ageId]], &apos;status&apos; =&gt; 2, &apos;apiCheckPass&apos; =&gt; true],            null, [&apos;limit&apos; =&gt; $limit, &apos;skip&apos; =&gt; $skip]);        foreach ($data as $v) {            $this-&gt;downloadChildFile(Url::createPrivateUrl($v[&apos;url&apos;]), $v[&apos;_id&apos;], &apos;jpg&apos;);        }    }**/</code></pre><p>?&gt;<br>``</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h4 id=&quot;1-下载数据&quot;&gt;&lt;a href=&quot;#1-下载数据&quot; class=&quot;headerlink&quot; title=&quot;1 下载数据&quot;&gt;&lt;/a&gt;1 下载数据&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;br&gt;根据链接下载文件&lt;br&gt;&lt;strong&gt;代码&lt;/strong&gt;
-      
-    
-    </summary>
-    
-    
-      <category term="有用代码段收集" scheme="http://www.hexiaojiao.top/categories/%E6%9C%89%E7%94%A8%E4%BB%A3%E7%A0%81%E6%AE%B5%E6%94%B6%E9%9B%86/"/>
-    
-    
-      <category term="学习" scheme="http://www.hexiaojiao.top/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
     <title>计算相关</title>
     <link href="http://www.hexiaojiao.top/2020/02/25/codeCollect/"/>
     <id>http://www.hexiaojiao.top/2020/02/25/codeCollect/</id>
@@ -340,6 +314,32 @@
       
       
         &lt;h4 id=&quot;1-计算矩形是否相交&quot;&gt;&lt;a href=&quot;#1-计算矩形是否相交&quot; class=&quot;headerlink&quot; title=&quot;1 计算矩形是否相交&quot;&gt;&lt;/a&gt;1 计算矩形是否相交&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;br&gt;给定两个矩形的左上角起始点坐标
+      
+    
+    </summary>
+    
+    
+      <category term="有用代码段收集" scheme="http://www.hexiaojiao.top/categories/%E6%9C%89%E7%94%A8%E4%BB%A3%E7%A0%81%E6%AE%B5%E6%94%B6%E9%9B%86/"/>
+    
+    
+      <category term="学习" scheme="http://www.hexiaojiao.top/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>运行相关</title>
+    <link href="http://www.hexiaojiao.top/2020/02/25/codeCollect2/"/>
+    <id>http://www.hexiaojiao.top/2020/02/25/codeCollect2/</id>
+    <published>2020-02-25T12:10:10.000Z</published>
+    <updated>2020-07-09T03:18:14.201Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="1-下载数据"><a href="#1-下载数据" class="headerlink" title="1 下载数据"></a>1 下载数据</h4><p><strong>描述</strong><br>根据链接下载文件<br><strong>代码</strong></p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">downloadOldFile</span><span class="params">($url,$rename,$ext)</span></span>&#123;</span><br><span class="line">    $file_path = <span class="string">'public/images/age_60-120/'</span>;</span><br><span class="line">    $ch = curl_init($url);</span><br><span class="line">    curl_setopt($ch, CURLOPT_HEADER, <span class="number">0</span>);</span><br><span class="line">    curl_setopt($ch, CURLOPT_RETURNTRANSFER, <span class="number">1</span>);</span><br><span class="line">    curl_setopt($ch, CURLOPT_BINARYTRANSFER, <span class="number">1</span>);</span><br><span class="line">    $rawdata=curl_exec ($ch);</span><br><span class="line">    curl_close ($ch);</span><br><span class="line">    <span class="comment">// 使用中文文件名需要转码</span></span><br><span class="line">    $fp = fopen($file_path. $rename .<span class="string">"."</span>.$ext,<span class="string">'w'</span>);</span><br><span class="line">    fwrite($fp, $rawdata);</span><br><span class="line">    fclose($fp);</span><br><span class="line">    <span class="comment">// 返回路径</span></span><br><span class="line">    <span class="keyword">return</span> $_SERVER[<span class="string">'DOCUMENT_ROOT'</span>].$file_path.$rename.<span class="string">"."</span>.$ext;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure><h4 id="2-按步骤执行方法"><a href="#2-按步骤执行方法" class="headerlink" title="2 按步骤执行方法"></a>2 按步骤执行方法</h4><p><strong>描述</strong><br>经常有需求：分页执行脚本，例如前1000条执行完后继续分页，此时就需要自动跳页执行<br><strong>代码</strong></p><p>```php<br>&lt;?php<br>    /**<br>     * @param mixed …$args<br>     * @return bool<br>     * @throws Exception<br>     */<br>    private function stepRun(…$args)<br>    {<br>        $count = $args[0];<br>        $method = $args[1];<br>        $step = array_key_exists(2, $args) ? $args[2] : 10;<br>        $limit = array_key_exists(3, $args) ? $args[3] : 10;<br>        $param = array_key_exists(4, $args) ? $args[4] : ‘’;<br>        $stepCount = ceil($count / $step);<br>        for ($nowStep = 0; $nowStep &lt; $stepCount; $nowStep ++) {<br>            $this-&gt;$method($limit, $nowStep * $step, $param);<br>            sleep(1);<br>        }<br>        sleep(1);<br>        return true;<br>    }<br>    // 调用<br>    //     $this-&gt;stepRun($exportCount, ‘loopChildData’, 1000, $ageId);</p><pre><code>// 执行方法/**    function loopChildData(int $limit = 1000, int $skip = 0, string $ageId = &apos;&apos;)    {        $data = $this-&gt;dao-&gt;conn-&gt;query([&apos;faceItems&apos; =&gt; [&apos;$in&apos; =&gt; [$ageId]], &apos;status&apos; =&gt; 2, &apos;apiCheckPass&apos; =&gt; true],            null, [&apos;limit&apos; =&gt; $limit, &apos;skip&apos; =&gt; $skip]);        foreach ($data as $v) {            $this-&gt;downloadChildFile(Url::createPrivateUrl($v[&apos;url&apos;]), $v[&apos;_id&apos;], &apos;jpg&apos;);        }    }**/</code></pre><p>?&gt;<br>``</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;1-下载数据&quot;&gt;&lt;a href=&quot;#1-下载数据&quot; class=&quot;headerlink&quot; title=&quot;1 下载数据&quot;&gt;&lt;/a&gt;1 下载数据&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;br&gt;根据链接下载文件&lt;br&gt;&lt;strong&gt;代码&lt;/strong&gt;
       
     
     </summary>
