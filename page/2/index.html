@@ -157,7 +157,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://www.hexiaojiao.top/2020/02/27/linuxUse/">
+    <link itemprop="mainEntityOfPage" href="http://www.hexiaojiao.top/2019/03/14/python/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpeg">
@@ -171,7 +171,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/02/27/linuxUse/" class="post-title-link" itemprop="url">linux命令大全</a>
+            <a href="/2019/03/14/python/" class="post-title-link" itemprop="url">python进阶</a>
         </h2>
 
         <div class="post-meta">
@@ -181,14 +181,14 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2020-02-27 18:00:00" itemprop="dateCreated datePublished" datetime="2020-02-27T18:00:00+08:00">2020-02-27</time>
+              <time title="Created: 2019-03-14 10:36:10" itemprop="dateCreated datePublished" datetime="2019-03-14T10:36:10+08:00">2019-03-14</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-07-09 11:17:43" itemprop="dateModified" datetime="2020-07-09T11:17:43+08:00">2020-07-09</time>
+                <time title="Modified: 2020-07-08 20:09:10" itemprop="dateModified" datetime="2020-07-08T20:09:10+08:00">2020-07-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -196,15 +196,109 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" itemprop="url" rel="index"><span itemprop="name">操作系统</span></a>
+                  <a href="/categories/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index"><span itemprop="name">服务端语言</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
+                  <a href="/categories/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E8%AF%AD%E8%A8%80/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="args和-kwargs"><a href="#args和-kwargs" class="headerlink" title="args和*kwargs"></a><em>args和*</em>kwargs</h1><h2 id="args"><a href="#args" class="headerlink" title="*args"></a>*args</h2><p><em>args和*</em>kwargs主要用于函数定义，可以将不定数量的参数传递给一个函数<br><strong>举例</strong><br>输入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">def test_var_args(f_arg, *argv):</span><br><span class="line">print(&quot;first normal arg:&quot;, f_arg)</span><br><span class="line">for arg in argv:</span><br><span class="line">print(&quot;another arg through *argv:&quot;, arg)</span><br><span class="line">test_var_args(&#39;yasoob&#39;, &#39;python&#39;, &#39;eggs&#39;, &#39;test&#39;)</span><br></pre></td></tr></table></figure>
+<p>输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">first normal arg: yasoob</span><br><span class="line">another arg through *argv: python</span><br><span class="line">another arg through *argv: eggs</span><br><span class="line">another arg through *argv: test</span><br></pre></td></tr></table></figure>
+<h2 id="kwargs"><a href="#kwargs" class="headerlink" title="*kwargs"></a>*kwargs</h2><p><em>kwargs允许将不定长度的键值对作为参数传递给一个函数，如果想在一个函数里处理带名字的参数，应该使用*</em>kwargs<br>使用示例如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">def getArgs(f_arg, *args):</span><br><span class="line">    print &quot;first is&quot; + f_arg</span><br><span class="line">    for arg in args:</span><br><span class="line">        print &quot;the data is&quot; + arg </span><br><span class="line">def gree(**kwa):</span><br><span class="line">    for key, value in kwa.items():</span><br><span class="line">        print(&quot;&#123;0&#125; &#x3D;&#x3D; &#123;1&#125;&quot;.format(key,value))</span><br><span class="line">#getArgs(&#39;name1&#39;, &#39;name2&#39;, &#39;name3&#39;, &#39;name4&#39;)</span><br><span class="line">gree(name&#x3D;&#39;test&#39;, age&#x3D;12, first&#x3D;&quot;apple&quot;)</span><br></pre></td></tr></table></figure>
+<p>输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">age &#x3D;&#x3D; 12</span><br><span class="line">name &#x3D;&#x3D; test</span><br><span class="line">first &#x3D;&#x3D; apple</span><br></pre></td></tr></table></figure>
+<h2 id="使用args和-kwargs来调用函数"><a href="#使用args和-kwargs来调用函数" class="headerlink" title="使用args和*kwargs来调用函数"></a>使用<em>args和*</em>kwargs来调用函数</h2><p>如果存在以下函数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">def test_args_kwargs(arg1, arg2, arg3):</span><br><span class="line">print(&quot;arg1:&quot;, arg1)</span><br><span class="line">print(&quot;arg2:&quot;, arg2)</span><br><span class="line">print(&quot;arg3:&quot;, arg3)</span><br></pre></td></tr></table></figure>
+<p>可以使用<em>args或*</em>kwargs来给这个函数传递参数<br>(1)如果是*args</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">args &#x3D; (&quot;two&quot;, 3, 5)</span><br><span class="line">test_args_kwargs(*args)</span><br></pre></td></tr></table></figure>
+<p>输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">arg1: two</span><br><span class="line">arg2: 3</span><br><span class="line">arg3: 5</span><br></pre></td></tr></table></figure>
+<p>(2)如果是**kwargs</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">kwargs &#x3D; &#123;&quot;arg3&quot;: 3, &quot;arg2&quot;: &quot;two&quot;, &quot;arg1&quot;: 5&#125;</span><br><span class="line">test_args_kwargs(**kwargs)</span><br></pre></td></tr></table></figure>
+<p>输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">arg1: 5</span><br><span class="line">arg2: two</span><br><span class="line">arg3: 3</span><br></pre></td></tr></table></figure>
+<p>(3)标准参数与<em>args、</em>kwargs在使用时的顺序<br>some_func(fargs, <em>args, *</em>kwargs)</p>
+<h4 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h4><p><strong>函数装饰器</strong><br><strong>猴子补丁</strong></p>
+<p>##调试**<br><a href="https://www.hexiaojiao.top/2019/03/14/python_debugger/" title="python debugger">python debugger</a><br>##生成器和迭代器<br>##Map Filter和Reduce</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://www.hexiaojiao.top/2019/03/14/python_debugger/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="Laurel He">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="贺小娇的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/03/14/python_debugger/" class="post-title-link" itemprop="url">python debugger</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-03-14 11:48:10" itemprop="dateCreated datePublished" datetime="2019-03-14T11:48:10+08:00">2019-03-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-07-08 20:12:51" itemprop="dateModified" datetime="2020-07-08T20:12:51+08:00">2020-07-08</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index"><span itemprop="name">服务端语言</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/linux/%E6%96%87%E4%BB%B6%E7%9B%B8%E5%85%B3/" itemprop="url" rel="index"><span itemprop="name">文件相关</span></a>
+                  <a href="/categories/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E8%AF%AD%E8%A8%80/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a>
                 </span>
             </span>
 
@@ -219,10 +313,12 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h2><h3 id="cat"><a href="#cat" class="headerlink" title="cat"></a>cat</h3><p><strong>描述</strong></p>
-<p>查看文件内容<br><strong>参数</strong></p>
-<p>-n 或 –number 由 1 开始对所有输出的行数编号<br>-b 或 –number-nonblank 和 -n 相似，只不过对于空白行不编号<br>-s 或 –squeeze-blank 当遇到有连续两行以上的空白行，就代换为一行的空白行<br>-v 或 –show-nonprinting<br><strong>举例</strong><br>1 从键盘创建一个文件：<br><img src="/images/linux/cat1.png" alt="towrow"><br>2 将几个文件合并成一个文件：<br><img src="/images/linux/cat2.png" alt="towrow"></p>
-<h3 id="cd"><a href="#cd" class="headerlink" title="cd"></a>cd</h3><p><strong>描述</strong></p>
+          <p>##准备<br><strong>来源</strong><br><a href="http://python.jobbole.com/81184/" target="_blank" rel="noopener">http://python.jobbole.com/81184/</a><br><strong>初始代码</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import sys</span><br><span class="line">def add(num1&#x3D;0, num2&#x3D;0):</span><br><span class="line">    return int(num1) + int(num2)</span><br><span class="line">def sub(num1&#x3D;0, num2&#x3D;0):</span><br><span class="line">    return int(num1) - int(num2)</span><br><span class="line">def main():</span><br><span class="line">    #Assuming our inputs are valid numbers</span><br><span class="line">    print sys.argv</span><br><span class="line">    addition &#x3D; add(sys.argv[1], sys.argv[2])</span><br><span class="line">    print addition</span><br><span class="line">    subtraction &#x3D; sub(sys.argv[1], sys.argv[2])</span><br><span class="line">    print subtraction</span><br><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+<h2 id="基础用法"><a href="#基础用法" class="headerlink" title="基础用法"></a>基础用法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import pdb</span><br><span class="line">pdb.set_trace() &#x2F;&#x2F;设置断点</span><br></pre></td></tr></table></figure>
+<p>在程序中添加断点</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">import pdb</span><br><span class="line">import sys</span><br><span class="line">def add(num1&#x3D;0, num2&#x3D;0):</span><br><span class="line">    return int(num1) + int(num2)</span><br><span class="line">def sub(num1&#x3D;0, num2&#x3D;0):</span><br><span class="line">    return int(num1) - int(num2)</span><br><span class="line">def main():</span><br><span class="line">    #Assuming our inputs are valid numbers</span><br><span class="line">    print sys.argv</span><br><span class="line">    pdb.set_trace() # &lt;-- Break point added here</span><br><span class="line">    addition &#x3D; add(sys.argv[1], sys.argv[2])</span><br><span class="line">    print addition</span><br><span class="line">    subtraction &#x3D; sub(sys.argv[1], sys.argv[2])</span><br><span class="line">    print subtraction</span><br><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+<h2 id="触发调试器"><a href="#触发调试器" class="headerlink" title="触发调试器"></a>触发调试器</h2><p>程序会自动在断点处停止执行<br><strong>下一行n</strong><br>输入n运行到下一行<br><strong>打印p</strong><br>可以使用c使pdb跳到末尾或者直到下一个断点<br>如果想知道sys.argv包含的内容，可以输入p sys.argv<br>使用这种方法可以方便地查看变量中实际储存着什么值<br><strong>单步s</strong><br>可以使用s进入函数内部<br>r返回到进入函数的返回语句<br><strong>动态添加断点b</strong><br>b 18:代表在18行设置一个断点<br><strong>列表l</strong><br>l可以显示出此刻在代码中的位置<br><strong>结束</strong><br>q<br><strong>w</strong><br>w:显示当前正在执行的代码行的上下文信息<br><strong>a</strong><br>打印当前函数的参数列表</p>
 
       
     </div>
@@ -242,7 +338,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://www.hexiaojiao.top/2020/02/25/codeCollect/">
+    <link itemprop="mainEntityOfPage" href="http://www.hexiaojiao.top/2019/03/14/generators/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpeg">
@@ -256,7 +352,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/02/25/codeCollect/" class="post-title-link" itemprop="url">计算相关</a>
+            <a href="/2019/03/14/generators/" class="post-title-link" itemprop="url">python Generators</a>
         </h2>
 
         <div class="post-meta">
@@ -266,557 +362,7 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2020-02-25 20:10:10" itemprop="dateCreated datePublished" datetime="2020-02-25T20:10:10+08:00">2020-02-25</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-07-09 11:21:33" itemprop="dateModified" datetime="2020-07-09T11:21:33+08:00">2020-07-09</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%9C%89%E7%94%A8%E4%BB%A3%E7%A0%81%E6%AE%B5%E6%94%B6%E9%9B%86/" itemprop="url" rel="index"><span itemprop="name">有用代码段收集</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h4 id="1-计算矩形是否相交"><a href="#1-计算矩形是否相交" class="headerlink" title="1 计算矩形是否相交"></a>1 计算矩形是否相交</h4><p><strong>描述</strong><br>给定两个矩形的左上角起始点坐标和矩形的宽，高，计算这两个矩形是否相交<br><strong>分析</strong><br> 1 矩形1左上角坐标p1,右下角坐标p2,矩形2左上角坐标p3,右下角坐标p4<br> 2 M点坐标为P1与P3点在X方向较大值与Y方向较大值的交点<br> 3 N点坐标为P2与P4点在X方向较小值与Y方向较小值的交点<br> 4 如果M点的X坐标和Y坐标值均比N点相应的X坐标和Y坐标值小，亦即M和N可以分别构成一个矩形的左上角点和右上角点，则两矩形相交；其余情况则不相交<br> <strong>代码</strong><br> <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkRectInterSect</span><span class="params">($rect1, $rect2)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        $x1 = $rect1[<span class="string">'x'</span>];   $w1 = $rect1[<span class="string">'w'</span>];</span><br><span class="line">        $y1 = $rect1[<span class="string">'y'</span>];   $h1 = $rect1[<span class="string">'h'</span>];</span><br><span class="line">        $x2 = $rect2[<span class="string">'x'</span>];   $w2 = $rect2[<span class="string">'w'</span>];</span><br><span class="line">        $y2 = $rect2[<span class="string">'y'</span>];   $h2 = $rect2[<span class="string">'h'</span>];</span><br><span class="line">        $p1 = [$x1, $y1];</span><br><span class="line">        $p2 = [$x1 + $w1, $y1 + $h1];</span><br><span class="line">        $p3 = [$x2, $y2];</span><br><span class="line">        $p4 = [$x2 + $w2, $y2 + $h2];</span><br><span class="line"></span><br><span class="line">        $M = [max($p1[<span class="number">0</span>], $p3[<span class="number">0</span>]), max($p1[<span class="number">1</span>], $p1[<span class="number">1</span>])];</span><br><span class="line">        $N = [min($p2[<span class="number">0</span>], $p4[<span class="number">0</span>]), min($p2[<span class="number">1</span>], $p4[<span class="number">1</span>])];</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> ($M[<span class="number">0</span>] &lt; $N[<span class="number">0</span>] &amp;&amp; $M[<span class="number">1</span>] &lt; $N[<span class="number">1</span>]) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure></p>
-<h4 id="2-json转csv"><a href="#2-json转csv" class="headerlink" title="2 json转csv"></a>2 json转csv</h4><p><strong>描述</strong><br>需要将数据库数据导出为csv文件<br><strong>代码</strong></p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">getCsvData</span><span class="params">(int $limit = <span class="number">1000</span>, int $skip = <span class="number">0</span>, string $ageId = <span class="string">''</span>)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        $data = <span class="keyword">$this</span>-&gt;dao-&gt;conn-&gt;query([<span class="string">'faceItems'</span> =&gt; [<span class="string">'$in'</span> =&gt; [$ageId]], <span class="string">'status'</span> =&gt; <span class="number">2</span>, <span class="string">'apiCheckPass'</span> =&gt; <span class="keyword">true</span>],</span><br><span class="line">            <span class="keyword">null</span>, [<span class="string">'limit'</span> =&gt; $limit, <span class="string">'skip'</span> =&gt; $skip]);</span><br><span class="line">        <span class="keyword">foreach</span> ($data <span class="keyword">as</span> $v) &#123;</span><br><span class="line">            <span class="keyword">foreach</span> ($v <span class="keyword">as</span> $key =&gt; $values) &#123;</span><br><span class="line">                <span class="keyword">if</span> (is_array($values)) &#123;</span><br><span class="line">                    $v[$key] = implode(<span class="string">'|'</span>, $values);</span><br><span class="line">                &#125;</span><br><span class="line">                (string)$v[$key];</span><br><span class="line">            &#125;</span><br><span class="line">            $exportData = implode(<span class="string">','</span>, $v);</span><br><span class="line">            $exportData = $exportData . <span class="string">"\r\n"</span>;</span><br><span class="line">            $myfile = fopen(<span class="string">"data.csv"</span>, <span class="string">"a"</span>) <span class="keyword">or</span> <span class="keyword">die</span>(<span class="string">"Unable to open file!"</span>);</span><br><span class="line">            <span class="keyword">$this</span>-&gt;writeToCsvFile($data, $myfile, $exportData);</span><br><span class="line">            fclose($myfile);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">writeToCsvFile</span><span class="params">(array $data, $myfile, $exportData)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line"><span class="comment">//        $txt = \GuzzleHttp\json_encode($data);</span></span><br><span class="line">        fwrite($myfile, $exportData);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://www.hexiaojiao.top/2020/02/25/codeCollect2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="Laurel He">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="贺小娇的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/02/25/codeCollect2/" class="post-title-link" itemprop="url">运行相关</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-02-25 20:10:10" itemprop="dateCreated datePublished" datetime="2020-02-25T20:10:10+08:00">2020-02-25</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-07-09 11:18:14" itemprop="dateModified" datetime="2020-07-09T11:18:14+08:00">2020-07-09</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%9C%89%E7%94%A8%E4%BB%A3%E7%A0%81%E6%AE%B5%E6%94%B6%E9%9B%86/" itemprop="url" rel="index"><span itemprop="name">有用代码段收集</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h4 id="1-下载数据"><a href="#1-下载数据" class="headerlink" title="1 下载数据"></a>1 下载数据</h4><p><strong>描述</strong><br>根据链接下载文件<br><strong>代码</strong></p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">downloadOldFile</span><span class="params">($url,$rename,$ext)</span></span>&#123;</span><br><span class="line">    $file_path = <span class="string">'public/images/age_60-120/'</span>;</span><br><span class="line">    $ch = curl_init($url);</span><br><span class="line">    curl_setopt($ch, CURLOPT_HEADER, <span class="number">0</span>);</span><br><span class="line">    curl_setopt($ch, CURLOPT_RETURNTRANSFER, <span class="number">1</span>);</span><br><span class="line">    curl_setopt($ch, CURLOPT_BINARYTRANSFER, <span class="number">1</span>);</span><br><span class="line">    $rawdata=curl_exec ($ch);</span><br><span class="line">    curl_close ($ch);</span><br><span class="line">    <span class="comment">// 使用中文文件名需要转码</span></span><br><span class="line">    $fp = fopen($file_path. $rename .<span class="string">"."</span>.$ext,<span class="string">'w'</span>);</span><br><span class="line">    fwrite($fp, $rawdata);</span><br><span class="line">    fclose($fp);</span><br><span class="line">    <span class="comment">// 返回路径</span></span><br><span class="line">    <span class="keyword">return</span> $_SERVER[<span class="string">'DOCUMENT_ROOT'</span>].$file_path.$rename.<span class="string">"."</span>.$ext;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
-<h4 id="2-按步骤执行方法"><a href="#2-按步骤执行方法" class="headerlink" title="2 按步骤执行方法"></a>2 按步骤执行方法</h4><p><strong>描述</strong><br>经常有需求：分页执行脚本，例如前1000条执行完后继续分页，此时就需要自动跳页执行<br><strong>代码</strong></p>
-<p>```php<br>&lt;?php<br>    /**<br>     * @param mixed …$args<br>     * @return bool<br>     * @throws Exception<br>     */<br>    private function stepRun(…$args)<br>    {<br>        $count = $args[0];<br>        $method = $args[1];<br>        $step = array_key_exists(2, $args) ? $args[2] : 10;<br>        $limit = array_key_exists(3, $args) ? $args[3] : 10;<br>        $param = array_key_exists(4, $args) ? $args[4] : ‘’;<br>        $stepCount = ceil($count / $step);<br>        for ($nowStep = 0; $nowStep &lt; $stepCount; $nowStep ++) {<br>            $this-&gt;$method($limit, $nowStep * $step, $param);<br>            sleep(1);<br>        }<br>        sleep(1);<br>        return true;<br>    }<br>    // 调用<br>    //     $this-&gt;stepRun($exportCount, ‘loopChildData’, 1000, $ageId);</p>
-<pre><code>// 执行方法
-/**
-    function loopChildData(int $limit = 1000, int $skip = 0, string $ageId = &apos;&apos;)
-    {
-        $data = $this-&gt;dao-&gt;conn-&gt;query([&apos;faceItems&apos; =&gt; [&apos;$in&apos; =&gt; [$ageId]], &apos;status&apos; =&gt; 2, &apos;apiCheckPass&apos; =&gt; true],
-            null, [&apos;limit&apos; =&gt; $limit, &apos;skip&apos; =&gt; $skip]);
-        foreach ($data as $v) {
-            $this-&gt;downloadChildFile(Url::createPrivateUrl($v[&apos;url&apos;]), $v[&apos;_id&apos;], &apos;jpg&apos;);
-        }
-    }
-**/</code></pre><p>?&gt;<br>``</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://www.hexiaojiao.top/2020/01/16/usefulCode2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="Laurel He">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="贺小娇的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/01/16/usefulCode2/" class="post-title-link" itemprop="url">有用的代码段-ts篇</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-01-16 19:34:10" itemprop="dateCreated datePublished" datetime="2020-01-16T19:34:10+08:00">2020-01-16</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-07-09 11:26:11" itemprop="dateModified" datetime="2020-07-09T11:26:11+08:00">2020-07-09</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%B7%A5%E4%BD%9C%E7%BB%8F%E9%AA%8C/" itemprop="url" rel="index"><span itemprop="name">工作经验</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="查询数组中值相等的"><a href="#查询数组中值相等的" class="headerlink" title="查询数组中值相等的"></a>查询数组中值相等的</h1><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">modules.modules.find(<span class="function"><span class="params">item</span> =&gt;</span> item.route === route).chinese</span><br></pre></td></tr></table></figure>
-<h1 id="ref调用子组件"><a href="#ref调用子组件" class="headerlink" title="ref调用子组件"></a>ref调用子组件</h1><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;FacePointsMarkTool ref=&#123;<span class="function"><span class="params">com</span> =&gt;</span> <span class="keyword">this</span>.com = com&#125; customRightRender=&#123;<span class="keyword">this</span>.customRightRender&#125; hideSaved=&#123;<span class="keyword">this</span>.handleHideSaved&#125; dataSource=&#123;dataSource&#125; loadMore=&#123;<span class="keyword">this</span>.getFaceData&#125; isShowFacePlus saveFaceData=&#123;<span class="keyword">this</span>.saveFaceData&#125;&gt;&lt;<span class="regexp">/FacePointsMarkTool&gt;</span></span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://www.hexiaojiao.top/2020/01/16/usefulCode1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="Laurel He">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="贺小娇的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/01/16/usefulCode1/" class="post-title-link" itemprop="url">有用的代码段-php篇</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-01-16 12:34:10" itemprop="dateCreated datePublished" datetime="2020-01-16T12:34:10+08:00">2020-01-16</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-07-09 11:26:04" itemprop="dateModified" datetime="2020-07-09T11:26:04+08:00">2020-07-09</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%B7%A5%E4%BD%9C%E7%BB%8F%E9%AA%8C/" itemprop="url" rel="index"><span itemprop="name">工作经验</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="分步骤执行"><a href="#分步骤执行" class="headerlink" title="分步骤执行"></a>分步骤执行</h1><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> mixed ...$args</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> bool</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@throws</span> Exception</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">stepRun</span><span class="params">(...$args)</span>: <span class="title">bool</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    $count = $args[<span class="number">0</span>];</span><br><span class="line">    $method = $args[<span class="number">1</span>];</span><br><span class="line">    $step = array_key_exists(<span class="number">2</span>, $args) ? $args[<span class="number">2</span>] : <span class="number">10</span>;</span><br><span class="line">    $limit = array_key_exists(<span class="number">3</span>, $args) ? $args[<span class="number">3</span>] : <span class="number">10</span>;</span><br><span class="line">    $param = array_key_exists(<span class="number">4</span>, $args) ? $args[<span class="number">4</span>] : <span class="string">''</span>;</span><br><span class="line">    $stepCount = ceil($count / $step);</span><br><span class="line">    <span class="keyword">for</span> ($nowStep = <span class="number">0</span>; $nowStep &lt; $stepCount; $nowStep ++) &#123;</span><br><span class="line">        <span class="keyword">$this</span>-&gt;$method($limit, $nowStep * $step, $param);</span><br><span class="line">        sleep(<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    sleep(<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">$this</span>-&gt;stepRun($groupChangeCount, <span class="string">'loopGetData'</span>, <span class="number">30</span>, <span class="number">30</span>);</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>可运用于需要遍历数据库数据，对数据执行操作的功能上。</p>
-<h1 id="mongodb查询"><a href="#mongodb查询" class="headerlink" title="mongodb查询"></a>mongodb查询</h1><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">/** 宜宾爱你宝贝</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> bool|int</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@throws</span> \yii\base\InvalidConfigException</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">checkAssign</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    $query = [</span><br><span class="line">        <span class="string">'$or'</span> =&gt; [</span><br><span class="line">            [<span class="string">'isMarked'</span> =&gt; <span class="keyword">false</span>],</span><br><span class="line">            [<span class="string">'isMarked'</span> =&gt; [<span class="string">'$exists'</span> =&gt; <span class="keyword">false</span>]]</span><br><span class="line">        ],</span><br><span class="line">        <span class="string">'faceChecked'</span> =&gt; <span class="keyword">true</span>,</span><br><span class="line">        <span class="string">'assignAuthor'</span> =&gt; BackendCookieHelper::getName()];</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">$this</span>-&gt;dao-&gt;conn-&gt;count($query) &gt;= <span class="number">20</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">unset</span>($query[<span class="string">'assignAuthor'</span>]);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">$this</span>-&gt;assignToPerson($query);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://www.hexiaojiao.top/2019/12/10/unitTest/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="Laurel He">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="贺小娇的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/12/10/unitTest/" class="post-title-link" itemprop="url">测试</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2019-12-10 12:34:10" itemprop="dateCreated datePublished" datetime="2019-12-10T12:34:10+08:00">2019-12-10</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-07-09 11:25:14" itemprop="dateModified" datetime="2020-07-09T11:25:14+08:00">2020-07-09</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">学习</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AD%A6%E4%B9%A0/%E6%B5%8B%E8%AF%95/" itemprop="url" rel="index"><span itemprop="name">测试</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="单元测试"><a href="#单元测试" class="headerlink" title="单元测试"></a>单元测试</h1><h1 id="mock"><a href="#mock" class="headerlink" title="mock"></a>mock</h1><h1 id="接口测试"><a href="#接口测试" class="headerlink" title="接口测试"></a>接口测试</h1><h1 id="stub"><a href="#stub" class="headerlink" title="stub"></a>stub</h1><h1 id="mock-1"><a href="#mock-1" class="headerlink" title="mock"></a>mock</h1><h1 id="fakeserver"><a href="#fakeserver" class="headerlink" title="fakeserver"></a>fakeserver</h1>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://www.hexiaojiao.top/2019/12/10/webassembly_go_1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="Laurel He">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="贺小娇的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/12/10/webassembly_go_1/" class="post-title-link" itemprop="url">使用go编写webassembly</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2019-12-10 12:34:10" itemprop="dateCreated datePublished" datetime="2019-12-10T12:34:10+08:00">2019-12-10</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-07-09 11:27:57" itemprop="dateModified" datetime="2020-07-09T11:27:57+08:00">2020-07-09</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">学习</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="使用go编写webassembly并在浏览器执行"><a href="#使用go编写webassembly并在浏览器执行" class="headerlink" title="使用go编写webassembly并在浏览器执行"></a>使用go编写webassembly并在浏览器执行</h1><h1 id="参考博客"><a href="#参考博客" class="headerlink" title="参考博客"></a>参考博客</h1><p><a href="https://www.cnblogs.com/baizx/p/9602581.html" target="_blank" rel="noopener">用go写WebAssembly入门</a></p>
-<h2 id="下载安装"><a href="#下载安装" class="headerlink" title="下载安装"></a>下载安装</h2><p><a href="https://www.runoob.com/go/go-environment.html" target="_blank" rel="noopener">go</a></p>
-<h2 id="编写测试文件hello-go"><a href="#编写测试文件hello-go" class="headerlink" title="编写测试文件hello.go"></a>编写测试文件hello.go</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import &quot;fmt&quot;</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">        fmt.Println(&quot;Hello World!&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="生成wasm文件"><a href="#生成wasm文件" class="headerlink" title="生成wasm文件"></a>生成wasm文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在windows下需要先设置环境变量：&#96;&#96;&#96; $env:GOARCH&#x3D;&quot;wasm&quot;;$env:GOOS&#x3D;&quot;js&quot;;</span><br></pre></td></tr></table></figure>
-<h2 id="添加依赖"><a href="#添加依赖" class="headerlink" title="添加依赖"></a>添加依赖</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp $(go env GOROOT)&#x2F;misc&#x2F;wasm&#x2F;wasm_exec.&#123;html,js&#125; .</span><br></pre></td></tr></table></figure>
-<h2 id="添加一个测试http服务器"><a href="#添加一个测试http服务器" class="headerlink" title="添加一个测试http服务器"></a>添加一个测试http服务器</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;http.go</span><br><span class="line">package main</span><br><span class="line"></span><br><span class="line">import (</span><br><span class="line">    &quot;flag&quot;</span><br><span class="line">    &quot;log&quot;</span><br><span class="line">    &quot;net&#x2F;http&quot;</span><br><span class="line">    &quot;strings&quot;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">var (</span><br><span class="line">    listen &#x3D; flag.String(&quot;listen&quot;, &quot;:8080&quot;, &quot;listen address&quot;)</span><br><span class="line">    dir    &#x3D; flag.String(&quot;dir&quot;, &quot;.&quot;, &quot;directory to serve&quot;)</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">    flag.Parse()</span><br><span class="line">    log.Printf(&quot;listening on %q...&quot;, *listen)</span><br><span class="line">    log.Fatal(http.ListenAndServe(*listen, http.HandlerFunc(func(resp http.ResponseWriter, req *http.Request) &#123;</span><br><span class="line">        if strings.HasSuffix(req.URL.Path, &quot;.wasm&quot;) &#123;</span><br><span class="line">            resp.Header().Set(&quot;content-type&quot;, &quot;application&#x2F;wasm&quot;)</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        http.FileServer(http.Dir(*dir)).ServeHTTP(resp, req)</span><br><span class="line">    &#125;)))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="执行"><a href="#执行" class="headerlink" title="执行"></a>执行</h2><p>go run http.go</p>
-<h2 id="查看效果"><a href="#查看效果" class="headerlink" title="查看效果"></a>查看效果</h2><p>浏览器打开<a href="http://localhost:8080/wasm_exec.html，点击run，控制台可以看到效果" target="_blank" rel="noopener">http://localhost:8080/wasm_exec.html，点击run，控制台可以看到效果</a></p>
-<h2 id="node执行"><a href="#node执行" class="headerlink" title="node执行"></a>node执行</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node wasm_exec.js test.wasm</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://www.hexiaojiao.top/2019/10/29/design_singleton/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="Laurel He">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="贺小娇的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/10/29/design_singleton/" class="post-title-link" itemprop="url">单例模式</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2019-10-29 17:40:10" itemprop="dateCreated datePublished" datetime="2019-10-29T17:40:10+08:00">2019-10-29</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-07-09 11:23:44" itemprop="dateModified" datetime="2020-07-09T11:23:44+08:00">2020-07-09</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" itemprop="url" rel="index"><span itemprop="name">设计模式</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="概念介绍"><a href="#概念介绍" class="headerlink" title="概念介绍"></a>概念介绍</h1><h2 id="情景介绍"><a href="#情景介绍" class="headerlink" title="情景介绍"></a>情景介绍</h2><p>一个类只需要被实例化一次，但是不应该由调用方来判断是否被实例化过</p>
-<h2 id="基础介绍"><a href="#基础介绍" class="headerlink" title="基础介绍"></a>基础介绍</h2><p>所有类都有构造方法，不编码则系统默认生成空的构造方法，若有显示定义的构造方法，默认的构造方法就会失效。<br>类把构造方法设置为私有，使所有的方法都不能直接实例化这个类。然后类内部写一个公共方法来判断这个类是否被实例化过，调用方无需判断</p>
-<h2 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h2><p>单例模式：保证一个类仅有一个实例，并提供一个访问它的全局访问点。<br>通常可以让一个全局变量使得一个对象被访问，但它不能防止实例化多个对象。一个最好的办法就是，让类自身负责保存它的唯一实例，这个类可以保证没有其他实例可以被创建，并且它可以提供一个访问该实例的方法。    </p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://www.hexiaojiao.top/2019/10/22/react_06/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="Laurel He">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="贺小娇的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/10/22/react_06/" class="post-title-link" itemprop="url">react学习-Props,state和组件树</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2019-10-22 18:37:10" itemprop="dateCreated datePublished" datetime="2019-10-22T18:37:10+08:00">2019-10-22</time>
+              <time title="Created: 2019-03-14 14:41:10" itemprop="dateCreated datePublished" datetime="2019-03-14T14:41:10+08:00">2019-03-14</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
@@ -825,19 +371,6 @@
                 <span class="post-meta-item-text">Edited on</span>
                 <time title="Modified: 2020-07-08 19:28:40" itemprop="dateModified" datetime="2020-07-08T19:28:40+08:00">2020-07-08</time>
               </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%89%8D%E7%AB%AF/react/" itemprop="url" rel="index"><span itemprop="name">react</span></a>
-                </span>
-            </span>
 
           
 
@@ -850,7 +383,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="react学习手册"><a href="#react学习手册" class="headerlink" title="react学习手册"></a>react学习手册</h1><h2 id="属性验证"><a href="#属性验证" class="headerlink" title="属性验证"></a>属性验证</h2><p>javascript是弱类型语言，可更改变量的类型，难以查找类型错误。</p>
+          <p>##迭代器Iterator<br>迭代器是一个可以让程序员遍历一个容器的对象，一个迭代器在遍历并读取一个容器的数据元素时不会执行一个迭代。<br><strong>迭代器三个部分</strong><br>可迭代对象<br>迭代器<br>迭代<br><strong>可迭代对象</strong><br>python中的任意对象，只要定义了可以返回一个迭代器的<strong>iter</strong>方法，或者定义了可以支持下标索引的<strong>getitem</strong>方法，那么就是一个可跌打对象<br><strong>迭代器</strong><br>任意对象，只要定义了next(Python2)或者<strong>next</strong>方法，它就是一个迭代器<br><strong>迭代</strong><br>从某个地方取出一个元素的过程，当使用一个循环来遍历某个东西时，这个过程本身就叫做迭代。<br>##生成器Generators<br>生成器也是一种迭代器，但是只能对其迭代一次</p>
 
       
     </div>
@@ -870,7 +403,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://www.hexiaojiao.top/2019/10/22/react_base/">
+    <link itemprop="mainEntityOfPage" href="http://www.hexiaojiao.top/2019/03/14/python_base/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpeg">
@@ -884,7 +417,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2019/10/22/react_base/" class="post-title-link" itemprop="url">react学习-基础</a>
+            <a href="/2019/03/14/python_base/" class="post-title-link" itemprop="url">补充python基础知识</a>
         </h2>
 
         <div class="post-meta">
@@ -894,14 +427,14 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2019-10-22 18:37:10" itemprop="dateCreated datePublished" datetime="2019-10-22T18:37:10+08:00">2019-10-22</time>
+              <time title="Created: 2019-03-14 15:26:10" itemprop="dateCreated datePublished" datetime="2019-03-14T15:26:10+08:00">2019-03-14</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-07-08 19:28:40" itemprop="dateModified" datetime="2020-07-08T19:28:40+08:00">2020-07-08</time>
+                <time title="Modified: 2020-07-08 20:12:42" itemprop="dateModified" datetime="2020-07-08T20:12:42+08:00">2020-07-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -909,11 +442,11 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                  <a href="/categories/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index"><span itemprop="name">服务端语言</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%89%8D%E7%AB%AF/react/" itemprop="url" rel="index"><span itemprop="name">react</span></a>
+                  <a href="/categories/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E8%AF%AD%E8%A8%80/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a>
                 </span>
             </span>
 
@@ -928,7 +461,681 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="相关概念介绍"><a href="#相关概念介绍" class="headerlink" title="相关概念介绍"></a>相关概念介绍</h1><h2 id="react"><a href="#react" class="headerlink" title="react"></a>react</h2><h2 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h2><h2 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h2><h2 id="Redux"><a href="#Redux" class="headerlink" title="Redux"></a>Redux</h2><h2 id="react-route"><a href="#react-route" class="headerlink" title="react-route"></a>react-route</h2><h2 id="webpack"><a href="#webpack" class="headerlink" title="webpack"></a>webpack</h2>
+          <p>##python运算符<br><strong>幂</strong><br>返回x的y次幂 10<strong>20<br>**取整除</strong><br>//:返回商的整数部分，向下取整</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://www.hexiaojiao.top/2019/03/15/pythonStructure/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="Laurel He">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="贺小娇的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/03/15/pythonStructure/" class="post-title-link" itemprop="url">python数据结构</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-03-15 09:47:00" itemprop="dateCreated datePublished" datetime="2019-03-15T09:47:00+08:00">2019-03-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-07-08 20:13:05" itemprop="dateModified" datetime="2020-07-08T20:13:05+08:00">2020-07-08</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index"><span itemprop="name">服务端语言</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E8%AF%AD%E8%A8%80/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="列表-List"><a href="#列表-List" class="headerlink" title="列表(List)"></a>列表(List)</h1><p><a href="https://www.hexiaojiao.top/2019/03/15/pythonlist/" title="python list">python list</a></p>
+<h1 id="deque双向队列"><a href="#deque双向队列" class="headerlink" title="deque双向队列"></a>deque双向队列</h1><p><a href="https://www.hexiaojiao.top/2019/03/15/pythondeque/" title="python deque">python deque</a></p>
+<h1 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h1><p><a href="https://www.hexiaojiao.top/2019/03/15/pythonset/" title="python set">python set</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://www.hexiaojiao.top/2019/03/15/pythondeque/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="Laurel He">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="贺小娇的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/03/15/pythondeque/" class="post-title-link" itemprop="url">python数据结构之双向队列</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-03-15 09:47:00" itemprop="dateCreated datePublished" datetime="2019-03-15T09:47:00+08:00">2019-03-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-07-08 20:12:54" itemprop="dateModified" datetime="2020-07-08T20:12:54+08:00">2020-07-08</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index"><span itemprop="name">服务端语言</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E8%AF%AD%E8%A8%80/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>介绍</strong><br>两端都可以操作的序列<br><strong>基本操作</strong><br>创建：<br>import collections<br>d = collections.deque()<br>往右边添加一个元素：<br>d.append(1)<br>d.append(‘adc’)<br>往左添加一个元素：<br>d.appendleft(3)<br>清空队列：<br>d.clear<br>浅拷贝：<br>d1 = d.copy()<br>返回指定元素的出现次数：<br>d.count(1)<br>从队列右边扩展一个列表的元素：<br>d.extend([3,4,5])<br>从队列左边扩展一个列表的元素：<br>d.extendleft([3,4,5])<br>查找某个元素的索引位置：<br>d.index(“c”, 0, 2) //指定查找区间<br>在指定位置插入元素：<br>d.insert(2,”z”)<br>删除最右边一个元素（返回删除的元素）<br>d.pop()<br>删除最左边一个元素（返回删除的元素）<br>d.popleft()<br>删除指定元素<br>d.remove(“c”)<br>队列翻转<br>d.reverse()<br>把右边元素放左边<br>d.rotate(2) (每个元素向右移动n个，右边元素往左进)</p>
+<p>feature/20190315_auto_reconcile_log<br><a href="http://finance.administration.dev5.tff.com/reconciliation/download?platform=%E9%A9%AC%E8%9C%82%E7%AA%9D&amp;per_page=683&amp;page=1" target="_blank" rel="noopener">http://finance.administration.dev5.tff.com/reconciliation/download?platform=%E9%A9%AC%E8%9C%82%E7%AA%9D&amp;per_page=683&amp;page=1</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://www.hexiaojiao.top/2019/03/15/pythonlist/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="Laurel He">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="贺小娇的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/03/15/pythonlist/" class="post-title-link" itemprop="url">python数据结构之列表</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-03-15 13:47:00" itemprop="dateCreated datePublished" datetime="2019-03-15T13:47:00+08:00">2019-03-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-07-08 20:12:57" itemprop="dateModified" datetime="2020-07-08T20:12:57+08:00">2020-07-08</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index"><span itemprop="name">服务端语言</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E8%AF%AD%E8%A8%80/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>介绍</strong></p>
+<p>可以作为一个方括号内的逗号分隔值出现，列表的数据项不需要具有相同的类型<br><strong>操作</strong><br>（1）取值：<br>list[0], list[0:3] （list[-2]代表读取列表中倒数第二个元素）<br>（2）更新列表<br>添加元素：append–&gt; list.append(‘test’)<br>删除元素：del—&gt; del list[2]<br><strong>脚本操作符</strong></p>
+<table>
+<thead>
+<tr>
+<th>python表达式</th>
+<th>结果</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>len([1,2,3])</td>
+<td>3</td>
+<td>长度</td>
+</tr>
+<tr>
+<td>[1, 2, 3] + [4, 5, 6]</td>
+<td>[1, 2, 3, 4, 5, 6]</td>
+<td>组合</td>
+</tr>
+<tr>
+<td>[‘Hi!’] * 4</td>
+<td>[‘Hi!’, ‘Hi!’, ‘Hi!’, ‘Hi!’]</td>
+<td>重复</td>
+</tr>
+<tr>
+<td>3 in [1, 2, 3]</td>
+<td>True</td>
+<td>元素是否存在于列表中</td>
+</tr>
+<tr>
+<td>for x in [1, 2, 3]: print x,</td>
+<td>1 2 3</td>
+<td>迭代</td>
+</tr>
+<tr>
+<td><strong>函数&amp;方法</strong></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>cmp(list1, list2)</td>
+<td>比较两个列表的元素</td>
+</tr>
+<tr>
+<td>len(list)</td>
+<td>列表元素个数</td>
+</tr>
+<tr>
+<td>max(list)</td>
+<td>返回列表元素最大值</td>
+</tr>
+<tr>
+<td>min(list)</td>
+<td>返回列表元素最小值</td>
+</tr>
+<tr>
+<td>list(seq)</td>
+<td>将元组转换为列表</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>list.append(obj)</td>
+<td>在列表末尾添加新的对象</td>
+</tr>
+<tr>
+<td>list.count(obj)</td>
+<td>统计某个元素在列表中出现的次数</td>
+</tr>
+<tr>
+<td>list.extend(seq)</td>
+<td>在列表末尾一次性追加另一个序列的多个值（用新列表扩展原来的列表）</td>
+</tr>
+<tr>
+<td>list.index(obj)</td>
+<td>从列表中找出某个值第一个匹配项的索引位置</td>
+</tr>
+<tr>
+<td>list.insert(index, obj)</td>
+<td>将对象插入列表</td>
+</tr>
+<tr>
+<td>list.pop([index=-1])</td>
+<td>移除列表中的一个元素（默认最后一个元素），并返回该元素的值</td>
+</tr>
+<tr>
+<td>list.remove(obj)</td>
+<td>移除列表中的某个值的第一个匹配项</td>
+</tr>
+<tr>
+<td>list.reverse()</td>
+<td>反向列表中的元素</td>
+</tr>
+<tr>
+<td>list.sort(cmp=None, key=None, reverse=False)</td>
+<td>对原列表进行排序</td>
+</tr>
+<tr>
+<td><strong>注意事项</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>切片：[m:n]从索引m开始，直到索引n为止，但不包括索引n</td>
+<td></td>
+</tr>
+<tr>
+<td>句尾加逗号：输出在一行中</td>
+<td></td>
+</tr>
+<tr>
+<td>sort():直接修改原列表，返回None</td>
+<td></td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://www.hexiaojiao.top/2019/03/15/pythonset/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="Laurel He">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="贺小娇的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/03/15/pythonset/" class="post-title-link" itemprop="url">python数据结构之集合</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-03-15 13:52:00" itemprop="dateCreated datePublished" datetime="2019-03-15T13:52:00+08:00">2019-03-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-07-08 20:13:01" itemprop="dateModified" datetime="2020-07-08T20:13:01+08:00">2020-07-08</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index"><span itemprop="name">服务端语言</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E8%AF%AD%E8%A8%80/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>介绍</strong><br>集合是一个无序的不重复的元素序列<br><strong>操作</strong><br>创建集合：<br>{}或set()，创建一个空集合必须用set()，{}创建空字典(set(“asdgf”)会创建[‘a’, ‘s’, ‘d’, ‘g’, ‘f’],set()创建多个元素需要两个())<br>parame = {value01,value02,…}或set(value)<br>添加元素：<br>s.add(x)<br>s.update(x)    -&gt;  参数可以是列表，元组，字典等，x可以有多个，用逗号分开</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">thisset &#x3D; set((&quot;Google&quot;, &quot;Runoob&quot;, &quot;Taobao&quot;))</span><br><span class="line">thisset.update(&#123;1,3&#125;)</span><br><span class="line">print(thisset)</span><br><span class="line">&#123;1, 3, &#39;Google&#39;, &#39;Taobao&#39;, &#39;Runoob&#39;&#125;</span><br><span class="line">thisset.update([1,4],[5,6])  </span><br><span class="line">print(thisset)</span><br><span class="line">&#123;1, 3, 4, 5, 6, &#39;Google&#39;, &#39;Taobao&#39;, &#39;Runoob&#39;&#125;</span><br></pre></td></tr></table></figure>
+<p>移除元素：<br>s.remove(x)   将元素x从集合x移除，如果元素不存在则会发生错误<br>s.discard(x)  将元素x从集合x移除，如果元素不存在不会发生错误<br>计算集合元素个数：<br>len(s)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">thisset &#x3D; set((&quot;Google&quot;, &quot;Runoob&quot;, &quot;Taobao&quot;))</span><br><span class="line">len(thisset)</span><br></pre></td></tr></table></figure>
+<p>返回3<br>清空集合：<br>s.clear()<br>判断元素x是否在集合s中：<br>x in s<br><strong>内置方法</strong></p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>add()</td>
+<td>为集合添加元素</td>
+</tr>
+<tr>
+<td>clear()</td>
+<td>移除集合中的所有元素</td>
+</tr>
+<tr>
+<td>copy()</td>
+<td>拷贝一个集合</td>
+</tr>
+<tr>
+<td>difference()</td>
+<td>返回多个集合的差集</td>
+</tr>
+<tr>
+<td>difference_update()</td>
+<td>移除集合中的元素，该元素在指定的集合也存在</td>
+</tr>
+<tr>
+<td>discard()</td>
+<td>删除集合中指定的元素</td>
+</tr>
+<tr>
+<td>intersection()</td>
+<td>返回集合的交集</td>
+</tr>
+<tr>
+<td>intersection_update()</td>
+<td>删除集合中的元素，该元素在指定的集合中不存在</td>
+</tr>
+<tr>
+<td>isdisjoint()</td>
+<td>判断两个集合是否包含相同的元素，如果没有返回 True，否则返回 False</td>
+</tr>
+<tr>
+<td>issubset()</td>
+<td>判断指定集合是否为该方法参数集合的子集</td>
+</tr>
+<tr>
+<td>issuperset()</td>
+<td>判断该方法的参数集合是否为指定集合的子集</td>
+</tr>
+<tr>
+<td>pop()</td>
+<td>随机移除元素</td>
+</tr>
+<tr>
+<td>remove()</td>
+<td>移除指定元素</td>
+</tr>
+<tr>
+<td>symmetric_difference()</td>
+<td>返回两个集合中不重复的元素集合</td>
+</tr>
+<tr>
+<td>symmetric_difference_update()</td>
+<td>移除当前集合中在另外一个指定集合相同的元素，并将另外一个指定集合中不同的元素插入到当前集合中</td>
+</tr>
+<tr>
+<td>union()</td>
+<td>返回两个集合的并集</td>
+</tr>
+<tr>
+<td>update()</td>
+<td>给集合添加元素</td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://www.hexiaojiao.top/2019/03/25/monthly/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="Laurel He">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="贺小娇的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/03/25/monthly/" class="post-title-link" itemprop="url">重新实现monthly步骤</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-03-25 09:41:10" itemprop="dateCreated datePublished" datetime="2019-03-25T09:41:10+08:00">2019-03-25</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-07-08 20:12:31" itemprop="dateModified" datetime="2020-07-08T20:12:31+08:00">2020-07-08</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index"><span itemprop="name">服务端语言</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E8%AF%AD%E8%A8%80/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="1-bi新建已收、已付、应收、应付表"><a href="#1-bi新建已收、已付、应收、应付表" class="headerlink" title="1 bi新建已收、已付、应收、应付表"></a>1 bi新建已收、已付、应收、应付表</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE &#96;order_product_set_pay&#96;(</span><br><span class="line">&#96;id&#96; int(10) unsigned NOT NULL,</span><br><span class="line">&#96;order_product_id&#96; int(10) unsigned NOT NULL,</span><br><span class="line">&#96;parent_order_product_id&#96; int(10) unsigned DEFAULT &#39;0&#39; COMMENT &#39;parent order_product_id&#39;,</span><br><span class="line">&#96;has_settlement&#96; decimal(10,2) NOT NULL DEFAULT &#39;0.00&#39;,</span><br><span class="line">&#96;should_settlement&#96; decimal(10,2) NOT NULL DEFAULT &#39;0.00&#39;,</span><br><span class="line">&#96;has_pay&#96; decimal(10,2) NOT NULL DEFAULT &#39;0.00&#39;,</span><br><span class="line">&#96;should_pay&#96; decimal(10,2) NOT NULL DEFAULT &#39;0.00&#39;,</span><br><span class="line">&#96;settlement_pay_time&#96; timestamp NOT NULL DEFAULT &#39;0000-00-00 00:00:00&#39;,</span><br><span class="line">&#96;pay_pay_status&#96; varchar(255) NOT NULL DEFAULT &#39;Pending&#39;,</span><br><span class="line">&#96;pay_pay_time&#96; timestamp NOT NULL DEFAULT &#39;0000-00-00 00:00:00&#39;,</span><br><span class="line">PRIMARY KEY (&#96;id&#96;)</span><br><span class="line">) ENGINE&#x3D;InnoDB DEFAULT CHARSET&#x3D;utf8;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">alter table &#96;order_product_set_pay&#96; drop primary key;</span><br><span class="line">alter table &#96;order_product_set_pay&#96; add &#96;settlement_id&#96; int(10) unsigned NOT NULL;</span><br></pre></td></tr></table></figure>
+<h1 id="2-从bi表中查询数据"><a href="#2-从bi表中查询数据" class="headerlink" title="2 从bi表中查询数据"></a>2 从bi表中查询数据</h1><p>1 已收<br>（总收）/比例<br>比例 = </p>
+<h1 id="mysql查询优化"><a href="#mysql查询优化" class="headerlink" title="mysql查询优化"></a>mysql查询优化</h1><p><strong>优化结果</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br></pre></td><td class="code"><pre><span class="line">SELECT</span><br><span class="line">                   op.order_product_id,</span><br><span class="line">                   op.parent_order_product_id,</span><br><span class="line">                   op.product_retail,</span><br><span class="line">                   op.product_discount,</span><br><span class="line">                   op.insurance_retail,</span><br><span class="line">                   op.order_id,</span><br><span class="line">                   op.product_cost,</span><br><span class="line">                   opi.&#96;bill_status&#96; AS bill_status,</span><br><span class="line">                   fs.settlement_id,</span><br><span class="line">                   fs.type,</span><br><span class="line">                   fs.&#96;status&#96;,</span><br><span class="line">                   fs.paid_usd_amount AS should_usd,</span><br><span class="line">                   fs.updated_at AS modify_time,</span><br><span class="line">                   (</span><br><span class="line">                       SELECT</span><br><span class="line">                           sum((</span><br><span class="line">                                               CASE </span><br><span class="line">                                               WHEN (cu.&#96;code&#96;&#x3D;&#39;CNY&#39;) THEN</span><br><span class="line">                                                   ROUND((opii.&#96;amount&#96;)&#x2F;LEFT(SUBSTRING_INDEX(o.rate_info, &#39;&quot;CNY&quot;:&#39;, - 1), 6), 2)</span><br><span class="line">                                               WHEN (cu.&#96;code&#96;&#x3D;&#39;GBP&#39;) THEN</span><br><span class="line">                                                   ROUND((opii.&#96;amount&#96;)&#x2F;LEFT(SUBSTRING_INDEX(o.rate_info, &#39;&quot;GBP&quot;:&#39;, - 1), 6), 2)</span><br><span class="line">                                               WHEN (cu.&#96;code&#96;&#x3D;&#39;AUD&#39;) THEN</span><br><span class="line">                                                   ROUND((opii.&#96;amount&#96;)&#x2F;LEFT(SUBSTRING_INDEX(o.rate_info, &#39;&quot;AUD&quot;:&#39;, - 1), 6), 2)</span><br><span class="line">                                               WHEN (cu.&#96;code&#96;&#x3D;&#39;NZD&#39;) THEN</span><br><span class="line">                                                   ROUND((opii.&#96;amount&#96;)&#x2F;LEFT(SUBSTRING_INDEX(o.rate_info, &#39;&quot;NZD&quot;:&#39;, - 1), 6), 2)</span><br><span class="line">                                               WHEN (cu.&#96;code&#96;&#x3D;&#39;EUR&#39;) THEN</span><br><span class="line">                                                   ROUND((opii.&#96;amount&#96;)&#x2F;LEFT(SUBSTRING_INDEX(o.rate_info, &#39;&quot;EUR&quot;:&#39;, - 1), 6), 2)</span><br><span class="line">                                               WHEN (cu.&#96;code&#96;&#x3D;&#39;CAD&#39;) THEN</span><br><span class="line">                                                   ROUND((opii.&#96;amount&#96;)&#x2F;LEFT(SUBSTRING_INDEX(o.rate_info, &#39;&quot;CAD&quot;:&#39;, - 1), 6), 2)</span><br><span class="line">                                               WHEN (cu.&#96;code&#96;&#x3D;&#39;SUR&#39;) THEN</span><br><span class="line">                                                   ROUND((opii.&#96;amount&#96;)&#x2F;LEFT(SUBSTRING_INDEX(o.rate_info, &#39;&quot;SUR&quot;:&#39;, - 1), 6), 2)</span><br><span class="line">                                               WHEN (cu.&#96;code&#96;&#x3D;&#39;JPY&#39;) THEN</span><br><span class="line">                                                   ROUND((opii.&#96;amount&#96;)&#x2F;LEFT(SUBSTRING_INDEX(o.rate_info, &#39;&quot;JPY&quot;:&#39;, - 1), 6), 2)</span><br><span class="line">                                               WHEN (cu.&#96;code&#96;&#x3D;&#39;ZAR&#39;) THEN</span><br><span class="line">                                                   ROUND((opii.&#96;amount&#96;)&#x2F;LEFT(SUBSTRING_INDEX(o.rate_info, &#39;&quot;ZAR&quot;:&#39;, - 1), 6), 2)</span><br><span class="line">                                               WHEN (cu.&#96;code&#96;&#x3D;&#39;NOK&#39;) THEN</span><br><span class="line">                                                   ROUND((opii.&#96;amount&#96;)&#x2F;LEFT(SUBSTRING_INDEX(o.rate_info, &#39;&quot;NOK&quot;:&#39;, - 1), 6), 2)</span><br><span class="line">                                               WHEN (cu.&#96;code&#96;&#x3D;&#39;PHP&#39;) THEN</span><br><span class="line">                                                   ROUND((opii.&#96;amount&#96;)&#x2F;LEFT(SUBSTRING_INDEX(o.rate_info, &#39;&quot;PHP&quot;:&#39;, - 1), 6), 2)</span><br><span class="line">                                               WHEN (cu.&#96;code&#96;&#x3D;&#39;SEK&#39;) THEN</span><br><span class="line">                                                   ROUND((opii.&#96;amount&#96;)&#x2F;LEFT(SUBSTRING_INDEX(o.rate_info, &#39;&quot;SEK&quot;:&#39;, - 1), 6), 2)</span><br><span class="line">                                               WHEN (cu.&#96;code&#96;&#x3D;&#39;CHF&#39;) THEN</span><br><span class="line">                                                   ROUND((opii.&#96;amount&#96;)&#x2F;LEFT(SUBSTRING_INDEX(o.rate_info, &#39;&quot;CHF&quot;:&#39;, - 1), 6), 2)</span><br><span class="line">                                               WHEN (cu.&#96;code&#96;&#x3D;&#39;DKK&#39;) THEN</span><br><span class="line">                                                   ROUND((opii.&#96;amount&#96;)&#x2F;LEFT(SUBSTRING_INDEX(o.rate_info, &#39;&quot;DKK&quot;:&#39;, - 1), 6), 2)</span><br><span class="line">                                               WHEN (cu.&#96;code&#96;&#x3D;&#39;HKD&#39;) THEN</span><br><span class="line">                                                   ROUND((opii.&#96;amount&#96;)&#x2F;LEFT(SUBSTRING_INDEX(o.rate_info, &#39;&quot;HKD&quot;:&#39;, - 1), 6), 2)</span><br><span class="line">                                               WHEN (cu.&#96;code&#96;&#x3D;&#39;USD&#39;) THEN  opii.&#96;amount&#96;</span><br><span class="line">                                               END</span><br><span class="line">                                               )) has_paid</span><br><span class="line">                       FROM</span><br><span class="line">                           &#96;bi&#96;.&#96;order_product_item&#96; opii</span><br><span class="line">                       LEFT JOIN &#96;bi&#96;.&#96;order&#96; AS o ON opii.order_id&#x3D; o.order_id    </span><br><span class="line">                       LEFT JOIN &#96;ori_new&#96;.&#96;financial_bill&#96; AS fb ON opii.bill_id&#x3D; fb.id</span><br><span class="line">                                               LEFT JOIN &#96;bi&#96;.&#96;order_product&#96; AS opp ON opii.order_product_id&#x3D; opp.order_product_id</span><br><span class="line">                                               LEFT JOIN &#96;ori_new&#96;.&#96;tff_provider&#96; tp on opp.provider_id&#x3D;tp.provider_id</span><br><span class="line">                                               LEFT JOIN &#96;bi&#96;.&#96;currency&#96; cu on tp.currency_id&#x3D;cu.currency_id</span><br><span class="line">                       WHERE</span><br><span class="line">                           opii.order_product_id &#x3D; op.order_product_id</span><br><span class="line">                       AND (</span><br><span class="line">                           opii.&#96;bill_status&#96; &#x3D; &#39;Finished&#39;</span><br><span class="line">                           OR opii.&#96;bill_status&#96; &#x3D; &#39;Paid&#39;</span><br><span class="line">                       )</span><br><span class="line">                   ) has_paid,</span><br><span class="line">                   (</span><br><span class="line">                       SELECT</span><br><span class="line">                           fb.updated_at</span><br><span class="line">                       FROM</span><br><span class="line">                           &#96;ori_new&#96;.&#96;financial_bill&#96; fb</span><br><span class="line">                       LEFT JOIN &#96;bi&#96;.&#96;order_product_item&#96; opii  ON opii.bill_id&#x3D; fb.id</span><br><span class="line">                       WHERE</span><br><span class="line">                           opii.order_product_id &#x3D; op.order_product_id</span><br><span class="line">                       AND opii.&#96;bill_status&#96; &#x3D; &#39;Paid&#39;</span><br><span class="line">                       limit 1</span><br><span class="line">                   ) &#96;pay_pay_time&#96;,</span><br><span class="line">                   (</span><br><span class="line">                       SELECT</span><br><span class="line">                           sum(opa.product_retail) AS total_retail</span><br><span class="line">                       FROM</span><br><span class="line">                           &#96;bi&#96;.&#96;order_product&#96; opa</span><br><span class="line">                       WHERE</span><br><span class="line">                           opa.order_id &#x3D; op.order_id</span><br><span class="line">                       AND opa.product_line !&#x3D; &#39;combine&#39;</span><br><span class="line">                   ) total_retail,</span><br><span class="line">                   (</span><br><span class="line">                       SELECT</span><br><span class="line">                           sum(opa.insurance_retail) AS insurance_total</span><br><span class="line">                       FROM</span><br><span class="line">                           &#96;bi&#96;.&#96;order_product&#96; opa</span><br><span class="line">                       WHERE</span><br><span class="line">                           opa.order_id &#x3D; op.order_id</span><br><span class="line">                       AND opa.product_line !&#x3D; &#39;combine&#39;</span><br><span class="line">                   ) insurance_total,</span><br><span class="line">                   (</span><br><span class="line">                       SELECT</span><br><span class="line">                           count(opa.order_product_id) AS op_num</span><br><span class="line">                       FROM</span><br><span class="line">                           &#96;bi&#96;.&#96;order_product&#96; opa</span><br><span class="line">                       WHERE</span><br><span class="line">                           opa.order_id &#x3D; op.order_id</span><br><span class="line">                   ) op_num</span><br><span class="line">               FROM</span><br><span class="line">                   &#96;bi&#96;.&#96;order_product&#96; op</span><br><span class="line">               LEFT JOIN &#96;bi&#96;.&#96;order_product_item&#96; opi ON op.order_product_id &#x3D; opi.order_product_id</span><br><span class="line">               LEFT JOIN &#96;ori_new&#96;.financial_settlement AS fs ON fs.order_id &#x3D; op.order_id</span><br><span class="line">               LEFT JOIN &#96;ori_new&#96;.financial_payment_method AS p ON fs.payment_method_id &#x3D; p.payment_method_id</span><br><span class="line">               WHERE</span><br><span class="line">                   op.order_product_id in (&#123;0&#125;)</span><br><span class="line">               AND op.product_line !&#x3D; &#39;combine&#39;</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="用过的命令"><a href="#用过的命令" class="headerlink" title="用过的命令"></a>用过的命令</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo awk -F &#39;[ ;]+&#39; &#39;&#123;if($2&gt;2) print $1,$2&#125;&#39; test.txt | awk  &#39;&#123;print $1&#125;&#39; |xargs  |tr &quot;\n&quot; &quot; &quot;|sed &#39;s&#x2F; &#x2F;,&#x2F;g&#39;</span><br><span class="line">sudo sed -i &#39;s&#x2F;api.bi.tff.com&#x2F;127.0.0.1:5003&#x2F;g&#39; &#96;find .&#x2F;dist&#x2F; -name &#39;*js&#39;&#96;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://www.hexiaojiao.top/2019/03/28/Laurel/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="Laurel He">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="贺小娇的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/03/28/Laurel/" class="post-title-link" itemprop="url">一些php知识</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-03-28 14:00:40" itemprop="dateCreated datePublished" datetime="2019-03-28T14:00:40+08:00">2019-03-28</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-07-08 19:28:40" itemprop="dateModified" datetime="2020-07-08T19:28:40+08:00">2020-07-08</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="argc和argv"><a href="#argc和argv" class="headerlink" title="argc和argv"></a>argc和argv</h2><p>$argv代表传递的参数,$argc代表参数个数（相对路径+传的参数）<br><strong>示例</strong></p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">echo</span> $argv[<span class="number">0</span>];     <span class="keyword">echo</span> <span class="string">"\n"</span>;</span><br><span class="line">var_dump($argv[<span class="number">1</span>]);    <span class="keyword">echo</span> <span class="string">"\n"</span>;</span><br><span class="line">var_dump(intval($argv[<span class="number">2</span>]));  <span class="keyword">echo</span> <span class="string">"\n"</span>;</span><br><span class="line"><span class="keyword">echo</span> $argv[<span class="number">3</span>];     <span class="keyword">echo</span> <span class="string">"\n"</span>;</span><br><span class="line"><span class="keyword">echo</span> $argc;</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
