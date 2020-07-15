@@ -5,9 +5,9 @@
   <subtitle>技术博客</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://www.hexiaojiao.top/"/>
+  <link href="http://www.hexiaojiao.top/categories/"/>
   <updated>2020-07-10T07:28:41.417Z</updated>
-  <id>http://www.hexiaojiao.top/</id>
+  <id>http://www.hexiaojiao.top/categories/</id>
   
   <author>
     <name>Laurel He</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>学习计划</title>
-    <link href="http://www.hexiaojiao.top/2020/07/08/learn_main/"/>
-    <id>http://www.hexiaojiao.top/2020/07/08/learn_main/</id>
+    <link href="http://www.hexiaojiao.top/categories/2020/07/08/learn_main/"/>
+    <id>http://www.hexiaojiao.top/categories/2020/07/08/learn_main/</id>
     <published>2020-07-08T12:00:40.000Z</published>
     <updated>2020-07-10T07:28:41.417Z</updated>
     
@@ -41,8 +41,8 @@
   
   <entry>
     <title>fit02</title>
-    <link href="http://www.hexiaojiao.top/2020/07/08/fit02/"/>
-    <id>http://www.hexiaojiao.top/2020/07/08/fit02/</id>
+    <link href="http://www.hexiaojiao.top/categories/2020/07/08/fit02/"/>
+    <id>http://www.hexiaojiao.top/categories/2020/07/08/fit02/</id>
     <published>2020-07-08T11:28:40.335Z</published>
     <updated>2020-07-08T11:28:40.335Z</updated>
     
@@ -56,8 +56,8 @@
   
   <entry>
     <title>kustomize使用文档</title>
-    <link href="http://www.hexiaojiao.top/2020/05/21/kustomize01/"/>
-    <id>http://www.hexiaojiao.top/2020/05/21/kustomize01/</id>
+    <link href="http://www.hexiaojiao.top/categories/2020/05/21/kustomize01/"/>
+    <id>http://www.hexiaojiao.top/categories/2020/05/21/kustomize01/</id>
     <published>2020-05-21T03:00:00.000Z</published>
     <updated>2020-07-09T03:18:56.570Z</updated>
     
@@ -66,21 +66,21 @@
     </summary>
     
     
-      <category term="容器" scheme="http://www.hexiaojiao.top/categories/%E5%AE%B9%E5%99%A8/"/>
+      <category term="容器" scheme="http://www.hexiaojiao.top/categories/categories/%E5%AE%B9%E5%99%A8/"/>
     
-      <category term="k8s" scheme="http://www.hexiaojiao.top/categories/%E5%AE%B9%E5%99%A8/k8s/"/>
+      <category term="k8s" scheme="http://www.hexiaojiao.top/categories/categories/%E5%AE%B9%E5%99%A8/k8s/"/>
     
-      <category term="kustomize" scheme="http://www.hexiaojiao.top/categories/%E5%AE%B9%E5%99%A8/k8s/kustomize/"/>
+      <category term="kustomize" scheme="http://www.hexiaojiao.top/categories/categories/%E5%AE%B9%E5%99%A8/k8s/kustomize/"/>
     
     
-      <category term="学习" scheme="http://www.hexiaojiao.top/tags/%E5%AD%A6%E4%B9%A0/"/>
+      <category term="学习" scheme="http://www.hexiaojiao.top/categories/tags/%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>kubenetes权威指南1-2章</title>
-    <link href="http://www.hexiaojiao.top/2020/05/16/k8s01/"/>
-    <id>http://www.hexiaojiao.top/2020/05/16/k8s01/</id>
+    <link href="http://www.hexiaojiao.top/categories/2020/05/16/k8s01/"/>
+    <id>http://www.hexiaojiao.top/categories/2020/05/16/k8s01/</id>
     <published>2020-05-16T10:00:00.000Z</published>
     <updated>2020-07-09T03:14:53.902Z</updated>
     
@@ -96,21 +96,21 @@
     </summary>
     
     
-      <category term="容器" scheme="http://www.hexiaojiao.top/categories/%E5%AE%B9%E5%99%A8/"/>
+      <category term="容器" scheme="http://www.hexiaojiao.top/categories/categories/%E5%AE%B9%E5%99%A8/"/>
     
-      <category term="k8s" scheme="http://www.hexiaojiao.top/categories/%E5%AE%B9%E5%99%A8/k8s/"/>
+      <category term="k8s" scheme="http://www.hexiaojiao.top/categories/categories/%E5%AE%B9%E5%99%A8/k8s/"/>
     
-      <category term="kubenetes权威指南" scheme="http://www.hexiaojiao.top/categories/%E5%AE%B9%E5%99%A8/k8s/kubenetes%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/"/>
+      <category term="kubenetes权威指南" scheme="http://www.hexiaojiao.top/categories/categories/%E5%AE%B9%E5%99%A8/k8s/kubenetes%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/"/>
     
     
-      <category term="学习" scheme="http://www.hexiaojiao.top/tags/%E5%AD%A6%E4%B9%A0/"/>
+      <category term="学习" scheme="http://www.hexiaojiao.top/categories/tags/%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>设计模式从头学习-面向对象设计原则概述</title>
-    <link href="http://www.hexiaojiao.top/2020/05/07/design_pattern02/"/>
-    <id>http://www.hexiaojiao.top/2020/05/07/design_pattern02/</id>
+    <link href="http://www.hexiaojiao.top/categories/2020/05/07/design_pattern02/"/>
+    <id>http://www.hexiaojiao.top/categories/2020/05/07/design_pattern02/</id>
     <published>2020-05-07T12:20:10.000Z</published>
     <updated>2020-07-09T03:17:16.812Z</updated>
     
@@ -119,21 +119,21 @@
     </summary>
     
     
-      <category term="学习" scheme="http://www.hexiaojiao.top/categories/%E5%AD%A6%E4%B9%A0/"/>
+      <category term="学习" scheme="http://www.hexiaojiao.top/categories/categories/%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="设计模式" scheme="http://www.hexiaojiao.top/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+      <category term="设计模式" scheme="http://www.hexiaojiao.top/categories/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
-      <category term="面向对象设计原则" scheme="http://www.hexiaojiao.top/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/"/>
+      <category term="面向对象设计原则" scheme="http://www.hexiaojiao.top/categories/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/"/>
     
     
-      <category term="学习" scheme="http://www.hexiaojiao.top/tags/%E5%AD%A6%E4%B9%A0/"/>
+      <category term="学习" scheme="http://www.hexiaojiao.top/categories/tags/%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>设计模式从头学习-前言</title>
-    <link href="http://www.hexiaojiao.top/2020/05/07/design_patter01/"/>
-    <id>http://www.hexiaojiao.top/2020/05/07/design_patter01/</id>
+    <link href="http://www.hexiaojiao.top/categories/2020/05/07/design_patter01/"/>
+    <id>http://www.hexiaojiao.top/categories/2020/05/07/design_patter01/</id>
     <published>2020-05-07T12:13:10.000Z</published>
     <updated>2020-07-09T03:18:21.379Z</updated>
     
@@ -149,19 +149,19 @@
     </summary>
     
     
-      <category term="学习" scheme="http://www.hexiaojiao.top/categories/%E5%AD%A6%E4%B9%A0/"/>
+      <category term="学习" scheme="http://www.hexiaojiao.top/categories/categories/%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="设计模式" scheme="http://www.hexiaojiao.top/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+      <category term="设计模式" scheme="http://www.hexiaojiao.top/categories/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
     
-      <category term="学习" scheme="http://www.hexiaojiao.top/tags/%E5%AD%A6%E4%B9%A0/"/>
+      <category term="学习" scheme="http://www.hexiaojiao.top/categories/tags/%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>《第一本docker书》学习笔记01</title>
-    <link href="http://www.hexiaojiao.top/2020/04/21/docker01/"/>
-    <id>http://www.hexiaojiao.top/2020/04/21/docker01/</id>
+    <link href="http://www.hexiaojiao.top/categories/2020/04/21/docker01/"/>
+    <id>http://www.hexiaojiao.top/categories/2020/04/21/docker01/</id>
     <published>2020-04-21T13:03:10.000Z</published>
     <updated>2020-07-09T03:19:05.372Z</updated>
     
@@ -177,17 +177,17 @@
     </summary>
     
     
-      <category term="docker" scheme="http://www.hexiaojiao.top/categories/docker/"/>
+      <category term="docker" scheme="http://www.hexiaojiao.top/categories/categories/docker/"/>
     
     
-      <category term="学习" scheme="http://www.hexiaojiao.top/tags/%E5%AD%A6%E4%B9%A0/"/>
+      <category term="学习" scheme="http://www.hexiaojiao.top/categories/tags/%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>php多维数组相关处理</title>
-    <link href="http://www.hexiaojiao.top/2020/04/16/multiArr/"/>
-    <id>http://www.hexiaojiao.top/2020/04/16/multiArr/</id>
+    <link href="http://www.hexiaojiao.top/categories/2020/04/16/multiArr/"/>
+    <id>http://www.hexiaojiao.top/categories/2020/04/16/multiArr/</id>
     <published>2020-04-16T10:27:44.000Z</published>
     <updated>2020-07-09T03:21:05.413Z</updated>
     
@@ -203,17 +203,17 @@
     </summary>
     
     
-      <category term="php" scheme="http://www.hexiaojiao.top/categories/php/"/>
+      <category term="php" scheme="http://www.hexiaojiao.top/categories/categories/php/"/>
     
     
-      <category term="工作经验" scheme="http://www.hexiaojiao.top/tags/%E5%B7%A5%E4%BD%9C%E7%BB%8F%E9%AA%8C/"/>
+      <category term="工作经验" scheme="http://www.hexiaojiao.top/categories/tags/%E5%B7%A5%E4%BD%9C%E7%BB%8F%E9%AA%8C/"/>
     
   </entry>
   
   <entry>
     <title>linux命令大全</title>
-    <link href="http://www.hexiaojiao.top/2020/02/27/linuxOpe/"/>
-    <id>http://www.hexiaojiao.top/2020/02/27/linuxOpe/</id>
+    <link href="http://www.hexiaojiao.top/categories/2020/02/27/linuxOpe/"/>
+    <id>http://www.hexiaojiao.top/categories/2020/02/27/linuxOpe/</id>
     <published>2020-02-27T10:00:00.000Z</published>
     <updated>2020-07-09T03:15:01.317Z</updated>
     
@@ -229,21 +229,21 @@
     </summary>
     
     
-      <category term="操作系统" scheme="http://www.hexiaojiao.top/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+      <category term="操作系统" scheme="http://www.hexiaojiao.top/categories/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
     
-      <category term="linux" scheme="http://www.hexiaojiao.top/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/linux/"/>
+      <category term="linux" scheme="http://www.hexiaojiao.top/categories/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/linux/"/>
     
-      <category term="系统相关" scheme="http://www.hexiaojiao.top/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/linux/%E7%B3%BB%E7%BB%9F%E7%9B%B8%E5%85%B3/"/>
+      <category term="系统相关" scheme="http://www.hexiaojiao.top/categories/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/linux/%E7%B3%BB%E7%BB%9F%E7%9B%B8%E5%85%B3/"/>
     
     
-      <category term="学习" scheme="http://www.hexiaojiao.top/tags/%E5%AD%A6%E4%B9%A0/"/>
+      <category term="学习" scheme="http://www.hexiaojiao.top/categories/tags/%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>linux命令大全</title>
-    <link href="http://www.hexiaojiao.top/2020/02/27/linuxUse/"/>
-    <id>http://www.hexiaojiao.top/2020/02/27/linuxUse/</id>
+    <link href="http://www.hexiaojiao.top/categories/2020/02/27/linuxUse/"/>
+    <id>http://www.hexiaojiao.top/categories/2020/02/27/linuxUse/</id>
     <published>2020-02-27T10:00:00.000Z</published>
     <updated>2020-07-09T03:17:43.649Z</updated>
     
@@ -259,21 +259,21 @@
     </summary>
     
     
-      <category term="操作系统" scheme="http://www.hexiaojiao.top/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+      <category term="操作系统" scheme="http://www.hexiaojiao.top/categories/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
     
-      <category term="linux" scheme="http://www.hexiaojiao.top/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/linux/"/>
+      <category term="linux" scheme="http://www.hexiaojiao.top/categories/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/linux/"/>
     
-      <category term="文件相关" scheme="http://www.hexiaojiao.top/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/linux/%E6%96%87%E4%BB%B6%E7%9B%B8%E5%85%B3/"/>
+      <category term="文件相关" scheme="http://www.hexiaojiao.top/categories/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/linux/%E6%96%87%E4%BB%B6%E7%9B%B8%E5%85%B3/"/>
     
     
-      <category term="学习" scheme="http://www.hexiaojiao.top/tags/%E5%AD%A6%E4%B9%A0/"/>
+      <category term="学习" scheme="http://www.hexiaojiao.top/categories/tags/%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>计算相关</title>
-    <link href="http://www.hexiaojiao.top/2020/02/25/codeCollect/"/>
-    <id>http://www.hexiaojiao.top/2020/02/25/codeCollect/</id>
+    <link href="http://www.hexiaojiao.top/categories/2020/02/25/codeCollect/"/>
+    <id>http://www.hexiaojiao.top/categories/2020/02/25/codeCollect/</id>
     <published>2020-02-25T12:10:10.000Z</published>
     <updated>2020-07-09T03:21:33.918Z</updated>
     
@@ -289,17 +289,17 @@
     </summary>
     
     
-      <category term="有用代码段收集" scheme="http://www.hexiaojiao.top/categories/%E6%9C%89%E7%94%A8%E4%BB%A3%E7%A0%81%E6%AE%B5%E6%94%B6%E9%9B%86/"/>
+      <category term="有用代码段收集" scheme="http://www.hexiaojiao.top/categories/categories/%E6%9C%89%E7%94%A8%E4%BB%A3%E7%A0%81%E6%AE%B5%E6%94%B6%E9%9B%86/"/>
     
     
-      <category term="学习" scheme="http://www.hexiaojiao.top/tags/%E5%AD%A6%E4%B9%A0/"/>
+      <category term="学习" scheme="http://www.hexiaojiao.top/categories/tags/%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>运行相关</title>
-    <link href="http://www.hexiaojiao.top/2020/02/25/codeCollect2/"/>
-    <id>http://www.hexiaojiao.top/2020/02/25/codeCollect2/</id>
+    <link href="http://www.hexiaojiao.top/categories/2020/02/25/codeCollect2/"/>
+    <id>http://www.hexiaojiao.top/categories/2020/02/25/codeCollect2/</id>
     <published>2020-02-25T12:10:10.000Z</published>
     <updated>2020-07-09T03:18:14.201Z</updated>
     
@@ -315,17 +315,17 @@
     </summary>
     
     
-      <category term="有用代码段收集" scheme="http://www.hexiaojiao.top/categories/%E6%9C%89%E7%94%A8%E4%BB%A3%E7%A0%81%E6%AE%B5%E6%94%B6%E9%9B%86/"/>
+      <category term="有用代码段收集" scheme="http://www.hexiaojiao.top/categories/categories/%E6%9C%89%E7%94%A8%E4%BB%A3%E7%A0%81%E6%AE%B5%E6%94%B6%E9%9B%86/"/>
     
     
-      <category term="学习" scheme="http://www.hexiaojiao.top/tags/%E5%AD%A6%E4%B9%A0/"/>
+      <category term="学习" scheme="http://www.hexiaojiao.top/categories/tags/%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>有用的代码段-ts篇</title>
-    <link href="http://www.hexiaojiao.top/2020/01/16/usefulCode2/"/>
-    <id>http://www.hexiaojiao.top/2020/01/16/usefulCode2/</id>
+    <link href="http://www.hexiaojiao.top/categories/2020/01/16/usefulCode2/"/>
+    <id>http://www.hexiaojiao.top/categories/2020/01/16/usefulCode2/</id>
     <published>2020-01-16T11:34:10.000Z</published>
     <updated>2020-07-09T03:26:11.135Z</updated>
     
@@ -341,17 +341,17 @@
     </summary>
     
     
-      <category term="工作经验" scheme="http://www.hexiaojiao.top/categories/%E5%B7%A5%E4%BD%9C%E7%BB%8F%E9%AA%8C/"/>
+      <category term="工作经验" scheme="http://www.hexiaojiao.top/categories/categories/%E5%B7%A5%E4%BD%9C%E7%BB%8F%E9%AA%8C/"/>
     
     
-      <category term="tips" scheme="http://www.hexiaojiao.top/tags/tips/"/>
+      <category term="tips" scheme="http://www.hexiaojiao.top/categories/tags/tips/"/>
     
   </entry>
   
   <entry>
     <title>有用的代码段-php篇</title>
-    <link href="http://www.hexiaojiao.top/2020/01/16/usefulCode1/"/>
-    <id>http://www.hexiaojiao.top/2020/01/16/usefulCode1/</id>
+    <link href="http://www.hexiaojiao.top/categories/2020/01/16/usefulCode1/"/>
+    <id>http://www.hexiaojiao.top/categories/2020/01/16/usefulCode1/</id>
     <published>2020-01-16T04:34:10.000Z</published>
     <updated>2020-07-09T03:26:04.515Z</updated>
     
@@ -367,17 +367,17 @@
     </summary>
     
     
-      <category term="工作经验" scheme="http://www.hexiaojiao.top/categories/%E5%B7%A5%E4%BD%9C%E7%BB%8F%E9%AA%8C/"/>
+      <category term="工作经验" scheme="http://www.hexiaojiao.top/categories/categories/%E5%B7%A5%E4%BD%9C%E7%BB%8F%E9%AA%8C/"/>
     
     
-      <category term="tips" scheme="http://www.hexiaojiao.top/tags/tips/"/>
+      <category term="tips" scheme="http://www.hexiaojiao.top/categories/tags/tips/"/>
     
   </entry>
   
   <entry>
     <title>测试</title>
-    <link href="http://www.hexiaojiao.top/2019/12/10/unitTest/"/>
-    <id>http://www.hexiaojiao.top/2019/12/10/unitTest/</id>
+    <link href="http://www.hexiaojiao.top/categories/2019/12/10/unitTest/"/>
+    <id>http://www.hexiaojiao.top/categories/2019/12/10/unitTest/</id>
     <published>2019-12-10T04:34:10.000Z</published>
     <updated>2020-07-09T03:25:14.465Z</updated>
     
@@ -393,19 +393,19 @@
     </summary>
     
     
-      <category term="学习" scheme="http://www.hexiaojiao.top/categories/%E5%AD%A6%E4%B9%A0/"/>
+      <category term="学习" scheme="http://www.hexiaojiao.top/categories/categories/%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="测试" scheme="http://www.hexiaojiao.top/categories/%E5%AD%A6%E4%B9%A0/%E6%B5%8B%E8%AF%95/"/>
+      <category term="测试" scheme="http://www.hexiaojiao.top/categories/categories/%E5%AD%A6%E4%B9%A0/%E6%B5%8B%E8%AF%95/"/>
     
     
-      <category term="测试" scheme="http://www.hexiaojiao.top/tags/%E6%B5%8B%E8%AF%95/"/>
+      <category term="测试" scheme="http://www.hexiaojiao.top/categories/tags/%E6%B5%8B%E8%AF%95/"/>
     
   </entry>
   
   <entry>
     <title>使用go编写webassembly</title>
-    <link href="http://www.hexiaojiao.top/2019/12/10/webassembly_go_1/"/>
-    <id>http://www.hexiaojiao.top/2019/12/10/webassembly_go_1/</id>
+    <link href="http://www.hexiaojiao.top/categories/2019/12/10/webassembly_go_1/"/>
+    <id>http://www.hexiaojiao.top/categories/2019/12/10/webassembly_go_1/</id>
     <published>2019-12-10T04:34:10.000Z</published>
     <updated>2020-07-09T03:27:57.836Z</updated>
     
@@ -421,17 +421,17 @@
     </summary>
     
     
-      <category term="学习" scheme="http://www.hexiaojiao.top/categories/%E5%AD%A6%E4%B9%A0/"/>
+      <category term="学习" scheme="http://www.hexiaojiao.top/categories/categories/%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="go" scheme="http://www.hexiaojiao.top/tags/go/"/>
+      <category term="go" scheme="http://www.hexiaojiao.top/categories/tags/go/"/>
     
   </entry>
   
   <entry>
     <title>单例模式</title>
-    <link href="http://www.hexiaojiao.top/2019/10/29/design_singleton/"/>
-    <id>http://www.hexiaojiao.top/2019/10/29/design_singleton/</id>
+    <link href="http://www.hexiaojiao.top/categories/2019/10/29/design_singleton/"/>
+    <id>http://www.hexiaojiao.top/categories/2019/10/29/design_singleton/</id>
     <published>2019-10-29T09:40:10.000Z</published>
     <updated>2020-07-09T03:23:44.859Z</updated>
     
@@ -447,17 +447,17 @@
     </summary>
     
     
-      <category term="设计模式" scheme="http://www.hexiaojiao.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+      <category term="设计模式" scheme="http://www.hexiaojiao.top/categories/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
     
-      <category term="学习" scheme="http://www.hexiaojiao.top/tags/%E5%AD%A6%E4%B9%A0/"/>
+      <category term="学习" scheme="http://www.hexiaojiao.top/categories/tags/%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>react学习-Props,state和组件树</title>
-    <link href="http://www.hexiaojiao.top/2019/10/22/react_06/"/>
-    <id>http://www.hexiaojiao.top/2019/10/22/react_06/</id>
+    <link href="http://www.hexiaojiao.top/categories/2019/10/22/react_06/"/>
+    <id>http://www.hexiaojiao.top/categories/2019/10/22/react_06/</id>
     <published>2019-10-22T10:37:10.000Z</published>
     <updated>2020-07-08T11:28:40.338Z</updated>
     
@@ -473,17 +473,17 @@
     </summary>
     
     
-      <category term="前端" scheme="http://www.hexiaojiao.top/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://www.hexiaojiao.top/categories/categories/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="react" scheme="http://www.hexiaojiao.top/categories/%E5%89%8D%E7%AB%AF/react/"/>
+      <category term="react" scheme="http://www.hexiaojiao.top/categories/categories/%E5%89%8D%E7%AB%AF/react/"/>
     
     
   </entry>
   
   <entry>
     <title>react学习-基础</title>
-    <link href="http://www.hexiaojiao.top/2019/10/22/react_base/"/>
-    <id>http://www.hexiaojiao.top/2019/10/22/react_base/</id>
+    <link href="http://www.hexiaojiao.top/categories/2019/10/22/react_base/"/>
+    <id>http://www.hexiaojiao.top/categories/2019/10/22/react_base/</id>
     <published>2019-10-22T10:37:10.000Z</published>
     <updated>2020-07-08T11:28:40.338Z</updated>
     
@@ -499,17 +499,17 @@
     </summary>
     
     
-      <category term="前端" scheme="http://www.hexiaojiao.top/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://www.hexiaojiao.top/categories/categories/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="react" scheme="http://www.hexiaojiao.top/categories/%E5%89%8D%E7%AB%AF/react/"/>
+      <category term="react" scheme="http://www.hexiaojiao.top/categories/categories/%E5%89%8D%E7%AB%AF/react/"/>
     
     
   </entry>
   
   <entry>
     <title>mongodb学习记录</title>
-    <link href="http://www.hexiaojiao.top/2019/10/20/mongoComplex/"/>
-    <id>http://www.hexiaojiao.top/2019/10/20/mongoComplex/</id>
+    <link href="http://www.hexiaojiao.top/categories/2019/10/20/mongoComplex/"/>
+    <id>http://www.hexiaojiao.top/categories/2019/10/20/mongoComplex/</id>
     <published>2019-10-20T10:27:44.000Z</published>
     <updated>2020-07-08T11:28:40.336Z</updated>
     
@@ -525,9 +525,9 @@
     </summary>
     
     
-      <category term="数据库" scheme="http://www.hexiaojiao.top/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+      <category term="数据库" scheme="http://www.hexiaojiao.top/categories/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
-      <category term="mongodb" scheme="http://www.hexiaojiao.top/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/mongodb/"/>
+      <category term="mongodb" scheme="http://www.hexiaojiao.top/categories/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/mongodb/"/>
     
     
   </entry>
