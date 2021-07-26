@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>json-patch on </title>
+    <link>http://laurel-he.github.io/categories/json-patch/</link>
+    <description>Recent content in json-patch on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 26 Jul 2019 14:37:10 +0000</lastBuildDate><atom:link href="http://laurel-he.github.io/categories/json-patch/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>fast-json-patch</title>
+      <link>http://laurel-he.github.io/post/fastjsonpatch/</link>
+      <pubDate>Fri, 26 Jul 2019 14:37:10 +0000</pubDate>
+      
+      <guid>http://laurel-he.github.io/post/fastjsonpatch/</guid>
+      <description>fast-json-patch包使用 网上关于json-patch的中文介绍太少了，官方文档没有翻译版，所以写一下自己的学习文档，以下只是自己根据英文文档的理解，不保证正确。
+基础操作 json patch几大基础操作包括：add, replace, move, test, remove, copy
+applyPatch 给定文档和操作，执行操作
+import {applyOperation, applyPatch} from &amp;#39;fast-json-patch&amp;#39;; let document = document = { firstName: &amp;#34;Albert&amp;#34;, contactDetails: { phoneNumbers: [] } }; let patch = [ { op: &amp;#34;replace&amp;#34;, path: &amp;#34;/firstName&amp;#34;, value: &amp;#34;Joachim&amp;#34; }, { op: &amp;#34;add&amp;#34;, path: &amp;#34;/lastName&amp;#34;, value: &amp;#34;Wester&amp;#34; }, { op: &amp;#34;add&amp;#34;, path: &amp;#34;/contactDetails/phoneNumbers/0&amp;#34;, value: { number: &amp;#34;555-123&amp;#34; } } ]; const docu = applyPatch(document, patch) applyOperation 执行单独的操作而不是连贯操作,举例如下：</description>
+    </item>
+    
+  </channel>
+</rss>

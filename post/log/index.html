@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Laravel 日志系统</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.86.0" />
+  <link href="" rel="alternate" type="application/rss+xml" title="" />
+  <link href="http://laurel-he.github.io//css/bootstrap.min.css" rel="stylesheet">
+  <link href="http://laurel-he.github.io//css/hc.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  
+    
+    </head>
+    <body>
+<div class="nav-toggle"><i class="fa fa-bars fa-2x"></i> Herring Cove </div>
+      <div id = "wrapper">
+
+
+<div class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="http://laurel-he.github.io//"><p class="navbar-brand"></p></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+					
+					
+					<li><a href="http://laurel-he.github.io//post/">主页 </a></li>
+					
+					<li><a href="http://laurel-he.github.io//about/">关于 </a></li>
+					
+					<li><a href="http://laurel-he.github.io//categories/">分类 </a></li>
+					
+					<li><a href="http://laurel-he.github.io//tags/">标签 </a></li>
+					
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+       
+       <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+					<img src="/images/avatar.jpg" />
+          <li class="sidebar-brand"><a href="http://laurel-he.github.io//"><h1 class="brand"></h1></a><h3></h3></li>
+          <hr />
+					
+						<li><a href="http://laurel-he.github.io//post/">主页 </a></li>
+					
+						<li><a href="http://laurel-he.github.io//about/">关于 </a></li>
+					
+						<li><a href="http://laurel-he.github.io//categories/">分类 </a></li>
+					
+						<li><a href="http://laurel-he.github.io//tags/">标签 </a></li>
+					
+          <hr />
+          <div id="social-wrapper">
+           
+           
+           
+           
+         </div>
+       </ul>
+     </div>
+
+
+
+     <div class="container">
+
+
+  <div id="article">
+   <div class="article-title">Laravel 日志系统</div>
+   <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> 2019-04-11</small></p> <hr/>
+   <div class="post">
+     <h2 id="1-自己摸索版本52">1 （自己摸索版本）5.2</h2>
+<h4 id="1-定义路径">1 定义路径</h4>
+<p>.env配置文件添加日志路径，例如</p>
+<pre><code>LOG_PATH=/tmp/paytest
+</code></pre><h4 id="2-启动文件添加日志路径">2 启动文件添加日志路径</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$app<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">configureMonologUsing</span>(<span style="color:#66d9ef">function</span>($logger){
+    $logger<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">pushHandler</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">\Monolog\Handler\RotatingFileHandler</span>(<span style="color:#a6e22e">env</span>(<span style="color:#e6db74">&#39;LOG_PATH&#39;</span>)<span style="color:#f92672">.</span><span style="color:#e6db74">&#39;.log&#39;</span>), <span style="color:#ae81ff">10</span>);
+    <span style="color:#66d9ef">return</span> $logger;
+});
+</code></pre></div><h2 id="2-官方文档">2 官方文档</h2>
+<h4 id="1-异常处理">1 异常处理</h4>
+<p><strong>介绍</strong>
+当您启动一个新的 Laravel 项目时，错误和异常处理就已为您配置。 应用程序触发的所有异常都被 App\Exceptions\Handler 类记录下来，然后渲染给用户。 我们将在本文档中深入介绍此类。
+<strong>配置</strong>
+（1）config/app.php 文件的 debug 选项，决定了是否向用户显示错误信息。默认情况下，此选项设置为存储在 .env 文件中的  APP_DEBUG 环境变量中。
+（2）Laravel 支持 single 、daily 、 syslog 和 errorlog 日志模式。要配置 Laravel 使用的存储机制，应该修改 config/app.php 配置文件中的 log 选项。例如，如果您希望使用每日一个日志文件而不是单个文件，则应将 app 配置文件中的 log 值设置为 daily
+<strong>日志等级</strong>
+使用 Monolog 时，日志消息可能具有不同的日志等级。默认情况下，Laravel 将所有日志级别写入存储。但是，在生产环境中，您可能希望通过将 log_level 选项添加到 app.php 配置文件中来配置应记录的最低日志等级。</p>
+<p>一旦配置了此选项，Laravel 将记录大于或等于指定日志等级的所有级别。例如，默认将 log_level 设置为 error 那么将会记录 error , critical , alert 和 emergency 日志信息：</p>
+<pre><code>'log_level' =&gt; env('APP_LOG_LEVEL', 'error'),
+</code></pre><p><strong>注意事项</strong>
+Monolog 识别以下日志等级 - 从低到高为: debug , info , notice , warning , error , critical , alert , emergency
+<strong>Report方法</strong>
+所有异常都由 App\Exceptions\Handler 类处理。 这个类包含两个方法：report 和 render 。 我们将详细研究这些方法。 report 方法用于记录异常或将其发送到外部服务，如 Bugsnag 或 Sentry 。默认情况下，report 方法只是将异常传递给记录异常的基类。然而，你可以自由选择任何方式进行处理。
+<strong>render方法</strong>
+render 方法负责将异常转换成 HTTP 响应发送给浏览器。默认情况下，异常会传递给为您生成响应的基类。但是，您可以自由检查异常类型或返回您自己的自定义响应</p>
+<pre><code>/**
+ * 渲染异常并添加到 HTTP 响应中。
+ *
+ * @param  \Illuminate\Http\Request  $request
+ * @param  \Exception  $exception
+ * @return \Illuminate\Http\Response
+ */
+public function render($request, Exception $exception)
+{
+    if ($exception instanceof CustomException) {
+        return response()-&gt;view('errors.custom', [], 500);
+    }
+
+    return parent::render($request, $exception);
+}
+</code></pre><p><strong>HTTP异常</strong>
+可直接用abort()，例如abort(404),abort(403, &lsquo;Unauthorized action.');
+<strong>自定义错误页面</strong>
+如果您要自定义404 HTTP状态代码的错误页面，请创建一个 resources/views/errors/404.blade.php 。此文件将会用于渲染所有404错误。此目录中的视图文件命名应与它们对应的HTTP状态代码匹配。由 abort 函数引发的 HttpException 实例将作为 $exception 变量传递给视图。</p>
+<h4 id="2-记录">2 记录</h4>
+<p><strong>介绍</strong>
+默认情况下，Laravel 日志目录为 storage/logs
+可以传递参数，例如：</p>
+<pre><code>$test = &quot;test&quot;;
+Log::info(222222222, ['te' =&gt; $test]);
+</code></pre>
+   </div>
+ </div>
+
+
+ <a href="https://github.com/laurel-he" class="twitter-share-button " data-size="small" data-count="none">Git hub</a>
+ <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+ <ul class="pager">
+      &nbsp;<li class="previous"><a href="http://laurel-he.github.io/post/crontab/"> crontab基本使用</a></li>
+      &nbsp;<li class="next"><a href="http://laurel-he.github.io/post/githubguide/"> gitflow command version</a></li>
+</ul>
+
+
+
+    </ul>
+    </div>
+    <footer>
+
+        <p class="text-muted credit">&copy; 2021. All rights reserved. </p>
+    </footer>
+ 
+    <script src="http://laurel-he.github.io//js/jquery-1.10.2.min.js"></script>
+    <script src="http://laurel-he.github.io//js/bootstrap.min.js"></script>
+    <script src="http://laurel-he.github.io//js/bootstrap.js"></script>
+    <script type="text/javascript" src="http://laurel-he.github.io//js/hc.js"></script>
+</body>
+
+</html>
+

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>python debugger</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.86.0" />
+  <link href="" rel="alternate" type="application/rss+xml" title="" />
+  <link href="http://laurel-he.github.io//css/bootstrap.min.css" rel="stylesheet">
+  <link href="http://laurel-he.github.io//css/hc.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  
+    
+    </head>
+    <body>
+<div class="nav-toggle"><i class="fa fa-bars fa-2x"></i> Herring Cove </div>
+      <div id = "wrapper">
+
+
+<div class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="http://laurel-he.github.io//"><p class="navbar-brand"></p></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+					
+					
+					<li><a href="http://laurel-he.github.io//post/">主页 </a></li>
+					
+					<li><a href="http://laurel-he.github.io//about/">关于 </a></li>
+					
+					<li><a href="http://laurel-he.github.io//categories/">分类 </a></li>
+					
+					<li><a href="http://laurel-he.github.io//tags/">标签 </a></li>
+					
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+       
+       <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+					<img src="/images/avatar.jpg" />
+          <li class="sidebar-brand"><a href="http://laurel-he.github.io//"><h1 class="brand"></h1></a><h3></h3></li>
+          <hr />
+					
+						<li><a href="http://laurel-he.github.io//post/">主页 </a></li>
+					
+						<li><a href="http://laurel-he.github.io//about/">关于 </a></li>
+					
+						<li><a href="http://laurel-he.github.io//categories/">分类 </a></li>
+					
+						<li><a href="http://laurel-he.github.io//tags/">标签 </a></li>
+					
+          <hr />
+          <div id="social-wrapper">
+           
+           
+           
+           
+         </div>
+       </ul>
+     </div>
+
+
+
+     <div class="container">
+
+
+  <div id="article">
+   <div class="article-title">python debugger</div>
+   <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> 2019-03-14</small></p> <hr/>
+   <div class="post">
+     <p>##准备
+<strong>来源</strong>
+<a href="http://python.jobbole.com/81184/">http://python.jobbole.com/81184/</a>
+<strong>初始代码</strong></p>
+<pre><code>import sys
+def add(num1=0, num2=0):
+    return int(num1) + int(num2)
+def sub(num1=0, num2=0):
+    return int(num1) - int(num2)
+def main():
+    #Assuming our inputs are valid numbers
+    print sys.argv
+    addition = add(sys.argv[1], sys.argv[2])
+    print addition
+    subtraction = sub(sys.argv[1], sys.argv[2])
+    print subtraction
+if __name__ == '__main__':
+    main()
+</code></pre><h2 id="基础用法">基础用法</h2>
+<pre><code>import pdb
+pdb.set_trace() //设置断点
+</code></pre><p>在程序中添加断点</p>
+<pre><code>import pdb
+import sys
+def add(num1=0, num2=0):
+    return int(num1) + int(num2)
+def sub(num1=0, num2=0):
+    return int(num1) - int(num2)
+def main():
+    #Assuming our inputs are valid numbers
+    print sys.argv
+    pdb.set_trace() # &lt;-- Break point added here
+    addition = add(sys.argv[1], sys.argv[2])
+    print addition
+    subtraction = sub(sys.argv[1], sys.argv[2])
+    print subtraction
+if __name__ == '__main__':
+    main()
+</code></pre><h2 id="触发调试器">触发调试器</h2>
+<p>程序会自动在断点处停止执行
+<strong>下一行n</strong>
+输入n运行到下一行
+<strong>打印p</strong>
+可以使用c使pdb跳到末尾或者直到下一个断点
+如果想知道sys.argv包含的内容，可以输入p sys.argv
+使用这种方法可以方便地查看变量中实际储存着什么值
+<strong>单步s</strong>
+可以使用s进入函数内部
+r返回到进入函数的返回语句
+<strong>动态添加断点b</strong>
+b 18:代表在18行设置一个断点
+<strong>列表l</strong>
+l可以显示出此刻在代码中的位置
+<strong>结束</strong>
+q
+<strong>w</strong>
+w:显示当前正在执行的代码行的上下文信息
+<strong>a</strong>
+打印当前函数的参数列表</p>
+
+   </div>
+ </div>
+
+
+ <a href="https://github.com/laurel-he" class="twitter-share-button " data-size="small" data-count="none">Git hub</a>
+ <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+ <ul class="pager">
+      &nbsp;<li class="previous"><a href="http://laurel-he.github.io/post/python/"> python进阶</a></li>
+      &nbsp;<li class="next"><a href="http://laurel-he.github.io/post/generators/"> python Generators</a></li>
+</ul>
+
+
+
+    </ul>
+    </div>
+    <footer>
+
+        <p class="text-muted credit">&copy; 2021. All rights reserved. </p>
+    </footer>
+ 
+    <script src="http://laurel-he.github.io//js/jquery-1.10.2.min.js"></script>
+    <script src="http://laurel-he.github.io//js/bootstrap.min.js"></script>
+    <script src="http://laurel-he.github.io//js/bootstrap.js"></script>
+    <script type="text/javascript" src="http://laurel-he.github.io//js/hc.js"></script>
+</body>
+
+</html>
+

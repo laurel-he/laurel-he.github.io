@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>kustomize on </title>
+    <link>http://laurel-he.github.io/categories/kustomize/</link>
+    <description>Recent content in kustomize on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 21 May 2020 11:00:00 +0000</lastBuildDate><atom:link href="http://laurel-he.github.io/categories/kustomize/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>kustomize使用文档</title>
+      <link>http://laurel-he.github.io/post/kustomize01/</link>
+      <pubDate>Thu, 21 May 2020 11:00:00 +0000</pubDate>
+      
+      <guid>http://laurel-he.github.io/post/kustomize01/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

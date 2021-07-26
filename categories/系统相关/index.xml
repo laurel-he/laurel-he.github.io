@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>系统相关 on </title>
+    <link>http://laurel-he.github.io/categories/%E7%B3%BB%E7%BB%9F%E7%9B%B8%E5%85%B3/</link>
+    <description>Recent content in 系统相关 on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 27 Feb 2020 18:00:00 +0000</lastBuildDate><atom:link href="http://laurel-he.github.io/categories/%E7%B3%BB%E7%BB%9F%E7%9B%B8%E5%85%B3/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>linux命令大全</title>
+      <link>http://laurel-he.github.io/post/linuxope/</link>
+      <pubDate>Thu, 27 Feb 2020 18:00:00 +0000</pubDate>
+      
+      <guid>http://laurel-he.github.io/post/linuxope/</guid>
+      <description>系统信息 arch 描述
+显示机器的处理器架构 举例
+uname 描述
+显示机器的处理器架构 参数
+-a或&amp;ndash;all 显示全部的信息。 -m或&amp;ndash;machine 显示电脑类型。 -n或-nodename 显示在网络上的主机名称。 -r或&amp;ndash;release 显示操作系统的发行编号。 -s或&amp;ndash;sysname 显示操作系统名称。 -v 显示操作系统的版本。 &amp;ndash;help 显示帮助。 &amp;ndash;version 显示版本信息。 举例
+dmidecode 描述
+显示硬件信息，不常用，可忽略
+开关机 shutdown 描述
+关机或重启 参数
+-t seconds : 设定在几秒钟之后进行关机程序。 -k : 并不会真的关机，只是将警告讯息传送给所有使用者。 -r : 关机后重新开机。 -h : 关机后停机。 -n : 不采用正常程序来关机，用强迫的方式杀掉所有执行中的程序后自行关机。 -c : 取消目前已经进行中的关机动作。 -f : 关机时，不做 fcsk 动作(检查 Linux 档系统)。 -F : 关机时，强迫进行 fsck 动作。 time : 设定关机的时间。 message : 传送给所有使用者的警告讯息。</description>
+    </item>
+    
+  </channel>
+</rss>

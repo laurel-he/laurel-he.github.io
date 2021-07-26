@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>react学习-javascript函数式编程</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.86.0" />
+  <link href="" rel="alternate" type="application/rss+xml" title="" />
+  <link href="http://laurel-he.github.io//css/bootstrap.min.css" rel="stylesheet">
+  <link href="http://laurel-he.github.io//css/hc.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  
+    
+    </head>
+    <body>
+<div class="nav-toggle"><i class="fa fa-bars fa-2x"></i> Herring Cove </div>
+      <div id = "wrapper">
+
+
+<div class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="http://laurel-he.github.io//"><p class="navbar-brand"></p></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+					
+					
+					<li><a href="http://laurel-he.github.io//post/">主页 </a></li>
+					
+					<li><a href="http://laurel-he.github.io//about/">关于 </a></li>
+					
+					<li><a href="http://laurel-he.github.io//categories/">分类 </a></li>
+					
+					<li><a href="http://laurel-he.github.io//tags/">标签 </a></li>
+					
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+       
+       <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+					<img src="/images/avatar.jpg" />
+          <li class="sidebar-brand"><a href="http://laurel-he.github.io//"><h1 class="brand"></h1></a><h3></h3></li>
+          <hr />
+					
+						<li><a href="http://laurel-he.github.io//post/">主页 </a></li>
+					
+						<li><a href="http://laurel-he.github.io//about/">关于 </a></li>
+					
+						<li><a href="http://laurel-he.github.io//categories/">分类 </a></li>
+					
+						<li><a href="http://laurel-he.github.io//tags/">标签 </a></li>
+					
+          <hr />
+          <div id="social-wrapper">
+           
+           
+           
+           
+         </div>
+       </ul>
+     </div>
+
+
+
+     <div class="container">
+
+
+  <div id="article">
+   <div class="article-title">react学习-javascript函数式编程</div>
+   <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> 2019-07-09</small></p> <hr/>
+   <div class="post">
+     <h1 id="react学习手册">react学习手册</h1>
+<h2 id="javascript函数式编程">Javascript函数式编程</h2>
+<h3 id="基础概念">基础概念</h3>
+<p>1 函数式编程： <br>
+函数是第一类成员，函数就是数据，可以像变量那样被保存，检索或者在应用程序内部传递。 <br>
+（1）可以像声明变量一样声明函数；函数就是变量，可以添加到对象中：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span> {
+    <span style="color:#a6e22e">message</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;asdsada&#39;</span>,
+    <span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">message</span>) {
+      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">message</span>);
+    }
+  };
+  <span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">message</span>);
+</code></pre></div><p>（2）可以将函数添加到数组中； <br>
+（3）函数可以像其他变量一样，作为其他函数的参数传递，也可以作为其他函数的执行结果被返回;</p>
+<h3 id="命令式和声明式编程">命令式和声明式编程</h3>
+<p>命令式编程：对执行结果的描述胜于执行过程 <br>
+声明式编程： 代码关注重点是达成目标的具体过程</p>
+<h3 id="不可变性">不可变性</h3>
+<p>（1）使用Objct.assign()方法：一种拷贝机制，提供一个空白对象，将操作的对象拷贝到该对象上，然后修改拷贝对象</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">Object.<span style="color:#a6e22e">assign</span>({}, <span style="color:#a6e22e">color</span>, {<span style="color:#a6e22e">rating</span><span style="color:#f92672">:</span><span style="color:#a6e22e">rating</span>})
+</code></pre></div><p>（2）可以使用ES6规范下的箭头函数和ES7规范下的对象扩展运算符编写同样的函数。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">rateColor</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">color</span>, <span style="color:#a6e22e">rating</span>) =&gt; ({
+    ...<span style="color:#a6e22e">color</span>,
+    <span style="color:#a6e22e">rating</span>
+})
+</code></pre></div><p>注意，在箭头函数中，箭头不能指向一个对象的花括号；Array.push方法不是一个不可变函数，使用Array.concat取代 <br>
+可以使用ES6扩展运算符串联数组，同时改操作符可以使用同样的机制拷贝对象，并将它添加到原生数组的副本上</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">addColor</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">title</span>, <span style="color:#a6e22e">list</span>) =&gt; [...<span style="color:#a6e22e">list</span>, {<span style="color:#a6e22e">title</span>}]
+</code></pre></div><h3 id="纯函数">纯函数</h3>
+<p>1 概念： <br>
+返回结果值依赖于输入参数的函数。纯函数至少需要接受一个参数并且总是返回一个值或者其他函数。不产生副作用，不修改全局变量或任何应用程序的state,将输入参数当成不可变数据</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">frederick</span> <span style="color:#f92672">=</span> {
+      <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Frederick Douglass&#34;</span>,
+      <span style="color:#a6e22e">canRead</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
+      <span style="color:#a6e22e">canWrite</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>
+    }
+
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">selfEducate</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">person</span> =&gt;
+        ({
+            ...<span style="color:#a6e22e">person</span>,
+            <span style="color:#a6e22e">canRead</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+            <span style="color:#a6e22e">canWrite</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>
+        })
+
+    <span style="color:#75715e">//
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// Pure Function, takes an argument, returns an object,
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//    and causes zero side effects
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//
+</span><span style="color:#75715e"></span>
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>( <span style="color:#a6e22e">selfEducate</span>(<span style="color:#a6e22e">frederick</span>) )
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>( <span style="color:#a6e22e">frederick</span> )
+</code></pre></div><p>2 纯函数三条原则： <br>
+（1）函数应该至少接收一个参数； <br>
+（2）函数应该返回一个值或者其他函数； <br>
+（3）函数不应该修改或者影响任何传给它的参数</p>
+<h3 id="数据转换">数据转换</h3>
+<p>1 概念： <br>
+将数据转换成另外一种数据，使用函数生成转换后的副本
+2 Array.map和Array.filter方法 <br>
+转换数组 <br>
+3 reduce和reduceRight <br>
+可以用来将数组转换成任意值。 <br>
+举例： <br>
+（1）数组转换成数字:以下实例循环迭代，每次返回最大值，然后将结果作为上一次回调函数的返回值</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getAge</span>() {
+        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">ages</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">21</span>,<span style="color:#ae81ff">33</span>, <span style="color:#ae81ff">20</span>,<span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">90</span>, <span style="color:#ae81ff">12</span>];
+        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">maxAge</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">ages</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">max</span>, <span style="color:#a6e22e">age</span>) =&gt; {
+            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">age</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> &gt; </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">max</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> = </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">age</span> <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">max</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+            <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">age</span> <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">max</span>) {
+                <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">age</span>;
+            } <span style="color:#66d9ef">else</span> {
+                <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">max</span>;
+            }
+        }, <span style="color:#ae81ff">0</span>);
+        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">max</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">ages</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">max</span>, <span style="color:#a6e22e">value</span>) =&gt; {(<span style="color:#a6e22e">value</span> <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">max</span>) <span style="color:#f92672">?</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">:</span> <span style="color:#a6e22e">max</span>}, <span style="color:#ae81ff">0</span>);        
+        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;maxage&#39;</span>, <span style="color:#a6e22e">maxAge</span>);
+    }
+</code></pre></div><p>reduceRight和reduce类似，从数组末尾处理元素。 <br>
+（2）数组转化成对象</p>
+
+   </div>
+ </div>
+
+
+ <a href="https://github.com/laurel-he" class="twitter-share-button " data-size="small" data-count="none">Git hub</a>
+ <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+ <ul class="pager">
+      &nbsp;<li class="previous"><a href="http://laurel-he.github.io/post/react_01/"> react学习-es6基础特性</a></li>
+      &nbsp;<li class="next"><a href="http://laurel-he.github.io/post/demo_01/"> demo实例</a></li>
+</ul>
+
+
+
+    </ul>
+    </div>
+    <footer>
+
+        <p class="text-muted credit">&copy; 2021. All rights reserved. </p>
+    </footer>
+ 
+    <script src="http://laurel-he.github.io//js/jquery-1.10.2.min.js"></script>
+    <script src="http://laurel-he.github.io//js/bootstrap.min.js"></script>
+    <script src="http://laurel-he.github.io//js/bootstrap.js"></script>
+    <script type="text/javascript" src="http://laurel-he.github.io//js/hc.js"></script>
+</body>
+
+</html>
+

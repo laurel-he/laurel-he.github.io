@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>设计模式 on </title>
+    <link>http://laurel-he.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
+    <description>Recent content in 设计模式 on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 07 May 2020 20:20:10 +0000</lastBuildDate><atom:link href="http://laurel-he.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>设计模式从头学习-面向对象设计原则概述</title>
+      <link>http://laurel-he.github.io/post/design_pattern02/</link>
+      <pubDate>Thu, 07 May 2020 20:20:10 +0000</pubDate>
+      
+      <guid>http://laurel-he.github.io/post/design_pattern02/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>设计模式从头学习-前言</title>
+      <link>http://laurel-he.github.io/post/design_patter01/</link>
+      <pubDate>Thu, 07 May 2020 20:13:10 +0000</pubDate>
+      
+      <guid>http://laurel-he.github.io/post/design_patter01/</guid>
+      <description>注意 本文参考了书籍《大话设计模式》和文章从招式与内功谈起——设计模式概述 #写作初衷 我有空的时候就会学习一下设计模式，零零散散半年过去了，真正能够静下心来学习 设计模式的事件少之又少，而且很多模式例如单例模式，命令模式等我学过后就忘了，让我现在再 复述或者使用我又需要重新去学一下，因此我抛弃以前学习的零零散散的与设计模式相关的东西， 尝试从头再学一次，边学边使用，并做好详细的笔记，以后可以直接翻阅。 #设计模式的作用 (1)设计模式经过多年的使用和实践，包含了大量成功的，可维护可复用的设计方案，在很多情况下，设计模式可以提高开发效率，节约时间 (2)设计模式跨语言、跨平台、跨应用、跨国界，提供了通用的词汇和使用方式，节约交流时间 (3)大部分设计模式都兼顾了系统的可重用性和扩展性，这使很多系统可以重用，减少代码重复 (4)合理使用设计模式有助于别人理解自己的代码 (5)有助于更为深刻地理解面对对象编程 #如何掌握设计模式 a.这个设计模式的意图是什么 b.它要解决一个什么问题 c.什么时候可以使用它 d.它是如何解决问题的 e.掌握它的结构图 f.记住它的关键代码 g.能够想到至少两个它的应用实例，一个生活中的，一个软件中的 h.这个模式的优缺点是什么 i.在使用时要注意什么 #注意事项 （1）最好的掌握设计模式的方法是使用它们 （2）千万不要滥用模式</description>
+    </item>
+    
+    <item>
+      <title>单例模式</title>
+      <link>http://laurel-he.github.io/post/design_singleton/</link>
+      <pubDate>Tue, 29 Oct 2019 17:40:10 +0000</pubDate>
+      
+      <guid>http://laurel-he.github.io/post/design_singleton/</guid>
+      <description>概念介绍 情景介绍 一个类只需要被实例化一次，但是不应该由调用方来判断是否被实例化过
+基础介绍 所有类都有构造方法，不编码则系统默认生成空的构造方法，若有显示定义的构造方法，默认的构造方法就会失效。 类把构造方法设置为私有，使所有的方法都不能直接实例化这个类。然后类内部写一个公共方法来判断这个类是否被实例化过，调用方无需判断
+单例模式 单例模式：保证一个类仅有一个实例，并提供一个访问它的全局访问点。 通常可以让一个全局变量使得一个对象被访问，但它不能防止实例化多个对象。一个最好的办法就是，让类自身负责保存它的唯一实例，这个类可以保证没有其他实例可以被创建，并且它可以提供一个访问该实例的方法。</description>
+    </item>
+    
+    <item>
+      <title>设计模式六大原则</title>
+      <link>http://laurel-he.github.io/post/codeprinceple/</link>
+      <pubDate>Mon, 07 Oct 2019 17:40:10 +0000</pubDate>
+      
+      <guid>http://laurel-he.github.io/post/codeprinceple/</guid>
+      <description>##第一：单一职责原则（SPR）
+一个类应该有且仅有一个原因导致该类的变更，即一个类应该只负责一项职责
+##第二：里氏替换原则（LSP）
+##第三：依赖倒置原则（DIP） 抽象不应该依赖细节，细节应该依赖于抽象。针对接口编程，不要针对实现编程 ##第四：接口隔离原则（ISP） ##第五：迪米特法则（LoD） ##第六：开放封闭原则 开放-封闭原则是说软件实体（类、模块、函数等等）应该可以扩展，但是不可以修改</description>
+    </item>
+    
+    <item>
+      <title>单例模式</title>
+      <link>http://laurel-he.github.io/post/singlemode/</link>
+      <pubDate>Sun, 06 Oct 2019 10:40:10 +0000</pubDate>
+      
+      <guid>http://laurel-he.github.io/post/singlemode/</guid>
+      <description>基础介绍 概念介绍 作为对象的创建模式，单例模式确保某一个类只有一个实例，并且对外提供这个全局实例的访问入口。它不会创建实例副本，而是会向单例类内部存储的实例返回一个引用。
+单例模式三要素  需要一个保存类的唯一实例的静态成员变量。 构造函数和克隆函数必须声明为私有的，防止外部程序创建或复制实例副本。 必须提供一个访问这个实例的公共静态方法，从而返回唯一实例的一个引用。  </description>
+    </item>
+    
+    <item>
+      <title>生产者消费者模式</title>
+      <link>http://laurel-he.github.io/post/producerconsumer/</link>
+      <pubDate>Sat, 05 Oct 2019 17:40:10 +0000</pubDate>
+      
+      <guid>http://laurel-he.github.io/post/producerconsumer/</guid>
+      <description>基础概念 概念介绍 某块模块负责产生数据，这些数据由另一个模块来负责处理。产生数据的模块，就形象地称为生产者；而处理数据的模块，就称为消费者。 该模式还需要有一个缓冲区处于生产者和消费者之间，作为一个中介。生产者把数据放入缓冲区，而消费者从缓冲区取出数据 缓冲区作用
+  解耦，生产者和消费者只依赖缓冲区，而不互相依赖
+  支持并发和异步
+  支持生产者和消费者忙闲不均（来不及消费缓冲区可以暂存）
+  使用场景 队列(类似，但并不完全相等，有的队列没有缓冲区); swoole(业务逻辑(生产者)将数据单元通过swoole的send函数弄到swoole的一个缓冲区之间，通过work进程进行分发，task进程(消费者)进行消费。)
+代码解析 CICD创建项目流程类似于生产者消费者模式；
+（1）用户填写表单，创建一条CICD数据，生产者向数据表添加一条状态为pending的数据，类似于向缓冲区添加数据 （2）定时任务读取状态为pending的数据，消费处理后修改状态</description>
+    </item>
+    
+    <item>
+      <title>命令模式</title>
+      <link>http://laurel-he.github.io/post/commandmode/</link>
+      <pubDate>Fri, 04 Oct 2019 17:40:10 +0000</pubDate>
+      
+      <guid>http://laurel-he.github.io/post/commandmode/</guid>
+      <description>基础概念 基础介绍 （1）概念介绍： 命令模式（Command Pattern）是一种数据驱动的设计模式，它属于行为型模式。请求以命令的形式包裹在对象中，并传给调用对象。调用对象寻找可以处理该命令的合适的对象，并把该命令传给相应的对象，该对象执行命令。 （2）概念解析： 命令模式将一个请求封装成一个对象，从而可用不同的请求对客户进行参数化，对请求排队或记录请求日志，以及支持可撤销的操作。
+使用场景 在某些场合下，需要对行为进行&amp;quot;记录、撤销/重做、事务&amp;quot;等处理，需要将&amp;quot;行为请求者&amp;quot;与&amp;quot;行为实现者&amp;quot;解耦，将一组行为抽象为对象，可以实现二者之间的松耦合。认为是命令的地方都可以使用命令模式，比如： 1、GUI 中每一个按钮都是一条命令。 2、模拟 CMD。
+关键术语 （1）received：真正的命令执行对象 （2）Command：命令 （3）invoker：使用命令对象的入口
+实现步骤 以下以后台k8s删除node节点命令为例
+a.创建一个命令接口： 接口定义接口名称，需要实现的操作名称，命令模式需要的操作为执行命令，后续可根据不同的命令来实现这个接口和执行命令方法。
+&amp;lt;?php abstract class Nodes { public function execute(){} } ?&amp;gt;b.创建一个请求类 定义拥有的请求方法 本例中操作有： （1）列出所有nodes: kubectl get node （2）删除节点：kubectl delete node $nodeName （3）查看对应node上的pods信息: kubectl get pods -o wide | grep $nodeName （4）在删除的node3对应的服务器上执行：kubeadm reset
+&amp;lt;?php class K8s { public function getNodes() { return &amp;#39;kubectl get node&amp;#39;; } public function delNodes($nodeName) { return &amp;#34;kubectl delete node $nodeName&amp;#34;; } } ?</description>
+    </item>
+    
+    <item>
+      <title>策略模式</title>
+      <link>http://laurel-he.github.io/post/strategy/</link>
+      <pubDate>Mon, 29 Jul 2019 14:37:10 +0000</pubDate>
+      
+      <guid>http://laurel-he.github.io/post/strategy/</guid>
+      <description>概念 定义 策略模式定义了算法族，分别封装起来，让他们之间可以相互替换，该模式让算法独立于使用它的客户而独立变化
+组成 1 抽象策略角色：策略类，通常由一个接口或者抽象类实现 2 具体策略角色：包装了相关的算法和行为。 3 环境角色：持有一个策略类的引用，最终给客户端调用。
+分析 策略模式用一个抽象策略角色提供一个类（一般是接口或抽象类），每个策略都实现了这个抽象策略角色，环境角色去调用（依赖注入）
+代码 &amp;lt;?php /** * @author: hexiaojiao@jiapinai.com * @todo: * time: 2019-07-30 20:07 */ /** * 定义抽象角色类` * Interface CollectInter */ interface CollectInter { public function collect($price, $num); public function input(); } class Base { public function input($discount = 1) { fwrite(STDOUT, &amp;#39;请输入单价&amp;#39;); $price = trim(fgets(STDIN)); fwrite(STDOUT, &amp;#39;请输入数量&amp;#39;); $num = trim(fgets(STDIN)); $res = $this-&amp;gt;collect($price, $num, $discount); return $res; } } /** * 定义具体策略类 * Class Collect02 */ class Collect02 extends Base implements CollectInter { public function collect($price, $num, $discount = 1) { var_dump(&amp;#39;Collect02:&amp;#39;, $price * $num * $discount); return true; } } /** * Class Discount */ class Discount extends Base implements CollectInter { public function collect($price, $num, $discount = 0.</description>
+    </item>
+    
+    <item>
+      <title>简单工厂模式</title>
+      <link>http://laurel-he.github.io/post/simplefactory/</link>
+      <pubDate>Wed, 24 Jul 2019 10:40:10 +0000</pubDate>
+      
+      <guid>http://laurel-he.github.io/post/simplefactory/</guid>
+      <description>引入 实现计算器 代码实现 1 实现一个基础的计算器功能，代码见https://github.com/laurel-he/design_pattern/blob/master/simpleFactory/calculator01.php
+问题分析 （1）错误处理只判断了除数是否为0，对于字符超长，不可计算等都未处理，可以加上try catch； （2）代码不可复用，耦合性很高
+使用面向对象处理 （1）使用面向对象的方式实现，将输入输出流和逻辑代码分离，可以提高代码复用性，降低耦合，代码见https://github.com/laurel-he/design_pattern/blob/master/simpleFactory/Calculate2.php
+紧耦合vs松耦合 思考：什么情况下使用继承和多态（各种运算可以继承自运算基类，便于扩展，多态考虑输入的不同类型，对于字符串怎样运算） 根据以上思考，完成有继承和多态的代码如下： https://github.com/laurel-he/design_pattern/blob/master/simpleFactory/Calculate03.php 思考：以上代码实现方式虽然使用到了继承，但是如何知道应该调用哪个类呢？难道像之前预估的一样，还是要使用switch判断？
+简单工厂模式 解决问题，实例化谁，将来会不会增加实例化的对象等容易变化的地方，考虑用一个单独的类来做这个创造实例的过程 在此基础上实现一个简单工厂类，代码如下： https://github.com/laurel-he/design_pattern/blob/master/simpleFactory/Calculate04.php 如果需要修改运算，可以只修改对应的类，如果需要添加运算，只需要添加运算类，并在工厂中添加对应的分支就可以了 简单工厂模式的工厂类一般是使用静态方法，通过接受的参数的不同来返回不同的对象实例
+工厂方法模式 1 简单工厂模式优点： （1）简单工厂包含必要的判断逻辑，实现了对象的创建和使用的分离； （2）客户端无需知道所创建的具体产品类的类名，只需要具体产品类对应的参数即可； （3）在不修改任何客户端代码的情况下更换和增加新的具体产品类，在一定程度上提高了系统的灵活性 2 简单工厂模式缺点： （1）工厂类职责过重，它出问题整个系统都会崩溃 （2）添加新的类的时候，系统中的简单工厂类都要修改，违反了开放-封闭原则 （3）简单工厂的静态方法，使得工厂角色无法形成基于继承的等级结构 工厂方法模式每一种算法都对应一种工厂， 工厂方法模式优点： （1）
+抽象工厂 </description>
+    </item>
+    
+    <item>
+      <title>抽象工厂模式</title>
+      <link>http://laurel-he.github.io/post/abstractfactory/</link>
+      <pubDate>Mon, 22 Jul 2019 17:40:10 +0000</pubDate>
+      
+      <guid>http://laurel-he.github.io/post/abstractfactory/</guid>
+      <description>目的 在不指定具体类的情况下创建一系列相关或依赖对象。 通常创建的类都实现相同的接口。 抽象工厂的客户并不关心这些对象是如何创建的，它只是知道它们是如何一起运行的。
+举例  &amp;lt;?php class KuaidiBirdLogic extends BaseLogic { private $basic; private $num; public function __construct(int $num, int $basic) { $this-&amp;gt;num = $num; $this-&amp;gt;basic = $basic; } } class KuaidiOneLogic implements KuaidiBase { private $num; public function __construct(int $num) { $this-&amp;gt;num = $num; } } 定义抽象工厂类
+&amp;lt;?php class ExpressFactory extends Model { public function getKuaidiBirdList() { return new KuaidiBirdLogic(12, 13); } public function getKuaidiOneLogic() { return new KuaidiOneLogic(); } } 几种工厂模式的区别 抽象工厂模式 类似于示例Basic</description>
+    </item>
+    
+    <item>
+      <title>基础介绍</title>
+      <link>http://laurel-he.github.io/post/depat/</link>
+      <pubDate>Mon, 22 Jul 2019 10:03:10 +0000</pubDate>
+      
+      <guid>http://laurel-he.github.io/post/depat/</guid>
+      <description>#基础介绍
+设计具备的特性 （1）应该对手头的问题有针对性，同时对将来的问题和需求也要有足够的通用性； （2）避免重复设计或尽可能少做重复设计
+什么是设计模式 模式四要素 模式名称 助记名，使用一两个词来描述模式的问题、解决方案和效果
+问题 描述了应该在何时使用设计模式
+解决方案 描述了设计的组成成分，它们之间的相互关系及各自的职责和协作方式
+效果 描述了模式应用的效果及使用模式应权衡的问题
+模式三种分类 创建型 与对象的创建有关，在软件工程中，创建型设计模式是处理对象创建机制的设计模式，试图以适当的方式来创建对象。对象创建的基本形式可能会带来设计问题，亦或增加了设计的复杂度。创建型设计模式通过控制这个对象的创建方式来解决此问题。
+结构型 处理类或对象的组合，通过识别实体之间关系来简化设计的设计模式。
+行为型 对类或对象怎样交互和怎样分配职责进行描述，识别对象之间的通用通信模式并实现这些模式的设计模式。 通过这样做，这些模式增加了执行此通信的灵活性。</description>
+    </item>
+    
+  </channel>
+</rss>

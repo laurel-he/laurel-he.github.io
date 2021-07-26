@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>测试 on </title>
+    <link>http://laurel-he.github.io/categories/%E6%B5%8B%E8%AF%95/</link>
+    <description>Recent content in 测试 on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 10 Dec 2019 12:34:10 +0000</lastBuildDate><atom:link href="http://laurel-he.github.io/categories/%E6%B5%8B%E8%AF%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>测试</title>
+      <link>http://laurel-he.github.io/post/unittest/</link>
+      <pubDate>Tue, 10 Dec 2019 12:34:10 +0000</pubDate>
+      
+      <guid>http://laurel-he.github.io/post/unittest/</guid>
+      <description>单元测试 mock 接口测试 stub mock fakeserver </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>面向对象设计原则 on </title>
+    <link>http://laurel-he.github.io/categories/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/</link>
+    <description>Recent content in 面向对象设计原则 on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 07 May 2020 20:20:10 +0000</lastBuildDate><atom:link href="http://laurel-he.github.io/categories/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>设计模式从头学习-面向对象设计原则概述</title>
+      <link>http://laurel-he.github.io/post/design_pattern02/</link>
+      <pubDate>Thu, 07 May 2020 20:20:10 +0000</pubDate>
+      
+      <guid>http://laurel-he.github.io/post/design_pattern02/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>有用代码段收集 on </title>
+    <link>http://laurel-he.github.io/categories/%E6%9C%89%E7%94%A8%E4%BB%A3%E7%A0%81%E6%AE%B5%E6%94%B6%E9%9B%86/</link>
+    <description>Recent content in 有用代码段收集 on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 25 Feb 2020 20:10:10 +0000</lastBuildDate><atom:link href="http://laurel-he.github.io/categories/%E6%9C%89%E7%94%A8%E4%BB%A3%E7%A0%81%E6%AE%B5%E6%94%B6%E9%9B%86/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>计算相关</title>
+      <link>http://laurel-he.github.io/post/codecollect/</link>
+      <pubDate>Tue, 25 Feb 2020 20:10:10 +0000</pubDate>
+      
+      <guid>http://laurel-he.github.io/post/codecollect/</guid>
+      <description>1 计算矩形是否相交 描述 给定两个矩形的左上角起始点坐标和矩形的宽，高，计算这两个矩形是否相交 分析 1 矩形1左上角坐标p1,右下角坐标p2,矩形2左上角坐标p3,右下角坐标p4 2 M点坐标为P1与P3点在X方向较大值与Y方向较大值的交点 3 N点坐标为P2与P4点在X方向较小值与Y方向较小值的交点 4 如果M点的X坐标和Y坐标值均比N点相应的X坐标和Y坐标值小，亦即M和N可以分别构成一个矩形的左上角点和右上角点，则两矩形相交；其余情况则不相交 代码
+&amp;lt;?php function checkRectInterSect($rect1, $rect2) { $x1 = $rect1[&amp;#39;x&amp;#39;]; $w1 = $rect1[&amp;#39;w&amp;#39;]; $y1 = $rect1[&amp;#39;y&amp;#39;]; $h1 = $rect1[&amp;#39;h&amp;#39;]; $x2 = $rect2[&amp;#39;x&amp;#39;]; $w2 = $rect2[&amp;#39;w&amp;#39;]; $y2 = $rect2[&amp;#39;y&amp;#39;]; $h2 = $rect2[&amp;#39;h&amp;#39;]; $p1 = [$x1, $y1]; $p2 = [$x1 + $w1, $y1 + $h1]; $p3 = [$x2, $y2]; $p4 = [$x2 + $w2, $y2 + $h2]; $M = [max($p1[0], $p3[0]), max($p1[1], $p1[1])]; $N = [min($p2[0], $p4[0]), min($p2[1], $p4[1])]; if ($M[0] &amp;lt; $N[0] &amp;amp;&amp;amp; $M[1] &amp;lt; $N[1]) { return true; } else { return false; } } ?</description>
+    </item>
+    
+    <item>
+      <title>运行相关</title>
+      <link>http://laurel-he.github.io/post/codecollect2/</link>
+      <pubDate>Tue, 25 Feb 2020 20:10:10 +0000</pubDate>
+      
+      <guid>http://laurel-he.github.io/post/codecollect2/</guid>
+      <description>1 下载数据 描述 根据链接下载文件 代码
+&amp;lt;?php function downloadOldFile($url,$rename,$ext){ $file_path = &amp;#39;public/images/age_60-120/&amp;#39;; $ch = curl_init($url); curl_setopt($ch, CURLOPT_HEADER, 0); curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); curl_setopt($ch, CURLOPT_BINARYTRANSFER, 1); $rawdata=curl_exec ($ch); curl_close ($ch); // 使用中文文件名需要转码  $fp = fopen($file_path. $rename .&amp;#34;.&amp;#34;.$ext,&amp;#39;w&amp;#39;); fwrite($fp, $rawdata); fclose($fp); // 返回路径  return $_SERVER[&amp;#39;DOCUMENT_ROOT&amp;#39;].$file_path.$rename.&amp;#34;.&amp;#34;.$ext; } ?&amp;gt;2 按步骤执行方法 描述 经常有需求：分页执行脚本，例如前1000条执行完后继续分页，此时就需要自动跳页执行 代码
+&amp;lt;?php /** * @param mixed ...$args * @return bool * @throws Exception */ private function stepRun(...$args) { $count = $args[0]; $method = $args[1]; $step = array_key_exists(2, $args) ?</description>
+    </item>
+    
+  </channel>
+</rss>

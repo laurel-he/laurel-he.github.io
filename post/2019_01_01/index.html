@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>各种奇怪的坑</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.86.0" />
+  <link href="" rel="alternate" type="application/rss+xml" title="" />
+  <link href="http://laurel-he.github.io//css/bootstrap.min.css" rel="stylesheet">
+  <link href="http://laurel-he.github.io//css/hc.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  
+    
+    </head>
+    <body>
+<div class="nav-toggle"><i class="fa fa-bars fa-2x"></i> Herring Cove </div>
+      <div id = "wrapper">
+
+
+<div class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="http://laurel-he.github.io//"><p class="navbar-brand"></p></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+					
+					
+					<li><a href="http://laurel-he.github.io//post/">主页 </a></li>
+					
+					<li><a href="http://laurel-he.github.io//about/">关于 </a></li>
+					
+					<li><a href="http://laurel-he.github.io//categories/">分类 </a></li>
+					
+					<li><a href="http://laurel-he.github.io//tags/">标签 </a></li>
+					
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+       
+       <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+					<img src="/images/avatar.jpg" />
+          <li class="sidebar-brand"><a href="http://laurel-he.github.io//"><h1 class="brand"></h1></a><h3></h3></li>
+          <hr />
+					
+						<li><a href="http://laurel-he.github.io//post/">主页 </a></li>
+					
+						<li><a href="http://laurel-he.github.io//about/">关于 </a></li>
+					
+						<li><a href="http://laurel-he.github.io//categories/">分类 </a></li>
+					
+						<li><a href="http://laurel-he.github.io//tags/">标签 </a></li>
+					
+          <hr />
+          <div id="social-wrapper">
+           
+           
+           
+           
+         </div>
+       </ul>
+     </div>
+
+
+
+     <div class="container">
+
+
+  <div id="article">
+   <div class="article-title">各种奇怪的坑</div>
+   <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> 2019-02-01</small></p> <hr/>
+   <div class="post">
+     <h4 id="1-strtotime">1 strtotime()</h4>
+<p><strong>描述</strong>
+获取上个月的时间可以是date(&lsquo;Y-m-d&rsquo;,strtotime('-1 month'));如果今天是31号而上个月没有31号，就会直接输出这个月1号；
+<strong>解决办法</strong>
+使用last day of -1 month来获取上个月的最后一天</p>
+<h4 id="2-php-字符串和数字比较">2 php 字符串和数字比较</h4>
+<p><strong>描述</strong>
+遇到一个问题，传过来的参数可能是0，可能是字符串，然后与0作比较，但是当传递的参数是字符串时，与0比较，结果是true
+<strong>解决办法</strong>
+直接与'0&rsquo;比较。0===&lsquo;0&rsquo;可以返回true,可以直接比较，字符串与'0&rsquo;比较也不等</p>
+<h4 id="3-virtualbox共享文件夹不能执行virtualenv-env只能在其他文件夹下运行暂时没想到解决办法">3 virtualbox共享文件夹不能执行virtualenv env，只能在其他文件夹下运行，暂时没想到解决办法</h4>
+<p>virtualbox的共享文件夹有保护机制，不允许直接运行virtualenv env，只能在其他文件夹下运行,解决办法：
+硬链接</p>
+<h4 id="4-laravel-get-toarray无法获取数据">4 laravel get()-&gt;toArray()无法获取数据</h4>
+
+   </div>
+ </div>
+
+
+ <a href="https://github.com/laurel-he" class="twitter-share-button " data-size="small" data-count="none">Git hub</a>
+ <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+ <ul class="pager">
+      &nbsp;<li class="previous"><a href="http://laurel-he.github.io/post/test-my-site/"> fastadmin自定义角色组</a></li>
+      &nbsp;<li class="next"><a href="http://laurel-he.github.io/post/20190202/"> python100例学习笔记</a></li>
+</ul>
+
+
+
+    </ul>
+    </div>
+    <footer>
+
+        <p class="text-muted credit">&copy; 2021. All rights reserved. </p>
+    </footer>
+ 
+    <script src="http://laurel-he.github.io//js/jquery-1.10.2.min.js"></script>
+    <script src="http://laurel-he.github.io//js/bootstrap.min.js"></script>
+    <script src="http://laurel-he.github.io//js/bootstrap.js"></script>
+    <script type="text/javascript" src="http://laurel-he.github.io//js/hc.js"></script>
+</body>
+
+</html>
+

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>计算相关</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.86.0" />
+  <link href="" rel="alternate" type="application/rss+xml" title="" />
+  <link href="http://laurel-he.github.io//css/bootstrap.min.css" rel="stylesheet">
+  <link href="http://laurel-he.github.io//css/hc.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  
+    
+    </head>
+    <body>
+<div class="nav-toggle"><i class="fa fa-bars fa-2x"></i> Herring Cove </div>
+      <div id = "wrapper">
+
+
+<div class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="http://laurel-he.github.io//"><p class="navbar-brand"></p></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+					
+					
+					<li><a href="http://laurel-he.github.io//post/">主页 </a></li>
+					
+					<li><a href="http://laurel-he.github.io//about/">关于 </a></li>
+					
+					<li><a href="http://laurel-he.github.io//categories/">分类 </a></li>
+					
+					<li><a href="http://laurel-he.github.io//tags/">标签 </a></li>
+					
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+       
+       <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+					<img src="/images/avatar.jpg" />
+          <li class="sidebar-brand"><a href="http://laurel-he.github.io//"><h1 class="brand"></h1></a><h3></h3></li>
+          <hr />
+					
+						<li><a href="http://laurel-he.github.io//post/">主页 </a></li>
+					
+						<li><a href="http://laurel-he.github.io//about/">关于 </a></li>
+					
+						<li><a href="http://laurel-he.github.io//categories/">分类 </a></li>
+					
+						<li><a href="http://laurel-he.github.io//tags/">标签 </a></li>
+					
+          <hr />
+          <div id="social-wrapper">
+           
+           
+           
+           
+         </div>
+       </ul>
+     </div>
+
+
+
+     <div class="container">
+
+
+  <div id="article">
+   <div class="article-title">计算相关</div>
+   <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> 2020-02-25</small></p> <hr/>
+   <div class="post">
+     <h4 id="1-计算矩形是否相交">1 计算矩形是否相交</h4>
+<p><strong>描述</strong>
+给定两个矩形的左上角起始点坐标和矩形的宽，高，计算这两个矩形是否相交 <br>
+<strong>分析</strong>
+1 矩形1左上角坐标p1,右下角坐标p2,矩形2左上角坐标p3,右下角坐标p4
+2 M点坐标为P1与P3点在X方向较大值与Y方向较大值的交点
+3 N点坐标为P2与P4点在X方向较小值与Y方向较小值的交点
+4 如果M点的X坐标和Y坐标值均比N点相应的X坐标和Y坐标值小，亦即M和N可以分别构成一个矩形的左上角点和右上角点，则两矩形相交；其余情况则不相交
+<strong>代码</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">checkRectInterSect</span>($rect1, $rect2)
+   {
+       $x1 <span style="color:#f92672">=</span> $rect1[<span style="color:#e6db74">&#39;x&#39;</span>];   $w1 <span style="color:#f92672">=</span> $rect1[<span style="color:#e6db74">&#39;w&#39;</span>];
+       $y1 <span style="color:#f92672">=</span> $rect1[<span style="color:#e6db74">&#39;y&#39;</span>];   $h1 <span style="color:#f92672">=</span> $rect1[<span style="color:#e6db74">&#39;h&#39;</span>];
+       $x2 <span style="color:#f92672">=</span> $rect2[<span style="color:#e6db74">&#39;x&#39;</span>];   $w2 <span style="color:#f92672">=</span> $rect2[<span style="color:#e6db74">&#39;w&#39;</span>];
+       $y2 <span style="color:#f92672">=</span> $rect2[<span style="color:#e6db74">&#39;y&#39;</span>];   $h2 <span style="color:#f92672">=</span> $rect2[<span style="color:#e6db74">&#39;h&#39;</span>];
+       $p1 <span style="color:#f92672">=</span> [$x1, $y1];
+       $p2 <span style="color:#f92672">=</span> [$x1 <span style="color:#f92672">+</span> $w1, $y1 <span style="color:#f92672">+</span> $h1];
+       $p3 <span style="color:#f92672">=</span> [$x2, $y2];
+       $p4 <span style="color:#f92672">=</span> [$x2 <span style="color:#f92672">+</span> $w2, $y2 <span style="color:#f92672">+</span> $h2];
+
+       $M <span style="color:#f92672">=</span> [<span style="color:#a6e22e">max</span>($p1[<span style="color:#ae81ff">0</span>], $p3[<span style="color:#ae81ff">0</span>]), <span style="color:#a6e22e">max</span>($p1[<span style="color:#ae81ff">1</span>], $p1[<span style="color:#ae81ff">1</span>])];
+       $N <span style="color:#f92672">=</span> [<span style="color:#a6e22e">min</span>($p2[<span style="color:#ae81ff">0</span>], $p4[<span style="color:#ae81ff">0</span>]), <span style="color:#a6e22e">min</span>($p2[<span style="color:#ae81ff">1</span>], $p4[<span style="color:#ae81ff">1</span>])];
+
+       <span style="color:#66d9ef">if</span> ($M[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">&lt;</span> $N[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">&amp;&amp;</span> $M[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">&lt;</span> $N[<span style="color:#ae81ff">1</span>]) {
+           <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+       } <span style="color:#66d9ef">else</span> {
+           <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+       }
+   }
+<span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><h4 id="2-json转csv">2 json转csv</h4>
+<p><strong>描述</strong>
+需要将数据库数据导出为csv文件
+<strong>代码</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getCsvData</span>(<span style="color:#a6e22e">int</span> $limit <span style="color:#f92672">=</span> <span style="color:#ae81ff">1000</span>, <span style="color:#a6e22e">int</span> $skip <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">string</span> $ageId <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>)
+    {
+        $data <span style="color:#f92672">=</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">dao</span><span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">conn</span><span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">query</span>([<span style="color:#e6db74">&#39;faceItems&#39;</span> <span style="color:#f92672">=&gt;</span> [<span style="color:#e6db74">&#39;$in&#39;</span> <span style="color:#f92672">=&gt;</span> [$ageId]], <span style="color:#e6db74">&#39;status&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#39;apiCheckPass&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">true</span>],
+            <span style="color:#66d9ef">null</span>, [<span style="color:#e6db74">&#39;limit&#39;</span> <span style="color:#f92672">=&gt;</span> $limit, <span style="color:#e6db74">&#39;skip&#39;</span> <span style="color:#f92672">=&gt;</span> $skip]);
+        <span style="color:#66d9ef">foreach</span> ($data <span style="color:#66d9ef">as</span> $v) {
+            <span style="color:#66d9ef">foreach</span> ($v <span style="color:#66d9ef">as</span> $key <span style="color:#f92672">=&gt;</span> $values) {
+                <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">is_array</span>($values)) {
+                    $v[$key] <span style="color:#f92672">=</span> <span style="color:#a6e22e">implode</span>(<span style="color:#e6db74">&#39;|&#39;</span>, $values);
+                }
+                (<span style="color:#a6e22e">string</span>)$v[$key];
+            }
+            $exportData <span style="color:#f92672">=</span> <span style="color:#a6e22e">implode</span>(<span style="color:#e6db74">&#39;,&#39;</span>, $v);
+            $exportData <span style="color:#f92672">=</span> $exportData <span style="color:#f92672">.</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\r\n</span><span style="color:#e6db74">&#34;</span>;
+            $myfile <span style="color:#f92672">=</span> <span style="color:#a6e22e">fopen</span>(<span style="color:#e6db74">&#34;data.csv&#34;</span>, <span style="color:#e6db74">&#34;a&#34;</span>) <span style="color:#66d9ef">or</span> <span style="color:#66d9ef">die</span>(<span style="color:#e6db74">&#34;Unable to open file!&#34;</span>);
+            $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">writeToCsvFile</span>($data, $myfile, $exportData);
+            <span style="color:#a6e22e">fclose</span>($myfile);
+        }
+    }
+    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">writeToCsvFile</span>(<span style="color:#66d9ef">array</span> $data, $myfile, $exportData)
+    {
+<span style="color:#75715e">//        $txt = \GuzzleHttp\json_encode($data);
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">fwrite</span>($myfile, $exportData);
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+    }
+<span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div>
+   </div>
+ </div>
+
+
+ <a href="https://github.com/laurel-he" class="twitter-share-button " data-size="small" data-count="none">Git hub</a>
+ <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+ <ul class="pager">
+      &nbsp;<li class="previous"><a href="http://laurel-he.github.io/post/codecollect2/"> 运行相关</a></li>
+      &nbsp;<li class="next"><a href="http://laurel-he.github.io/post/linuxuse/"> linux命令大全</a></li>
+</ul>
+
+
+
+    </ul>
+    </div>
+    <footer>
+
+        <p class="text-muted credit">&copy; 2021. All rights reserved. </p>
+    </footer>
+ 
+    <script src="http://laurel-he.github.io//js/jquery-1.10.2.min.js"></script>
+    <script src="http://laurel-he.github.io//js/bootstrap.min.js"></script>
+    <script src="http://laurel-he.github.io//js/bootstrap.js"></script>
+    <script type="text/javascript" src="http://laurel-he.github.io//js/hc.js"></script>
+</body>
+
+</html>
+

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>代码整洁之道1-9章</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.86.0" />
+  <link href="" rel="alternate" type="application/rss+xml" title="" />
+  <link href="http://laurel-he.github.io//css/bootstrap.min.css" rel="stylesheet">
+  <link href="http://laurel-he.github.io//css/hc.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  
+    
+    </head>
+    <body>
+<div class="nav-toggle"><i class="fa fa-bars fa-2x"></i> Herring Cove </div>
+      <div id = "wrapper">
+
+
+<div class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="http://laurel-he.github.io//"><p class="navbar-brand"></p></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+					
+					
+					<li><a href="http://laurel-he.github.io//post/">主页 </a></li>
+					
+					<li><a href="http://laurel-he.github.io//about/">关于 </a></li>
+					
+					<li><a href="http://laurel-he.github.io//categories/">分类 </a></li>
+					
+					<li><a href="http://laurel-he.github.io//tags/">标签 </a></li>
+					
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+       
+       <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+					<img src="/images/avatar.jpg" />
+          <li class="sidebar-brand"><a href="http://laurel-he.github.io//"><h1 class="brand"></h1></a><h3></h3></li>
+          <hr />
+					
+						<li><a href="http://laurel-he.github.io//post/">主页 </a></li>
+					
+						<li><a href="http://laurel-he.github.io//about/">关于 </a></li>
+					
+						<li><a href="http://laurel-he.github.io//categories/">分类 </a></li>
+					
+						<li><a href="http://laurel-he.github.io//tags/">标签 </a></li>
+					
+          <hr />
+          <div id="social-wrapper">
+           
+           
+           
+           
+         </div>
+       </ul>
+     </div>
+
+
+
+     <div class="container">
+
+
+  <div id="article">
+   <div class="article-title">代码整洁之道1-9章</div>
+   <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> 2019-10-07</small></p> <hr/>
+   <div class="post">
+     <h2 id="提要">提要</h2>
+<p>要有代码：代码呈现了需求的细节，将需求明确到机器可以执行的细节程度 <br>
+不要产生糟糕的、混乱的代码，勒布朗法则：稍后等于永不  <br>
+制造混乱无益于赶上期限，做得快的唯一方法就是始终保持代码整洁。</p>
+<h2 id="好代码的特点">好代码的特点</h2>
+<p>优雅、搞笑；代码逻辑直截了当，缺陷难以隐藏； <br>
+尽量减少依赖关系，使之便于维护； <br>
+根据某种分层战略完善处理错误代码，性能调至最优 <br>
+整洁的代码力求集中，每个函数、每个类和每个模块都全神贯注于一事，完全不受四周细节的干扰和污染 <br>
+整洁的代码可由作者之外的开发者阅读和增补，它应当有单元测试和验收测试 <br>
+尽量使用有意义的命名，它只提供一种而非多种做一件事的途径 <br>
+尽量少的依赖关系，明确地定义和提供清晰、尽量少的API</p>
+<h2 id="总结">总结</h2>
+<p>（1）能通过所有测试 <br>
+（2）没有重复代码 <br>
+（3）体现系统中的全部设计理念 <br>
+（4）包含尽量少的实体，比如类、方法、函数等 <br>
+不要重复代码，只做一件事，表达力，小规模抽象</p>
+<h2 id="有意义的命名">有意义的命名</h2>
+<p>（1）如果名称需要注释来补充，那就不算是名副其实（之前出现过争议） <br>
+（2）不要使用意义含糊的废话，如果名称相同但是意义不同，那么info和data与a an the一样毫无意义，不要使用废话，varable不应出现在便能两种，table不应出现在表中  <br>
+（3）使用读得出来的名称，方便阅读 <br>
+（4）使用方便搜索的名称 <br>
+（5）避免使用编码   <br>
+（6）应当把类和函数做得足够小，消除对成员前缀的需要，读代码的人通常不会读前缀 <br>
+（7）不要在类名中使用奇怪的命名 <br>
+（8）不要使用双关语</p>
+<h3 id="函数">函数</h3>
+<p>（1）函数应该尽可能小，20行封顶最佳 <br>
+（2）每个函数都一目了然，每个函数都只说一件事，每个函数都依次带到下一个函数 <br>
+（3）函数的缩进层不应该多余一层或两层</p>
+<h3 id="需要遵循的原则">需要遵循的原则</h3>
+<p>（1）确保每隔switch函数都埋藏在较低的抽象层而且永远不重复     <br>
+（2）不要向函数传入布尔值（我以前经常这么做），因为传入布尔值表示函数会有多余的操作 <br>
+（3）使用异常代替返回错误码（错误代码能从主路径代码中分离出来得到简化） <br>
+（4）抽离try/catch代码块 <br>
+（5）不要重复自己</p>
+<h2 id="注释">注释</h2>
+<h3 id="注意">注意</h3>
+<p>注释存在的时间越久，就离它所描述的代码越远，越来越变得全然错误，因为程序员不能坚持维护注释</p>
+<h3 id="必要的注释好的注释">必要的注释（好的注释）</h3>
+<p>（1）法律信息 <br>
+（2）提供信息的注释 <br>
+（3）对意图的解释 <br>
+（4）阐释（如果参数或返回值是某个标准库的一部分或者不能修改的代码，帮助阐释其含义的代码就会有用） <br>
+（5）警示</p>
+<h2 id="单元测试">单元测试</h2>
+
+   </div>
+ </div>
+
+
+ <a href="https://github.com/laurel-he" class="twitter-share-button " data-size="small" data-count="none">Git hub</a>
+ <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+ <ul class="pager">
+      &nbsp;<li class="previous"><a href="http://laurel-he.github.io/post/codeprinceple/"> 设计模式六大原则</a></li>
+      &nbsp;<li class="next"><a href="http://laurel-he.github.io/post/mongocomplex/"> mongodb学习记录</a></li>
+</ul>
+
+
+
+    </ul>
+    </div>
+    <footer>
+
+        <p class="text-muted credit">&copy; 2021. All rights reserved. </p>
+    </footer>
+ 
+    <script src="http://laurel-he.github.io//js/jquery-1.10.2.min.js"></script>
+    <script src="http://laurel-he.github.io//js/bootstrap.min.js"></script>
+    <script src="http://laurel-he.github.io//js/bootstrap.js"></script>
+    <script type="text/javascript" src="http://laurel-he.github.io//js/hc.js"></script>
+</body>
+
+</html>
+

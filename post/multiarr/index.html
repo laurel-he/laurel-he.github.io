@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>php多维数组相关处理</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.86.0" />
+  <link href="" rel="alternate" type="application/rss+xml" title="" />
+  <link href="http://laurel-he.github.io//css/bootstrap.min.css" rel="stylesheet">
+  <link href="http://laurel-he.github.io//css/hc.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  
+    
+    </head>
+    <body>
+<div class="nav-toggle"><i class="fa fa-bars fa-2x"></i> Herring Cove </div>
+      <div id = "wrapper">
+
+
+<div class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="http://laurel-he.github.io//"><p class="navbar-brand"></p></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+					
+					
+					<li><a href="http://laurel-he.github.io//post/">主页 </a></li>
+					
+					<li><a href="http://laurel-he.github.io//about/">关于 </a></li>
+					
+					<li><a href="http://laurel-he.github.io//categories/">分类 </a></li>
+					
+					<li><a href="http://laurel-he.github.io//tags/">标签 </a></li>
+					
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+       
+       <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+					<img src="/images/avatar.jpg" />
+          <li class="sidebar-brand"><a href="http://laurel-he.github.io//"><h1 class="brand"></h1></a><h3></h3></li>
+          <hr />
+					
+						<li><a href="http://laurel-he.github.io//post/">主页 </a></li>
+					
+						<li><a href="http://laurel-he.github.io//about/">关于 </a></li>
+					
+						<li><a href="http://laurel-he.github.io//categories/">分类 </a></li>
+					
+						<li><a href="http://laurel-he.github.io//tags/">标签 </a></li>
+					
+          <hr />
+          <div id="social-wrapper">
+           
+           
+           
+           
+         </div>
+       </ul>
+     </div>
+
+
+
+     <div class="container">
+
+
+  <div id="article">
+   <div class="article-title">php多维数组相关处理</div>
+   <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> 2020-04-16</small></p> <hr/>
+   <div class="post">
+     <h2 id="使用场景">使用场景</h2>
+<p>在工作中遇到了两次需要把不确定维度的多维数组渲染出来的情况，且还需要修改值和结构，如果使用json-patch会受到限制（需要根据不同的情况打补丁，且由于结构不一定一致，打补丁可能会错误地修改某些文件），因此需要自行设计批量修改如yaml,json等类似于多级结构的方法</p>
+<h2 id="具体解析">具体解析</h2>
+<h3 id="多维数组转化的json前端渲染">多维数组转化的json前端渲染</h3>
+<p>结构不固定,获取对应的json，ts实现</p>
+<pre><code>formatJsonData = (obj: any, name: string, moduleName?: string, getModuleName?: string): any[] =&gt; {
+  const arr: any[] = []
+    if (Object.keys(obj)) {
+      let keys = Object.keys(obj);
+      let i = 0;
+      return keys.map((items) =&gt; {
+        i++;
+        if (obj[items] instanceof Object) {
+          let itemRes = items;
+          if (obj[items]['type']) {
+            itemRes = obj[items]['type'];
+          }
+          const names = name + '=' + itemRes
+          return this.formatJsonData(obj[items], names, moduleName);
+        } else {
+          const resItems = name + '=' + items;
+          this.routesValue.set(resItems, obj[items])
+          if (getModuleName &amp;&amp; resItems === getModuleName) {
+            return obj[items];
+          }
+        }
+      });
+    }
+    return arr
+}
+
+</code></pre><p>结构不固定，根据json获取对应的值，php实现：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#e6db74">/**
+</span><span style="color:#e6db74">     * 将数组格式化为mongo可用的filter
+</span><span style="color:#e6db74">     * @param array $arr
+</span><span style="color:#e6db74">     * @param string $origin
+</span><span style="color:#e6db74">     * @return array
+</span><span style="color:#e6db74">     */</span>
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">formatArr2MongoFilter</span>(<span style="color:#66d9ef">array</span> $arr, <span style="color:#a6e22e">string</span> $origin <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;data&#39;</span>)<span style="color:#f92672">:</span> <span style="color:#66d9ef">array</span>
+    {
+        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">array_keys</span>($arr)) {
+            $keys <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_keys</span>($arr);
+            <span style="color:#66d9ef">foreach</span> ($keys <span style="color:#66d9ef">as</span> $key) {
+                <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">is_array</span>($arr[$key])) {
+                    $resName <span style="color:#f92672">=</span> $origin <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;.&#39;</span> <span style="color:#f92672">.</span> $key;
+                    <span style="color:#66d9ef">return</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">formatArr2MongoFilter</span>($arr[$key], $resName);
+                } <span style="color:#66d9ef">else</span> {
+                    $resName <span style="color:#f92672">=</span> $origin <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;.&#39;</span> <span style="color:#f92672">.</span> $key;
+                    <span style="color:#66d9ef">return</span> [<span style="color:#e6db74">&#39;mongoFilter&#39;</span> <span style="color:#f92672">=&gt;</span> $resName, <span style="color:#e6db74">&#39;value&#39;</span> <span style="color:#f92672">=&gt;</span> $arr[$key]];
+                }
+            }
+        }
+    }
+<span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><h2 id="比较两个多维数组获取差异">比较两个多维数组获取差异</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#e6db74">/**
+</span><span style="color:#e6db74">     * 比较多维数组获取差异值
+</span><span style="color:#e6db74">     * @param $array1
+</span><span style="color:#e6db74">     * @param $array2
+</span><span style="color:#e6db74">     * @return int
+</span><span style="color:#e6db74">     */</span>
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">array_diff_assoc_recursive</span>($array1, $array2)
+    {
+        <span style="color:#66d9ef">foreach</span>($array1 <span style="color:#66d9ef">as</span> $key <span style="color:#f92672">=&gt;</span> $value)
+        {
+            <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">is_array</span>($value))
+            {
+                <span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span><span style="color:#a6e22e">isset</span>($array2[$key]))
+                {
+                    $difference[$key] <span style="color:#f92672">=</span> $value;
+                }
+                <span style="color:#66d9ef">elseif</span>(<span style="color:#f92672">!</span><span style="color:#a6e22e">is_array</span>($array2[$key]))
+                {
+                    $difference[$key] <span style="color:#f92672">=</span> $value;
+                }
+                <span style="color:#66d9ef">else</span>
+                {
+                    $new_diff <span style="color:#f92672">=</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">array_diff_assoc_recursive</span>($value, $array2[$key]);
+                    <span style="color:#66d9ef">if</span>($new_diff <span style="color:#f92672">!=</span> <span style="color:#66d9ef">FALSE</span>)
+                    {
+                        $difference[$key] <span style="color:#f92672">=</span> $new_diff;
+                    }
+                }
+            }
+            <span style="color:#66d9ef">elseif</span>(<span style="color:#f92672">!</span><span style="color:#a6e22e">isset</span>($array2[$key]) <span style="color:#f92672">||</span> $array2[$key] <span style="color:#f92672">!=</span> $value)
+            {
+                $difference[$key] <span style="color:#f92672">=</span> $value;
+            }
+        }
+        <span style="color:#66d9ef">return</span> <span style="color:#f92672">!</span><span style="color:#a6e22e">isset</span>($difference) <span style="color:#f92672">?</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">:</span> $difference;
+    }
+<span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div>
+   </div>
+ </div>
+
+
+ <a href="https://github.com/laurel-he" class="twitter-share-button " data-size="small" data-count="none">Git hub</a>
+ <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+ <ul class="pager">
+      &nbsp;<li class="previous"><a href="http://laurel-he.github.io/post/linuxope/"> linux命令大全</a></li>
+      &nbsp;<li class="next"><a href="http://laurel-he.github.io/post/docker01/"> 《第一本docker书》学习笔记01</a></li>
+</ul>
+
+
+
+    </ul>
+    </div>
+    <footer>
+
+        <p class="text-muted credit">&copy; 2021. All rights reserved. </p>
+    </footer>
+ 
+    <script src="http://laurel-he.github.io//js/jquery-1.10.2.min.js"></script>
+    <script src="http://laurel-he.github.io//js/bootstrap.min.js"></script>
+    <script src="http://laurel-he.github.io//js/bootstrap.js"></script>
+    <script type="text/javascript" src="http://laurel-he.github.io//js/hc.js"></script>
+</body>
+
+</html>
+

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>在github上使用Hexo 搭建个人博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.86.0" />
+  <link href="" rel="alternate" type="application/rss+xml" title="" />
+  <link href="http://laurel-he.github.io//css/bootstrap.min.css" rel="stylesheet">
+  <link href="http://laurel-he.github.io//css/hc.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  
+    
+    </head>
+    <body>
+<div class="nav-toggle"><i class="fa fa-bars fa-2x"></i> Herring Cove </div>
+      <div id = "wrapper">
+
+
+<div class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="http://laurel-he.github.io//"><p class="navbar-brand"></p></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+					
+					
+					<li><a href="http://laurel-he.github.io//post/">主页 </a></li>
+					
+					<li><a href="http://laurel-he.github.io//about/">关于 </a></li>
+					
+					<li><a href="http://laurel-he.github.io//categories/">分类 </a></li>
+					
+					<li><a href="http://laurel-he.github.io//tags/">标签 </a></li>
+					
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+       
+       <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+					<img src="/images/avatar.jpg" />
+          <li class="sidebar-brand"><a href="http://laurel-he.github.io//"><h1 class="brand"></h1></a><h3></h3></li>
+          <hr />
+					
+						<li><a href="http://laurel-he.github.io//post/">主页 </a></li>
+					
+						<li><a href="http://laurel-he.github.io//about/">关于 </a></li>
+					
+						<li><a href="http://laurel-he.github.io//categories/">分类 </a></li>
+					
+						<li><a href="http://laurel-he.github.io//tags/">标签 </a></li>
+					
+          <hr />
+          <div id="social-wrapper">
+           
+           
+           
+           
+         </div>
+       </ul>
+     </div>
+
+
+
+     <div class="container">
+
+
+  <div id="article">
+   <div class="article-title">在github上使用Hexo 搭建个人博客</div>
+   <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> 2019-04-01</small></p> <hr/>
+   <div class="post">
+     <h1 id="安装">安装</h1>
+<p><strong>简介</strong>
+Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。
+<strong>安装前提</strong>
+node.js
+git
+<strong>安装步骤</strong></p>
+<pre><code>npm install -g hexo-cli
+</code></pre><h1 id="建站">建站</h1>
+<pre><code>hexo init &lt;folder&gt;
+cd &lt;folder&gt;
+npm install
+</code></pre><h1 id="创建博客">创建博客</h1>
+<pre><code>hexo new [layout] &lt;title&gt; #hexo n
+hexo generate（或者hexo g:生成静态文件） #hexo g
+hexo publish [layout] &lt;filename&gt;（发布草稿）
+hexo server（启动服务器）
+hexo deploy（或者hexo d:部署）
+hexo render &lt;file1&gt; [file2] ...（渲染文件）
+hexo migrate &lt;type&gt;（从其他博客迁移内容）
+hexo clean（清除缓存文件 (db.json) 和已生成的静态文件 (public)）
+hexo list（列出网站资料）
+hexo version（显示 Hexo 版本）
+#部署使用hexo deploy (hexo d,需要先编译)
+</code></pre><h1 id="添加评论">添加评论</h1>
+<p>可以使用gitment或者valine
+<a href="https://blog.csdn.net/blue_zy/article/details/79071414" title="valine评论">valine评论</a>
+<a href="https://blog.csdn.net/Biebersxzl/article/details/81913680" title="gitment评论">gitment评论</a>
+<strong>注意事项</strong>
+1 如果添加了CNAME，回调地址需要填绑定的地址
+2 如果需要开启评论，除了百度能搜到的步骤以外，还需要本地安装博客评论模块
+npm i &ndash;save gitment
+再重新hexo g -d一下
+3 作者的服务器停掉了，因此需要修改js源码来源：
+<a href="https://blog.csdn.net/wardseptember/article/details/82828391" title="修改源">修改源</a>
+（也可以wget将源码下载下来后修改源到自己服务器上）</p>
+
+   </div>
+ </div>
+
+
+ <a href="https://github.com/laurel-he" class="twitter-share-button " data-size="small" data-count="none">Git hub</a>
+ <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+ <ul class="pager">
+      &nbsp;<li class="previous"><a href="http://laurel-he.github.io/post/mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BB%B4%E6%8A%A4/"> mysql数据库维护</a></li>
+      &nbsp;<li class="next"><a href="http://laurel-he.github.io/post/mysqlindex/"> mysql索引优化</a></li>
+</ul>
+
+
+
+    </ul>
+    </div>
+    <footer>
+
+        <p class="text-muted credit">&copy; 2021. All rights reserved. </p>
+    </footer>
+ 
+    <script src="http://laurel-he.github.io//js/jquery-1.10.2.min.js"></script>
+    <script src="http://laurel-he.github.io//js/bootstrap.min.js"></script>
+    <script src="http://laurel-he.github.io//js/bootstrap.js"></script>
+    <script type="text/javascript" src="http://laurel-he.github.io//js/hc.js"></script>
+</body>
+
+</html>
+

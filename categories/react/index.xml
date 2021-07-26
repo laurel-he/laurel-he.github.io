@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>react on </title>
+    <link>http://laurel-he.github.io/categories/react/</link>
+    <description>Recent content in react on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 22 Oct 2019 18:37:10 +0000</lastBuildDate><atom:link href="http://laurel-he.github.io/categories/react/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>react学习-Props,state和组件树</title>
+      <link>http://laurel-he.github.io/post/react_06/</link>
+      <pubDate>Tue, 22 Oct 2019 18:37:10 +0000</pubDate>
+      
+      <guid>http://laurel-he.github.io/post/react_06/</guid>
+      <description>react学习手册 属性验证 javascript是弱类型语言，可更改变量的类型，难以查找类型错误。</description>
+    </item>
+    
+    <item>
+      <title>react学习-基础</title>
+      <link>http://laurel-he.github.io/post/react_base/</link>
+      <pubDate>Tue, 22 Oct 2019 18:37:10 +0000</pubDate>
+      
+      <guid>http://laurel-he.github.io/post/react_base/</guid>
+      <description>相关概念介绍 react ES6 DOM Redux react-route webpack </description>
+    </item>
+    
+    <item>
+      <title>react单元测试</title>
+      <link>http://laurel-he.github.io/post/reactunit/</link>
+      <pubDate>Mon, 29 Jul 2019 10:40:10 +0000</pubDate>
+      
+      <guid>http://laurel-he.github.io/post/reactunit/</guid>
+      <description>测试 ESLint 代码检查（分析JavaScript代码）,JSHint和JSLint是用于分析JavaScript代码的原生工具，并且可以为用户提供格式化代码的反馈意见；</description>
+    </item>
+    
+    <item>
+      <title>fast-json-patch</title>
+      <link>http://laurel-he.github.io/post/fastjsonpatch/</link>
+      <pubDate>Fri, 26 Jul 2019 14:37:10 +0000</pubDate>
+      
+      <guid>http://laurel-he.github.io/post/fastjsonpatch/</guid>
+      <description>fast-json-patch包使用 网上关于json-patch的中文介绍太少了，官方文档没有翻译版，所以写一下自己的学习文档，以下只是自己根据英文文档的理解，不保证正确。
+基础操作 json patch几大基础操作包括：add, replace, move, test, remove, copy
+applyPatch 给定文档和操作，执行操作
+import {applyOperation, applyPatch} from &amp;#39;fast-json-patch&amp;#39;; let document = document = { firstName: &amp;#34;Albert&amp;#34;, contactDetails: { phoneNumbers: [] } }; let patch = [ { op: &amp;#34;replace&amp;#34;, path: &amp;#34;/firstName&amp;#34;, value: &amp;#34;Joachim&amp;#34; }, { op: &amp;#34;add&amp;#34;, path: &amp;#34;/lastName&amp;#34;, value: &amp;#34;Wester&amp;#34; }, { op: &amp;#34;add&amp;#34;, path: &amp;#34;/contactDetails/phoneNumbers/0&amp;#34;, value: { number: &amp;#34;555-123&amp;#34; } } ]; const docu = applyPatch(document, patch) applyOperation 执行单独的操作而不是连贯操作,举例如下：</description>
+    </item>
+    
+    <item>
+      <title>react学习-javascript函数式编程</title>
+      <link>http://laurel-he.github.io/post/react_02/</link>
+      <pubDate>Tue, 09 Jul 2019 09:37:10 +0000</pubDate>
+      
+      <guid>http://laurel-he.github.io/post/react_02/</guid>
+      <description>react学习手册 Javascript函数式编程 基础概念 1 函数式编程： 函数是第一类成员，函数就是数据，可以像变量那样被保存，检索或者在应用程序内部传递。 （1）可以像声明变量一样声明函数；函数就是变量，可以添加到对象中：
+const obj = { message: &amp;#39;asdsada&amp;#39;, log(message) { console.log(message); } }; obj.log(obj.message); （2）可以将函数添加到数组中； （3）函数可以像其他变量一样，作为其他函数的参数传递，也可以作为其他函数的执行结果被返回;
+命令式和声明式编程 命令式编程：对执行结果的描述胜于执行过程 声明式编程： 代码关注重点是达成目标的具体过程
+不可变性 （1）使用Objct.assign()方法：一种拷贝机制，提供一个空白对象，将操作的对象拷贝到该对象上，然后修改拷贝对象
+Object.assign({}, color, {rating:rating}) （2）可以使用ES6规范下的箭头函数和ES7规范下的对象扩展运算符编写同样的函数。
+const rateColor = (color, rating) =&amp;gt; ({ ...color, rating }) 注意，在箭头函数中，箭头不能指向一个对象的花括号；Array.push方法不是一个不可变函数，使用Array.concat取代 可以使用ES6扩展运算符串联数组，同时改操作符可以使用同样的机制拷贝对象，并将它添加到原生数组的副本上
+const addColor = (title, list) =&amp;gt; [...list, {title}] 纯函数 1 概念： 返回结果值依赖于输入参数的函数。纯函数至少需要接受一个参数并且总是返回一个值或者其他函数。不产生副作用，不修改全局变量或任何应用程序的state,将输入参数当成不可变数据
+var frederick = { name: &amp;#34;Frederick Douglass&amp;#34;, canRead: false, canWrite: false } const selfEducate = person =&amp;gt; ({ .</description>
+    </item>
+    
+    <item>
+      <title>react学习-es6基础特性</title>
+      <link>http://laurel-he.github.io/post/react_01/</link>
+      <pubDate>Mon, 08 Jul 2019 09:37:10 +0000</pubDate>
+      
+      <guid>http://laurel-he.github.io/post/react_01/</guid>
+      <description>react学习手册 新特性 1 react开发者工具：react developer tools，可以查看网站react元素 2 yarn进行依赖管理：yarn.lock文件，可以使用yarn install安装，npm install yarn,yarn add [package-name],yarn remove [package-name]
+变量声明 1 const:常量，不能被修改，重写会报错；
+2 let:变量，可以将变量作用域限定在任意代码块中（var不行） 3 模板字符串${}，可在字符串中插入变量
+箭头函数 1 介绍：用户可以不使用function关键字创建函数，通常还不需要return 2 箭头函数可以限制this的作用域，箭头函数没有自己的this,引用外层的this;
+ES6转译 1 介绍：浏览器运行前将代码转成符合ES5规范的代码，Bable是当前最流行的转译工具之一
+ES6的对象和数组 1 解构赋值： (1)允许用户将某个对象内的字段的作用域本地化，并且声明哪些值是将要使用的。 举例：
+var sandwich = { bread: &amp;#34;dutch crunch&amp;#34;, meat: &amp;#34;tuna&amp;#34;, cheese: &amp;#34;swiss&amp;#34;, toppings: [&amp;#34;lettuce&amp;#34;, &amp;#34;tomato&amp;#34;, &amp;#34;mustard&amp;#34;] } var {bread, meat} = sandwich console.log(bread, meat) bread = &amp;#34;garlic&amp;#34; meat = &amp;#34;turkey&amp;#34; console.log(bread,meat) console.log(sandwich.bread, sandwich.meat) (2)除了使用点符号访问对象内部属性之外，还可以在对象之外解构需要使用的值。
+var regularPerson = { firstname: &amp;#34;Bill&amp;#34;, lastname: &amp;#34;Wilson&amp;#34; }; var lordify = ({firstname}) =&amp;gt; { console.</description>
+    </item>
+    
+  </channel>
+</rss>

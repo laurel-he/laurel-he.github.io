@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>fast-json-patch</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.86.0" />
+  <link href="" rel="alternate" type="application/rss+xml" title="" />
+  <link href="http://laurel-he.github.io//css/bootstrap.min.css" rel="stylesheet">
+  <link href="http://laurel-he.github.io//css/hc.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  
+    
+    </head>
+    <body>
+<div class="nav-toggle"><i class="fa fa-bars fa-2x"></i> Herring Cove </div>
+      <div id = "wrapper">
+
+
+<div class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="http://laurel-he.github.io//"><p class="navbar-brand"></p></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+					
+					
+					<li><a href="http://laurel-he.github.io//post/">主页 </a></li>
+					
+					<li><a href="http://laurel-he.github.io//about/">关于 </a></li>
+					
+					<li><a href="http://laurel-he.github.io//categories/">分类 </a></li>
+					
+					<li><a href="http://laurel-he.github.io//tags/">标签 </a></li>
+					
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+       
+       <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+					<img src="/images/avatar.jpg" />
+          <li class="sidebar-brand"><a href="http://laurel-he.github.io//"><h1 class="brand"></h1></a><h3></h3></li>
+          <hr />
+					
+						<li><a href="http://laurel-he.github.io//post/">主页 </a></li>
+					
+						<li><a href="http://laurel-he.github.io//about/">关于 </a></li>
+					
+						<li><a href="http://laurel-he.github.io//categories/">分类 </a></li>
+					
+						<li><a href="http://laurel-he.github.io//tags/">标签 </a></li>
+					
+          <hr />
+          <div id="social-wrapper">
+           
+           
+           
+           
+         </div>
+       </ul>
+     </div>
+
+
+
+     <div class="container">
+
+
+  <div id="article">
+   <div class="article-title">fast-json-patch</div>
+   <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> 2019-07-26</small></p> <hr/>
+   <div class="post">
+     <h1 id="fast-json-patch包使用">fast-json-patch包使用</h1>
+<p>网上关于json-patch的中文介绍太少了，官方文档没有翻译版，所以写一下自己的学习文档，以下只是自己根据英文文档的理解，不保证正确。</p>
+<h2 id="基础操作">基础操作</h2>
+<p>json patch几大基础操作包括：add, replace, move, test, remove, copy</p>
+<h2 id="applypatch">applyPatch</h2>
+<p>给定文档和操作，执行操作</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#66d9ef">import</span> {<span style="color:#a6e22e">applyOperation</span>, <span style="color:#a6e22e">applyPatch</span>} <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;fast-json-patch&#39;</span>;
+<span style="color:#66d9ef">let</span> document <span style="color:#f92672">=</span> document <span style="color:#f92672">=</span> { <span style="color:#a6e22e">firstName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Albert&#34;</span>, <span style="color:#a6e22e">contactDetails</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">phoneNumbers</span><span style="color:#f92672">:</span> [] } };
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">patch</span> <span style="color:#f92672">=</span> [
+  { <span style="color:#a6e22e">op</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;replace&#34;</span>, <span style="color:#a6e22e">path</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;/firstName&#34;</span>, <span style="color:#a6e22e">value</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Joachim&#34;</span> },
+  { <span style="color:#a6e22e">op</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;add&#34;</span>, <span style="color:#a6e22e">path</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;/lastName&#34;</span>, <span style="color:#a6e22e">value</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Wester&#34;</span> },
+  { <span style="color:#a6e22e">op</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;add&#34;</span>, <span style="color:#a6e22e">path</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;/contactDetails/phoneNumbers/0&#34;</span>, <span style="color:#a6e22e">value</span><span style="color:#f92672">:</span> { <span style="color:#66d9ef">number</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;555-123&#34;</span> }  }
+];
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">docu</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">applyPatch</span>(document, <span style="color:#a6e22e">patch</span>)
+</code></pre></div><h2 id="applyoperation">applyOperation</h2>
+<p>执行单独的操作而不是连贯操作,举例如下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#66d9ef">var</span> document <span style="color:#f92672">=</span> { <span style="color:#a6e22e">firstName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Albert&#34;</span>, <span style="color:#a6e22e">contactDetails</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">phoneNumbers</span><span style="color:#f92672">:</span> [] } };
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">operation</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">op</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;replace&#34;</span>, <span style="color:#a6e22e">path</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;/firstName&#34;</span>, <span style="color:#a6e22e">value</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Joachim&#34;</span> };
+document <span style="color:#f92672">=</span> <span style="color:#a6e22e">jsonpatch</span>.<span style="color:#a6e22e">applyOperation</span>(document, <span style="color:#a6e22e">operation</span>).<span style="color:#a6e22e">newDocument</span>;
+<span style="color:#75715e">// document == { firstName: &#34;Joachim&#34;, contactDetails: { phoneNumbers: [] }}
+</span></code></pre></div><h2 id="applyreducer">applyReducer</h2>
+<p>看了英文原文文档并不很确定，只能根据自己的理解来看。 <br>
+javascript的reduce是一个累加器，使用applyReducer作为累加操作，当定义的操作是一组数组时，使用applyReducer执行操作，示例如下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#66d9ef">var</span> document <span style="color:#f92672">=</span> { <span style="color:#a6e22e">firstName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Albert&#34;</span>, <span style="color:#a6e22e">contactDetails</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">phoneNumbers</span><span style="color:#f92672">:</span> [ ] } };
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">patch</span> <span style="color:#f92672">=</span> [
+  { <span style="color:#a6e22e">op</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;replace&#34;</span>, <span style="color:#a6e22e">path</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;/firstName&#34;</span>, <span style="color:#a6e22e">value</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Joachim&#34;</span> },
+  { <span style="color:#a6e22e">op</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;add&#34;</span>, <span style="color:#a6e22e">path</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;/lastName&#34;</span>, <span style="color:#a6e22e">value</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Wester&#34;</span> },
+  { <span style="color:#a6e22e">op</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;add&#34;</span>, <span style="color:#a6e22e">path</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;/contactDetails/phoneNumbers/0&#34;</span>, <span style="color:#a6e22e">value</span><span style="color:#f92672">:</span> { <span style="color:#66d9ef">number</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;555-123&#34;</span> } }
+];
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">updatedDocument</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">patch</span>.<span style="color:#a6e22e">reduce</span>(<span style="color:#a6e22e">applyReducer</span>, document);
+<span style="color:#75715e">// updatedDocument == { firstName:&#34;Joachim&#34;, lastName:&#34;Wester&#34;, contactDetails:{ phoneNumbers[ {number:&#34;555-123&#34;} ] } };
+</span></code></pre></div><h2 id="generating-patches">Generating patches</h2>
+<p>提供一个类似于观察者，先获取原始文档结构（observe），之后文档进行变化，最后执行操作，可以得到应有的操作流程。示例如下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#66d9ef">var</span> document <span style="color:#f92672">=</span> { <span style="color:#a6e22e">firstName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Joachim&#34;</span>, <span style="color:#a6e22e">lastName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Wester&#34;</span>, <span style="color:#a6e22e">contactDetails</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">phoneNumbers</span><span style="color:#f92672">:</span> [ { <span style="color:#66d9ef">number</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;555-123&#34;</span> }] } };
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">observer</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">jsonpatch</span>.<span style="color:#a6e22e">observe</span>(document);
+document.<span style="color:#a6e22e">firstName</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Albert&#34;</span>;
+document.<span style="color:#a6e22e">contactDetails</span>.<span style="color:#a6e22e">phoneNumbers</span>[<span style="color:#ae81ff">0</span>].<span style="color:#66d9ef">number</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;123&#34;</span>;
+document.<span style="color:#a6e22e">contactDetails</span>.<span style="color:#a6e22e">phoneNumbers</span>.<span style="color:#a6e22e">push</span>({ <span style="color:#66d9ef">number</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;456&#34;</span> });
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">patch</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">jsonpatch</span>.<span style="color:#a6e22e">generate</span>(<span style="color:#a6e22e">observer</span>);
+<span style="color:#75715e">// patch  == [
+</span><span style="color:#75715e">//   { op: &#34;replace&#34;, path: &#34;/firstName&#34;, value: &#34;Albert&#34;},
+</span><span style="color:#75715e">//   { op: &#34;replace&#34;, path: &#34;/contactDetails/phoneNumbers/0/number&#34;, value: &#34;123&#34; },
+</span><span style="color:#75715e">//   { op: &#34;add&#34;, path: &#34;/contactDetails/phoneNumbers/1&#34;, value: {number:&#34;456&#34;}}
+</span><span style="color:#75715e">// ];
+</span></code></pre></div><h2 id="比较两个文档-compare">比较两个文档-compare</h2>
+<p>直接比较两个文档，得出从文档A到文档B应有哪些操作（得到操作后可以尝试用这个操作来更新B文档）</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">documentA</span> <span style="color:#f92672">=</span> {<span style="color:#a6e22e">user</span><span style="color:#f92672">:</span> {<span style="color:#a6e22e">firstName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Albert&#34;</span>, <span style="color:#a6e22e">lastName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Einstein&#34;</span>}};
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">documentB</span> <span style="color:#f92672">=</span> {<span style="color:#a6e22e">user</span><span style="color:#f92672">:</span> {<span style="color:#a6e22e">firstName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Albert&#34;</span>, <span style="color:#a6e22e">lastName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Collins&#34;</span>}};
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">diff</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">jsonpatch</span>.<span style="color:#a6e22e">compare</span>(<span style="color:#a6e22e">documentA</span>, <span style="color:#a6e22e">documentB</span>);
+<span style="color:#75715e">//diff == [{op: &#34;replace&#34;, path: &#34;/user/lastName&#34;, value: &#34;Collins&#34;}]
+</span></code></pre></div><h2 id="验证修补程序序列">验证修补程序序列</h2>
+<p>对patch做校验，验证这个补丁是否可以应用到指定的对象上（可能是这个意思）,如果出错可以打印出错误信息</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span> {<span style="color:#a6e22e">user</span><span style="color:#f92672">:</span> {<span style="color:#a6e22e">firstName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Albert&#34;</span>}};
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">patches</span> <span style="color:#f92672">=</span> [{<span style="color:#a6e22e">op</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;replace&#34;</span>, <span style="color:#a6e22e">path</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;/user/firstName&#34;</span>, <span style="color:#a6e22e">value</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Albert&#34;</span>}, {<span style="color:#a6e22e">op</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;replace&#34;</span>, <span style="color:#a6e22e">path</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;/user/lastName&#34;</span>, <span style="color:#a6e22e">value</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Einstein&#34;</span>}];
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">errors</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">jsonpatch</span>.<span style="color:#a6e22e">validate</span>(<span style="color:#a6e22e">patches</span>, <span style="color:#a6e22e">obj</span>);
+<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">errors</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>) {
+ <span style="color:#75715e">//there are no errors!
+</span><span style="color:#75715e"></span>}
+<span style="color:#66d9ef">else</span> {
+  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">errors</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">errors</span>[<span style="color:#a6e22e">i</span>]) {
+      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Valid patch at index&#34;</span>, <span style="color:#a6e22e">i</span>, <span style="color:#a6e22e">patches</span>[<span style="color:#a6e22e">i</span>]);
+    }
+    <span style="color:#66d9ef">else</span> {
+      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#e6db74">&#34;Invalid patch at index&#34;</span>, <span style="color:#a6e22e">i</span>, <span style="color:#a6e22e">errors</span>[<span style="color:#a6e22e">i</span>], <span style="color:#a6e22e">patches</span>[<span style="color:#a6e22e">i</span>]);
+    }
+  }
+}
+</code></pre></div><h1 id="json-patch-api">Json Patch API</h1>
+<p>函数原型：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">applyPatch</span>&lt;<span style="color:#f92672">T</span>&gt;(document<span style="color:#f92672">:</span> <span style="color:#a6e22e">T</span>, <span style="color:#a6e22e">patch</span>: <span style="color:#66d9ef">Operation</span>[], <span style="color:#a6e22e">validateOperation?</span>: <span style="color:#66d9ef">boolean</span> <span style="color:#f92672">|</span> <span style="color:#a6e22e">Validator</span>&lt;<span style="color:#f92672">T</span>&gt;, <span style="color:#a6e22e">mutateDocument</span>: <span style="color:#66d9ef">boolean</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>, <span style="color:#a6e22e">banPrototypeModifications</span>: <span style="color:#66d9ef">boolean</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>)<span style="color:#f92672">:</span> <span style="color:#a6e22e">PatchResult</span>&lt;<span style="color:#f92672">T</span>&gt;
+</code></pre></div><p>对参数的释义：</p>
+<ul>
+<li>document：将要patch的文档；</li>
+<li>patch：一个json-patch数组，一组可执行的操作；</li>
+<li>validateOperation： boolean类型，是否使用默认校验器对每个操作进行校验或通过校验器回调； <br>
+&hellip;
+其余部分可以自行查文档</li>
+</ul>
+
+   </div>
+ </div>
+
+
+ <a href="https://github.com/laurel-he" class="twitter-share-button " data-size="small" data-count="none">Git hub</a>
+ <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+ <ul class="pager">
+      &nbsp;<li class="previous"><a href="http://laurel-he.github.io/post/simplefactory/"> 简单工厂模式</a></li>
+      &nbsp;<li class="next"><a href="http://laurel-he.github.io/post/2019-03-07/"> Leetcode刷题</a></li>
+</ul>
+
+
+
+    </ul>
+    </div>
+    <footer>
+
+        <p class="text-muted credit">&copy; 2021. All rights reserved. </p>
+    </footer>
+ 
+    <script src="http://laurel-he.github.io//js/jquery-1.10.2.min.js"></script>
+    <script src="http://laurel-he.github.io//js/bootstrap.min.js"></script>
+    <script src="http://laurel-he.github.io//js/bootstrap.js"></script>
+    <script type="text/javascript" src="http://laurel-he.github.io//js/hc.js"></script>
+</body>
+
+</html>
+

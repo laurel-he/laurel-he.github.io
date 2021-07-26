@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>服务端语言 on </title>
+    <link>http://laurel-he.github.io/categories/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E8%AF%AD%E8%A8%80/</link>
+    <description>Recent content in 服务端语言 on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 11 Apr 2019 15:23:44 +0000</lastBuildDate><atom:link href="http://laurel-he.github.io/categories/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E8%AF%AD%E8%A8%80/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Laravel 日志系统</title>
+      <link>http://laurel-he.github.io/post/log/</link>
+      <pubDate>Thu, 11 Apr 2019 15:23:44 +0000</pubDate>
+      
+      <guid>http://laurel-he.github.io/post/log/</guid>
+      <description>1 （自己摸索版本）5.2 1 定义路径 .env配置文件添加日志路径，例如
+LOG_PATH=/tmp/paytest 2 启动文件添加日志路径 $app-&amp;gt;configureMonologUsing(function($logger){ $logger-&amp;gt;pushHandler(new \Monolog\Handler\RotatingFileHandler(env(&amp;#39;LOG_PATH&amp;#39;).&amp;#39;.log&amp;#39;), 10); return $logger; }); 2 官方文档 1 异常处理 介绍 当您启动一个新的 Laravel 项目时，错误和异常处理就已为您配置。 应用程序触发的所有异常都被 App\Exceptions\Handler 类记录下来，然后渲染给用户。 我们将在本文档中深入介绍此类。 配置 （1）config/app.php 文件的 debug 选项，决定了是否向用户显示错误信息。默认情况下，此选项设置为存储在 .env 文件中的 APP_DEBUG 环境变量中。 （2）Laravel 支持 single 、daily 、 syslog 和 errorlog 日志模式。要配置 Laravel 使用的存储机制，应该修改 config/app.php 配置文件中的 log 选项。例如，如果您希望使用每日一个日志文件而不是单个文件，则应将 app 配置文件中的 log 值设置为 daily 日志等级 使用 Monolog 时，日志消息可能具有不同的日志等级。默认情况下，Laravel 将所有日志级别写入存储。但是，在生产环境中，您可能希望通过将 log_level 选项添加到 app.php 配置文件中来配置应记录的最低日志等级。
+一旦配置了此选项，Laravel 将记录大于或等于指定日志等级的所有级别。例如，默认将 log_level 设置为 error 那么将会记录 error , critical , alert 和 emergency 日志信息：</description>
+    </item>
+    
+    <item>
+      <title>重新实现monthly步骤</title>
+      <link>http://laurel-he.github.io/post/monthly/</link>
+      <pubDate>Mon, 25 Mar 2019 09:41:10 +0000</pubDate>
+      
+      <guid>http://laurel-he.github.io/post/monthly/</guid>
+      <description>1 bi新建已收、已付、应收、应付表 CREATE TABLE `order_product_set_pay`( `id` int(10) unsigned NOT NULL, `order_product_id` int(10) unsigned NOT NULL, `parent_order_product_id` int(10) unsigned DEFAULT &#39;0&#39; COMMENT &#39;parent order_product_id&#39;, `has_settlement` decimal(10,2) NOT NULL DEFAULT &#39;0.00&#39;, `should_settlement` decimal(10,2) NOT NULL DEFAULT &#39;0.00&#39;, `has_pay` decimal(10,2) NOT NULL DEFAULT &#39;0.00&#39;, `should_pay` decimal(10,2) NOT NULL DEFAULT &#39;0.00&#39;, `settlement_pay_time` timestamp NOT NULL DEFAULT &#39;0000-00-00 00:00:00&#39;, `pay_pay_status` varchar(255) NOT NULL DEFAULT &#39;Pending&#39;, `pay_pay_time` timestamp NOT NULL DEFAULT &#39;0000-00-00 00:00:00&#39;, PRIMARY KEY (`id`) ) ENGINE=InnoDB DEFAULT CHARSET=utf8; alter table `order_product_set_pay` drop primary key; alter table `order_product_set_pay` add `settlement_id` int(10) unsigned NOT NULL; 2 从bi表中查询数据 1 已收 （总收）/比例 比例 =</description>
+    </item>
+    
+    <item>
+      <title>python数据结构之集合</title>
+      <link>http://laurel-he.github.io/post/pythonset/</link>
+      <pubDate>Fri, 15 Mar 2019 13:52:00 +0000</pubDate>
+      
+      <guid>http://laurel-he.github.io/post/pythonset/</guid>
+      <description>介绍 集合是一个无序的不重复的元素序列 操作 创建集合： {}或set()，创建一个空集合必须用set()，{}创建空字典(set(&amp;ldquo;asdgf&amp;rdquo;)会创建[&amp;lsquo;a&amp;rsquo;, &amp;rsquo;s&#39;, &amp;rsquo;d&#39;, &amp;lsquo;g&amp;rsquo;, &amp;lsquo;f&amp;rsquo;],set()创建多个元素需要两个()) parame = {value01,value02,&amp;hellip;}或set(value) 添加元素： s.add(x) s.update(x) -&amp;gt; 参数可以是列表，元组，字典等，x可以有多个，用逗号分开
+thisset = set((&amp;quot;Google&amp;quot;, &amp;quot;Runoob&amp;quot;, &amp;quot;Taobao&amp;quot;)) thisset.update({1,3}) print(thisset) {1, 3, &#39;Google&#39;, &#39;Taobao&#39;, &#39;Runoob&#39;} thisset.update([1,4],[5,6]) print(thisset) {1, 3, 4, 5, 6, &#39;Google&#39;, &#39;Taobao&#39;, &#39;Runoob&#39;} 移除元素： s.remove(x) 将元素x从集合x移除，如果元素不存在则会发生错误 s.discard(x) 将元素x从集合x移除，如果元素不存在不会发生错误 计算集合元素个数： len(s)
+thisset = set((&amp;quot;Google&amp;quot;, &amp;quot;Runoob&amp;quot;, &amp;quot;Taobao&amp;quot;)) len(thisset) 返回3 清空集合： s.clear() 判断元素x是否在集合s中： x in s 内置方法
+   方法 描述     add() 为集合添加元素   clear() 移除集合中的所有元素   copy() 拷贝一个集合   difference() 返回多个集合的差集   difference_update() 移除集合中的元素，该元素在指定的集合也存在   discard() 删除集合中指定的元素   intersection() 返回集合的交集   intersection_update() 删除集合中的元素，该元素在指定的集合中不存在   isdisjoint() 判断两个集合是否包含相同的元素，如果没有返回 True，否则返回 False   issubset() 判断指定集合是否为该方法参数集合的子集   issuperset() 判断该方法的参数集合是否为指定集合的子集   pop() 随机移除元素   remove() 移除指定元素   symmetric_difference() 返回两个集合中不重复的元素集合   symmetric_difference_update() 移除当前集合中在另外一个指定集合相同的元素，并将另外一个指定集合中不同的元素插入到当前集合中   union() 返回两个集合的并集   update() 给集合添加元素    </description>
+    </item>
+    
+    <item>
+      <title>python数据结构之列表</title>
+      <link>http://laurel-he.github.io/post/pythonlist/</link>
+      <pubDate>Fri, 15 Mar 2019 13:47:00 +0000</pubDate>
+      
+      <guid>http://laurel-he.github.io/post/pythonlist/</guid>
+      <description>介绍
+可以作为一个方括号内的逗号分隔值出现，列表的数据项不需要具有相同的类型 操作 （1）取值： list[0], list[0:3] （list[-2]代表读取列表中倒数第二个元素） （2）更新列表 添加元素：append&amp;ndash;&amp;gt; list.append(&amp;lsquo;test&amp;rsquo;) 删除元素：del&amp;mdash;&amp;gt; del list[2] 脚本操作符
+   python表达式 结果 描述     len([1,2,3]) 3 长度   [1, 2, 3] + [4, 5, 6] [1, 2, 3, 4, 5, 6] 组合   [&amp;lsquo;Hi!&#39;] * 4 [&amp;lsquo;Hi!&amp;rsquo;, &amp;lsquo;Hi!&amp;rsquo;, &amp;lsquo;Hi!&amp;rsquo;, &amp;lsquo;Hi!&#39;] 重复   3 in [1, 2, 3] True 元素是否存在于列表中   for x in [1, 2, 3]: print x, 1 2 3 迭代   函数&amp;amp;方法         函数 作用     cmp(list1, list2) 比较两个列表的元素   len(list) 列表元素个数   max(list) 返回列表元素最大值   min(list) 返回列表元素最小值   list(seq) 将元组转换为列表       方法 作用     list.</description>
+    </item>
+    
+    <item>
+      <title>python数据结构</title>
+      <link>http://laurel-he.github.io/post/pythonstructure/</link>
+      <pubDate>Fri, 15 Mar 2019 09:47:00 +0000</pubDate>
+      
+      <guid>http://laurel-he.github.io/post/pythonstructure/</guid>
+      <description>列表(List) python list
+deque双向队列 python deque
+集合 python set</description>
+    </item>
+    
+    <item>
+      <title>python数据结构之双向队列</title>
+      <link>http://laurel-he.github.io/post/pythondeque/</link>
+      <pubDate>Fri, 15 Mar 2019 09:47:00 +0000</pubDate>
+      
+      <guid>http://laurel-he.github.io/post/pythondeque/</guid>
+      <description>介绍 两端都可以操作的序列 基本操作 创建： import collections d = collections.deque() 往右边添加一个元素： d.append(1) d.append(&amp;lsquo;adc&amp;rsquo;) 往左添加一个元素： d.appendleft(3) 清空队列： d.clear 浅拷贝： d1 = d.copy() 返回指定元素的出现次数： d.count(1) 从队列右边扩展一个列表的元素： d.extend([3,4,5]) 从队列左边扩展一个列表的元素： d.extendleft([3,4,5]) 查找某个元素的索引位置： d.index(&amp;ldquo;c&amp;rdquo;, 0, 2) //指定查找区间 在指定位置插入元素： d.insert(2,&amp;ldquo;z&amp;rdquo;) 删除最右边一个元素（返回删除的元素） d.pop() 删除最左边一个元素（返回删除的元素） d.popleft() 删除指定元素 d.remove(&amp;ldquo;c&amp;rdquo;) 队列翻转 d.reverse() 把右边元素放左边 d.rotate(2) (每个元素向右移动n个，右边元素往左进)
+feature/20190315_auto_reconcile_log http://finance.administration.dev5.tff.com/reconciliation/download?platform=%E9%A9%AC%E8%9C%82%E7%AA%9D&amp;amp;per_page=683&amp;amp;page=1</description>
+    </item>
+    
+    <item>
+      <title>补充python基础知识</title>
+      <link>http://laurel-he.github.io/post/python_base/</link>
+      <pubDate>Thu, 14 Mar 2019 15:26:10 +0000</pubDate>
+      
+      <guid>http://laurel-he.github.io/post/python_base/</guid>
+      <description>##python运算符 幂 返回x的y次幂 10**20 取整除 //:返回商的整数部分，向下取整</description>
+    </item>
+    
+    <item>
+      <title>python debugger</title>
+      <link>http://laurel-he.github.io/post/python_debugger/</link>
+      <pubDate>Thu, 14 Mar 2019 11:48:10 +0000</pubDate>
+      
+      <guid>http://laurel-he.github.io/post/python_debugger/</guid>
+      <description>##准备 来源 http://python.jobbole.com/81184/ 初始代码
+import sys def add(num1=0, num2=0): return int(num1) + int(num2) def sub(num1=0, num2=0): return int(num1) - int(num2) def main(): #Assuming our inputs are valid numbers print sys.argv addition = add(sys.argv[1], sys.argv[2]) print addition subtraction = sub(sys.argv[1], sys.argv[2]) print subtraction if __name__ == &#39;__main__&#39;: main() 基础用法 import pdb pdb.set_trace() //设置断点 在程序中添加断点
+import pdb import sys def add(num1=0, num2=0): return int(num1) + int(num2) def sub(num1=0, num2=0): return int(num1) - int(num2) def main(): #Assuming our inputs are valid numbers print sys.</description>
+    </item>
+    
+    <item>
+      <title>python进阶</title>
+      <link>http://laurel-he.github.io/post/python/</link>
+      <pubDate>Thu, 14 Mar 2019 10:36:10 +0000</pubDate>
+      
+      <guid>http://laurel-he.github.io/post/python/</guid>
+      <description>*args和**kwargs *args *args和**kwargs主要用于函数定义，可以将不定数量的参数传递给一个函数 举例 输入：
+def test_var_args(f_arg, *argv): print(&amp;quot;first normal arg:&amp;quot;, f_arg) for arg in argv: print(&amp;quot;another arg through *argv:&amp;quot;, arg) test_var_args(&#39;yasoob&#39;, &#39;python&#39;, &#39;eggs&#39;, &#39;test&#39;) 输出：
+first normal arg: yasoob another arg through *argv: python another arg through *argv: eggs another arg through *argv: test *kwargs *kwargs允许将不定长度的键值对作为参数传递给一个函数，如果想在一个函数里处理带名字的参数，应该使用**kwargs 使用示例如下：
+def getArgs(f_arg, *args): print &amp;quot;first is&amp;quot; + f_arg for arg in args: print &amp;quot;the data is&amp;quot; + arg def gree(**kwa): for key, value in kwa.</description>
+    </item>
+    
+    <item>
+      <title>Monthly报表完成步骤</title>
+      <link>http://laurel-he.github.io/post/20190214/</link>
+      <pubDate>Sat, 02 Mar 2019 13:25:21 +0000</pubDate>
+      
+      <guid>http://laurel-he.github.io/post/20190214/</guid>
+      <description>1 计算规则（都在订单产品维度） 1 已收 （1）计算此订单产品所在的订单的所有已收款 （2）计算此订单产品所在的订单有多少订单产品 （3）所有已收款除以订单产品数量，平均得出每个订单产品的已收款
+2 基础接口实现 1 注意事项 每次更新代码supervisor都需要重启
+2 添加路由和方法 创建finance_monthly controller,并在dsvcs.py中引入
+3 导入bill表 需要导入bill和bill_item表进ori_new以及bi表中</description>
+    </item>
+    
+    <item>
+      <title>分析bi数据获取流程</title>
+      <link>http://laurel-he.github.io/post/20190213/</link>
+      <pubDate>Sat, 02 Mar 2019 13:25:21 +0000</pubDate>
+      
+      <guid>http://laurel-he.github.io/post/20190213/</guid>
+      <description>一：导入数据 1. bi_etl:通过定时任务脚本将数据从源数据库导出： （1） 修改配置文件，执行dump_order.sh，导入部分测试数据 （2）其中mysqldump导出数据到文件中 （3）shell无法直接执行source，可以用bash来操作，命令：sudo bash dump_order.sh （4）sh文件可能是在windows下面编辑的，在vim中使用set fileformat=unix 去除\M字符 （5）运行sh文件可在data目录下生成sql文件 （6）注意事项： 为什么不使用增量：因为有个中间表没有update_at，financial的表不能随意加字段
+1-1修改: （1）第一步导数据，源数据（来自于order_system）已经执行了删除五张表的三个字段，因此导出的数据结构和以前导出的数据结构是不一样的；
+2. 通过jump server将bi_etl的数据文件导出到bi_new的upload中(本地无法部署)** （1）由于本地无法直接部署jump server,直接拷贝刚才生成的文件到bi_new的upload中； （2）load_new.sh文件读取的是data.tar.gz压缩文件，因此直接压缩整个data文件夹到upload文件夹下
+3. bi_dsvcs读取数据并存入bi_new数据库 （1）修改配置文件（不修改可能会覆盖线上数据） （2）执行脚本并去除\M字符(会读取conf文件，set ff=unix可以去除/r字符) （2）在load_new.sh脚本中（使用了mysql的source命令）将刚才文件中的数据导入ori_new数据库中 （4）注意事项：sh文件中使用了tar -xvf 解压data文件，但是实际上没有解压成功，文件不存在，可以直接复制所有文件
+3-2修改： （1）执行sql命令直接修改ori_new的结构，命令如下：
+use ori_new; alter table `order_product` add `departure_date` date DEFAULT NULL; alter table `order_product` add `end_date` date DEFAULT NULL; alter table `order_product` add `product_status` int(11) NOT NULL DEFAULT &amp;#39;10000&amp;#39;; alter table `order_order_product_combine` drop column `departure_date`, drop column `end_date`, drop column `product_status`; alter table `order_order_product_customize` drop column `departure_date`, drop column `end_date`, drop column `product_status`; alter table `order_order_product_hotel` drop column `departure_date`, drop column `end_date`, drop column `product_status`; alter table `order_order_product_oneday` drop column `departure_date`, drop column `end_date`, drop column `product_status`; alter table `order_order_product_ticket` drop column `departure_date`, drop column `end_date`, drop column `product_status`; alter table `order_order_product_tour` drop column `departure_date`, drop column `end_date`, drop column `product_status`; 4.</description>
+    </item>
+    
+    <item>
+      <title>python100例学习笔记</title>
+      <link>http://laurel-he.github.io/post/20190202/</link>
+      <pubDate>Sat, 02 Feb 2019 13:25:21 +0000</pubDate>
+      
+      <guid>http://laurel-he.github.io/post/20190202/</guid>
+      <description>四个数组成不重复三位数 描述 有四个数字，1,2,3,4，能组成多少个不重复的三位数 思考 原文分析：将所有的数字排列组合后去掉不满足条件的列 代码
+num = 1; for i in range(1,5): for j in range(1,5): for k in range(1,5): if(i != k) and (i != j) and (j != k): print i,j,k num = num + 1 print num 扩展 循环三次效率很低，每次循环都是1-5，有没有更好的解决办法
+2 </description>
+    </item>
+    
+    <item>
+      <title>fastadmin自定义角色组</title>
+      <link>http://laurel-he.github.io/post/test-my-site/</link>
+      <pubDate>Thu, 31 Jan 2019 17:36:10 +0000</pubDate>
+      
+      <guid>http://laurel-he.github.io/post/test-my-site/</guid>
+      <description>之前使用fastadmin，自定义角色组，发现编辑/删除/修改等等权限可以直接权限管理中选择，然后用不同的角色登陆，会显示对应的权限按钮。此时有一个新的需求就是增加审核和批量审核，并且也增加对应的权限。
+ 添加按钮 先不写功能，在对应的位置上加上审核按钮。在顶头位置的批量审核需要得到的样式如下：
+ 原先的创建按钮方法为： {:build_toolbar(&amp;lsquo;refresh,edit,checkall&amp;rsquo;)} 有时候不使用buid_toolbar来创建按钮，而是直接使用的
+ &amp;lt;a href=&amp;quot;javascript:;&amp;quot; class=&amp;quot;btn btn-danger btn-del btn-disabled disabled {:$auth-&amp;gt;check(&#39;course/clabelong/del&#39;)?&#39;&#39;:&#39;hide&#39;}&amp;quot;  title=&amp;quot;{:(&amp;lsquo;Delete&amp;rsquo;)}&amp;quot; &amp;gt;{:(&amp;lsquo;Delete&amp;rsquo;)} 这种方式来创建按钮，这样虽然很直观，但是实际上使用却很不方便，因为这里对于权限的判定可能是有问题的。期待的结果是直接使用build_toolbar方法，设置checkall为批量审核，check为审核方法，对于各个权限组可以直接调用。 修改build_toolbar方法到如下结果：
+function build_toolbar($btns = NULL, $attr = []) { $auth = \app\admin\library\Auth::instance(); $controller = str_replace(&#39;.&#39;, &#39;/&#39;, strtolower(think\Request::instance()-&amp;gt;controller())); $btns = $btns ? $btns : [&#39;refresh&#39;, &#39;add&#39;, &#39;edit&#39;, &#39;del&#39;, &#39;import&#39;,&#39;checkall&#39;]; $btns = is_array($btns) ? $btns : explode(&#39;,&#39;, $btns); $index = array_search(&#39;delete&#39;, $btns); if ($index !== FALSE) { $btns[$index] = &#39;del&#39;; } $btnAttr = [ &#39;refresh&#39; =&amp;gt; [&#39;javascript:;&#39;, &#39;btn btn-primary btn-refresh&#39;, &#39;fa fa-refresh&#39;, &#39;&#39;, __(&#39;Refresh&#39;)], &#39;checkall&#39;=&amp;gt; [&#39;javascript:;&#39;, &#39;btn btn-success btn-checkall btn-disabled disabled&#39;, &#39;fa fa-flag-checkered&#39;, &#39; 批量审核&#39;, &#39;批量审核&#39;], &#39;add&#39; =&amp;gt; [&#39;javascript:;&#39;, &#39;btn btn-success btn-add&#39;, &#39;fa fa-plus&#39;, __(&#39;Add&#39;), __(&#39;Add&#39;)], &#39;edit&#39; =&amp;gt; [&#39;javascript:;&#39;, &#39;btn btn-success btn-edit btn-disabled disabled&#39;, &#39;fa fa-pencil&#39;, __(&#39;Edit&#39;), __(&#39;Edit&#39;)], &#39;del&#39; =&amp;gt; [&#39;javascript:;&#39;, &#39;btn btn-danger btn-del btn-disabled disabled&#39;, &#39;fa fa-trash&#39;, __(&#39;Delete&#39;), __(&#39;Delete&#39;)], &#39;import&#39; =&amp;gt; [&#39;javascript:;&#39;, &#39;btn btn-danger btn-import&#39;, &#39;fa fa-upload&#39;, __(&#39;Import&#39;), __(&#39;Import&#39;)], ]; $btnAttr = array_merge($btnAttr, $attr); $html = []; foreach ($btns as $k =&amp;gt; $v) { //如果未定义或没有权限 if (!</description>
+    </item>
+    
+  </channel>
+</rss>

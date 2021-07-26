@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>go on </title>
+    <link>http://laurel-he.github.io/tags/go/</link>
+    <description>Recent content in go on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 10 Dec 2019 12:34:10 +0000</lastBuildDate><atom:link href="http://laurel-he.github.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用go编写webassembly</title>
+      <link>http://laurel-he.github.io/post/webassembly_go_1/</link>
+      <pubDate>Tue, 10 Dec 2019 12:34:10 +0000</pubDate>
+      
+      <guid>http://laurel-he.github.io/post/webassembly_go_1/</guid>
+      <description>使用go编写webassembly并在浏览器执行 参考博客 用go写WebAssembly入门
+下载安装 go
+编写测试文件hello.go package main import &amp;quot;fmt&amp;quot; func main() { fmt.Println(&amp;quot;Hello World!&amp;quot;) } 生成wasm文件  GOARCH=wasm GOOS=js go build -o hello.wasm hello.go 在windows下需要先设置环境变量：$env:GOARCH=&amp;quot;wasm&amp;quot;;$env:GOOS=&amp;quot;js&amp;quot;;
+添加依赖 cp $(go env GOROOT)/misc/wasm/wasm_exec.{html,js} . 添加一个测试http服务器 //http.go package main import ( &amp;quot;flag&amp;quot; &amp;quot;log&amp;quot; &amp;quot;net/http&amp;quot; &amp;quot;strings&amp;quot; ) var ( listen = flag.String(&amp;quot;listen&amp;quot;, &amp;quot;:8080&amp;quot;, &amp;quot;listen address&amp;quot;) dir = flag.String(&amp;quot;dir&amp;quot;, &amp;quot;.&amp;quot;, &amp;quot;directory to serve&amp;quot;) ) func main() { flag.Parse() log.Printf(&amp;quot;listening on %q...&amp;quot;, *listen) log.Fatal(http.ListenAndServe(*listen, http.HandlerFunc(func(resp http.ResponseWriter, req *http.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>python进阶</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.86.0" />
+  <link href="" rel="alternate" type="application/rss+xml" title="" />
+  <link href="http://laurel-he.github.io//css/bootstrap.min.css" rel="stylesheet">
+  <link href="http://laurel-he.github.io//css/hc.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  
+    
+    </head>
+    <body>
+<div class="nav-toggle"><i class="fa fa-bars fa-2x"></i> Herring Cove </div>
+      <div id = "wrapper">
+
+
+<div class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="http://laurel-he.github.io//"><p class="navbar-brand"></p></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+					
+					
+					<li><a href="http://laurel-he.github.io//post/">主页 </a></li>
+					
+					<li><a href="http://laurel-he.github.io//about/">关于 </a></li>
+					
+					<li><a href="http://laurel-he.github.io//categories/">分类 </a></li>
+					
+					<li><a href="http://laurel-he.github.io//tags/">标签 </a></li>
+					
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+       
+       <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+					<img src="/images/avatar.jpg" />
+          <li class="sidebar-brand"><a href="http://laurel-he.github.io//"><h1 class="brand"></h1></a><h3></h3></li>
+          <hr />
+					
+						<li><a href="http://laurel-he.github.io//post/">主页 </a></li>
+					
+						<li><a href="http://laurel-he.github.io//about/">关于 </a></li>
+					
+						<li><a href="http://laurel-he.github.io//categories/">分类 </a></li>
+					
+						<li><a href="http://laurel-he.github.io//tags/">标签 </a></li>
+					
+          <hr />
+          <div id="social-wrapper">
+           
+           
+           
+           
+         </div>
+       </ul>
+     </div>
+
+
+
+     <div class="container">
+
+
+  <div id="article">
+   <div class="article-title">python进阶</div>
+   <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> 2019-03-14</small></p> <hr/>
+   <div class="post">
+     <h1 id="args和kwargs">*args和**kwargs</h1>
+<h2 id="args">*args</h2>
+<p>*args和**kwargs主要用于函数定义，可以将不定数量的参数传递给一个函数
+<strong>举例</strong>
+输入：</p>
+<pre><code>def test_var_args(f_arg, *argv):
+print(&quot;first normal arg:&quot;, f_arg)
+for arg in argv:
+print(&quot;another arg through *argv:&quot;, arg)
+test_var_args('yasoob', 'python', 'eggs', 'test')
+</code></pre><p>输出：</p>
+<pre><code>first normal arg: yasoob
+another arg through *argv: python
+another arg through *argv: eggs
+another arg through *argv: test
+</code></pre><h2 id="kwargs">*kwargs</h2>
+<p>*kwargs允许将不定长度的键值对作为参数传递给一个函数，如果想在一个函数里处理带名字的参数，应该使用**kwargs
+使用示例如下：</p>
+<pre><code>def getArgs(f_arg, *args):
+    print &quot;first is&quot; + f_arg
+    for arg in args:
+        print &quot;the data is&quot; + arg 
+def gree(**kwa):
+    for key, value in kwa.items():
+        print(&quot;{0} == {1}&quot;.format(key,value))
+#getArgs('name1', 'name2', 'name3', 'name4')
+gree(name='test', age=12, first=&quot;apple&quot;)
+</code></pre><p>输出：</p>
+<pre><code>age == 12
+name == test
+first == apple
+</code></pre><h2 id="使用args和kwargs来调用函数">使用*args和**kwargs来调用函数</h2>
+<p>如果存在以下函数：</p>
+<pre><code>def test_args_kwargs(arg1, arg2, arg3):
+print(&quot;arg1:&quot;, arg1)
+print(&quot;arg2:&quot;, arg2)
+print(&quot;arg3:&quot;, arg3)
+</code></pre><p>可以使用<em>args或**kwargs来给这个函数传递参数
+(1)如果是</em>args</p>
+<pre><code>args = (&quot;two&quot;, 3, 5)
+test_args_kwargs(*args)
+</code></pre><p>输出：</p>
+<pre><code>arg1: two
+arg2: 3
+arg3: 5
+</code></pre><p>(2)如果是**kwargs</p>
+<pre><code>kwargs = {&quot;arg3&quot;: 3, &quot;arg2&quot;: &quot;two&quot;, &quot;arg1&quot;: 5}
+test_args_kwargs(**kwargs)
+</code></pre><p>输出：</p>
+<pre><code>arg1: 5
+arg2: two
+arg3: 3
+</code></pre><p>(3)标准参数与*args、*kwargs在使用时的顺序
+some_func(fargs, *args, **kwargs)</p>
+<h4 id="使用场景">使用场景</h4>
+<p><strong>函数装饰器</strong>
+<strong>猴子补丁</strong></p>
+<p>##调试**
+<a href="https://www.hexiaojiao.top/2019/03/14/python_debugger/" title="python debugger">python debugger</a>
+##生成器和迭代器
+##Map Filter和Reduce</p>
+
+   </div>
+ </div>
+
+
+ <a href="https://github.com/laurel-he" class="twitter-share-button " data-size="small" data-count="none">Git hub</a>
+ <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+ <ul class="pager">
+      &nbsp;<li class="previous"><a href="http://laurel-he.github.io/post/bash/"> bash学习笔记</a></li>
+      &nbsp;<li class="next"><a href="http://laurel-he.github.io/post/python_debugger/"> python debugger</a></li>
+</ul>
+
+
+
+    </ul>
+    </div>
+    <footer>
+
+        <p class="text-muted credit">&copy; 2021. All rights reserved. </p>
+    </footer>
+ 
+    <script src="http://laurel-he.github.io//js/jquery-1.10.2.min.js"></script>
+    <script src="http://laurel-he.github.io//js/bootstrap.min.js"></script>
+    <script src="http://laurel-he.github.io//js/bootstrap.js"></script>
+    <script type="text/javascript" src="http://laurel-he.github.io//js/hc.js"></script>
+</body>
+
+</html>
+
