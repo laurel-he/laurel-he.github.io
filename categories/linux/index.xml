@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>linux on </title>
-    <link>http://laurel-he.github.io/categories/linux/</link>
+    <link>https://laurel-he.github.io/categories/linux/</link>
     <description>Recent content in linux on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 27 Feb 2020 18:00:00 +0000</lastBuildDate><atom:link href="http://laurel-he.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 27 Feb 2020 18:00:00 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>linux命令大全</title>
-      <link>http://laurel-he.github.io/post/linuxope/</link>
+      <link>https://laurel-he.github.io/post/linuxope/</link>
       <pubDate>Thu, 27 Feb 2020 18:00:00 +0000</pubDate>
       
-      <guid>http://laurel-he.github.io/post/linuxope/</guid>
+      <guid>https://laurel-he.github.io/post/linuxope/</guid>
       <description>系统信息 arch 描述
 显示机器的处理器架构 举例
 uname 描述
@@ -26,10 +26,10 @@ dmidecode 描述
     
     <item>
       <title>linux命令大全</title>
-      <link>http://laurel-he.github.io/post/linuxuse/</link>
+      <link>https://laurel-he.github.io/post/linuxuse/</link>
       <pubDate>Thu, 27 Feb 2020 18:00:00 +0000</pubDate>
       
-      <guid>http://laurel-he.github.io/post/linuxuse/</guid>
+      <guid>https://laurel-he.github.io/post/linuxuse/</guid>
       <description>文件操作 cat 描述
 查看文件内容 参数
 -n 或 –number 由 1 开始对所有输出的行数编号 -b 或 –number-nonblank 和 -n 相似，只不过对于空白行不编号 -s 或 –squeeze-blank 当遇到有连续两行以上的空白行，就代换为一行的空白行 -v 或 –show-nonprinting 举例 1 从键盘创建一个文件： 2 将几个文件合并成一个文件： cd 描述</description>
@@ -37,10 +37,10 @@ dmidecode 描述
     
     <item>
       <title>crontab基本使用</title>
-      <link>http://laurel-he.github.io/post/crontab/</link>
+      <link>https://laurel-he.github.io/post/crontab/</link>
       <pubDate>Wed, 10 Apr 2019 18:27:44 +0000</pubDate>
       
-      <guid>http://laurel-he.github.io/post/crontab/</guid>
+      <guid>https://laurel-he.github.io/post/crontab/</guid>
       <description>1 简介 crond 是linux下用来周期性的执行某种任务或等待处理某些事件的一个守护进程，与windows下的计划任务类似，当安装完成操作系统后，默认会安装此服务 工具，并且会自动启动crond进程，crond进程每分钟会定期检查是否有要执行的任务，如果有要执行的任务，则自动执行该任务。
 2 格式 minute hour day month week command
 3 操作 crontab -l:列出所有任务

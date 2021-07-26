@@ -2,43 +2,43 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>react on </title>
-    <link>http://laurel-he.github.io/categories/react/</link>
+    <link>https://laurel-he.github.io/categories/react/</link>
     <description>Recent content in react on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 22 Oct 2019 18:37:10 +0000</lastBuildDate><atom:link href="http://laurel-he.github.io/categories/react/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 22 Oct 2019 18:37:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/react/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>react学习-Props,state和组件树</title>
-      <link>http://laurel-he.github.io/post/react_06/</link>
+      <link>https://laurel-he.github.io/post/react_06/</link>
       <pubDate>Tue, 22 Oct 2019 18:37:10 +0000</pubDate>
       
-      <guid>http://laurel-he.github.io/post/react_06/</guid>
+      <guid>https://laurel-he.github.io/post/react_06/</guid>
       <description>react学习手册 属性验证 javascript是弱类型语言，可更改变量的类型，难以查找类型错误。</description>
     </item>
     
     <item>
       <title>react学习-基础</title>
-      <link>http://laurel-he.github.io/post/react_base/</link>
+      <link>https://laurel-he.github.io/post/react_base/</link>
       <pubDate>Tue, 22 Oct 2019 18:37:10 +0000</pubDate>
       
-      <guid>http://laurel-he.github.io/post/react_base/</guid>
+      <guid>https://laurel-he.github.io/post/react_base/</guid>
       <description>相关概念介绍 react ES6 DOM Redux react-route webpack </description>
     </item>
     
     <item>
       <title>react单元测试</title>
-      <link>http://laurel-he.github.io/post/reactunit/</link>
+      <link>https://laurel-he.github.io/post/reactunit/</link>
       <pubDate>Mon, 29 Jul 2019 10:40:10 +0000</pubDate>
       
-      <guid>http://laurel-he.github.io/post/reactunit/</guid>
+      <guid>https://laurel-he.github.io/post/reactunit/</guid>
       <description>测试 ESLint 代码检查（分析JavaScript代码）,JSHint和JSLint是用于分析JavaScript代码的原生工具，并且可以为用户提供格式化代码的反馈意见；</description>
     </item>
     
     <item>
       <title>fast-json-patch</title>
-      <link>http://laurel-he.github.io/post/fastjsonpatch/</link>
+      <link>https://laurel-he.github.io/post/fastjsonpatch/</link>
       <pubDate>Fri, 26 Jul 2019 14:37:10 +0000</pubDate>
       
-      <guid>http://laurel-he.github.io/post/fastjsonpatch/</guid>
+      <guid>https://laurel-he.github.io/post/fastjsonpatch/</guid>
       <description>fast-json-patch包使用 网上关于json-patch的中文介绍太少了，官方文档没有翻译版，所以写一下自己的学习文档，以下只是自己根据英文文档的理解，不保证正确。
 基础操作 json patch几大基础操作包括：add, replace, move, test, remove, copy
 applyPatch 给定文档和操作，执行操作
@@ -47,10 +47,10 @@ import {applyOperation, applyPatch} from &amp;#39;fast-json-patch&amp;#39;; let 
     
     <item>
       <title>react学习-javascript函数式编程</title>
-      <link>http://laurel-he.github.io/post/react_02/</link>
+      <link>https://laurel-he.github.io/post/react_02/</link>
       <pubDate>Tue, 09 Jul 2019 09:37:10 +0000</pubDate>
       
-      <guid>http://laurel-he.github.io/post/react_02/</guid>
+      <guid>https://laurel-he.github.io/post/react_02/</guid>
       <description>react学习手册 Javascript函数式编程 基础概念 1 函数式编程： 函数是第一类成员，函数就是数据，可以像变量那样被保存，检索或者在应用程序内部传递。 （1）可以像声明变量一样声明函数；函数就是变量，可以添加到对象中：
 const obj = { message: &amp;#39;asdsada&amp;#39;, log(message) { console.log(message); } }; obj.log(obj.message); （2）可以将函数添加到数组中； （3）函数可以像其他变量一样，作为其他函数的参数传递，也可以作为其他函数的执行结果被返回;
 命令式和声明式编程 命令式编程：对执行结果的描述胜于执行过程 声明式编程： 代码关注重点是达成目标的具体过程
@@ -63,10 +63,10 @@ var frederick = { name: &amp;#34;Frederick Douglass&amp;#34;, canRead: false, ca
     
     <item>
       <title>react学习-es6基础特性</title>
-      <link>http://laurel-he.github.io/post/react_01/</link>
+      <link>https://laurel-he.github.io/post/react_01/</link>
       <pubDate>Mon, 08 Jul 2019 09:37:10 +0000</pubDate>
       
-      <guid>http://laurel-he.github.io/post/react_01/</guid>
+      <guid>https://laurel-he.github.io/post/react_01/</guid>
       <description>react学习手册 新特性 1 react开发者工具：react developer tools，可以查看网站react元素 2 yarn进行依赖管理：yarn.lock文件，可以使用yarn install安装，npm install yarn,yarn add [package-name],yarn remove [package-name]
 变量声明 1 const:常量，不能被修改，重写会报错；
 2 let:变量，可以将变量作用域限定在任意代码块中（var不行） 3 模板字符串${}，可在字符串中插入变量
