@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>其他 on </title>
-    <link>https://laurel-he.github.io/categories/%E5%85%B6%E4%BB%96/</link>
+    <link>/categories/%E5%85%B6%E4%BB%96/</link>
     <description>Recent content in 其他 on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 28 Mar 2019 14:03:27 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/%E5%85%B6%E4%BB%96/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 28 Mar 2019 14:03:27 +0000</lastBuildDate><atom:link href="/categories/%E5%85%B6%E4%BB%96/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>各方法实现微信机器人对比</title>
-      <link>https://laurel-he.github.io/post/wechat/</link>
+      <link>/post/wechat/</link>
       <pubDate>Thu, 28 Mar 2019 14:03:27 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/wechat/</guid>
+      <guid>/post/wechat/</guid>
       <description>wxpy 直接排除，只有极少数人的微信可以使用，无法用来实现机器人；
 图灵机器人 图灵机器人可以接入微信，也可以实现群管理，但是是通过第三方来实现的
    功能 详解 是否必要     接入微信公众号 群自动回复 是   主动触发回复 主动往群里发送消息 是   定时发送 定时给群发送消息 是    微群管家 图灵机器人推荐的微信个人号接入第三方插件，但只有windows版本可用，不适用于mac版本开发，但可以实现自定义开发，文档比较全面且免费，可以作为备选方案 功能介绍：

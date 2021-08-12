@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>json-patch on </title>
-    <link>https://laurel-he.github.io/categories/json-patch/</link>
+    <link>/categories/json-patch/</link>
     <description>Recent content in json-patch on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 26 Jul 2019 14:37:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/json-patch/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 26 Jul 2019 14:37:10 +0000</lastBuildDate><atom:link href="/categories/json-patch/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>fast-json-patch</title>
-      <link>https://laurel-he.github.io/post/fastjsonpatch/</link>
+      <link>/post/fastjsonpatch/</link>
       <pubDate>Fri, 26 Jul 2019 14:37:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/fastjsonpatch/</guid>
+      <guid>/post/fastjsonpatch/</guid>
       <description>fast-json-patch包使用 网上关于json-patch的中文介绍太少了，官方文档没有翻译版，所以写一下自己的学习文档，以下只是自己根据英文文档的理解，不保证正确。
 基础操作 json patch几大基础操作包括：add, replace, move, test, remove, copy
 applyPatch 给定文档和操作，执行操作

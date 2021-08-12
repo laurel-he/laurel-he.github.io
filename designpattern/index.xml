@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Designpatterns on </title>
+    <link>/designpattern/</link>
+    <description>Recent content in Designpatterns on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 07 May 2020 20:20:10 +0000</lastBuildDate><atom:link href="/designpattern/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>设计模式从头学习-面向对象设计原则概述</title>
+      <link>/designpattern/phpallpattern/design_pattern02/</link>
+      <pubDate>Thu, 07 May 2020 20:20:10 +0000</pubDate>
+      
+      <guid>/designpattern/phpallpattern/design_pattern02/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>设计模式从头学习-前言</title>
+      <link>/designpattern/phpallpattern/design_patter01/</link>
+      <pubDate>Thu, 07 May 2020 20:13:10 +0000</pubDate>
+      
+      <guid>/designpattern/phpallpattern/design_patter01/</guid>
+      <description>注意 本文参考了书籍《大话设计模式》和文章从招式与内功谈起——设计模式概述 #写作初衷 我有空的时候就会学习一下设计模式，零零散散半年过去了，真正能够静下心来学习 设计模式的事件少之又少，而且很多模式例如单例模式，命令模式等我学过后就忘了，让我现在再 复述或者使用我又需要重新去学一下，因此我抛弃以前学习的零零散散的与设计模式相关的东西， 尝试从头再学一次，边学边使用，并做好详细的笔记，以后可以直接翻阅。 #设计模式的作用 (1)设计模式经过多年的使用和实践，包含了大量成功的，可维护可复用的设计方案，在很多情况下，设计模式可以提高开发效率，节约时间 (2)设计模式跨语言、跨平台、跨应用、跨国界，提供了通用的词汇和使用方式，节约交流时间 (3)大部分设计模式都兼顾了系统的可重用性和扩展性，这使很多系统可以重用，减少代码重复 (4)合理使用设计模式有助于别人理解自己的代码 (5)有助于更为深刻地理解面对对象编程 #如何掌握设计模式 a.这个设计模式的意图是什么 b.它要解决一个什么问题 c.什么时候可以使用它 d.它是如何解决问题的 e.掌握它的结构图 f.记住它的关键代码 g.能够想到至少两个它的应用实例，一个生活中的，一个软件中的 h.这个模式的优缺点是什么 i.在使用时要注意什么 #注意事项 （1）最好的掌握设计模式的方法是使用它们 （2）千万不要滥用模式</description>
+    </item>
+    
+    <item>
+      <title>单例模式</title>
+      <link>/designpattern/phpallpattern/design_singleton/</link>
+      <pubDate>Tue, 29 Oct 2019 17:40:10 +0000</pubDate>
+      
+      <guid>/designpattern/phpallpattern/design_singleton/</guid>
+      <description>概念介绍 情景介绍 一个类只需要被实例化一次，但是不应该由调用方来判断是否被实例化过
+基础介绍 所有类都有构造方法，不编码则系统默认生成空的构造方法，若有显示定义的构造方法，默认的构造方法就会失效。 类把构造方法设置为私有，使所有的方法都不能直接实例化这个类。然后类内部写一个公共方法来判断这个类是否被实例化过，调用方无需判断
+单例模式 单例模式：保证一个类仅有一个实例，并提供一个访问它的全局访问点。 通常可以让一个全局变量使得一个对象被访问，但它不能防止实例化多个对象。一个最好的办法就是，让类自身负责保存它的唯一实例，这个类可以保证没有其他实例可以被创建，并且它可以提供一个访问该实例的方法。</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>mongodb on </title>
-    <link>https://laurel-he.github.io/categories/mongodb/</link>
+    <link>/categories/mongodb/</link>
     <description>Recent content in mongodb on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 20 Oct 2019 18:27:44 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/mongodb/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 20 Oct 2019 18:27:44 +0000</lastBuildDate><atom:link href="/categories/mongodb/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>mongodb学习记录</title>
-      <link>https://laurel-he.github.io/post/mongocomplex/</link>
+      <link>/post/mongocomplex/</link>
       <pubDate>Sun, 20 Oct 2019 18:27:44 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/mongocomplex/</guid>
+      <guid>/post/mongocomplex/</guid>
       <description>参考文档 http://www.mongoing.com/docs/reference/operator/aggregation/interface.html https://www.cnblogs.com/zhoujie/p/mongo1.html https://www.docs4dev.com/docs/zh/mongodb/v3.6/reference/tutorial-text-search-in-aggregation.html
 mongodb精准匹配 假设有需求如下：数据为多层级的数组，需要精准匹配到某一个层级，并进行更新或新增等操作，如何实现？
 实现方式 当Mongodb版本大于3.6.1，实现将会非常简单，因为mongodb3.6.1以上可以直接通过语句来实现精准匹配。 但由于实际场景中版本不支持，当匹配超过一级则会报错：Too many positional (i.e. &amp;lsquo;$&#39;) elements found in path &amp;lsquo;files.$.testConstruct.params.list.$.testRange&amp;rsquo; 当版本大于3.6.1，举例：
@@ -21,10 +21,10 @@ db.test_db.update( {&#39;_id&#39;: {$in: [&#39;1242rererwwr&#39;]}, &#39;files.n
     
     <item>
       <title>mongodb使用</title>
-      <link>https://laurel-he.github.io/post/mongo1/</link>
+      <link>/post/mongo1/</link>
       <pubDate>Tue, 02 Apr 2019 18:27:44 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/mongo1/</guid>
+      <guid>/post/mongo1/</guid>
       <description>基础  列出所有数据库:show dbs; 列出所有表：show tables;或show collections; 查询所有数据：db.taname.find().pretty(); 查询指定列所有数据：db.tbname.find({},{col1:1,col2:2,&amp;hellip;}).pretty(); 根据条件查询所有数据：db.tbname.find({name:&amp;ldquo;test&amp;rdquo;},{col1:1,col2:1}).pretty(); 查询结果不包含指定字段：db.tbname.find({},{status:0,col2:0}).pretty();  查询 1 查询所有数据 db.tbname.find().pretty();</description>
     </item>
     

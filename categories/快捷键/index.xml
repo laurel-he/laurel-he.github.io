@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>快捷键 on </title>
-    <link>https://laurel-he.github.io/categories/%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+    <link>/categories/%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
     <description>Recent content in 快捷键 on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 05 Mar 2019 13:25:21 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/%E5%BF%AB%E6%8D%B7%E9%94%AE/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Mar 2019 13:25:21 +0000</lastBuildDate><atom:link href="/categories/%E5%BF%AB%E6%8D%B7%E9%94%AE/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>一些快捷键</title>
-      <link>https://laurel-he.github.io/post/20190220/</link>
+      <link>/post/20190220/</link>
       <pubDate>Tue, 05 Mar 2019 13:25:21 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/20190220/</guid>
+      <guid>/post/20190220/</guid>
       <description>navicat for mysql 快捷键 1.ctrl+q 打开查询窗口 2.ctrl+/ 注释sql语句 3.ctrl+shift +/ 解除注释 4.ctrl+r 运行查询窗口的sql语句 5.ctrl+shift+r 只运行选中的sql语句 6.F6 打开一个mysql命令行窗口 7.ctrl+l 删除一行 8.ctrl+n 打开一个新的查询窗口 9.ctrl+w 关闭一个查询窗口
 phpstrom快捷键 编辑
    快捷键 作用     Ctrl + Space 代码自动完成（一般与输入法冲突）   Ctrl + Shift + Enter 智能完善代码（如:if()）   Ctrl + P 方法参数提示，显示默认参数   Ctrl + Q 显示注释代码   Ctrl + mouse over code 查看到简短的函数介绍   Ctrl + F1 显示错误或警告信息的描述（需要把光标放到错误或警告位置）   Alt + Insert 生成代码段（ 包括函数或类注释，版权信息，构造方法，抽象方法等）   Ctrl + O 插入覆盖父类的方法   Ctrl + I 实现抽象方法   Ctrl + Alt + T 选中的代码放在if.</description>
@@ -19,10 +19,10 @@ phpstrom快捷键 编辑
     
     <item>
       <title>vim学习笔记</title>
-      <link>https://laurel-he.github.io/post/vim/</link>
+      <link>/post/vim/</link>
       <pubDate>Thu, 28 Feb 2019 16:34:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/vim/</guid>
+      <guid>/post/vim/</guid>
       <description>光标移动 h 或 &amp;lt;- 表示向左 j 下 k 上 l 右
 ctrl + f 屏幕向下移动一页 ctrl + b 向上移动一页 ctrl + d 向下移动半页 ctrl + u 向上移动半页 &amp;lsquo;+&amp;rsquo; 光标移动到非空格符的下一行 &amp;lsquo;-&amp;rsquo; 光标移动到非空格符的 n[space] n表示数字，光标向右移动n个字符 0或[Home] 移动到这一行最开始的字符处 $或[End] 移动到这一行的最后面字符处 H 移动到这个屏幕最上方一行的第一个字符 M 移动到这个屏幕中央一行的第一个字符 L 移动到这个屏幕最下方一行的第一个字符 G 移动到这个文件的最后一行 nG(:n) 移动到这个文件的第n行 gg(1G) 移动到第一行 n[Enter] n为数字，表示向下移动n行
 查找与替换 /word 光标之下寻找名为word的字符串 ?word 光标之上寻找名为word的字符串 n 重复前一个查找的操作 N 反向进行前一个查找操作 :n1,n2s/word1/word2/g n1和n2是数字，在n1和n2行之间查找所有word,替换成word2 :1,$s/word1/word2/g :1,$s/word1/word2/gc c代表confirm,替换前显示确认信息

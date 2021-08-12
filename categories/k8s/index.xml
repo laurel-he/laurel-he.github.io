@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>k8s on </title>
-    <link>https://laurel-he.github.io/categories/k8s/</link>
+    <link>/categories/k8s/</link>
     <description>Recent content in k8s on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 21 May 2020 11:00:00 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/k8s/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 21 May 2020 11:00:00 +0000</lastBuildDate><atom:link href="/categories/k8s/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>kustomize使用文档</title>
-      <link>https://laurel-he.github.io/post/kustomize01/</link>
+      <link>/post/kustomize01/</link>
       <pubDate>Thu, 21 May 2020 11:00:00 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/kustomize01/</guid>
+      <guid>/post/kustomize01/</guid>
       <description></description>
     </item>
     
     <item>
       <title>kubenetes权威指南1-2章</title>
-      <link>https://laurel-he.github.io/post/k8s01/</link>
+      <link>/post/k8s01/</link>
       <pubDate>Sat, 16 May 2020 18:00:00 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/k8s01/</guid>
+      <guid>/post/k8s01/</guid>
       <description>kubenetes是什么 k8s是一个全新的基于容器技术的分布式架构领先方案，一个开放的开发平台，一个完备的分布式系统支撑平台
 k8s重要资源对象介绍 Master 概念介绍 k8s中的Master指的是集群控制节点，在每个集群里都需要有一个Master来负责整个集群的管理和控制。
 关键进程 （1）Kubenetes API Server(kube-apiserver):提供了HTTP Rest接口的额关键服务进程，是 kubenetes里所有资源的增删改查等操作的唯一入口，也是集群控制的入口进程 （2）kubenetes Controller Manager(kube-controller-manager):kubenetes里所有资源对象的自动化控制中心，可以将其理解为资源对象的大总管 （3）Kubenetes Scheduler(kube-scheduler):负责资源调度(Pod调度)的进程，相当于哦公交公司的调度室

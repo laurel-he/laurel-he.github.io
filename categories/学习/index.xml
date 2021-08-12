@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>学习 on </title>
-    <link>https://laurel-he.github.io/categories/%E5%AD%A6%E4%B9%A0/</link>
+    <link>/categories/%E5%AD%A6%E4%B9%A0/</link>
     <description>Recent content in 学习 on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 20 Jul 2021 16:34:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Jul 2021 16:34:10 +0000</lastBuildDate><atom:link href="/categories/%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>数据结构学习笔记-1</title>
-      <link>https://laurel-he.github.io/post/datastruct_01/</link>
+      <link>/post/datastruct_01/</link>
       <pubDate>Tue, 20 Jul 2021 16:34:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/datastruct_01/</guid>
+      <guid>/post/datastruct_01/</guid>
       <description>数据结构学习系列都来自于中国大学MOOC上的浙江大学数据结构学习课程。原课程代码全部采用C语言实现，由于本菜平时最擅长（zhihuiyong）使用php，因此所有算法全部翻译成了php实现。课程链接：数据结构 全文已同步发布到CSDN
 定义 （1）数据结构是数据对象，以及存在于该对象的实例和组成实例的数据元素之间的各种联系。这些联系可以通过定义和相关的函数来给出 （2）数据结构是ADT(abstruct data type)的物理实现 （3）数据结构是计算机存储，组织数据的方式，通常情况下，精心选择的数据结构可以带来最有效率的算法
 示例 写程序实现一个函数printN，打印从1-N之间的所有正整数 。以下是两种实现方式的php实现代码：
@@ -20,28 +20,28 @@
     
     <item>
       <title>设计模式从头学习-面向对象设计原则概述</title>
-      <link>https://laurel-he.github.io/post/design_pattern02/</link>
+      <link>/designpattern/phpallpattern/design_pattern02/</link>
       <pubDate>Thu, 07 May 2020 20:20:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/design_pattern02/</guid>
+      <guid>/designpattern/phpallpattern/design_pattern02/</guid>
       <description></description>
     </item>
     
     <item>
       <title>设计模式从头学习-前言</title>
-      <link>https://laurel-he.github.io/post/design_patter01/</link>
+      <link>/designpattern/phpallpattern/design_patter01/</link>
       <pubDate>Thu, 07 May 2020 20:13:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/design_patter01/</guid>
+      <guid>/designpattern/phpallpattern/design_patter01/</guid>
       <description>注意 本文参考了书籍《大话设计模式》和文章从招式与内功谈起——设计模式概述 #写作初衷 我有空的时候就会学习一下设计模式，零零散散半年过去了，真正能够静下心来学习 设计模式的事件少之又少，而且很多模式例如单例模式，命令模式等我学过后就忘了，让我现在再 复述或者使用我又需要重新去学一下，因此我抛弃以前学习的零零散散的与设计模式相关的东西， 尝试从头再学一次，边学边使用，并做好详细的笔记，以后可以直接翻阅。 #设计模式的作用 (1)设计模式经过多年的使用和实践，包含了大量成功的，可维护可复用的设计方案，在很多情况下，设计模式可以提高开发效率，节约时间 (2)设计模式跨语言、跨平台、跨应用、跨国界，提供了通用的词汇和使用方式，节约交流时间 (3)大部分设计模式都兼顾了系统的可重用性和扩展性，这使很多系统可以重用，减少代码重复 (4)合理使用设计模式有助于别人理解自己的代码 (5)有助于更为深刻地理解面对对象编程 #如何掌握设计模式 a.这个设计模式的意图是什么 b.它要解决一个什么问题 c.什么时候可以使用它 d.它是如何解决问题的 e.掌握它的结构图 f.记住它的关键代码 g.能够想到至少两个它的应用实例，一个生活中的，一个软件中的 h.这个模式的优缺点是什么 i.在使用时要注意什么 #注意事项 （1）最好的掌握设计模式的方法是使用它们 （2）千万不要滥用模式</description>
     </item>
     
     <item>
       <title>使用go编写webassembly</title>
-      <link>https://laurel-he.github.io/post/webassembly_go_1/</link>
+      <link>/post/webassembly_go_1/</link>
       <pubDate>Tue, 10 Dec 2019 12:34:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/webassembly_go_1/</guid>
+      <guid>/post/webassembly_go_1/</guid>
       <description>使用go编写webassembly并在浏览器执行 参考博客 用go写WebAssembly入门
 下载安装 go
 编写测试文件hello.go package main import &amp;quot;fmt&amp;quot; func main() { fmt.Println(&amp;quot;Hello World!&amp;quot;) } 生成wasm文件  GOARCH=wasm GOOS=js go build -o hello.wasm hello.go 在windows下需要先设置环境变量：$env:GOARCH=&amp;quot;wasm&amp;quot;;$env:GOOS=&amp;quot;js&amp;quot;;
@@ -50,19 +50,19 @@
     
     <item>
       <title>测试</title>
-      <link>https://laurel-he.github.io/post/unittest/</link>
+      <link>/post/unittest/</link>
       <pubDate>Tue, 10 Dec 2019 12:34:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/unittest/</guid>
+      <guid>/post/unittest/</guid>
       <description>单元测试 mock 接口测试 stub mock fakeserver </description>
     </item>
     
     <item>
       <title>代码整洁之道1-9章</title>
-      <link>https://laurel-he.github.io/post/cleancode/</link>
+      <link>/post/cleancode/</link>
       <pubDate>Mon, 07 Oct 2019 17:40:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/cleancode/</guid>
+      <guid>/post/cleancode/</guid>
       <description>提要 要有代码：代码呈现了需求的细节，将需求明确到机器可以执行的细节程度 不要产生糟糕的、混乱的代码，勒布朗法则：稍后等于永不 制造混乱无益于赶上期限，做得快的唯一方法就是始终保持代码整洁。
 好代码的特点 优雅、搞笑；代码逻辑直截了当，缺陷难以隐藏； 尽量减少依赖关系，使之便于维护； 根据某种分层战略完善处理错误代码，性能调至最优 整洁的代码力求集中，每个函数、每个类和每个模块都全神贯注于一事，完全不受四周细节的干扰和污染 整洁的代码可由作者之外的开发者阅读和增补，它应当有单元测试和验收测试 尽量使用有意义的命名，它只提供一种而非多种做一件事的途径 尽量少的依赖关系，明确地定义和提供清晰、尽量少的API
 总结 （1）能通过所有测试 （2）没有重复代码 （3）体现系统中的全部设计理念 （4）包含尽量少的实体，比如类、方法、函数等 不要重复代码，只做一件事，表达力，小规模抽象
@@ -76,10 +76,10 @@
     
     <item>
       <title>设计模式六大原则</title>
-      <link>https://laurel-he.github.io/post/codeprinceple/</link>
+      <link>/post/codeprinceple/</link>
       <pubDate>Mon, 07 Oct 2019 17:40:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/codeprinceple/</guid>
+      <guid>/post/codeprinceple/</guid>
       <description>##第一：单一职责原则（SPR）
 一个类应该有且仅有一个原因导致该类的变更，即一个类应该只负责一项职责
 ##第二：里氏替换原则（LSP）
@@ -88,20 +88,20 @@
     
     <item>
       <title>单例模式</title>
-      <link>https://laurel-he.github.io/post/singlemode/</link>
+      <link>/post/singlemode/</link>
       <pubDate>Sun, 06 Oct 2019 10:40:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/singlemode/</guid>
+      <guid>/post/singlemode/</guid>
       <description>基础介绍 概念介绍 作为对象的创建模式，单例模式确保某一个类只有一个实例，并且对外提供这个全局实例的访问入口。它不会创建实例副本，而是会向单例类内部存储的实例返回一个引用。
 单例模式三要素  需要一个保存类的唯一实例的静态成员变量。 构造函数和克隆函数必须声明为私有的，防止外部程序创建或复制实例副本。 必须提供一个访问这个实例的公共静态方法，从而返回唯一实例的一个引用。  </description>
     </item>
     
     <item>
       <title>生产者消费者模式</title>
-      <link>https://laurel-he.github.io/post/producerconsumer/</link>
+      <link>/post/producerconsumer/</link>
       <pubDate>Sat, 05 Oct 2019 17:40:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/producerconsumer/</guid>
+      <guid>/post/producerconsumer/</guid>
       <description>基础概念 概念介绍 某块模块负责产生数据，这些数据由另一个模块来负责处理。产生数据的模块，就形象地称为生产者；而处理数据的模块，就称为消费者。 该模式还需要有一个缓冲区处于生产者和消费者之间，作为一个中介。生产者把数据放入缓冲区，而消费者从缓冲区取出数据 缓冲区作用
   解耦，生产者和消费者只依赖缓冲区，而不互相依赖
   支持并发和异步
@@ -113,10 +113,10 @@
     
     <item>
       <title>代码大全</title>
-      <link>https://laurel-he.github.io/post/codecomplate_01/</link>
+      <link>/post/codecomplate_01/</link>
       <pubDate>Sat, 05 Oct 2019 10:40:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/codecomplate_01/</guid>
+      <guid>/post/codecomplate_01/</guid>
       <description>前期准备 前期准备的重要性 不要立即开始写代码，要做好必要的需求分析和架构设计，写好需求文档和技术文档，防止浪费时间和精力制造错误的东西
 需求核对表 针对功能需求：
 1．是否详细定义了系统的全部输入，包括其来源、精度、取值范围、出现频率等？
@@ -156,10 +156,10 @@
     
     <item>
       <title>命令模式</title>
-      <link>https://laurel-he.github.io/post/commandmode/</link>
+      <link>/post/commandmode/</link>
       <pubDate>Fri, 04 Oct 2019 17:40:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/commandmode/</guid>
+      <guid>/post/commandmode/</guid>
       <description>基础概念 基础介绍 （1）概念介绍： 命令模式（Command Pattern）是一种数据驱动的设计模式，它属于行为型模式。请求以命令的形式包裹在对象中，并传给调用对象。调用对象寻找可以处理该命令的合适的对象，并把该命令传给相应的对象，该对象执行命令。 （2）概念解析： 命令模式将一个请求封装成一个对象，从而可用不同的请求对客户进行参数化，对请求排队或记录请求日志，以及支持可撤销的操作。
 使用场景 在某些场合下，需要对行为进行&amp;quot;记录、撤销/重做、事务&amp;quot;等处理，需要将&amp;quot;行为请求者&amp;quot;与&amp;quot;行为实现者&amp;quot;解耦，将一组行为抽象为对象，可以实现二者之间的松耦合。认为是命令的地方都可以使用命令模式，比如： 1、GUI 中每一个按钮都是一条命令。 2、模拟 CMD。
 关键术语 （1）received：真正的命令执行对象 （2）Command：命令 （3）invoker：使用命令对象的入口
@@ -171,10 +171,10 @@ a.创建一个命令接口： 接口定义接口名称，需要实现的操作�
     
     <item>
       <title>策略模式</title>
-      <link>https://laurel-he.github.io/post/strategy/</link>
+      <link>/post/strategy/</link>
       <pubDate>Mon, 29 Jul 2019 14:37:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/strategy/</guid>
+      <guid>/post/strategy/</guid>
       <description>概念 定义 策略模式定义了算法族，分别封装起来，让他们之间可以相互替换，该模式让算法独立于使用它的客户而独立变化
 组成 1 抽象策略角色：策略类，通常由一个接口或者抽象类实现 2 具体策略角色：包装了相关的算法和行为。 3 环境角色：持有一个策略类的引用，最终给客户端调用。
 分析 策略模式用一个抽象策略角色提供一个类（一般是接口或抽象类），每个策略都实现了这个抽象策略角色，环境角色去调用（依赖注入）
@@ -183,10 +183,10 @@ a.创建一个命令接口： 接口定义接口名称，需要实现的操作�
     
     <item>
       <title>简单工厂模式</title>
-      <link>https://laurel-he.github.io/post/simplefactory/</link>
+      <link>/post/simplefactory/</link>
       <pubDate>Wed, 24 Jul 2019 10:40:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/simplefactory/</guid>
+      <guid>/post/simplefactory/</guid>
       <description>引入 实现计算器 代码实现 1 实现一个基础的计算器功能，代码见https://github.com/laurel-he/design_pattern/blob/master/simpleFactory/calculator01.php
 问题分析 （1）错误处理只判断了除数是否为0，对于字符超长，不可计算等都未处理，可以加上try catch； （2）代码不可复用，耦合性很高
 使用面向对象处理 （1）使用面向对象的方式实现，将输入输出流和逻辑代码分离，可以提高代码复用性，降低耦合，代码见https://github.com/laurel-he/design_pattern/blob/master/simpleFactory/Calculate2.php
@@ -198,10 +198,10 @@ a.创建一个命令接口： 接口定义接口名称，需要实现的操作�
     
     <item>
       <title>抽象工厂模式</title>
-      <link>https://laurel-he.github.io/post/abstractfactory/</link>
+      <link>/post/abstractfactory/</link>
       <pubDate>Mon, 22 Jul 2019 17:40:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/abstractfactory/</guid>
+      <guid>/post/abstractfactory/</guid>
       <description>目的 在不指定具体类的情况下创建一系列相关或依赖对象。 通常创建的类都实现相同的接口。 抽象工厂的客户并不关心这些对象是如何创建的，它只是知道它们是如何一起运行的。
 举例  &amp;lt;?php class KuaidiBirdLogic extends BaseLogic { private $basic; private $num; public function __construct(int $num, int $basic) { $this-&amp;gt;num = $num; $this-&amp;gt;basic = $basic; } } class KuaidiOneLogic implements KuaidiBase { private $num; public function __construct(int $num) { $this-&amp;gt;num = $num; } } 定义抽象工厂类
 &amp;lt;?php class ExpressFactory extends Model { public function getKuaidiBirdList() { return new KuaidiBirdLogic(12, 13); } public function getKuaidiOneLogic() { return new KuaidiOneLogic(); } } 几种工厂模式的区别 抽象工厂模式 类似于示例Basic</description>
@@ -209,10 +209,10 @@ a.创建一个命令接口： 接口定义接口名称，需要实现的操作�
     
     <item>
       <title>基础介绍</title>
-      <link>https://laurel-he.github.io/post/depat/</link>
+      <link>/post/depat/</link>
       <pubDate>Mon, 22 Jul 2019 10:03:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/depat/</guid>
+      <guid>/post/depat/</guid>
       <description>#基础介绍
 设计具备的特性 （1）应该对手头的问题有针对性，同时对将来的问题和需求也要有足够的通用性； （2）避免重复设计或尽可能少做重复设计
 什么是设计模式 模式四要素 模式名称 助记名，使用一两个词来描述模式的问题、解决方案和效果
@@ -226,10 +226,10 @@ a.创建一个命令接口： 接口定义接口名称，需要实现的操作�
     
     <item>
       <title>各种奇怪的坑</title>
-      <link>https://laurel-he.github.io/post/2019_01_01/</link>
+      <link>/post/2019_01_01/</link>
       <pubDate>Fri, 01 Feb 2019 16:10:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/2019_01_01/</guid>
+      <guid>/post/2019_01_01/</guid>
       <description>1 strtotime() 描述 获取上个月的时间可以是date(&amp;lsquo;Y-m-d&amp;rsquo;,strtotime(&#39;-1 month&#39;));如果今天是31号而上个月没有31号，就会直接输出这个月1号； 解决办法 使用last day of -1 month来获取上个月的最后一天
 2 php 字符串和数字比较 描述 遇到一个问题，传过来的参数可能是0，可能是字符串，然后与0作比较，但是当传递的参数是字符串时，与0比较，结果是true 解决办法 直接与&#39;0&amp;rsquo;比较。0===&amp;lsquo;0&amp;rsquo;可以返回true,可以直接比较，字符串与&#39;0&amp;rsquo;比较也不等
 3 virtualbox共享文件夹不能执行virtualenv env，只能在其他文件夹下运行，暂时没想到解决办法 virtualbox的共享文件夹有保护机制，不允许直接运行virtualenv env，只能在其他文件夹下运行,解决办法： 硬链接

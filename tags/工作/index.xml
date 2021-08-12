@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>工作 on </title>
-    <link>https://laurel-he.github.io/tags/%E5%B7%A5%E4%BD%9C/</link>
+    <link>/tags/%E5%B7%A5%E4%BD%9C/</link>
     <description>Recent content in 工作 on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 24 Apr 2019 21:03:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/tags/%E5%B7%A5%E4%BD%9C/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 24 Apr 2019 21:03:10 +0000</lastBuildDate><atom:link href="/tags/%E5%B7%A5%E4%BD%9C/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>gitflow command version</title>
-      <link>https://laurel-he.github.io/post/git/</link>
+      <link>/post/git/</link>
       <pubDate>Wed, 24 Apr 2019 21:03:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/git/</guid>
+      <guid>/post/git/</guid>
       <description>新建feature/hotfix进行项目开发  更新本地代码仓库缓存 git remote update git checkout develop git merge origin/develop git branch feature/20171012_hotel_enhance
 ##补充 1 删除分支 git branch &amp;ndash;delete &amp;ndash;remotes origin/feature/20190214_monthly git push origin :feature/20190214_monthly 2 add之后回退 git reset HEAD 3 撤销commit git commit &amp;ndash;amend 4 撤销已经commit但是没有push git log 找到commit id git reset &amp;ndash;hard commit_id 完成撤销,同时将代码恢复到前一commit_id 对应的版本
 git reset commit_id 完成Commit命令的撤销，但是不对代码修改进行撤销，可以直接通过git commit 重新提交对本地代码的修改
@@ -20,19 +20,19 @@ git fetch </description>
     
     <item>
       <title>gitflow command version</title>
-      <link>https://laurel-he.github.io/post/githubguide/</link>
+      <link>/post/githubguide/</link>
       <pubDate>Wed, 24 Apr 2019 21:03:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/githubguide/</guid>
+      <guid>/post/githubguide/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Monthly报表完成步骤</title>
-      <link>https://laurel-he.github.io/post/20190214/</link>
+      <link>/post/20190214/</link>
       <pubDate>Sat, 02 Mar 2019 13:25:21 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/20190214/</guid>
+      <guid>/post/20190214/</guid>
       <description>1 计算规则（都在订单产品维度） 1 已收 （1）计算此订单产品所在的订单的所有已收款 （2）计算此订单产品所在的订单有多少订单产品 （3）所有已收款除以订单产品数量，平均得出每个订单产品的已收款
 2 基础接口实现 1 注意事项 每次更新代码supervisor都需要重启
 2 添加路由和方法 创建finance_monthly controller,并在dsvcs.py中引入
@@ -41,10 +41,10 @@ git fetch </description>
     
     <item>
       <title>分析bi数据获取流程</title>
-      <link>https://laurel-he.github.io/post/20190213/</link>
+      <link>/post/20190213/</link>
       <pubDate>Sat, 02 Mar 2019 13:25:21 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/20190213/</guid>
+      <guid>/post/20190213/</guid>
       <description>一：导入数据 1. bi_etl:通过定时任务脚本将数据从源数据库导出： （1） 修改配置文件，执行dump_order.sh，导入部分测试数据 （2）其中mysqldump导出数据到文件中 （3）shell无法直接执行source，可以用bash来操作，命令：sudo bash dump_order.sh （4）sh文件可能是在windows下面编辑的，在vim中使用set fileformat=unix 去除\M字符 （5）运行sh文件可在data目录下生成sql文件 （6）注意事项： 为什么不使用增量：因为有个中间表没有update_at，financial的表不能随意加字段
 1-1修改: （1）第一步导数据，源数据（来自于order_system）已经执行了删除五张表的三个字段，因此导出的数据结构和以前导出的数据结构是不一样的；
 2. 通过jump server将bi_etl的数据文件导出到bi_new的upload中(本地无法部署)** （1）由于本地无法直接部署jump server,直接拷贝刚才生成的文件到bi_new的upload中； （2）load_new.sh文件读取的是data.tar.gz压缩文件，因此直接压缩整个data文件夹到upload文件夹下
