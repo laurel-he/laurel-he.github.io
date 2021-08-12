@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>docker on </title>
-    <link>/categories/docker/</link>
+    <link>https://laurel-he.github.io/categories/docker/</link>
     <description>Recent content in docker on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 21 Apr 2020 21:03:10 +0000</lastBuildDate><atom:link href="/categories/docker/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 21 Apr 2020 21:03:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>《第一本docker书》学习笔记01</title>
-      <link>/post/docker01/</link>
+      <link>https://laurel-he.github.io/post/docker01/</link>
       <pubDate>Tue, 21 Apr 2020 21:03:10 +0000</pubDate>
       
-      <guid>/post/docker01/</guid>
+      <guid>https://laurel-he.github.io/post/docker01/</guid>
       <description>Docker与配置管理 docker的核心组件 （1）docker客户端和服务器，也称为docker引擎 （2）docker镜像 （3）Registry （4）Docker容器
 基本使用 docker info 查看docker程序是否存在，功能是否正常
 docker exec(docker run) docker run 命令提供了docker容器的创建到启动的功能 (1)-i:保证容器STDIN是开启的 (2)-t:为要撞见的容器分配一个伪tty终端 docker exec -it backend_jiapin /bi n/bash</description>
@@ -19,10 +19,10 @@ docker exec(docker run) docker run 命令提供了docker容器的创建到启动
     
     <item>
       <title>docker使用心得</title>
-      <link>/post/docker/</link>
+      <link>https://laurel-he.github.io/post/docker/</link>
       <pubDate>Wed, 24 Apr 2019 21:03:10 +0000</pubDate>
       
-      <guid>/post/docker/</guid>
+      <guid>https://laurel-he.github.io/post/docker/</guid>
       <description>准备工作 1 前提条件 ubuntu内核版本高于 3.10 uname -r 
 2 安装docker 本文是基于ubuntu的，基于centos安装路径博客如下： centos windows
 wget -qO- https://get.docker.com/ | sh 当要以非root用户可以直接运行docker时，需要执行 sudo usermod -aG docker runoob 命令，然后重新登陆 启动docker服务

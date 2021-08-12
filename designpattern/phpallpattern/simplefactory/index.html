@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>简单工厂模式</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.87.0" />
+  <link href="" rel="alternate" type="application/rss+xml" title="" />
+  <link href="https://laurel-he.github.io//css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://laurel-he.github.io//css/hc.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  
+    
+    </head>
+    <body>
+<div class="nav-toggle"><i class="fa fa-bars fa-2x"></i> Herring Cove </div>
+      <div id = "wrapper">
+
+
+<div class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="https://laurel-he.github.io//"><p class="navbar-brand"></p></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+					
+					
+					<li><a href="https://laurel-he.github.io//post/">主页 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//categories/">分类 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//tags/">标签 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//designpattern/">设计模式 </a></li>
+					
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+       
+       <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+					<img src="/images/avatar.jpg" />
+          <li class="sidebar-brand"><a href="https://laurel-he.github.io//"><h1 class="brand"></h1></a><h3></h3></li>
+          <hr />
+					
+						<li><a href="https://laurel-he.github.io//post/">主页 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//categories/">分类 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//tags/">标签 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//designpattern/">设计模式 </a></li>
+					
+          <hr />
+          <div id="social-wrapper">
+           
+           
+           
+           
+         </div>
+       </ul>
+     </div>
+
+
+
+     <div class="container">
+
+
+  <div id="article">
+   <div class="article-title">简单工厂模式</div>
+   <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> 2019-07-24</small></p> <hr/>
+   <div class="post">
+     <h2 id="引入">引入</h2>
+<h3 id="实现计算器">实现计算器</h3>
+<h4 id="代码实现">代码实现</h4>
+<p>1 实现一个基础的计算器功能，代码见https://github.com/laurel-he/design_pattern/blob/master/simpleFactory/calculator01.php</p>
+<h4 id="问题分析">问题分析</h4>
+<p>（1）错误处理只判断了除数是否为0，对于字符超长，不可计算等都未处理，可以加上try catch； <br>
+（2）代码不可复用，耦合性很高</p>
+<h4 id="使用面向对象处理">使用面向对象处理</h4>
+<p>（1）使用面向对象的方式实现，将输入输出流和逻辑代码分离，可以提高代码复用性，降低耦合，代码见https://github.com/laurel-he/design_pattern/blob/master/simpleFactory/Calculate2.php</p>
+<h4 id="紧耦合vs松耦合">紧耦合vs松耦合</h4>
+<p>思考：什么情况下使用继承和多态（各种运算可以继承自运算基类，便于扩展，多态考虑输入的不同类型，对于字符串怎样运算） <br>
+根据以上思考，完成有继承和多态的代码如下：
+<a href="https://github.com/laurel-he/design_pattern/blob/master/simpleFactory/Calculate03.php">https://github.com/laurel-he/design_pattern/blob/master/simpleFactory/Calculate03.php</a>   <br>
+思考：以上代码实现方式虽然使用到了继承，但是如何知道应该调用哪个类呢？难道像之前预估的一样，还是要使用switch判断？</p>
+<h4 id="简单工厂模式">简单工厂模式</h4>
+<p>解决问题，实例化谁，将来会不会增加实例化的对象等容易变化的地方，考虑用一个单独的类来做这个创造实例的过程
+在此基础上实现一个简单工厂类，代码如下： <br>
+<a href="https://github.com/laurel-he/design_pattern/blob/master/simpleFactory/Calculate04.php">https://github.com/laurel-he/design_pattern/blob/master/simpleFactory/Calculate04.php</a>
+如果需要修改运算，可以只修改对应的类，如果需要添加运算，只需要添加运算类，并在工厂中添加对应的分支就可以了 <br>
+简单工厂模式的工厂类一般是使用静态方法，通过接受的参数的不同来返回不同的对象实例</p>
+<h4 id="工厂方法模式">工厂方法模式</h4>
+<p>1 简单工厂模式优点： <br>
+（1）简单工厂包含必要的判断逻辑，实现了对象的创建和使用的分离； <br>
+（2）客户端无需知道所创建的具体产品类的类名，只需要具体产品类对应的参数即可； <br>
+（3）在不修改任何客户端代码的情况下更换和增加新的具体产品类，在一定程度上提高了系统的灵活性 <br>
+2 简单工厂模式缺点： <br>
+（1）工厂类职责过重，它出问题整个系统都会崩溃  <br>
+（2）添加新的类的时候，系统中的简单工厂类都要修改，违反了开放-封闭原则 <br>
+（3）简单工厂的静态方法，使得工厂角色无法形成基于继承的等级结构  <br>
+工厂方法模式每一种算法都对应一种工厂，
+工厂方法模式优点： <br>
+（1）</p>
+<h4 id="抽象工厂">抽象工厂</h4>
+
+   </div>
+ </div>
+
+
+ <a href="https://github.com/laurel-he" class="twitter-share-button " data-size="small" data-count="none">Git hub</a>
+ <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+ <ul class="pager">
+      &nbsp;<li class="previous"><a href="https://laurel-he.github.io/post/genericity/"> typescript泛型</a></li>
+      &nbsp;<li class="next"><a href="https://laurel-he.github.io/post/fastjsonpatch/"> fast-json-patch</a></li>
+</ul>
+
+
+
+    </ul>
+    </div>
+    <footer>
+
+        <p class="text-muted credit">&copy; 2021. All rights reserved. </p>
+    </footer>
+ 
+    <script src="https://laurel-he.github.io//js/jquery-1.10.2.min.js"></script>
+    <script src="https://laurel-he.github.io//js/bootstrap.min.js"></script>
+    <script src="https://laurel-he.github.io//js/bootstrap.js"></script>
+    <script type="text/javascript" src="https://laurel-he.github.io//js/hc.js"></script>
+</body>
+
+</html>
+

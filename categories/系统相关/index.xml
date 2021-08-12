@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>系统相关 on </title>
-    <link>/categories/%E7%B3%BB%E7%BB%9F%E7%9B%B8%E5%85%B3/</link>
+    <link>https://laurel-he.github.io/categories/%E7%B3%BB%E7%BB%9F%E7%9B%B8%E5%85%B3/</link>
     <description>Recent content in 系统相关 on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 27 Feb 2020 18:00:00 +0000</lastBuildDate><atom:link href="/categories/%E7%B3%BB%E7%BB%9F%E7%9B%B8%E5%85%B3/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 27 Feb 2020 18:00:00 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/%E7%B3%BB%E7%BB%9F%E7%9B%B8%E5%85%B3/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>linux命令大全</title>
-      <link>/post/linuxope/</link>
+      <link>https://laurel-he.github.io/post/linuxope/</link>
       <pubDate>Thu, 27 Feb 2020 18:00:00 +0000</pubDate>
       
-      <guid>/post/linuxope/</guid>
+      <guid>https://laurel-he.github.io/post/linuxope/</guid>
       <description>系统信息 arch 描述
 显示机器的处理器架构 举例
 uname 描述

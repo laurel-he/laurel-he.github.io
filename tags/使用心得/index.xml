@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>使用心得 on </title>
-    <link>/tags/%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97/</link>
+    <link>https://laurel-he.github.io/tags/%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97/</link>
     <description>Recent content in 使用心得 on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 24 Apr 2019 21:03:10 +0000</lastBuildDate><atom:link href="/tags/%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 24 Apr 2019 21:03:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/tags/%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>docker使用心得</title>
-      <link>/post/docker/</link>
+      <link>https://laurel-he.github.io/post/docker/</link>
       <pubDate>Wed, 24 Apr 2019 21:03:10 +0000</pubDate>
       
-      <guid>/post/docker/</guid>
+      <guid>https://laurel-he.github.io/post/docker/</guid>
       <description>准备工作 1 前提条件 ubuntu内核版本高于 3.10 uname -r 
 2 安装docker 本文是基于ubuntu的，基于centos安装路径博客如下： centos windows
 wget -qO- https://get.docker.com/ | sh 当要以非root用户可以直接运行docker时，需要执行 sudo usermod -aG docker runoob 命令，然后重新登陆 启动docker服务

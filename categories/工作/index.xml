@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>工作 on </title>
-    <link>/categories/%E5%B7%A5%E4%BD%9C/</link>
+    <link>https://laurel-he.github.io/categories/%E5%B7%A5%E4%BD%9C/</link>
     <description>Recent content in 工作 on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 15 Aug 2019 10:27:44 +0000</lastBuildDate><atom:link href="/categories/%E5%B7%A5%E4%BD%9C/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 15 Aug 2019 10:27:44 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/%E5%B7%A5%E4%BD%9C/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>生成json映射表</title>
-      <link>/post/json/</link>
+      <link>https://laurel-he.github.io/post/json/</link>
       <pubDate>Thu, 15 Aug 2019 10:27:44 +0000</pubDate>
       
-      <guid>/post/json/</guid>
+      <guid>https://laurel-he.github.io/post/json/</guid>
       <description>生成json映射表代码 &amp;lt;?php $dic = [ &amp;#39;qd&amp;#39; =&amp;gt; [...], &amp;#39;mp&amp;#39; =&amp;gt; [... 100], &amp;#39;jl&amp;#39; =&amp;gt; [...], &amp;#39;sb&amp;#39; =&amp;gt; [..., 50, 60, 70, 85, 100], &amp;#39;ly&amp;#39; =&amp;gt; [..., 50, 60, 70, 85, 100], &amp;#39;dy&amp;#39; =&amp;gt; [...0, 50, 60, 70, 85, 100], &amp;#39;sl&amp;#39; =&amp;gt; [...55, 60, 65, 70, 85, 100], &amp;#39;xl&amp;#39; =&amp;gt; [... 50, 55, 65, 75, 85, 100], &amp;#39;vl&amp;#39; =&amp;gt; [...50, 60, 70, 80, 90, 100], &amp;#39;rh&amp;#39; =&amp;gt; [... 100] ]; function getJson($dic) { $res = []; foreach($dic as $k =&amp;gt; $v){ $res[$k] = []; foreach($v as $key =&amp;gt; $val) { $res[$k][&amp;#39;mapV&amp;#39;][$key] = [ &amp;#39;label&amp;#39; =&amp;gt; (string)$key, &amp;#39;value&amp;#39; =&amp;gt; (string)$val ]; } } var_dump(json_encode($res)); } getJSON($dic); ?</description>
     </item>
     

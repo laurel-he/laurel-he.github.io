@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>demo on </title>
-    <link>/tags/demo/</link>
+    <link>https://laurel-he.github.io/tags/demo/</link>
     <description>Recent content in demo on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 18 Jul 2019 09:37:10 +0000</lastBuildDate><atom:link href="/tags/demo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 18 Jul 2019 09:37:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/tags/demo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>demo实例</title>
-      <link>/post/demo_01/</link>
+      <link>https://laurel-he.github.io/post/demo_01/</link>
       <pubDate>Thu, 18 Jul 2019 09:37:10 +0000</pubDate>
       
-      <guid>/post/demo_01/</guid>
+      <guid>https://laurel-he.github.io/post/demo_01/</guid>
       <description>js正则表达式 let patt = /[顺丰]/; let reg = new RegExp(patt, &amp;#39;i&amp;#39;); const company = (reg.test(record.remark) === true) ? &amp;#39;shunfeng&amp;#39; : &amp;#39;annengwuliu&amp;#39; console.log(&amp;#39;re test-=-----&amp;#39;, company); const num = record.remark.replace(/[^0-9]/ig, &amp;#34;&amp;#34;) 递归读取层级json getAllKey (obj: any, name: string, moduleName?: string): any[] { const arr: any[] = [] if (Object.keys(obj)) { let keys = Object.keys(obj); let i = 0; return keys.map((items) =&amp;gt; { i++; if (obj[items] instanceof Object) { // console.log(&amp;#34;obj[items]:&amp;#34;, items);  let itemRes = items; if (obj[items][&amp;#39;type&amp;#39;]) { // console.</description>
     </item>
     

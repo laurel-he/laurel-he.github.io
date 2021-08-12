@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>策略模式</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.87.0" />
+  <link href="" rel="alternate" type="application/rss+xml" title="" />
+  <link href="https://laurel-he.github.io//css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://laurel-he.github.io//css/hc.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  
+    
+    </head>
+    <body>
+<div class="nav-toggle"><i class="fa fa-bars fa-2x"></i> Herring Cove </div>
+      <div id = "wrapper">
+
+
+<div class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="https://laurel-he.github.io//"><p class="navbar-brand"></p></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+					
+					
+					<li><a href="https://laurel-he.github.io//post/">主页 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//categories/">分类 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//tags/">标签 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//designpattern/">设计模式 </a></li>
+					
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+       
+       <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+					<img src="/images/avatar.jpg" />
+          <li class="sidebar-brand"><a href="https://laurel-he.github.io//"><h1 class="brand"></h1></a><h3></h3></li>
+          <hr />
+					
+						<li><a href="https://laurel-he.github.io//post/">主页 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//categories/">分类 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//tags/">标签 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//designpattern/">设计模式 </a></li>
+					
+          <hr />
+          <div id="social-wrapper">
+           
+           
+           
+           
+         </div>
+       </ul>
+     </div>
+
+
+
+     <div class="container">
+
+
+  <div id="article">
+   <div class="article-title">策略模式</div>
+   <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> 2019-07-29</small></p> <hr/>
+   <div class="post">
+     <h2 id="概念">概念</h2>
+<h3 id="定义">定义</h3>
+<p>策略模式定义了算法族，分别封装起来，让他们之间可以相互替换，该模式让算法独立于使用它的客户而独立变化</p>
+<h3 id="组成">组成</h3>
+<p>1 抽象策略角色：策略类，通常由一个接口或者抽象类实现 <br>
+2 具体策略角色：包装了相关的算法和行为。  <br>
+3 环境角色：持有一个策略类的引用，最终给客户端调用。</p>
+<h4 id="分析">分析</h4>
+<p>策略模式用一个抽象策略角色提供一个类（一般是接口或抽象类），每个策略都实现了这个抽象策略角色，环境角色去调用（依赖注入）</p>
+<h4 id="代码">代码</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#e6db74">/**
+</span><span style="color:#e6db74"> * @author: hexiaojiao@jiapinai.com
+</span><span style="color:#e6db74"> * @todo:
+</span><span style="color:#e6db74"> * time: 2019-07-30 20:07
+</span><span style="color:#e6db74"> */</span>
+
+<span style="color:#e6db74">/**
+</span><span style="color:#e6db74"> * 定义抽象角色类`
+</span><span style="color:#e6db74"> * Interface CollectInter
+</span><span style="color:#e6db74"> */</span>
+<span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">CollectInter</span>
+{
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">collect</span>($price, $num);
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">input</span>();
+}
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Base</span>
+{
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">input</span>($discount <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>)
+    {
+        <span style="color:#a6e22e">fwrite</span>(<span style="color:#a6e22e">STDOUT</span>, <span style="color:#e6db74">&#39;请输入单价&#39;</span>);
+        $price <span style="color:#f92672">=</span> <span style="color:#a6e22e">trim</span>(<span style="color:#a6e22e">fgets</span>(<span style="color:#a6e22e">STDIN</span>));
+        <span style="color:#a6e22e">fwrite</span>(<span style="color:#a6e22e">STDOUT</span>, <span style="color:#e6db74">&#39;请输入数量&#39;</span>);
+        $num <span style="color:#f92672">=</span> <span style="color:#a6e22e">trim</span>(<span style="color:#a6e22e">fgets</span>(<span style="color:#a6e22e">STDIN</span>));
+        $res <span style="color:#f92672">=</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">collect</span>($price, $num, $discount);
+        <span style="color:#66d9ef">return</span> $res;
+    }
+}
+
+<span style="color:#e6db74">/**
+</span><span style="color:#e6db74"> * 定义具体策略类
+</span><span style="color:#e6db74"> * Class Collect02
+</span><span style="color:#e6db74"> */</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Collect02</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Base</span> <span style="color:#66d9ef">implements</span> <span style="color:#a6e22e">CollectInter</span>
+{
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">collect</span>($price, $num, $discount <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>) {
+        <span style="color:#a6e22e">var_dump</span>(<span style="color:#e6db74">&#39;Collect02:&#39;</span>, $price <span style="color:#f92672">*</span> $num <span style="color:#f92672">*</span> $discount);
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+    }
+}
+
+<span style="color:#e6db74">/**
+</span><span style="color:#e6db74"> * Class Discount
+</span><span style="color:#e6db74"> */</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Discount</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Base</span> <span style="color:#66d9ef">implements</span> <span style="color:#a6e22e">CollectInter</span>
+{
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">collect</span>($price, $num, $discount <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.8</span>)
+    {
+        <span style="color:#a6e22e">var_dump</span>(<span style="color:#e6db74">&#39;Discount:&#39;</span>, $price <span style="color:#f92672">*</span> $num <span style="color:#f92672">*</span> $discount);
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+    }
+}
+
+<span style="color:#e6db74">/**
+</span><span style="color:#e6db74"> * Class Reduce
+</span><span style="color:#e6db74"> */</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Reduce</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Base</span> <span style="color:#66d9ef">implements</span>  <span style="color:#a6e22e">CollectInter</span>
+{
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">collect</span>($price, $num, $total <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>, $reduce <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>)
+    {
+        <span style="color:#66d9ef">if</span> ($price <span style="color:#f92672">*</span> $total <span style="color:#f92672">&gt;=</span> $total) {
+            <span style="color:#a6e22e">var_dump</span>(<span style="color:#e6db74">&#39;Reduce:&#39;</span>, ($price <span style="color:#f92672">*</span> $total) <span style="color:#f92672">-</span> $reduce);
+        } <span style="color:#66d9ef">else</span> {
+            <span style="color:#a6e22e">var_dump</span>(<span style="color:#e6db74">&#39;Reduce:&#39;</span>, $price <span style="color:#f92672">*</span> $total);
+        }
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+    }
+}
+<span style="color:#e6db74">/**
+</span><span style="color:#e6db74"> * 环境角色类
+</span><span style="color:#e6db74"> * Class Main
+</span><span style="color:#e6db74"> */</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span>
+{
+    <span style="color:#66d9ef">private</span> $_strategy;
+    <span style="color:#66d9ef">private</span> $_isChange;
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> __construct(<span style="color:#a6e22e">CollectInter</span> $collectInter)
+    {
+        $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">_strategy</span> <span style="color:#f92672">=</span> $collectInter;
+    }
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">change</span>(<span style="color:#a6e22e">CollectInter</span> $collectInter)
+    {
+        $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">_strategy</span> <span style="color:#f92672">=</span> $collectInter;
+        $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">_isChange</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+    }
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">beginCollect</span>()
+    {
+        <span style="color:#66d9ef">if</span> ($this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">_isChange</span>) {
+            <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;改变收银方式：&#34;</span>;
+            $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">_strategy</span><span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">input</span>();
+        } <span style="color:#66d9ef">else</span> {
+            $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">_strategy</span><span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">input</span>();
+        }
+    }
+}
+$strategy <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Main</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Discount</span>());
+$strategy<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">beginCollect</span>();
+$strategy<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">change</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Collect02</span>());
+$strategy<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">beginCollect</span>();
+</code></pre></div><h4 id="运行结果">运行结果</h4>
+<pre><code>请输入单价4
+请输入数量2
+string(9) &quot;Discount:&quot;
+int(8)
+改变收银方式：请输入单价7
+请输入数量3
+string(10) &quot;Collect02:&quot;
+int(21)
+</code></pre>
+   </div>
+ </div>
+
+
+ <a href="https://github.com/laurel-he" class="twitter-share-button " data-size="small" data-count="none">Git hub</a>
+ <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+ <ul class="pager">
+      &nbsp;<li class="previous"><a href="https://laurel-he.github.io/post/reactunit/"> react单元测试</a></li>
+      &nbsp;<li class="next"><a href="https://laurel-he.github.io/post/json/"> 生成json映射表</a></li>
+</ul>
+
+
+
+    </ul>
+    </div>
+    <footer>
+
+        <p class="text-muted credit">&copy; 2021. All rights reserved. </p>
+    </footer>
+ 
+    <script src="https://laurel-he.github.io//js/jquery-1.10.2.min.js"></script>
+    <script src="https://laurel-he.github.io//js/bootstrap.min.js"></script>
+    <script src="https://laurel-he.github.io//js/bootstrap.js"></script>
+    <script type="text/javascript" src="https://laurel-he.github.io//js/hc.js"></script>
+</body>
+
+</html>
+

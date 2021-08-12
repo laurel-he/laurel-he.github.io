@@ -2,43 +2,43 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>前端 on </title>
-    <link>/categories/%E5%89%8D%E7%AB%AF/</link>
+    <link>https://laurel-he.github.io/categories/%E5%89%8D%E7%AB%AF/</link>
     <description>Recent content in 前端 on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 22 Oct 2019 18:37:10 +0000</lastBuildDate><atom:link href="/categories/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 22 Oct 2019 18:37:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>react学习-Props,state和组件树</title>
-      <link>/post/react_06/</link>
+      <link>https://laurel-he.github.io/post/react_06/</link>
       <pubDate>Tue, 22 Oct 2019 18:37:10 +0000</pubDate>
       
-      <guid>/post/react_06/</guid>
+      <guid>https://laurel-he.github.io/post/react_06/</guid>
       <description>react学习手册 属性验证 javascript是弱类型语言，可更改变量的类型，难以查找类型错误。</description>
     </item>
     
     <item>
       <title>react学习-基础</title>
-      <link>/post/react_base/</link>
+      <link>https://laurel-he.github.io/post/react_base/</link>
       <pubDate>Tue, 22 Oct 2019 18:37:10 +0000</pubDate>
       
-      <guid>/post/react_base/</guid>
+      <guid>https://laurel-he.github.io/post/react_base/</guid>
       <description>相关概念介绍 react ES6 DOM Redux react-route webpack </description>
     </item>
     
     <item>
       <title>react单元测试</title>
-      <link>/post/reactunit/</link>
+      <link>https://laurel-he.github.io/post/reactunit/</link>
       <pubDate>Mon, 29 Jul 2019 10:40:10 +0000</pubDate>
       
-      <guid>/post/reactunit/</guid>
+      <guid>https://laurel-he.github.io/post/reactunit/</guid>
       <description>测试 ESLint 代码检查（分析JavaScript代码）,JSHint和JSLint是用于分析JavaScript代码的原生工具，并且可以为用户提供格式化代码的反馈意见；</description>
     </item>
     
     <item>
       <title>fast-json-patch</title>
-      <link>/post/fastjsonpatch/</link>
+      <link>https://laurel-he.github.io/post/fastjsonpatch/</link>
       <pubDate>Fri, 26 Jul 2019 14:37:10 +0000</pubDate>
       
-      <guid>/post/fastjsonpatch/</guid>
+      <guid>https://laurel-he.github.io/post/fastjsonpatch/</guid>
       <description>fast-json-patch包使用 网上关于json-patch的中文介绍太少了，官方文档没有翻译版，所以写一下自己的学习文档，以下只是自己根据英文文档的理解，不保证正确。
 基础操作 json patch几大基础操作包括：add, replace, move, test, remove, copy
 applyPatch 给定文档和操作，执行操作
@@ -47,19 +47,19 @@ import {applyOperation, applyPatch} from &amp;#39;fast-json-patch&amp;#39;; let 
     
     <item>
       <title>typescript泛型</title>
-      <link>/post/genericity/</link>
+      <link>https://laurel-he.github.io/post/genericity/</link>
       <pubDate>Mon, 22 Jul 2019 20:37:10 +0000</pubDate>
       
-      <guid>/post/genericity/</guid>
+      <guid>https://laurel-he.github.io/post/genericity/</guid>
       <description>typescript泛型 介绍 </description>
     </item>
     
     <item>
       <title>react学习-javascript函数式编程</title>
-      <link>/post/react_02/</link>
+      <link>https://laurel-he.github.io/post/react_02/</link>
       <pubDate>Tue, 09 Jul 2019 09:37:10 +0000</pubDate>
       
-      <guid>/post/react_02/</guid>
+      <guid>https://laurel-he.github.io/post/react_02/</guid>
       <description>react学习手册 Javascript函数式编程 基础概念 1 函数式编程： 函数是第一类成员，函数就是数据，可以像变量那样被保存，检索或者在应用程序内部传递。 （1）可以像声明变量一样声明函数；函数就是变量，可以添加到对象中：
 const obj = { message: &amp;#39;asdsada&amp;#39;, log(message) { console.log(message); } }; obj.log(obj.message); （2）可以将函数添加到数组中； （3）函数可以像其他变量一样，作为其他函数的参数传递，也可以作为其他函数的执行结果被返回;
 命令式和声明式编程 命令式编程：对执行结果的描述胜于执行过程 声明式编程： 代码关注重点是达成目标的具体过程
@@ -72,10 +72,10 @@ var frederick = { name: &amp;#34;Frederick Douglass&amp;#34;, canRead: false, ca
     
     <item>
       <title>react学习-es6基础特性</title>
-      <link>/post/react_01/</link>
+      <link>https://laurel-he.github.io/post/react_01/</link>
       <pubDate>Mon, 08 Jul 2019 09:37:10 +0000</pubDate>
       
-      <guid>/post/react_01/</guid>
+      <guid>https://laurel-he.github.io/post/react_01/</guid>
       <description>react学习手册 新特性 1 react开发者工具：react developer tools，可以查看网站react元素 2 yarn进行依赖管理：yarn.lock文件，可以使用yarn install安装，npm install yarn,yarn add [package-name],yarn remove [package-name]
 变量声明 1 const:常量，不能被修改，重写会报错；
 2 let:变量，可以将变量作用域限定在任意代码块中（var不行） 3 模板字符串${}，可在字符串中插入变量
@@ -88,10 +88,10 @@ var regularPerson = { firstname: &amp;#34;Bill&amp;#34;, lastname: &amp;#34;Wils
     
     <item>
       <title>在github上使用Hexo 搭建个人博客</title>
-      <link>/post/hexo/</link>
+      <link>https://laurel-he.github.io/post/hexo/</link>
       <pubDate>Mon, 01 Apr 2019 11:03:10 +0000</pubDate>
       
-      <guid>/post/hexo/</guid>
+      <guid>https://laurel-he.github.io/post/hexo/</guid>
       <description>安装 简介 Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 安装前提 node.js git 安装步骤
 npm install -g hexo-cli 建站 hexo init &amp;lt;folder&amp;gt; cd &amp;lt;folder&amp;gt; npm install 创建博客 hexo new [layout] &amp;lt;title&amp;gt; #hexo n hexo generate（或者hexo g:生成静态文件） #hexo g hexo publish [layout] &amp;lt;filename&amp;gt;（发布草稿） hexo server（启动服务器） hexo deploy（或者hexo d:部署） hexo render &amp;lt;file1&amp;gt; [file2] ...（渲染文件） hexo migrate &amp;lt;type&amp;gt;（从其他博客迁移内容） hexo clean（清除缓存文件 (db.json) 和已生成的静态文件 (public)） hexo list（列出网站资料） hexo version（显示 Hexo 版本） #部署使用hexo deploy (hexo d,需要先编译) 添加评论 可以使用gitment或者valine valine评论 gitment评论 注意事项 1 如果添加了CNAME，回调地址需要填绑定的地址 2 如果需要开启评论，除了百度能搜到的步骤以外，还需要本地安装博客评论模块 npm i &amp;ndash;save gitment 再重新hexo g -d一下 3 作者的服务器停掉了，因此需要修改js源码来源： 修改源 （也可以wget将源码下载下来后修改源到自己服务器上）</description>
     </item>
