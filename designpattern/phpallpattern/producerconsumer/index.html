@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>设计模式</title>
+  <title>生产者消费者模式</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.87.0" />
-  <link href="https://laurel-he.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/index.xml" rel="alternate" type="application/rss+xml" title="" />
+  <link href="" rel="alternate" type="application/rss+xml" title="" />
   <link href="https://laurel-he.github.io//css/bootstrap.min.css" rel="stylesheet">
   <link href="https://laurel-he.github.io//css/hc.css" rel="stylesheet">
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
@@ -79,28 +79,49 @@
 
 
   <div id="article">
-      <h1>设计模式</h1>
-  <ul class="posts">
-      
-      <li><span><a href="/designpattern/phpallpattern/design_singleton/">单例模式</a><time class="pull-right post-list">Tue, Oct 29, 2019</h4></time></span></span></li>
-      
-      <li><span><a href="/designpattern/others/codeprinceple/">设计模式六大原则</a><time class="pull-right post-list">Mon, Oct 7, 2019</h4></time></span></span></li>
-      
-      <li><span><a href="/designpattern/phpallpattern/singlemode/">单例模式</a><time class="pull-right post-list">Sun, Oct 6, 2019</h4></time></span></span></li>
-      
-      <li><span><a href="/designpattern/phpallpattern/producerconsumer/">生产者消费者模式</a><time class="pull-right post-list">Sat, Oct 5, 2019</h4></time></span></span></li>
-      
-      <li><span><a href="/designpattern/phpallpattern/commandmode/">命令模式</a><time class="pull-right post-list">Fri, Oct 4, 2019</h4></time></span></span></li>
-      
-      <li><span><a href="/designpattern/phpallpattern/strategy/">策略模式</a><time class="pull-right post-list">Mon, Jul 29, 2019</h4></time></span></span></li>
-      
-      <li><span><a href="/designpattern/phpallpattern/simplefactory/">简单工厂模式</a><time class="pull-right post-list">Wed, Jul 24, 2019</h4></time></span></span></li>
-      
-      <li><span><a href="/designpattern/phpallpattern/abstractfactory/">抽象工厂模式</a><time class="pull-right post-list">Mon, Jul 22, 2019</h4></time></span></span></li>
-      
-      <li><span><a href="/designpattern/others/basic/">设计模式基础</a><time class="pull-right post-list">Sun, Jul 7, 2019</h4></time></span></span></li>
-      
-  </ul>
+   <div class="article-title">生产者消费者模式</div>
+   <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> 2019-10-05</small></p> <hr/>
+   <div class="post">
+     <h1 id="基础概念">基础概念</h1>
+<h2 id="概念介绍">概念介绍</h2>
+<p>某块模块负责产生数据，这些数据由另一个模块来负责处理。产生数据的模块，就形象地称为生产者；而处理数据的模块，就称为消费者。 <br>
+该模式还需要有一个缓冲区处于生产者和消费者之间，作为一个中介。生产者把数据放入缓冲区，而消费者从缓冲区取出数据
+缓冲区作用</p>
+<ol>
+<li>
+<p>解耦，生产者和消费者只依赖缓冲区，而不互相依赖</p>
+</li>
+<li>
+<p>支持并发和异步</p>
+</li>
+<li>
+<p>支持生产者和消费者忙闲不均（来不及消费缓冲区可以暂存）</p>
+</li>
+</ol>
+<h2 id="使用场景">使用场景</h2>
+<p>队列(类似，但并不完全相等，有的队列没有缓冲区); <br>
+swoole(业务逻辑(生产者)将数据单元通过swoole的send函数弄到swoole的一个缓冲区之间，通过work进程进行分发，task进程(消费者)进行消费。)</p>
+<h2 id="代码解析">代码解析</h2>
+<p>CICD创建项目流程类似于生产者消费者模式；<br>
+（1）用户填写表单，创建一条CICD数据，生产者向数据表添加一条状态为pending的数据，类似于向缓冲区添加数据 <br>
+（2）定时任务读取状态为pending的数据，消费处理后修改状态</p>
+
+   </div>
+ </div>
+
+
+ <a href="https://github.com/laurel-he" class="twitter-share-button " data-size="small" data-count="none">Git hub</a>
+ <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+ <ul class="pager">
+      &nbsp;<li class="previous"><a href="https://laurel-he.github.io/post/codecomplate_01/"> 代码大全</a></li>
+      &nbsp;<li class="next"><a href="https://laurel-he.github.io/post/work/"> 工作经验总结</a></li>
+</ul>
+
+
+
+    </ul>
+    </div>
     <footer>
 
         <p class="text-muted credit">&copy; 2021. All rights reserved. </p>

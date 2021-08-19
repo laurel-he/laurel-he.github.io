@@ -292,21 +292,6 @@ db.test_db.update( {&#39;_id&#39;: {$in: [&#39;1242rererwwr&#39;]}, &#39;files.n
     </item>
     
     <item>
-      <title>生产者消费者模式</title>
-      <link>https://laurel-he.github.io/post/producerconsumer/</link>
-      <pubDate>Sat, 05 Oct 2019 17:40:10 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/post/producerconsumer/</guid>
-      <description>基础概念 概念介绍 某块模块负责产生数据，这些数据由另一个模块来负责处理。产生数据的模块，就形象地称为生产者；而处理数据的模块，就称为消费者。 该模式还需要有一个缓冲区处于生产者和消费者之间，作为一个中介。生产者把数据放入缓冲区，而消费者从缓冲区取出数据 缓冲区作用
-  解耦，生产者和消费者只依赖缓冲区，而不互相依赖
-  支持并发和异步
-  支持生产者和消费者忙闲不均（来不及消费缓冲区可以暂存）
-  使用场景 队列(类似，但并不完全相等，有的队列没有缓冲区); swoole(业务逻辑(生产者)将数据单元通过swoole的send函数弄到swoole的一个缓冲区之间，通过work进程进行分发，task进程(消费者)进行消费。)
-代码解析 CICD创建项目流程类似于生产者消费者模式；
-（1）用户填写表单，创建一条CICD数据，生产者向数据表添加一条状态为pending的数据，类似于向缓冲区添加数据 （2）定时任务读取状态为pending的数据，消费处理后修改状态</description>
-    </item>
-    
-    <item>
       <title>代码大全</title>
       <link>https://laurel-he.github.io/post/codecomplate_01/</link>
       <pubDate>Sat, 05 Oct 2019 10:40:10 +0000</pubDate>
@@ -347,21 +332,6 @@ db.test_db.update( {&#39;_id&#39;: {$in: [&#39;1242rererwwr&#39;]}, &#39;files.n
 良好的类接口 类的基础是抽象数据类型（我之前大部分时候没有使用抽象，只是把相关的方法和变量定义放在了一起，实际上是不符合面向对象变成原则的），抽象数据类型是指一些数据和 对这些数据所进行操作的集合。定义抽象类有助于代码规范，提高
 创建类的原因 （1）为显示世界中的对象建模 （2）为抽象的对象建模 （3）降低复杂度 （4）隔离复杂度 （5）隐藏实现细节 （6）让代码更易重用 （7）把相关的操作包装到一起
 应当避免的类 （1）避免创建万能类 （2）消除无关紧要的类 （3）避免用动词命名的类</description>
-    </item>
-    
-    <item>
-      <title>命令模式</title>
-      <link>https://laurel-he.github.io/post/commandmode/</link>
-      <pubDate>Fri, 04 Oct 2019 17:40:10 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/post/commandmode/</guid>
-      <description>基础概念 基础介绍 （1）概念介绍： 命令模式（Command Pattern）是一种数据驱动的设计模式，它属于行为型模式。请求以命令的形式包裹在对象中，并传给调用对象。调用对象寻找可以处理该命令的合适的对象，并把该命令传给相应的对象，该对象执行命令。 （2）概念解析： 命令模式将一个请求封装成一个对象，从而可用不同的请求对客户进行参数化，对请求排队或记录请求日志，以及支持可撤销的操作。
-使用场景 在某些场合下，需要对行为进行&amp;quot;记录、撤销/重做、事务&amp;quot;等处理，需要将&amp;quot;行为请求者&amp;quot;与&amp;quot;行为实现者&amp;quot;解耦，将一组行为抽象为对象，可以实现二者之间的松耦合。认为是命令的地方都可以使用命令模式，比如： 1、GUI 中每一个按钮都是一条命令。 2、模拟 CMD。
-关键术语 （1）received：真正的命令执行对象 （2）Command：命令 （3）invoker：使用命令对象的入口
-实现步骤 以下以后台k8s删除node节点命令为例
-a.创建一个命令接口： 接口定义接口名称，需要实现的操作名称，命令模式需要的操作为执行命令，后续可根据不同的命令来实现这个接口和执行命令方法。
-&amp;lt;?php abstract class Nodes { public function execute(){} } ?&amp;gt;b.创建一个请求类 定义拥有的请求方法 本例中操作有： （1）列出所有nodes: kubectl get node （2）删除节点：kubectl delete node $nodeName （3）查看对应node上的pods信息: kubectl get pods -o wide | grep $nodeName （4）在删除的node3对应的服务器上执行：kubeadm reset
-&amp;lt;?php class K8s { public function getNodes() { return &amp;#39;kubectl get node&amp;#39;; } public function delNodes($nodeName) { return &amp;#34;kubectl delete node $nodeName&amp;#34;; } } ?</description>
     </item>
     
     <item>
@@ -411,23 +381,6 @@ import {applyOperation, applyPatch} from &amp;#39;fast-json-patch&amp;#39;; let 
       
       <guid>https://laurel-he.github.io/post/genericity/</guid>
       <description>typescript泛型 介绍 </description>
-    </item>
-    
-    <item>
-      <title>基础介绍</title>
-      <link>https://laurel-he.github.io/post/depat/</link>
-      <pubDate>Mon, 22 Jul 2019 10:03:10 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/post/depat/</guid>
-      <description>#基础介绍
-设计具备的特性 （1）应该对手头的问题有针对性，同时对将来的问题和需求也要有足够的通用性； （2）避免重复设计或尽可能少做重复设计
-什么是设计模式 模式四要素 模式名称 助记名，使用一两个词来描述模式的问题、解决方案和效果
-问题 描述了应该在何时使用设计模式
-解决方案 描述了设计的组成成分，它们之间的相互关系及各自的职责和协作方式
-效果 描述了模式应用的效果及使用模式应权衡的问题
-模式三种分类 创建型 与对象的创建有关，在软件工程中，创建型设计模式是处理对象创建机制的设计模式，试图以适当的方式来创建对象。对象创建的基本形式可能会带来设计问题，亦或增加了设计的复杂度。创建型设计模式通过控制这个对象的创建方式来解决此问题。
-结构型 处理类或对象的组合，通过识别实体之间关系来简化设计的设计模式。
-行为型 对类或对象怎样交互和怎样分配职责进行描述，识别对象之间的通用通信模式并实现这些模式的设计模式。 通过这样做，这些模式增加了执行此通信的灵活性。</description>
     </item>
     
     <item>
@@ -874,15 +827,6 @@ num = 1; for i in range(1,5): for j in range(1,5): for k in range(1,5): if(i != 
  原先的创建按钮方法为： {:build_toolbar(&amp;lsquo;refresh,edit,checkall&amp;rsquo;)} 有时候不使用buid_toolbar来创建按钮，而是直接使用的
  &amp;lt;a href=&amp;quot;javascript:;&amp;quot; class=&amp;quot;btn btn-danger btn-del btn-disabled disabled {:$auth-&amp;gt;check(&#39;course/clabelong/del&#39;)?&#39;&#39;:&#39;hide&#39;}&amp;quot;  title=&amp;quot;{:(&amp;lsquo;Delete&amp;rsquo;)}&amp;quot; &amp;gt;{:(&amp;lsquo;Delete&amp;rsquo;)} 这种方式来创建按钮，这样虽然很直观，但是实际上使用却很不方便，因为这里对于权限的判定可能是有问题的。期待的结果是直接使用build_toolbar方法，设置checkall为批量审核，check为审核方法，对于各个权限组可以直接调用。 修改build_toolbar方法到如下结果：
 function build_toolbar($btns = NULL, $attr = []) { $auth = \app\admin\library\Auth::instance(); $controller = str_replace(&#39;.&#39;, &#39;/&#39;, strtolower(think\Request::instance()-&amp;gt;controller())); $btns = $btns ? $btns : [&#39;refresh&#39;, &#39;add&#39;, &#39;edit&#39;, &#39;del&#39;, &#39;import&#39;,&#39;checkall&#39;]; $btns = is_array($btns) ? $btns : explode(&#39;,&#39;, $btns); $index = array_search(&#39;delete&#39;, $btns); if ($index !== FALSE) { $btns[$index] = &#39;del&#39;; } $btnAttr = [ &#39;refresh&#39; =&amp;gt; [&#39;javascript:;&#39;, &#39;btn btn-primary btn-refresh&#39;, &#39;fa fa-refresh&#39;, &#39;&#39;, __(&#39;Refresh&#39;)], &#39;checkall&#39;=&amp;gt; [&#39;javascript:;&#39;, &#39;btn btn-success btn-checkall btn-disabled disabled&#39;, &#39;fa fa-flag-checkered&#39;, &#39; 批量审核&#39;, &#39;批量审核&#39;], &#39;add&#39; =&amp;gt; [&#39;javascript:;&#39;, &#39;btn btn-success btn-add&#39;, &#39;fa fa-plus&#39;, __(&#39;Add&#39;), __(&#39;Add&#39;)], &#39;edit&#39; =&amp;gt; [&#39;javascript:;&#39;, &#39;btn btn-success btn-edit btn-disabled disabled&#39;, &#39;fa fa-pencil&#39;, __(&#39;Edit&#39;), __(&#39;Edit&#39;)], &#39;del&#39; =&amp;gt; [&#39;javascript:;&#39;, &#39;btn btn-danger btn-del btn-disabled disabled&#39;, &#39;fa fa-trash&#39;, __(&#39;Delete&#39;), __(&#39;Delete&#39;)], &#39;import&#39; =&amp;gt; [&#39;javascript:;&#39;, &#39;btn btn-danger btn-import&#39;, &#39;fa fa-upload&#39;, __(&#39;Import&#39;), __(&#39;Import&#39;)], ]; $btnAttr = array_merge($btnAttr, $attr); $html = []; foreach ($btns as $k =&amp;gt; $v) { //如果未定义或没有权限 if (!</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://laurel-he.github.io/post/fit02/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/post/fit02/</guid>
-      <description></description>
     </item>
     
   </channel>

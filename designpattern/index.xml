@@ -45,6 +45,36 @@
     </item>
     
     <item>
+      <title>生产者消费者模式</title>
+      <link>https://laurel-he.github.io/designpattern/phpallpattern/producerconsumer/</link>
+      <pubDate>Sat, 05 Oct 2019 17:40:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/designpattern/phpallpattern/producerconsumer/</guid>
+      <description>基础概念 概念介绍 某块模块负责产生数据，这些数据由另一个模块来负责处理。产生数据的模块，就形象地称为生产者；而处理数据的模块，就称为消费者。 该模式还需要有一个缓冲区处于生产者和消费者之间，作为一个中介。生产者把数据放入缓冲区，而消费者从缓冲区取出数据 缓冲区作用
+  解耦，生产者和消费者只依赖缓冲区，而不互相依赖
+  支持并发和异步
+  支持生产者和消费者忙闲不均（来不及消费缓冲区可以暂存）
+  使用场景 队列(类似，但并不完全相等，有的队列没有缓冲区); swoole(业务逻辑(生产者)将数据单元通过swoole的send函数弄到swoole的一个缓冲区之间，通过work进程进行分发，task进程(消费者)进行消费。)
+代码解析 CICD创建项目流程类似于生产者消费者模式；
+（1）用户填写表单，创建一条CICD数据，生产者向数据表添加一条状态为pending的数据，类似于向缓冲区添加数据 （2）定时任务读取状态为pending的数据，消费处理后修改状态</description>
+    </item>
+    
+    <item>
+      <title>命令模式</title>
+      <link>https://laurel-he.github.io/designpattern/phpallpattern/commandmode/</link>
+      <pubDate>Fri, 04 Oct 2019 17:40:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/designpattern/phpallpattern/commandmode/</guid>
+      <description>基础概念 基础介绍 （1）概念介绍： 命令模式（Command Pattern）是一种数据驱动的设计模式，它属于行为型模式。请求以命令的形式包裹在对象中，并传给调用对象。调用对象寻找可以处理该命令的合适的对象，并把该命令传给相应的对象，该对象执行命令。 （2）概念解析： 命令模式将一个请求封装成一个对象，从而可用不同的请求对客户进行参数化，对请求排队或记录请求日志，以及支持可撤销的操作。
+使用场景 在某些场合下，需要对行为进行&amp;quot;记录、撤销/重做、事务&amp;quot;等处理，需要将&amp;quot;行为请求者&amp;quot;与&amp;quot;行为实现者&amp;quot;解耦，将一组行为抽象为对象，可以实现二者之间的松耦合。认为是命令的地方都可以使用命令模式，比如： 1、GUI 中每一个按钮都是一条命令。 2、模拟 CMD。
+关键术语 （1）received：真正的命令执行对象 （2）Command：命令 （3）invoker：使用命令对象的入口
+实现步骤 以下以后台k8s删除node节点命令为例
+a.创建一个命令接口： 接口定义接口名称，需要实现的操作名称，命令模式需要的操作为执行命令，后续可根据不同的命令来实现这个接口和执行命令方法。
+&amp;lt;?php abstract class Nodes { public function execute(){} } ?&amp;gt;b.创建一个请求类 定义拥有的请求方法 本例中操作有： （1）列出所有nodes: kubectl get node （2）删除节点：kubectl delete node $nodeName （3）查看对应node上的pods信息: kubectl get pods -o wide | grep $nodeName （4）在删除的node3对应的服务器上执行：kubeadm reset
+&amp;lt;?php class K8s { public function getNodes() { return &amp;#39;kubectl get node&amp;#39;; } public function delNodes($nodeName) { return &amp;#34;kubectl delete node $nodeName&amp;#34;; } } ?</description>
+    </item>
+    
+    <item>
       <title>策略模式</title>
       <link>https://laurel-he.github.io/designpattern/phpallpattern/strategy/</link>
       <pubDate>Mon, 29 Jul 2019 14:37:10 +0000</pubDate>
