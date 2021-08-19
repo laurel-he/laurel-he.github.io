@@ -124,24 +124,6 @@ kubectl apply：
     </item>
     
     <item>
-      <title>设计模式从头学习-面向对象设计原则概述</title>
-      <link>https://laurel-he.github.io/designpattern/phpallpattern/design_pattern02/</link>
-      <pubDate>Thu, 07 May 2020 20:20:10 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/designpattern/phpallpattern/design_pattern02/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>设计模式从头学习-前言</title>
-      <link>https://laurel-he.github.io/designpattern/phpallpattern/design_patter01/</link>
-      <pubDate>Thu, 07 May 2020 20:13:10 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/designpattern/phpallpattern/design_patter01/</guid>
-      <description>注意 本文参考了书籍《大话设计模式》和文章从招式与内功谈起——设计模式概述 #写作初衷 我有空的时候就会学习一下设计模式，零零散散半年过去了，真正能够静下心来学习 设计模式的事件少之又少，而且很多模式例如单例模式，命令模式等我学过后就忘了，让我现在再 复述或者使用我又需要重新去学一下，因此我抛弃以前学习的零零散散的与设计模式相关的东西， 尝试从头再学一次，边学边使用，并做好详细的笔记，以后可以直接翻阅。 #设计模式的作用 (1)设计模式经过多年的使用和实践，包含了大量成功的，可维护可复用的设计方案，在很多情况下，设计模式可以提高开发效率，节约时间 (2)设计模式跨语言、跨平台、跨应用、跨国界，提供了通用的词汇和使用方式，节约交流时间 (3)大部分设计模式都兼顾了系统的可重用性和扩展性，这使很多系统可以重用，减少代码重复 (4)合理使用设计模式有助于别人理解自己的代码 (5)有助于更为深刻地理解面对对象编程 #如何掌握设计模式 a.这个设计模式的意图是什么 b.它要解决一个什么问题 c.什么时候可以使用它 d.它是如何解决问题的 e.掌握它的结构图 f.记住它的关键代码 g.能够想到至少两个它的应用实例，一个生活中的，一个软件中的 h.这个模式的优缺点是什么 i.在使用时要注意什么 #注意事项 （1）最好的掌握设计模式的方法是使用它们 （2）千万不要滥用模式</description>
-    </item>
-    
-    <item>
       <title>《第一本docker书》学习笔记01</title>
       <link>https://laurel-he.github.io/post/docker01/</link>
       <pubDate>Tue, 21 Apr 2020 21:03:10 +0000</pubDate>
@@ -502,7 +484,8 @@ import {applyOperation, applyPatch} from &amp;#39;fast-json-patch&amp;#39;; let 
       <pubDate>Mon, 22 Jul 2019 17:40:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/designpattern/phpallpattern/abstractfactory/</guid>
-      <description>目的 在不指定具体类的情况下创建一系列相关或依赖对象。 通常创建的类都实现相同的接口。 抽象工厂的客户并不关心这些对象是如何创建的，它只是知道它们是如何一起运行的。
+      <description>参考：抽象工厂模式（Abstract Factory）
+目的 在不指定具体类的情况下创建一系列相关或依赖对象。 通常创建的类都实现相同的接口。 抽象工厂的客户并不关心这些对象是如何创建的，它只是知道它们是如何一起运行的。
 举例  &amp;lt;?php class KuaidiBirdLogic extends BaseLogic { private $basic; private $num; public function __construct(int $num, int $basic) { $this-&amp;gt;num = $num; $this-&amp;gt;basic = $basic; } } class KuaidiOneLogic implements KuaidiBase { private $num; public function __construct(int $num) { $this-&amp;gt;num = $num; } } 定义抽象工厂类
 &amp;lt;?php class ExpressFactory extends Model { public function getKuaidiBirdList() { return new KuaidiBirdLogic(12, 13); } public function getKuaidiOneLogic() { return new KuaidiOneLogic(); } } 几种工厂模式的区别 抽象工厂模式 类似于示例Basic</description>
     </item>
@@ -968,6 +951,26 @@ num = 1; for i in range(1,5): for j in range(1,5): for k in range(1,5): if(i != 
  原先的创建按钮方法为： {:build_toolbar(&amp;lsquo;refresh,edit,checkall&amp;rsquo;)} 有时候不使用buid_toolbar来创建按钮，而是直接使用的
  &amp;lt;a href=&amp;quot;javascript:;&amp;quot; class=&amp;quot;btn btn-danger btn-del btn-disabled disabled {:$auth-&amp;gt;check(&#39;course/clabelong/del&#39;)?&#39;&#39;:&#39;hide&#39;}&amp;quot;  title=&amp;quot;{:(&amp;lsquo;Delete&amp;rsquo;)}&amp;quot; &amp;gt;{:(&amp;lsquo;Delete&amp;rsquo;)} 这种方式来创建按钮，这样虽然很直观，但是实际上使用却很不方便，因为这里对于权限的判定可能是有问题的。期待的结果是直接使用build_toolbar方法，设置checkall为批量审核，check为审核方法，对于各个权限组可以直接调用。 修改build_toolbar方法到如下结果：
 function build_toolbar($btns = NULL, $attr = []) { $auth = \app\admin\library\Auth::instance(); $controller = str_replace(&#39;.&#39;, &#39;/&#39;, strtolower(think\Request::instance()-&amp;gt;controller())); $btns = $btns ? $btns : [&#39;refresh&#39;, &#39;add&#39;, &#39;edit&#39;, &#39;del&#39;, &#39;import&#39;,&#39;checkall&#39;]; $btns = is_array($btns) ? $btns : explode(&#39;,&#39;, $btns); $index = array_search(&#39;delete&#39;, $btns); if ($index !== FALSE) { $btns[$index] = &#39;del&#39;; } $btnAttr = [ &#39;refresh&#39; =&amp;gt; [&#39;javascript:;&#39;, &#39;btn btn-primary btn-refresh&#39;, &#39;fa fa-refresh&#39;, &#39;&#39;, __(&#39;Refresh&#39;)], &#39;checkall&#39;=&amp;gt; [&#39;javascript:;&#39;, &#39;btn btn-success btn-checkall btn-disabled disabled&#39;, &#39;fa fa-flag-checkered&#39;, &#39; 批量审核&#39;, &#39;批量审核&#39;], &#39;add&#39; =&amp;gt; [&#39;javascript:;&#39;, &#39;btn btn-success btn-add&#39;, &#39;fa fa-plus&#39;, __(&#39;Add&#39;), __(&#39;Add&#39;)], &#39;edit&#39; =&amp;gt; [&#39;javascript:;&#39;, &#39;btn btn-success btn-edit btn-disabled disabled&#39;, &#39;fa fa-pencil&#39;, __(&#39;Edit&#39;), __(&#39;Edit&#39;)], &#39;del&#39; =&amp;gt; [&#39;javascript:;&#39;, &#39;btn btn-danger btn-del btn-disabled disabled&#39;, &#39;fa fa-trash&#39;, __(&#39;Delete&#39;), __(&#39;Delete&#39;)], &#39;import&#39; =&amp;gt; [&#39;javascript:;&#39;, &#39;btn btn-danger btn-import&#39;, &#39;fa fa-upload&#39;, __(&#39;Import&#39;), __(&#39;Import&#39;)], ]; $btnAttr = array_merge($btnAttr, $attr); $html = []; foreach ($btns as $k =&amp;gt; $v) { //如果未定义或没有权限 if (!</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://laurel-he.github.io/designpattern/others/basic/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/designpattern/others/basic/</guid>
+      <description>title: &amp;ldquo;php设计模式全集-01-设计模式基础&amp;rdquo; date: 2021-07-27T09:35:00+08:00 draft: true tags:
+ 设计模式 categories: 学习 设计模式   本文参考了书籍《大话设计模式》/文章从招式与内功谈起——设计模式概述 以及系列文章PHP 设计模式系列
+定义 在软件工程中，设计模式（Design Pattern）是对软件设计中普遍存在（反复出现）的各种问题，所提出的解决方案。 这个术语是由埃里希·伽玛（Erich Gamma）等人在1990年代从建筑设计领域引入到计算机科学的。 设计模式并不直接用来完成代码的编写，而是描述在各种不同情况下，要怎么解决问题的一种方案。 面向对象设计模式通常以类或对象来描述其中的关系和相互作用，但不涉及用来完成应用程序的特定类或对象。 设计模式能使不稳定依赖于相对稳定、具体依赖于相对抽象，避免会引起麻烦的紧耦合，以增强软件设计面对并适应变化的能力。
+并非所有的软件模式都是设计模式，设计模式特指软件“设计”层次上的问题。还有其它非设计模式的模式，如架构模式。同时，算法不能算是一种设计模式，因为算法主要是用来解决计算上的问题，而非设计上的问题。
+设计模式的作用 (1)设计模式经过多年的使用和实践，包含了大量成功的，可维护可复用的设计方案，在很多情况下，设计模式可以提高开发效率，节约时间 (2)设计模式跨语言、跨平台、跨应用、跨国界，提供了通用的词汇和使用方式，节约交流时间 (3)大部分设计模式都兼顾了系统的可重用性和扩展性，这使很多系统可以重用，减少代码重复 (4)合理使用设计模式有助于别人理解自己的代码 (5)有助于更为深刻地理解面对对象编程
+如何掌握设计模式 a.这个设计模式的意图是什么 b.它要解决一个什么问题 c.什么时候可以使用它 d.它是如何解决问题的 e.掌握它的结构图 f.记住它的关键代码 g.能够想到至少两个它的应用实例，一个生活中的，一个软件中的 h.这个模式的优缺点是什么 i.在使用时要注意什么
+注意事项 （1）最好的掌握设计模式的方法是使用它们 （2）千万不要滥用模式
+设计模式分类 设计模式可以分为三大类，创建型，结构型，行为型
+创建型 在软件工程中，创建型设计模式是处理对象创建机制的设计模式，试图以适当的方式来创建对象。 对象创建的基本形式可能会带来设计问题，亦或增加了设计的复杂度。 创建型设计模式通过控制这个对象的创建方式来解决此问题。 在软件工程中，创建型设计模式用于处理对象的实例化：
+常用创建型模式 （1）抽象工厂模式（Abstract Factory） （2）建造者模式（Builder） （3）工厂方法模式（Factory Method） （4）多例模式（Multiton） （5）对象池模式（Pool） （6）原型模式（Prototype） （7）简单工厂模式（Simple Factory） （8）单例模式（Singleton） （9）静态工厂模式（Static Factory）
+结构型 在软件工程中，结构型设计模式是通过识别实体之间关系来简化设计的设计模式。 结构型设计模式用于处理类和对象的组合
+常用结构型模式 （1）适配器模式（Adapter） （2）桥梁模式（Bridge） （3）组合模式（Composite） （4）数据映射模式（Data Mapper） （5）装饰模式（Decorator） （6）依赖注入模式（Dependency Injection） （7）门面模式（Facade） （8）流接口模式（Fluent Interface） （9）代理模式（Proxy） （10）注册模式（Registry）</description>
     </item>
     
     <item>
