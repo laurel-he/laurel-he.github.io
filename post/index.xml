@@ -5,7 +5,22 @@
     <link>https://laurel-he.github.io/post/</link>
     <description>Recent content in Posts on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 20 Jul 2021 16:34:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 12 Aug 2021 16:10:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hugo搭建github个人博客</title>
+      <link>https://laurel-he.github.io/post/hugo/</link>
+      <pubDate>Thu, 12 Aug 2021 16:10:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/post/hugo/</guid>
+      <description>之前个人博客是使用的hexo搭建的，经常会出各种bug，而且时不时的升级，导致npm 也要对应，因此放弃，使用hugo,hugo是基于go语言开发的。
+步骤 下载安装 非常简单，略（如果是windows需要加入环境变量）
+命令 查看版本
+hugo version下载主题存放到themes目录下，假设下载的主题叫herring，那么本地预览命令为：
+hugo server --theme=herring创建文章
+hugo new post/test.md生成静态网站
+hugo --theme=herring --baseUrl=&amp;quot;https://YOURNAME.github.io/&amp;quot;在github上创建一个YOURNAME.github.io的项目，master分支控制public目录 每次新增了要提交的文章后执行命令，提交即可</description>
+    </item>
+    
     <item>
       <title>操作系统（1）-基础和vim操作</title>
       <link>https://laurel-he.github.io/post/opratingsystem_01/</link>

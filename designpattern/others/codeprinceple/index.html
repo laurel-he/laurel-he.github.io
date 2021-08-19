@@ -82,15 +82,127 @@
    <div class="article-title">设计模式六大原则</div>
    <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> 2019-10-07</small></p> <hr/>
    <div class="post">
-     <p>##第一：单一职责原则（SPR）<br>
-一个类应该有且仅有一个原因导致该类的变更，即一个类应该只负责一项职责<br>
-##第二：里氏替换原则（LSP）</p>
-<p>##第三：依赖倒置原则（DIP）
-抽象不应该依赖细节，细节应该依赖于抽象。针对接口编程，不要针对实现编程
-##第四：接口隔离原则（ISP）
-##第五：迪米特法则（LoD）
-##第六：开放封闭原则
-开放-封闭原则是说软件实体（类、模块、函数等等）应该可以扩展，但是不可以修改</p>
+     <p>本文参考了<a href="http://www.uml.org.cn/sjms/201211023.asp">设计模式六大原则</a></p>
+<h2 id="单一职责原则sprsingle-responsibility-principle">单一职责原则（SPR:Single Responsibility Principle）</h2>
+<p>一个类应该有且仅有一个原因导致该类的变更，即一个类应该只负责一项职责 <br>
+但是在实际工作中，职责是会扩散的，一个类可能会新增更多的职责，
+只有逻辑足够简单，才可以在代码级别上违反单一职责原则；只有类中方法数量足够少，才可以在方法级别上违反单一职责原则</p>
+<h3 id="遵循单一职责原的优点">遵循单一职责原的优点：</h3>
+<p>（1）可以降低类的复杂度，一个类只负责一项职责，其逻辑肯定要比负责多项职责简单的多； <br>
+（2）提高类的可读性，提高系统的可维护性； <br>
+（3）变更引起的风险降低，变更是必然的，如果单一职责原则遵守的好，当修改一个功能时，可以显著降低对其他功能的影响。</p>
+<h2 id="第二里氏替换原则lspliskcov-substitution-principle">第二：里氏替换原则（LSP:Liskcov Substitution Principle）</h2>
+<h3 id="定义">定义</h3>
+<p>定义1：如果对每一个类型为 T1的对象 o1，都有类型为 T2 的对象o2，使得以 T1定义的所有程序 P 在所有的对象 o1 都代换成 o2 时，程序 P 的行为没有发生变化，那么类型 T2 是类型 T1 的子类型。 <br>
+定义2：所有引用基类的地方必须能透明地使用其子类的对象。 <br>
+可以简单的理解为子类型能够替换它们的基类型</p>
+<h3 id="含义解析">含义解析</h3>
+<p>（1）子类可以实现父类的抽象方法，但不能覆盖父类的非抽象方法。 <br>
+（2）子类中可以增加自己特有的方法。 <br>
+（3）当子类的方法重载父类的方法时，方法的前置条件（即方法的形参）要比父类方法的输入参数更宽松。 <br>
+（4）当子类的方法实现父类的抽象方法时，方法的后置条件（即方法的返回值）要比父类更严格</p>
+<h3 id="违反里氏替换原则的危害">违反里氏替换原则的危害</h3>
+<p>（1）反直觉。期望所有子类行为是一致的，但如果不一致可能需要文档记录，或者在代码跑失败后涨此知识； <br>
+（2）不可读。如果子类行为不一致，可能需要不同的逻辑分支来适配不同的行为，徒增代码复杂度； <br>
+（3）不可用。可能出错的地方终将会出错。 <br>
+如果非要重写父类的方法，比较通用的做法是：原来的父类和子类都继承一个更通俗的基类，原有的继承关系去掉，采用依赖、聚合，组合等关系代替</p>
+<h2 id="第三依赖倒置原则dipdependence-inversion-principle">第三：依赖倒置原则（DIP:Dependence Inversion Principle）</h2>
+<h3 id="定义-1">定义</h3>
+<p>高层模块不应该依赖低层模块，二者都应该依赖其抽象；抽象不应该依赖细节；细节应该依赖抽象 <br>
+针对接口编程，不要针对实现编程</p>
+<h3 id="解释">解释</h3>
+<p>依赖倒置原则基于这样一个事实：
+相对于细节的多变性，抽象的东西要稳定的多。以抽象为基础搭建起来的架构比以细节为基础搭建起来的架构要稳定的多。
+在java中，抽象指的是接口或者抽象类，细节就是具体的实现类，使用接口或者抽象类的目的是制定好规范和契约，而不去涉及任何具体的操作，把展现细节的任务交给他们的实现类去完成。</p>
+<h3 id="示例">示例</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#e6db74">/**
+</span><span style="color:#e6db74"> * 高层类Library需要实现readContent，但是readContent针对不同
+</span><span style="color:#e6db74"> * 类有不同的表现形式，于是抽象出来，这样不管怎么扩展修改，Library不用改
+</span><span style="color:#e6db74">**/</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DesignController</span>
+{
+    <span style="color:#e6db74">/**
+</span><span style="color:#e6db74">     *yii design/run
+</span><span style="color:#e6db74">     */</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">actionRun</span>()
+    {
+        $user <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">User</span>();
+        $data <span style="color:#f92672">=</span> $user<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">gotoLibrary</span>();
+        <span style="color:#a6e22e">var_dump</span>($data);
+    }
+}
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span>
+{
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">gotoLibrary</span>()
+    {
+        $book <span style="color:#f92672">=</span> (<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Library</span>())<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">read</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Book</span>());
+        $news <span style="color:#f92672">=</span> (<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Library</span>())<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">read</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Newspaper</span>());
+        <span style="color:#66d9ef">return</span> [$book, $news];
+    }
+}
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Library</span>
+{
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">read</span>(<span style="color:#a6e22e">IReader</span> $reader)
+    {
+        <span style="color:#66d9ef">return</span> $reader<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">readContent</span>();
+    }
+}
+<span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">IReader</span>
+{
+    <span style="color:#e6db74">/**
+</span><span style="color:#e6db74">     * 读取内容
+</span><span style="color:#e6db74">     * @return mixed
+</span><span style="color:#e6db74">     */</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">readContent</span>();
+}
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Book</span> <span style="color:#66d9ef">implements</span> <span style="color:#a6e22e">IReader</span>
+{
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">readContent</span>()
+    {
+        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;书籍：小王子&#39;</span>;
+    }
+}
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Newspaper</span> <span style="color:#66d9ef">implements</span> <span style="color:#a6e22e">IReader</span>
+{
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">readContent</span>()
+    {
+        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;报纸：今天奥运会结束了&#39;</span>;
+    }
+}
+</code></pre></div><h2 id="第四接口隔离原则ispinterface--segregation-principle">第四：接口隔离原则(ISP:Interface  Segregation Principle)</h2>
+<h3 id="定义-2">定义</h3>
+<p>客户端不应该依赖它不需要的接口；一个类对另一个类的依赖应该建立在最小的接口上。</p>
+<h3 id="含义">含义</h3>
+<p>建立单一接口，不要建立庞大臃肿的接口，尽量细化接口，接口中的方法尽量少。也就是说，我们要为各个类建立专用的接口，而不要试图去建立一个很庞大的接口供所有依赖它的类去调用</p>
+<h3 id="问题由来">问题由来</h3>
+<p>类A通过接口I依赖类B，类C通过接口I依赖类D，如果接口I对于类A和类B来说不是最小接口，则类B和类D必须去实现他们不需要的方法。</p>
+<h3 id="解决方案">解决方案</h3>
+<p>将臃肿的接口I拆分为独立的几个接口，类A和类C分别与他们需要的接口建立依赖关系。也就是采用接口隔离原则。</p>
+<h3 id="注意事项">注意事项</h3>
+<p>（1）接口尽量小，但是要有限度。对接口进行细化可以提高程序设计灵活性是不挣的事实，但是如果过小，则会造成接口数量过多，使设计复杂化。所以一定要适度。 <br>
+（2）为依赖接口的类定制服务，只暴露给调用的类它需要的方法，它不需要的方法则隐藏起来。只有专注地为一个模块提供定制服务，才能建立最小的依赖关系。 <br>
+（3）提高内聚，减少对外交互。使接口用最少的方法去完成最多的事情。</p>
+<h2 id="第五迪米特法则lodlaw-of--demeter">第五：迪米特法则(LoD:Law of  Demeter)</h2>
+<h3 id="定义-3">定义</h3>
+<p>一个对象应该对其他对象保持最少的了解</p>
+<h3 id="问题由来-1">问题由来</h3>
+<p>类与类之间的关系越密切，耦合度越大，当一个类发生改变时，对另一个类的影响也越大</p>
+<h3 id="解决方案-1">解决方案</h3>
+<p>尽量降低类与类之间的耦合。</p>
+<h3 id="注意事项-1">注意事项</h3>
+<p>迪米特法则的初衷是降低类之间的耦合，由于每个类都减少了不必要的依赖，因此的确可以降低耦合关系。
+但是凡事都有度，虽然可以避免与非直接的类通信，但是要通信，必然会通过一个“中介”来发生联系。
+过分的使用迪米特原则，会产生大量这样的中介和传递类，导致系统复杂度变大。
+所以在采用迪米特法则时要反复权衡，既做到结构清晰，又要高内聚低耦合。</p>
+<h2 id="第六开放封闭原则ocpopen-closed-principle">第六：开放封闭原则（OCP:Open-Closed Principle）</h2>
+<h3 id="定义-4">定义</h3>
+<p>一个软件实体如类、模块和函数应该对扩展开放，对修改关闭</p>
+<h3 id="问题由来-2">问题由来</h3>
+<p>在软件的生命周期内，因为变化、升级和维护等原因需要对软件原有代码进行修改时，可能会给旧代码中引入错误，也可能会使我们不得不对整个功能进行重构，并且需要原有代码经过重新测试。</p>
+<h3 id="解决方案-2">解决方案</h3>
+<p>当软件需要变化时，尽量通过扩展软件实体的行为来实现变化，而不是通过修改已有的代码来实现变化。</p>
+<h1 id="总结">总结</h1>
+<p>说到这里，再回想一下前面说的5项原则，恰恰是告诉我们用抽象构建框架，用实现扩展细节的注意事项而已：单一职责原则告诉我们实现类要职责单一；里氏替换原则告诉我们不要破坏继承体系；依赖倒置原则告诉我们要面向接口编程；接口隔离原则告诉我们在设计接口的时候要精简单一；迪米特法则告诉我们要降低耦合。而开闭原则是总纲，他告诉我们要对扩展开放，对修改关闭</p>
 
    </div>
  </div>

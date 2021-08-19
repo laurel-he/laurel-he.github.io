@@ -5,7 +5,22 @@
     <link>https://laurel-he.github.io/</link>
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 20 Jul 2021 16:34:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 12 Aug 2021 16:10:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hugo搭建github个人博客</title>
+      <link>https://laurel-he.github.io/post/hugo/</link>
+      <pubDate>Thu, 12 Aug 2021 16:10:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/post/hugo/</guid>
+      <description>之前个人博客是使用的hexo搭建的，经常会出各种bug，而且时不时的升级，导致npm 也要对应，因此放弃，使用hugo,hugo是基于go语言开发的。
+步骤 下载安装 非常简单，略（如果是windows需要加入环境变量）
+命令 查看版本
+hugo version下载主题存放到themes目录下，假设下载的主题叫herring，那么本地预览命令为：
+hugo server --theme=herring创建文章
+hugo new post/test.md生成静态网站
+hugo --theme=herring --baseUrl=&amp;quot;https://YOURNAME.github.io/&amp;quot;在github上创建一个YOURNAME.github.io的项目，master分支控制public目录 每次新增了要提交的文章后执行命令，提交即可</description>
+    </item>
+    
     <item>
       <title>操作系统（1）-基础和vim操作</title>
       <link>https://laurel-he.github.io/post/opratingsystem_01/</link>
@@ -302,10 +317,15 @@ db.test_db.update( {&#39;_id&#39;: {$in: [&#39;1242rererwwr&#39;]}, &#39;files.n
       <pubDate>Mon, 07 Oct 2019 17:40:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/designpattern/others/codeprinceple/</guid>
-      <description>##第一：单一职责原则（SPR）
-一个类应该有且仅有一个原因导致该类的变更，即一个类应该只负责一项职责
-##第二：里氏替换原则（LSP）
-##第三：依赖倒置原则（DIP） 抽象不应该依赖细节，细节应该依赖于抽象。针对接口编程，不要针对实现编程 ##第四：接口隔离原则（ISP） ##第五：迪米特法则（LoD） ##第六：开放封闭原则 开放-封闭原则是说软件实体（类、模块、函数等等）应该可以扩展，但是不可以修改</description>
+      <description>本文参考了设计模式六大原则
+单一职责原则（SPR:Single Responsibility Principle） 一个类应该有且仅有一个原因导致该类的变更，即一个类应该只负责一项职责 但是在实际工作中，职责是会扩散的，一个类可能会新增更多的职责， 只有逻辑足够简单，才可以在代码级别上违反单一职责原则；只有类中方法数量足够少，才可以在方法级别上违反单一职责原则
+遵循单一职责原的优点： （1）可以降低类的复杂度，一个类只负责一项职责，其逻辑肯定要比负责多项职责简单的多； （2）提高类的可读性，提高系统的可维护性； （3）变更引起的风险降低，变更是必然的，如果单一职责原则遵守的好，当修改一个功能时，可以显著降低对其他功能的影响。
+第二：里氏替换原则（LSP:Liskcov Substitution Principle） 定义 定义1：如果对每一个类型为 T1的对象 o1，都有类型为 T2 的对象o2，使得以 T1定义的所有程序 P 在所有的对象 o1 都代换成 o2 时，程序 P 的行为没有发生变化，那么类型 T2 是类型 T1 的子类型。 定义2：所有引用基类的地方必须能透明地使用其子类的对象。 可以简单的理解为子类型能够替换它们的基类型
+含义解析 （1）子类可以实现父类的抽象方法，但不能覆盖父类的非抽象方法。 （2）子类中可以增加自己特有的方法。 （3）当子类的方法重载父类的方法时，方法的前置条件（即方法的形参）要比父类方法的输入参数更宽松。 （4）当子类的方法实现父类的抽象方法时，方法的后置条件（即方法的返回值）要比父类更严格
+违反里氏替换原则的危害 （1）反直觉。期望所有子类行为是一致的，但如果不一致可能需要文档记录，或者在代码跑失败后涨此知识； （2）不可读。如果子类行为不一致，可能需要不同的逻辑分支来适配不同的行为，徒增代码复杂度； （3）不可用。可能出错的地方终将会出错。 如果非要重写父类的方法，比较通用的做法是：原来的父类和子类都继承一个更通俗的基类，原有的继承关系去掉，采用依赖、聚合，组合等关系代替
+第三：依赖倒置原则（DIP:Dependence Inversion Principle） 定义 高层模块不应该依赖低层模块，二者都应该依赖其抽象；抽象不应该依赖细节；细节应该依赖抽象 针对接口编程，不要针对实现编程
+解释 依赖倒置原则基于这样一个事实： 相对于细节的多变性，抽象的东西要稳定的多。以抽象为基础搭建起来的架构比以细节为基础搭建起来的架构要稳定的多。 在java中，抽象指的是接口或者抽象类，细节就是具体的实现类，使用接口或者抽象类的目的是制定好规范和契约，而不去涉及任何具体的操作，把展现细节的任务交给他们的实现类去完成。
+示例 /** * 高层类Library需要实现readContent，但是readContent针对不同 * 类有不同的表现形式，于是抽象出来，这样不管怎么扩展修改，Library不用改 **/ class DesignController { /** *yii design/run */ public function actionRun() { $user = new User(); $data = $user-&amp;gt;gotoLibrary(); var_dump($data); } } class User { public function gotoLibrary() { $book = (new Library())-&amp;gt;read(new Book()); $news = (new Library())-&amp;gt;read(new Newspaper()); return [$book, $news]; } } class Library { public function read(IReader $reader) { return $reader-&amp;gt;readContent(); } } interface IReader { /** * 读取内容 * @return mixed */ public function readContent(); } class Book implements IReader { public function readContent() { return &amp;#39;书籍：小王子&amp;#39;; } } class Newspaper implements IReader { public function readContent() { return &amp;#39;报纸：今天奥运会结束了&amp;#39;; } } 第四：接口隔离原则(ISP:Interface Segregation Principle) 定义 客户端不应该依赖它不需要的接口；一个类对另一个类的依赖应该建立在最小的接口上。</description>
     </item>
     
     <item>
