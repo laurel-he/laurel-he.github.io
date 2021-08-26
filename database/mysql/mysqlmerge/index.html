@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Mysql分库分表</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.87.0" />
+  <link href="" rel="alternate" type="application/rss+xml" title="" />
+  <link href="https://laurel-he.github.io//css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://laurel-he.github.io//css/hc.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  
+    
+    </head>
+    <body>
+<div class="nav-toggle"><i class="fa fa-bars fa-2x"></i> Herring Cove </div>
+      <div id = "wrapper">
+
+
+<div class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="https://laurel-he.github.io//"><p class="navbar-brand"></p></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+					
+					
+					<li><a href="https://laurel-he.github.io//python/">Python </a></li>
+					
+					<li><a href="https://laurel-he.github.io//post/">主页 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//categories/">分类 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//learn/">学习 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//database/">数据库 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//dataStruct/">数据结构 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//tags/">标签 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//designpattern/">设计模式 </a></li>
+					
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+       
+       <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+					<img src="/images/avatar.jpg" />
+          <li class="sidebar-brand"><a href="https://laurel-he.github.io//"><h1 class="brand"></h1></a><h3></h3></li>
+          <hr />
+					
+						<li><a href="https://laurel-he.github.io//python/">Python </a></li>
+					
+						<li><a href="https://laurel-he.github.io//post/">主页 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//categories/">分类 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//learn/">学习 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//database/">数据库 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//dataStruct/">数据结构 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//tags/">标签 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//designpattern/">设计模式 </a></li>
+					
+          <hr />
+          <div id="social-wrapper">
+           
+           
+           
+           
+         </div>
+       </ul>
+     </div>
+
+
+
+     <div class="container">
+
+
+  <div id="article">
+   <div class="article-title">Mysql分库分表</div>
+   <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> 2019-04-08</small></p> <hr/>
+   <div class="post">
+     <p>本文参考<a href="https://zhuanlan.zhihu.com/p/137368446">MySQL：互联网公司常用分库分表方案汇总！</a></p>
+<h1 id="水平分割和垂直分割">水平分割和垂直分割</h1>
+<p>把表数据分成多少多少条，叫做水平分割 <br>
+表的字段很长，把部分大字段分到另外一个表中，叫垂直分割</p>
+<h1 id="瓶颈">瓶颈</h1>
+<h2 id="io瓶颈">IO瓶颈</h2>
+<p>第一种：磁盘读IO瓶颈，热点数据太多，数据库缓存放不下，每次查询时会产生大量的IO，降低查询速度 -&gt; 分库和垂直分表。 <br>
+第二种：网络IO瓶颈，请求的数据太多，网络带宽不够 -&gt; 分库。</p>
+<h2 id="cpu瓶颈">CPU瓶颈</h2>
+<p>第一种：SQL问题，如SQL中包含join，group by，order by，非索引字段条件查询等，增加CPU运算的操作 -&gt; SQL优化，建立合适的索引，在业务Service层进行业务计算。 <br>
+第二种：单表数据量太大，查询时扫描的行太多，SQL效率低，CPU率先出现瓶颈 -&gt; 水平分表。</p>
+<h1 id="分库分表">分库分表</h1>
+<h2 id="水平分库">水平分库</h2>
+<h3 id="概念">概念</h3>
+<p>以字段为依据，按照一定策略（hash、range等），将一个库中的数据拆分到多个库中。</p>
+<h3 id="示例">示例</h3>
+<p>假设是电商场景，根据不同的公司，分成不同的表</p>
+<h3 id="结果">结果</h3>
+<p>每个库的结构都一样； <br>
+每个库的数据都不一样，没有交集； <br>
+所有库的并集是全量数据；</p>
+<h3 id="场景">场景</h3>
+<p>系统绝对并发量上来了，分表难以根本上解决问题，并且还没有明显的业务归属来垂直分库。</p>
+<h3 id="分析">分析</h3>
+<p>库多了，io和cpu的压力自然可以成倍缓解。</p>
+<h2 id="水平分表">水平分表</h2>
+<h3 id="概念-1">概念</h3>
+<p>以字段为依据，按照一定策略（hash、range等），将一个表中的数据拆分到多个表中。</p>
+<h3 id="示例-1">示例</h3>
+<p>假设数据库中存在一个字段：学号:stu_num，可以按照尾号为0-9分成9个库</p>
+<h3 id="结果-1">结果</h3>
+<p>每个表的结构都一样； <br>
+每个表的数据都不一样，没有交集； <br>
+所有表的并集是全量数据；</p>
+<h3 id="场景-1">场景</h3>
+<p>系统绝对并发量并没有上来，只是单表的数据量太多，影响了SQL效率，加重了CPU负担，以至于成为瓶颈。</p>
+<h3 id="分析-1">分析</h3>
+<p>表的数据量少了，单次SQL执行效率高，自然减轻了CPU的负担。</p>
+<h2 id="垂直分库">垂直分库</h2>
+<h3 id="概念-2">概念</h3>
+<p>以表为依据，按照业务归属不同，将不同的表拆分到不同的库中。</p>
+<h3 id="示例-2">示例</h3>
+<p>电商包括订单，用户，物流等模块，前期都放在同一个库里，后期不同的模块使用不同的库</p>
+<h3 id="结果-2">结果</h3>
+<p>每个库的结构都不一样； <br>
+每个库的数据也不一样，没有交集； <br>
+所有库的并集是全量数据；</p>
+<h3 id="场景-2">场景</h3>
+<p>系统绝对并发量上来了，并且可以抽象出单独的业务模块。</p>
+<h3 id="分析-2">分析</h3>
+<p>到这一步，基本上就可以服务化了。
+例如，随着业务的发展一些公用的配置表、字典表等越来越多，这时可以将这些表拆到单独的库中，甚至可以服务化。
+再有，随着业务的发展孵化出了一套业务模式，这时可以将相关的表拆到单独的库中，甚至可以服务化。</p>
+<h2 id="垂直分表">垂直分表</h2>
+<h3 id="概念-3">概念</h3>
+<p>以字段为依据，按照字段的活跃性，将表中字段拆到不同的表（主表和扩展表）中。</p>
+<h3 id="结果-3">结果</h3>
+<p>每个表的结构都不一样； <br>
+每个表的数据也不一样，一般来说，每个表的字段至少有一列交集，一般是主键，用于关联数据； <br>
+所有表的并集是全量数据；</p>
+<h3 id="场景-3">场景</h3>
+<p>系统绝对并发量并没有上来，表的记录并不多，但是字段多，并且热点数据和非热点数据在一起，单行数据所需的存储空间较大。
+以至于数据库缓存的数据行减少，查询时会去读磁盘数据产生大量的随机读IO，产生IO瓶颈。</p>
+<h3 id="分析-3">分析</h3>
+<p>可以用列表页和详情页来帮助理解。
+垂直分表的拆分原则是将热点数据（可能会冗余经常一起查询的数据）放在一起作为主表，非热点数据放在一起作为扩展表。
+这样更多的热点数据就能被缓存下来，进而减少了随机读IO。拆了之后，要想获得全部数据就需要关联两个表来取数据。
+但记住，千万别用join，因为join不仅会增加CPU负担并且会讲两个表耦合在一起（必须在一个数据库实例上）。
+关联数据，应该在业务Service层做文章，分别获取主表和扩展表数据然后用关联字段关联得到全部数据。</p>
+<h1 id="分布式事务">分布式事务</h1>
+
+   </div>
+ </div>
+
+
+ <a href="https://github.com/laurel-he" class="twitter-share-button " data-size="small" data-count="none">Git hub</a>
+ <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+ <ul class="pager">
+      &nbsp;<li class="previous"><a href="https://laurel-he.github.io/post/phpalg/"> PHP常见算法</a></li>
+      &nbsp;<li class="next"><a href="https://laurel-he.github.io/learn/crontab/"> crontab基本使用</a></li>
+</ul>
+
+
+
+    </ul>
+    </div>
+    <footer>
+
+        <p class="text-muted credit">&copy; 2021. All rights reserved. </p>
+    </footer>
+ 
+    <script src="https://laurel-he.github.io//js/jquery-1.10.2.min.js"></script>
+    <script src="https://laurel-he.github.io//js/bootstrap.min.js"></script>
+    <script src="https://laurel-he.github.io//js/bootstrap.js"></script>
+    <script type="text/javascript" src="https://laurel-he.github.io//js/hc.js"></script>
+</body>
+
+</html>
+

@@ -8,10 +8,10 @@
     <lastBuildDate>Tue, 20 Jul 2021 16:34:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>数据结构学习笔记-1</title>
-      <link>https://laurel-he.github.io/post/datastruct_01/</link>
+      <link>https://laurel-he.github.io/datastruct/datastruct_01/</link>
       <pubDate>Tue, 20 Jul 2021 16:34:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/datastruct_01/</guid>
+      <guid>https://laurel-he.github.io/datastruct/datastruct_01/</guid>
       <description>数据结构学习系列都来自于中国大学MOOC上的浙江大学数据结构学习课程。原课程代码全部采用C语言实现，由于本菜平时最擅长（zhihuiyong）使用php，因此所有算法全部翻译成了php实现。课程链接：数据结构 全文已同步发布到CSDN
 定义 （1）数据结构是数据对象，以及存在于该对象的实例和组成实例的数据元素之间的各种联系。这些联系可以通过定义和相关的函数来给出 （2）数据结构是ADT(abstruct data type)的物理实现 （3）数据结构是计算机存储，组织数据的方式，通常情况下，精心选择的数据结构可以带来最有效率的算法
 示例 写程序实现一个函数printN，打印从1-N之间的所有正整数 。以下是两种实现方式的php实现代码：

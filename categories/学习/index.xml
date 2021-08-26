@@ -8,10 +8,10 @@
     <lastBuildDate>Tue, 20 Jul 2021 16:34:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>数据结构学习笔记-1</title>
-      <link>https://laurel-he.github.io/post/datastruct_01/</link>
+      <link>https://laurel-he.github.io/datastruct/datastruct_01/</link>
       <pubDate>Tue, 20 Jul 2021 16:34:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/datastruct_01/</guid>
+      <guid>https://laurel-he.github.io/datastruct/datastruct_01/</guid>
       <description>数据结构学习系列都来自于中国大学MOOC上的浙江大学数据结构学习课程。原课程代码全部采用C语言实现，由于本菜平时最擅长（zhihuiyong）使用php，因此所有算法全部翻译成了php实现。课程链接：数据结构 全文已同步发布到CSDN
 定义 （1）数据结构是数据对象，以及存在于该对象的实例和组成实例的数据元素之间的各种联系。这些联系可以通过定义和相关的函数来给出 （2）数据结构是ADT(abstruct data type)的物理实现 （3）数据结构是计算机存储，组织数据的方式，通常情况下，精心选择的数据结构可以带来最有效率的算法
 示例 写程序实现一个函数printN，打印从1-N之间的所有正整数 。以下是两种实现方式的php实现代码：
@@ -41,10 +41,10 @@
     
     <item>
       <title>代码整洁之道1-9章</title>
-      <link>https://laurel-he.github.io/post/cleancode/</link>
+      <link>https://laurel-he.github.io/learn/cleancode/</link>
       <pubDate>Mon, 07 Oct 2019 17:40:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/cleancode/</guid>
+      <guid>https://laurel-he.github.io/learn/cleancode/</guid>
       <description>提要 要有代码：代码呈现了需求的细节，将需求明确到机器可以执行的细节程度 不要产生糟糕的、混乱的代码，勒布朗法则：稍后等于永不 制造混乱无益于赶上期限，做得快的唯一方法就是始终保持代码整洁。
 好代码的特点 优雅、搞笑；代码逻辑直截了当，缺陷难以隐藏； 尽量减少依赖关系，使之便于维护； 根据某种分层战略完善处理错误代码，性能调至最优 整洁的代码力求集中，每个函数、每个类和每个模块都全神贯注于一事，完全不受四周细节的干扰和污染 整洁的代码可由作者之外的开发者阅读和增补，它应当有单元测试和验收测试 尽量使用有意义的命名，它只提供一种而非多种做一件事的途径 尽量少的依赖关系，明确地定义和提供清晰、尽量少的API
 总结 （1）能通过所有测试 （2）没有重复代码 （3）体现系统中的全部设计理念 （4）包含尽量少的实体，比如类、方法、函数等 不要重复代码，只做一件事，表达力，小规模抽象
@@ -100,10 +100,10 @@
     
     <item>
       <title>代码大全</title>
-      <link>https://laurel-he.github.io/post/codecomplate_01/</link>
+      <link>https://laurel-he.github.io/learn/codecomplate_01/</link>
       <pubDate>Sat, 05 Oct 2019 10:40:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/codecomplate_01/</guid>
+      <guid>https://laurel-he.github.io/learn/codecomplate_01/</guid>
       <description>前期准备 前期准备的重要性 不要立即开始写代码，要做好必要的需求分析和架构设计，写好需求文档和技术文档，防止浪费时间和精力制造错误的东西
 需求核对表 针对功能需求：
 1．是否详细定义了系统的全部输入，包括其来源、精度、取值范围、出现频率等？

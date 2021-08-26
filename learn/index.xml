@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Learns on </title>
+    <link>https://laurel-he.github.io/learn/</link>
+    <description>Recent content in Learns on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 25 Feb 2020 20:10:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/learn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>计算相关</title>
+      <link>https://laurel-he.github.io/learn/codecollect/</link>
+      <pubDate>Tue, 25 Feb 2020 20:10:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/learn/codecollect/</guid>
+      <description>1 计算矩形是否相交 描述 给定两个矩形的左上角起始点坐标和矩形的宽，高，计算这两个矩形是否相交 分析 1 矩形1左上角坐标p1,右下角坐标p2,矩形2左上角坐标p3,右下角坐标p4 2 M点坐标为P1与P3点在X方向较大值与Y方向较大值的交点 3 N点坐标为P2与P4点在X方向较小值与Y方向较小值的交点 4 如果M点的X坐标和Y坐标值均比N点相应的X坐标和Y坐标值小，亦即M和N可以分别构成一个矩形的左上角点和右上角点，则两矩形相交；其余情况则不相交 代码
+&amp;lt;?php function checkRectInterSect($rect1, $rect2) { $x1 = $rect1[&amp;#39;x&amp;#39;]; $w1 = $rect1[&amp;#39;w&amp;#39;]; $y1 = $rect1[&amp;#39;y&amp;#39;]; $h1 = $rect1[&amp;#39;h&amp;#39;]; $x2 = $rect2[&amp;#39;x&amp;#39;]; $w2 = $rect2[&amp;#39;w&amp;#39;]; $y2 = $rect2[&amp;#39;y&amp;#39;]; $h2 = $rect2[&amp;#39;h&amp;#39;]; $p1 = [$x1, $y1]; $p2 = [$x1 + $w1, $y1 + $h1]; $p3 = [$x2, $y2]; $p4 = [$x2 + $w2, $y2 + $h2]; $M = [max($p1[0], $p3[0]), max($p1[1], $p1[1])]; $N = [min($p2[0], $p4[0]), min($p2[1], $p4[1])]; if ($M[0] &amp;lt; $N[0] &amp;amp;&amp;amp; $M[1] &amp;lt; $N[1]) { return true; } else { return false; } } ?</description>
+    </item>
+    
+    <item>
+      <title>运行相关</title>
+      <link>https://laurel-he.github.io/learn/codecollect2/</link>
+      <pubDate>Tue, 25 Feb 2020 20:10:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/learn/codecollect2/</guid>
+      <description>1 下载数据 描述 根据链接下载文件 代码
+&amp;lt;?php function downloadOldFile($url,$rename,$ext){ $file_path = &amp;#39;public/images/age_60-120/&amp;#39;; $ch = curl_init($url); curl_setopt($ch, CURLOPT_HEADER, 0); curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); curl_setopt($ch, CURLOPT_BINARYTRANSFER, 1); $rawdata=curl_exec ($ch); curl_close ($ch); // 使用中文文件名需要转码  $fp = fopen($file_path. $rename .&amp;#34;.&amp;#34;.$ext,&amp;#39;w&amp;#39;); fwrite($fp, $rawdata); fclose($fp); // 返回路径  return $_SERVER[&amp;#39;DOCUMENT_ROOT&amp;#39;].$file_path.$rename.&amp;#34;.&amp;#34;.$ext; } ?&amp;gt;2 按步骤执行方法 描述 经常有需求：分页执行脚本，例如前1000条执行完后继续分页，此时就需要自动跳页执行 代码
+&amp;lt;?php /** * @param mixed ...$args * @return bool * @throws Exception */ private function stepRun(...$args) { $count = $args[0]; $method = $args[1]; $step = array_key_exists(2, $args) ?</description>
+    </item>
+    
+    <item>
+      <title>代码整洁之道1-9章</title>
+      <link>https://laurel-he.github.io/learn/cleancode/</link>
+      <pubDate>Mon, 07 Oct 2019 17:40:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/learn/cleancode/</guid>
+      <description>提要 要有代码：代码呈现了需求的细节，将需求明确到机器可以执行的细节程度 不要产生糟糕的、混乱的代码，勒布朗法则：稍后等于永不 制造混乱无益于赶上期限，做得快的唯一方法就是始终保持代码整洁。
+好代码的特点 优雅、搞笑；代码逻辑直截了当，缺陷难以隐藏； 尽量减少依赖关系，使之便于维护； 根据某种分层战略完善处理错误代码，性能调至最优 整洁的代码力求集中，每个函数、每个类和每个模块都全神贯注于一事，完全不受四周细节的干扰和污染 整洁的代码可由作者之外的开发者阅读和增补，它应当有单元测试和验收测试 尽量使用有意义的命名，它只提供一种而非多种做一件事的途径 尽量少的依赖关系，明确地定义和提供清晰、尽量少的API
+总结 （1）能通过所有测试 （2）没有重复代码 （3）体现系统中的全部设计理念 （4）包含尽量少的实体，比如类、方法、函数等 不要重复代码，只做一件事，表达力，小规模抽象
+有意义的命名 （1）如果名称需要注释来补充，那就不算是名副其实（之前出现过争议） （2）不要使用意义含糊的废话，如果名称相同但是意义不同，那么info和data与a an the一样毫无意义，不要使用废话，varable不应出现在便能两种，table不应出现在表中 （3）使用读得出来的名称，方便阅读 （4）使用方便搜索的名称 （5）避免使用编码 （6）应当把类和函数做得足够小，消除对成员前缀的需要，读代码的人通常不会读前缀 （7）不要在类名中使用奇怪的命名 （8）不要使用双关语
+函数 （1）函数应该尽可能小，20行封顶最佳 （2）每个函数都一目了然，每个函数都只说一件事，每个函数都依次带到下一个函数 （3）函数的缩进层不应该多余一层或两层
+需要遵循的原则 （1）确保每隔switch函数都埋藏在较低的抽象层而且永远不重复 （2）不要向函数传入布尔值（我以前经常这么做），因为传入布尔值表示函数会有多余的操作 （3）使用异常代替返回错误码（错误代码能从主路径代码中分离出来得到简化） （4）抽离try/catch代码块 （5）不要重复自己
+注释 注意 注释存在的时间越久，就离它所描述的代码越远，越来越变得全然错误，因为程序员不能坚持维护注释
+必要的注释（好的注释） （1）法律信息 （2）提供信息的注释 （3）对意图的解释 （4）阐释（如果参数或返回值是某个标准库的一部分或者不能修改的代码，帮助阐释其含义的代码就会有用） （5）警示
+单元测试 </description>
+    </item>
+    
+    <item>
+      <title>代码大全</title>
+      <link>https://laurel-he.github.io/learn/codecomplate_01/</link>
+      <pubDate>Sat, 05 Oct 2019 10:40:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/learn/codecomplate_01/</guid>
+      <description>前期准备 前期准备的重要性 不要立即开始写代码，要做好必要的需求分析和架构设计，写好需求文档和技术文档，防止浪费时间和精力制造错误的东西
+需求核对表 针对功能需求：
+1．是否详细定义了系统的全部输入，包括其来源、精度、取值范围、出现频率等？
+2．是否详细定义了系统的全部输出，包括其目的地、精度、取值范围、出现频率格式等？
+3．是否详细定义了所有的输出格式(如：web页面、报表等)？
+4．是否详细定义了所有硬件及软件的外部接口？
+5．是否详细定义了全部外部通信接口，包括握手协议、纠错协议、通信协议等？
+6．是否列出了用户所要做的全部事情？
+7．是否详细定义了每个任务所用数据，以及每个任务得到的数据
+针对非功能需求（质量需求）
+1.是否为全部必要的操作，从用户的角度，详细描述的期望的响应时间 ？
+2.是否详细描述了其他与计时有关的考虑，如处理时间、数据传输率、系统吞吐量等？
+3.是否详细定义了安全级别
+4.是否详细定义了可靠性，包括软件失灵的后果、发生故障时需要保护的至关重要的信息、错误检查与回复的策略等？
+5.是否详细定义了机器内存和剩余硬盘空间最小值？
+6.是否详细定义了系统的可维护性，包括适应特定功能的变更、操作环境的变更、与其他软件接口变更的能力？
+7.是否包含对“成功”的定义，“失败”的定义？
+需求的质量
+  需求是用户书写的吗？
+  每条需求都不与其他需求冲突吗？
+  是否详细定义了相互竞争的特性之间的权衡
+  是否避免在需求中规定设计(方案)
+  需求是否在详细程度上保持相当一致的水平？有些需求应当更详细的描述吗？有些需求应该更粗略的描述吗？
+  需求是否足够清晰，即使转交给一个独立的小组去构建，他们也能理解吗？开发者也这么想吗？
+  每个条款都与待解决的问题及解决方案相关吗？能从每个条款上溯到它的问题中的对应跟源吗？
+  是否每条需求都是可测试的？是否可应进行独立的测试，以检验满不满足各项需求
+  是否描述了所有可能对需求的改动，包括各项改动的可能性
+  需求的完备性
+1.对于在开始开发之前无法获得信息，是否详细描述了信息不完全的区域？
+2.需求的完备度是否达到这种程度：如果产品满足所有需求，那么它就是可接受的？
+3.你对全部需求都感觉舒服吗？你是否已经去掉了那些不可能完成的需求—那些只是为了安抚客户和老板的东西？
+花费在前期准备上的时间长度 花费在问题定义，需求分析，软件架构上的时间依据项目的需要而变化，一般占据10%-20%的工作量和20%-30%的时间
+良好的类接口 类的基础是抽象数据类型（我之前大部分时候没有使用抽象，只是把相关的方法和变量定义放在了一起，实际上是不符合面向对象变成原则的），抽象数据类型是指一些数据和 对这些数据所进行操作的集合。定义抽象类有助于代码规范，提高
+创建类的原因 （1）为显示世界中的对象建模 （2）为抽象的对象建模 （3）降低复杂度 （4）隔离复杂度 （5）隐藏实现细节 （6）让代码更易重用 （7）把相关的操作包装到一起
+应当避免的类 （1）避免创建万能类 （2）消除无关紧要的类 （3）避免用动词命名的类</description>
+    </item>
+    
+    <item>
+      <title>crontab基本使用</title>
+      <link>https://laurel-he.github.io/learn/crontab/</link>
+      <pubDate>Wed, 10 Apr 2019 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/learn/crontab/</guid>
+      <description>1 简介 crond 是linux下用来周期性的执行某种任务或等待处理某些事件的一个守护进程，与windows下的计划任务类似，当安装完成操作系统后，默认会安装此服务 工具，并且会自动启动crond进程，crond进程每分钟会定期检查是否有要执行的任务，如果有要执行的任务，则自动执行该任务。
+2 格式 minute hour day month week command
+3 操作 crontab -l:列出所有任务
+laravel 定时任务 原文路径 https://learnku.com/docs/laravel/5.4/scheduling/1257
+其他解决方式 1 supervisor 举例
+[program:finance_svcs_autoreconciliation] command=php /opt/app/nginx/html/qa6/financesvcs/artisan queue:work beanstalkd --queue=autoreconciliation_broadcast --daemon directory=/opt/app/nginx/html/qa6/financesvcs autostart=true autorestart=true user=apache numprocs=1 redirect_stderr=true stdout_logfile=/var/log/supervisor/qa1/%(program_name)s-stdout.log stdout_logfile_maxbytes=10MB stdout_logfile_backups=10  </description>
+    </item>
+    
+  </channel>
+</rss>

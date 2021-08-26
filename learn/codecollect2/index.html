@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>运行相关</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.87.0" />
+  <link href="" rel="alternate" type="application/rss+xml" title="" />
+  <link href="https://laurel-he.github.io//css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://laurel-he.github.io//css/hc.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  
+    
+    </head>
+    <body>
+<div class="nav-toggle"><i class="fa fa-bars fa-2x"></i> Herring Cove </div>
+      <div id = "wrapper">
+
+
+<div class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="https://laurel-he.github.io//"><p class="navbar-brand"></p></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+					
+					
+					<li><a href="https://laurel-he.github.io//python/">Python </a></li>
+					
+					<li><a href="https://laurel-he.github.io//post/">主页 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//categories/">分类 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//learn/">学习 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//database/">数据库 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//dataStruct/">数据结构 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//tags/">标签 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//designpattern/">设计模式 </a></li>
+					
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+       
+       <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+					<img src="/images/avatar.jpg" />
+          <li class="sidebar-brand"><a href="https://laurel-he.github.io//"><h1 class="brand"></h1></a><h3></h3></li>
+          <hr />
+					
+						<li><a href="https://laurel-he.github.io//python/">Python </a></li>
+					
+						<li><a href="https://laurel-he.github.io//post/">主页 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//categories/">分类 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//learn/">学习 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//database/">数据库 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//dataStruct/">数据结构 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//tags/">标签 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//designpattern/">设计模式 </a></li>
+					
+          <hr />
+          <div id="social-wrapper">
+           
+           
+           
+           
+         </div>
+       </ul>
+     </div>
+
+
+
+     <div class="container">
+
+
+  <div id="article">
+   <div class="article-title">运行相关</div>
+   <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> 2020-02-25</small></p> <hr/>
+   <div class="post">
+     <h4 id="1-下载数据">1 下载数据</h4>
+<p><strong>描述</strong>
+根据链接下载文件
+<strong>代码</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span> 
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">downloadOldFile</span>($url,$rename,$ext){
+    $file_path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;public/images/age_60-120/&#39;</span>;
+    $ch <span style="color:#f92672">=</span> <span style="color:#a6e22e">curl_init</span>($url);
+    <span style="color:#a6e22e">curl_setopt</span>($ch, <span style="color:#a6e22e">CURLOPT_HEADER</span>, <span style="color:#ae81ff">0</span>);
+    <span style="color:#a6e22e">curl_setopt</span>($ch, <span style="color:#a6e22e">CURLOPT_RETURNTRANSFER</span>, <span style="color:#ae81ff">1</span>);
+    <span style="color:#a6e22e">curl_setopt</span>($ch, <span style="color:#a6e22e">CURLOPT_BINARYTRANSFER</span>, <span style="color:#ae81ff">1</span>);
+    $rawdata<span style="color:#f92672">=</span><span style="color:#a6e22e">curl_exec</span> ($ch);
+    <span style="color:#a6e22e">curl_close</span> ($ch);
+    <span style="color:#75715e">// 使用中文文件名需要转码
+</span><span style="color:#75715e"></span>    $fp <span style="color:#f92672">=</span> <span style="color:#a6e22e">fopen</span>($file_path<span style="color:#f92672">.</span> $rename <span style="color:#f92672">.</span><span style="color:#e6db74">&#34;.&#34;</span><span style="color:#f92672">.</span>$ext,<span style="color:#e6db74">&#39;w&#39;</span>);
+    <span style="color:#a6e22e">fwrite</span>($fp, $rawdata);
+    <span style="color:#a6e22e">fclose</span>($fp);
+    <span style="color:#75715e">// 返回路径
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> $_SERVER[<span style="color:#e6db74">&#39;DOCUMENT_ROOT&#39;</span>]<span style="color:#f92672">.</span>$file_path<span style="color:#f92672">.</span>$rename<span style="color:#f92672">.</span><span style="color:#e6db74">&#34;.&#34;</span><span style="color:#f92672">.</span>$ext;
+}
+<span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><h4 id="2-按步骤执行方法">2 按步骤执行方法</h4>
+<p><strong>描述</strong>
+经常有需求：分页执行脚本，例如前1000条执行完后继续分页，此时就需要自动跳页执行
+<strong>代码</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+    <span style="color:#e6db74">/**
+</span><span style="color:#e6db74">     * @param mixed ...$args
+</span><span style="color:#e6db74">     * @return bool
+</span><span style="color:#e6db74">     * @throws Exception
+</span><span style="color:#e6db74">     */</span>
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">stepRun</span>(<span style="color:#f92672">...</span>$args)
+    {
+        $count <span style="color:#f92672">=</span> $args[<span style="color:#ae81ff">0</span>];
+        $method <span style="color:#f92672">=</span> $args[<span style="color:#ae81ff">1</span>];
+        $step <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_key_exists</span>(<span style="color:#ae81ff">2</span>, $args) <span style="color:#f92672">?</span> $args[<span style="color:#ae81ff">2</span>] <span style="color:#f92672">:</span> <span style="color:#ae81ff">10</span>;
+        $limit <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_key_exists</span>(<span style="color:#ae81ff">3</span>, $args) <span style="color:#f92672">?</span> $args[<span style="color:#ae81ff">3</span>] <span style="color:#f92672">:</span> <span style="color:#ae81ff">10</span>;
+        $param <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_key_exists</span>(<span style="color:#ae81ff">4</span>, $args) <span style="color:#f92672">?</span> $args[<span style="color:#ae81ff">4</span>] <span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>;
+        $stepCount <span style="color:#f92672">=</span> <span style="color:#a6e22e">ceil</span>($count <span style="color:#f92672">/</span> $step);
+        <span style="color:#66d9ef">for</span> ($nowStep <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; $nowStep <span style="color:#f92672">&lt;</span> $stepCount; $nowStep <span style="color:#f92672">++</span>) {
+            $this<span style="color:#f92672">-&gt;</span>$method($limit, $nowStep <span style="color:#f92672">*</span> $step, $param);
+            <span style="color:#a6e22e">sleep</span>(<span style="color:#ae81ff">1</span>);
+        }
+        <span style="color:#a6e22e">sleep</span>(<span style="color:#ae81ff">1</span>);
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+    }
+    <span style="color:#75715e">// 调用
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//     $this-&gt;stepRun($exportCount, &#39;loopChildData&#39;, 1000, $ageId);
+</span><span style="color:#75715e"></span>    
+    <span style="color:#75715e">// 执行方法
+</span><span style="color:#75715e"></span>    <span style="color:#e6db74">/**
+</span><span style="color:#e6db74">        function loopChildData(int $limit = 1000, int $skip = 0, string $ageId = &#39;&#39;)
+</span><span style="color:#e6db74">        {
+</span><span style="color:#e6db74">            $data = $this-&gt;dao-&gt;conn-&gt;query([&#39;faceItems&#39; =&gt; [&#39;$in&#39; =&gt; [$ageId]], &#39;status&#39; =&gt; 2, &#39;apiCheckPass&#39; =&gt; true],
+</span><span style="color:#e6db74">                null, [&#39;limit&#39; =&gt; $limit, &#39;skip&#39; =&gt; $skip]);
+</span><span style="color:#e6db74">            foreach ($data as $v) {
+</span><span style="color:#e6db74">                $this-&gt;downloadChildFile(Url::createPrivateUrl($v[&#39;url&#39;]), $v[&#39;_id&#39;], &#39;jpg&#39;);
+</span><span style="color:#e6db74">            }
+</span><span style="color:#e6db74">        }
+</span><span style="color:#e6db74">    **/</span>
+<span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">``
+</span></code></pre></div>
+   </div>
+ </div>
+
+
+ <a href="https://github.com/laurel-he" class="twitter-share-button " data-size="small" data-count="none">Git hub</a>
+ <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+ <ul class="pager">
+      &nbsp;<li class="previous"><a href="https://laurel-he.github.io/post/usefulcode2/"> 有用的代码段-ts篇</a></li>
+      &nbsp;<li class="next"><a href="https://laurel-he.github.io/learn/codecollect/"> 计算相关</a></li>
+</ul>
+
+
+
+    </ul>
+    </div>
+    <footer>
+
+        <p class="text-muted credit">&copy; 2021. All rights reserved. </p>
+    </footer>
+ 
+    <script src="https://laurel-he.github.io//js/jquery-1.10.2.min.js"></script>
+    <script src="https://laurel-he.github.io//js/bootstrap.min.js"></script>
+    <script src="https://laurel-he.github.io//js/bootstrap.js"></script>
+    <script type="text/javascript" src="https://laurel-he.github.io//js/hc.js"></script>
+</body>
+
+</html>
+

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pythons on </title>
+    <link>https://laurel-he.github.io/python/</link>
+    <description>Recent content in Pythons on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 02 Feb 2019 13:25:21 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>python100例学习笔记</title>
+      <link>https://laurel-he.github.io/python/20190202/</link>
+      <pubDate>Sat, 02 Feb 2019 13:25:21 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/python/20190202/</guid>
+      <description>四个数组成不重复三位数 描述 有四个数字，1,2,3,4，能组成多少个不重复的三位数 思考 原文分析：将所有的数字排列组合后去掉不满足条件的列 代码
+num = 1; for i in range(1,5): for j in range(1,5): for k in range(1,5): if(i != k) and (i != j) and (j != k): print i,j,k num = num + 1 print num 扩展 循环三次效率很低，每次循环都是1-5，有没有更好的解决办法
+2 </description>
+    </item>
+    
+  </channel>
+</rss>
