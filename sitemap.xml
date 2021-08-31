@@ -3,18 +3,30 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://laurel-he.github.io/</loc>
-    <lastmod>2021-08-12T16:10:10+00:00</lastmod>
+    <lastmod>2021-08-27T13:47:00+00:00</lastmod>
   </url><url>
     <loc>https://laurel-he.github.io/categories/</loc>
-    <lastmod>2021-08-12T16:10:10+00:00</lastmod>
+    <lastmod>2021-08-27T13:47:00+00:00</lastmod>
+  </url><url>
+    <loc>https://laurel-he.github.io/categories/go/</loc>
+    <lastmod>2021-08-27T13:47:00+00:00</lastmod>
+  </url><url>
+    <loc>https://laurel-he.github.io/go/</loc>
+    <lastmod>2021-08-27T13:47:00+00:00</lastmod>
+  </url><url>
+    <loc>https://laurel-he.github.io/go/basic/</loc>
+    <lastmod>2021-08-27T13:47:00+00:00</lastmod>
+  </url><url>
+    <loc>https://laurel-he.github.io/tags/</loc>
+    <lastmod>2021-08-27T13:47:00+00:00</lastmod>
+  </url><url>
+    <loc>https://laurel-he.github.io/tags/%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2021-08-27T13:47:00+00:00</lastmod>
   </url><url>
     <loc>https://laurel-he.github.io/post/hugo/</loc>
     <lastmod>2021-08-12T16:10:10+00:00</lastmod>
   </url><url>
     <loc>https://laurel-he.github.io/post/</loc>
-    <lastmod>2021-08-12T16:10:10+00:00</lastmod>
-  </url><url>
-    <loc>https://laurel-he.github.io/tags/</loc>
     <lastmod>2021-08-12T16:10:10+00:00</lastmod>
   </url><url>
     <loc>https://laurel-he.github.io/categories/%E5%85%B6%E4%BB%96/</loc>
@@ -24,9 +36,6 @@
     <lastmod>2021-08-12T16:10:10+00:00</lastmod>
   </url><url>
     <loc>https://laurel-he.github.io/datastruct/</loc>
-    <lastmod>2021-07-20T16:34:10+00:00</lastmod>
-  </url><url>
-    <loc>https://laurel-he.github.io/tags/%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2021-07-20T16:34:10+00:00</lastmod>
   </url><url>
     <loc>https://laurel-he.github.io/categories/%E5%AD%A6%E4%B9%A0/</loc>
@@ -356,28 +365,31 @@
     <loc>https://laurel-he.github.io/post/monthly/</loc>
     <lastmod>2019-03-25T09:41:10+00:00</lastmod>
   </url><url>
-    <loc>https://laurel-he.github.io/post/pythonset/</loc>
+    <loc>https://laurel-he.github.io/python/</loc>
     <lastmod>2019-03-15T13:52:00+00:00</lastmod>
   </url><url>
-    <loc>https://laurel-he.github.io/post/pythonlist/</loc>
+    <loc>https://laurel-he.github.io/python/pythonset/</loc>
+    <lastmod>2019-03-15T13:52:00+00:00</lastmod>
+  </url><url>
+    <loc>https://laurel-he.github.io/python/pythonlist/</loc>
     <lastmod>2019-03-15T13:47:00+00:00</lastmod>
   </url><url>
-    <loc>https://laurel-he.github.io/post/pythonstructure/</loc>
+    <loc>https://laurel-he.github.io/python/pythonstructure/</loc>
     <lastmod>2019-03-15T09:47:00+00:00</lastmod>
   </url><url>
-    <loc>https://laurel-he.github.io/post/pythondeque/</loc>
+    <loc>https://laurel-he.github.io/python/pythondeque/</loc>
     <lastmod>2019-03-15T09:47:00+00:00</lastmod>
   </url><url>
-    <loc>https://laurel-he.github.io/post/python_base/</loc>
+    <loc>https://laurel-he.github.io/python/python_base/</loc>
     <lastmod>2019-03-14T15:26:10+00:00</lastmod>
   </url><url>
     <loc>https://laurel-he.github.io/post/generators/</loc>
     <lastmod>2019-03-14T14:41:10+00:00</lastmod>
   </url><url>
-    <loc>https://laurel-he.github.io/post/python_debugger/</loc>
+    <loc>https://laurel-he.github.io/python/python_debugger/</loc>
     <lastmod>2019-03-14T11:48:10+00:00</lastmod>
   </url><url>
-    <loc>https://laurel-he.github.io/post/python/</loc>
+    <loc>https://laurel-he.github.io/python/python/</loc>
     <lastmod>2019-03-14T10:36:10+00:00</lastmod>
   </url><url>
     <loc>https://laurel-he.github.io/post/bash/</loc>
@@ -414,9 +426,6 @@
     <lastmod>2019-02-26T16:10:10+00:00</lastmod>
   </url><url>
     <loc>https://laurel-he.github.io/python/20190202/</loc>
-    <lastmod>2019-02-02T13:25:21+00:00</lastmod>
-  </url><url>
-    <loc>https://laurel-he.github.io/python/</loc>
     <lastmod>2019-02-02T13:25:21+00:00</lastmod>
   </url><url>
     <loc>https://laurel-he.github.io/post/2019_01_01/</loc>

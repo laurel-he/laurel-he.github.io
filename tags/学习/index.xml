@@ -5,7 +5,19 @@
     <link>https://laurel-he.github.io/tags/%E5%AD%A6%E4%B9%A0/</link>
     <description>Recent content in 学习 on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 20 Jul 2021 16:34:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/tags/%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 27 Aug 2021 13:47:00 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/tags/%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>go基础</title>
+      <link>https://laurel-he.github.io/go/basic/</link>
+      <pubDate>Fri, 27 Aug 2021 13:47:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/go/basic/</guid>
+      <description>本系列参考go语言教程
+基础概念 go语言特色 简洁、快速、安全 并行、有趣、开源 内存管理、数组安全、编译迅速
+go语言用途 Go 语言被设计成一门应用于搭载 Web 服务器，存储集群或类似用途的巨型中央服务器的系统编程语言。 对于高性能分布式系统领域而言，Go 语言无疑比大多数其它语言有着更高的开发效率。 它提供了海量并行的支持，这对于游戏服务端的开发而言是再好不过了。
+简单的go语言程序 package main import &amp;#34;fmt&amp;#34; func main() { var age, name string = &amp;#34;18&amp;#34;, &amp;#34;Joe&amp;#34; var res = fmt.Sprintf(&amp;#34;my name is %s, and my age is %s&amp;#34;, name, age) fmt.Println(res) } func init() { fmt.Println(&amp;#34;test init&amp;#34;) } func varTest() { var funcName, funcTime string = &amp;#34;varTest&amp;#34;, &amp;#34;now&amp;#34; fmt.Println(funcName + funcTime) } 使用go run来执行 使用go build 来生成二进制文件</description>
+    </item>
+    
     <item>
       <title>操作系统（1）-基础和vim操作</title>
       <link>https://laurel-he.github.io/post/opratingsystem_01/</link>

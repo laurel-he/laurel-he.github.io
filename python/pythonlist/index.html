@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>python Generators</title>
+  <title>python数据结构之列表</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.87.0" />
@@ -95,23 +95,151 @@
 
 
   <div id="article">
-   <div class="article-title">python Generators</div>
-   <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> 2019-03-14</small></p> <hr/>
+   <div class="article-title">python数据结构之列表</div>
+   <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> 2019-03-15</small></p> <hr/>
    <div class="post">
-     <p>##迭代器Iterator
-迭代器是一个可以让程序员遍历一个容器的对象，一个迭代器在遍历并读取一个容器的数据元素时不会执行一个迭代。
-<strong>迭代器三个部分</strong>
-可迭代对象
-迭代器
-迭代
-<strong>可迭代对象</strong>
-python中的任意对象，只要定义了可以返回一个迭代器的__iter__方法，或者定义了可以支持下标索引的__getitem__方法，那么就是一个可跌打对象
-<strong>迭代器</strong>
-任意对象，只要定义了next(Python2)或者__next__方法，它就是一个迭代器
-<strong>迭代</strong>
-从某个地方取出一个元素的过程，当使用一个循环来遍历某个东西时，这个过程本身就叫做迭代。
-##生成器Generators
-生成器也是一种迭代器，但是只能对其迭代一次</p>
+     <p><strong>介绍</strong></p>
+<p>可以作为一个方括号内的逗号分隔值出现，列表的数据项不需要具有相同的类型
+<strong>操作</strong>
+（1）取值：
+list[0], list[0:3] （list[-2]代表读取列表中倒数第二个元素）
+（2）更新列表
+添加元素：append&ndash;&gt; list.append(&lsquo;test&rsquo;)
+删除元素：del&mdash;&gt; del list[2]
+<strong>脚本操作符</strong></p>
+<table>
+<thead>
+<tr>
+<th>python表达式</th>
+<th>结果</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>len([1,2,3])</td>
+<td>3</td>
+<td>长度</td>
+</tr>
+<tr>
+<td>[1, 2, 3] + [4, 5, 6]</td>
+<td>[1, 2, 3, 4, 5, 6]</td>
+<td>组合</td>
+</tr>
+<tr>
+<td>[&lsquo;Hi!'] * 4</td>
+<td>[&lsquo;Hi!&rsquo;, &lsquo;Hi!&rsquo;, &lsquo;Hi!&rsquo;, &lsquo;Hi!']</td>
+<td>重复</td>
+</tr>
+<tr>
+<td>3 in [1, 2, 3]</td>
+<td>True</td>
+<td>元素是否存在于列表中</td>
+</tr>
+<tr>
+<td>for x in [1, 2, 3]: print x,</td>
+<td>1 2 3</td>
+<td>迭代</td>
+</tr>
+<tr>
+<td><strong>函数&amp;方法</strong></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cmp(list1, list2)</td>
+<td>比较两个列表的元素</td>
+</tr>
+<tr>
+<td>len(list)</td>
+<td>列表元素个数</td>
+</tr>
+<tr>
+<td>max(list)</td>
+<td>返回列表元素最大值</td>
+</tr>
+<tr>
+<td>min(list)</td>
+<td>返回列表元素最小值</td>
+</tr>
+<tr>
+<td>list(seq)</td>
+<td>将元组转换为列表</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>list.append(obj)</td>
+<td>在列表末尾添加新的对象</td>
+</tr>
+<tr>
+<td>list.count(obj)</td>
+<td>统计某个元素在列表中出现的次数</td>
+</tr>
+<tr>
+<td>list.extend(seq)</td>
+<td>在列表末尾一次性追加另一个序列的多个值（用新列表扩展原来的列表）</td>
+</tr>
+<tr>
+<td>list.index(obj)</td>
+<td>从列表中找出某个值第一个匹配项的索引位置</td>
+</tr>
+<tr>
+<td>list.insert(index, obj)</td>
+<td>将对象插入列表</td>
+</tr>
+<tr>
+<td>list.pop([index=-1])</td>
+<td>移除列表中的一个元素（默认最后一个元素），并返回该元素的值</td>
+</tr>
+<tr>
+<td>list.remove(obj)</td>
+<td>移除列表中的某个值的第一个匹配项</td>
+</tr>
+<tr>
+<td>list.reverse()</td>
+<td>反向列表中的元素</td>
+</tr>
+<tr>
+<td>list.sort(cmp=None, key=None, reverse=False)</td>
+<td>对原列表进行排序</td>
+</tr>
+<tr>
+<td><strong>注意事项</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>切片：[m:n]从索引m开始，直到索引n为止，但不包括索引n</td>
+<td></td>
+</tr>
+<tr>
+<td>句尾加逗号：输出在一行中</td>
+<td></td>
+</tr>
+<tr>
+<td>sort():直接修改原列表，返回None</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
    </div>
  </div>
@@ -121,8 +249,8 @@ python中的任意对象，只要定义了可以返回一个迭代器的__iter__
  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
  <ul class="pager">
-      &nbsp;<li class="previous"><a href="https://laurel-he.github.io/python/python_debugger/"> python debugger</a></li>
-      &nbsp;<li class="next"><a href="https://laurel-he.github.io/python/python_base/"> 补充python基础知识</a></li>
+      &nbsp;<li class="previous"><a href="https://laurel-he.github.io/python/pythonstructure/"> python数据结构</a></li>
+      &nbsp;<li class="next"><a href="https://laurel-he.github.io/python/pythonset/"> python数据结构之集合</a></li>
 </ul>
 
 

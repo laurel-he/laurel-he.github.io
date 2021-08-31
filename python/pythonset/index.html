@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>python Generators</title>
+  <title>python数据结构之集合</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.87.0" />
@@ -95,23 +95,116 @@
 
 
   <div id="article">
-   <div class="article-title">python Generators</div>
-   <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> 2019-03-14</small></p> <hr/>
+   <div class="article-title">python数据结构之集合</div>
+   <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> 2019-03-15</small></p> <hr/>
    <div class="post">
-     <p>##迭代器Iterator
-迭代器是一个可以让程序员遍历一个容器的对象，一个迭代器在遍历并读取一个容器的数据元素时不会执行一个迭代。
-<strong>迭代器三个部分</strong>
-可迭代对象
-迭代器
-迭代
-<strong>可迭代对象</strong>
-python中的任意对象，只要定义了可以返回一个迭代器的__iter__方法，或者定义了可以支持下标索引的__getitem__方法，那么就是一个可跌打对象
-<strong>迭代器</strong>
-任意对象，只要定义了next(Python2)或者__next__方法，它就是一个迭代器
-<strong>迭代</strong>
-从某个地方取出一个元素的过程，当使用一个循环来遍历某个东西时，这个过程本身就叫做迭代。
-##生成器Generators
-生成器也是一种迭代器，但是只能对其迭代一次</p>
+     <p><strong>介绍</strong>
+集合是一个无序的不重复的元素序列
+<strong>操作</strong>
+创建集合：
+{}或set()，创建一个空集合必须用set()，{}创建空字典(set(&ldquo;asdgf&rdquo;)会创建[&lsquo;a&rsquo;, &rsquo;s', &rsquo;d', &lsquo;g&rsquo;, &lsquo;f&rsquo;],set()创建多个元素需要两个())
+parame = {value01,value02,&hellip;}或set(value)
+添加元素：
+s.add(x)
+s.update(x)    -&gt;  参数可以是列表，元组，字典等，x可以有多个，用逗号分开</p>
+<pre><code>thisset = set((&quot;Google&quot;, &quot;Runoob&quot;, &quot;Taobao&quot;))
+thisset.update({1,3})
+print(thisset)
+{1, 3, 'Google', 'Taobao', 'Runoob'}
+thisset.update([1,4],[5,6])  
+print(thisset)
+{1, 3, 4, 5, 6, 'Google', 'Taobao', 'Runoob'}
+</code></pre><p>移除元素：
+s.remove(x)   将元素x从集合x移除，如果元素不存在则会发生错误
+s.discard(x)  将元素x从集合x移除，如果元素不存在不会发生错误
+计算集合元素个数：
+len(s)</p>
+<pre><code>thisset = set((&quot;Google&quot;, &quot;Runoob&quot;, &quot;Taobao&quot;))
+len(thisset)
+</code></pre><p>返回3
+清空集合：
+s.clear()
+判断元素x是否在集合s中：
+x in s
+<strong>内置方法</strong></p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>add()</td>
+<td>为集合添加元素</td>
+</tr>
+<tr>
+<td>clear()</td>
+<td>移除集合中的所有元素</td>
+</tr>
+<tr>
+<td>copy()</td>
+<td>拷贝一个集合</td>
+</tr>
+<tr>
+<td>difference()</td>
+<td>返回多个集合的差集</td>
+</tr>
+<tr>
+<td>difference_update()</td>
+<td>移除集合中的元素，该元素在指定的集合也存在</td>
+</tr>
+<tr>
+<td>discard()</td>
+<td>删除集合中指定的元素</td>
+</tr>
+<tr>
+<td>intersection()</td>
+<td>返回集合的交集</td>
+</tr>
+<tr>
+<td>intersection_update()</td>
+<td>删除集合中的元素，该元素在指定的集合中不存在</td>
+</tr>
+<tr>
+<td>isdisjoint()</td>
+<td>判断两个集合是否包含相同的元素，如果没有返回 True，否则返回 False</td>
+</tr>
+<tr>
+<td>issubset()</td>
+<td>判断指定集合是否为该方法参数集合的子集</td>
+</tr>
+<tr>
+<td>issuperset()</td>
+<td>判断该方法的参数集合是否为指定集合的子集</td>
+</tr>
+<tr>
+<td>pop()</td>
+<td>随机移除元素</td>
+</tr>
+<tr>
+<td>remove()</td>
+<td>移除指定元素</td>
+</tr>
+<tr>
+<td>symmetric_difference()</td>
+<td>返回两个集合中不重复的元素集合</td>
+</tr>
+<tr>
+<td>symmetric_difference_update()</td>
+<td>移除当前集合中在另外一个指定集合相同的元素，并将另外一个指定集合中不同的元素插入到当前集合中</td>
+</tr>
+<tr>
+<td>union()</td>
+<td>返回两个集合的并集</td>
+</tr>
+<tr>
+<td>update()</td>
+<td>给集合添加元素</td>
+</tr>
+</tbody>
+</table>
 
    </div>
  </div>
@@ -121,8 +214,8 @@ python中的任意对象，只要定义了可以返回一个迭代器的__iter__
  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
  <ul class="pager">
-      &nbsp;<li class="previous"><a href="https://laurel-he.github.io/python/python_debugger/"> python debugger</a></li>
-      &nbsp;<li class="next"><a href="https://laurel-he.github.io/python/python_base/"> 补充python基础知识</a></li>
+      &nbsp;<li class="previous"><a href="https://laurel-he.github.io/python/pythonlist/"> python数据结构之列表</a></li>
+      &nbsp;<li class="next"><a href="https://laurel-he.github.io/post/monthly/"> 重新实现monthly步骤</a></li>
 </ul>
 
 

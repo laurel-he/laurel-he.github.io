@@ -28,10 +28,10 @@ LOG_PATH=/tmp/paytest 2 启动文件添加日志路径 $app-&amp;gt;configureMon
     
     <item>
       <title>python数据结构之集合</title>
-      <link>https://laurel-he.github.io/post/pythonset/</link>
+      <link>https://laurel-he.github.io/python/pythonset/</link>
       <pubDate>Fri, 15 Mar 2019 13:52:00 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/pythonset/</guid>
+      <guid>https://laurel-he.github.io/python/pythonset/</guid>
       <description>介绍 集合是一个无序的不重复的元素序列 操作 创建集合： {}或set()，创建一个空集合必须用set()，{}创建空字典(set(&amp;ldquo;asdgf&amp;rdquo;)会创建[&amp;lsquo;a&amp;rsquo;, &amp;rsquo;s&#39;, &amp;rsquo;d&#39;, &amp;lsquo;g&amp;rsquo;, &amp;lsquo;f&amp;rsquo;],set()创建多个元素需要两个()) parame = {value01,value02,&amp;hellip;}或set(value) 添加元素： s.add(x) s.update(x) -&amp;gt; 参数可以是列表，元组，字典等，x可以有多个，用逗号分开
 thisset = set((&amp;quot;Google&amp;quot;, &amp;quot;Runoob&amp;quot;, &amp;quot;Taobao&amp;quot;)) thisset.update({1,3}) print(thisset) {1, 3, &#39;Google&#39;, &#39;Taobao&#39;, &#39;Runoob&#39;} thisset.update([1,4],[5,6]) print(thisset) {1, 3, 4, 5, 6, &#39;Google&#39;, &#39;Taobao&#39;, &#39;Runoob&#39;} 移除元素： s.remove(x) 将元素x从集合x移除，如果元素不存在则会发生错误 s.discard(x) 将元素x从集合x移除，如果元素不存在不会发生错误 计算集合元素个数： len(s)
 thisset = set((&amp;quot;Google&amp;quot;, &amp;quot;Runoob&amp;quot;, &amp;quot;Taobao&amp;quot;)) len(thisset) 返回3 清空集合： s.clear() 判断元素x是否在集合s中： x in s 内置方法
@@ -40,10 +40,10 @@ thisset = set((&amp;quot;Google&amp;quot;, &amp;quot;Runoob&amp;quot;, &amp;quot
     
     <item>
       <title>python数据结构之列表</title>
-      <link>https://laurel-he.github.io/post/pythonlist/</link>
+      <link>https://laurel-he.github.io/python/pythonlist/</link>
       <pubDate>Fri, 15 Mar 2019 13:47:00 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/pythonlist/</guid>
+      <guid>https://laurel-he.github.io/python/pythonlist/</guid>
       <description>介绍
 可以作为一个方括号内的逗号分隔值出现，列表的数据项不需要具有相同的类型 操作 （1）取值： list[0], list[0:3] （list[-2]代表读取列表中倒数第二个元素） （2）更新列表 添加元素：append&amp;ndash;&amp;gt; list.append(&amp;lsquo;test&amp;rsquo;) 删除元素：del&amp;mdash;&amp;gt; del list[2] 脚本操作符
    python表达式 结果 描述     len([1,2,3]) 3 长度   [1, 2, 3] + [4, 5, 6] [1, 2, 3, 4, 5, 6] 组合   [&amp;lsquo;Hi!&#39;] * 4 [&amp;lsquo;Hi!&amp;rsquo;, &amp;lsquo;Hi!&amp;rsquo;, &amp;lsquo;Hi!&amp;rsquo;, &amp;lsquo;Hi!&#39;] 重复   3 in [1, 2, 3] True 元素是否存在于列表中   for x in [1, 2, 3]: print x, 1 2 3 迭代   函数&amp;amp;方法         函数 作用     cmp(list1, list2) 比较两个列表的元素   len(list) 列表元素个数   max(list) 返回列表元素最大值   min(list) 返回列表元素最小值   list(seq) 将元组转换为列表       方法 作用     list.</description>
@@ -51,10 +51,10 @@ thisset = set((&amp;quot;Google&amp;quot;, &amp;quot;Runoob&amp;quot;, &amp;quot
     
     <item>
       <title>python数据结构</title>
-      <link>https://laurel-he.github.io/post/pythonstructure/</link>
+      <link>https://laurel-he.github.io/python/pythonstructure/</link>
       <pubDate>Fri, 15 Mar 2019 09:47:00 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/pythonstructure/</guid>
+      <guid>https://laurel-he.github.io/python/pythonstructure/</guid>
       <description>列表(List) python list
 deque双向队列 python deque
 集合 python set</description>
@@ -62,29 +62,29 @@ deque双向队列 python deque
     
     <item>
       <title>python数据结构之双向队列</title>
-      <link>https://laurel-he.github.io/post/pythondeque/</link>
+      <link>https://laurel-he.github.io/python/pythondeque/</link>
       <pubDate>Fri, 15 Mar 2019 09:47:00 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/pythondeque/</guid>
+      <guid>https://laurel-he.github.io/python/pythondeque/</guid>
       <description>介绍 两端都可以操作的序列 基本操作 创建： import collections d = collections.deque() 往右边添加一个元素： d.append(1) d.append(&amp;lsquo;adc&amp;rsquo;) 往左添加一个元素： d.appendleft(3) 清空队列： d.clear 浅拷贝： d1 = d.copy() 返回指定元素的出现次数： d.count(1) 从队列右边扩展一个列表的元素： d.extend([3,4,5]) 从队列左边扩展一个列表的元素： d.extendleft([3,4,5]) 查找某个元素的索引位置： d.index(&amp;ldquo;c&amp;rdquo;, 0, 2) //指定查找区间 在指定位置插入元素： d.insert(2,&amp;ldquo;z&amp;rdquo;) 删除最右边一个元素（返回删除的元素） d.pop() 删除最左边一个元素（返回删除的元素） d.popleft() 删除指定元素 d.remove(&amp;ldquo;c&amp;rdquo;) 队列翻转 d.reverse() 把右边元素放左边 d.rotate(2) (每个元素向右移动n个，右边元素往左进)
 feature/20190315_auto_reconcile_log http://finance.administration.dev5.tff.com/reconciliation/download?platform=%E9%A9%AC%E8%9C%82%E7%AA%9D&amp;amp;per_page=683&amp;amp;page=1</description>
     </item>
     
     <item>
       <title>补充python基础知识</title>
-      <link>https://laurel-he.github.io/post/python_base/</link>
+      <link>https://laurel-he.github.io/python/python_base/</link>
       <pubDate>Thu, 14 Mar 2019 15:26:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/python_base/</guid>
+      <guid>https://laurel-he.github.io/python/python_base/</guid>
       <description>##python运算符 幂 返回x的y次幂 10**20 取整除 //:返回商的整数部分，向下取整</description>
     </item>
     
     <item>
       <title>python debugger</title>
-      <link>https://laurel-he.github.io/post/python_debugger/</link>
+      <link>https://laurel-he.github.io/python/python_debugger/</link>
       <pubDate>Thu, 14 Mar 2019 11:48:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/python_debugger/</guid>
+      <guid>https://laurel-he.github.io/python/python_debugger/</guid>
       <description>##准备 来源 http://python.jobbole.com/81184/ 初始代码
 import sys def add(num1=0, num2=0): return int(num1) + int(num2) def sub(num1=0, num2=0): return int(num1) - int(num2) def main(): #Assuming our inputs are valid numbers print sys.argv addition = add(sys.argv[1], sys.argv[2]) print addition subtraction = sub(sys.argv[1], sys.argv[2]) print subtraction if __name__ == &#39;__main__&#39;: main() 基础用法 import pdb pdb.set_trace() //设置断点 在程序中添加断点
 import pdb import sys def add(num1=0, num2=0): return int(num1) + int(num2) def sub(num1=0, num2=0): return int(num1) - int(num2) def main(): #Assuming our inputs are valid numbers print sys.</description>
@@ -92,10 +92,10 @@ import pdb import sys def add(num1=0, num2=0): return int(num1) + int(num2) def 
     
     <item>
       <title>python进阶</title>
-      <link>https://laurel-he.github.io/post/python/</link>
+      <link>https://laurel-he.github.io/python/python/</link>
       <pubDate>Thu, 14 Mar 2019 10:36:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/python/</guid>
+      <guid>https://laurel-he.github.io/python/python/</guid>
       <description>*args和**kwargs *args *args和**kwargs主要用于函数定义，可以将不定数量的参数传递给一个函数 举例 输入：
 def test_var_args(f_arg, *argv): print(&amp;quot;first normal arg:&amp;quot;, f_arg) for arg in argv: print(&amp;quot;another arg through *argv:&amp;quot;, arg) test_var_args(&#39;yasoob&#39;, &#39;python&#39;, &#39;eggs&#39;, &#39;test&#39;) 输出：
 first normal arg: yasoob another arg through *argv: python another arg through *argv: eggs another arg through *argv: test *kwargs *kwargs允许将不定长度的键值对作为参数传递给一个函数，如果想在一个函数里处理带名字的参数，应该使用**kwargs 使用示例如下：
