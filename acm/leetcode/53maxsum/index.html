@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>53. 最大子序和</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.87.0" />
+  <link href="" rel="alternate" type="application/rss+xml" title="" />
+  <link href="https://laurel-he.github.io//css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://laurel-he.github.io//css/hc.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  
+    
+    </head>
+    <body>
+<div class="nav-toggle"><i class="fa fa-bars fa-2x"></i> Herring Cove </div>
+      <div id = "wrapper">
+
+
+<div class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="https://laurel-he.github.io//"><p class="navbar-brand"></p></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+					
+					
+					<li><a href="https://laurel-he.github.io//python/">Python </a></li>
+					
+					<li><a href="https://laurel-he.github.io//post/">主页 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//categories/">分类 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//acm/">刷题 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//learn/">学习 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//database/">数据库 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//datastruct/">数据结构 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//tags/">标签 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//designpattern/">设计模式 </a></li>
+					
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+       
+       <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+					<img src="/images/avatar.jpg" />
+          <li class="sidebar-brand"><a href="https://laurel-he.github.io//"><h1 class="brand"></h1></a><h3></h3></li>
+          <hr />
+					
+						<li><a href="https://laurel-he.github.io//python/">Python </a></li>
+					
+						<li><a href="https://laurel-he.github.io//post/">主页 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//categories/">分类 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//acm/">刷题 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//learn/">学习 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//database/">数据库 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//datastruct/">数据结构 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//tags/">标签 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//designpattern/">设计模式 </a></li>
+					
+          <hr />
+          <div id="social-wrapper">
+           
+           
+           
+           
+         </div>
+       </ul>
+     </div>
+
+
+
+     <div class="container">
+
+
+  <div id="article">
+   <div class="article-title">53. 最大子序和</div>
+   <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> 2021-08-31</small></p> <hr/>
+   <div class="post">
+     <p>题目链接：<a href="https://leetcode-cn.com/problems/maximum-subarray/">53. 最大子序和</a></p>
+<h2 id="题目描述">题目描述</h2>
+<p>给定一个整数数组 nums，找到一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。</p>
+<p>示例 1：</p>
+<p>输入：nums = [-2,1,-3,4,-1,2,1,-5,4]
+输出：6c
+解释：连续子数组[4,-1,2,1] 的和最大，为6 。
+示例 2：</p>
+<p>输入：nums = [1]
+输出：1
+示例 3：</p>
+<p>输入：nums = [0]
+输出：0
+示例 4：</p>
+<p>输入：nums = [-1]
+输出：-1
+示例 5：</p>
+<p>输入：nums = [-100000]
+输出：-100000</p>
+<p>提示：</p>
+<p>1 &lt;= nums.length &lt;= 3 * 104
+-105 &lt;= nums[i] &lt;= 105</p>
+<p>进阶：如果你已经实现复杂度为 O(n) 的解法，尝试使用更为精妙的 分治法 求解。</p>
+<h2 id="自行解法">自行解法</h2>
+<p>一开始并没有想到合适的解法，于是想到最暴力的方式，获取所有子序和并比较</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
+
+    <span style="color:#e6db74">/**
+</span><span style="color:#e6db74">     * 出所有的子序和之后进行比较
+</span><span style="color:#e6db74">     * @param Integer[] $nums
+</span><span style="color:#e6db74">     * @return Integer
+</span><span style="color:#e6db74">     */</span>
+    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">maxSubArray</span>($nums) {
+        $maxForI <span style="color:#f92672">=</span> [];
+        <span style="color:#66d9ef">for</span> ($i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; $i <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">count</span>($nums); $i<span style="color:#f92672">++</span>) {
+            $sumForI <span style="color:#f92672">=</span> $nums[$i];
+            $maxForJ <span style="color:#f92672">=</span> [];
+            $max <span style="color:#f92672">=</span> <span style="color:#a6e22e">max</span>($nums);
+            <span style="color:#66d9ef">for</span> ($j <span style="color:#f92672">=</span> $i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>; $j <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">count</span>($nums); $j<span style="color:#f92672">++</span>) {
+                <span style="color:#66d9ef">if</span> ($i <span style="color:#f92672">==</span> $j) {
+                    $sumForI <span style="color:#f92672">=</span> $nums[$i];
+                } <span style="color:#66d9ef">else</span> {
+                    $sumForI <span style="color:#f92672">+=</span> $nums[$j];
+                }
+                <span style="color:#a6e22e">var_dump</span>([$maxNum, $sumForI]);
+                $maxForJ[] <span style="color:#f92672">=</span> <span style="color:#a6e22e">max</span>($maxNum, $sumForI, $max);
+                $maxNum <span style="color:#f92672">=</span> $sumForI;
+            }
+            <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">count</span>($nums) <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>) {
+                $maxForJ <span style="color:#f92672">=</span> $nums;
+            }
+            $maxForI[$i] <span style="color:#f92672">=</span> <span style="color:#a6e22e">max</span>($maxForJ);
+        }
+        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">max</span>($maxForI);
+    }
+}
+</code></pre></div><p>这种方式可以通过绝大部分测试用例，但是当$nums增加到一定数量级后会超时</p>
+<h2 id="其他解法">其他解法</h2>
+<p>经过查阅资料，发现这里会有更好的解法</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
+
+    <span style="color:#e6db74">/**
+</span><span style="color:#e6db74">     * @param Integer[] $nums
+</span><span style="color:#e6db74">     * @return Integer
+</span><span style="color:#e6db74">     */</span>
+    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">maxSubArray</span>($nums) {
+        $res <span style="color:#f92672">=</span> $nums[<span style="color:#ae81ff">0</span>];
+        $sum <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+        <span style="color:#66d9ef">foreach</span> ($nums <span style="color:#66d9ef">as</span> $num) {
+            <span style="color:#66d9ef">if</span> ($sum <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>) {
+                $sum <span style="color:#f92672">+=</span> $num;
+            } <span style="color:#66d9ef">else</span> {
+                $sum <span style="color:#f92672">=</span> $num;
+            }
+            $res <span style="color:#f92672">=</span> <span style="color:#a6e22e">max</span>($res, $sum);           
+        }
+        <span style="color:#66d9ef">return</span> $res;
+    }
+}
+</code></pre></div>
+   </div>
+ </div>
+
+
+ <a href="https://github.com/laurel-he" class="twitter-share-button " data-size="small" data-count="none">Git hub</a>
+ <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+ <ul class="pager">
+      &nbsp;<li class="previous"><a href="https://laurel-he.github.io/acm/leetcode/217repeat/"> 217. 存在重复元素</a></li>
+     
+</ul>
+
+
+
+    </ul>
+    </div>
+    <footer>
+
+        <p class="text-muted credit">&copy; 2021. All rights reserved. </p>
+    </footer>
+ 
+    <script src="https://laurel-he.github.io//js/jquery-1.10.2.min.js"></script>
+    <script src="https://laurel-he.github.io//js/bootstrap.min.js"></script>
+    <script src="https://laurel-he.github.io//js/bootstrap.js"></script>
+    <script type="text/javascript" src="https://laurel-he.github.io//js/hc.js"></script>
+</body>
+
+</html>
+

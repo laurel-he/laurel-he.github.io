@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Leetcode刷题 on </title>
-    <link>https://laurel-he.github.io/categories/leetcode%E5%88%B7%E9%A2%98/</link>
-    <description>Recent content in Leetcode刷题 on </description>
+    <title>Acms on </title>
+    <link>https://laurel-he.github.io/acm/</link>
+    <description>Recent content in Acms on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 31 Aug 2021 17:10:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/leetcode%E5%88%B7%E9%A2%98/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 31 Aug 2021 17:10:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/acm/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>53. 最大子序和</title>
       <link>https://laurel-he.github.io/acm/leetcode/53maxsum/</link>
@@ -42,16 +42,6 @@ class Solution { /** * 出所有的子序和之后进行比较 * @param Integer[
 输入: [1,1,1,3,3,4,3,2,4,2] 输出: true
 自行解法 直接循环，判断每个元素和剩余的其他元素是否重复，不重复则去除这个元素，继续比较
 class Solution { /** * @param Integer[] $nums * @return Boolean */ function containsDuplicate($nums) { $dataCheck = $nums; for ($i = 0; $i &amp;lt; count($nums); $i++) { $check = $nums[$i]; unset($dataCheck[$i]); if (in_array($check, $dataCheck)) { return true; } } return false; } } 其他优质解法 先去重，判断去重后的长度是否比之前的长度短，是则说明有重复</description>
-    </item>
-    
-    <item>
-      <title>Leetcode刷题</title>
-      <link>https://laurel-he.github.io/post/2019-03-07/</link>
-      <pubDate>Fri, 26 Jul 2019 16:10:10 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/post/2019-03-07/</guid>
-      <description>1 两数之和 描述 给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。 你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。 示例
-给定 nums = [2, 7, 11, 15], target = 9 因为 nums[0] + nums[1] = 2 + 7 = 9 所以返回 [0, 1] `</description>
     </item>
     
   </channel>
