@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>217.存在重复元素</title>
+  <title>350. 两个数组的交集 II</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.87.0" />
@@ -99,72 +99,70 @@
 
 
   <div id="article">
-   <div class="article-title">217.存在重复元素</div>
-   <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> 2021-08-31</small></p> <hr/>
+   <div class="article-title">350. 两个数组的交集 II</div>
+   <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> 2021-09-02</small></p> <hr/>
    <div class="post">
-     <p>题目链接：<a href="https://leetcode-cn.com/problems/contains-duplicate/">217.存在重复元素</a></p>
+     <p>题目链接<a href="https://leetcode-cn.com/problems/intersection-of-two-arrays-ii/">350. 两个数组的交集 II</a></p>
 <h2 id="题目描述">题目描述</h2>
-<p><strong>难度</strong>
-简单
-<strong>描述</strong>
-给定一个整数数组，判断是否存在重复元素。</p>
-<p>如果存在一值在数组中出现至少两次，函数返回 true 。如果数组中每个元素都不相同，则返回 false 。</p>
-<p><strong>示例 1:</strong>
-输入: [1,2,3,1]
-输出: true</p>
+<h3 id="难度">难度</h3>
+<p>简单</p>
+<h3 id="描述">描述</h3>
+<p>给定两个数组，编写一个函数来计算它们的交集。</p>
+<p><strong>示例 1：</strong>
+输入：nums1 = [1,2,2,1], nums2 = [2,2]
+输出：[2,2]</p>
 <p><strong>示例 2:</strong>
-输入: [1,2,3,4]
-输出: false</p>
-<p><strong>示例3:</strong>
-输入: [1,1,1,3,3,4,3,2,4,2]
-输出: true</p>
+输入：nums1 = [4,9,5], nums2 = [9,4,9,8,4]
+输出：[4,9]</p>
+<p><strong>说明：</strong>
+输出结果中每个元素出现的次数，应与元素在两个数组中出现次数的最小值一致。
+我们可以不考虑输出结果的顺序。</p>
+<p><strong>进阶：</strong>
+如果给定的数组已经排好序呢？你将如何优化你的算法？
+如果nums1的大小比nums2小很多，哪种方法更优？
+如果nums2的元素存储在磁盘上，内存是有限的，并且你不能一次加载所有的元素到内存中，你该怎么办？</p>
 <h2 id="自行解法">自行解法</h2>
-<p>直接循环，判断每个元素和剩余的其他元素是否重复，不重复则去除这个元素，继续比较</p>
+<h3 id="思路">思路</h3>
+<p>这里需要获取两个数组的交集，php有一个函数（array_intersect）可以获取两个数组的交集，但是和要求不符合。
+当某个元素在数组a中存在，且在数组b中存在不止一次，array_intersect获得的交集不正确。 <br>
+因此分析，可以直接循环较短的数组，和另一个较长的数组比较，当获得了一个交集元素的时候，就删除被比较的元素，代码如下：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
-
-    <span style="color:#e6db74">/**
-</span><span style="color:#e6db74">     * @param Integer[] $nums
-</span><span style="color:#e6db74">     * @return Boolean
-</span><span style="color:#e6db74">     */</span>
-    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">containsDuplicate</span>($nums) {
-        $dataCheck <span style="color:#f92672">=</span> $nums;
-        <span style="color:#66d9ef">for</span> ($i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; $i <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">count</span>($nums); $i<span style="color:#f92672">++</span>) {
-            $check <span style="color:#f92672">=</span> $nums[$i];
-            <span style="color:#a6e22e">unset</span>($dataCheck[$i]);
-            <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">in_array</span>($check, $dataCheck)) {
-                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">delOneFromArr</span>($val, $delArr)
+    {
+        <span style="color:#e6db74">/**
+</span><span style="color:#e6db74">        删除数组中一个值为$val的数据
+</span><span style="color:#e6db74">         */</span>
+        <span style="color:#66d9ef">foreach</span>($delArr <span style="color:#66d9ef">as</span> $key <span style="color:#f92672">=&gt;</span> $arr) {
+            <span style="color:#66d9ef">if</span> ($arr <span style="color:#f92672">==</span> $val) {
+                <span style="color:#a6e22e">unset</span>($delArr[$key]);
+                <span style="color:#66d9ef">break</span>;
             }
         }
-        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+        <span style="color:#66d9ef">return</span> $delArr;
     }
+    <span style="color:#e6db74">/**
+</span><span style="color:#e6db74">     * @param Integer[] $nums1
+</span><span style="color:#e6db74">     * @param Integer[] $nums2
+</span><span style="color:#e6db74">     * @return Integer[]
+</span><span style="color:#e6db74">     */</span>
+    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">intersect</span>($nums1, $nums2) {
+        <span style="color:#e6db74">/**
+</span><span style="color:#e6db74">        循环较短的数组，挨个判断
+</span><span style="color:#e6db74">         */</span>
+         <span style="color:#66d9ef">list</span>($checkArr, $otherArr) <span style="color:#f92672">=</span> <span style="color:#a6e22e">count</span>($nums1) <span style="color:#f92672">&gt;=</span> <span style="color:#a6e22e">count</span>($nums2) <span style="color:#f92672">?</span> [$nums2, $nums1] <span style="color:#f92672">:</span> [$nums1, $nums2];
+         $ret <span style="color:#f92672">=</span> [];
+         <span style="color:#66d9ef">foreach</span> ($checkArr <span style="color:#66d9ef">as</span> $check) {
+            <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">in_array</span>($check, $otherArr)) {
+                $otherArr <span style="color:#f92672">=</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">delOneFromArr</span>($check, $otherArr);
+                $ret[] <span style="color:#f92672">=</span> $check;
+            }
+         }
+         <span style="color:#66d9ef">return</span> $ret;
+    }
+
 }
 </code></pre></div><h2 id="其他优质解法">其他优质解法</h2>
-<p>先去重，判断去重后的长度是否比之前的长度短，是则说明有重复</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
 
-    <span style="color:#e6db74">/**
-</span><span style="color:#e6db74">     * @param Integer[] $nums
-</span><span style="color:#e6db74">     * @return Boolean
-</span><span style="color:#e6db74">     */</span>
-    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">containsDuplicate</span>($nums) {
-        $unique <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_unique</span>($nums);
-        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">count</span>($nums) <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">count</span>($unique)) {
-            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
-        }
-        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
-    }
-}
-</code></pre></div><p>这个解法还可以精简为一行代码：</p>
-<pre><code>class Solution {
-    /**
-     * @param Integer[] $nums
-     * @return Boolean
-     */
-    function containsDuplicate($nums) {
-        return count($nums) != count(array_unique($nums));
-    }
-}
-</code></pre>
    </div>
  </div>
 
@@ -173,8 +171,8 @@
  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
  <ul class="pager">
-      &nbsp;<li class="previous"><a href="https://laurel-he.github.io/go/basic/"> go基础</a></li>
-      &nbsp;<li class="next"><a href="https://laurel-he.github.io/acm/leetcode/121buyshares/"> 122. 买卖股票的最佳时机</a></li>
+      &nbsp;<li class="previous"><a href="https://laurel-he.github.io/datastruct/btree/"> b树</a></li>
+     
 </ul>
 
 

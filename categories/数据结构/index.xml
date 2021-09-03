@@ -5,7 +5,30 @@
     <link>https://laurel-he.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
     <description>Recent content in 数据结构 on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 20 Jul 2021 16:34:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Sep 2021 18:27:44 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>b树</title>
+      <link>https://laurel-he.github.io/datastruct/btree/</link>
+      <pubDate>Wed, 01 Sep 2021 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/datastruct/btree/</guid>
+      <description>平衡二叉树 概念 平衡二叉树是基于二分法的策略提高数据的查找速度的二叉树的数据结构；
+特点 平衡二叉树是采用二分法思维把数据按规则组装成一个树形结构的数据，用这个树形结构的数据减少无关数据的检索，大大的提升了数据检索的速度；平衡二叉树的数据结构组装过程有以下规则：
+（1）非叶子节点只能允许最多两个子节点存在。
+（2）每一个非叶子节点数据分布规则为左边的子节点小当前节点的值，右边的子节点大于当前节点的值(这里值是基于自己的算法规则而定的，比如hash值)；
+平衡树的层级结构 因为平衡二叉树查询性能和树的层级（h高度）成反比，h值越小查询越快、 为了保证树的结构左右两端数据大致平衡降低二叉树的查询难度一般会采用一种算法机制实现节点数据结构的平衡， 实现了这种算法的有比如Treap、红黑树，使用平衡二叉树能保证数据的左右两边的节点层级相差不会大于1.， 通过这样避免树形结构由于删除增加变成线性链表影响查询效率，保证数据平衡的情况下查找数据的速度近于二分法查找；
+平衡二叉树特点 （1）非叶子节点最多拥有两个子节点；
+（2）非叶子节值大于左边子节点、小于右边子节点；
+（3）树的左右两边的层级数相差不会大于1;
+（4）没有值相等重复的节点;
+B树 概念 B树和平衡二叉树稍有不同的是B树属于多叉树又名平衡多路查找树（查找路径不只两个）， 数据库索引技术里大量使用者B树和B+树的数据结构
+规则 （1）排序方式：所有节点关键字是按递增次序排列，并遵循左小右大原则；
+（2）子节点数：非叶节点的子节点数&amp;gt;1，且&amp;lt;=M ，且M&amp;gt;=2，空树除外（注：M阶代表一个树节点最多有多少个查找路径，M=M路,当M=2则是2叉树,M=3则是3叉）；
+（3）关键字数：枝节点的关键字数量大于等于ceil(m/2)-1个且小于等于M-1个（注：ceil()是个朝正无穷方向取整的函数 如ceil(1.1)结果为2);
+（4）所有叶子节点均在同一层、叶子节点除了包含了关键字和关键字记录的指针外也有指向其子节点的指针只不过其指针地址都为null对应下图最后一层节点的空格子;
+ </description>
+    </item>
+    
     <item>
       <title>数据结构学习笔记-1</title>
       <link>https://laurel-he.github.io/datastruct/datastruct_01/</link>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>217.存在重复元素</title>
+  <title>b树</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.87.0" />
@@ -99,72 +99,37 @@
 
 
   <div id="article">
-   <div class="article-title">217.存在重复元素</div>
-   <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> 2021-08-31</small></p> <hr/>
+   <div class="article-title">b树</div>
+   <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> 2021-09-01</small></p> <hr/>
    <div class="post">
-     <p>题目链接：<a href="https://leetcode-cn.com/problems/contains-duplicate/">217.存在重复元素</a></p>
-<h2 id="题目描述">题目描述</h2>
-<p><strong>难度</strong>
-简单
-<strong>描述</strong>
-给定一个整数数组，判断是否存在重复元素。</p>
-<p>如果存在一值在数组中出现至少两次，函数返回 true 。如果数组中每个元素都不相同，则返回 false 。</p>
-<p><strong>示例 1:</strong>
-输入: [1,2,3,1]
-输出: true</p>
-<p><strong>示例 2:</strong>
-输入: [1,2,3,4]
-输出: false</p>
-<p><strong>示例3:</strong>
-输入: [1,1,1,3,3,4,3,2,4,2]
-输出: true</p>
-<h2 id="自行解法">自行解法</h2>
-<p>直接循环，判断每个元素和剩余的其他元素是否重复，不重复则去除这个元素，继续比较</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
+     <h1 id="平衡二叉树">平衡二叉树</h1>
+<h2 id="概念">概念</h2>
+<p>平衡二叉树是基于二分法的策略提高数据的查找速度的二叉树的数据结构；</p>
+<h2 id="特点">特点</h2>
+<p>平衡二叉树是采用二分法思维把数据按规则组装成一个树形结构的数据，用这个树形结构的数据减少无关数据的检索，大大的提升了数据检索的速度；平衡二叉树的数据结构组装过程有以下规则：</p>
+<p>（1）非叶子节点只能允许最多两个子节点存在。</p>
+<p>（2）每一个非叶子节点数据分布规则为左边的子节点小当前节点的值，右边的子节点大于当前节点的值(这里值是基于自己的算法规则而定的，比如hash值)；</p>
+<h2 id="平衡树的层级结构">平衡树的层级结构</h2>
+<p>因为平衡二叉树查询性能和树的层级（h高度）成反比，h值越小查询越快、
+为了保证树的结构左右两端数据大致平衡降低二叉树的查询难度一般会采用一种算法机制实现节点数据结构的平衡，
+实现了这种算法的有比如Treap、红黑树，使用平衡二叉树能保证数据的左右两边的节点层级相差不会大于1.，
+通过这样避免树形结构由于删除增加变成线性链表影响查询效率，保证数据平衡的情况下查找数据的速度近于二分法查找；</p>
+<h2 id="平衡二叉树特点">平衡二叉树特点</h2>
+<p>（1）非叶子节点最多拥有两个子节点；</p>
+<p>（2）非叶子节值大于左边子节点、小于右边子节点；</p>
+<p>（3）树的左右两边的层级数相差不会大于1;</p>
+<p>（4）没有值相等重复的节点;</p>
+<h1 id="b树">B树</h1>
+<h2 id="概念-1">概念</h2>
+<p>B树和平衡二叉树稍有不同的是B树属于多叉树又名平衡多路查找树（查找路径不只两个），
+数据库索引技术里大量使用者B树和B+树的数据结构</p>
+<h2 id="规则">规则</h2>
+<p>（1）排序方式：所有节点关键字是按递增次序排列，并遵循左小右大原则；</p>
+<p>（2）子节点数：非叶节点的子节点数&gt;1，且&lt;=M ，且M&gt;=2，空树除外（注：M阶代表一个树节点最多有多少个查找路径，M=M路,当M=2则是2叉树,M=3则是3叉）；</p>
+<p>（3）关键字数：枝节点的关键字数量大于等于ceil(m/2)-1个且小于等于M-1个（注：ceil()是个朝正无穷方向取整的函数 如ceil(1.1)结果为2);</p>
+<p>（4）所有叶子节点均在同一层、叶子节点除了包含了关键字和关键字记录的指针外也有指向其子节点的指针只不过其指针地址都为null对应下图最后一层节点的空格子;</p>
+<h2 id="heading"></h2>
 
-    <span style="color:#e6db74">/**
-</span><span style="color:#e6db74">     * @param Integer[] $nums
-</span><span style="color:#e6db74">     * @return Boolean
-</span><span style="color:#e6db74">     */</span>
-    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">containsDuplicate</span>($nums) {
-        $dataCheck <span style="color:#f92672">=</span> $nums;
-        <span style="color:#66d9ef">for</span> ($i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; $i <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">count</span>($nums); $i<span style="color:#f92672">++</span>) {
-            $check <span style="color:#f92672">=</span> $nums[$i];
-            <span style="color:#a6e22e">unset</span>($dataCheck[$i]);
-            <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">in_array</span>($check, $dataCheck)) {
-                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
-            }
-        }
-        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
-    }
-}
-</code></pre></div><h2 id="其他优质解法">其他优质解法</h2>
-<p>先去重，判断去重后的长度是否比之前的长度短，是则说明有重复</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
-
-    <span style="color:#e6db74">/**
-</span><span style="color:#e6db74">     * @param Integer[] $nums
-</span><span style="color:#e6db74">     * @return Boolean
-</span><span style="color:#e6db74">     */</span>
-    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">containsDuplicate</span>($nums) {
-        $unique <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_unique</span>($nums);
-        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">count</span>($nums) <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">count</span>($unique)) {
-            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
-        }
-        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
-    }
-}
-</code></pre></div><p>这个解法还可以精简为一行代码：</p>
-<pre><code>class Solution {
-    /**
-     * @param Integer[] $nums
-     * @return Boolean
-     */
-    function containsDuplicate($nums) {
-        return count($nums) != count(array_unique($nums));
-    }
-}
-</code></pre>
    </div>
  </div>
 
@@ -173,8 +138,8 @@
  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
  <ul class="pager">
-      &nbsp;<li class="previous"><a href="https://laurel-he.github.io/go/basic/"> go基础</a></li>
-      &nbsp;<li class="next"><a href="https://laurel-he.github.io/acm/leetcode/121buyshares/"> 122. 买卖股票的最佳时机</a></li>
+      &nbsp;<li class="previous"><a href="https://laurel-he.github.io/acm/leetcode/88arraymerge/"> 88.合并两个有序数组</a></li>
+      &nbsp;<li class="next"><a href="https://laurel-he.github.io/acm/leetcode/350arrat/"> 350. 两个数组的交集 II</a></li>
 </ul>
 
 

@@ -5,41 +5,124 @@
     <link>https://laurel-he.github.io/</link>
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 31 Aug 2021 17:10:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 02 Sep 2021 16:10:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>53. 最大子序和</title>
+      <title>350. 两个数组的交集 II</title>
+      <link>https://laurel-he.github.io/acm/leetcode/350arrat/</link>
+      <pubDate>Thu, 02 Sep 2021 16:10:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/acm/leetcode/350arrat/</guid>
+      <description>题目链接350. 两个数组的交集 II
+题目描述 难度 简单
+描述 给定两个数组，编写一个函数来计算它们的交集。
+示例 1： 输入：nums1 = [1,2,2,1], nums2 = [2,2] 输出：[2,2]
+示例 2: 输入：nums1 = [4,9,5], nums2 = [9,4,9,8,4] 输出：[4,9]
+说明： 输出结果中每个元素出现的次数，应与元素在两个数组中出现次数的最小值一致。 我们可以不考虑输出结果的顺序。
+进阶： 如果给定的数组已经排好序呢？你将如何优化你的算法？ 如果nums1的大小比nums2小很多，哪种方法更优？ 如果nums2的元素存储在磁盘上，内存是有限的，并且你不能一次加载所有的元素到内存中，你该怎么办？
+自行解法 思路 这里需要获取两个数组的交集，php有一个函数（array_intersect）可以获取两个数组的交集，但是和要求不符合。 当某个元素在数组a中存在，且在数组b中存在不止一次，array_intersect获得的交集不正确。 因此分析，可以直接循环较短的数组，和另一个较长的数组比较，当获得了一个交集元素的时候，就删除被比较的元素，代码如下：
+class Solution { function delOneFromArr($val, $delArr) { /** 删除数组中一个值为$val的数据 */ foreach($delArr as $key =&amp;gt; $arr) { if ($arr == $val) { unset($delArr[$key]); break; } } return $delArr; } /** * @param Integer[] $nums1 * @param Integer[] $nums2 * @return Integer[] */ function intersect($nums1, $nums2) { /** 循环较短的数组，挨个判断 */ list($checkArr, $otherArr) = count($nums1) &amp;gt;= count($nums2) ?</description>
+    </item>
+    
+    <item>
+      <title>b树</title>
+      <link>https://laurel-he.github.io/datastruct/btree/</link>
+      <pubDate>Wed, 01 Sep 2021 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/datastruct/btree/</guid>
+      <description>平衡二叉树 概念 平衡二叉树是基于二分法的策略提高数据的查找速度的二叉树的数据结构；
+特点 平衡二叉树是采用二分法思维把数据按规则组装成一个树形结构的数据，用这个树形结构的数据减少无关数据的检索，大大的提升了数据检索的速度；平衡二叉树的数据结构组装过程有以下规则：
+（1）非叶子节点只能允许最多两个子节点存在。
+（2）每一个非叶子节点数据分布规则为左边的子节点小当前节点的值，右边的子节点大于当前节点的值(这里值是基于自己的算法规则而定的，比如hash值)；
+平衡树的层级结构 因为平衡二叉树查询性能和树的层级（h高度）成反比，h值越小查询越快、 为了保证树的结构左右两端数据大致平衡降低二叉树的查询难度一般会采用一种算法机制实现节点数据结构的平衡， 实现了这种算法的有比如Treap、红黑树，使用平衡二叉树能保证数据的左右两边的节点层级相差不会大于1.， 通过这样避免树形结构由于删除增加变成线性链表影响查询效率，保证数据平衡的情况下查找数据的速度近于二分法查找；
+平衡二叉树特点 （1）非叶子节点最多拥有两个子节点；
+（2）非叶子节值大于左边子节点、小于右边子节点；
+（3）树的左右两边的层级数相差不会大于1;
+（4）没有值相等重复的节点;
+B树 概念 B树和平衡二叉树稍有不同的是B树属于多叉树又名平衡多路查找树（查找路径不只两个）， 数据库索引技术里大量使用者B树和B+树的数据结构
+规则 （1）排序方式：所有节点关键字是按递增次序排列，并遵循左小右大原则；
+（2）子节点数：非叶节点的子节点数&amp;gt;1，且&amp;lt;=M ，且M&amp;gt;=2，空树除外（注：M阶代表一个树节点最多有多少个查找路径，M=M路,当M=2则是2叉树,M=3则是3叉）；
+（3）关键字数：枝节点的关键字数量大于等于ceil(m/2)-1个且小于等于M-1个（注：ceil()是个朝正无穷方向取整的函数 如ceil(1.1)结果为2);
+（4）所有叶子节点均在同一层、叶子节点除了包含了关键字和关键字记录的指针外也有指向其子节点的指针只不过其指针地址都为null对应下图最后一层节点的空格子;
+ </description>
+    </item>
+    
+    <item>
+      <title>88.合并两个有序数组</title>
+      <link>https://laurel-he.github.io/acm/leetcode/88arraymerge/</link>
+      <pubDate>Wed, 01 Sep 2021 18:10:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/acm/leetcode/88arraymerge/</guid>
+      <description>题目来源：88.合并两个有序数组
+描述 给你两个按 非递减顺序 排列的整数数组nums1 和 nums2，另有两个整数 m 和 n ，分别表示 nums1 和 nums2 中的元素数目。
+请你 合并 nums2 到 nums1 中，使合并后的数组同样按 非递减顺序 排列。
+注意：最终，合并后数组不应由函数返回，而是存储在数组 nums1 中。为了应对这种情况，nums1 的初始长度为 m + n，其中前 m 个元素表示应合并的元素，后 n 个元素为 0 ，应忽略。nums2 的长度为 n 。
+示例 1： 输入：nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3 输出：[1,2,2,3,5,6] 解释：需要合并 [1,2,3] 和 [2,5,6] 。 合并结果是 [1,2,2,3,5,6] ，其中斜体加粗标注的为 nums1 中的元素。
+示例 2： 输入：nums1 = [1], m = 1, nums2 = [], n = 0 输出：[1] 解释：需要合并 [1] 和 [] 。 合并结果是 [1] 。</description>
+    </item>
+    
+    <item>
+      <title>1.两数之和</title>
+      <link>https://laurel-he.github.io/acm/leetcode/1towsum/</link>
+      <pubDate>Wed, 01 Sep 2021 12:10:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/acm/leetcode/1towsum/</guid>
+      <description>题目链接：1.两数之和
+题目描述 难度 简单 描述 给定一个整数数组 nums和一个整数目标值 target，请你在该数组中找出 和为目标值 target的那两个整数，并返回它们的数组下标。
+你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。
+你可以按任意顺序返回答案。
+示例 1： 输入：nums = [2,7,11,15], target = 9 输出：[0,1] 解释：因为 nums[0] + nums[1] == 9 ，返回 [0, 1] 。
+示例 2： 输入：nums = [3,2,4], target = 6 输出：[1,2]
+示例 3： 输入：nums = [3,3], target = 6 输出：[0,1]
+提示：
+2 &amp;lt;= nums.length &amp;lt;= 104 -109 &amp;lt;= nums[i] &amp;lt;= 109 -109 &amp;lt;= target &amp;lt;= 109 只会存在一个有效答案 进阶： 你可以想出一个时间复杂度小于 O(n2) 的算法吗？</description>
+    </item>
+    
+    <item>
+      <title>53.最大子序和</title>
       <link>https://laurel-he.github.io/acm/leetcode/53maxsum/</link>
       <pubDate>Tue, 31 Aug 2021 17:10:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/acm/leetcode/53maxsum/</guid>
-      <description>题目链接：53. 最大子序和
-题目描述 给定一个整数数组 nums，找到一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。
-示例 1：
-输入：nums = [-2,1,-3,4,-1,2,1,-5,4] 输出：6c 解释：连续子数组[4,-1,2,1] 的和最大，为6 。 示例 2：
-输入：nums = [1] 输出：1 示例 3：
-输入：nums = [0] 输出：0 示例 4：
-输入：nums = [-1] 输出：-1 示例 5：
-输入：nums = [-100000] 输出：-100000
-提示：
-1 &amp;lt;= nums.length &amp;lt;= 3 * 104 -105 &amp;lt;= nums[i] &amp;lt;= 105
+      <description>题目链接：53.最大子序和
+题目描述 难度 简单 描述 给定一个整数数组 nums，找到一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。
+示例 1： 输入：nums = [-2,1,-3,4,-1,2,1,-5,4] 输出：6 解释：连续子数组[4,-1,2,1] 的和最大，为6 。
+示例 2： 输入：nums = [1] 输出：1
+示例 3： 输入：nums = [0] 输出：0
+示例 4： 输入：nums = [-1] 输出：-1
+示例 5： 输入：nums = [-100000] 输出：-100000
+提示： 1 &amp;lt;= nums.length &amp;lt;= 3 * 104 -105 &amp;lt;= nums[i] &amp;lt;= 105
 进阶：如果你已经实现复杂度为 O(n) 的解法，尝试使用更为精妙的 分治法 求解。
 自行解法 一开始并没有想到合适的解法，于是想到最暴力的方式，获取所有子序和并比较
-class Solution { /** * 出所有的子序和之后进行比较 * @param Integer[] $nums * @return Integer */ function maxSubArray($nums) { $maxForI = []; for ($i = 0; $i &amp;lt; count($nums); $i++) { $sumForI = $nums[$i]; $maxForJ = []; $max = max($nums); for ($j = $i + 1; $j &amp;lt; count($nums); $j++) { if ($i == $j) { $sumForI = $nums[$i]; } else { $sumForI += $nums[$j]; } var_dump([$maxNum, $sumForI]); $maxForJ[] = max($maxNum, $sumForI, $max); $maxNum = $sumForI; } if (count($nums) == 1) { $maxForJ = $nums; } $maxForI[$i] = max($maxForJ); } return max($maxForI); } } 这种方式可以通过绝大部分测试用例，但是当$nums增加到一定数量级后会超时</description>
+class Solution { /** * 出所有的子序和之后进行比较 * @param Integer[] $nums * @return Integer */ function maxSubArray($nums) { $maxForI = []; for ($i = 0; $i &amp;lt; count($nums); $i++) { $sumForI = $nums[$i]; $maxForJ = []; $max = max($nums); for ($j = $i + 1; $j &amp;lt; count($nums); $j++) { if ($i == $j) { $sumForI = $nums[$i]; } else { $sumForI += $nums[$j]; } $maxForJ[] = max($maxNum, $sumForI, $max); $maxNum = $sumForI; } if (count($nums) == 1) { $maxForJ = $nums; } $maxForI[$i] = max($maxForJ); } return max($maxForI); } } 这种方式可以通过绝大部分测试用例，但是当$nums增加到一定数量级后会超时</description>
     </item>
     
     <item>
-      <title>217. 存在重复元素</title>
+      <title>122. 买卖股票的最佳时机</title>
+      <link>https://laurel-he.github.io/acm/leetcode/121buyshares/</link>
+      <pubDate>Tue, 31 Aug 2021 16:10:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/acm/leetcode/121buyshares/</guid>
+      <description>题目链接：122. 买卖股票的最佳时机
+题目描述 难度 简单 描述 给定一个数组 prices ，它的第i 个元素prices[i] 表示一支给定股票第 i 天的价格。 你只能选择 某一天 买入这只股票，并选择在 未来的某一个不同的日子 卖出该股票。设计一个算法来计算你所能获取的最大利润。 返回你可以从这笔交易中获取的最大利润。如果你不能获取任何利润，返回 0 。
+示例 1： 输入：[7,1,5,3,6,4] 输出：5 解释：在第 2 天（股票价格 = 1）的时候买入，在第 5 天（股票价格 = 6）的时候卖出，最大利润 = 6-1 = 5 。 注意利润不能是 7-1 = 6, 因为卖出价格需要大于买入价格；同时，你不能在买入前卖出股票。
+示例 2： 输入：prices = [7,6,4,3,1] 输出：0 解释：在这种情况下, 没有交易完成, 所以最大利润为 0。
+提示： 1 &amp;lt;= prices.length &amp;lt;= 105 0 &amp;lt;= prices[i] &amp;lt;= 104
+自行解法 暴力解法 暴力解法虽然可以实现，但当数组超出一定长度时会超时
+class Solution { /** * @param Integer[] $prices * @return Integer */ function maxProfit($prices) { $countPri = count($prices); $diff = []; for ($i = 0; $i &amp;lt; $countPri; $i++) { $maxDiff = 0; for ($j = $i + 1; $j &amp;lt; $countPri; $j ++) { if ($prices[$j] - $prices[$i] &amp;gt; $maxDiff) { $maxDiff = ($prices[$j] - $prices[$i]); } } $diff[] = $maxDiff; } return max($diff); } } 动态规划(DP)：</description>
+    </item>
+    
+    <item>
+      <title>217.存在重复元素</title>
       <link>https://laurel-he.github.io/acm/leetcode/217repeat/</link>
       <pubDate>Tue, 31 Aug 2021 16:10:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/acm/leetcode/217repeat/</guid>
-      <description>题目链接：217. 存在重复元素
-题目描述 给定一个整数数组，判断是否存在重复元素。
+      <description>题目链接：217.存在重复元素
+题目描述 难度 简单 描述 给定一个整数数组，判断是否存在重复元素。
 如果存在一值在数组中出现至少两次，函数返回 true 。如果数组中每个元素都不相同，则返回 false 。
-示例 1:
-输入: [1,2,3,1] 输出: true 示例 2:
-输入: [1,2,3,4] 输出: false 示例3:
-输入: [1,1,1,3,3,4,3,2,4,2] 输出: true
+示例 1: 输入: [1,2,3,1] 输出: true
+示例 2: 输入: [1,2,3,4] 输出: false
+示例3: 输入: [1,1,1,3,3,4,3,2,4,2] 输出: true
 自行解法 直接循环，判断每个元素和剩余的其他元素是否重复，不重复则去除这个元素，继续比较
 class Solution { /** * @param Integer[] $nums * @return Boolean */ function containsDuplicate($nums) { $dataCheck = $nums; for ($i = 0; $i &amp;lt; count($nums); $i++) { $check = $nums[$i]; unset($dataCheck[$i]); if (in_array($check, $dataCheck)) { return true; } } return false; } } 其他优质解法 先去重，判断去重后的长度是否比之前的长度短，是则说明有重复</description>
     </item>
@@ -68,7 +151,8 @@ go语言用途 Go 语言被设计成一门应用于搭载 Web 服务器，存储
 hugo version下载主题存放到themes目录下，假设下载的主题叫herring，那么本地预览命令为：
 hugo server --theme=herring创建文章
 hugo new post/test.md生成静态网站
-hugo --theme=herring --baseUrl=&amp;quot;https://YOURNAME.github.io/&amp;quot;在github上创建一个YOURNAME.github.io的项目，master分支控制public目录 每次新增了要提交的文章后执行命令，提交即可</description>
+hugo --theme=herring --baseUrl=&amp;quot;https://YOURNAME.github.io/&amp;quot;在github上创建一个YOURNAME.github.io的项目，master分支控制public目录 每次新增了要提交的文章后执行命令，提交即可
+Taxonomies </description>
     </item>
     
     <item>
@@ -1044,6 +1128,15 @@ num = 1; for i in range(1,5): for j in range(1,5): for k in range(1,5): if(i != 
  原先的创建按钮方法为： {:build_toolbar(&amp;lsquo;refresh,edit,checkall&amp;rsquo;)} 有时候不使用buid_toolbar来创建按钮，而是直接使用的
  &amp;lt;a href=&amp;quot;javascript:;&amp;quot; class=&amp;quot;btn btn-danger btn-del btn-disabled disabled {:$auth-&amp;gt;check(&#39;course/clabelong/del&#39;)?&#39;&#39;:&#39;hide&#39;}&amp;quot;  title=&amp;quot;{:(&amp;lsquo;Delete&amp;rsquo;)}&amp;quot; &amp;gt;{:(&amp;lsquo;Delete&amp;rsquo;)} 这种方式来创建按钮，这样虽然很直观，但是实际上使用却很不方便，因为这里对于权限的判定可能是有问题的。期待的结果是直接使用build_toolbar方法，设置checkall为批量审核，check为审核方法，对于各个权限组可以直接调用。 修改build_toolbar方法到如下结果：
 function build_toolbar($btns = NULL, $attr = []) { $auth = \app\admin\library\Auth::instance(); $controller = str_replace(&#39;.&#39;, &#39;/&#39;, strtolower(think\Request::instance()-&amp;gt;controller())); $btns = $btns ? $btns : [&#39;refresh&#39;, &#39;add&#39;, &#39;edit&#39;, &#39;del&#39;, &#39;import&#39;,&#39;checkall&#39;]; $btns = is_array($btns) ? $btns : explode(&#39;,&#39;, $btns); $index = array_search(&#39;delete&#39;, $btns); if ($index !== FALSE) { $btns[$index] = &#39;del&#39;; } $btnAttr = [ &#39;refresh&#39; =&amp;gt; [&#39;javascript:;&#39;, &#39;btn btn-primary btn-refresh&#39;, &#39;fa fa-refresh&#39;, &#39;&#39;, __(&#39;Refresh&#39;)], &#39;checkall&#39;=&amp;gt; [&#39;javascript:;&#39;, &#39;btn btn-success btn-checkall btn-disabled disabled&#39;, &#39;fa fa-flag-checkered&#39;, &#39; 批量审核&#39;, &#39;批量审核&#39;], &#39;add&#39; =&amp;gt; [&#39;javascript:;&#39;, &#39;btn btn-success btn-add&#39;, &#39;fa fa-plus&#39;, __(&#39;Add&#39;), __(&#39;Add&#39;)], &#39;edit&#39; =&amp;gt; [&#39;javascript:;&#39;, &#39;btn btn-success btn-edit btn-disabled disabled&#39;, &#39;fa fa-pencil&#39;, __(&#39;Edit&#39;), __(&#39;Edit&#39;)], &#39;del&#39; =&amp;gt; [&#39;javascript:;&#39;, &#39;btn btn-danger btn-del btn-disabled disabled&#39;, &#39;fa fa-trash&#39;, __(&#39;Delete&#39;), __(&#39;Delete&#39;)], &#39;import&#39; =&amp;gt; [&#39;javascript:;&#39;, &#39;btn btn-danger btn-import&#39;, &#39;fa fa-upload&#39;, __(&#39;Import&#39;), __(&#39;Import&#39;)], ]; $btnAttr = array_merge($btnAttr, $attr); $html = []; foreach ($btns as $k =&amp;gt; $v) { //如果未定义或没有权限 if (!</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://laurel-he.github.io/learn/yii/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/learn/yii/</guid>
+      <description>yii 框架 </description>
     </item>
     
   </channel>

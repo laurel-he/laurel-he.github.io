@@ -101,5 +101,14 @@ laravel 定时任务 原文路径 https://learnku.com/docs/laravel/5.4/schedulin
 [program:finance_svcs_autoreconciliation] command=php /opt/app/nginx/html/qa6/financesvcs/artisan queue:work beanstalkd --queue=autoreconciliation_broadcast --daemon directory=/opt/app/nginx/html/qa6/financesvcs autostart=true autorestart=true user=apache numprocs=1 redirect_stderr=true stdout_logfile=/var/log/supervisor/qa1/%(program_name)s-stdout.log stdout_logfile_maxbytes=10MB stdout_logfile_backups=10  </description>
     </item>
     
+    <item>
+      <title></title>
+      <link>https://laurel-he.github.io/learn/yii/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/learn/yii/</guid>
+      <description>yii 框架 </description>
+    </item>
+    
   </channel>
 </rss>

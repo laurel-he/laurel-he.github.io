@@ -18,7 +18,8 @@
 hugo version下载主题存放到themes目录下，假设下载的主题叫herring，那么本地预览命令为：
 hugo server --theme=herring创建文章
 hugo new post/test.md生成静态网站
-hugo --theme=herring --baseUrl=&amp;quot;https://YOURNAME.github.io/&amp;quot;在github上创建一个YOURNAME.github.io的项目，master分支控制public目录 每次新增了要提交的文章后执行命令，提交即可</description>
+hugo --theme=herring --baseUrl=&amp;quot;https://YOURNAME.github.io/&amp;quot;在github上创建一个YOURNAME.github.io的项目，master分支控制public目录 每次新增了要提交的文章后执行命令，提交即可
+Taxonomies </description>
     </item>
     
     <item>
