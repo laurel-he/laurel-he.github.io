@@ -42,10 +42,10 @@ Linux下的中断 #include &amp;lt;stdlib.h&amp;gt;#include &amp;lt;stdio.h&amp;
     
     <item>
       <title>linux命令大全</title>
-      <link>https://laurel-he.github.io/post/linuxope/</link>
+      <link>https://laurel-he.github.io/linux/linuxope/</link>
       <pubDate>Thu, 27 Feb 2020 18:00:00 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/linuxope/</guid>
+      <guid>https://laurel-he.github.io/linux/linuxope/</guid>
       <description>系统信息 arch 描述
 显示机器的处理器架构 举例
 uname 描述
@@ -60,10 +60,10 @@ dmidecode 描述
     
     <item>
       <title>linux命令大全</title>
-      <link>https://laurel-he.github.io/post/linuxuse/</link>
+      <link>https://laurel-he.github.io/linux/linuxuse/</link>
       <pubDate>Thu, 27 Feb 2020 18:00:00 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/linuxuse/</guid>
+      <guid>https://laurel-he.github.io/linux/linuxuse/</guid>
       <description>文件操作 cat 描述
 查看文件内容 参数
 -n 或 –number 由 1 开始对所有输出的行数编号 -b 或 –number-nonblank 和 -n 相似，只不过对于空白行不编号 -s 或 –squeeze-blank 当遇到有连续两行以上的空白行，就代换为一行的空白行 -v 或 –show-nonprinting 举例 1 从键盘创建一个文件： 2 将几个文件合并成一个文件： cd 描述</description>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Companies on </title>
+    <link>https://laurel-he.github.io/company/</link>
+    <description>Recent content in Companies on </description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://laurel-he.github.io/company/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://laurel-he.github.io/company/post/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/company/post/</guid>
+      <description>入驻商家手动输入发布商品 需求 url /backend/material/add 请求方式 POST 请求参数
+{ &amp;#34;supplierId&amp;#34;:&amp;#34;e32423&amp;#34;, &amp;#34;addData&amp;#34;:[ { &amp;#34;itemNo&amp;#34;:&amp;#34;123&amp;#34;, &amp;#34;brand&amp;#34;:&amp;#34;111&amp;#34;, &amp;#34;year&amp;#34;:&amp;#34;2021&amp;#34;, &amp;#34;tock&amp;#34;:12 }, { &amp;#34;itemNo&amp;#34;:&amp;#34;123&amp;#34;, &amp;#34;brand&amp;#34;:&amp;#34;111&amp;#34;, &amp;#34;year&amp;#34;:&amp;#34;2021&amp;#34;, &amp;#34;tock&amp;#34;:12 } ] } 问题： （1）应该填入的字段中，可售数量是否就是goods表中的库存字段？型号是否就是goods表中的货号？ （2）7天后自动下架：是指所有物料创建7天后都自动下架还是说只是通过这次新增的这两个接口创建的7天后会自动下架？（有没有其他创建商品的方法？下架时也一起下架？） （3）商品发布接口（包含商品入库，之前说我们不直接操作数据库）、给用户推送商品已下架消息的接口，大约什么时候提供</description>
+    </item>
+    
+  </channel>
+</rss>

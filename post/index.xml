@@ -139,35 +139,6 @@ formatJsonData = (obj: any, name: string, moduleName?: string, getModuleName?: s
     </item>
     
     <item>
-      <title>linux命令大全</title>
-      <link>https://laurel-he.github.io/post/linuxope/</link>
-      <pubDate>Thu, 27 Feb 2020 18:00:00 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/post/linuxope/</guid>
-      <description>系统信息 arch 描述
-显示机器的处理器架构 举例
-uname 描述
-显示机器的处理器架构 参数
--a或&amp;ndash;all 显示全部的信息。 -m或&amp;ndash;machine 显示电脑类型。 -n或-nodename 显示在网络上的主机名称。 -r或&amp;ndash;release 显示操作系统的发行编号。 -s或&amp;ndash;sysname 显示操作系统名称。 -v 显示操作系统的版本。 &amp;ndash;help 显示帮助。 &amp;ndash;version 显示版本信息。 举例
-dmidecode 描述
-显示硬件信息，不常用，可忽略
-开关机 shutdown 描述
-关机或重启 参数
--t seconds : 设定在几秒钟之后进行关机程序。 -k : 并不会真的关机，只是将警告讯息传送给所有使用者。 -r : 关机后重新开机。 -h : 关机后停机。 -n : 不采用正常程序来关机，用强迫的方式杀掉所有执行中的程序后自行关机。 -c : 取消目前已经进行中的关机动作。 -f : 关机时，不做 fcsk 动作(检查 Linux 档系统)。 -F : 关机时，强迫进行 fsck 动作。 time : 设定关机的时间。 message : 传送给所有使用者的警告讯息。</description>
-    </item>
-    
-    <item>
-      <title>linux命令大全</title>
-      <link>https://laurel-he.github.io/post/linuxuse/</link>
-      <pubDate>Thu, 27 Feb 2020 18:00:00 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/post/linuxuse/</guid>
-      <description>文件操作 cat 描述
-查看文件内容 参数
--n 或 –number 由 1 开始对所有输出的行数编号 -b 或 –number-nonblank 和 -n 相似，只不过对于空白行不编号 -s 或 –squeeze-blank 当遇到有连续两行以上的空白行，就代换为一行的空白行 -v 或 –show-nonprinting 举例 1 从键盘创建一个文件： 2 将几个文件合并成一个文件： cd 描述</description>
-    </item>
-    
-    <item>
       <title>有用的代码段-ts篇</title>
       <link>https://laurel-he.github.io/post/usefulcode2/</link>
       <pubDate>Thu, 16 Jan 2020 19:34:10 +0000</pubDate>
@@ -517,35 +488,9 @@ npm install -g hexo-cli 建站 hexo init &amp;lt;folder&amp;gt; cd &amp;lt;folde
       <pubDate>Tue, 05 Mar 2019 13:25:21 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/post/20190220/</guid>
-      <description>navicat for mysql 快捷键 1.ctrl+q 打开查询窗口 2.ctrl+/ 注释sql语句 3.ctrl+shift +/ 解除注释 4.ctrl+r 运行查询窗口的sql语句 5.ctrl+shift+r 只运行选中的sql语句 6.F6 打开一个mysql命令行窗口 7.ctrl+l 删除一行 8.ctrl+n 打开一个新的查询窗口 9.ctrl+w 关闭一个查询窗口
+      <description>navicat for mysql 快捷键 1.ctrl+q 打开查询窗口 2.ctrl+/ 注释sql语句 3.ctrl+shift +/ 解除注释 4.ctrl+r 运行查询窗口的sql语句 5.ctrl+shift+r 只运行选中的sql语句 6.F6 打开一个mysql命令行窗口 7.ctrl+l 删除一行 8.ctrl+n 打开一个新的查询窗口 9.ctrl+w 关闭一个查询窗口
 phpstrom快捷键 编辑
    快捷键 作用     Ctrl + Space 代码自动完成（一般与输入法冲突）   Ctrl + Shift + Enter 智能完善代码（如:if()）   Ctrl + P 方法参数提示，显示默认参数   Ctrl + Q 显示注释代码   Ctrl + mouse over code 查看到简短的函数介绍   Ctrl + F1 显示错误或警告信息的描述（需要把光标放到错误或警告位置）   Alt + Insert 生成代码段（ 包括函数或类注释，版权信息，构造方法，抽象方法等）   Ctrl + O 插入覆盖父类的方法   Ctrl + I 实现抽象方法   Ctrl + Alt + T 选中的代码放在if.</description>
-    </item>
-    
-    <item>
-      <title>Monthly报表完成步骤</title>
-      <link>https://laurel-he.github.io/post/20190214/</link>
-      <pubDate>Sat, 02 Mar 2019 13:25:21 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/post/20190214/</guid>
-      <description>1 计算规则（都在订单产品维度） 1 已收 （1）计算此订单产品所在的订单的所有已收款 （2）计算此订单产品所在的订单有多少订单产品 （3）所有已收款除以订单产品数量，平均得出每个订单产品的已收款
-2 基础接口实现 1 注意事项 每次更新代码supervisor都需要重启
-2 添加路由和方法 创建finance_monthly controller,并在dsvcs.py中引入
-3 导入bill表 需要导入bill和bill_item表进ori_new以及bi表中</description>
-    </item>
-    
-    <item>
-      <title>分析bi数据获取流程</title>
-      <link>https://laurel-he.github.io/post/20190213/</link>
-      <pubDate>Sat, 02 Mar 2019 13:25:21 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/post/20190213/</guid>
-      <description>一：导入数据 1. bi_etl:通过定时任务脚本将数据从源数据库导出： （1） 修改配置文件，执行dump_order.sh，导入部分测试数据 （2）其中mysqldump导出数据到文件中 （3）shell无法直接执行source，可以用bash来操作，命令：sudo bash dump_order.sh （4）sh文件可能是在windows下面编辑的，在vim中使用set fileformat=unix 去除\M字符 （5）运行sh文件可在data目录下生成sql文件 （6）注意事项： 为什么不使用增量：因为有个中间表没有update_at，financial的表不能随意加字段
-1-1修改: （1）第一步导数据，源数据（来自于order_system）已经执行了删除五张表的三个字段，因此导出的数据结构和以前导出的数据结构是不一样的；
-2. 通过jump server将bi_etl的数据文件导出到bi_new的upload中(本地无法部署)** （1）由于本地无法直接部署jump server,直接拷贝刚才生成的文件到bi_new的upload中； （2）load_new.sh文件读取的是data.tar.gz压缩文件，因此直接压缩整个data文件夹到upload文件夹下
-3. bi_dsvcs读取数据并存入bi_new数据库 （1）修改配置文件（不修改可能会覆盖线上数据） （2）执行脚本并去除\M字符(会读取conf文件，set ff=unix可以去除/r字符) （2）在load_new.sh脚本中（使用了mysql的source命令）将刚才文件中的数据导入ori_new数据库中 （4）注意事项：sh文件中使用了tar -xvf 解压data文件，但是实际上没有解压成功，文件不存在，可以直接复制所有文件
-3-2修改： （1）执行sql命令直接修改ori_new的结构，命令如下：
-use ori_new; alter table `order_product` add `departure_date` date DEFAULT NULL; alter table `order_product` add `end_date` date DEFAULT NULL; alter table `order_product` add `product_status` int(11) NOT NULL DEFAULT &amp;#39;10000&amp;#39;; alter table `order_order_product_combine` drop column `departure_date`, drop column `end_date`, drop column `product_status`; alter table `order_order_product_customize` drop column `departure_date`, drop column `end_date`, drop column `product_status`; alter table `order_order_product_hotel` drop column `departure_date`, drop column `end_date`, drop column `product_status`; alter table `order_order_product_oneday` drop column `departure_date`, drop column `end_date`, drop column `product_status`; alter table `order_order_product_ticket` drop column `departure_date`, drop column `end_date`, drop column `product_status`; alter table `order_order_product_tour` drop column `departure_date`, drop column `end_date`, drop column `product_status`; 4.</description>
     </item>
     
     <item>
@@ -573,21 +518,6 @@ ctrl + f 屏幕向下移动一页 ctrl + b 向上移动一页 ctrl + d 向下移
     </item>
     
     <item>
-      <title>Monthly报表完成心得</title>
-      <link>https://laurel-he.github.io/post/2019-02-26/</link>
-      <pubDate>Tue, 26 Feb 2019 16:10:10 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/post/2019-02-26/</guid>
-      <description>1 知识点 添加日志 引入logging包，引入log文件即可
-logging.basicConfig(filename=&amp;quot;/tmp/bi_dsvcs/app.log&amp;quot;, level = logging.DEBUG) 有四种级别INFO, DEBUG, WARNING, ERROR, CRITICAL, FATAL
-获取月份列表 需求 需要获取月份数据[&amp;lsquo;00&amp;rsquo;, &amp;lsquo;01&amp;rsquo;, &amp;lsquo;02&amp;rsquo;, &amp;lsquo;03&amp;rsquo;, &amp;lsquo;04&amp;rsquo;, &amp;lsquo;05&amp;rsquo;, &amp;lsquo;06&amp;rsquo;, &amp;lsquo;07&amp;rsquo;, &amp;lsquo;08&amp;rsquo;, &amp;lsquo;09&amp;rsquo;, &amp;lsquo;10&amp;rsquo;, &amp;lsquo;11&amp;rsquo;] 原本解决办法 直接定义了一个这样的数组 新方法 range()从0到13，再在一位数前补零 实现代码
-theMonth = range(0, 13) monthKey = map(lambda x:&#39;%02d&#39; % x, theMonth) 新方法2 [&amp;quot;%02d&amp;quot; % x for x in range(1,13)]
-数据库导入导出 shell脚本里添加mysqldump导出数据 导入数据为避免更改表结构，直接mysql -u……连接到库，执行insert操作
-gunicorn配置 使用supervisor配置gunicorn，我本地虚拟机配置如下
-[program:bi_dsvcs] command=python /usr/bin/gunicorn -c /spython/bi_dsvcs/gunicorn.cnf dsvcs:app process_name=%(program_name)s/%(process_num)d directory=/spython/bi_dsvcs numprocs=1 autostart=true autorestart=true user=developer redirect_stderr=true stdout_logfile=/tmp/bi_dsvcs.</description>
-    </item>
-    
-    <item>
       <title>各种奇怪的坑</title>
       <link>https://laurel-he.github.io/post/2019_01_01/</link>
       <pubDate>Fri, 01 Feb 2019 16:10:10 +0000</pubDate>
@@ -610,6 +540,48 @@ gunicorn配置 使用supervisor配置gunicorn，我本地虚拟机配置如下
  原先的创建按钮方法为： {:build_toolbar(&amp;lsquo;refresh,edit,checkall&amp;rsquo;)} 有时候不使用buid_toolbar来创建按钮，而是直接使用的
  &amp;lt;a href=&amp;quot;javascript:;&amp;quot; class=&amp;quot;btn btn-danger btn-del btn-disabled disabled {:$auth-&amp;gt;check(&#39;course/clabelong/del&#39;)?&#39;&#39;:&#39;hide&#39;}&amp;quot;  title=&amp;quot;{:(&amp;lsquo;Delete&amp;rsquo;)}&amp;quot; &amp;gt;{:(&amp;lsquo;Delete&amp;rsquo;)} 这种方式来创建按钮，这样虽然很直观，但是实际上使用却很不方便，因为这里对于权限的判定可能是有问题的。期待的结果是直接使用build_toolbar方法，设置checkall为批量审核，check为审核方法，对于各个权限组可以直接调用。 修改build_toolbar方法到如下结果：
 function build_toolbar($btns = NULL, $attr = []) { $auth = \app\admin\library\Auth::instance(); $controller = str_replace(&#39;.&#39;, &#39;/&#39;, strtolower(think\Request::instance()-&amp;gt;controller())); $btns = $btns ? $btns : [&#39;refresh&#39;, &#39;add&#39;, &#39;edit&#39;, &#39;del&#39;, &#39;import&#39;,&#39;checkall&#39;]; $btns = is_array($btns) ? $btns : explode(&#39;,&#39;, $btns); $index = array_search(&#39;delete&#39;, $btns); if ($index !== FALSE) { $btns[$index] = &#39;del&#39;; } $btnAttr = [ &#39;refresh&#39; =&amp;gt; [&#39;javascript:;&#39;, &#39;btn btn-primary btn-refresh&#39;, &#39;fa fa-refresh&#39;, &#39;&#39;, __(&#39;Refresh&#39;)], &#39;checkall&#39;=&amp;gt; [&#39;javascript:;&#39;, &#39;btn btn-success btn-checkall btn-disabled disabled&#39;, &#39;fa fa-flag-checkered&#39;, &#39; 批量审核&#39;, &#39;批量审核&#39;], &#39;add&#39; =&amp;gt; [&#39;javascript:;&#39;, &#39;btn btn-success btn-add&#39;, &#39;fa fa-plus&#39;, __(&#39;Add&#39;), __(&#39;Add&#39;)], &#39;edit&#39; =&amp;gt; [&#39;javascript:;&#39;, &#39;btn btn-success btn-edit btn-disabled disabled&#39;, &#39;fa fa-pencil&#39;, __(&#39;Edit&#39;), __(&#39;Edit&#39;)], &#39;del&#39; =&amp;gt; [&#39;javascript:;&#39;, &#39;btn btn-danger btn-del btn-disabled disabled&#39;, &#39;fa fa-trash&#39;, __(&#39;Delete&#39;), __(&#39;Delete&#39;)], &#39;import&#39; =&amp;gt; [&#39;javascript:;&#39;, &#39;btn btn-danger btn-import&#39;, &#39;fa fa-upload&#39;, __(&#39;Import&#39;), __(&#39;Import&#39;)], ]; $btnAttr = array_merge($btnAttr, $attr); $html = []; foreach ($btns as $k =&amp;gt; $v) { //如果未定义或没有权限 if (!</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://laurel-he.github.io/post/2019-02-26/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/post/2019-02-26/</guid>
+      <description>不能够开放
+1 知识点 添加日志 引入logging包，引入log文件即可
+logging.basicConfig(filename=&amp;quot;/tmp/bi_dsvcs/app.log&amp;quot;, level = logging.DEBUG) 有四种级别INFO, DEBUG, WARNING, ERROR, CRITICAL, FATAL
+获取月份列表 需求 需要获取月份数据[&amp;lsquo;00&amp;rsquo;, &amp;lsquo;01&amp;rsquo;, &amp;lsquo;02&amp;rsquo;, &amp;lsquo;03&amp;rsquo;, &amp;lsquo;04&amp;rsquo;, &amp;lsquo;05&amp;rsquo;, &amp;lsquo;06&amp;rsquo;, &amp;lsquo;07&amp;rsquo;, &amp;lsquo;08&amp;rsquo;, &amp;lsquo;09&amp;rsquo;, &amp;lsquo;10&amp;rsquo;, &amp;lsquo;11&amp;rsquo;] 原本解决办法 直接定义了一个这样的数组 新方法 range()从0到13，再在一位数前补零 实现代码
+theMonth = range(0, 13) monthKey = map(lambda x:&#39;%02d&#39; % x, theMonth) 新方法2 [&amp;quot;%02d&amp;quot; % x for x in range(1,13)]
+数据库导入导出 shell脚本里添加mysqldump导出数据 导入数据为避免更改表结构，直接mysql -u……连接到库，执行insert操作
+gunicorn配置 使用supervisor配置gunicorn，我本地虚拟机配置如下
+[program:bi_dsvcs] command=python /usr/bin/gunicorn -c /spython/bi_dsvcs/gunicorn.cnf dsvcs:app process_name=%(program_name)s/%(process_num)d directory=/spython/bi_dsvcs numprocs=1 autostart=true autorestart=true user=developer redirect_stderr=true stdout_logfile=/tmp/bi_dsvcs.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://laurel-he.github.io/post/20190213/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/post/20190213/</guid>
+      <description>一：导入数据 1. bi_etl:通过定时任务脚本将数据从源数据库导出： （1） 修改配置文件，执行dump_order.sh，导入部分测试数据 （2）其中mysqldump导出数据到文件中 （3）shell无法直接执行source，可以用bash来操作，命令：sudo bash dump_order.sh （4）sh文件可能是在windows下面编辑的，在vim中使用set fileformat=unix 去除\M字符 （5）运行sh文件可在data目录下生成sql文件 （6）注意事项： 为什么不使用增量：因为有个中间表没有update_at，financial的表不能随意加字段
+1-1修改: （1）第一步导数据，源数据（来自于order_system）已经执行了删除五张表的三个字段，因此导出的数据结构和以前导出的数据结构是不一样的；
+2. 通过jump server将bi_etl的数据文件导出到bi_new的upload中(本地无法部署)** （1）由于本地无法直接部署jump server,直接拷贝刚才生成的文件到bi_new的upload中； （2）load_new.sh文件读取的是data.tar.gz压缩文件，因此直接压缩整个data文件夹到upload文件夹下
+3. bi_dsvcs读取数据并存入bi_new数据库 （1）修改配置文件（不修改可能会覆盖线上数据） （2）执行脚本并去除\M字符(会读取conf文件，set ff=unix可以去除/r字符) （2）在load_new.sh脚本中（使用了mysql的source命令）将刚才文件中的数据导入ori_new数据库中 （4）注意事项：sh文件中使用了tar -xvf 解压data文件，但是实际上没有解压成功，文件不存在，可以直接复制所有文件
+3-2修改： （1）执行sql命令直接修改ori_new的结构，命令如下：
+use ori_new; alter table `order_product` add `departure_date` date DEFAULT NULL; alter table `order_product` add `end_date` date DEFAULT NULL; alter table `order_product` add `product_status` int(11) NOT NULL DEFAULT &amp;#39;10000&amp;#39;; alter table `order_order_product_combine` drop column `departure_date`, drop column `end_date`, drop column `product_status`; alter table `order_order_product_customize` drop column `departure_date`, drop column `end_date`, drop column `product_status`; alter table `order_order_product_hotel` drop column `departure_date`, drop column `end_date`, drop column `product_status`; alter table `order_order_product_oneday` drop column `departure_date`, drop column `end_date`, drop column `product_status`; alter table `order_order_product_ticket` drop column `departure_date`, drop column `end_date`, drop column `product_status`; alter table `order_order_product_tour` drop column `departure_date`, drop column `end_date`, drop column `product_status`; 4.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://laurel-he.github.io/post/20190214/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/post/20190214/</guid>
+      <description>1 计算规则（都在订单产品维度） 1 已收 （1）计算此订单产品所在的订单的所有已收款 （2）计算此订单产品所在的订单有多少订单产品 （3）所有已收款除以订单产品数量，平均得出每个订单产品的已收款
+2 基础接口实现 1 注意事项 每次更新代码supervisor都需要重启
+2 添加路由和方法 创建finance_monthly controller,并在dsvcs.py中引入
+3 导入bill表 需要导入bill和bill_item表进ori_new以及bi表中</description>
     </item>
     
   </channel>

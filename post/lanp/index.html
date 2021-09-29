@@ -143,7 +143,7 @@ sudo apt install php7.2-fpm</p>
 可能报错wrong fs type, bad option, bad superblock
 ，经过搜索需要安装<code>apt-get install nfs-common</code><br>
 但是安装后依旧报错，查看系统日志，报错信息如下：
-<img src="/images/mysqlIndex/error.png" alt="explain">
+<img src="../images/mysqlIndex/error.png" alt="explain">
 只查到了一条有用的记录，且是英文的，原来这是virtualbox的一个bug，我记得virtualbox还有一个bug,就是不能在共享文件夹里使用python的虚拟环境，但是这版直接共享文件夹都不能挂载了。路径如下：
 <a href="https://www.virtualbox.org/ticket/9307" title="virtualbox bug">virtualbox bug</a>
 再安装两个插件即可</p>

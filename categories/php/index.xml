@@ -5,7 +5,16 @@
     <link>https://laurel-he.github.io/categories/php/</link>
     <description>Recent content in php on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 16 Apr 2020 18:27:44 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/php/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Sep 2021 13:47:00 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/php/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>pcntl</title>
+      <link>https://laurel-he.github.io/php/pcntl/</link>
+      <pubDate>Sun, 26 Sep 2021 13:47:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/php/pcntl/</guid>
+      <description>pcntl_wait:等待或返回fork的子进程状态</description>
+    </item>
+    
     <item>
       <title>php多维数组相关处理</title>
       <link>https://laurel-he.github.io/post/multiarr/</link>

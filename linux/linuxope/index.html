@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>linux命令大全</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.87.0" />
+  <link href="" rel="alternate" type="application/rss+xml" title="" />
+  <link href="https://laurel-he.github.io//css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://laurel-he.github.io//css/hc.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  
+    
+    </head>
+    <body>
+<div class="nav-toggle"><i class="fa fa-bars fa-2x"></i> Herring Cove </div>
+      <div id = "wrapper">
+
+
+<div class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="https://laurel-he.github.io//"><p class="navbar-brand"></p></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+					
+					
+					<li><a href="https://laurel-he.github.io//python/">Python </a></li>
+					
+					<li><a href="https://laurel-he.github.io//post/">主页 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//categories/">分类 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//acm/">刷题 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//learn/">学习 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//database/">数据库 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//datastruct/">数据结构 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//tags/">标签 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//designpattern/">设计模式 </a></li>
+					
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+       
+       <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+					<img src="/images/avatar.jpg" />
+          <li class="sidebar-brand"><a href="https://laurel-he.github.io//"><h1 class="brand"></h1></a><h3></h3></li>
+          <hr />
+					
+						<li><a href="https://laurel-he.github.io//python/">Python </a></li>
+					
+						<li><a href="https://laurel-he.github.io//post/">主页 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//categories/">分类 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//acm/">刷题 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//learn/">学习 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//database/">数据库 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//datastruct/">数据结构 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//tags/">标签 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//designpattern/">设计模式 </a></li>
+					
+          <hr />
+          <div id="social-wrapper">
+           
+           
+           
+           
+         </div>
+       </ul>
+     </div>
+
+
+
+     <div class="container">
+
+
+  <div id="article">
+   <div class="article-title">linux命令大全</div>
+   <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> 2020-02-27</small></p> <hr/>
+   <div class="post">
+     <h2 id="系统信息">系统信息</h2>
+<h3 id="arch">arch</h3>
+<p><strong>描述</strong></p>
+<p>显示机器的处理器架构
+<strong>举例</strong></p>
+<p><img src="../images/linux/arch.png" alt="towrow"></p>
+<h3 id="uname">uname</h3>
+<p><strong>描述</strong></p>
+<p>显示机器的处理器架构
+<strong>参数</strong></p>
+<p>-a或&ndash;all 　显示全部的信息。  <br>
+-m或&ndash;machine 　显示电脑类型。  <br>
+-n或-nodename 　显示在网络上的主机名称。 <br>
+-r或&ndash;release 　显示操作系统的发行编号。  <br>
+-s或&ndash;sysname 　显示操作系统名称。   <br>
+-v 　显示操作系统的版本。  <br>
+&ndash;help 　显示帮助。  <br>
+&ndash;version 　显示版本信息。  <br>
+<strong>举例</strong></p>
+<p><img src="../images/linux/uname.png" alt="towrow"></p>
+<h3 id="dmidecode">dmidecode</h3>
+<p><strong>描述</strong></p>
+<p>显示硬件信息，不常用，可忽略</p>
+<h2 id="开关机">开关机</h2>
+<h3 id="shutdown">shutdown</h3>
+<p><strong>描述</strong></p>
+<p>关机或重启 <br>
+<strong>参数</strong></p>
+<p>-t seconds : 设定在几秒钟之后进行关机程序。 <br>
+-k : 并不会真的关机，只是将警告讯息传送给所有使用者。 <br>
+-r : 关机后重新开机。 <br>
+-h : 关机后停机。 <br>
+-n : 不采用正常程序来关机，用强迫的方式杀掉所有执行中的程序后自行关机。 <br>
+-c : 取消目前已经进行中的关机动作。 <br>
+-f : 关机时，不做 fcsk 动作(检查 Linux 档系统)。 <br>
+-F : 关机时，强迫进行 fsck 动作。  <br>
+time : 设定关机的时间。 <br>
+message : 传送给所有使用者的警告讯息。<br>
+<strong>举例</strong></p>
+<pre><code>shutdown -h now //立即关机
+shutdown -r now //立即重启
+</code></pre><h3 id="reboot">reboot</h3>
+<p><strong>描述</strong></p>
+<p>重启 <br>
+<strong>参数</strong></p>
+<p>-n : 在重开机前不做将记忆体资料写回硬盘的动作  <br>
+-w : 并不会真的重开机，只是把记录写到 /var/log/wtmp 档案里  <br>
+-d : 不把记录写到 /var/log/wtmp 档案里（-n 这个参数包含了 -d）  <br>
+-f : 强迫重开机，不呼叫 shutdown 这个指令  <br>
+-i : 在重开机之前先把所有网络相关的装置先停止</p>
+<h3 id="logout">logout</h3>
+<p><strong>描述</strong></p>
+<p>登出系统
+###</p>
+
+   </div>
+ </div>
+
+
+ <a href="https://github.com/laurel-he" class="twitter-share-button " data-size="small" data-count="none">Git hub</a>
+ <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+ <ul class="pager">
+      &nbsp;<li class="previous"><a href="https://laurel-he.github.io/linux/linuxuse/"> linux命令大全</a></li>
+      &nbsp;<li class="next"><a href="https://laurel-he.github.io/post/multiarr/"> php多维数组相关处理</a></li>
+</ul>
+
+
+
+    </ul>
+    </div>
+    <footer>
+
+        <p class="text-muted credit">&copy; 2021. All rights reserved. </p>
+    </footer>
+ 
+    <script src="https://laurel-he.github.io//js/jquery-1.10.2.min.js"></script>
+    <script src="https://laurel-he.github.io//js/bootstrap.min.js"></script>
+    <script src="https://laurel-he.github.io//js/bootstrap.js"></script>
+    <script type="text/javascript" src="https://laurel-he.github.io//js/hc.js"></script>
+</body>
+
+</html>
+

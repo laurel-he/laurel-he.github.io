@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>566. 重塑矩阵</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.87.0" />
+  <link href="" rel="alternate" type="application/rss+xml" title="" />
+  <link href="https://laurel-he.github.io//css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://laurel-he.github.io//css/hc.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  
+    
+    </head>
+    <body>
+<div class="nav-toggle"><i class="fa fa-bars fa-2x"></i> Herring Cove </div>
+      <div id = "wrapper">
+
+
+<div class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="https://laurel-he.github.io//"><p class="navbar-brand"></p></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+					
+					
+					<li><a href="https://laurel-he.github.io//python/">Python </a></li>
+					
+					<li><a href="https://laurel-he.github.io//post/">主页 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//categories/">分类 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//acm/">刷题 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//learn/">学习 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//database/">数据库 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//datastruct/">数据结构 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//tags/">标签 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//designpattern/">设计模式 </a></li>
+					
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+       
+       <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+					<img src="/images/avatar.jpg" />
+          <li class="sidebar-brand"><a href="https://laurel-he.github.io//"><h1 class="brand"></h1></a><h3></h3></li>
+          <hr />
+					
+						<li><a href="https://laurel-he.github.io//python/">Python </a></li>
+					
+						<li><a href="https://laurel-he.github.io//post/">主页 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//categories/">分类 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//acm/">刷题 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//learn/">学习 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//database/">数据库 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//datastruct/">数据结构 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//tags/">标签 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//designpattern/">设计模式 </a></li>
+					
+          <hr />
+          <div id="social-wrapper">
+           
+           
+           
+           
+         </div>
+       </ul>
+     </div>
+
+
+
+     <div class="container">
+
+
+  <div id="article">
+   <div class="article-title">566. 重塑矩阵</div>
+   <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> 2020-09-03</small></p> <hr/>
+   <div class="post">
+     <p>题目来源:<a href="https://leetcode-cn.com/problems/reshape-the-matrix/">566. 重塑矩阵</a></p>
+<h2 id="题目描述">题目描述</h2>
+<h3 id="难度">难度</h3>
+<p>简单</p>
+<h3 id="描述">描述</h3>
+<p>在 MATLAB 中，有一个非常有用的函数 reshape ，它可以将一个m x n 矩阵重塑为另一个大小不同（r x c）的新矩阵，但保留其原始数据。</p>
+<p>给你一个由二维数组 mat 表示的m x n 矩阵，以及两个正整数 r 和 c ，分别表示想要的重构的矩阵的行数和列数。</p>
+<p>重构后的矩阵需要将原始矩阵的所有元素以相同的 行遍历顺序 填充。</p>
+<p>如果具有给定参数的 reshape 操作是可行且合理的，则输出新的重塑矩阵；否则，输出原始矩阵。</p>
+<p><strong>示例 1：</strong>
+输入：mat = [[1,2],[3,4]], r = 1, c = 4
+输出：[[1,2,3,4]]</p>
+<p><strong>示例 2：</strong>
+输入：mat = [[1,2],[3,4]], r = 2, c = 4
+输出：[[1,2],[3,4]]</p>
+<p><strong>提示：</strong>
+m == mat.length
+n == mat[i].length
+1 &lt;= m, n &lt;= 100
+-1000 &lt;= mat[i][j] &lt;= 1000
+1 &lt;= r, c &lt;= 300</p>
+<h2 id="自行解法">自行解法</h2>
+<h3 id="分析">分析</h3>
+<p>最终的目的是把矩阵按照给定的r,c重新生成，那么有几个可以以下结论： <br>
+当r * c != m * n 时，代表不符合规范，直接输出原有的矩阵； <br>
+由于新的矩阵可以理解为按照r * c的大小放入的二维数组，那么把以前的数组直接拆成一维数组，挨个放入是最容易想到的简单思路。  <br>
+根据这个思路可以实现php代码如下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
+
+    <span style="color:#e6db74">/**
+</span><span style="color:#e6db74">     * @param Integer[][] $mat
+</span><span style="color:#e6db74">     * @param Integer $r
+</span><span style="color:#e6db74">     * @param Integer $c
+</span><span style="color:#e6db74">     * @return Integer[][]
+</span><span style="color:#e6db74">     */</span>
+    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">matrixReshape</span>($mat, $r, $c) {
+        <span style="color:#66d9ef">if</span> ($this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">checkIfCanUse</span>($mat, $r, $c)) {
+            $ret <span style="color:#f92672">=</span> [];
+            $originArr <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_reduce</span>($mat, <span style="color:#e6db74">&#39;array_merge&#39;</span>, <span style="color:#66d9ef">array</span>());
+            <span style="color:#66d9ef">for</span> ($i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; $i <span style="color:#f92672">&lt;</span> $r; $i<span style="color:#f92672">++</span>) {
+                $ret[$i] <span style="color:#f92672">=</span> [];
+                $ret[$i] <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_merge</span>($ret[$i], <span style="color:#a6e22e">array_slice</span>($originArr, $i <span style="color:#f92672">*</span> $c, $c));
+            }
+            <span style="color:#66d9ef">return</span> $ret;
+        }
+        <span style="color:#66d9ef">return</span> $mat;
+    }
+    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">checkIfCanUse</span>($mat, $r, $c)
+    {
+        $m <span style="color:#f92672">=</span> <span style="color:#a6e22e">count</span>($mat);
+        $n <span style="color:#f92672">=</span> ($m <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>) <span style="color:#f92672">?</span> <span style="color:#a6e22e">count</span>($mat[<span style="color:#ae81ff">0</span>]) <span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>;
+        <span style="color:#66d9ef">if</span> ($m <span style="color:#f92672">*</span> $n <span style="color:#f92672">==</span> $r <span style="color:#f92672">*</span> $c) {
+            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+        }
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+    }
+}
+</code></pre></div><h2 id="其他优质解法">其他优质解法</h2>
+
+   </div>
+ </div>
+
+
+ <a href="https://github.com/laurel-he" class="twitter-share-button " data-size="small" data-count="none">Git hub</a>
+ <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+ <ul class="pager">
+      &nbsp;<li class="previous"><a href="https://laurel-he.github.io/acm/leetcode/350arrat/"> 350. 两个数组的交集 II</a></li>
+      &nbsp;<li class="next"><a href="https://laurel-he.github.io/acm/leetcode/1175primesort/"> 1175. 质数排列</a></li>
+</ul>
+
+
+
+    </ul>
+    </div>
+    <footer>
+
+        <p class="text-muted credit">&copy; 2021. All rights reserved. </p>
+    </footer>
+ 
+    <script src="https://laurel-he.github.io//js/jquery-1.10.2.min.js"></script>
+    <script src="https://laurel-he.github.io//js/bootstrap.min.js"></script>
+    <script src="https://laurel-he.github.io//js/bootstrap.js"></script>
+    <script type="text/javascript" src="https://laurel-he.github.io//js/hc.js"></script>
+</body>
+
+</html>
+

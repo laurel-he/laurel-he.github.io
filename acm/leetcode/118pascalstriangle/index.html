@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>118. 杨辉三角</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.87.0" />
+  <link href="" rel="alternate" type="application/rss+xml" title="" />
+  <link href="https://laurel-he.github.io//css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://laurel-he.github.io//css/hc.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  
+    
+    </head>
+    <body>
+<div class="nav-toggle"><i class="fa fa-bars fa-2x"></i> Herring Cove </div>
+      <div id = "wrapper">
+
+
+<div class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="https://laurel-he.github.io//"><p class="navbar-brand"></p></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+					
+					
+					<li><a href="https://laurel-he.github.io//python/">Python </a></li>
+					
+					<li><a href="https://laurel-he.github.io//post/">主页 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//categories/">分类 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//acm/">刷题 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//learn/">学习 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//database/">数据库 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//datastruct/">数据结构 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//tags/">标签 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//designpattern/">设计模式 </a></li>
+					
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+       
+       <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+					<img src="/images/avatar.jpg" />
+          <li class="sidebar-brand"><a href="https://laurel-he.github.io//"><h1 class="brand"></h1></a><h3></h3></li>
+          <hr />
+					
+						<li><a href="https://laurel-he.github.io//python/">Python </a></li>
+					
+						<li><a href="https://laurel-he.github.io//post/">主页 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//categories/">分类 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//acm/">刷题 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//learn/">学习 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//database/">数据库 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//datastruct/">数据结构 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//tags/">标签 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//designpattern/">设计模式 </a></li>
+					
+          <hr />
+          <div id="social-wrapper">
+           
+           
+           
+           
+         </div>
+       </ul>
+     </div>
+
+
+
+     <div class="container">
+
+
+  <div id="article">
+   <div class="article-title">118. 杨辉三角</div>
+   <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> 2021-09-03</small></p> <hr/>
+   <div class="post">
+     <p>题目来源：<a href="https://leetcode-cn.com/problems/pascals-triangle/">118. 杨辉三角</a></p>
+<h2 id="题目描述">题目描述</h2>
+<p>给定一个非负整数numRows，生成「杨辉三角」的前numRows行。
+在「杨辉三角」中，每个数是它左上方和右上方的数的和。</p>
+<p><strong>示例 1:</strong>
+输入: numRows = 5
+输出: [[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1]]</p>
+<p><strong>示例2:</strong>
+输入: numRows = 1
+输出: [[1]]</p>
+<p><strong>提示:</strong>
+1 &lt;= numRows &lt;= 30</p>
+<h2 id="自行解法">自行解法</h2>
+<p>可以判断出以下结论： <br>
+（1）每一项的第一个和最后一个都是1 <br>
+（2）每一项的个数等于所在项的位置 <br>
+（3）每一项除开第一个和最后一个数字，假设所在位置为i，其他的数字应该等于上一项的i-1和i下标的值之和 <br>
+根据以上结论可以实现如下代码：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
+
+    <span style="color:#e6db74">/**
+</span><span style="color:#e6db74">     * @param Integer $numRows
+</span><span style="color:#e6db74">     * @return Integer[][]
+</span><span style="color:#e6db74">     */</span>
+    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">generate</span>($numRows) {
+        $ret <span style="color:#f92672">=</span> [];
+        <span style="color:#66d9ef">for</span> ($i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; $i <span style="color:#f92672">&lt;</span> $numRows; $i<span style="color:#f92672">++</span>) {
+            $cont <span style="color:#f92672">=</span> [];
+            <span style="color:#66d9ef">for</span> ($j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; $j <span style="color:#f92672">&lt;</span> $i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>; $j <span style="color:#f92672">++</span>) {
+                <span style="color:#66d9ef">if</span> ($j <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">||</span> $j <span style="color:#f92672">==</span> $i) {
+                    $cont[$j] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; 
+                } <span style="color:#66d9ef">else</span> {
+                    $cont[$j] <span style="color:#f92672">=</span> $ret[$i <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>][$j <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">+</span> $ret[$i <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>][$j]; 
+                }
+            }
+            $ret[$i] <span style="color:#f92672">=</span> $cont;
+        }
+        <span style="color:#66d9ef">return</span> $ret;
+    }
+}
+</code></pre></div><h2 id="其他优质解法分析">其他优质解法分析</h2>
+
+   </div>
+ </div>
+
+
+ <a href="https://github.com/laurel-he" class="twitter-share-button " data-size="small" data-count="none">Git hub</a>
+ <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+ <ul class="pager">
+      &nbsp;<li class="previous"><a href="https://laurel-he.github.io/acm/junioralgorithm/in-placealgorithm/"> 原地算法</a></li>
+      &nbsp;<li class="next"><a href="https://laurel-he.github.io/acm/leetcode/36effecttivesudoku/"> 36. 有效的数独</a></li>
+</ul>
+
+
+
+    </ul>
+    </div>
+    <footer>
+
+        <p class="text-muted credit">&copy; 2021. All rights reserved. </p>
+    </footer>
+ 
+    <script src="https://laurel-he.github.io//js/jquery-1.10.2.min.js"></script>
+    <script src="https://laurel-he.github.io//js/bootstrap.min.js"></script>
+    <script src="https://laurel-he.github.io//js/bootstrap.js"></script>
+    <script type="text/javascript" src="https://laurel-he.github.io//js/hc.js"></script>
+</body>
+
+</html>
+
