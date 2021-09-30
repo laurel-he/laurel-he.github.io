@@ -5,7 +5,16 @@
     <link>https://laurel-he.github.io/</link>
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 26 Sep 2021 13:47:00 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 29 Sep 2021 19:20:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>减肥</title>
+      <link>https://laurel-he.github.io/post/fit/</link>
+      <pubDate>Wed, 29 Sep 2021 19:20:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/post/fit/</guid>
+      <description>阶段 截至时间 时间 详情     1 21-10-09 10d 4-116-58   1 21-10-19 10d 3-113-56.5   1 21-10-29 10d 2-111-55.5   1 21-11-08 10d 1-110-55   1 21-11-18 10d 1-109-54.5   1 21-11-28 10d 1-108-54   1 21-12-08 10d 2-106-53   1 21-12-18 10d 2-104-52   1 21-12-28 10d 3-101-50.5   1 22-01-07 10d 2-99-49.5   1 22-01-17 10d 0.</description>
+    </item>
+    
     <item>
       <title>pcntl</title>
       <link>https://laurel-he.github.io/php/pcntl/</link>
@@ -17,10 +26,10 @@
     
     <item>
       <title>c语言基础介绍</title>
-      <link>https://laurel-he.github.io/cc&#43;&#43;/c/01basic/</link>
+      <link>https://laurel-he.github.io/corc&#43;&#43;/c/01basic/</link>
       <pubDate>Sat, 04 Sep 2021 16:34:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/cc&#43;&#43;/c/01basic/</guid>
+      <guid>https://laurel-he.github.io/corc&#43;&#43;/c/01basic/</guid>
       <description>本系列来自于中国大学MOOC的 程序设计入门C语言 学习视频总结
 基础 学习程序设计的目的 通过学习程序设计，理解计算机如何工作，计算机擅长做什么，不擅长做什么。
 计算机如何解决问题？ 告诉计算机的步骤，它会一步一步地去做。告诉计算机How to do而不是what to do
@@ -36,13 +45,23 @@ C语言优点 为什么选择C语言： 使用范围广，做操作系统，嵌�
     
     <item>
       <title>开始编程</title>
-      <link>https://laurel-he.github.io/cc&#43;&#43;/c/02first/</link>
+      <link>https://laurel-he.github.io/corc&#43;&#43;/c/02first/</link>
       <pubDate>Sat, 04 Sep 2021 16:34:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/cc&#43;&#43;/c/02first/</guid>
+      <guid>https://laurel-he.github.io/corc&#43;&#43;/c/02first/</guid>
       <description>本系列来自于中国大学MOOC的 程序设计入门C语言 学习视频总结
 第一个程序 #include &amp;lt;stdio.h&amp;gt; int main(int argc, char ** argv) { printf(&amp;#34;Hello Word\n&amp;#34;); int i = 0; scanf(&amp;#34;%d&amp;#34;, &amp;amp;i); printf(&amp;#34;The res is: %d&amp;#34;, i + 10); return 0; } 程序的框架就是：
-#include &amp;lt;stdio.h&amp;gt;int main(){return 0;}换行和空格不意味着任何问题。</description>
+#include &amp;lt;stdio.h&amp;gt;int main(){return 0;}换行和空格不意味着任何问题。
+浮点数 float</description>
+    </item>
+    
+    <item>
+      <title>表达式</title>
+      <link>https://laurel-he.github.io/corc&#43;&#43;/c/03expression/</link>
+      <pubDate>Sat, 04 Sep 2021 16:34:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/corc&#43;&#43;/c/03expression/</guid>
+      <description></description>
     </item>
     
     <item>
