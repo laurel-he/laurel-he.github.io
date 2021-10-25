@@ -302,25 +302,6 @@ mysql命令行连接参数 经常使用的参数:
     </item>
     
     <item>
-      <title>目录</title>
-      <link>https://laurel-he.github.io/learn/totalcont/</link>
-      <pubDate>Sat, 26 Sep 2020 13:47:00 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/learn/totalcont/</guid>
-      <description>1 刷题
-2 设计模式
-3 数据库
-4 操作系统
-5 php
-6 go
-7 python
-8 前端
-9 云原生
-10 消息队列
-11 学习</description>
-    </item>
-    
-    <item>
       <title>1175. 质数排列</title>
       <link>https://laurel-he.github.io/acm/leetcode/1175primesort/</link>
       <pubDate>Thu, 03 Sep 2020 16:10:10 +0000</pubDate>
@@ -354,6 +335,25 @@ mysql命令行连接参数 经常使用的参数:
 示例 1： 输入：mat = [[1,2],[3,4]], r = 1, c = 4 输出：[[1,2,3,4]]
 示例 2： 输入：mat = [[1,2],[3,4]], r = 2, c = 4 输出：[[1,2],[3,4]]
 提示： m == mat.length n == mat[i].length 1 &amp;lt;= m, n &amp;lt;= 100 -1000 &amp;lt;= mat[i][j] &amp;lt;= 1000 1 &amp;lt;= r, c &amp;lt;= 300</description>
+    </item>
+    
+    <item>
+      <title>目录</title>
+      <link>https://laurel-he.github.io/learn/total/</link>
+      <pubDate>Thu, 03 Sep 2020 16:10:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/learn/total/</guid>
+      <description>目录： 1 刷题
+2 设计模式
+3 数据库
+4 操作系统
+5 php
+6 go
+7 python
+8 前端
+9 云原生
+10 消息队列
+11 学习</description>
     </item>
     
     <item>

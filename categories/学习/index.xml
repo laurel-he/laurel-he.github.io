@@ -71,6 +71,25 @@ C语言优点 为什么选择C语言： 使用范围广，做操作系统，嵌�
     </item>
     
     <item>
+      <title>目录</title>
+      <link>https://laurel-he.github.io/learn/total/</link>
+      <pubDate>Thu, 03 Sep 2020 16:10:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/learn/total/</guid>
+      <description>目录： 1 刷题
+2 设计模式
+3 数据库
+4 操作系统
+5 php
+6 go
+7 python
+8 前端
+9 云原生
+10 消息队列
+11 学习</description>
+    </item>
+    
+    <item>
       <title>使用go编写webassembly</title>
       <link>https://laurel-he.github.io/go/webassembly_go_1/</link>
       <pubDate>Tue, 10 Dec 2019 12:34:10 +0000</pubDate>
