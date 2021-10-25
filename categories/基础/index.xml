@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>基础 on </title>
+    <link>https://laurel-he.github.io/categories/%E5%9F%BA%E7%A1%80/</link>
+    <description>Recent content in 基础 on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 27 Feb 2020 18:00:00 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/%E5%9F%BA%E7%A1%80/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>linux基础入门</title>
+      <link>https://laurel-he.github.io/linux/linuxbase/</link>
+      <pubDate>Thu, 27 Feb 2020 18:00:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/linux/linuxbase/</guid>
+      <description>学习心得，来自于蓝桥Linux基础入门
+用户相关 查看当前用户 whoami:查看当前用户名 who am i:可以列出用户名，当前登录的伪终端以及当前伪终端的启动时间等 注意事项 在有些情况下who am i或者who mom likes不会有输出，因为当前shell不是登录时的shell
+添加用户 例如添加用户lilei:
+sudo adduser lilei 此命令在添加用户的同时还会创建用户的home目录
+添加用户组 groupadd [groupname]
+sudo groupadd lilei 将其他用户加入sudo用户组 当一个没有sudo权限的用户执行sudo命令时将报告当前用户不在sudoer文件中 使用一个有sudo权限的账户来添加，例如：
+sudo usermod -G sudo lilei 实际上，这里执行的操作就是将用户添加至工作组，这里的命令为：
+usermod -G [groupname] [username] 用户组 groups:查看用户所属的用户组，例如：
+groups lilei /etc/group文件 /etc/group文件保存了所有的用户和用户组信息，格式如下：
+group_name:password:GID:user_list 当password为x时表示密码不可见，如果用户的GID等于用户组的GID，那么user_list为空
+删除用户 sudo deluser lilei --remove-home &amp;ndash;remove-home表示在删除用户的时候同时删除用户的home目录
+删除用户组 groupdel命令
+文件相关 ll第一列的文件类型
+   名称 英文名 含义     d directory 目录   l link 软连接   b block 块设备   c char 字符设备   s socket 网络套接字   p pipe 管道   - - 普通文件    ll命令第一列解析如下： 可以通过ll -h更直观的看到文件大小 -a可以显示隐藏文件</description>
+    </item>
+    
+  </channel>
+</rss>

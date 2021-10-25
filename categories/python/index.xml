@@ -8,10 +8,10 @@
     <lastBuildDate>Mon, 25 Mar 2019 09:41:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>重新实现monthly步骤</title>
-      <link>https://laurel-he.github.io/post/monthly/</link>
+      <link>https://laurel-he.github.io/private/monthly/</link>
       <pubDate>Mon, 25 Mar 2019 09:41:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/monthly/</guid>
+      <guid>https://laurel-he.github.io/private/monthly/</guid>
       <description>1 bi新建已收、已付、应收、应付表 CREATE TABLE `order_product_set_pay`( `id` int(10) unsigned NOT NULL, `order_product_id` int(10) unsigned NOT NULL, `parent_order_product_id` int(10) unsigned DEFAULT &#39;0&#39; COMMENT &#39;parent order_product_id&#39;, `has_settlement` decimal(10,2) NOT NULL DEFAULT &#39;0.00&#39;, `should_settlement` decimal(10,2) NOT NULL DEFAULT &#39;0.00&#39;, `has_pay` decimal(10,2) NOT NULL DEFAULT &#39;0.00&#39;, `should_pay` decimal(10,2) NOT NULL DEFAULT &#39;0.00&#39;, `settlement_pay_time` timestamp NOT NULL DEFAULT &#39;0000-00-00 00:00:00&#39;, `pay_pay_status` varchar(255) NOT NULL DEFAULT &#39;Pending&#39;, `pay_pay_time` timestamp NOT NULL DEFAULT &#39;0000-00-00 00:00:00&#39;, PRIMARY KEY (`id`) ) ENGINE=InnoDB DEFAULT CHARSET=utf8; alter table `order_product_set_pay` drop primary key; alter table `order_product_set_pay` add `settlement_id` int(10) unsigned NOT NULL; 2 从bi表中查询数据 1 已收 （总收）/比例 比例 =</description>
     </item>
     

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>云原生s on </title>
+    <link>https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/</link>
+    <description>Recent content in 云原生s on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 21 May 2020 11:00:00 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>kustomize使用文档</title>
+      <link>https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/k8s/kustomize01/</link>
+      <pubDate>Thu, 21 May 2020 11:00:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/k8s/kustomize01/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kubenetes权威指南1-2章</title>
+      <link>https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/k8s/k8s01/</link>
+      <pubDate>Sat, 16 May 2020 18:00:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/k8s/k8s01/</guid>
+      <description>kubenetes是什么 k8s是一个全新的基于容器技术的分布式架构领先方案，一个开放的开发平台，一个完备的分布式系统支撑平台
+k8s重要资源对象介绍 Master 概念介绍 k8s中的Master指的是集群控制节点，在每个集群里都需要有一个Master来负责整个集群的管理和控制。
+关键进程 （1）Kubenetes API Server(kube-apiserver):提供了HTTP Rest接口的额关键服务进程，是 kubenetes里所有资源的增删改查等操作的唯一入口，也是集群控制的入口进程 （2）kubenetes Controller Manager(kube-controller-manager):kubenetes里所有资源对象的自动化控制中心，可以将其理解为资源对象的大总管 （3）Kubenetes Scheduler(kube-scheduler):负责资源调度(Pod调度)的进程，相当于哦公交公司的调度室
+Node 概念介绍 除了Master,Kubenetes集群中的其他机器被称为Node。Node是集群中的工作负载节点，每个Node都会被Master分配一些工作负载(Docker容器)，当某个Node宕机时，其上的工作负载会被Master自动转移到其他节点上
+关键进程 （1）kubelet:负责Pod对应的容器的创建、启停等任务，同时与Master密切协作，，实现集群管理的基本功能 （2）kube-proxy:实现kubenetes Service的通信与负载均衡的重要组件 （3）Docker Engine：负责本机的容器的创建和管理工作
+Pod 概念介绍 在Kubernetes中，最小的管理元素不是一个个独立的容器，而是Pod,Pod是最小的，管理，创建，计划的最小单元.
+部分概念 （1）可以设置限额的计算资源有CPU和Memory两种： 通常以千分之一的CPU配额为最小单位，用m来表示 Memory配额也是一个绝对值，单位是内存字节数 （2）Event是一个事件的记录，记录了事件的最早产生事件，最后重现事件，重复次数，发起者，类型，以及导致此事件的原因等众多信息。
+Label 概念 一个Label是一个key=value的键值对,可类似于sql查询语句一样来进行查询
+Deployment Deployment内部使用了Replica Set来实现目的
+kubectl的create命令和apply命令的区别 kubectl create：
+（1）kubectl create命令，是先删除所有现有的东西，重新根据yaml文件生成新的。所以要求yaml文件中的配置必须是完整的
+（2）kubectl create命令，用同一个yaml 文件执行替换replace命令，将会不成功，fail掉。
+kubectl apply：
+kubectl apply命令，根据配置文件里面列出来的内容，升级现有的。所以yaml文件的内容可以只写需要升级的属性</description>
+    </item>
+    
+    <item>
+      <title>《第一本docker书》学习笔记01</title>
+      <link>https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/docker/docker01/</link>
+      <pubDate>Tue, 21 Apr 2020 21:03:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/docker/docker01/</guid>
+      <description>Docker与配置管理 docker的核心组件 （1）docker客户端和服务器，也称为docker引擎 （2）docker镜像 （3）Registry （4）Docker容器
+基本使用 docker info 查看docker程序是否存在，功能是否正常
+docker exec(docker run) docker run 命令提供了docker容器的创建到启动的功能 (1)-i:保证容器STDIN是开启的 (2)-t:为要撞见的容器分配一个伪tty终端 docker exec -it backend_jiapin /bi n/bash</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/basic/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/basic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/docker/docker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/docker/docker/</guid>
+      <description>title: docker使用心得 date: 2019-04-24 21:03:10 tags:
+ 使用心得 categories: docker   准备工作 1 前提条件 ubuntu内核版本高于 3.10 uname -r 
+2 安装docker 本文是基于ubuntu的，基于centos安装路径博客如下： centos windows
+wget -qO- https://get.docker.com/ | sh 当要以非root用户可以直接运行docker时，需要执行 sudo usermod -aG docker runoob 命令，然后重新登陆 启动docker服务
+sudo service docker start 测试运行hello world
+docker run hello-world 镜像加速 路径： /etc/docker/daemon.json 配置文件中加入(不存在则创建，我本地不存在此文件)：
+{ &amp;quot;registry-mirrors&amp;quot;: [&amp;quot;http://hub-mirror.c.163.com&amp;quot;] } 基础知识 hello world
+docker run ubuntu:15.10 /bin/echo &amp;quot;Hello world&amp;quot; (验证,echo是可以直接echo的，不必写/bin/echo) 参数解析 docker:docker的二进制执行文件 run:与前面docker组合来运行一个容器 ubuntu:15.10 : 指定要运行的镜像，Docker首先从本地主机上查找镜像是否存在，如果不存在，Docker 就会从镜像仓库 Docker Hub 下载公共镜像。 /bin/echo &amp;ldquo;Hello world&amp;rdquo;: 在启动的容器里执行的命令 运行交互式的容器 通过docker的两个参数 -i -t，让docker运行的容器实现&amp;quot;对话&amp;quot;的能力</description>
+    </item>
+    
+  </channel>
+</rss>

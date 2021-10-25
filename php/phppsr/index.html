@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>安装php sniffer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.87.0" />
+  <link href="" rel="alternate" type="application/rss+xml" title="" />
+  <link href="https://laurel-he.github.io//css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://laurel-he.github.io//css/hc.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  
+    
+    </head>
+    <body>
+<div class="nav-toggle"><i class="fa fa-bars fa-2x"></i> Herring Cove </div>
+      <div id = "wrapper">
+
+
+<div class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="https://laurel-he.github.io//"><p class="navbar-brand"></p></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+					
+					
+					<li><a href="https://laurel-he.github.io//python/">Python </a></li>
+					
+					<li><a href="https://laurel-he.github.io//learn/">主页 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//categories/">分类 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//acm/">刷题 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//database/">数据库 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//datastruct/">数据结构 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//tags/">标签 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//designpattern/">设计模式 </a></li>
+					
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+       
+       <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+					<img src="/images/avatar.jpg" />
+          <li class="sidebar-brand"><a href="https://laurel-he.github.io//"><h1 class="brand"></h1></a><h3></h3></li>
+          <hr />
+					
+						<li><a href="https://laurel-he.github.io//python/">Python </a></li>
+					
+						<li><a href="https://laurel-he.github.io//learn/">主页 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//categories/">分类 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//acm/">刷题 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//database/">数据库 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//datastruct/">数据结构 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//tags/">标签 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//designpattern/">设计模式 </a></li>
+					
+          <hr />
+          <div id="social-wrapper">
+           
+           
+           
+           
+         </div>
+       </ul>
+     </div>
+
+
+
+     <div class="container">
+
+
+  <div id="article">
+   <div class="article-title">安装php sniffer</div>
+   <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> 2019-04-07</small></p> <hr/>
+   <div class="post">
+     <h3 id="安装pear参考文档httpswwwcnblogscomhuangbxpphp_codesnifferhtml">安装pear（参考文档：https://www.cnblogs.com/huangbx/p/php_codesniffer.html）</h3>
+<hr>
+<ol>
+<li>从以下网址：http://pear.php.net/go-pear.phar下载代码，或直接另存为文件go-pear.phar</li>
+<li>运行php go-pear.phar（注意是否加了环境变量，没有可在php.exe目录下运行）</li>
+<li>如果报错“ERROR, enter the php.exe path”，输入选项13，选择php.exe所在目录</li>
+</ol>
+<h3 id="安装php-sniffer">安装php sniffer</h3>
+<hr>
+<ol>
+<li>运行命令“pear install PHP_CodeSniffer”</li>
+<li>配置phpstorm（其他IDE请自行Google），Settings-&gt;Languages &amp; Frameworks-&gt;php-&gt;Code Sniffer，选择刚才安装的phpcs.bat文件，validate 看看会不会报错</li>
+<li>如果校验报错，可能是找不到autoload路径，打开phpcs文件，更改include路径，例如我可以直接改成include_once &lsquo;/pear/PHP/CodeSniffer/autoload.php&rsquo;</li>
+<li>选择Settings-&gt;Inspections-&gt;PHP Code Sniffer validation，点击刷新按钮，选择&quot;PSR2&quot;</li>
+<li>此时如果有不规范的代码可以看到有phpcs的报错了</li>
+</ol>
+<h3 id="配置本地git">配置本地git</h3>
+<hr>
+<ol>
+<li>打开.git/hooks,新建文件pre-commit</li>
+<li>示例代码如下</li>
+</ol>
+<pre><code>#!/bin/bash
+#
+# check PHP code syntax error and standard with phpcs
+# author : star[github.com/star1989]
+# date : 2017-02-24
+PROJECT=$(git rev-parse --show-toplevel)
+cd $PROJECT
+SFILES=$(git diff --cached --name-only --diff-filter=ACMR HEAD | grep \\.php)
+TMP_DIR=$PROJECT.&quot;/tmp&quot;
+
+# Determine if a file list is passed
+if [ &quot;$#&quot; -ne 0 ]
+then
+    exit 0
+fi
+echo &quot;Checking PHP Lint...&quot;
+for FILE in $SFILES
+do
+#    echo &quot;php -l -d display_errors=0 ${FILE}&quot;
+#   echo &quot;git show :$FILE &gt; $TMP_DIR/$FILE&quot;
+    php -l -d display_errors=0 $FILE
+    if [ $? != 0  ]
+    then
+        echo &quot;Fix the error before commit.&quot;
+        exit 1
+    fi
+    FILES=&quot;$FILES $PROJECT/$FILE&quot;
+done
+
+if [ &quot;$FILES&quot; != &quot;&quot; ]
+then
+    echo &quot;Running Code Sniffer...&quot;
+
+    TMP_DIR=/tmp/$(uuidgen)
+    mkdir -p $TMP_DIR
+    for FILE in $SFILES
+    do
+        mkdir -p $TMP_DIR/$(dirname $FILE)
+        git show :$FILE &gt; $TMP_DIR/$FILE
+    done
+    phpcs --standard=PSR2 --encoding=utf-8 -n $TMP_DIR
+    PHPCS_ERROR=$?
+    rm -rf $TMP_DIR
+    if [ $PHPCS_ERROR != 0 ]
+    then
+        echo &quot;Fix the error before commit.&quot;
+        exit 1
+    fi
+fi
+
+exit $?
+</code></pre><ol start="3">
+<li>注意这行phpcs &ndash;standard=PSR2 &ndash;encoding=utf-8 -n $TMP_DIR，在运行git的终端下运行phpcs &ndash;help,如果可以运行这行才会生效</li>
+<li>此时提交不规范的代码就会报错</li>
+</ol>
+
+   </div>
+ </div>
+
+
+ <a href="https://github.com/laurel-he" class="twitter-share-button " data-size="small" data-count="none">Git hub</a>
+ <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+ <ul class="pager">
+      &nbsp;<li class="previous"><a href="https://laurel-he.github.io/database/mongo/mongo1/"> mongodb使用</a></li>
+      &nbsp;<li class="next"><a href="https://laurel-he.github.io/php/phpalg/"> PHP常见算法</a></li>
+</ul>
+
+
+
+    </ul>
+    </div>
+    <footer>
+
+        <p class="text-muted credit">&copy; 2021. All rights reserved. </p>
+    </footer>
+ 
+    <script src="https://laurel-he.github.io//js/jquery-1.10.2.min.js"></script>
+    <script src="https://laurel-he.github.io//js/bootstrap.min.js"></script>
+    <script src="https://laurel-he.github.io//js/bootstrap.js"></script>
+    <script type="text/javascript" src="https://laurel-he.github.io//js/hc.js"></script>
+</body>
+
+</html>
+

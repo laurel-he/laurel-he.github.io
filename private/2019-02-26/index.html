@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.87.0" />
+  <link href="" rel="alternate" type="application/rss+xml" title="" />
+  <link href="https://laurel-he.github.io//css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://laurel-he.github.io//css/hc.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  
+    
+    </head>
+    <body>
+<div class="nav-toggle"><i class="fa fa-bars fa-2x"></i> Herring Cove </div>
+      <div id = "wrapper">
+
+
+<div class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="https://laurel-he.github.io//"><p class="navbar-brand"></p></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+					
+					
+					<li><a href="https://laurel-he.github.io//python/">Python </a></li>
+					
+					<li><a href="https://laurel-he.github.io//learn/">主页 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//categories/">分类 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//acm/">刷题 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//database/">数据库 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//datastruct/">数据结构 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//tags/">标签 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//designpattern/">设计模式 </a></li>
+					
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+       
+       <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+					<img src="/images/avatar.jpg" />
+          <li class="sidebar-brand"><a href="https://laurel-he.github.io//"><h1 class="brand"></h1></a><h3></h3></li>
+          <hr />
+					
+						<li><a href="https://laurel-he.github.io//python/">Python </a></li>
+					
+						<li><a href="https://laurel-he.github.io//learn/">主页 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//categories/">分类 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//acm/">刷题 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//database/">数据库 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//datastruct/">数据结构 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//tags/">标签 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//designpattern/">设计模式 </a></li>
+					
+          <hr />
+          <div id="social-wrapper">
+           
+           
+           
+           
+         </div>
+       </ul>
+     </div>
+
+
+
+     <div class="container">
+
+
+  <div id="article">
+   <div class="article-title"></div>
+   <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> 0001-01-01</small></p> <hr/>
+   <div class="post">
+     <p>不能够开放</p>
+<h2 id="1-知识点">1 知识点</h2>
+<h4 id="添加日志">添加日志</h4>
+<p>引入logging包，引入log文件即可</p>
+<pre><code>logging.basicConfig(filename=&quot;/tmp/bi_dsvcs/app.log&quot;, level = logging.DEBUG)
+</code></pre><p>有四种级别INFO, DEBUG, WARNING, ERROR, CRITICAL, FATAL</p>
+<h4 id="获取月份列表">获取月份列表</h4>
+<p><strong>需求</strong>
+需要获取月份数据[&lsquo;00&rsquo;, &lsquo;01&rsquo;, &lsquo;02&rsquo;, &lsquo;03&rsquo;, &lsquo;04&rsquo;, &lsquo;05&rsquo;, &lsquo;06&rsquo;, &lsquo;07&rsquo;, &lsquo;08&rsquo;, &lsquo;09&rsquo;, &lsquo;10&rsquo;, &lsquo;11&rsquo;]
+<strong>原本解决办法</strong>
+直接定义了一个这样的数组
+<strong>新方法</strong>
+range()从0到13，再在一位数前补零
+<strong>实现代码</strong></p>
+<pre><code>theMonth = range(0, 13)
+monthKey = map(lambda x:'%02d' % x, theMonth)
+</code></pre><p><strong>新方法2</strong>
+[&quot;%02d&quot; % x for x in range(1,13)]</p>
+<h4 id="数据库导入导出">数据库导入导出</h4>
+<p>shell脚本里添加mysqldump导出数据
+导入数据为避免更改表结构，直接mysql -u……连接到库，执行insert操作</p>
+<h4 id="gunicorn配置">gunicorn配置</h4>
+<p>使用supervisor配置gunicorn，我本地虚拟机配置如下</p>
+<pre><code>[program:bi_dsvcs]
+command=python /usr/bin/gunicorn -c /spython/bi_dsvcs/gunicorn.cnf dsvcs:app
+process_name=%(program_name)s/%(process_num)d
+directory=/spython/bi_dsvcs
+numprocs=1
+autostart=true
+autorestart=true
+user=developer
+redirect_stderr=true
+stdout_logfile=/tmp/bi_dsvcs.interface.info_stdout.log
+stderr_logfile=/tmpbi_dsvcs.interface.error_stderr.loga
+</code></pre><p>##2 注意事项</p>
+<h4 id="group_concat">group_concat</h4>
+<p>GROUP_CONCAT()会截断数据，限制长度为1024字节</p>
+<h4 id="dict">dict</h4>
+<p>dict不可以直接添加二维数据,需要判断第一维是否已经存在</p>
+<pre><code>def addtwodimdict(thedict, key_a, key_b, val): 
+    if key_a in adic:
+        thedict[key_a].update({key_b: val})
+    else:
+        thedict.update({key_a:{key_b: val}})
+</code></pre><h4 id="list的append和extend区别">list的append()和extend()区别</h4>
+<p>(1)append()
+接受任意数据类型添加到list尾部
+(2)extend()
+只接受list，将这个list每个元素添加到list中</p>
+<h4 id="部署后404但是代码确实已部署上去">部署后404但是代码确实已部署上去</h4>
+<p>supervisor可能没有重启，重启supervisor或者直接bi_dsvcs/ ./dsvcs restart</p>
+
+   </div>
+ </div>
+
+
+ <a href="https://github.com/laurel-he" class="twitter-share-button " data-size="small" data-count="none">Git hub</a>
+ <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+ <ul class="pager">
+      &nbsp;<li class="previous"><a href="https://laurel-he.github.io/private/20190213/"> </a></li>
+      &nbsp;<li class="next"><a href="https://laurel-he.github.io/learn/yii/"> </a></li>
+</ul>
+
+
+
+    </ul>
+    </div>
+    <footer>
+
+        <p class="text-muted credit">&copy; 2021. All rights reserved. </p>
+    </footer>
+ 
+    <script src="https://laurel-he.github.io//js/jquery-1.10.2.min.js"></script>
+    <script src="https://laurel-he.github.io//js/bootstrap.min.js"></script>
+    <script src="https://laurel-he.github.io//js/bootstrap.js"></script>
+    <script type="text/javascript" src="https://laurel-he.github.io//js/hc.js"></script>
+</body>
+
+</html>
+

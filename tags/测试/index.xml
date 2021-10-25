@@ -8,10 +8,10 @@
     <lastBuildDate>Tue, 10 Dec 2019 12:34:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/tags/%E6%B5%8B%E8%AF%95/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>测试</title>
-      <link>https://laurel-he.github.io/post/unittest/</link>
+      <link>https://laurel-he.github.io/learn/unittest/</link>
       <pubDate>Tue, 10 Dec 2019 12:34:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/unittest/</guid>
+      <guid>https://laurel-he.github.io/learn/unittest/</guid>
       <description>单元测试 mock 接口测试 stub mock fakeserver </description>
     </item>
     

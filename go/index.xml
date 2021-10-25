@@ -18,5 +18,17 @@ go语言用途 Go 语言被设计成一门应用于搭载 Web 服务器，存储
 简单的go语言程序 package main import &amp;#34;fmt&amp;#34; func main() { var age, name string = &amp;#34;18&amp;#34;, &amp;#34;Joe&amp;#34; var res = fmt.Sprintf(&amp;#34;my name is %s, and my age is %s&amp;#34;, name, age) fmt.Println(res) } func init() { fmt.Println(&amp;#34;test init&amp;#34;) } func varTest() { var funcName, funcTime string = &amp;#34;varTest&amp;#34;, &amp;#34;now&amp;#34; fmt.Println(funcName + funcTime) } 使用go run来执行 使用go build 来生成二进制文件</description>
     </item>
     
+    <item>
+      <title>使用go编写webassembly</title>
+      <link>https://laurel-he.github.io/go/webassembly_go_1/</link>
+      <pubDate>Tue, 10 Dec 2019 12:34:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/go/webassembly_go_1/</guid>
+      <description>使用go编写webassembly并在浏览器执行 参考博客 用go写WebAssembly入门
+下载安装 go
+编写测试文件hello.go package main import &amp;quot;fmt&amp;quot; func main() { fmt.Println(&amp;quot;Hello World!&amp;quot;) } 生成wasm文件  GOARCH=wasm GOOS=js go build -o hello.wasm hello.go 在windows下需要先设置环境变量：$env:GOARCH=&amp;quot;wasm&amp;quot;;$env:GOOS=&amp;quot;js&amp;quot;;
+添加依赖 cp $(go env GOROOT)/misc/wasm/wasm_exec.{html,js} . 添加一个测试http服务器 //http.go package main import ( &amp;quot;flag&amp;quot; &amp;quot;log&amp;quot; &amp;quot;net/http&amp;quot; &amp;quot;strings&amp;quot; ) var ( listen = flag.String(&amp;quot;listen&amp;quot;, &amp;quot;:8080&amp;quot;, &amp;quot;listen address&amp;quot;) dir = flag.String(&amp;quot;dir&amp;quot;, &amp;quot;.&amp;quot;, &amp;quot;directory to serve&amp;quot;) ) func main() { flag.Parse() log.Printf(&amp;quot;listening on %q...&amp;quot;, *listen) log.Fatal(http.ListenAndServe(*listen, http.HandlerFunc(func(resp http.ResponseWriter, req *http.</description>
+    </item>
+    
   </channel>
 </rss>

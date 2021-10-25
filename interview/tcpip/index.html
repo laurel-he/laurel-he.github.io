@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.87.0" />
+  <link href="" rel="alternate" type="application/rss+xml" title="" />
+  <link href="https://laurel-he.github.io//css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://laurel-he.github.io//css/hc.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  
+    
+    </head>
+    <body>
+<div class="nav-toggle"><i class="fa fa-bars fa-2x"></i> Herring Cove </div>
+      <div id = "wrapper">
+
+
+<div class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="https://laurel-he.github.io//"><p class="navbar-brand"></p></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+					
+					
+					<li><a href="https://laurel-he.github.io//python/">Python </a></li>
+					
+					<li><a href="https://laurel-he.github.io//learn/">主页 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//categories/">分类 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//acm/">刷题 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//database/">数据库 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//datastruct/">数据结构 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//tags/">标签 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//designpattern/">设计模式 </a></li>
+					
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+       
+       <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+					<img src="/images/avatar.jpg" />
+          <li class="sidebar-brand"><a href="https://laurel-he.github.io//"><h1 class="brand"></h1></a><h3></h3></li>
+          <hr />
+					
+						<li><a href="https://laurel-he.github.io//python/">Python </a></li>
+					
+						<li><a href="https://laurel-he.github.io//learn/">主页 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//categories/">分类 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//acm/">刷题 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//database/">数据库 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//datastruct/">数据结构 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//tags/">标签 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//designpattern/">设计模式 </a></li>
+					
+          <hr />
+          <div id="social-wrapper">
+           
+           
+           
+           
+         </div>
+       </ul>
+     </div>
+
+
+
+     <div class="container">
+
+
+  <div id="article">
+   <div class="article-title"></div>
+   <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> 0001-01-01</small></p> <hr/>
+   <div class="post">
+     <h1 id="给小黄鸭讲明白tcpip协议">给小黄鸭讲明白TCP/IP协议</h1>
+<h2 id="前言">前言</h2>
+<p>我上家公司的CTO跟我说过一个道理，一件事情如果你能给一个从来没接触过的小学生讲明白，那么你就能够理解了。 <br>
+所以我决定用这篇文章记录一下，假设本文有读者，且读者是一个技术小白，那么希望他看完本文后能理解TCP/IP协议。 <br>
+现在很多的招聘要求都会要求熟悉TCP/IP协议，那么TCP/IP协议到底是什么？为什么要熟悉这个东西？这个东西有什么用？怎么去用呢？在什么样的场景会用到？如果这些问题能够顺利的解答，那么基本就可以说是“熟悉”了。</p>
+<h2 id="基础知识">基础知识</h2>
+<p>在了解TCP/IP协议之前必须了解一些基础知识，比如什么是OSI模型，甚至什么是协议，这样发散面就非常广了，写个几万字也不在话下，这里就只简单的介绍一下，更详细的了解需要<strong>看完后</strong>自行百度。</p>
+<h3 id="osi模型">OSI模型</h3>
+<p>首先百度百科是这样解释的</p>
+<blockquote>
+<p>开放式系统互联通信参考模型（英语：Open System Interconnection Reference Model，缩写为 OSI），简称为OSI模型，是ISO组织在1985年研究的网络互连模型。该体系结构标准定义了网络互连的七层框架（物理层、数据链路层、网络层、传输层、会话层、表示层和应用层），即OSI开放系统互连参考模型。</p>
+</blockquote>
+<p>这个定义乍一看真就乍一看，模模糊糊的，其实可以做一个简单的理解。这个模型的作用其实是做个分类，因为计算机网络是在是太复杂了，复杂到甚至可以作为一个学科来学习。 <br>
+对于一个十分复杂的东西，要想搞明白，那就得拆解，将复杂的问题拆解成小问题来看，这个模型就可以理解为一种“拆解”。 <br>
+每一层在计算机网络中负责一个区域，有对应的一些设备，一些协议。
+这个模型把整个网络互联分为了七层架构，相信计算机专业或者对计算机有了解的小伙伴一下就能说出哪七层，那么能一下列举出来这七层架构的含义、作用，以及对应的设备吗？我相信很多人是说不清楚的，这里从下至上简单介绍一下</p>
+<h4 id="物理层">物理层</h4>
+<blockquote>
+<p>参考模型中的最底层，物理层的主要功能是利用传输介质(网线、无线电波)为数据链路层提供物理联接，负责数据流的物理传输工作。物理层传输的基本单位是比特流，即0和1</p>
+</blockquote>
+<p>简单理解，这就是网络连接的基础，比如网卡，中继器，集线器，这些都是物理层的设备。物理层传输介质：双绞线，光纤，无线 <br>
+物理层的主要功能是利用传输介质为数据链路层提供物理连接，负责数据流的物理传输工作。</p>
+<h4 id="数据链路层">数据链路层</h4>
+<blockquote>
+<p>将比特组合成字节，再将字节组合成帧，基于mac进行物理地址寻址</p>
+</blockquote>
+<p>数据链路层（Data Link Layer）是OSI模型的第二层，负责建立和管理节点间的链路。该层的主要功能是：通过各种控制协议，将有差错的物理信道变为无差错的、能可靠传输数据帧的数据链路。 <br>
+一般的网卡都能实现物理层和数据链路层两层的功能 <br>
+主要设备：二层交换机，网桥
+####网络层</p>
+<blockquote>
+<p>把从传输层接收到的数据报文封装成包再向下传送到数据链路层，并通过路由选择算法为数据包选择最适当的路径</p>
+</blockquote>
+<p>通过IP寻址来建立两个节点之间的连接,网络层涉及的协议有IP、IPX等，网络层的设备必须能识别出网络层的地址，如路由器、三层交换机等都可以根据IP地址做出路径的选择，他们都属于网络层的设备。     <br>
+主要设备：路由器</p>
+<h4 id="传输层">传输层</h4>
+<blockquote>
+<p>实现两个用户进程间端到端的可靠通信，在数据传输的过程中可能会出现各种异常，比如数据包丢失、数据损坏等等，传输层就承担了保证数据传输正确的功能，如流量控制、数据重发等，主要协议有TCP、UDP</p>
+</blockquote>
+<p>这一层中，接收上层传过来的socket数据，然后进行数据的封包，可能根据socket设置的通信协议，封装成UDP或者TCP的包，在封包过程中还会将端口号进行封装，例如TCP协议下主要用到的一些端口，再进入下一层进行IP协议的封包，传输到另外的端口 <br>
+端到端通信，可靠的连接方式(TCP:三次握手，重传机制)/不可靠的传输方式(UDP:无连接，尽最大努力交付)</p>
+<h4 id="会话层">会话层</h4>
+<blockquote>
+<p>建立、维护、管理会话连接</p>
+</blockquote>
+<p>会话层协议跟踪计算机之间的对话框，这些对话框也称为会话。主要协议有ssl(安全套接字层协议)、RPC(远程过程调用协议)</p>
+<h4 id="表示层">表示层</h4>
+<blockquote>
+<p>对数据进行编解码、解压缩、加解密</p>
+</blockquote>
+<p>电脑从网卡收到一串数据时，这些数据在电脑中都是都是二进制的格式，我们人类是看不懂二进制的，就需要表示层帮忙将这些二进制转换成我们能够识别的数据。</p>
+<p>所以表示层的基本作用就是对数据格式进行编译，对收到或发出的数据根据应用层的特征进行处理，如处理为文字、图片、音频、视频、文档等，还可以对压缩文件进行解压缩、对加密文件进行解密等。</p>
+<p>只有在表示层将数据处理完成后，才能将转格式编译后的数据呈现在应用程序中，让用户能够看懂。</p>
+<h4 id="应用层">应用层</h4>
+<blockquote>
+<p>面向用户的一层，也可视为为用户提供常用的应用程序，例如电子邮件，上网浏览等网络服务都是应用层程序。</p>
+</blockquote>
+<p>我们在使用各种网络应用程序时，都是内置有应用层协议的。比如，IE浏览器，使用的是应用层的HTTP协议；QQ使用的应用层协议是OICQ；Outlook使用收发邮件的SMTP、POP3协议</p>
+<h2 id="tcpip协议是什么">TCP/IP协议是什么</h2>
+<p>对应图</p>
+<p><img src="../images/interview/osi.png" alt="osi模型对应图">
+基于TCP/IP的参考模型将协议分为四个层次，分别是链路层，网络层，应用层
+TCP/IP协议是一系列协议栈的总和，而TCP/IP协议采用的是四层结构，分别是应用层、传输层、网络层和链路层</p>
+<p>应用层（应用层、表示层、会话层）：HTTP、FTP、DNS、SMTP、POP3、Telnet、TFTP、Ping</p>
+<p>主机到主机层（传输层）：TCP、UDP</p>
+<p>互联网层（网络层）：IP</p>
+<p>网络接口层（数据链路层、物理层）：Ethernet、802.3、PPP、</p>
+
+   </div>
+ </div>
+
+
+ <a href="https://github.com/laurel-he" class="twitter-share-button " data-size="small" data-count="none">Git hub</a>
+ <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+ <ul class="pager">
+      &nbsp;<li class="previous"><a href="https://laurel-he.github.io/learn/kafka/"> </a></li>
+      &nbsp;<li class="next"><a href="https://laurel-he.github.io/designpattern/phpallpattern/02/"> </a></li>
+</ul>
+
+
+
+    </ul>
+    </div>
+    <footer>
+
+        <p class="text-muted credit">&copy; 2021. All rights reserved. </p>
+    </footer>
+ 
+    <script src="https://laurel-he.github.io//js/jquery-1.10.2.min.js"></script>
+    <script src="https://laurel-he.github.io//js/bootstrap.min.js"></script>
+    <script src="https://laurel-he.github.io//js/bootstrap.js"></script>
+    <script type="text/javascript" src="https://laurel-he.github.io//js/hc.js"></script>
+</body>
+
+</html>
+

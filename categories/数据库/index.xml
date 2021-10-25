@@ -24,10 +24,10 @@ mysql命令行连接参数 经常使用的参数:
     
     <item>
       <title>mongodb学习记录</title>
-      <link>https://laurel-he.github.io/post/mongocomplex/</link>
+      <link>https://laurel-he.github.io/database/mongo/mongocomplex/</link>
       <pubDate>Sun, 20 Oct 2019 18:27:44 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/mongocomplex/</guid>
+      <guid>https://laurel-he.github.io/database/mongo/mongocomplex/</guid>
       <description>参考文档 http://www.mongoing.com/docs/reference/operator/aggregation/interface.html https://www.cnblogs.com/zhoujie/p/mongo1.html https://www.docs4dev.com/docs/zh/mongodb/v3.6/reference/tutorial-text-search-in-aggregation.html
 mongodb精准匹配 假设有需求如下：数据为多层级的数组，需要精准匹配到某一个层级，并进行更新或新增等操作，如何实现？
 实现方式 当Mongodb版本大于3.6.1，实现将会非常简单，因为mongodb3.6.1以上可以直接通过语句来实现精准匹配。 但由于实际场景中版本不支持，当匹配超过一级则会报错：Too many positional (i.e. &amp;lsquo;$&#39;) elements found in path &amp;lsquo;files.$.testConstruct.params.list.$.testRange&amp;rsquo; 当版本大于3.6.1，举例：
@@ -66,10 +66,10 @@ CPU瓶颈 第一种：SQL问题，如SQL中包含join，group by，order by，�
     
     <item>
       <title>mongodb使用</title>
-      <link>https://laurel-he.github.io/post/mongo1/</link>
+      <link>https://laurel-he.github.io/database/mongo/mongo1/</link>
       <pubDate>Tue, 02 Apr 2019 18:27:44 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/mongo1/</guid>
+      <guid>https://laurel-he.github.io/database/mongo/mongo1/</guid>
       <description>基础  列出所有数据库:show dbs; 列出所有表：show tables;或show collections; 查询所有数据：db.taname.find().pretty(); 查询指定列所有数据：db.tbname.find({},{col1:1,col2:2,&amp;hellip;}).pretty(); 根据条件查询所有数据：db.tbname.find({name:&amp;ldquo;test&amp;rdquo;},{col1:1,col2:1}).pretty(); 查询结果不包含指定字段：db.tbname.find({},{status:0,col2:0}).pretty();  查询 1 查询所有数据 db.tbname.find().pretty();</description>
     </item>
     
@@ -94,10 +94,10 @@ explain select * from news; 只查询一行数据： 查询多行数据：执行
     
     <item>
       <title>Hbase基础命令</title>
-      <link>https://laurel-he.github.io/post/20190227/</link>
+      <link>https://laurel-he.github.io/learn/hbase_01/</link>
       <pubDate>Thu, 28 Feb 2019 11:03:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/20190227/</guid>
+      <guid>https://laurel-he.github.io/learn/hbase_01/</guid>
       <description>Hbase基础命令 启动和停止Hbase 启动 hbase/bin ./start-hbase.sh 关闭 hbase/bin ./stop-hbase.sh
 使用Hbase 连接Hbase bin/hbase shell 创建表 create &amp;lsquo;test&amp;rsquo; （创建表需要添加列簇） create &amp;lsquo;表名&amp;rsquo; &amp;lsquo;列簇名1&amp;rsquo; &amp;lsquo;列簇名2&amp;rsquo; …… 添加数据 put &amp;lsquo;表名&amp;rsquo; &amp;lsquo;行名&amp;rsquo; &amp;lsquo;列簇名称&amp;rsquo; &amp;lsquo;value&amp;rsquo;（当列簇只有一列） put &amp;lsquo;表名&amp;rsquo; &amp;lsquo;行名&amp;rsquo; &amp;lsquo;列簇名称：列名称&amp;rsquo; &amp;lsquo;value&amp;rsquo; 查看表 list: 查看所有表 list &amp;lsquo;tablename&amp;rsquo; ： 查看表名为tablename的表 删除表 disable &amp;lsquo;表名&amp;rsquo;(对应enable &amp;lsquo;明白&amp;rsquo;) drop &amp;lsquo;表名&amp;rsquo;
 配置 ####基础配置 conf/hbase-site.xml

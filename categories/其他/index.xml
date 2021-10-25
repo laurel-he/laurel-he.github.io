@@ -8,10 +8,10 @@
     <lastBuildDate>Thu, 12 Aug 2021 16:10:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/%E5%85%B6%E4%BB%96/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>hugo搭建github个人博客</title>
-      <link>https://laurel-he.github.io/post/hugo/</link>
+      <link>https://laurel-he.github.io/learn/hugo/</link>
       <pubDate>Thu, 12 Aug 2021 16:10:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/hugo/</guid>
+      <guid>https://laurel-he.github.io/learn/hugo/</guid>
       <description>之前个人博客是使用的hexo搭建的，经常会出各种bug，而且时不时的升级，导致npm 也要对应，因此放弃，使用hugo,hugo是基于go语言开发的。
 步骤 下载安装 非常简单，略（如果是windows需要加入环境变量）
 命令 查看版本
@@ -24,10 +24,10 @@ Taxonomies </description>
     
     <item>
       <title>各方法实现微信机器人对比</title>
-      <link>https://laurel-he.github.io/post/wechat/</link>
+      <link>https://laurel-he.github.io/learn/wechat/</link>
       <pubDate>Thu, 28 Mar 2019 14:03:27 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/wechat/</guid>
+      <guid>https://laurel-he.github.io/learn/wechat/</guid>
       <description>wxpy 直接排除，只有极少数人的微信可以使用，无法用来实现机器人；
 图灵机器人 图灵机器人可以接入微信，也可以实现群管理，但是是通过第三方来实现的
    功能 详解 是否必要     接入微信公众号 群自动回复 是   主动触发回复 主动往群里发送消息 是   定时发送 定时给群发送消息 是    微群管家 图灵机器人推荐的微信个人号接入第三方插件，但只有windows版本可用，不适用于mac版本开发，但可以实现自定义开发，文档比较全面且免费，可以作为备选方案 功能介绍：

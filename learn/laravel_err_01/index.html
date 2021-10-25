@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>laravel配置params选项如MYSQL_ATTR_USE_BUFFERED_QUERY等</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.87.0" />
+  <link href="" rel="alternate" type="application/rss+xml" title="" />
+  <link href="https://laurel-he.github.io//css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://laurel-he.github.io//css/hc.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  
+    
+    </head>
+    <body>
+<div class="nav-toggle"><i class="fa fa-bars fa-2x"></i> Herring Cove </div>
+      <div id = "wrapper">
+
+
+<div class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="https://laurel-he.github.io//"><p class="navbar-brand"></p></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+					
+					
+					<li><a href="https://laurel-he.github.io//python/">Python </a></li>
+					
+					<li><a href="https://laurel-he.github.io//learn/">主页 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//categories/">分类 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//acm/">刷题 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//database/">数据库 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//datastruct/">数据结构 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//tags/">标签 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//designpattern/">设计模式 </a></li>
+					
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+       
+       <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+					<img src="/images/avatar.jpg" />
+          <li class="sidebar-brand"><a href="https://laurel-he.github.io//"><h1 class="brand"></h1></a><h3></h3></li>
+          <hr />
+					
+						<li><a href="https://laurel-he.github.io//python/">Python </a></li>
+					
+						<li><a href="https://laurel-he.github.io//learn/">主页 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//categories/">分类 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//acm/">刷题 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//database/">数据库 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//datastruct/">数据结构 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//tags/">标签 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//designpattern/">设计模式 </a></li>
+					
+          <hr />
+          <div id="social-wrapper">
+           
+           
+           
+           
+         </div>
+       </ul>
+     </div>
+
+
+
+     <div class="container">
+
+
+  <div id="article">
+   <div class="article-title">laravel配置params选项如MYSQL_ATTR_USE_BUFFERED_QUERY等</div>
+   <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> 2021-09-30</small></p> <hr/>
+   <div class="post">
+     <p>以下内容已同步至CSDN <br>
+绝了，laravel使用的是illuminate/database作为orm，我们用的swoole，在使用过程中报了如下错误：</p>
+<pre><code>SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffered queries are active.  Consider using PDOStatement::fetchAll()
+</code></pre><p>这个错误在网上一搜就能找到解决办法，就是给pdo加上一个params,&lsquo;MYSQL_ATTR_USE_BUFFERED_QUERY&rsquo; =&gt; true,嚯，但是laravel和illuminate/database的文档都没有说怎么加这个params。。。真就大无语事件发生。我还是不死心网上各种搜解决办法，当然是一无所获，不然也不会有这篇博客了。原本想省事偷懒的我终究还是不得不去看源码，终于让我找到了这个东西：
+<img src="../images/php/01.png" alt="获取信息">
+<img src="../images/php/02.png" alt="设置配置">
+经过分析，这个玩意儿就是把配置中的options加载进去，虽然按照正常人的思维，这玩意儿要是叫params我直接就能试出来，根本不用看源码了的说。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">    <span style="color:#e6db74">/**
+</span><span style="color:#e6db74">     * Get the PDO options based on the configuration.
+</span><span style="color:#e6db74">     *
+</span><span style="color:#e6db74">     * @param  array  $config
+</span><span style="color:#e6db74">     * @return array
+</span><span style="color:#e6db74">     */</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getOptions</span>(<span style="color:#66d9ef">array</span> $config)
+    {
+        $options <span style="color:#f92672">=</span> $config[<span style="color:#e6db74">&#39;options&#39;</span>] <span style="color:#f92672">??</span> [];
+
+        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">array_diff_key</span>($this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">options</span>, $options) <span style="color:#f92672">+</span> $options;
+    }
+</code></pre></div><p>所以说，对于使用illuminate/database的框架来说，给pdo加选项就这这样的</p>
+<pre><code>'default' =&gt; [
+            'fetch'     =&gt; PDO::FETCH_CLASS,
+            'driver'    =&gt; 'mysql',
+            'host'      =&gt; 'localhost',
+            'port'      =&gt; '3306',
+            'username'  =&gt; '',
+            'password'  =&gt; '',
+            'database'  =&gt; 'test',
+            'charset'   =&gt; 'latin1',
+            'collation' =&gt; 'latin1_general_ci',
+            'prefix'    =&gt; '',
+            'strict'    =&gt; false,
+            // 数据库连接参数
+            'options'         =&gt; [
+                'MYSQL_ATTR_USE_BUFFERED_QUERY' =&gt; true,
+            ],
+        ],
+</code></pre><p>当然，你要是想也可以直接用原生的方法pdo连接，自然就不存在什么配置不好搞的问题了</p>
+
+   </div>
+ </div>
+
+
+ <a href="https://github.com/laurel-he" class="twitter-share-button " data-size="small" data-count="none">Git hub</a>
+ <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+ <ul class="pager">
+      &nbsp;<li class="previous"><a href="https://laurel-he.github.io/php/pcntl/"> pcntl</a></li>
+     
+</ul>
+
+
+
+    </ul>
+    </div>
+    <footer>
+
+        <p class="text-muted credit">&copy; 2021. All rights reserved. </p>
+    </footer>
+ 
+    <script src="https://laurel-he.github.io//js/jquery-1.10.2.min.js"></script>
+    <script src="https://laurel-he.github.io//js/bootstrap.min.js"></script>
+    <script src="https://laurel-he.github.io//js/bootstrap.js"></script>
+    <script type="text/javascript" src="https://laurel-he.github.io//js/hc.js"></script>
+</body>
+
+</html>
+

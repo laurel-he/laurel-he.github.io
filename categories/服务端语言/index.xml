@@ -8,10 +8,10 @@
     <lastBuildDate>Thu, 11 Apr 2019 15:23:44 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E8%AF%AD%E8%A8%80/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Laravel 日志系统</title>
-      <link>https://laurel-he.github.io/post/log/</link>
+      <link>https://laurel-he.github.io/php/laravel/log/</link>
       <pubDate>Thu, 11 Apr 2019 15:23:44 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/log/</guid>
+      <guid>https://laurel-he.github.io/php/laravel/log/</guid>
       <description>1 （自己摸索版本）5.2 1 定义路径 .env配置文件添加日志路径，例如
 LOG_PATH=/tmp/paytest 2 启动文件添加日志路径 $app-&amp;gt;configureMonologUsing(function($logger){ $logger-&amp;gt;pushHandler(new \Monolog\Handler\RotatingFileHandler(env(&amp;#39;LOG_PATH&amp;#39;).&amp;#39;.log&amp;#39;), 10); return $logger; }); 2 官方文档 1 异常处理 介绍 当您启动一个新的 Laravel 项目时，错误和异常处理就已为您配置。 应用程序触发的所有异常都被 App\Exceptions\Handler 类记录下来，然后渲染给用户。 我们将在本文档中深入介绍此类。 配置 （1）config/app.php 文件的 debug 选项，决定了是否向用户显示错误信息。默认情况下，此选项设置为存储在 .env 文件中的 APP_DEBUG 环境变量中。 （2）Laravel 支持 single 、daily 、 syslog 和 errorlog 日志模式。要配置 Laravel 使用的存储机制，应该修改 config/app.php 配置文件中的 log 选项。例如，如果您希望使用每日一个日志文件而不是单个文件，则应将 app 配置文件中的 log 值设置为 daily 日志等级 使用 Monolog 时，日志消息可能具有不同的日志等级。默认情况下，Laravel 将所有日志级别写入存储。但是，在生产环境中，您可能希望通过将 log_level 选项添加到 app.php 配置文件中来配置应记录的最低日志等级。
 一旦配置了此选项，Laravel 将记录大于或等于指定日志等级的所有级别。例如，默认将 log_level 设置为 error 那么将会记录 error , critical , alert 和 emergency 日志信息：</description>
@@ -19,10 +19,10 @@ LOG_PATH=/tmp/paytest 2 启动文件添加日志路径 $app-&amp;gt;configureMon
     
     <item>
       <title>重新实现monthly步骤</title>
-      <link>https://laurel-he.github.io/post/monthly/</link>
+      <link>https://laurel-he.github.io/private/monthly/</link>
       <pubDate>Mon, 25 Mar 2019 09:41:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/monthly/</guid>
+      <guid>https://laurel-he.github.io/private/monthly/</guid>
       <description>1 bi新建已收、已付、应收、应付表 CREATE TABLE `order_product_set_pay`( `id` int(10) unsigned NOT NULL, `order_product_id` int(10) unsigned NOT NULL, `parent_order_product_id` int(10) unsigned DEFAULT &#39;0&#39; COMMENT &#39;parent order_product_id&#39;, `has_settlement` decimal(10,2) NOT NULL DEFAULT &#39;0.00&#39;, `should_settlement` decimal(10,2) NOT NULL DEFAULT &#39;0.00&#39;, `has_pay` decimal(10,2) NOT NULL DEFAULT &#39;0.00&#39;, `should_pay` decimal(10,2) NOT NULL DEFAULT &#39;0.00&#39;, `settlement_pay_time` timestamp NOT NULL DEFAULT &#39;0000-00-00 00:00:00&#39;, `pay_pay_status` varchar(255) NOT NULL DEFAULT &#39;Pending&#39;, `pay_pay_time` timestamp NOT NULL DEFAULT &#39;0000-00-00 00:00:00&#39;, PRIMARY KEY (`id`) ) ENGINE=InnoDB DEFAULT CHARSET=utf8; alter table `order_product_set_pay` drop primary key; alter table `order_product_set_pay` add `settlement_id` int(10) unsigned NOT NULL; 2 从bi表中查询数据 1 已收 （总收）/比例 比例 =</description>
     </item>
     
@@ -115,10 +115,10 @@ num = 1; for i in range(1,5): for j in range(1,5): for k in range(1,5): if(i != 
     
     <item>
       <title>fastadmin自定义角色组</title>
-      <link>https://laurel-he.github.io/post/test-my-site/</link>
+      <link>https://laurel-he.github.io/php/test-my-site/</link>
       <pubDate>Thu, 31 Jan 2019 17:36:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/test-my-site/</guid>
+      <guid>https://laurel-he.github.io/php/test-my-site/</guid>
       <description>之前使用fastadmin，自定义角色组，发现编辑/删除/修改等等权限可以直接权限管理中选择，然后用不同的角色登陆，会显示对应的权限按钮。此时有一个新的需求就是增加审核和批量审核，并且也增加对应的权限。
  添加按钮 先不写功能，在对应的位置上加上审核按钮。在顶头位置的批量审核需要得到的样式如下：
  原先的创建按钮方法为： {:build_toolbar(&amp;lsquo;refresh,edit,checkall&amp;rsquo;)} 有时候不使用buid_toolbar来创建按钮，而是直接使用的

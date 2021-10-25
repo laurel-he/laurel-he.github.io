@@ -133,5 +133,17 @@ a.创建一个命令接口： 接口定义接口名称，需要实现的操作�
 行为型 在软件工程中，行为设计模式是识别对象之间的通用通信模式并实现这些模式的设计模式。 通过这样做，这些模式增加了执行此通信的灵活性。 行为型设计模式用于处理类的对象间通信：</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>https://laurel-he.github.io/designpattern/phpallpattern/02/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/designpattern/phpallpattern/02/</guid>
+      <description>几种工厂模式 包括抽象工厂模式，工厂方法模式，简单工厂模式和静态工厂模式在内，都是属于创建型模式， 那么它们都是什么意思呢？
+抽象工厂模式 在不指定具体类的情况下创建一系列相关或依赖对象。 通常创建的类都实现相同的接口。 抽象工厂的客户并不关心这些对象是如何创建的，它只是知道它们是如何一起运行的。
+自然语言描述 抽象工厂模式是属于创造型模式，也就是说是用来创建类的。 可以想象成有一个工厂(Factory)，可以生产桌子(table)，椅子(chair)等等家具（furniture），它们都有共同的流程：组装（assemble） 现在要组装一个桌子，只需要拿到桌子的配件进行组装
+举例 interface Furniture { public function assemble(); } class Table implements Furniture { public function assemble() { echo &amp;#39;__ This function will assemble a table...&amp;#39;; } } class Chair implements Furniture { public function assemble() { echo &amp;#39;__ This function will &amp;#39;; } } 实验：实现一个用到所有设计模式的项目</description>
+    </item>
+    
   </channel>
 </rss>

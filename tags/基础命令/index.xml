@@ -8,10 +8,10 @@
     <lastBuildDate>Thu, 28 Feb 2019 11:03:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/tags/%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hbase基础命令</title>
-      <link>https://laurel-he.github.io/post/20190227/</link>
+      <link>https://laurel-he.github.io/learn/hbase_01/</link>
       <pubDate>Thu, 28 Feb 2019 11:03:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/20190227/</guid>
+      <guid>https://laurel-he.github.io/learn/hbase_01/</guid>
       <description>Hbase基础命令 启动和停止Hbase 启动 hbase/bin ./start-hbase.sh 关闭 hbase/bin ./stop-hbase.sh
 使用Hbase 连接Hbase bin/hbase shell 创建表 create &amp;lsquo;test&amp;rsquo; （创建表需要添加列簇） create &amp;lsquo;表名&amp;rsquo; &amp;lsquo;列簇名1&amp;rsquo; &amp;lsquo;列簇名2&amp;rsquo; …… 添加数据 put &amp;lsquo;表名&amp;rsquo; &amp;lsquo;行名&amp;rsquo; &amp;lsquo;列簇名称&amp;rsquo; &amp;lsquo;value&amp;rsquo;（当列簇只有一列） put &amp;lsquo;表名&amp;rsquo; &amp;lsquo;行名&amp;rsquo; &amp;lsquo;列簇名称：列名称&amp;rsquo; &amp;lsquo;value&amp;rsquo; 查看表 list: 查看所有表 list &amp;lsquo;tablename&amp;rsquo; ： 查看表名为tablename的表 删除表 disable &amp;lsquo;表名&amp;rsquo;(对应enable &amp;lsquo;明白&amp;rsquo;) drop &amp;lsquo;表名&amp;rsquo;
 配置 ####基础配置 conf/hbase-site.xml

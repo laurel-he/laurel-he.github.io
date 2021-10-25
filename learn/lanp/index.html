@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>virtualbox搭建LANP环境（ubuntu）</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.87.0" />
+  <link href="" rel="alternate" type="application/rss+xml" title="" />
+  <link href="https://laurel-he.github.io//css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://laurel-he.github.io//css/hc.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  
+    
+    </head>
+    <body>
+<div class="nav-toggle"><i class="fa fa-bars fa-2x"></i> Herring Cove </div>
+      <div id = "wrapper">
+
+
+<div class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="https://laurel-he.github.io//"><p class="navbar-brand"></p></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+					
+					
+					<li><a href="https://laurel-he.github.io//python/">Python </a></li>
+					
+					<li><a href="https://laurel-he.github.io//learn/">主页 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//categories/">分类 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//acm/">刷题 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//database/">数据库 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//datastruct/">数据结构 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//tags/">标签 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//designpattern/">设计模式 </a></li>
+					
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+       
+       <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+					<img src="/images/avatar.jpg" />
+          <li class="sidebar-brand"><a href="https://laurel-he.github.io//"><h1 class="brand"></h1></a><h3></h3></li>
+          <hr />
+					
+						<li><a href="https://laurel-he.github.io//python/">Python </a></li>
+					
+						<li><a href="https://laurel-he.github.io//learn/">主页 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//categories/">分类 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//acm/">刷题 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//database/">数据库 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//datastruct/">数据结构 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//tags/">标签 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//designpattern/">设计模式 </a></li>
+					
+          <hr />
+          <div id="social-wrapper">
+           
+           
+           
+           
+         </div>
+       </ul>
+     </div>
+
+
+
+     <div class="container">
+
+
+  <div id="article">
+   <div class="article-title">virtualbox搭建LANP环境（ubuntu）</div>
+   <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> 2019-04-28</small></p> <hr/>
+   <div class="post">
+     <h2 id="1-基础软件下载">1 基础软件下载</h2>
+<p>virtual box
+ubuntu(ubuntu server)</p>
+<h2 id="2-安装ubuntu">2 安装ubuntu</h2>
+<p>(1)virtualbox创建虚拟电脑
+注意：最好重新设置virtualbox-&gt;管理-&gt;全局设定-&gt;默认虚拟电脑位置
+(2)启动，网络设置成网络地址转换(NAT)
+(3)重启的时候需要弹出U盘或者改变镜像位置
+(4)如果提示未指定nat网络名称，管理-&gt;全局设定-&gt;网络-&gt;nat网络（添加一条）
+(5)</p>
+<h2 id="3-配置ssh">3 配置ssh</h2>
+<p>(1)添加端口映射（例如2222-&gt;22）,注意主机端口不可重复，且子系统ip不填
+(2)ubuntu安装ssh</p>
+<pre><code>sudo apt-get install openssh-server
+</code></pre><p>(3)xshell等工具连接，端口号为转发的主机端口</p>
+<h2 id="4-安装php-nginx-mysql">4 安装php nginx Mysql</h2>
+<p>(1)安装php</p>
+<pre><code>sudo apt-get install php7.0 
+</code></pre><p>(2)安装nginx</p>
+<pre><code>sudo apt-get install nginx
+</code></pre><p>(3)安装Mysql</p>
+<pre><code>sudo apt-get install mysql-server-5.7 mysql-client-5.7
+</code></pre><h2 id="5-基础配置">5 基础配置</h2>
+<p>(1)安装PHPFastCGI管理器
+sudo apt install php7.2-fpm</p>
+<h2 id="6其他tips">6其他tips</h2>
+<p>(1)配置sudo
+修改 /etc/sudoers，末尾添加一行：</p>
+<pre><code>test    ALL=(ALL) NOPASSWD: ALL
+</code></pre><p>test表示用户名；
+保存退出后执行一下命令：</p>
+<pre><code>sudo usermod -aG test test
+</code></pre><p>(2)配置共享文件夹且自启动
+1 virtualbox(设置-共享文件夹-勾选固定分配(不勾选自动挂载))
+2 ubuntu创建文件夹
+3 挂载共享文件夹</p>
+<pre><code>sudo mount -t vboxsf filesname /mnt/filesname
+</code></pre><p><strong>报错</strong>
+可能报错wrong fs type, bad option, bad superblock
+，经过搜索需要安装<code>apt-get install nfs-common</code><br>
+但是安装后依旧报错，查看系统日志，报错信息如下：
+<img src="../images/mysqlIndex/error.png" alt="explain">
+只查到了一条有用的记录，且是英文的，原来这是virtualbox的一个bug，我记得virtualbox还有一个bug,就是不能在共享文件夹里使用python的虚拟环境，但是这版直接共享文件夹都不能挂载了。路径如下：
+<a href="https://www.virtualbox.org/ticket/9307" title="virtualbox bug">virtualbox bug</a>
+再安装两个插件即可</p>
+<pre><code>sudo apt install cifs-utils
+sudo apt install virtualbox-guest-utils
+</code></pre><p>4 共享文件挂载自启动
+(3)配置rsa
+1 windows生成私钥</p>
+<pre><code>ssh-keygen -t rsa -C &lt;your_email@example.com&gt;
+</code></pre><p>2 git配置
+在git配置上加上公钥
+3 linux配置对应rsa
+进入当前用户的home目录(~)，创建.ssh文件夹,复制私钥到文件夹下，进入项目目录，即可执行git clone(可能权限不够，可以暂时把项目目录设置成777)</p>
+<h2 id="7-配置">7 配置</h2>
+<h4 id="1-配置nginx">1 配置nginx</h4>
+<pre><code>sudo vim /etc/nginx/sites-enabled/default
+//需要给默认index加上index.php
+</code></pre>
+   </div>
+ </div>
+
+
+ <a href="https://github.com/laurel-he" class="twitter-share-button " data-size="small" data-count="none">Git hub</a>
+ <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+ <ul class="pager">
+      &nbsp;<li class="previous"><a href="https://laurel-he.github.io/learn/git/"> gitflow command version</a></li>
+      &nbsp;<li class="next"><a href="https://laurel-he.github.io/private/fit01/"> 减肥日记-介绍</a></li>
+</ul>
+
+
+
+    </ul>
+    </div>
+    <footer>
+
+        <p class="text-muted credit">&copy; 2021. All rights reserved. </p>
+    </footer>
+ 
+    <script src="https://laurel-he.github.io//js/jquery-1.10.2.min.js"></script>
+    <script src="https://laurel-he.github.io//js/bootstrap.min.js"></script>
+    <script src="https://laurel-he.github.io//js/bootstrap.js"></script>
+    <script type="text/javascript" src="https://laurel-he.github.io//js/hc.js"></script>
+</body>
+
+</html>
+

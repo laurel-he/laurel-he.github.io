@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>操作系统（2）-进程管理</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.87.0" />
+  <link href="" rel="alternate" type="application/rss+xml" title="" />
+  <link href="https://laurel-he.github.io//css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://laurel-he.github.io//css/hc.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  
+    
+    </head>
+    <body>
+<div class="nav-toggle"><i class="fa fa-bars fa-2x"></i> Herring Cove </div>
+      <div id = "wrapper">
+
+
+<div class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="https://laurel-he.github.io//"><p class="navbar-brand"></p></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+					
+					
+					<li><a href="https://laurel-he.github.io//python/">Python </a></li>
+					
+					<li><a href="https://laurel-he.github.io//learn/">主页 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//categories/">分类 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//acm/">刷题 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//database/">数据库 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//datastruct/">数据结构 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//tags/">标签 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//designpattern/">设计模式 </a></li>
+					
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+       
+       <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+					<img src="/images/avatar.jpg" />
+          <li class="sidebar-brand"><a href="https://laurel-he.github.io//"><h1 class="brand"></h1></a><h3></h3></li>
+          <hr />
+					
+						<li><a href="https://laurel-he.github.io//python/">Python </a></li>
+					
+						<li><a href="https://laurel-he.github.io//learn/">主页 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//categories/">分类 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//acm/">刷题 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//database/">数据库 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//datastruct/">数据结构 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//tags/">标签 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//designpattern/">设计模式 </a></li>
+					
+          <hr />
+          <div id="social-wrapper">
+           
+           
+           
+           
+         </div>
+       </ul>
+     </div>
+
+
+
+     <div class="container">
+
+
+  <div id="article">
+   <div class="article-title">操作系统（2）-进程管理</div>
+   <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> 2021-07-20</small></p> <hr/>
+   <div class="post">
+     <p>蓝桥操作系统课程的学习笔记</p>
+<h1 id="top">top</h1>
+<p>实时查看进程的状态  <br>
+<strong>top第一行</strong></p>
+<table>
+<thead>
+<tr>
+<th>内容</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>top</td>
+<td>表示当前程序的名称</td>
+</tr>
+<tr>
+<td>14:11:28</td>
+<td>当前系统的时间</td>
+</tr>
+<tr>
+<td>up 231 days, 20:31</td>
+<td>表示改机器已经启动了多长时间</td>
+</tr>
+<tr>
+<td>1 user</td>
+<td>表示当前系统只有一个用户</td>
+</tr>
+<tr>
+<td>load average: 0.24, 0.32, 0.19</td>
+<td>分别对应1、5、15分钟内cpu的平均负载</td>
+</tr>
+<tr>
+<td><strong>top第二行</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>内容</td>
+<td>解释</td>
+</tr>
+<tr>
+<td>&ndash;</td>
+<td>&ndash;</td>
+</tr>
+<tr>
+<td>Tasks: 26 toal</td>
+<td>进程总数</td>
+</tr>
+<tr>
+<td>1 running</td>
+<td>1个正在运行的进程</td>
+</tr>
+<tr>
+<td>25 sleeping</td>
+<td>25个正在睡眠的进程数</td>
+</tr>
+<tr>
+<td>0 stopped</td>
+<td>没有停止的进程数</td>
+</tr>
+<tr>
+<td>0 zombie</td>
+<td>没有僵尸进程数</td>
+</tr>
+<tr>
+<td><strong>top第三行</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>基本是cpu使用情况的统计</td>
+<td></td>
+</tr>
+<tr>
+<td>内容</td>
+<td>解释</td>
+</tr>
+<tr>
+<td>&ndash;</td>
+<td>&ndash;</td>
+</tr>
+<tr>
+<td>Cpu(s):1.0%us</td>
+<td>用户空间进程占用cpu百分比</td>
+</tr>
+<tr>
+<td>1.0% sy</td>
+<td>内核空间运行占用cpu百分比</td>
+</tr>
+<tr>
+<td>0.0%ni</td>
+<td>用户进程空间内改变过优先级的进程占用CPU百分比</td>
+</tr>
+<tr>
+<td>9709% id</td>
+<td>空闲CPU百分比</td>
+</tr>
+<tr>
+<td>0.0% wa</td>
+<td>等待输入输出的cpu时间百分比</td>
+</tr>
+<tr>
+<td>0.1%hi</td>
+<td>硬中断（Hardware IRQ）占用CPU的百分比</td>
+</tr>
+<tr>
+<td>0.0% si</td>
+<td>软中断（Software IRQ）占用CPU的百分比</td>
+</tr>
+<tr>
+<td>0.0% st</td>
+<td>(Steal time)是hypervisor等虚拟服务中，虚拟cpu等待实际cpu的时间的百分比</td>
+</tr>
+<tr>
+<td><strong>top第四行数据</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>内存使用情况的统计</td>
+<td></td>
+</tr>
+<tr>
+<td>内容</td>
+<td>解释</td>
+</tr>
+<tr>
+<td>&ndash;</td>
+<td>&ndash;</td>
+</tr>
+<tr>
+<td>821324 total</td>
+<td>物理内存总量</td>
+</tr>
+<tr>
+<td>811324 used</td>
+<td>使用的物理内存总量</td>
+</tr>
+<tr>
+<td>10000 free</td>
+<td>空闲内存总量</td>
+</tr>
+<tr>
+<td>212088 buffers</td>
+<td>用作内核缓存的内存量</td>
+</tr>
+<tr>
+<td><strong>top第五行数据</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>交换区的使用情况的统计</td>
+<td></td>
+</tr>
+<tr>
+<td>内容</td>
+<td>解释</td>
+</tr>
+<tr>
+<td>&ndash;</td>
+<td>&ndash;</td>
+</tr>
+<tr>
+<td>total</td>
+<td>交换区总量</td>
+</tr>
+<tr>
+<td>used</td>
+<td>使用的交换区总量</td>
+</tr>
+<tr>
+<td>free</td>
+<td>空闲交换区总量</td>
+</tr>
+<tr>
+<td>cached</td>
+<td>缓冲的交换区总量，内存中的内容被换出到交换区，而后又被换入到内存，但使用过的交换区尚未被覆盖</td>
+</tr>
+</tbody>
+</table>
+<h3 id="top进程情况">top进程情况</h3>
+<table>
+<thead>
+<tr>
+<th>列名</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PID</td>
+<td>进程ID</td>
+</tr>
+<tr>
+<td>USER</td>
+<td>该进程的所属用户</td>
+</tr>
+<tr>
+<td>PR</td>
+<td>该进程执行的优先级priority值（动态优先级，实际的优先级值，读取自宏MAX_PRIO,值为140，取值范围为0-139,值越小优先级越高。0-99是实时进程的值，100-139是给用户的 PR=20 + NICE值）</td>
+</tr>
+<tr>
+<td>NI</td>
+<td>该进程的nice值(每个进程都有一个介于 -20 到 19 之间的 nice 值。默认情况下，进程的 nice 值为 0。-20优先级最高，19优先级最低。 进程的 nice 值，可以通过 nice 命令和 renice 命令修改，进而调整进程的运行顺序。 nice命令 nice 命令 可以给要启动的进程赋予 NI 值，但是不能修改已运行进程的 NI 值)</td>
+</tr>
+<tr>
+<td>VIRT</td>
+<td>该进程任务所使用的虚拟内存的总数（包含所有的代码，数据，共享库和被换出的swap空间的页面等所占据空间的总数）</td>
+</tr>
+<tr>
+<td>RES</td>
+<td>该进程所使用的物理内存数，也称之为驻留内存数</td>
+</tr>
+<tr>
+<td>SHR</td>
+<td>该进程共享内存的大小</td>
+</tr>
+<tr>
+<td>S</td>
+<td>该进程的状态S=sleeping R=running Z=zombie</td>
+</tr>
+<tr>
+<td>%CPU</td>
+<td>该进程cpu的利用率</td>
+</tr>
+<tr>
+<td>%MEM</td>
+<td>该进程内存的利用率</td>
+</tr>
+<tr>
+<td>TIME+</td>
+<td>该进程活跃的总时间</td>
+</tr>
+<tr>
+<td>COMMAND</td>
+<td>该进程运行的名字</td>
+</tr>
+</tbody>
+</table>
+<h3 id="top工具的交互命令">top工具的交互命令</h3>
+<table>
+<thead>
+<tr>
+<th>常用交互命令</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>q</td>
+<td>退出程序</td>
+</tr>
+<tr>
+<td>I</td>
+<td>切换显示平均负载和启动时间的信息</td>
+</tr>
+<tr>
+<td>P</td>
+<td>根据CPU使用百分比进行大小排序</td>
+</tr>
+<tr>
+<td>M</td>
+<td>根据驻留内存大小进行排序</td>
+</tr>
+<tr>
+<td>i</td>
+<td>忽略闲置和僵死的进程，开关式命令</td>
+</tr>
+<tr>
+<td>k</td>
+<td>终止一个命令，系统提示输入PID及发送的信号值。一般终止进程用15信号，不能正常结束则使用9信号。安全模式下该命令被屏蔽</td>
+</tr>
+</tbody>
+</table>
+<h1 id="ps">ps</h1>
+<p>ps也是最常用的查看进程的工具之一</p>
+<table>
+<thead>
+<tr>
+<th>内容</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>USER</td>
+<td>进程的拥有者用户</td>
+</tr>
+<tr>
+<td>PID</td>
+<td>进程的id</td>
+</tr>
+</tbody>
+</table>
+<h3 id="查看物理cpu的个数">查看物理CPU的个数</h3>
+<pre><code>cat /proc/cpuinfo |grep &quot;physical id&quot;|sort |uniq|wc -l
+</code></pre><h3 id="每个cpu的核心数">每个cpu的核心数</h3>
+<pre><code>cat /proc/cpuinfo |grep &quot;physical id&quot;|grep &quot;0&quot;|wc -l
+</code></pre><h1 id="ps-1">ps</h1>
+<p>静态查看当前的进程信息</p>
+<h1 id="pstree">pstree</h1>
+<p>查看当前活跃进程的树形结构</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p</td>
+<td>同时列出每个process的pid</td>
+</tr>
+<tr>
+<td>u</td>
+<td>同时列出每个process的所属账户名称</td>
+</tr>
+</tbody>
+</table>
+<h1 id="进程的执行顺序">进程的执行顺序</h1>
+<p>进程的优先级由pr和nice值来控制和体现，nice值的取值范围是-20到19，可以通过nice命令进行操控</p>
+<pre><code>nice -n -5 vim &amp;  //-n后跟需要设置的谦让值，正数需要管理员权限，负数不需要
+renice -5 pid
+</code></pre>
+   </div>
+ </div>
+
+
+ <a href="https://github.com/laurel-he" class="twitter-share-button " data-size="small" data-count="none">Git hub</a>
+ <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+ <ul class="pager">
+      &nbsp;<li class="previous"><a href="https://laurel-he.github.io/linux/opratingsystem_03/"> 操作系统（3）</a></li>
+      &nbsp;<li class="next"><a href="https://laurel-he.github.io/linux/opratingsystem_01/"> 操作系统（1）-基础和vim操作</a></li>
+</ul>
+
+
+
+    </ul>
+    </div>
+    <footer>
+
+        <p class="text-muted credit">&copy; 2021. All rights reserved. </p>
+    </footer>
+ 
+    <script src="https://laurel-he.github.io//js/jquery-1.10.2.min.js"></script>
+    <script src="https://laurel-he.github.io//js/bootstrap.min.js"></script>
+    <script src="https://laurel-he.github.io//js/bootstrap.js"></script>
+    <script type="text/javascript" src="https://laurel-he.github.io//js/hc.js"></script>
+</body>
+
+</html>
+

@@ -5,7 +5,35 @@
     <link>https://laurel-he.github.io/learn/</link>
     <description>Recent content in Learns on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 25 Feb 2020 20:10:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/learn/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 30 Sep 2021 16:34:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/learn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>laravel配置params选项如MYSQL_ATTR_USE_BUFFERED_QUERY等</title>
+      <link>https://laurel-he.github.io/learn/laravel_err_01/</link>
+      <pubDate>Thu, 30 Sep 2021 16:34:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/learn/laravel_err_01/</guid>
+      <description>以下内容已同步至CSDN 绝了，laravel使用的是illuminate/database作为orm，我们用的swoole，在使用过程中报了如下错误：
+SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffered queries are active. Consider using PDOStatement::fetchAll()这个错误在网上一搜就能找到解决办法，就是给pdo加上一个params,&amp;lsquo;MYSQL_ATTR_USE_BUFFERED_QUERY&amp;rsquo; =&amp;gt; true,嚯，但是laravel和illuminate/database的文档都没有说怎么加这个params。。。真就大无语事件发生。我还是不死心网上各种搜解决办法，当然是一无所获，不然也不会有这篇博客了。原本想省事偷懒的我终究还是不得不去看源码，终于让我找到了这个东西： 经过分析，这个玩意儿就是把配置中的options加载进去，虽然按照正常人的思维，这玩意儿要是叫params我直接就能试出来，根本不用看源码了的说。
+/** * Get the PDO options based on the configuration. * * @param array $config * @return array */ public function getOptions(array $config) { $options = $config[&amp;#39;options&amp;#39;] ?? []; return array_diff_key($this-&amp;gt;options, $options) + $options; } 所以说，对于使用illuminate/database的框架来说，给pdo加选项就这这样的
+&#39;default&#39; =&amp;gt; [&#39;fetch&#39; =&amp;gt; PDO::FETCH_CLASS,&#39;driver&#39; =&amp;gt; &#39;mysql&#39;,&#39;host&#39; =&amp;gt; &#39;localhost&#39;,&#39;port&#39; =&amp;gt; &#39;3306&#39;,&#39;username&#39; =&amp;gt; &#39;&#39;,&#39;password&#39; =&amp;gt; &#39;&#39;,&#39;database&#39; =&amp;gt; &#39;test&#39;,&#39;charset&#39; =&amp;gt; &#39;latin1&#39;,&#39;collation&#39; =&amp;gt; &#39;latin1_general_ci&#39;,&#39;prefix&#39; =&amp;gt; &#39;&#39;,&#39;strict&#39; =&amp;gt; false,// 数据库连接参数&#39;options&#39; =&amp;gt; [&#39;MYSQL_ATTR_USE_BUFFERED_QUERY&#39; =&amp;gt; true,],],当然，你要是想也可以直接用原生的方法pdo连接，自然就不存在什么配置不好搞的问题了</description>
+    </item>
+    
+    <item>
+      <title>hugo搭建github个人博客</title>
+      <link>https://laurel-he.github.io/learn/hugo/</link>
+      <pubDate>Thu, 12 Aug 2021 16:10:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/learn/hugo/</guid>
+      <description>之前个人博客是使用的hexo搭建的，经常会出各种bug，而且时不时的升级，导致npm 也要对应，因此放弃，使用hugo,hugo是基于go语言开发的。
+步骤 下载安装 非常简单，略（如果是windows需要加入环境变量）
+命令 查看版本
+hugo version下载主题存放到themes目录下，假设下载的主题叫herring，那么本地预览命令为：
+hugo server --theme=herring创建文章
+hugo new post/test.md生成静态网站
+hugo --theme=herring --baseUrl=&amp;quot;https://YOURNAME.github.io/&amp;quot;在github上创建一个YOURNAME.github.io的项目，master分支控制public目录 每次新增了要提交的文章后执行命令，提交即可
+Taxonomies </description>
+    </item>
+    
     <item>
       <title>计算相关</title>
       <link>https://laurel-he.github.io/learn/codecollect/</link>
@@ -28,6 +56,15 @@
     </item>
     
     <item>
+      <title>测试</title>
+      <link>https://laurel-he.github.io/learn/unittest/</link>
+      <pubDate>Tue, 10 Dec 2019 12:34:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/learn/unittest/</guid>
+      <description>单元测试 mock 接口测试 stub mock fakeserver </description>
+    </item>
+    
+    <item>
       <title>代码整洁之道1-9章</title>
       <link>https://laurel-he.github.io/learn/cleancode/</link>
       <pubDate>Mon, 07 Oct 2019 17:40:10 +0000</pubDate>
@@ -42,6 +79,15 @@
 注释 注意 注释存在的时间越久，就离它所描述的代码越远，越来越变得全然错误，因为程序员不能坚持维护注释
 必要的注释（好的注释） （1）法律信息 （2）提供信息的注释 （3）对意图的解释 （4）阐释（如果参数或返回值是某个标准库的一部分或者不能修改的代码，帮助阐释其含义的代码就会有用） （5）警示
 单元测试 </description>
+    </item>
+    
+    <item>
+      <title>工作经验总结</title>
+      <link>https://laurel-he.github.io/learn/work/</link>
+      <pubDate>Sat, 05 Oct 2019 17:40:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/learn/work/</guid>
+      <description>工作经验 （1）学会控制情绪</description>
     </item>
     
     <item>
@@ -88,6 +134,46 @@
     </item>
     
     <item>
+      <title>virtualbox搭建LANP环境（ubuntu）</title>
+      <link>https://laurel-he.github.io/learn/lanp/</link>
+      <pubDate>Sun, 28 Apr 2019 14:00:40 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/learn/lanp/</guid>
+      <description>1 基础软件下载 virtual box ubuntu(ubuntu server)
+2 安装ubuntu (1)virtualbox创建虚拟电脑 注意：最好重新设置virtualbox-&amp;gt;管理-&amp;gt;全局设定-&amp;gt;默认虚拟电脑位置 (2)启动，网络设置成网络地址转换(NAT) (3)重启的时候需要弹出U盘或者改变镜像位置 (4)如果提示未指定nat网络名称，管理-&amp;gt;全局设定-&amp;gt;网络-&amp;gt;nat网络（添加一条） (5)
+3 配置ssh (1)添加端口映射（例如2222-&amp;gt;22）,注意主机端口不可重复，且子系统ip不填 (2)ubuntu安装ssh
+sudo apt-get install openssh-server (3)xshell等工具连接，端口号为转发的主机端口
+4 安装php nginx Mysql (1)安装php
+sudo apt-get install php7.0 (2)安装nginx
+sudo apt-get install nginx (3)安装Mysql
+sudo apt-get install mysql-server-5.7 mysql-client-5.7 5 基础配置 (1)安装PHPFastCGI管理器 sudo apt install php7.2-fpm
+6其他tips (1)配置sudo 修改 /etc/sudoers，末尾添加一行：
+test ALL=(ALL) NOPASSWD: ALL test表示用户名； 保存退出后执行一下命令：
+sudo usermod -aG test test (2)配置共享文件夹且自启动 1 virtualbox(设置-共享文件夹-勾选固定分配(不勾选自动挂载)) 2 ubuntu创建文件夹 3 挂载共享文件夹</description>
+    </item>
+    
+    <item>
+      <title>gitflow command version</title>
+      <link>https://laurel-he.github.io/learn/git/</link>
+      <pubDate>Wed, 24 Apr 2019 21:03:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/learn/git/</guid>
+      <description>新建feature/hotfix进行项目开发  更新本地代码仓库缓存 git remote update git checkout develop git merge origin/develop git branch feature/20171012_hotel_enhance
+##补充 1 删除分支 git branch &amp;ndash;delete &amp;ndash;remotes origin/feature/20190214_monthly git push origin :feature/20190214_monthly 2 add之后回退 git reset HEAD 3 撤销commit git commit &amp;ndash;amend 4 撤销已经commit但是没有push git log 找到commit id git reset &amp;ndash;hard commit_id 完成撤销,同时将代码恢复到前一commit_id 对应的版本
+git reset commit_id 完成Commit命令的撤销，但是不对代码修改进行撤销，可以直接通过git commit 重新提交对本地代码的修改
+git fetch </description>
+    </item>
+    
+    <item>
+      <title>gitflow command version</title>
+      <link>https://laurel-he.github.io/learn/githubguide/</link>
+      <pubDate>Wed, 24 Apr 2019 21:03:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/learn/githubguide/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>crontab基本使用</title>
       <link>https://laurel-he.github.io/learn/crontab/</link>
       <pubDate>Wed, 10 Apr 2019 18:27:44 +0000</pubDate>
@@ -99,6 +185,96 @@
 laravel 定时任务 原文路径 https://learnku.com/docs/laravel/5.4/scheduling/1257
 其他解决方式 1 supervisor 举例
 [program:finance_svcs_autoreconciliation] command=php /opt/app/nginx/html/qa6/financesvcs/artisan queue:work beanstalkd --queue=autoreconciliation_broadcast --daemon directory=/opt/app/nginx/html/qa6/financesvcs autostart=true autorestart=true user=apache numprocs=1 redirect_stderr=true stdout_logfile=/var/log/supervisor/qa1/%(program_name)s-stdout.log stdout_logfile_maxbytes=10MB stdout_logfile_backups=10  </description>
+    </item>
+    
+    <item>
+      <title>在github上使用Hexo 搭建个人博客</title>
+      <link>https://laurel-he.github.io/learn/hexo/</link>
+      <pubDate>Mon, 01 Apr 2019 11:03:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/learn/hexo/</guid>
+      <description>安装 简介 Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 安装前提 node.js git 安装步骤
+npm install -g hexo-cli 建站 hexo init &amp;lt;folder&amp;gt; cd &amp;lt;folder&amp;gt; npm install 创建博客 hexo new [layout] &amp;lt;title&amp;gt; #hexo n hexo generate（或者hexo g:生成静态文件） #hexo g hexo publish [layout] &amp;lt;filename&amp;gt;（发布草稿） hexo server（启动服务器） hexo deploy（或者hexo d:部署） hexo render &amp;lt;file1&amp;gt; [file2] ...（渲染文件） hexo migrate &amp;lt;type&amp;gt;（从其他博客迁移内容） hexo clean（清除缓存文件 (db.json) 和已生成的静态文件 (public)） hexo list（列出网站资料） hexo version（显示 Hexo 版本） #部署使用hexo deploy (hexo d,需要先编译) 添加评论 可以使用gitment或者valine valine评论 gitment评论 注意事项 1 如果添加了CNAME，回调地址需要填绑定的地址 2 如果需要开启评论，除了百度能搜到的步骤以外，还需要本地安装博客评论模块 npm i &amp;ndash;save gitment 再重新hexo g -d一下 3 作者的服务器停掉了，因此需要修改js源码来源： 修改源 （也可以wget将源码下载下来后修改源到自己服务器上）</description>
+    </item>
+    
+    <item>
+      <title>各方法实现微信机器人对比</title>
+      <link>https://laurel-he.github.io/learn/wechat/</link>
+      <pubDate>Thu, 28 Mar 2019 14:03:27 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/learn/wechat/</guid>
+      <description>wxpy 直接排除，只有极少数人的微信可以使用，无法用来实现机器人；
+图灵机器人 图灵机器人可以接入微信，也可以实现群管理，但是是通过第三方来实现的
+   功能 详解 是否必要     接入微信公众号 群自动回复 是   主动触发回复 主动往群里发送消息 是   定时发送 定时给群发送消息 是    微群管家 图灵机器人推荐的微信个人号接入第三方插件，但只有windows版本可用，不适用于mac版本开发，但可以实现自定义开发，文档比较全面且免费，可以作为备选方案 功能介绍：
+   功能 详解 是否必要     关键词自动回复 群自动回复 是   主动触发回复 主动往群里发送消息 是   定时发送 定时给群发送消息 是    收费情况如下：
+   产品 功能 价格     &amp;mdash; &amp;mdash; 免费    建议：建议使用微群管家，免费</description>
+    </item>
+    
+    <item>
+      <title>一些快捷键</title>
+      <link>https://laurel-he.github.io/learn/hotkey/</link>
+      <pubDate>Tue, 05 Mar 2019 13:25:21 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/learn/hotkey/</guid>
+      <description>navicat for mysql 快捷键 1.ctrl+q 打开查询窗口 2.ctrl+/ 注释sql语句 3.ctrl+shift +/ 解除注释 4.ctrl+r 运行查询窗口的sql语句 5.ctrl+shift+r 只运行选中的sql语句 6.F6 打开一个mysql命令行窗口 7.ctrl+l 删除一行 8.ctrl+n 打开一个新的查询窗口 9.ctrl+w 关闭一个查询窗口
+phpstrom快捷键 编辑
+   快捷键 作用     Ctrl + Space 代码自动完成（一般与输入法冲突）   Ctrl + Shift + Enter 智能完善代码（如:if()）   Ctrl + P 方法参数提示，显示默认参数   Ctrl + Q 显示注释代码   Ctrl + mouse over code 查看到简短的函数介绍   Ctrl + F1 显示错误或警告信息的描述（需要把光标放到错误或警告位置）   Alt + Insert 生成代码段（ 包括函数或类注释，版权信息，构造方法，抽象方法等）   Ctrl + O 插入覆盖父类的方法   Ctrl + I 实现抽象方法   Ctrl + Alt + T 选中的代码放在if.</description>
+    </item>
+    
+    <item>
+      <title>Hbase基础命令</title>
+      <link>https://laurel-he.github.io/learn/hbase_01/</link>
+      <pubDate>Thu, 28 Feb 2019 11:03:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/learn/hbase_01/</guid>
+      <description>Hbase基础命令 启动和停止Hbase 启动 hbase/bin ./start-hbase.sh 关闭 hbase/bin ./stop-hbase.sh
+使用Hbase 连接Hbase bin/hbase shell 创建表 create &amp;lsquo;test&amp;rsquo; （创建表需要添加列簇） create &amp;lsquo;表名&amp;rsquo; &amp;lsquo;列簇名1&amp;rsquo; &amp;lsquo;列簇名2&amp;rsquo; …… 添加数据 put &amp;lsquo;表名&amp;rsquo; &amp;lsquo;行名&amp;rsquo; &amp;lsquo;列簇名称&amp;rsquo; &amp;lsquo;value&amp;rsquo;（当列簇只有一列） put &amp;lsquo;表名&amp;rsquo; &amp;lsquo;行名&amp;rsquo; &amp;lsquo;列簇名称：列名称&amp;rsquo; &amp;lsquo;value&amp;rsquo; 查看表 list: 查看所有表 list &amp;lsquo;tablename&amp;rsquo; ： 查看表名为tablename的表 删除表 disable &amp;lsquo;表名&amp;rsquo;(对应enable &amp;lsquo;明白&amp;rsquo;) drop &amp;lsquo;表名&amp;rsquo;
+配置 ####基础配置 conf/hbase-site.xml
+注意事项 （1）表名，行，列都必须用引号括起来 {% plantuml %} {% endplantuml %}</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://laurel-he.github.io/learn/kafka/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/learn/kafka/</guid>
+      <description>php使用kafka1 环境安装 直接按照文档下载安装。需要注意的是： zookeeper直接使用curl或者wget下载的文件很可能会损坏，导致解压出错。 可以浏览器直接下载，下载好后通过scp传入到服务器中。
+安装的时候，python需要读取env的数据
+/usr/bin/env: ‘python’: No such file or directory如果安装的是python3，需要注意读取的是/usr/bin/python，这里加一个软连接即可
+使用 php使用kafka最好的解决方案是使用rdKafka插件。
+注意 kafka的版本不兼容可能会导致读取的所有数据都是null</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://laurel-he.github.io/learn/totalcont/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/learn/totalcont/</guid>
+      <description>目录 1 刷题
+2 设计模式
+2 数据库设计及优化
+3 操作系统(Linux，进程调度，基本命令等)
+网络攻击技术
+3 laravel框架
+4 yii框架
+5 go
+7 shell编程
+8 elasticsearch
+9 redis
+10 消息队列(beanstalk,kafka,rabit mq)
+11 k8s
+12 docker
+13 nginx配置及优化
+15 代码可读性（代码整洁之道）
+16 代码大全（）
+17 socket,tcp/ip协议，http协议，请求过程
+18 数据结构（各种查找，B树，二叉排序树等）
+19 基础前端（react，vue）
+20 redis（并发）
+21 大流量高并发系统设计
+22</description>
     </item>
     
     <item>

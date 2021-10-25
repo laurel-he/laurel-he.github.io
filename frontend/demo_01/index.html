@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>demo实例</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.87.0" />
+  <link href="" rel="alternate" type="application/rss+xml" title="" />
+  <link href="https://laurel-he.github.io//css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://laurel-he.github.io//css/hc.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  
+    
+    </head>
+    <body>
+<div class="nav-toggle"><i class="fa fa-bars fa-2x"></i> Herring Cove </div>
+      <div id = "wrapper">
+
+
+<div class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="https://laurel-he.github.io//"><p class="navbar-brand"></p></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+					
+					
+					<li><a href="https://laurel-he.github.io//python/">Python </a></li>
+					
+					<li><a href="https://laurel-he.github.io//learn/">主页 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//categories/">分类 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//acm/">刷题 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//database/">数据库 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//datastruct/">数据结构 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//tags/">标签 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//designpattern/">设计模式 </a></li>
+					
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+       
+       <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+					<img src="/images/avatar.jpg" />
+          <li class="sidebar-brand"><a href="https://laurel-he.github.io//"><h1 class="brand"></h1></a><h3></h3></li>
+          <hr />
+					
+						<li><a href="https://laurel-he.github.io//python/">Python </a></li>
+					
+						<li><a href="https://laurel-he.github.io//learn/">主页 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//categories/">分类 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//acm/">刷题 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//database/">数据库 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//datastruct/">数据结构 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//tags/">标签 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//designpattern/">设计模式 </a></li>
+					
+          <hr />
+          <div id="social-wrapper">
+           
+           
+           
+           
+         </div>
+       </ul>
+     </div>
+
+
+
+     <div class="container">
+
+
+  <div id="article">
+   <div class="article-title">demo实例</div>
+   <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> 2019-07-18</small></p> <hr/>
+   <div class="post">
+     <h2 id="js正则表达式">js正则表达式</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">patt</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">/[顺丰]/</span>;
+      <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">reg</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> RegExp(<span style="color:#a6e22e">patt</span>, <span style="color:#e6db74">&#39;i&#39;</span>);
+      <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">company</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">reg</span>.<span style="color:#a6e22e">test</span>(<span style="color:#a6e22e">record</span>.<span style="color:#a6e22e">remark</span>) <span style="color:#f92672">===</span> <span style="color:#66d9ef">true</span>) <span style="color:#f92672">?</span> <span style="color:#e6db74">&#39;shunfeng&#39;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;annengwuliu&#39;</span>
+      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;re test-=-----&#39;</span>, <span style="color:#a6e22e">company</span>);
+      <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">num</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">record</span>.<span style="color:#a6e22e">remark</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">/[^0-9]/ig</span>, <span style="color:#e6db74">&#34;&#34;</span>)
+</code></pre></div><h2 id="递归读取层级json">递归读取层级json</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">getAllKey</span> (<span style="color:#a6e22e">obj</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">any</span>, <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">string</span>, <span style="color:#a6e22e">moduleName</span><span style="color:#f92672">?:</span> <span style="color:#a6e22e">string</span>)<span style="color:#f92672">:</span> <span style="color:#a6e22e">any</span>[] {
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">arr</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">any</span>[] <span style="color:#f92672">=</span> []
+    <span style="color:#66d9ef">if</span> (Object.<span style="color:#a6e22e">keys</span>(<span style="color:#a6e22e">obj</span>)) {
+      <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">keys</span> <span style="color:#f92672">=</span> Object.<span style="color:#a6e22e">keys</span>(<span style="color:#a6e22e">obj</span>);
+      <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">keys</span>.<span style="color:#a6e22e">map</span>((<span style="color:#a6e22e">items</span>) =&gt; {
+        <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>;
+        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">obj</span>[<span style="color:#a6e22e">items</span>] <span style="color:#66d9ef">instanceof</span> Object) {
+          <span style="color:#75715e">// console.log(&#34;obj[items]:&#34;, items);
+</span><span style="color:#75715e"></span>          <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">itemRes</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">items</span>;
+          <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">obj</span>[<span style="color:#a6e22e">items</span>][<span style="color:#e6db74">&#39;type&#39;</span>]) {
+            <span style="color:#75715e">// console.log(&#39;it is number:&#39;, obj[items][&#39;type&#39;]);
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">itemRes</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">obj</span>[<span style="color:#a6e22e">items</span>][<span style="color:#e6db74">&#39;type&#39;</span>];
+          }
+          <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">names</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;-&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">itemRes</span>
+          <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">getAllKey</span>(<span style="color:#a6e22e">obj</span>[<span style="color:#a6e22e">items</span>], <span style="color:#a6e22e">names</span>, <span style="color:#a6e22e">moduleName</span>);
+        } <span style="color:#66d9ef">else</span> {
+          <span style="color:#75715e">// console.log(&#39;items:&#39;, name + &#39;-&#39; + items);
+</span><span style="color:#75715e"></span>          <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">resItems</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;-&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">items</span>;
+          <span style="color:#75715e">// console.log(&#39;split array:&#39;, resItems.split(&#39;-&#39;));
+</span><span style="color:#75715e"></span>          <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">resItems</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">moduleName</span>) {
+            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">handleRender</span>(<span style="color:#a6e22e">resItems</span>, <span style="color:#a6e22e">treeRule</span>.<span style="color:#a6e22e">modules</span>, <span style="color:#a6e22e">moduleName</span>, <span style="color:#a6e22e">i</span>);
+          }
+        }
+      });
+    }
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;arr&#39;</span>, <span style="color:#a6e22e">arr</span>)
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">arr</span>
+}
+</code></pre></div>
+   </div>
+ </div>
+
+
+ <a href="https://github.com/laurel-he" class="twitter-share-button " data-size="small" data-count="none">Git hub</a>
+ <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+ <ul class="pager">
+      &nbsp;<li class="previous"><a href="https://laurel-he.github.io/frontend/react/react_02/"> react学习-javascript函数式编程</a></li>
+      &nbsp;<li class="next"><a href="https://laurel-he.github.io/designpattern/phpallpattern/abstractfactory/"> 抽象工厂模式</a></li>
+</ul>
+
+
+
+    </ul>
+    </div>
+    <footer>
+
+        <p class="text-muted credit">&copy; 2021. All rights reserved. </p>
+    </footer>
+ 
+    <script src="https://laurel-he.github.io//js/jquery-1.10.2.min.js"></script>
+    <script src="https://laurel-he.github.io//js/bootstrap.min.js"></script>
+    <script src="https://laurel-he.github.io//js/bootstrap.js"></script>
+    <script type="text/javascript" src="https://laurel-he.github.io//js/hc.js"></script>
+</body>
+
+</html>
+
