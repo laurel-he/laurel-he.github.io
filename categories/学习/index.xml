@@ -8,10 +8,10 @@
     <lastBuildDate>Thu, 30 Sep 2021 16:34:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>laravel配置params选项如MYSQL_ATTR_USE_BUFFERED_QUERY等</title>
-      <link>https://laurel-he.github.io/learn/laravel_err_01/</link>
+      <link>https://laurel-he.github.io/post/laravel_err_01/</link>
       <pubDate>Thu, 30 Sep 2021 16:34:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/learn/laravel_err_01/</guid>
+      <guid>https://laurel-he.github.io/post/laravel_err_01/</guid>
       <description>以下内容已同步至CSDN 绝了，laravel使用的是illuminate/database作为orm，我们用的swoole，在使用过程中报了如下错误：
 SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffered queries are active. Consider using PDOStatement::fetchAll()这个错误在网上一搜就能找到解决办法，就是给pdo加上一个params,&amp;lsquo;MYSQL_ATTR_USE_BUFFERED_QUERY&amp;rsquo; =&amp;gt; true,嚯，但是laravel和illuminate/database的文档都没有说怎么加这个params。。。真就大无语事件发生。我还是不死心网上各种搜解决办法，当然是一无所获，不然也不会有这篇博客了。原本想省事偷懒的我终究还是不得不去看源码，终于让我找到了这个东西： 经过分析，这个玩意儿就是把配置中的options加载进去，虽然按照正常人的思维，这玩意儿要是叫params我直接就能试出来，根本不用看源码了的说。
 /** * Get the PDO options based on the configuration. * * @param array $config * @return array */ public function getOptions(array $config) { $options = $config[&amp;#39;options&amp;#39;] ?? []; return array_diff_key($this-&amp;gt;options, $options) + $options; } 所以说，对于使用illuminate/database的框架来说，给pdo加选项就这这样的
@@ -72,11 +72,12 @@ C语言优点 为什么选择C语言： 使用范围广，做操作系统，嵌�
     
     <item>
       <title>目录</title>
-      <link>https://laurel-he.github.io/learn/total/</link>
+      <link>https://laurel-he.github.io/post/total/</link>
       <pubDate>Thu, 03 Sep 2020 16:10:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/learn/total/</guid>
-      <description>目录： 1 刷题
+      <guid>https://laurel-he.github.io/post/total/</guid>
+      <description>目录：
+1 刷题
 2 设计模式
 3 数据库
 4 操作系统
@@ -103,19 +104,19 @@ C语言优点 为什么选择C语言： 使用范围广，做操作系统，嵌�
     
     <item>
       <title>测试</title>
-      <link>https://laurel-he.github.io/learn/unittest/</link>
+      <link>https://laurel-he.github.io/post/unittest/</link>
       <pubDate>Tue, 10 Dec 2019 12:34:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/learn/unittest/</guid>
+      <guid>https://laurel-he.github.io/post/unittest/</guid>
       <description>单元测试 mock 接口测试 stub mock fakeserver </description>
     </item>
     
     <item>
       <title>代码整洁之道1-9章</title>
-      <link>https://laurel-he.github.io/learn/cleancode/</link>
+      <link>https://laurel-he.github.io/post/cleancode/</link>
       <pubDate>Mon, 07 Oct 2019 17:40:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/learn/cleancode/</guid>
+      <guid>https://laurel-he.github.io/post/cleancode/</guid>
       <description>提要 要有代码：代码呈现了需求的细节，将需求明确到机器可以执行的细节程度 不要产生糟糕的、混乱的代码，勒布朗法则：稍后等于永不 制造混乱无益于赶上期限，做得快的唯一方法就是始终保持代码整洁。
 好代码的特点 优雅、搞笑；代码逻辑直截了当，缺陷难以隐藏； 尽量减少依赖关系，使之便于维护； 根据某种分层战略完善处理错误代码，性能调至最优 整洁的代码力求集中，每个函数、每个类和每个模块都全神贯注于一事，完全不受四周细节的干扰和污染 整洁的代码可由作者之外的开发者阅读和增补，它应当有单元测试和验收测试 尽量使用有意义的命名，它只提供一种而非多种做一件事的途径 尽量少的依赖关系，明确地定义和提供清晰、尽量少的API
 总结 （1）能通过所有测试 （2）没有重复代码 （3）体现系统中的全部设计理念 （4）包含尽量少的实体，比如类、方法、函数等 不要重复代码，只做一件事，表达力，小规模抽象
@@ -171,10 +172,10 @@ C语言优点 为什么选择C语言： 使用范围广，做操作系统，嵌�
     
     <item>
       <title>代码大全</title>
-      <link>https://laurel-he.github.io/learn/codecomplate_01/</link>
+      <link>https://laurel-he.github.io/post/codecomplate_01/</link>
       <pubDate>Sat, 05 Oct 2019 10:40:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/learn/codecomplate_01/</guid>
+      <guid>https://laurel-he.github.io/post/codecomplate_01/</guid>
       <description>前期准备 前期准备的重要性 不要立即开始写代码，要做好必要的需求分析和架构设计，写好需求文档和技术文档，防止浪费时间和精力制造错误的东西
 需求核对表 针对功能需求：
 1．是否详细定义了系统的全部输入，包括其来源、精度、取值范围、出现频率等？

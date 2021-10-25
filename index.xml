@@ -8,10 +8,10 @@
     <lastBuildDate>Thu, 30 Sep 2021 16:34:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>laravel配置params选项如MYSQL_ATTR_USE_BUFFERED_QUERY等</title>
-      <link>https://laurel-he.github.io/learn/laravel_err_01/</link>
+      <link>https://laurel-he.github.io/post/laravel_err_01/</link>
       <pubDate>Thu, 30 Sep 2021 16:34:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/learn/laravel_err_01/</guid>
+      <guid>https://laurel-he.github.io/post/laravel_err_01/</guid>
       <description>以下内容已同步至CSDN 绝了，laravel使用的是illuminate/database作为orm，我们用的swoole，在使用过程中报了如下错误：
 SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffered queries are active. Consider using PDOStatement::fetchAll()这个错误在网上一搜就能找到解决办法，就是给pdo加上一个params,&amp;lsquo;MYSQL_ATTR_USE_BUFFERED_QUERY&amp;rsquo; =&amp;gt; true,嚯，但是laravel和illuminate/database的文档都没有说怎么加这个params。。。真就大无语事件发生。我还是不死心网上各种搜解决办法，当然是一无所获，不然也不会有这篇博客了。原本想省事偷懒的我终究还是不得不去看源码，终于让我找到了这个东西： 经过分析，这个玩意儿就是把配置中的options加载进去，虽然按照正常人的思维，这玩意儿要是叫params我直接就能试出来，根本不用看源码了的说。
 /** * Get the PDO options based on the configuration. * * @param array $config * @return array */ public function getOptions(array $config) { $options = $config[&amp;#39;options&amp;#39;] ?? []; return array_diff_key($this-&amp;gt;options, $options) + $options; } 所以说，对于使用illuminate/database的框架来说，给pdo加选项就这这样的
@@ -225,10 +225,10 @@ go语言用途 Go 语言被设计成一门应用于搭载 Web 服务器，存储
     
     <item>
       <title>hugo搭建github个人博客</title>
-      <link>https://laurel-he.github.io/learn/hugo/</link>
+      <link>https://laurel-he.github.io/post/hugo/</link>
       <pubDate>Thu, 12 Aug 2021 16:10:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/learn/hugo/</guid>
+      <guid>https://laurel-he.github.io/post/hugo/</guid>
       <description>之前个人博客是使用的hexo搭建的，经常会出各种bug，而且时不时的升级，导致npm 也要对应，因此放弃，使用hugo,hugo是基于go语言开发的。
 步骤 下载安装 非常简单，略（如果是windows需要加入环境变量）
 命令 查看版本
@@ -339,11 +339,12 @@ mysql命令行连接参数 经常使用的参数:
     
     <item>
       <title>目录</title>
-      <link>https://laurel-he.github.io/learn/total/</link>
+      <link>https://laurel-he.github.io/post/total/</link>
       <pubDate>Thu, 03 Sep 2020 16:10:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/learn/total/</guid>
-      <description>目录： 1 刷题
+      <guid>https://laurel-he.github.io/post/total/</guid>
+      <description>目录：
+1 刷题
 2 设计模式
 3 数据库
 4 操作系统
@@ -516,20 +517,20 @@ group_name:password:GID:user_list 当password为x时表示密码不可见，如�
     
     <item>
       <title>计算相关</title>
-      <link>https://laurel-he.github.io/learn/codecollect/</link>
+      <link>https://laurel-he.github.io/post/codecollect/</link>
       <pubDate>Tue, 25 Feb 2020 20:10:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/learn/codecollect/</guid>
+      <guid>https://laurel-he.github.io/post/codecollect/</guid>
       <description>1 计算矩形是否相交 描述 给定两个矩形的左上角起始点坐标和矩形的宽，高，计算这两个矩形是否相交 分析 1 矩形1左上角坐标p1,右下角坐标p2,矩形2左上角坐标p3,右下角坐标p4 2 M点坐标为P1与P3点在X方向较大值与Y方向较大值的交点 3 N点坐标为P2与P4点在X方向较小值与Y方向较小值的交点 4 如果M点的X坐标和Y坐标值均比N点相应的X坐标和Y坐标值小，亦即M和N可以分别构成一个矩形的左上角点和右上角点，则两矩形相交；其余情况则不相交 代码
 &amp;lt;?php function checkRectInterSect($rect1, $rect2) { $x1 = $rect1[&amp;#39;x&amp;#39;]; $w1 = $rect1[&amp;#39;w&amp;#39;]; $y1 = $rect1[&amp;#39;y&amp;#39;]; $h1 = $rect1[&amp;#39;h&amp;#39;]; $x2 = $rect2[&amp;#39;x&amp;#39;]; $w2 = $rect2[&amp;#39;w&amp;#39;]; $y2 = $rect2[&amp;#39;y&amp;#39;]; $h2 = $rect2[&amp;#39;h&amp;#39;]; $p1 = [$x1, $y1]; $p2 = [$x1 + $w1, $y1 + $h1]; $p3 = [$x2, $y2]; $p4 = [$x2 + $w2, $y2 + $h2]; $M = [max($p1[0], $p3[0]), max($p1[1], $p1[1])]; $N = [min($p2[0], $p4[0]), min($p2[1], $p4[1])]; if ($M[0] &amp;lt; $N[0] &amp;amp;&amp;amp; $M[1] &amp;lt; $N[1]) { return true; } else { return false; } } ?</description>
     </item>
     
     <item>
       <title>运行相关</title>
-      <link>https://laurel-he.github.io/learn/codecollect2/</link>
+      <link>https://laurel-he.github.io/post/codecollect2/</link>
       <pubDate>Tue, 25 Feb 2020 20:10:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/learn/codecollect2/</guid>
+      <guid>https://laurel-he.github.io/post/codecollect2/</guid>
       <description>1 下载数据 描述 根据链接下载文件 代码
 &amp;lt;?php function downloadOldFile($url,$rename,$ext){ $file_path = &amp;#39;public/images/age_60-120/&amp;#39;; $ch = curl_init($url); curl_setopt($ch, CURLOPT_HEADER, 0); curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); curl_setopt($ch, CURLOPT_BINARYTRANSFER, 1); $rawdata=curl_exec ($ch); curl_close ($ch); // 使用中文文件名需要转码  $fp = fopen($file_path. $rename .&amp;#34;.&amp;#34;.$ext,&amp;#39;w&amp;#39;); fwrite($fp, $rawdata); fclose($fp); // 返回路径  return $_SERVER[&amp;#39;DOCUMENT_ROOT&amp;#39;].$file_path.$rename.&amp;#34;.&amp;#34;.$ext; } ?&amp;gt;2 按步骤执行方法 描述 经常有需求：分页执行脚本，例如前1000条执行完后继续分页，此时就需要自动跳页执行 代码
 &amp;lt;?php /** * @param mixed ...$args * @return bool * @throws Exception */ private function stepRun(...$args) { $count = $args[0]; $method = $args[1]; $step = array_key_exists(2, $args) ?</description>
@@ -567,10 +568,10 @@ group_name:password:GID:user_list 当password为x时表示密码不可见，如�
     
     <item>
       <title>测试</title>
-      <link>https://laurel-he.github.io/learn/unittest/</link>
+      <link>https://laurel-he.github.io/post/unittest/</link>
       <pubDate>Tue, 10 Dec 2019 12:34:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/learn/unittest/</guid>
+      <guid>https://laurel-he.github.io/post/unittest/</guid>
       <description>单元测试 mock 接口测试 stub mock fakeserver </description>
     </item>
     
@@ -618,10 +619,10 @@ db.test_db.update( {&#39;_id&#39;: {$in: [&#39;1242rererwwr&#39;]}, &#39;files.n
     
     <item>
       <title>代码整洁之道1-9章</title>
-      <link>https://laurel-he.github.io/learn/cleancode/</link>
+      <link>https://laurel-he.github.io/post/cleancode/</link>
       <pubDate>Mon, 07 Oct 2019 17:40:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/learn/cleancode/</guid>
+      <guid>https://laurel-he.github.io/post/cleancode/</guid>
       <description>提要 要有代码：代码呈现了需求的细节，将需求明确到机器可以执行的细节程度 不要产生糟糕的、混乱的代码，勒布朗法则：稍后等于永不 制造混乱无益于赶上期限，做得快的唯一方法就是始终保持代码整洁。
 好代码的特点 优雅、搞笑；代码逻辑直截了当，缺陷难以隐藏； 尽量减少依赖关系，使之便于维护； 根据某种分层战略完善处理错误代码，性能调至最优 整洁的代码力求集中，每个函数、每个类和每个模块都全神贯注于一事，完全不受四周细节的干扰和污染 整洁的代码可由作者之外的开发者阅读和增补，它应当有单元测试和验收测试 尽量使用有意义的命名，它只提供一种而非多种做一件事的途径 尽量少的依赖关系，明确地定义和提供清晰、尽量少的API
 总结 （1）能通过所有测试 （2）没有重复代码 （3）体现系统中的全部设计理念 （4）包含尽量少的实体，比如类、方法、函数等 不要重复代码，只做一件事，表达力，小规模抽象
@@ -662,10 +663,10 @@ db.test_db.update( {&#39;_id&#39;: {$in: [&#39;1242rererwwr&#39;]}, &#39;files.n
     
     <item>
       <title>工作经验总结</title>
-      <link>https://laurel-he.github.io/learn/work/</link>
+      <link>https://laurel-he.github.io/post/work/</link>
       <pubDate>Sat, 05 Oct 2019 17:40:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/learn/work/</guid>
+      <guid>https://laurel-he.github.io/post/work/</guid>
       <description>工作经验 （1）学会控制情绪</description>
     </item>
     
@@ -686,10 +687,10 @@ db.test_db.update( {&#39;_id&#39;: {$in: [&#39;1242rererwwr&#39;]}, &#39;files.n
     
     <item>
       <title>代码大全</title>
-      <link>https://laurel-he.github.io/learn/codecomplate_01/</link>
+      <link>https://laurel-he.github.io/post/codecomplate_01/</link>
       <pubDate>Sat, 05 Oct 2019 10:40:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/learn/codecomplate_01/</guid>
+      <guid>https://laurel-he.github.io/post/codecomplate_01/</guid>
       <description>前期准备 前期准备的重要性 不要立即开始写代码，要做好必要的需求分析和架构设计，写好需求文档和技术文档，防止浪费时间和精力制造错误的东西
 需求核对表 针对功能需求：
 1．是否详细定义了系统的全部输入，包括其来源、精度、取值范围、出现频率等？
@@ -903,10 +904,10 @@ var regularPerson = { firstname: &amp;#34;Bill&amp;#34;, lastname: &amp;#34;Wils
     
     <item>
       <title>virtualbox搭建LANP环境（ubuntu）</title>
-      <link>https://laurel-he.github.io/learn/lanp/</link>
+      <link>https://laurel-he.github.io/post/lanp/</link>
       <pubDate>Sun, 28 Apr 2019 14:00:40 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/learn/lanp/</guid>
+      <guid>https://laurel-he.github.io/post/lanp/</guid>
       <description>1 基础软件下载 virtual box ubuntu(ubuntu server)
 2 安装ubuntu (1)virtualbox创建虚拟电脑 注意：最好重新设置virtualbox-&amp;gt;管理-&amp;gt;全局设定-&amp;gt;默认虚拟电脑位置 (2)启动，网络设置成网络地址转换(NAT) (3)重启的时候需要弹出U盘或者改变镜像位置 (4)如果提示未指定nat网络名称，管理-&amp;gt;全局设定-&amp;gt;网络-&amp;gt;nat网络（添加一条） (5)
 3 配置ssh (1)添加端口映射（例如2222-&amp;gt;22）,注意主机端口不可重复，且子系统ip不填 (2)ubuntu安装ssh
@@ -922,10 +923,10 @@ sudo usermod -aG test test (2)配置共享文件夹且自启动 1 virtualbox(设
     
     <item>
       <title>gitflow command version</title>
-      <link>https://laurel-he.github.io/learn/git/</link>
+      <link>https://laurel-he.github.io/post/git/</link>
       <pubDate>Wed, 24 Apr 2019 21:03:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/learn/git/</guid>
+      <guid>https://laurel-he.github.io/post/git/</guid>
       <description>新建feature/hotfix进行项目开发  更新本地代码仓库缓存 git remote update git checkout develop git merge origin/develop git branch feature/20171012_hotel_enhance
 ##补充 1 删除分支 git branch &amp;ndash;delete &amp;ndash;remotes origin/feature/20190214_monthly git push origin :feature/20190214_monthly 2 add之后回退 git reset HEAD 3 撤销commit git commit &amp;ndash;amend 4 撤销已经commit但是没有push git log 找到commit id git reset &amp;ndash;hard commit_id 完成撤销,同时将代码恢复到前一commit_id 对应的版本
 git reset commit_id 完成Commit命令的撤销，但是不对代码修改进行撤销，可以直接通过git commit 重新提交对本地代码的修改
@@ -934,10 +935,10 @@ git fetch </description>
     
     <item>
       <title>gitflow command version</title>
-      <link>https://laurel-he.github.io/learn/githubguide/</link>
+      <link>https://laurel-he.github.io/post/githubguide/</link>
       <pubDate>Wed, 24 Apr 2019 21:03:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/learn/githubguide/</guid>
+      <guid>https://laurel-he.github.io/post/githubguide/</guid>
       <description></description>
     </item>
     
@@ -954,10 +955,10 @@ LOG_PATH=/tmp/paytest 2 启动文件添加日志路径 $app-&amp;gt;configureMon
     
     <item>
       <title>crontab基本使用</title>
-      <link>https://laurel-he.github.io/learn/crontab/</link>
+      <link>https://laurel-he.github.io/post/crontab/</link>
       <pubDate>Wed, 10 Apr 2019 18:27:44 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/learn/crontab/</guid>
+      <guid>https://laurel-he.github.io/post/crontab/</guid>
       <description>1 简介 crond 是linux下用来周期性的执行某种任务或等待处理某些事件的一个守护进程，与windows下的计划任务类似，当安装完成操作系统后，默认会安装此服务 工具，并且会自动启动crond进程，crond进程每分钟会定期检查是否有要执行的任务，如果有要执行的任务，则自动执行该任务。
 2 格式 minute hour day month week command
 3 操作 crontab -l:列出所有任务
@@ -1036,10 +1037,10 @@ explain select * from news; 只查询一行数据： 查询多行数据：执行
     
     <item>
       <title>在github上使用Hexo 搭建个人博客</title>
-      <link>https://laurel-he.github.io/learn/hexo/</link>
+      <link>https://laurel-he.github.io/post/hexo/</link>
       <pubDate>Mon, 01 Apr 2019 11:03:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/learn/hexo/</guid>
+      <guid>https://laurel-he.github.io/post/hexo/</guid>
       <description>安装 简介 Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 安装前提 node.js git 安装步骤
 npm install -g hexo-cli 建站 hexo init &amp;lt;folder&amp;gt; cd &amp;lt;folder&amp;gt; npm install 创建博客 hexo new [layout] &amp;lt;title&amp;gt; #hexo n hexo generate（或者hexo g:生成静态文件） #hexo g hexo publish [layout] &amp;lt;filename&amp;gt;（发布草稿） hexo server（启动服务器） hexo deploy（或者hexo d:部署） hexo render &amp;lt;file1&amp;gt; [file2] ...（渲染文件） hexo migrate &amp;lt;type&amp;gt;（从其他博客迁移内容） hexo clean（清除缓存文件 (db.json) 和已生成的静态文件 (public)） hexo list（列出网站资料） hexo version（显示 Hexo 版本） #部署使用hexo deploy (hexo d,需要先编译) 添加评论 可以使用gitment或者valine valine评论 gitment评论 注意事项 1 如果添加了CNAME，回调地址需要填绑定的地址 2 如果需要开启评论，除了百度能搜到的步骤以外，还需要本地安装博客评论模块 npm i &amp;ndash;save gitment 再重新hexo g -d一下 3 作者的服务器停掉了，因此需要修改js源码来源： 修改源 （也可以wget将源码下载下来后修改源到自己服务器上）</description>
     </item>
@@ -1055,10 +1056,10 @@ npm install -g hexo-cli 建站 hexo init &amp;lt;folder&amp;gt; cd &amp;lt;folde
     
     <item>
       <title>各方法实现微信机器人对比</title>
-      <link>https://laurel-he.github.io/learn/wechat/</link>
+      <link>https://laurel-he.github.io/post/wechat/</link>
       <pubDate>Thu, 28 Mar 2019 14:03:27 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/learn/wechat/</guid>
+      <guid>https://laurel-he.github.io/post/wechat/</guid>
       <description>wxpy 直接排除，只有极少数人的微信可以使用，无法用来实现机器人；
 图灵机器人 图灵机器人可以接入微信，也可以实现群管理，但是是通过第三方来实现的
    功能 详解 是否必要     接入微信公众号 群自动回复 是   主动触发回复 主动往群里发送消息 是   定时发送 定时给群发送消息 是    微群管家 图灵机器人推荐的微信个人号接入第三方插件，但只有windows版本可用，不适用于mac版本开发，但可以实现自定义开发，文档比较全面且免费，可以作为备选方案 功能介绍：
@@ -1172,10 +1173,10 @@ def getArgs(f_arg, *args): print &amp;quot;first is&amp;quot; + f_arg for arg in
     
     <item>
       <title>一些快捷键</title>
-      <link>https://laurel-he.github.io/learn/hotkey/</link>
+      <link>https://laurel-he.github.io/post/hotkey/</link>
       <pubDate>Tue, 05 Mar 2019 13:25:21 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/learn/hotkey/</guid>
+      <guid>https://laurel-he.github.io/post/hotkey/</guid>
       <description>navicat for mysql 快捷键 1.ctrl+q 打开查询窗口 2.ctrl+/ 注释sql语句 3.ctrl+shift +/ 解除注释 4.ctrl+r 运行查询窗口的sql语句 5.ctrl+shift+r 只运行选中的sql语句 6.F6 打开一个mysql命令行窗口 7.ctrl+l 删除一行 8.ctrl+n 打开一个新的查询窗口 9.ctrl+w 关闭一个查询窗口
 phpstrom快捷键 编辑
    快捷键 作用     Ctrl + Space 代码自动完成（一般与输入法冲突）   Ctrl + Shift + Enter 智能完善代码（如:if()）   Ctrl + P 方法参数提示，显示默认参数   Ctrl + Q 显示注释代码   Ctrl + mouse over code 查看到简短的函数介绍   Ctrl + F1 显示错误或警告信息的描述（需要把光标放到错误或警告位置）   Alt + Insert 生成代码段（ 包括函数或类注释，版权信息，构造方法，抽象方法等）   Ctrl + O 插入覆盖父类的方法   Ctrl + I 实现抽象方法   Ctrl + Alt + T 选中的代码放在if.</description>
@@ -1195,10 +1196,10 @@ ctrl + f 屏幕向下移动一页 ctrl + b 向上移动一页 ctrl + d 向下移
     
     <item>
       <title>Hbase基础命令</title>
-      <link>https://laurel-he.github.io/learn/hbase_01/</link>
+      <link>https://laurel-he.github.io/post/hbase_01/</link>
       <pubDate>Thu, 28 Feb 2019 11:03:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/learn/hbase_01/</guid>
+      <guid>https://laurel-he.github.io/post/hbase_01/</guid>
       <description>Hbase基础命令 启动和停止Hbase 启动 hbase/bin ./start-hbase.sh 关闭 hbase/bin ./stop-hbase.sh
 使用Hbase 连接Hbase bin/hbase shell 创建表 create &amp;lsquo;test&amp;rsquo; （创建表需要添加列簇） create &amp;lsquo;表名&amp;rsquo; &amp;lsquo;列簇名1&amp;rsquo; &amp;lsquo;列簇名2&amp;rsquo; …… 添加数据 put &amp;lsquo;表名&amp;rsquo; &amp;lsquo;行名&amp;rsquo; &amp;lsquo;列簇名称&amp;rsquo; &amp;lsquo;value&amp;rsquo;（当列簇只有一列） put &amp;lsquo;表名&amp;rsquo; &amp;lsquo;行名&amp;rsquo; &amp;lsquo;列簇名称：列名称&amp;rsquo; &amp;lsquo;value&amp;rsquo; 查看表 list: 查看所有表 list &amp;lsquo;tablename&amp;rsquo; ： 查看表名为tablename的表 删除表 disable &amp;lsquo;表名&amp;rsquo;(对应enable &amp;lsquo;明白&amp;rsquo;) drop &amp;lsquo;表名&amp;rsquo;
 配置 ####基础配置 conf/hbase-site.xml
@@ -1297,10 +1298,10 @@ TCP/IP协议是什么 对应图
     
     <item>
       <title></title>
-      <link>https://laurel-he.github.io/learn/yii/</link>
+      <link>https://laurel-he.github.io/post/yii/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/learn/yii/</guid>
+      <guid>https://laurel-he.github.io/post/yii/</guid>
       <description>yii 框架 </description>
     </item>
     

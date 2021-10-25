@@ -288,11 +288,12 @@ mysql命令行连接参数 经常使用的参数:
     
     <item>
       <title>目录</title>
-      <link>https://laurel-he.github.io/learn/total/</link>
+      <link>https://laurel-he.github.io/post/total/</link>
       <pubDate>Thu, 03 Sep 2020 16:10:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/learn/total/</guid>
-      <description>目录： 1 刷题
+      <guid>https://laurel-he.github.io/post/total/</guid>
+      <description>目录：
+1 刷题
 2 设计模式
 3 数据库
 4 操作系统
@@ -425,20 +426,20 @@ group_name:password:GID:user_list 当password为x时表示密码不可见，如�
     
     <item>
       <title>计算相关</title>
-      <link>https://laurel-he.github.io/learn/codecollect/</link>
+      <link>https://laurel-he.github.io/post/codecollect/</link>
       <pubDate>Tue, 25 Feb 2020 20:10:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/learn/codecollect/</guid>
+      <guid>https://laurel-he.github.io/post/codecollect/</guid>
       <description>1 计算矩形是否相交 描述 给定两个矩形的左上角起始点坐标和矩形的宽，高，计算这两个矩形是否相交 分析 1 矩形1左上角坐标p1,右下角坐标p2,矩形2左上角坐标p3,右下角坐标p4 2 M点坐标为P1与P3点在X方向较大值与Y方向较大值的交点 3 N点坐标为P2与P4点在X方向较小值与Y方向较小值的交点 4 如果M点的X坐标和Y坐标值均比N点相应的X坐标和Y坐标值小，亦即M和N可以分别构成一个矩形的左上角点和右上角点，则两矩形相交；其余情况则不相交 代码
 &amp;lt;?php function checkRectInterSect($rect1, $rect2) { $x1 = $rect1[&amp;#39;x&amp;#39;]; $w1 = $rect1[&amp;#39;w&amp;#39;]; $y1 = $rect1[&amp;#39;y&amp;#39;]; $h1 = $rect1[&amp;#39;h&amp;#39;]; $x2 = $rect2[&amp;#39;x&amp;#39;]; $w2 = $rect2[&amp;#39;w&amp;#39;]; $y2 = $rect2[&amp;#39;y&amp;#39;]; $h2 = $rect2[&amp;#39;h&amp;#39;]; $p1 = [$x1, $y1]; $p2 = [$x1 + $w1, $y1 + $h1]; $p3 = [$x2, $y2]; $p4 = [$x2 + $w2, $y2 + $h2]; $M = [max($p1[0], $p3[0]), max($p1[1], $p1[1])]; $N = [min($p2[0], $p4[0]), min($p2[1], $p4[1])]; if ($M[0] &amp;lt; $N[0] &amp;amp;&amp;amp; $M[1] &amp;lt; $N[1]) { return true; } else { return false; } } ?</description>
     </item>
     
     <item>
       <title>运行相关</title>
-      <link>https://laurel-he.github.io/learn/codecollect2/</link>
+      <link>https://laurel-he.github.io/post/codecollect2/</link>
       <pubDate>Tue, 25 Feb 2020 20:10:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/learn/codecollect2/</guid>
+      <guid>https://laurel-he.github.io/post/codecollect2/</guid>
       <description>1 下载数据 描述 根据链接下载文件 代码
 &amp;lt;?php function downloadOldFile($url,$rename,$ext){ $file_path = &amp;#39;public/images/age_60-120/&amp;#39;; $ch = curl_init($url); curl_setopt($ch, CURLOPT_HEADER, 0); curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); curl_setopt($ch, CURLOPT_BINARYTRANSFER, 1); $rawdata=curl_exec ($ch); curl_close ($ch); // 使用中文文件名需要转码  $fp = fopen($file_path. $rename .&amp;#34;.&amp;#34;.$ext,&amp;#39;w&amp;#39;); fwrite($fp, $rawdata); fclose($fp); // 返回路径  return $_SERVER[&amp;#39;DOCUMENT_ROOT&amp;#39;].$file_path.$rename.&amp;#34;.&amp;#34;.$ext; } ?&amp;gt;2 按步骤执行方法 描述 经常有需求：分页执行脚本，例如前1000条执行完后继续分页，此时就需要自动跳页执行 代码
 &amp;lt;?php /** * @param mixed ...$args * @return bool * @throws Exception */ private function stepRun(...$args) { $count = $args[0]; $method = $args[1]; $step = array_key_exists(2, $args) ?</description>
@@ -457,10 +458,10 @@ group_name:password:GID:user_list 当password为x时表示密码不可见，如�
     
     <item>
       <title>代码整洁之道1-9章</title>
-      <link>https://laurel-he.github.io/learn/cleancode/</link>
+      <link>https://laurel-he.github.io/post/cleancode/</link>
       <pubDate>Mon, 07 Oct 2019 17:40:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/learn/cleancode/</guid>
+      <guid>https://laurel-he.github.io/post/cleancode/</guid>
       <description>提要 要有代码：代码呈现了需求的细节，将需求明确到机器可以执行的细节程度 不要产生糟糕的、混乱的代码，勒布朗法则：稍后等于永不 制造混乱无益于赶上期限，做得快的唯一方法就是始终保持代码整洁。
 好代码的特点 优雅、搞笑；代码逻辑直截了当，缺陷难以隐藏； 尽量减少依赖关系，使之便于维护； 根据某种分层战略完善处理错误代码，性能调至最优 整洁的代码力求集中，每个函数、每个类和每个模块都全神贯注于一事，完全不受四周细节的干扰和污染 整洁的代码可由作者之外的开发者阅读和增补，它应当有单元测试和验收测试 尽量使用有意义的命名，它只提供一种而非多种做一件事的途径 尽量少的依赖关系，明确地定义和提供清晰、尽量少的API
 总结 （1）能通过所有测试 （2）没有重复代码 （3）体现系统中的全部设计理念 （4）包含尽量少的实体，比如类、方法、函数等 不要重复代码，只做一件事，表达力，小规模抽象
@@ -484,19 +485,19 @@ group_name:password:GID:user_list 当password为x时表示密码不可见，如�
     
     <item>
       <title>工作经验总结</title>
-      <link>https://laurel-he.github.io/learn/work/</link>
+      <link>https://laurel-he.github.io/post/work/</link>
       <pubDate>Sat, 05 Oct 2019 17:40:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/learn/work/</guid>
+      <guid>https://laurel-he.github.io/post/work/</guid>
       <description>工作经验 （1）学会控制情绪</description>
     </item>
     
     <item>
       <title>代码大全</title>
-      <link>https://laurel-he.github.io/learn/codecomplate_01/</link>
+      <link>https://laurel-he.github.io/post/codecomplate_01/</link>
       <pubDate>Sat, 05 Oct 2019 10:40:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/learn/codecomplate_01/</guid>
+      <guid>https://laurel-he.github.io/post/codecomplate_01/</guid>
       <description>前期准备 前期准备的重要性 不要立即开始写代码，要做好必要的需求分析和架构设计，写好需求文档和技术文档，防止浪费时间和精力制造错误的东西
 需求核对表 针对功能需求：
 1．是否详细定义了系统的全部输入，包括其来源、精度、取值范围、出现频率等？

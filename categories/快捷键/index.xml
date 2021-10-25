@@ -8,10 +8,10 @@
     <lastBuildDate>Tue, 05 Mar 2019 13:25:21 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/%E5%BF%AB%E6%8D%B7%E9%94%AE/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>一些快捷键</title>
-      <link>https://laurel-he.github.io/learn/hotkey/</link>
+      <link>https://laurel-he.github.io/post/hotkey/</link>
       <pubDate>Tue, 05 Mar 2019 13:25:21 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/learn/hotkey/</guid>
+      <guid>https://laurel-he.github.io/post/hotkey/</guid>
       <description>navicat for mysql 快捷键 1.ctrl+q 打开查询窗口 2.ctrl+/ 注释sql语句 3.ctrl+shift +/ 解除注释 4.ctrl+r 运行查询窗口的sql语句 5.ctrl+shift+r 只运行选中的sql语句 6.F6 打开一个mysql命令行窗口 7.ctrl+l 删除一行 8.ctrl+n 打开一个新的查询窗口 9.ctrl+w 关闭一个查询窗口
 phpstrom快捷键 编辑
    快捷键 作用     Ctrl + Space 代码自动完成（一般与输入法冲突）   Ctrl + Shift + Enter 智能完善代码（如:if()）   Ctrl + P 方法参数提示，显示默认参数   Ctrl + Q 显示注释代码   Ctrl + mouse over code 查看到简短的函数介绍   Ctrl + F1 显示错误或警告信息的描述（需要把光标放到错误或警告位置）   Alt + Insert 生成代码段（ 包括函数或类注释，版权信息，构造方法，抽象方法等）   Ctrl + O 插入覆盖父类的方法   Ctrl + I 实现抽象方法   Ctrl + Alt + T 选中的代码放在if.</description>

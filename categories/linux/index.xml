@@ -51,10 +51,10 @@ group_name:password:GID:user_list 当password为x时表示密码不可见，如�
     
     <item>
       <title>crontab基本使用</title>
-      <link>https://laurel-he.github.io/learn/crontab/</link>
+      <link>https://laurel-he.github.io/post/crontab/</link>
       <pubDate>Wed, 10 Apr 2019 18:27:44 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/learn/crontab/</guid>
+      <guid>https://laurel-he.github.io/post/crontab/</guid>
       <description>1 简介 crond 是linux下用来周期性的执行某种任务或等待处理某些事件的一个守护进程，与windows下的计划任务类似，当安装完成操作系统后，默认会安装此服务 工具，并且会自动启动crond进程，crond进程每分钟会定期检查是否有要执行的任务，如果有要执行的任务，则自动执行该任务。
 2 格式 minute hour day month week command
 3 操作 crontab -l:列出所有任务

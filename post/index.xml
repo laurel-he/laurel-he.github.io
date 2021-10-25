@@ -5,14 +5,17 @@
     <link>https://laurel-he.github.io/post/</link>
     <description>Recent content in Posts on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 29 Sep 2021 19:20:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 30 Sep 2021 16:34:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>减肥</title>
-      <link>https://laurel-he.github.io/post/fit/</link>
-      <pubDate>Wed, 29 Sep 2021 19:20:10 +0000</pubDate>
+      <title>laravel配置params选项如MYSQL_ATTR_USE_BUFFERED_QUERY等</title>
+      <link>https://laurel-he.github.io/post/laravel_err_01/</link>
+      <pubDate>Thu, 30 Sep 2021 16:34:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/fit/</guid>
-      <description>阶段 截至时间 时间 详情     1 21-10-09 10d 4-116-58   1 21-10-19 10d 3-113-56.5   1 21-10-29 10d 2-111-55.5   1 21-11-08 10d 1-110-55   1 21-11-18 10d 1-109-54.5   1 21-11-28 10d 1-108-54   1 21-12-08 10d 2-106-53   1 21-12-18 10d 2-104-52   1 21-12-28 10d 3-101-50.5   1 22-01-07 10d 2-99-49.5   1 22-01-17 10d 0.</description>
+      <guid>https://laurel-he.github.io/post/laravel_err_01/</guid>
+      <description>以下内容已同步至CSDN 绝了，laravel使用的是illuminate/database作为orm，我们用的swoole，在使用过程中报了如下错误：
+SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffered queries are active. Consider using PDOStatement::fetchAll()这个错误在网上一搜就能找到解决办法，就是给pdo加上一个params,&amp;lsquo;MYSQL_ATTR_USE_BUFFERED_QUERY&amp;rsquo; =&amp;gt; true,嚯，但是laravel和illuminate/database的文档都没有说怎么加这个params。。。真就大无语事件发生。我还是不死心网上各种搜解决办法，当然是一无所获，不然也不会有这篇博客了。原本想省事偷懒的我终究还是不得不去看源码，终于让我找到了这个东西： 经过分析，这个玩意儿就是把配置中的options加载进去，虽然按照正常人的思维，这玩意儿要是叫params我直接就能试出来，根本不用看源码了的说。
+/** * Get the PDO options based on the configuration. * * @param array $config * @return array */ public function getOptions(array $config) { $options = $config[&amp;#39;options&amp;#39;] ?? []; return array_diff_key($this-&amp;gt;options, $options) + $options; } 所以说，对于使用illuminate/database的框架来说，给pdo加选项就这这样的
+&#39;default&#39; =&amp;gt; [&#39;fetch&#39; =&amp;gt; PDO::FETCH_CLASS,&#39;driver&#39; =&amp;gt; &#39;mysql&#39;,&#39;host&#39; =&amp;gt; &#39;localhost&#39;,&#39;port&#39; =&amp;gt; &#39;3306&#39;,&#39;username&#39; =&amp;gt; &#39;&#39;,&#39;password&#39; =&amp;gt; &#39;&#39;,&#39;database&#39; =&amp;gt; &#39;test&#39;,&#39;charset&#39; =&amp;gt; &#39;latin1&#39;,&#39;collation&#39; =&amp;gt; &#39;latin1_general_ci&#39;,&#39;prefix&#39; =&amp;gt; &#39;&#39;,&#39;strict&#39; =&amp;gt; false,// 数据库连接参数&#39;options&#39; =&amp;gt; [&#39;MYSQL_ATTR_USE_BUFFERED_QUERY&#39; =&amp;gt; true,],],当然，你要是想也可以直接用原生的方法pdo连接，自然就不存在什么配置不好搞的问题了</description>
     </item>
     
     <item>
@@ -32,149 +35,44 @@ Taxonomies </description>
     </item>
     
     <item>
-      <title>操作系统（1）-基础和vim操作</title>
-      <link>https://laurel-he.github.io/post/opratingsystem_01/</link>
-      <pubDate>Tue, 20 Jul 2021 16:34:10 +0000</pubDate>
+      <title>目录</title>
+      <link>https://laurel-he.github.io/post/total/</link>
+      <pubDate>Thu, 03 Sep 2020 16:10:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/opratingsystem_01/</guid>
-      <description>本系列来源于蓝桥：https://www.lanqiao.cn/courses/2610 同系列文已发布在CSDN
-命令行中的shell通配符    字符 含义     * 匹配0或多个字符   ? 匹配任意一个字符   [list] 匹配 list 中的任意单一字符   [^list] 匹配 除list 中的任意单一字符以外的字符   [c1-c2] 匹配 c1-c2之间的任意单一字符   {string1, string2&amp;hellip;} 匹配 string1 或 string2 (或更多)其一字符串   {c1..c2} 匹配 c1-c2 中全部字符 如{1..10}    示例 创建用户lilei sudo adduser lilei
-将lilei加入sudo组 sudo usermod -G sudo lilei
-删除用户lilei sudo deluser lilei &amp;ndash;remove-home</description>
+      <guid>https://laurel-he.github.io/post/total/</guid>
+      <description>目录：
+1 刷题
+2 设计模式
+3 数据库
+4 操作系统
+5 php
+6 go
+7 python
+8 前端
+9 云原生
+10 消息队列
+11 学习</description>
     </item>
     
     <item>
-      <title>操作系统（2）-进程管理</title>
-      <link>https://laurel-he.github.io/post/opratingsystem_02/</link>
-      <pubDate>Tue, 20 Jul 2021 16:34:10 +0000</pubDate>
+      <title>计算相关</title>
+      <link>https://laurel-he.github.io/post/codecollect/</link>
+      <pubDate>Tue, 25 Feb 2020 20:10:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/opratingsystem_02/</guid>
-      <description>蓝桥操作系统课程的学习笔记
-top 实时查看进程的状态 top第一行
-   内容 解释     top 表示当前程序的名称   14:11:28 当前系统的时间   up 231 days, 20:31 表示改机器已经启动了多长时间   1 user 表示当前系统只有一个用户   load average: 0.24, 0.32, 0.19 分别对应1、5、15分钟内cpu的平均负载   top第二行    内容 解释   &amp;ndash; &amp;ndash;   Tasks: 26 toal 进程总数   1 running 1个正在运行的进程   25 sleeping 25个正在睡眠的进程数   0 stopped 没有停止的进程数   0 zombie 没有僵尸进程数   top第三行    基本是cpu使用情况的统计    内容 解释   &amp;ndash; &amp;ndash;   Cpu(s):1.</description>
+      <guid>https://laurel-he.github.io/post/codecollect/</guid>
+      <description>1 计算矩形是否相交 描述 给定两个矩形的左上角起始点坐标和矩形的宽，高，计算这两个矩形是否相交 分析 1 矩形1左上角坐标p1,右下角坐标p2,矩形2左上角坐标p3,右下角坐标p4 2 M点坐标为P1与P3点在X方向较大值与Y方向较大值的交点 3 N点坐标为P2与P4点在X方向较小值与Y方向较小值的交点 4 如果M点的X坐标和Y坐标值均比N点相应的X坐标和Y坐标值小，亦即M和N可以分别构成一个矩形的左上角点和右上角点，则两矩形相交；其余情况则不相交 代码
+&amp;lt;?php function checkRectInterSect($rect1, $rect2) { $x1 = $rect1[&amp;#39;x&amp;#39;]; $w1 = $rect1[&amp;#39;w&amp;#39;]; $y1 = $rect1[&amp;#39;y&amp;#39;]; $h1 = $rect1[&amp;#39;h&amp;#39;]; $x2 = $rect2[&amp;#39;x&amp;#39;]; $w2 = $rect2[&amp;#39;w&amp;#39;]; $y2 = $rect2[&amp;#39;y&amp;#39;]; $h2 = $rect2[&amp;#39;h&amp;#39;]; $p1 = [$x1, $y1]; $p2 = [$x1 + $w1, $y1 + $h1]; $p3 = [$x2, $y2]; $p4 = [$x2 + $w2, $y2 + $h2]; $M = [max($p1[0], $p3[0]), max($p1[1], $p1[1])]; $N = [min($p2[0], $p4[0]), min($p2[1], $p4[1])]; if ($M[0] &amp;lt; $N[0] &amp;amp;&amp;amp; $M[1] &amp;lt; $N[1]) { return true; } else { return false; } } ?</description>
     </item>
     
     <item>
-      <title>操作系统（3）</title>
-      <link>https://laurel-he.github.io/post/opratingsystem_03/</link>
-      <pubDate>Tue, 20 Jul 2021 16:34:10 +0000</pubDate>
+      <title>运行相关</title>
+      <link>https://laurel-he.github.io/post/codecollect2/</link>
+      <pubDate>Tue, 25 Feb 2020 20:10:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/opratingsystem_03/</guid>
-      <description>Linux实现模拟多进程并发执行 示例：
-#!/bin/bash for((i=0;i&amp;lt;5;i++)) do { sleep 1; echo &amp;#34;$i--&amp;#34;&amp;gt;&amp;gt;aa &amp;amp;&amp;amp; echo &amp;#34;done&amp;#34; }&amp;amp; done wait cat aa | wc -l rm aa 解析 &amp;amp;代表并发执行，wait等待前面执行完了再执行，例如此示例中，如果没有wait很可能还没创建aa文件
-Linux下的中断 #include &amp;lt;stdlib.h&amp;gt;#include &amp;lt;stdio.h&amp;gt;#include &amp;lt;unistd.h&amp;gt; int main(void) { pid_t pid; //pid  printf(&amp;#34;Before fork... &amp;#34;); switch( pid = fork()) { case -1: printf(&amp;#34;fork call fail &amp;#34;); fflush(stdout); exit(1); case 0: printf(&amp;#34;child call &amp;#34;); printf(&amp;#34;the pid of child is %d &amp;#34;, getpid()); printf(&amp;#34;the pid of child&amp;#39;s parent is %d &amp;#34;, getppid()); printf(&amp;#34;child exiting.</description>
-    </item>
-    
-    <item>
-      <title>学习计划</title>
-      <link>https://laurel-he.github.io/post/learn_main/</link>
-      <pubDate>Wed, 08 Jul 2020 20:00:40 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/post/learn_main/</guid>
-      <description>语言： 继续学习go python php 操作系统：深入了解linux 前端：es6 react 熟悉TCP/IP、HTTP等协议 socket网络编程开发 尝试对已完成的项目进行压测 1 设计模式
-2 数据库设计及优化
-3 操作系统(Linux，进程调度，基本命令等)
-网络攻击技术
-3 laravel框架
-4 yii框架
-5 go
-7 shell编程
-8 elasticsearch
-9 redis
-10 消息队列(beanstalk,kafka,rabit mq)
-11 k8s
-12 docker
-13 nginx配置及优化
-15 代码可读性（代码整洁之道）
-16 代码大全（）
-17 socket,tcp/ip协议，http协议，请求过程
-18 数据结构（各种查找，B树，二叉排序树等）
-19 基础前端（react，vue）
-20 redis（并发）
-21 大流量高并发系统设计</description>
-    </item>
-    
-    <item>
-      <title>kustomize使用文档</title>
-      <link>https://laurel-he.github.io/post/kustomize01/</link>
-      <pubDate>Thu, 21 May 2020 11:00:00 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/post/kustomize01/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>kubenetes权威指南1-2章</title>
-      <link>https://laurel-he.github.io/post/k8s01/</link>
-      <pubDate>Sat, 16 May 2020 18:00:00 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/post/k8s01/</guid>
-      <description>kubenetes是什么 k8s是一个全新的基于容器技术的分布式架构领先方案，一个开放的开发平台，一个完备的分布式系统支撑平台
-k8s重要资源对象介绍 Master 概念介绍 k8s中的Master指的是集群控制节点，在每个集群里都需要有一个Master来负责整个集群的管理和控制。
-关键进程 （1）Kubenetes API Server(kube-apiserver):提供了HTTP Rest接口的额关键服务进程，是 kubenetes里所有资源的增删改查等操作的唯一入口，也是集群控制的入口进程 （2）kubenetes Controller Manager(kube-controller-manager):kubenetes里所有资源对象的自动化控制中心，可以将其理解为资源对象的大总管 （3）Kubenetes Scheduler(kube-scheduler):负责资源调度(Pod调度)的进程，相当于哦公交公司的调度室
-Node 概念介绍 除了Master,Kubenetes集群中的其他机器被称为Node。Node是集群中的工作负载节点，每个Node都会被Master分配一些工作负载(Docker容器)，当某个Node宕机时，其上的工作负载会被Master自动转移到其他节点上
-关键进程 （1）kubelet:负责Pod对应的容器的创建、启停等任务，同时与Master密切协作，，实现集群管理的基本功能 （2）kube-proxy:实现kubenetes Service的通信与负载均衡的重要组件 （3）Docker Engine：负责本机的容器的创建和管理工作
-Pod 概念介绍 在Kubernetes中，最小的管理元素不是一个个独立的容器，而是Pod,Pod是最小的，管理，创建，计划的最小单元.
-部分概念 （1）可以设置限额的计算资源有CPU和Memory两种： 通常以千分之一的CPU配额为最小单位，用m来表示 Memory配额也是一个绝对值，单位是内存字节数 （2）Event是一个事件的记录，记录了事件的最早产生事件，最后重现事件，重复次数，发起者，类型，以及导致此事件的原因等众多信息。
-Label 概念 一个Label是一个key=value的键值对,可类似于sql查询语句一样来进行查询
-Deployment Deployment内部使用了Replica Set来实现目的
-kubectl的create命令和apply命令的区别 kubectl create：
-（1）kubectl create命令，是先删除所有现有的东西，重新根据yaml文件生成新的。所以要求yaml文件中的配置必须是完整的
-（2）kubectl create命令，用同一个yaml 文件执行替换replace命令，将会不成功，fail掉。
-kubectl apply：
- kubectl apply命令，根据配置文件里面列出来的内容，升级现有的。所以yaml文件的内容可以只写需要升级的属性</description>
-    </item>
-    
-    <item>
-      <title>《第一本docker书》学习笔记01</title>
-      <link>https://laurel-he.github.io/post/docker01/</link>
-      <pubDate>Tue, 21 Apr 2020 21:03:10 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/post/docker01/</guid>
-      <description>Docker与配置管理 docker的核心组件 （1）docker客户端和服务器，也称为docker引擎 （2）docker镜像 （3）Registry （4）Docker容器
-基本使用 docker info 查看docker程序是否存在，功能是否正常
-docker exec(docker run) docker run 命令提供了docker容器的创建到启动的功能 (1)-i:保证容器STDIN是开启的 (2)-t:为要撞见的容器分配一个伪tty终端 docker exec -it backend_jiapin /bi n/bash</description>
-    </item>
-    
-    <item>
-      <title>php多维数组相关处理</title>
-      <link>https://laurel-he.github.io/post/multiarr/</link>
-      <pubDate>Thu, 16 Apr 2020 18:27:44 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/post/multiarr/</guid>
-      <description>使用场景 在工作中遇到了两次需要把不确定维度的多维数组渲染出来的情况，且还需要修改值和结构，如果使用json-patch会受到限制（需要根据不同的情况打补丁，且由于结构不一定一致，打补丁可能会错误地修改某些文件），因此需要自行设计批量修改如yaml,json等类似于多级结构的方法
-具体解析 多维数组转化的json前端渲染 结构不固定,获取对应的json，ts实现
-formatJsonData = (obj: any, name: string, moduleName?: string, getModuleName?: string): any[] =&amp;gt; { const arr: any[] = [] if (Object.keys(obj)) { let keys = Object.keys(obj); let i = 0; return keys.map((items) =&amp;gt; { i++; if (obj[items] instanceof Object) { let itemRes = items; if (obj[items][&#39;type&#39;]) { itemRes = obj[items][&#39;type&#39;]; } const names = name + &#39;=&#39; + itemRes return this.formatJsonData(obj[items], names, moduleName); } else { const resItems = name + &#39;=&#39; + items; this.</description>
-    </item>
-    
-    <item>
-      <title>有用的代码段-ts篇</title>
-      <link>https://laurel-he.github.io/post/usefulcode2/</link>
-      <pubDate>Thu, 16 Jan 2020 19:34:10 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/post/usefulcode2/</guid>
-      <description>查询数组中值相等的 modules.modules.find(item =&amp;gt; item.route === route).chinese ref调用子组件 &amp;lt;FacePointsMarkTool ref={com =&amp;gt; this.com = com} customRightRender={this.customRightRender} hideSaved={this.handleHideSaved} dataSource={dataSource} loadMore={this.getFaceData} isShowFacePlus saveFaceData={this.saveFaceData}&amp;gt;&amp;lt;/FacePointsMarkTool&amp;gt; </description>
-    </item>
-    
-    <item>
-      <title>有用的代码段-php篇</title>
-      <link>https://laurel-he.github.io/post/usefulcode1/</link>
-      <pubDate>Thu, 16 Jan 2020 12:34:10 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/post/usefulcode1/</guid>
-      <description>分步骤执行 &amp;lt;?php /** * @param mixed ...$args * @return bool * @throws Exception */ public function stepRun(...$args): bool { $count = $args[0]; $method = $args[1]; $step = array_key_exists(2, $args) ? $args[2] : 10; $limit = array_key_exists(3, $args) ? $args[3] : 10; $param = array_key_exists(4, $args) ? $args[4] : &amp;#39;&amp;#39;; $stepCount = ceil($count / $step); for ($nowStep = 0; $nowStep &amp;lt; $stepCount; $nowStep ++) { $this-&amp;gt;$method($limit, $nowStep * $step, $param); sleep(1); } sleep(1); return true; } ?</description>
-    </item>
-    
-    <item>
-      <title>使用go编写webassembly</title>
-      <link>https://laurel-he.github.io/post/webassembly_go_1/</link>
-      <pubDate>Tue, 10 Dec 2019 12:34:10 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/post/webassembly_go_1/</guid>
-      <description>使用go编写webassembly并在浏览器执行 参考博客 用go写WebAssembly入门
-下载安装 go
-编写测试文件hello.go package main import &amp;quot;fmt&amp;quot; func main() { fmt.Println(&amp;quot;Hello World!&amp;quot;) } 生成wasm文件  GOARCH=wasm GOOS=js go build -o hello.wasm hello.go 在windows下需要先设置环境变量：$env:GOARCH=&amp;quot;wasm&amp;quot;;$env:GOOS=&amp;quot;js&amp;quot;;
-添加依赖 cp $(go env GOROOT)/misc/wasm/wasm_exec.{html,js} . 添加一个测试http服务器 //http.go package main import ( &amp;quot;flag&amp;quot; &amp;quot;log&amp;quot; &amp;quot;net/http&amp;quot; &amp;quot;strings&amp;quot; ) var ( listen = flag.String(&amp;quot;listen&amp;quot;, &amp;quot;:8080&amp;quot;, &amp;quot;listen address&amp;quot;) dir = flag.String(&amp;quot;dir&amp;quot;, &amp;quot;.&amp;quot;, &amp;quot;directory to serve&amp;quot;) ) func main() { flag.Parse() log.Printf(&amp;quot;listening on %q...&amp;quot;, *listen) log.Fatal(http.ListenAndServe(*listen, http.HandlerFunc(func(resp http.ResponseWriter, req *http.</description>
+      <guid>https://laurel-he.github.io/post/codecollect2/</guid>
+      <description>1 下载数据 描述 根据链接下载文件 代码
+&amp;lt;?php function downloadOldFile($url,$rename,$ext){ $file_path = &amp;#39;public/images/age_60-120/&amp;#39;; $ch = curl_init($url); curl_setopt($ch, CURLOPT_HEADER, 0); curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); curl_setopt($ch, CURLOPT_BINARYTRANSFER, 1); $rawdata=curl_exec ($ch); curl_close ($ch); // 使用中文文件名需要转码  $fp = fopen($file_path. $rename .&amp;#34;.&amp;#34;.$ext,&amp;#39;w&amp;#39;); fwrite($fp, $rawdata); fclose($fp); // 返回路径  return $_SERVER[&amp;#39;DOCUMENT_ROOT&amp;#39;].$file_path.$rename.&amp;#34;.&amp;#34;.$ext; } ?&amp;gt;2 按步骤执行方法 描述 经常有需求：分页执行脚本，例如前1000条执行完后继续分页，此时就需要自动跳页执行 代码
+&amp;lt;?php /** * @param mixed ...$args * @return bool * @throws Exception */ private function stepRun(...$args) { $count = $args[0]; $method = $args[1]; $step = array_key_exists(2, $args) ?</description>
     </item>
     
     <item>
@@ -187,34 +85,20 @@ formatJsonData = (obj: any, name: string, moduleName?: string, getModuleName?: s
     </item>
     
     <item>
-      <title>react学习-Props,state和组件树</title>
-      <link>https://laurel-he.github.io/post/react_06/</link>
-      <pubDate>Tue, 22 Oct 2019 18:37:10 +0000</pubDate>
+      <title>代码整洁之道1-9章</title>
+      <link>https://laurel-he.github.io/post/cleancode/</link>
+      <pubDate>Mon, 07 Oct 2019 17:40:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/react_06/</guid>
-      <description>react学习手册 属性验证 javascript是弱类型语言，可更改变量的类型，难以查找类型错误。</description>
-    </item>
-    
-    <item>
-      <title>react学习-基础</title>
-      <link>https://laurel-he.github.io/post/react_base/</link>
-      <pubDate>Tue, 22 Oct 2019 18:37:10 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/post/react_base/</guid>
-      <description>相关概念介绍 react ES6 DOM Redux react-route webpack </description>
-    </item>
-    
-    <item>
-      <title>mongodb学习记录</title>
-      <link>https://laurel-he.github.io/post/mongocomplex/</link>
-      <pubDate>Sun, 20 Oct 2019 18:27:44 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/post/mongocomplex/</guid>
-      <description>参考文档 http://www.mongoing.com/docs/reference/operator/aggregation/interface.html https://www.cnblogs.com/zhoujie/p/mongo1.html https://www.docs4dev.com/docs/zh/mongodb/v3.6/reference/tutorial-text-search-in-aggregation.html
-mongodb精准匹配 假设有需求如下：数据为多层级的数组，需要精准匹配到某一个层级，并进行更新或新增等操作，如何实现？
-实现方式 当Mongodb版本大于3.6.1，实现将会非常简单，因为mongodb3.6.1以上可以直接通过语句来实现精准匹配。 但由于实际场景中版本不支持，当匹配超过一级则会报错：Too many positional (i.e. &amp;lsquo;$&#39;) elements found in path &amp;lsquo;files.$.testConstruct.params.list.$.testRange&amp;rsquo; 当版本大于3.6.1，举例：
-db.test_db.update( {&#39;_id&#39;: {$in: [&#39;1242rererwwr&#39;]}, &#39;files.name&#39;: &#39;test1.json&#39;, &#39;files.testConstruct.params.list.type&#39;: &#39;NewData&#39;}, {$set: {&#39;files.$.structuredContent.params.list.$.testRange&#39;: {&#39;enable&#39;: false, &#39;min&#39;: 14, &#39;max&#39;: 90}}, $currentDate: { updatedDatetime: true }}, { multi: true }) 分析： 设置值时，&amp;lsquo;files.$.testConstruct.params.list.$.testRange&amp;rsquo;中的第一个&amp;quot;$&amp;ldquo;将会匹配到name=test1.json的数组，第二个&amp;rdquo;$&amp;ldquo;将会匹配到files.structuredContent.params.list.type=NewData的数组 优点： 使用简单，匹配精确，无需代码判断 缺点： 适用版本有限制，且由于多级匹配需要更多的条件，而实际业务中不一定能取到这些条件（例如知道要更新的key为testRange但是不知道上级查询条件无法匹配到） 如果版本过低，可只匹配第一级，其余的通过代码匹配。 当版本小于3.6.1举例：
-&amp;lt;?php public function batchUpdateContents(string $route, array $ids, string $editor, $updateItems, bool $needPublish): bool { $routes = explode(&amp;#39;-&amp;#39;, $route); array_shift($routes); $routes[2] = self::TYPE_LIST[$routes[2]]; $updateRoute = &amp;#39;files.</description>
+      <guid>https://laurel-he.github.io/post/cleancode/</guid>
+      <description>提要 要有代码：代码呈现了需求的细节，将需求明确到机器可以执行的细节程度 不要产生糟糕的、混乱的代码，勒布朗法则：稍后等于永不 制造混乱无益于赶上期限，做得快的唯一方法就是始终保持代码整洁。
+好代码的特点 优雅、搞笑；代码逻辑直截了当，缺陷难以隐藏； 尽量减少依赖关系，使之便于维护； 根据某种分层战略完善处理错误代码，性能调至最优 整洁的代码力求集中，每个函数、每个类和每个模块都全神贯注于一事，完全不受四周细节的干扰和污染 整洁的代码可由作者之外的开发者阅读和增补，它应当有单元测试和验收测试 尽量使用有意义的命名，它只提供一种而非多种做一件事的途径 尽量少的依赖关系，明确地定义和提供清晰、尽量少的API
+总结 （1）能通过所有测试 （2）没有重复代码 （3）体现系统中的全部设计理念 （4）包含尽量少的实体，比如类、方法、函数等 不要重复代码，只做一件事，表达力，小规模抽象
+有意义的命名 （1）如果名称需要注释来补充，那就不算是名副其实（之前出现过争议） （2）不要使用意义含糊的废话，如果名称相同但是意义不同，那么info和data与a an the一样毫无意义，不要使用废话，varable不应出现在便能两种，table不应出现在表中 （3）使用读得出来的名称，方便阅读 （4）使用方便搜索的名称 （5）避免使用编码 （6）应当把类和函数做得足够小，消除对成员前缀的需要，读代码的人通常不会读前缀 （7）不要在类名中使用奇怪的命名 （8）不要使用双关语
+函数 （1）函数应该尽可能小，20行封顶最佳 （2）每个函数都一目了然，每个函数都只说一件事，每个函数都依次带到下一个函数 （3）函数的缩进层不应该多余一层或两层
+需要遵循的原则 （1）确保每隔switch函数都埋藏在较低的抽象层而且永远不重复 （2）不要向函数传入布尔值（我以前经常这么做），因为传入布尔值表示函数会有多余的操作 （3）使用异常代替返回错误码（错误代码能从主路径代码中分离出来得到简化） （4）抽离try/catch代码块 （5）不要重复自己
+注释 注意 注释存在的时间越久，就离它所描述的代码越远，越来越变得全然错误，因为程序员不能坚持维护注释
+必要的注释（好的注释） （1）法律信息 （2）提供信息的注释 （3）对意图的解释 （4）阐释（如果参数或返回值是某个标准库的一部分或者不能修改的代码，帮助阐释其含义的代码就会有用） （5）警示
+单元测试 </description>
     </item>
     
     <item>
@@ -227,113 +111,46 @@ db.test_db.update( {&#39;_id&#39;: {$in: [&#39;1242rererwwr&#39;]}, &#39;files.n
     </item>
     
     <item>
-      <title>生成json映射表</title>
-      <link>https://laurel-he.github.io/post/json/</link>
-      <pubDate>Thu, 15 Aug 2019 10:27:44 +0000</pubDate>
+      <title>代码大全</title>
+      <link>https://laurel-he.github.io/post/codecomplate_01/</link>
+      <pubDate>Sat, 05 Oct 2019 10:40:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/json/</guid>
-      <description>生成json映射表代码 &amp;lt;?php $dic = [ &amp;#39;qd&amp;#39; =&amp;gt; [...], &amp;#39;mp&amp;#39; =&amp;gt; [... 100], &amp;#39;jl&amp;#39; =&amp;gt; [...], &amp;#39;sb&amp;#39; =&amp;gt; [..., 50, 60, 70, 85, 100], &amp;#39;ly&amp;#39; =&amp;gt; [..., 50, 60, 70, 85, 100], &amp;#39;dy&amp;#39; =&amp;gt; [...0, 50, 60, 70, 85, 100], &amp;#39;sl&amp;#39; =&amp;gt; [...55, 60, 65, 70, 85, 100], &amp;#39;xl&amp;#39; =&amp;gt; [... 50, 55, 65, 75, 85, 100], &amp;#39;vl&amp;#39; =&amp;gt; [...50, 60, 70, 80, 90, 100], &amp;#39;rh&amp;#39; =&amp;gt; [... 100] ]; function getJson($dic) { $res = []; foreach($dic as $k =&amp;gt; $v){ $res[$k] = []; foreach($v as $key =&amp;gt; $val) { $res[$k][&amp;#39;mapV&amp;#39;][$key] = [ &amp;#39;label&amp;#39; =&amp;gt; (string)$key, &amp;#39;value&amp;#39; =&amp;gt; (string)$val ]; } } var_dump(json_encode($res)); } getJSON($dic); ?</description>
-    </item>
-    
-    <item>
-      <title>react单元测试</title>
-      <link>https://laurel-he.github.io/post/reactunit/</link>
-      <pubDate>Mon, 29 Jul 2019 10:40:10 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/post/reactunit/</guid>
-      <description>测试 ESLint 代码检查（分析JavaScript代码）,JSHint和JSLint是用于分析JavaScript代码的原生工具，并且可以为用户提供格式化代码的反馈意见；</description>
-    </item>
-    
-    <item>
-      <title>Leetcode刷题</title>
-      <link>https://laurel-he.github.io/post/2019-03-07/</link>
-      <pubDate>Fri, 26 Jul 2019 16:10:10 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/post/2019-03-07/</guid>
-      <description>1 两数之和 描述 给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。 你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。 示例
-给定 nums = [2, 7, 11, 15], target = 9 因为 nums[0] + nums[1] = 2 + 7 = 9 所以返回 [0, 1] `</description>
-    </item>
-    
-    <item>
-      <title>fast-json-patch</title>
-      <link>https://laurel-he.github.io/post/fastjsonpatch/</link>
-      <pubDate>Fri, 26 Jul 2019 14:37:10 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/post/fastjsonpatch/</guid>
-      <description>fast-json-patch包使用 网上关于json-patch的中文介绍太少了，官方文档没有翻译版，所以写一下自己的学习文档，以下只是自己根据英文文档的理解，不保证正确。
-基础操作 json patch几大基础操作包括：add, replace, move, test, remove, copy
-applyPatch 给定文档和操作，执行操作
-import {applyOperation, applyPatch} from &amp;#39;fast-json-patch&amp;#39;; let document = document = { firstName: &amp;#34;Albert&amp;#34;, contactDetails: { phoneNumbers: [] } }; let patch = [ { op: &amp;#34;replace&amp;#34;, path: &amp;#34;/firstName&amp;#34;, value: &amp;#34;Joachim&amp;#34; }, { op: &amp;#34;add&amp;#34;, path: &amp;#34;/lastName&amp;#34;, value: &amp;#34;Wester&amp;#34; }, { op: &amp;#34;add&amp;#34;, path: &amp;#34;/contactDetails/phoneNumbers/0&amp;#34;, value: { number: &amp;#34;555-123&amp;#34; } } ]; const docu = applyPatch(document, patch) applyOperation 执行单独的操作而不是连贯操作,举例如下：</description>
-    </item>
-    
-    <item>
-      <title>typescript泛型</title>
-      <link>https://laurel-he.github.io/post/genericity/</link>
-      <pubDate>Mon, 22 Jul 2019 20:37:10 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/post/genericity/</guid>
-      <description>typescript泛型 介绍 </description>
-    </item>
-    
-    <item>
-      <title>demo实例</title>
-      <link>https://laurel-he.github.io/post/demo_01/</link>
-      <pubDate>Thu, 18 Jul 2019 09:37:10 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/post/demo_01/</guid>
-      <description>js正则表达式 let patt = /[顺丰]/; let reg = new RegExp(patt, &amp;#39;i&amp;#39;); const company = (reg.test(record.remark) === true) ? &amp;#39;shunfeng&amp;#39; : &amp;#39;annengwuliu&amp;#39; console.log(&amp;#39;re test-=-----&amp;#39;, company); const num = record.remark.replace(/[^0-9]/ig, &amp;#34;&amp;#34;) 递归读取层级json getAllKey (obj: any, name: string, moduleName?: string): any[] { const arr: any[] = [] if (Object.keys(obj)) { let keys = Object.keys(obj); let i = 0; return keys.map((items) =&amp;gt; { i++; if (obj[items] instanceof Object) { // console.log(&amp;#34;obj[items]:&amp;#34;, items);  let itemRes = items; if (obj[items][&amp;#39;type&amp;#39;]) { // console.</description>
-    </item>
-    
-    <item>
-      <title>react学习-javascript函数式编程</title>
-      <link>https://laurel-he.github.io/post/react_02/</link>
-      <pubDate>Tue, 09 Jul 2019 09:37:10 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/post/react_02/</guid>
-      <description>react学习手册 Javascript函数式编程 基础概念 1 函数式编程： 函数是第一类成员，函数就是数据，可以像变量那样被保存，检索或者在应用程序内部传递。 （1）可以像声明变量一样声明函数；函数就是变量，可以添加到对象中：
-const obj = { message: &amp;#39;asdsada&amp;#39;, log(message) { console.log(message); } }; obj.log(obj.message); （2）可以将函数添加到数组中； （3）函数可以像其他变量一样，作为其他函数的参数传递，也可以作为其他函数的执行结果被返回;
-命令式和声明式编程 命令式编程：对执行结果的描述胜于执行过程 声明式编程： 代码关注重点是达成目标的具体过程
-不可变性 （1）使用Objct.assign()方法：一种拷贝机制，提供一个空白对象，将操作的对象拷贝到该对象上，然后修改拷贝对象
-Object.assign({}, color, {rating:rating}) （2）可以使用ES6规范下的箭头函数和ES7规范下的对象扩展运算符编写同样的函数。
-const rateColor = (color, rating) =&amp;gt; ({ ...color, rating }) 注意，在箭头函数中，箭头不能指向一个对象的花括号；Array.push方法不是一个不可变函数，使用Array.concat取代 可以使用ES6扩展运算符串联数组，同时改操作符可以使用同样的机制拷贝对象，并将它添加到原生数组的副本上
-const addColor = (title, list) =&amp;gt; [...list, {title}] 纯函数 1 概念： 返回结果值依赖于输入参数的函数。纯函数至少需要接受一个参数并且总是返回一个值或者其他函数。不产生副作用，不修改全局变量或任何应用程序的state,将输入参数当成不可变数据
-var frederick = { name: &amp;#34;Frederick Douglass&amp;#34;, canRead: false, canWrite: false } const selfEducate = person =&amp;gt; ({ .</description>
-    </item>
-    
-    <item>
-      <title>react学习-es6基础特性</title>
-      <link>https://laurel-he.github.io/post/react_01/</link>
-      <pubDate>Mon, 08 Jul 2019 09:37:10 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/post/react_01/</guid>
-      <description>react学习手册 新特性 1 react开发者工具：react developer tools，可以查看网站react元素 2 yarn进行依赖管理：yarn.lock文件，可以使用yarn install安装，npm install yarn,yarn add [package-name],yarn remove [package-name]
-变量声明 1 const:常量，不能被修改，重写会报错；
-2 let:变量，可以将变量作用域限定在任意代码块中（var不行） 3 模板字符串${}，可在字符串中插入变量
-箭头函数 1 介绍：用户可以不使用function关键字创建函数，通常还不需要return 2 箭头函数可以限制this的作用域，箭头函数没有自己的this,引用外层的this;
-ES6转译 1 介绍：浏览器运行前将代码转成符合ES5规范的代码，Bable是当前最流行的转译工具之一
-ES6的对象和数组 1 解构赋值： (1)允许用户将某个对象内的字段的作用域本地化，并且声明哪些值是将要使用的。 举例：
-var sandwich = { bread: &amp;#34;dutch crunch&amp;#34;, meat: &amp;#34;tuna&amp;#34;, cheese: &amp;#34;swiss&amp;#34;, toppings: [&amp;#34;lettuce&amp;#34;, &amp;#34;tomato&amp;#34;, &amp;#34;mustard&amp;#34;] } var {bread, meat} = sandwich console.log(bread, meat) bread = &amp;#34;garlic&amp;#34; meat = &amp;#34;turkey&amp;#34; console.log(bread,meat) console.log(sandwich.bread, sandwich.meat) (2)除了使用点符号访问对象内部属性之外，还可以在对象之外解构需要使用的值。
-var regularPerson = { firstname: &amp;#34;Bill&amp;#34;, lastname: &amp;#34;Wilson&amp;#34; }; var lordify = ({firstname}) =&amp;gt; { console.</description>
-    </item>
-    
-    <item>
-      <title>减肥日记-介绍</title>
-      <link>https://laurel-he.github.io/post/fit01/</link>
-      <pubDate>Thu, 23 May 2019 11:50:00 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/post/fit01/</guid>
-      <description>创立原因及目标 我的表姐要在圣诞节前一天结婚（不是崇洋媚外，只是那时候恰好是个良辰吉日，我们老家又比较喜欢冬天结婚，这样很多亲戚都回家了）。算下来现在距离那天也差不多二百多天，我如果能够成功减肥，这样也不至于在她其他漂亮伴娘的衬托下给她丢脸了（这其中关系比较复杂，就不细说了）。 基于以上原因，我创立了一个200天减肥法，在200天内，以一个小基数（虽然我120斤也不算小基数了）的情况，减肥20斤左右。
-如何执行 我定下的这个200天减肥计划是可以立即执行的，而不是说要先做什么准备，因为如果准备时间过长，或者要准备的东西太多了，人很可能在这个时候就放弃。 但是既然是减肥，怎么可能什么准备都没有呢？当然是有的，只不过准备时间也包含在了减肥时间以内，这样就可以直接开始了。 而且我这个计划也不会太激进，避免人产生逆反心理。毕竟我也的确是一个好吃懒做的人，我特别爱吃火锅，烤串，辣条，又特别讨厌运动。从刚上大学就开始琢磨着减肥，到如今也已经六年过去了，体重还是120，真是可怕。
-具体信息 整个200天减肥计划分成了8个阶段，为了避免放弃，避免产生逆反心理，避免反弹，我实在是做了很多前期调研。自己几斤几两我还是知道的，什么21天减肥法，轻断食，各种减肥操，跑步我都试过，最后无一例外全部反弹了，大三的时候我曾经瘦到过102斤，可惜最终也没能保持住，半年不到就反弹回来了，所以说，我需要一个稳妥的，进度也许不够快但是绝对有效的减肥方案。
-概述 这八个阶段分别是:10天适应期，20天习惯养成期，50天正常减肥期（上），20天疯狂减脂期，10天塑身期，50天正常减肥期（下），20天恢复期，20天稳定期
-分条解析 10天适应期 最终目标 适应期的最终目标非常简单，就是十天的时间，把长期处于996，生活作息极其不规律的自己变成一个作息规律，已经为减肥做好了准备的自己，严格来说，就是一个准备阶段。 既然是准备阶段，自然要求不会太苛刻，只有几点基本要求:形成良好的饮食，睡眠，喝水等习惯，绝对不可以暴饮暴食，不能说预料到接下来会有很长一段时间要开始减肥了，就趁现在疯狂进食。这个阶段需要形成良好的生活习惯，为后期打好基础。
-目标解析 维持良好的睡眠 每天至少睡6.5小时（因为我是程序员，而且996，偶尔还会加班，所以说至少6.5，正常来说要减肥每天起码要睡7－8小时，我大部分都可以控制到这个时间）
-对食物的控制 开始注意食物搭配，保持吃饭规律，慢慢形成少食多餐的习惯，拒绝零食（如果实在想吃可以吃一些不是零食的小吃，比如烤冷面，手抓饼等，前提是这些小吃会占据一顿饭）
-放松压力 这没什么好说的，比较唯心，就是舒缓情绪，不要过分紧张等等
-物品准备 这十天准备期可以买一些减肥必备的物品，牌子不重要，多看一些评价自然知道好不好了 （1）燕麦（最好带坚果的，可以选择含有少量糖的，不然太难吃了，很可能吃一半就放弃了，这可是将来的晚餐，别变成了摆设） （2）瑜伽垫（可以选择厚一些的）
-（3）滚轴（放松小腿用）
-（4）运动套装（至少两件运动内衣，跑步用的裤子） （5）运动鞋（舒适，性价比高就可以） （6）坚果（选评价高的就行） （7）全麦面包（或者其他类似的可增加饱腹感，能量又不高的食物） （8）运动用手机包 还有其他必须有但是一般人都有的东西：耳机（最好是蓝牙耳机），体重秤，软尺（量腰围用）
-其他准备 初始体重：120斤（60kg） 目标体重：97（58.5kg） #阶段划分 减肥时间总共200天，以下是按照不同阶段进行时间划分 ##适应期 10天，此阶段需要达到的目标如下： （1）逐渐形成规律的睡眠时间：6.5-8.5小时 （2）逐步减少食量</description>
+      <guid>https://laurel-he.github.io/post/codecomplate_01/</guid>
+      <description>前期准备 前期准备的重要性 不要立即开始写代码，要做好必要的需求分析和架构设计，写好需求文档和技术文档，防止浪费时间和精力制造错误的东西
+需求核对表 针对功能需求：
+1．是否详细定义了系统的全部输入，包括其来源、精度、取值范围、出现频率等？
+2．是否详细定义了系统的全部输出，包括其目的地、精度、取值范围、出现频率格式等？
+3．是否详细定义了所有的输出格式(如：web页面、报表等)？
+4．是否详细定义了所有硬件及软件的外部接口？
+5．是否详细定义了全部外部通信接口，包括握手协议、纠错协议、通信协议等？
+6．是否列出了用户所要做的全部事情？
+7．是否详细定义了每个任务所用数据，以及每个任务得到的数据
+针对非功能需求（质量需求）
+1.是否为全部必要的操作，从用户的角度，详细描述的期望的响应时间 ？
+2.是否详细描述了其他与计时有关的考虑，如处理时间、数据传输率、系统吞吐量等？
+3.是否详细定义了安全级别
+4.是否详细定义了可靠性，包括软件失灵的后果、发生故障时需要保护的至关重要的信息、错误检查与回复的策略等？
+5.是否详细定义了机器内存和剩余硬盘空间最小值？
+6.是否详细定义了系统的可维护性，包括适应特定功能的变更、操作环境的变更、与其他软件接口变更的能力？
+7.是否包含对“成功”的定义，“失败”的定义？
+需求的质量
+  需求是用户书写的吗？
+  每条需求都不与其他需求冲突吗？
+  是否详细定义了相互竞争的特性之间的权衡
+  是否避免在需求中规定设计(方案)
+  需求是否在详细程度上保持相当一致的水平？有些需求应当更详细的描述吗？有些需求应该更粗略的描述吗？
+  需求是否足够清晰，即使转交给一个独立的小组去构建，他们也能理解吗？开发者也这么想吗？
+  每个条款都与待解决的问题及解决方案相关吗？能从每个条款上溯到它的问题中的对应跟源吗？
+  是否每条需求都是可测试的？是否可应进行独立的测试，以检验满不满足各项需求
+  是否描述了所有可能对需求的改动，包括各项改动的可能性
+  需求的完备性
+1.对于在开始开发之前无法获得信息，是否详细描述了信息不完全的区域？
+2.需求的完备度是否达到这种程度：如果产品满足所有需求，那么它就是可接受的？
+3.你对全部需求都感觉舒服吗？你是否已经去掉了那些不可能完成的需求—那些只是为了安抚客户和老板的东西？
+花费在前期准备上的时间长度 花费在问题定义，需求分析，软件架构上的时间依据项目的需要而变化，一般占据10%-20%的工作量和20%-30%的时间
+良好的类接口 类的基础是抽象数据类型（我之前大部分时候没有使用抽象，只是把相关的方法和变量定义放在了一起，实际上是不符合面向对象变成原则的），抽象数据类型是指一些数据和 对这些数据所进行操作的集合。定义抽象类有助于代码规范，提高
+创建类的原因 （1）为显示世界中的对象建模 （2）为抽象的对象建模 （3）降低复杂度 （4）隔离复杂度 （5）隐藏实现细节 （6）让代码更易重用 （7）把相关的操作包装到一起
+应当避免的类 （1）避免创建万能类 （2）消除无关紧要的类 （3）避免用动词命名的类</description>
     </item>
     
     <item>
@@ -353,21 +170,6 @@ sudo apt-get install mysql-server-5.7 mysql-client-5.7 5 基础配置 (1)安装P
 6其他tips (1)配置sudo 修改 /etc/sudoers，末尾添加一行：
 test ALL=(ALL) NOPASSWD: ALL test表示用户名； 保存退出后执行一下命令：
 sudo usermod -aG test test (2)配置共享文件夹且自启动 1 virtualbox(设置-共享文件夹-勾选固定分配(不勾选自动挂载)) 2 ubuntu创建文件夹 3 挂载共享文件夹</description>
-    </item>
-    
-    <item>
-      <title>docker使用心得</title>
-      <link>https://laurel-he.github.io/post/docker/</link>
-      <pubDate>Wed, 24 Apr 2019 21:03:10 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/post/docker/</guid>
-      <description>准备工作 1 前提条件 ubuntu内核版本高于 3.10 uname -r 
-2 安装docker 本文是基于ubuntu的，基于centos安装路径博客如下： centos windows
-wget -qO- https://get.docker.com/ | sh 当要以非root用户可以直接运行docker时，需要执行 sudo usermod -aG docker runoob 命令，然后重新登陆 启动docker服务
-sudo service docker start 测试运行hello world
-docker run hello-world 镜像加速 路径： /etc/docker/daemon.json 配置文件中加入(不存在则创建，我本地不存在此文件)：
-{ &amp;quot;registry-mirrors&amp;quot;: [&amp;quot;http://hub-mirror.c.163.com&amp;quot;] } 基础知识 hello world
-docker run ubuntu:15.10 /bin/echo &amp;quot;Hello world&amp;quot; (验证,echo是可以直接echo的，不必写/bin/echo) 参数解析 docker:docker的二进制执行文件 run:与前面docker组合来运行一个容器 ubuntu:15.10 : 指定要运行的镜像，Docker首先从本地主机上查找镜像是否存在，如果不存在，Docker 就会从镜像仓库 Docker Hub 下载公共镜像。 /bin/echo &amp;ldquo;Hello world&amp;rdquo;: 在启动的容器里执行的命令 运行交互式的容器 通过docker的两个参数 -i -t，让docker运行的容器实现&amp;quot;对话&amp;quot;的能力</description>
     </item>
     
     <item>
@@ -392,43 +194,17 @@ git fetch </description>
     </item>
     
     <item>
-      <title>Laravel 日志系统</title>
-      <link>https://laurel-he.github.io/post/log/</link>
-      <pubDate>Thu, 11 Apr 2019 15:23:44 +0000</pubDate>
+      <title>crontab基本使用</title>
+      <link>https://laurel-he.github.io/post/crontab/</link>
+      <pubDate>Wed, 10 Apr 2019 18:27:44 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/log/</guid>
-      <description>1 （自己摸索版本）5.2 1 定义路径 .env配置文件添加日志路径，例如
-LOG_PATH=/tmp/paytest 2 启动文件添加日志路径 $app-&amp;gt;configureMonologUsing(function($logger){ $logger-&amp;gt;pushHandler(new \Monolog\Handler\RotatingFileHandler(env(&amp;#39;LOG_PATH&amp;#39;).&amp;#39;.log&amp;#39;), 10); return $logger; }); 2 官方文档 1 异常处理 介绍 当您启动一个新的 Laravel 项目时，错误和异常处理就已为您配置。 应用程序触发的所有异常都被 App\Exceptions\Handler 类记录下来，然后渲染给用户。 我们将在本文档中深入介绍此类。 配置 （1）config/app.php 文件的 debug 选项，决定了是否向用户显示错误信息。默认情况下，此选项设置为存储在 .env 文件中的 APP_DEBUG 环境变量中。 （2）Laravel 支持 single 、daily 、 syslog 和 errorlog 日志模式。要配置 Laravel 使用的存储机制，应该修改 config/app.php 配置文件中的 log 选项。例如，如果您希望使用每日一个日志文件而不是单个文件，则应将 app 配置文件中的 log 值设置为 daily 日志等级 使用 Monolog 时，日志消息可能具有不同的日志等级。默认情况下，Laravel 将所有日志级别写入存储。但是，在生产环境中，您可能希望通过将 log_level 选项添加到 app.php 配置文件中来配置应记录的最低日志等级。
-一旦配置了此选项，Laravel 将记录大于或等于指定日志等级的所有级别。例如，默认将 log_level 设置为 error 那么将会记录 error , critical , alert 和 emergency 日志信息：</description>
-    </item>
-    
-    <item>
-      <title>PHP常见算法</title>
-      <link>https://laurel-he.github.io/post/phpalg/</link>
-      <pubDate>Mon, 08 Apr 2019 18:27:44 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/post/phpalg/</guid>
-      <description>排序算法 1 冒泡排序 解析 从零开始，每一位和剩余位数比较，如果大于（小于）则交换，最后一位最终会是最大（最小）的。 代码
-&amp;lt;?php $arr = [2,3,1,4,7,6,9]; var_dump(bubbleSort($arr)); function bubbleSort($arr) { $len = count($arr); for($i = 0;$i &amp;lt; $len; $i++) { for($j = $len - 1;$j &amp;gt; $i;$j--) { if($arr[$j] &amp;lt; $arr[$j-1]) { $tmp = $arr[$j]; $arr[$j ] = $arr[$j - 1]; $arr[$j - 1] = $tmp; } } } return $arr; } 2 快速排序 解析 选中一个值（一般是$arr[0]）作为基准，通过一次排序分割成比基准数小和比基准数大的两部分
-&amp;lt;?php $arr = [3,4,1,5,7,2,6]; function quickSort($arr) { if(count($arr) &amp;lt;= 1) { return $arr; } $mid = $arr[0]; $left = array(); $right = array(); for($i = 1;$i&amp;lt;count($arr);$i++) { if($mid &amp;lt; $arr[$i]) { $right[] = $arr[$i]; } else { $left[] = $arr[$i]; } } $left = quickSort($left); $right = quickSort($right); return array_merge($left,array($mid),$right); } var_dump(quickSort($arr)); 注意事项 array_merge()需要将左边，中间和右边都合并</description>
-    </item>
-    
-    <item>
-      <title>安装php sniffer</title>
-      <link>https://laurel-he.github.io/post/phppsr/</link>
-      <pubDate>Sun, 07 Apr 2019 18:27:44 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/post/phppsr/</guid>
-      <description>安装pear（参考文档：https://www.cnblogs.com/huangbx/p/php_codesniffer.html）   从以下网址：http://pear.php.net/go-pear.phar下载代码，或直接另存为文件go-pear.phar 运行php go-pear.phar（注意是否加了环境变量，没有可在php.exe目录下运行） 如果报错“ERROR, enter the php.exe path”，输入选项13，选择php.exe所在目录  安装php sniffer   运行命令“pear install PHP_CodeSniffer” 配置phpstorm（其他IDE请自行Google），Settings-&amp;gt;Languages &amp;amp; Frameworks-&amp;gt;php-&amp;gt;Code Sniffer，选择刚才安装的phpcs.bat文件，validate 看看会不会报错 如果校验报错，可能是找不到autoload路径，打开phpcs文件，更改include路径，例如我可以直接改成include_once &amp;lsquo;/pear/PHP/CodeSniffer/autoload.php&amp;rsquo; 选择Settings-&amp;gt;Inspections-&amp;gt;PHP Code Sniffer validation，点击刷新按钮，选择&amp;quot;PSR2&amp;quot; 此时如果有不规范的代码可以看到有phpcs的报错了  配置本地git   打开.git/hooks,新建文件pre-commit 示例代码如下  #!/bin/bash # # check PHP code syntax error and standard with phpcs # author : star[github.com/star1989] # date : 2017-02-24 PROJECT=$(git rev-parse --show-toplevel) cd $PROJECT SFILES=$(git diff --cached --name-only --diff-filter=ACMR HEAD | grep \\.</description>
-    </item>
-    
-    <item>
-      <title>mongodb使用</title>
-      <link>https://laurel-he.github.io/post/mongo1/</link>
-      <pubDate>Tue, 02 Apr 2019 18:27:44 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/post/mongo1/</guid>
-      <description>基础  列出所有数据库:show dbs; 列出所有表：show tables;或show collections; 查询所有数据：db.taname.find().pretty(); 查询指定列所有数据：db.tbname.find({},{col1:1,col2:2,&amp;hellip;}).pretty(); 根据条件查询所有数据：db.tbname.find({name:&amp;ldquo;test&amp;rdquo;},{col1:1,col2:1}).pretty(); 查询结果不包含指定字段：db.tbname.find({},{status:0,col2:0}).pretty();  查询 1 查询所有数据 db.tbname.find().pretty();</description>
+      <guid>https://laurel-he.github.io/post/crontab/</guid>
+      <description>1 简介 crond 是linux下用来周期性的执行某种任务或等待处理某些事件的一个守护进程，与windows下的计划任务类似，当安装完成操作系统后，默认会安装此服务 工具，并且会自动启动crond进程，crond进程每分钟会定期检查是否有要执行的任务，如果有要执行的任务，则自动执行该任务。
+2 格式 minute hour day month week command
+3 操作 crontab -l:列出所有任务
+laravel 定时任务 原文路径 https://learnku.com/docs/laravel/5.4/scheduling/1257
+其他解决方式 1 supervisor 举例
+[program:finance_svcs_autoreconciliation] command=php /opt/app/nginx/html/qa6/financesvcs/artisan queue:work beanstalkd --queue=autoreconciliation_broadcast --daemon directory=/opt/app/nginx/html/qa6/financesvcs autostart=true autorestart=true user=apache numprocs=1 redirect_stderr=true stdout_logfile=/var/log/supervisor/qa1/%(program_name)s-stdout.log stdout_logfile_maxbytes=10MB stdout_logfile_backups=10  </description>
     </item>
     
     <item>
@@ -455,71 +231,22 @@ npm install -g hexo-cli 建站 hexo init &amp;lt;folder&amp;gt; cd &amp;lt;folde
     </item>
     
     <item>
-      <title>一些php知识</title>
-      <link>https://laurel-he.github.io/post/laurel/</link>
-      <pubDate>Thu, 28 Mar 2019 14:00:40 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/post/laurel/</guid>
-      <description>argc和argv $argv代表传递的参数,$argc代表参数个数（相对路径+传的参数） 示例
-&amp;lt;?php echo $argv[0]; echo &amp;#34;\n&amp;#34;; var_dump($argv[1]); echo &amp;#34;\n&amp;#34;; var_dump(intval($argv[2])); echo &amp;#34;\n&amp;#34;; echo $argv[3]; echo &amp;#34;\n&amp;#34;; echo $argc; </description>
-    </item>
-    
-    <item>
-      <title>重新实现monthly步骤</title>
-      <link>https://laurel-he.github.io/post/monthly/</link>
-      <pubDate>Mon, 25 Mar 2019 09:41:10 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/post/monthly/</guid>
-      <description>1 bi新建已收、已付、应收、应付表 CREATE TABLE `order_product_set_pay`( `id` int(10) unsigned NOT NULL, `order_product_id` int(10) unsigned NOT NULL, `parent_order_product_id` int(10) unsigned DEFAULT &#39;0&#39; COMMENT &#39;parent order_product_id&#39;, `has_settlement` decimal(10,2) NOT NULL DEFAULT &#39;0.00&#39;, `should_settlement` decimal(10,2) NOT NULL DEFAULT &#39;0.00&#39;, `has_pay` decimal(10,2) NOT NULL DEFAULT &#39;0.00&#39;, `should_pay` decimal(10,2) NOT NULL DEFAULT &#39;0.00&#39;, `settlement_pay_time` timestamp NOT NULL DEFAULT &#39;0000-00-00 00:00:00&#39;, `pay_pay_status` varchar(255) NOT NULL DEFAULT &#39;Pending&#39;, `pay_pay_time` timestamp NOT NULL DEFAULT &#39;0000-00-00 00:00:00&#39;, PRIMARY KEY (`id`) ) ENGINE=InnoDB DEFAULT CHARSET=utf8; alter table `order_product_set_pay` drop primary key; alter table `order_product_set_pay` add `settlement_id` int(10) unsigned NOT NULL; 2 从bi表中查询数据 1 已收 （总收）/比例 比例 =</description>
-    </item>
-    
-    <item>
-      <title>python Generators</title>
-      <link>https://laurel-he.github.io/post/generators/</link>
-      <pubDate>Thu, 14 Mar 2019 14:41:10 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/post/generators/</guid>
-      <description>##迭代器Iterator 迭代器是一个可以让程序员遍历一个容器的对象，一个迭代器在遍历并读取一个容器的数据元素时不会执行一个迭代。 迭代器三个部分 可迭代对象 迭代器 迭代 可迭代对象 python中的任意对象，只要定义了可以返回一个迭代器的__iter__方法，或者定义了可以支持下标索引的__getitem__方法，那么就是一个可跌打对象 迭代器 任意对象，只要定义了next(Python2)或者__next__方法，它就是一个迭代器 迭代 从某个地方取出一个元素的过程，当使用一个循环来遍历某个东西时，这个过程本身就叫做迭代。 ##生成器Generators 生成器也是一种迭代器，但是只能对其迭代一次</description>
-    </item>
-    
-    <item>
-      <title>bash学习笔记</title>
-      <link>https://laurel-he.github.io/post/bash/</link>
-      <pubDate>Wed, 13 Mar 2019 14:28:10 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/post/bash/</guid>
-      <description> </description>
-    </item>
-    
-    <item>
       <title>一些快捷键</title>
-      <link>https://laurel-he.github.io/post/20190220/</link>
+      <link>https://laurel-he.github.io/post/hotkey/</link>
       <pubDate>Tue, 05 Mar 2019 13:25:21 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/20190220/</guid>
+      <guid>https://laurel-he.github.io/post/hotkey/</guid>
       <description>navicat for mysql 快捷键 1.ctrl+q 打开查询窗口 2.ctrl+/ 注释sql语句 3.ctrl+shift +/ 解除注释 4.ctrl+r 运行查询窗口的sql语句 5.ctrl+shift+r 只运行选中的sql语句 6.F6 打开一个mysql命令行窗口 7.ctrl+l 删除一行 8.ctrl+n 打开一个新的查询窗口 9.ctrl+w 关闭一个查询窗口
 phpstrom快捷键 编辑
    快捷键 作用     Ctrl + Space 代码自动完成（一般与输入法冲突）   Ctrl + Shift + Enter 智能完善代码（如:if()）   Ctrl + P 方法参数提示，显示默认参数   Ctrl + Q 显示注释代码   Ctrl + mouse over code 查看到简短的函数介绍   Ctrl + F1 显示错误或警告信息的描述（需要把光标放到错误或警告位置）   Alt + Insert 生成代码段（ 包括函数或类注释，版权信息，构造方法，抽象方法等）   Ctrl + O 插入覆盖父类的方法   Ctrl + I 实现抽象方法   Ctrl + Alt + T 选中的代码放在if.</description>
     </item>
     
     <item>
-      <title>vim学习笔记</title>
-      <link>https://laurel-he.github.io/post/vim/</link>
-      <pubDate>Thu, 28 Feb 2019 16:34:10 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/post/vim/</guid>
-      <description>光标移动 h 或 &amp;lt;- 表示向左 j 下 k 上 l 右
-ctrl + f 屏幕向下移动一页 ctrl + b 向上移动一页 ctrl + d 向下移动半页 ctrl + u 向上移动半页 &amp;lsquo;+&amp;rsquo; 光标移动到非空格符的下一行 &amp;lsquo;-&amp;rsquo; 光标移动到非空格符的 n[space] n表示数字，光标向右移动n个字符 0或[Home] 移动到这一行最开始的字符处 $或[End] 移动到这一行的最后面字符处 H 移动到这个屏幕最上方一行的第一个字符 M 移动到这个屏幕中央一行的第一个字符 L 移动到这个屏幕最下方一行的第一个字符 G 移动到这个文件的最后一行 nG(:n) 移动到这个文件的第n行 gg(1G) 移动到第一行 n[Enter] n为数字，表示向下移动n行
-查找与替换 /word 光标之下寻找名为word的字符串 ?word 光标之上寻找名为word的字符串 n 重复前一个查找的操作 N 反向进行前一个查找操作 :n1,n2s/word1/word2/g n1和n2是数字，在n1和n2行之间查找所有word,替换成word2 :1,$s/word1/word2/g :1,$s/word1/word2/gc c代表confirm,替换前显示确认信息
-删除复制与粘贴 x 向后删除 X 向前删除 nx 向后删除n个字符 dd 删除（剪切）光标所在一整行 ndd 删除向下n行 d1G 删除光标所在到第一行的数据 dG 删除光标所在到最后一行的数据 d$ 删除光标所在处，到该行最后一个字符 d0 yy 复制该行 nyy y1G yG y0 y$ p 将已复制的数据在光标下一行粘贴 P 上一行 J 光标所在行与下一行数据结合成同一行 c 重复删除多个数据(10cj代表向下删除10行)删除后切换到编辑模式 u 回复 ctrl+r 重做 .</description>
-    </item>
-    
-    <item>
       <title>Hbase基础命令</title>
-      <link>https://laurel-he.github.io/post/20190227/</link>
+      <link>https://laurel-he.github.io/post/hbase_01/</link>
       <pubDate>Thu, 28 Feb 2019 11:03:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/20190227/</guid>
+      <guid>https://laurel-he.github.io/post/hbase_01/</guid>
       <description>Hbase基础命令 启动和停止Hbase 启动 hbase/bin ./start-hbase.sh 关闭 hbase/bin ./stop-hbase.sh
 使用Hbase 连接Hbase bin/hbase shell 创建表 create &amp;lsquo;test&amp;rsquo; （创建表需要添加列簇） create &amp;lsquo;表名&amp;rsquo; &amp;lsquo;列簇名1&amp;rsquo; &amp;lsquo;列簇名2&amp;rsquo; …… 添加数据 put &amp;lsquo;表名&amp;rsquo; &amp;lsquo;行名&amp;rsquo; &amp;lsquo;列簇名称&amp;rsquo; &amp;lsquo;value&amp;rsquo;（当列簇只有一列） put &amp;lsquo;表名&amp;rsquo; &amp;lsquo;行名&amp;rsquo; &amp;lsquo;列簇名称：列名称&amp;rsquo; &amp;lsquo;value&amp;rsquo; 查看表 list: 查看所有表 list &amp;lsquo;tablename&amp;rsquo; ： 查看表名为tablename的表 删除表 disable &amp;lsquo;表名&amp;rsquo;(对应enable &amp;lsquo;明白&amp;rsquo;) drop &amp;lsquo;表名&amp;rsquo;
 配置 ####基础配置 conf/hbase-site.xml
@@ -527,70 +254,12 @@ ctrl + f 屏幕向下移动一页 ctrl + b 向上移动一页 ctrl + d 向下移
     </item>
     
     <item>
-      <title>各种奇怪的坑</title>
-      <link>https://laurel-he.github.io/post/2019_01_01/</link>
-      <pubDate>Fri, 01 Feb 2019 16:10:10 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/post/2019_01_01/</guid>
-      <description>1 strtotime() 描述 获取上个月的时间可以是date(&amp;lsquo;Y-m-d&amp;rsquo;,strtotime(&#39;-1 month&#39;));如果今天是31号而上个月没有31号，就会直接输出这个月1号； 解决办法 使用last day of -1 month来获取上个月的最后一天
-2 php 字符串和数字比较 描述 遇到一个问题，传过来的参数可能是0，可能是字符串，然后与0作比较，但是当传递的参数是字符串时，与0比较，结果是true 解决办法 直接与&#39;0&amp;rsquo;比较。0===&amp;lsquo;0&amp;rsquo;可以返回true,可以直接比较，字符串与&#39;0&amp;rsquo;比较也不等
-3 virtualbox共享文件夹不能执行virtualenv env，只能在其他文件夹下运行，暂时没想到解决办法 virtualbox的共享文件夹有保护机制，不允许直接运行virtualenv env，只能在其他文件夹下运行,解决办法： 硬链接
-4 laravel get()-&amp;gt;toArray()无法获取数据 </description>
-    </item>
-    
-    <item>
-      <title>fastadmin自定义角色组</title>
-      <link>https://laurel-he.github.io/post/test-my-site/</link>
-      <pubDate>Thu, 31 Jan 2019 17:36:10 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/post/test-my-site/</guid>
-      <description>之前使用fastadmin，自定义角色组，发现编辑/删除/修改等等权限可以直接权限管理中选择，然后用不同的角色登陆，会显示对应的权限按钮。此时有一个新的需求就是增加审核和批量审核，并且也增加对应的权限。
- 添加按钮 先不写功能，在对应的位置上加上审核按钮。在顶头位置的批量审核需要得到的样式如下：
- 原先的创建按钮方法为： {:build_toolbar(&amp;lsquo;refresh,edit,checkall&amp;rsquo;)} 有时候不使用buid_toolbar来创建按钮，而是直接使用的
- &amp;lt;a href=&amp;quot;javascript:;&amp;quot; class=&amp;quot;btn btn-danger btn-del btn-disabled disabled {:$auth-&amp;gt;check(&#39;course/clabelong/del&#39;)?&#39;&#39;:&#39;hide&#39;}&amp;quot;  title=&amp;quot;{:(&amp;lsquo;Delete&amp;rsquo;)}&amp;quot; &amp;gt;{:(&amp;lsquo;Delete&amp;rsquo;)} 这种方式来创建按钮，这样虽然很直观，但是实际上使用却很不方便，因为这里对于权限的判定可能是有问题的。期待的结果是直接使用build_toolbar方法，设置checkall为批量审核，check为审核方法，对于各个权限组可以直接调用。 修改build_toolbar方法到如下结果：
-function build_toolbar($btns = NULL, $attr = []) { $auth = \app\admin\library\Auth::instance(); $controller = str_replace(&#39;.&#39;, &#39;/&#39;, strtolower(think\Request::instance()-&amp;gt;controller())); $btns = $btns ? $btns : [&#39;refresh&#39;, &#39;add&#39;, &#39;edit&#39;, &#39;del&#39;, &#39;import&#39;,&#39;checkall&#39;]; $btns = is_array($btns) ? $btns : explode(&#39;,&#39;, $btns); $index = array_search(&#39;delete&#39;, $btns); if ($index !== FALSE) { $btns[$index] = &#39;del&#39;; } $btnAttr = [ &#39;refresh&#39; =&amp;gt; [&#39;javascript:;&#39;, &#39;btn btn-primary btn-refresh&#39;, &#39;fa fa-refresh&#39;, &#39;&#39;, __(&#39;Refresh&#39;)], &#39;checkall&#39;=&amp;gt; [&#39;javascript:;&#39;, &#39;btn btn-success btn-checkall btn-disabled disabled&#39;, &#39;fa fa-flag-checkered&#39;, &#39; 批量审核&#39;, &#39;批量审核&#39;], &#39;add&#39; =&amp;gt; [&#39;javascript:;&#39;, &#39;btn btn-success btn-add&#39;, &#39;fa fa-plus&#39;, __(&#39;Add&#39;), __(&#39;Add&#39;)], &#39;edit&#39; =&amp;gt; [&#39;javascript:;&#39;, &#39;btn btn-success btn-edit btn-disabled disabled&#39;, &#39;fa fa-pencil&#39;, __(&#39;Edit&#39;), __(&#39;Edit&#39;)], &#39;del&#39; =&amp;gt; [&#39;javascript:;&#39;, &#39;btn btn-danger btn-del btn-disabled disabled&#39;, &#39;fa fa-trash&#39;, __(&#39;Delete&#39;), __(&#39;Delete&#39;)], &#39;import&#39; =&amp;gt; [&#39;javascript:;&#39;, &#39;btn btn-danger btn-import&#39;, &#39;fa fa-upload&#39;, __(&#39;Import&#39;), __(&#39;Import&#39;)], ]; $btnAttr = array_merge($btnAttr, $attr); $html = []; foreach ($btns as $k =&amp;gt; $v) { //如果未定义或没有权限 if (!</description>
-    </item>
-    
-    <item>
       <title></title>
-      <link>https://laurel-he.github.io/post/2019-02-26/</link>
+      <link>https://laurel-he.github.io/post/yii/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/2019-02-26/</guid>
-      <description>不能够开放
-1 知识点 添加日志 引入logging包，引入log文件即可
-logging.basicConfig(filename=&amp;quot;/tmp/bi_dsvcs/app.log&amp;quot;, level = logging.DEBUG) 有四种级别INFO, DEBUG, WARNING, ERROR, CRITICAL, FATAL
-获取月份列表 需求 需要获取月份数据[&amp;lsquo;00&amp;rsquo;, &amp;lsquo;01&amp;rsquo;, &amp;lsquo;02&amp;rsquo;, &amp;lsquo;03&amp;rsquo;, &amp;lsquo;04&amp;rsquo;, &amp;lsquo;05&amp;rsquo;, &amp;lsquo;06&amp;rsquo;, &amp;lsquo;07&amp;rsquo;, &amp;lsquo;08&amp;rsquo;, &amp;lsquo;09&amp;rsquo;, &amp;lsquo;10&amp;rsquo;, &amp;lsquo;11&amp;rsquo;] 原本解决办法 直接定义了一个这样的数组 新方法 range()从0到13，再在一位数前补零 实现代码
-theMonth = range(0, 13) monthKey = map(lambda x:&#39;%02d&#39; % x, theMonth) 新方法2 [&amp;quot;%02d&amp;quot; % x for x in range(1,13)]
-数据库导入导出 shell脚本里添加mysqldump导出数据 导入数据为避免更改表结构，直接mysql -u……连接到库，执行insert操作
-gunicorn配置 使用supervisor配置gunicorn，我本地虚拟机配置如下
-[program:bi_dsvcs] command=python /usr/bin/gunicorn -c /spython/bi_dsvcs/gunicorn.cnf dsvcs:app process_name=%(program_name)s/%(process_num)d directory=/spython/bi_dsvcs numprocs=1 autostart=true autorestart=true user=developer redirect_stderr=true stdout_logfile=/tmp/bi_dsvcs.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://laurel-he.github.io/post/20190213/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/post/20190213/</guid>
-      <description>一：导入数据 1. bi_etl:通过定时任务脚本将数据从源数据库导出： （1） 修改配置文件，执行dump_order.sh，导入部分测试数据 （2）其中mysqldump导出数据到文件中 （3）shell无法直接执行source，可以用bash来操作，命令：sudo bash dump_order.sh （4）sh文件可能是在windows下面编辑的，在vim中使用set fileformat=unix 去除\M字符 （5）运行sh文件可在data目录下生成sql文件 （6）注意事项： 为什么不使用增量：因为有个中间表没有update_at，financial的表不能随意加字段
-1-1修改: （1）第一步导数据，源数据（来自于order_system）已经执行了删除五张表的三个字段，因此导出的数据结构和以前导出的数据结构是不一样的；
-2. 通过jump server将bi_etl的数据文件导出到bi_new的upload中(本地无法部署)** （1）由于本地无法直接部署jump server,直接拷贝刚才生成的文件到bi_new的upload中； （2）load_new.sh文件读取的是data.tar.gz压缩文件，因此直接压缩整个data文件夹到upload文件夹下
-3. bi_dsvcs读取数据并存入bi_new数据库 （1）修改配置文件（不修改可能会覆盖线上数据） （2）执行脚本并去除\M字符(会读取conf文件，set ff=unix可以去除/r字符) （2）在load_new.sh脚本中（使用了mysql的source命令）将刚才文件中的数据导入ori_new数据库中 （4）注意事项：sh文件中使用了tar -xvf 解压data文件，但是实际上没有解压成功，文件不存在，可以直接复制所有文件
-3-2修改： （1）执行sql命令直接修改ori_new的结构，命令如下：
-use ori_new; alter table `order_product` add `departure_date` date DEFAULT NULL; alter table `order_product` add `end_date` date DEFAULT NULL; alter table `order_product` add `product_status` int(11) NOT NULL DEFAULT &amp;#39;10000&amp;#39;; alter table `order_order_product_combine` drop column `departure_date`, drop column `end_date`, drop column `product_status`; alter table `order_order_product_customize` drop column `departure_date`, drop column `end_date`, drop column `product_status`; alter table `order_order_product_hotel` drop column `departure_date`, drop column `end_date`, drop column `product_status`; alter table `order_order_product_oneday` drop column `departure_date`, drop column `end_date`, drop column `product_status`; alter table `order_order_product_ticket` drop column `departure_date`, drop column `end_date`, drop column `product_status`; alter table `order_order_product_tour` drop column `departure_date`, drop column `end_date`, drop column `product_status`; 4.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://laurel-he.github.io/post/20190214/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/post/20190214/</guid>
-      <description>1 计算规则（都在订单产品维度） 1 已收 （1）计算此订单产品所在的订单的所有已收款 （2）计算此订单产品所在的订单有多少订单产品 （3）所有已收款除以订单产品数量，平均得出每个订单产品的已收款
-2 基础接口实现 1 注意事项 每次更新代码supervisor都需要重启
-2 添加路由和方法 创建finance_monthly controller,并在dsvcs.py中引入
-3 导入bill表 需要导入bill和bill_item表进ori_new以及bi表中</description>
+      <guid>https://laurel-he.github.io/post/yii/</guid>
+      <description>yii 框架 </description>
     </item>
     
   </channel>
