@@ -119,19 +119,19 @@
     <loc>https://laurel-he.github.io/tags/%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2021-08-12T16:10:10+00:00</lastmod>
   </url><url>
-    <loc>https://laurel-he.github.io/linux/</loc>
+    <loc>https://laurel-he.github.io/operatingsystem/</loc>
     <lastmod>2021-07-20T16:34:10+00:00</lastmod>
   </url><url>
     <loc>https://laurel-he.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</loc>
     <lastmod>2021-07-20T16:34:10+00:00</lastmod>
   </url><url>
-    <loc>https://laurel-he.github.io/linux/opratingsystem_01/</loc>
+    <loc>https://laurel-he.github.io/operatingsystem/opratingsystem_01/</loc>
     <lastmod>2021-07-20T16:34:10+00:00</lastmod>
   </url><url>
-    <loc>https://laurel-he.github.io/linux/opratingsystem_02/</loc>
+    <loc>https://laurel-he.github.io/operatingsystem/opratingsystem_02/</loc>
     <lastmod>2021-07-20T16:34:10+00:00</lastmod>
   </url><url>
-    <loc>https://laurel-he.github.io/linux/opratingsystem_03/</loc>
+    <loc>https://laurel-he.github.io/operatingsystem/opratingsystem_03/</loc>
     <lastmod>2021-07-20T16:34:10+00:00</lastmod>
   </url><url>
     <loc>https://laurel-he.github.io/datastruct/datastruct_01/</loc>
@@ -148,6 +148,12 @@
   </url><url>
     <loc>https://laurel-he.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
     <lastmod>2021-04-02T18:27:44+00:00</lastmod>
+  </url><url>
+    <loc>https://laurel-he.github.io/categories/learn/</loc>
+    <lastmod>2020-09-26T13:47:00+00:00</lastmod>
+  </url><url>
+    <loc>https://laurel-he.github.io/learn/totalcont/</loc>
+    <lastmod>2020-09-26T13:47:00+00:00</lastmod>
   </url><url>
     <loc>https://laurel-he.github.io/acm/leetcode/1175primesort/</loc>
     <lastmod>2020-09-03T16:10:10+00:00</lastmod>
@@ -203,10 +209,10 @@
     <loc>https://laurel-he.github.io/categories/linux/</loc>
     <lastmod>2020-02-27T18:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://laurel-he.github.io/linux/linuxuse/</loc>
+    <loc>https://laurel-he.github.io/operatingsystem/linuxuse/</loc>
     <lastmod>2020-02-27T18:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://laurel-he.github.io/linux/linuxbase/</loc>
+    <loc>https://laurel-he.github.io/operatingsystem/linuxbase/</loc>
     <lastmod>2020-02-27T18:00:00+00:00</lastmod>
   </url><url>
     <loc>https://laurel-he.github.io/categories/%E5%9F%BA%E7%A1%80/</loc>
@@ -476,7 +482,7 @@
     <loc>https://laurel-he.github.io/tags/%E6%96%87%E6%A1%A3/</loc>
     <lastmod>2019-03-05T13:25:21+00:00</lastmod>
   </url><url>
-    <loc>https://laurel-he.github.io/linux/vim/</loc>
+    <loc>https://laurel-he.github.io/operatingsystem/vim/</loc>
     <lastmod>2019-02-28T16:34:10+00:00</lastmod>
   </url><url>
     <loc>https://laurel-he.github.io/categories/hbase/</loc>
@@ -506,10 +512,6 @@
   </url><url>
     <loc>https://laurel-he.github.io/interview/tcpip/</loc>
   </url><url>
-    <loc>https://laurel-he.github.io/learn/kafka/</loc>
-  </url><url>
-    <loc>https://laurel-he.github.io/learn/totalcont/</loc>
-  </url><url>
     <loc>https://laurel-he.github.io/learn/yii/</loc>
   </url><url>
     <loc>https://laurel-he.github.io/private/2019-02-26/</loc>
@@ -520,6 +522,8 @@
   </url><url>
     <loc>https://laurel-he.github.io/private/fit/</loc>
   </url><url>
+    <loc>https://laurel-he.github.io/queue/kafka/</loc>
+  </url><url>
     <loc>https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/basic/</loc>
   </url><url>
     <loc>https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/docker/docker/</loc>
@@ -527,5 +531,7 @@
     <loc>https://laurel-he.github.io/company/</loc>
   </url><url>
     <loc>https://laurel-he.github.io/interview/</loc>
+  </url><url>
+    <loc>https://laurel-he.github.io/queue/</loc>
   </url>
 </urlset>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>linux基础入门</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.87.0" />
+  <link href="" rel="alternate" type="application/rss+xml" title="" />
+  <link href="https://laurel-he.github.io//css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://laurel-he.github.io//css/hc.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  
+    
+    </head>
+    <body>
+<div class="nav-toggle"><i class="fa fa-bars fa-2x"></i> Herring Cove </div>
+      <div id = "wrapper">
+
+
+<div class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="https://laurel-he.github.io//"><p class="navbar-brand"></p></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+					
+					
+					<li><a href="https://laurel-he.github.io//python/">Python </a></li>
+					
+					<li><a href="https://laurel-he.github.io//learn/totalCont/">主页 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//categories/">分类 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//acm/">刷题 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//database/">数据库 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//datastruct/">数据结构 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//tags/">标签 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//designpattern/">设计模式 </a></li>
+					
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+       
+       <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+					<img src="/images/avatar.jpg" />
+          <li class="sidebar-brand"><a href="https://laurel-he.github.io//"><h1 class="brand"></h1></a><h3></h3></li>
+          <hr />
+					
+						<li><a href="https://laurel-he.github.io//python/">Python </a></li>
+					
+						<li><a href="https://laurel-he.github.io//learn/totalCont/">主页 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//categories/">分类 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//acm/">刷题 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//database/">数据库 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//datastruct/">数据结构 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//tags/">标签 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//designpattern/">设计模式 </a></li>
+					
+          <hr />
+          <div id="social-wrapper">
+           
+           
+           
+           
+         </div>
+       </ul>
+     </div>
+
+
+
+     <div class="container">
+
+
+  <div id="article">
+   <div class="article-title">linux基础入门</div>
+   <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> 2020-02-27</small></p> <hr/>
+   <div class="post">
+     <p>学习心得，来自于<a href="https://www.lanqiao.cn/courses/1/learning/?id=3">蓝桥Linux基础入门</a></p>
+<h1 id="用户相关">用户相关</h1>
+<h2 id="查看当前用户">查看当前用户</h2>
+<p>whoami:查看当前用户名 <br>
+who am i:可以列出用户名，当前登录的伪终端以及当前伪终端的启动时间等
+<strong>注意事项</strong>
+在有些情况下who am i或者who mom likes不会有输出，因为当前shell不是登录时的shell</p>
+<h2 id="添加用户">添加用户</h2>
+<p>例如添加用户lilei:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo adduser lilei
+</code></pre></div><p>此命令在添加用户的同时还会创建用户的home目录</p>
+<h3 id="添加用户组">添加用户组</h3>
+<p>groupadd [groupname]</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo groupadd lilei
+</code></pre></div><h3 id="将其他用户加入sudo用户组">将其他用户加入sudo用户组</h3>
+<p>当一个没有sudo权限的用户执行sudo命令时将报告当前用户不在sudoer文件中 <br>
+使用一个有sudo权限的账户来添加，例如：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo usermod -G sudo lilei
+</code></pre></div><p>实际上，这里执行的操作就是将用户添加至工作组，这里的命令为：</p>
+<pre><code>usermod -G [groupname] [username]
+</code></pre><h2 id="用户组">用户组</h2>
+<p>groups:查看用户所属的用户组，例如：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">groups lilei
+</code></pre></div><h3 id="etcgroup文件">/etc/group文件</h3>
+<p>/etc/group文件保存了所有的用户和用户组信息，格式如下：</p>
+<pre><code>group_name:password:GID:user_list
+</code></pre><p>当password为x时表示密码不可见，如果用户的GID等于用户组的GID，那么user_list为空</p>
+<h2 id="删除用户">删除用户</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo deluser lilei --remove-home
+</code></pre></div><p>&ndash;remove-home表示在删除用户的时候同时删除用户的home目录</p>
+<h3 id="删除用户组">删除用户组</h3>
+<p>groupdel命令</p>
+<h1 id="文件相关">文件相关</h1>
+<p>ll第一列的文件类型</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>英文名</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>d</td>
+<td>directory</td>
+<td>目录</td>
+</tr>
+<tr>
+<td>l</td>
+<td>link</td>
+<td>软连接</td>
+</tr>
+<tr>
+<td>b</td>
+<td>block</td>
+<td>块设备</td>
+</tr>
+<tr>
+<td>c</td>
+<td>char</td>
+<td>字符设备</td>
+</tr>
+<tr>
+<td>s</td>
+<td>socket</td>
+<td>网络套接字</td>
+</tr>
+<tr>
+<td>p</td>
+<td>pipe</td>
+<td>管道</td>
+</tr>
+<tr>
+<td>-</td>
+<td>-</td>
+<td>普通文件</td>
+</tr>
+</tbody>
+</table>
+<p>ll命令第一列解析如下：
+<img src="../images/linux/3-9.png" alt="ll第一列"></p>
+<p>可以通过ll -h更直观的看到文件大小 <br>
+-a可以显示隐藏文件</p>
+<h2 id="目录结构">目录结构</h2>
+<p><img src="../images/linux/4-1.png" alt="linux目录结构"></p>
+<h3 id="批量重命名">批量重命名</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 批量创建文件</span>
+touch file<span style="color:#f92672">{</span>1..5<span style="color:#f92672">}</span>.txt
+<span style="color:#75715e"># 批量重命名</span>
+rename <span style="color:#e6db74">&#39;s/\.txt/\.ct/&#39;</span> *.txt
+<span style="color:#75715e"># 批量替换成大写</span>
+rename <span style="color:#e6db74">&#39;y/a-z/A-Z/&#39;</span> *.ct
+</code></pre></div>
+   </div>
+ </div>
+
+
+ <a href="https://github.com/laurel-he" class="twitter-share-button " data-size="small" data-count="none">Git hub</a>
+ <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+ <ul class="pager">
+      &nbsp;<li class="previous"><a href="https://laurel-he.github.io/learn/codecollect/"> 计算相关</a></li>
+      &nbsp;<li class="next"><a href="https://laurel-he.github.io/operatingsystem/linuxuse/"> linux命令大全</a></li>
+</ul>
+
+
+
+    </ul>
+    </div>
+    <footer>
+
+        <p class="text-muted credit">&copy; 2021. All rights reserved. </p>
+    </footer>
+ 
+    <script src="https://laurel-he.github.io//js/jquery-1.10.2.min.js"></script>
+    <script src="https://laurel-he.github.io//js/bootstrap.min.js"></script>
+    <script src="https://laurel-he.github.io//js/bootstrap.js"></script>
+    <script type="text/javascript" src="https://laurel-he.github.io//js/hc.js"></script>
+</body>
+
+</html>
+

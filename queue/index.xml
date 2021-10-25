@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Queues on </title>
+    <link>https://laurel-he.github.io/queue/</link>
+    <description>Recent content in Queues on </description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://laurel-he.github.io/queue/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://laurel-he.github.io/queue/kafka/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/queue/kafka/</guid>
+      <description>php使用kafka1 环境安装 直接按照文档下载安装。需要注意的是： zookeeper直接使用curl或者wget下载的文件很可能会损坏，导致解压出错。 可以浏览器直接下载，下载好后通过scp传入到服务器中。
+安装的时候，python需要读取env的数据
+/usr/bin/env: ‘python’: No such file or directory如果安装的是python3，需要注意读取的是/usr/bin/python，这里加一个软连接即可
+使用 php使用kafka最好的解决方案是使用rdKafka插件。
+注意 kafka的版本不兼容可能会导致读取的所有数据都是null</description>
+    </item>
+    
+  </channel>
+</rss>

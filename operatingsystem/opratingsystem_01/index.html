@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>操作系统（1）-基础和vim操作</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.87.0" />
+  <link href="" rel="alternate" type="application/rss+xml" title="" />
+  <link href="https://laurel-he.github.io//css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://laurel-he.github.io//css/hc.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  
+    
+    </head>
+    <body>
+<div class="nav-toggle"><i class="fa fa-bars fa-2x"></i> Herring Cove </div>
+      <div id = "wrapper">
+
+
+<div class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="https://laurel-he.github.io//"><p class="navbar-brand"></p></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+					
+					
+					<li><a href="https://laurel-he.github.io//python/">Python </a></li>
+					
+					<li><a href="https://laurel-he.github.io//learn/totalCont/">主页 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//categories/">分类 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//acm/">刷题 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//database/">数据库 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//datastruct/">数据结构 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//tags/">标签 </a></li>
+					
+					<li><a href="https://laurel-he.github.io//designpattern/">设计模式 </a></li>
+					
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+       
+       <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+					<img src="/images/avatar.jpg" />
+          <li class="sidebar-brand"><a href="https://laurel-he.github.io//"><h1 class="brand"></h1></a><h3></h3></li>
+          <hr />
+					
+						<li><a href="https://laurel-he.github.io//python/">Python </a></li>
+					
+						<li><a href="https://laurel-he.github.io//learn/totalCont/">主页 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//categories/">分类 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//acm/">刷题 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//database/">数据库 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//datastruct/">数据结构 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//tags/">标签 </a></li>
+					
+						<li><a href="https://laurel-he.github.io//designpattern/">设计模式 </a></li>
+					
+          <hr />
+          <div id="social-wrapper">
+           
+           
+           
+           
+         </div>
+       </ul>
+     </div>
+
+
+
+     <div class="container">
+
+
+  <div id="article">
+   <div class="article-title">操作系统（1）-基础和vim操作</div>
+   <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> 2021-07-20</small></p> <hr/>
+   <div class="post">
+     <p>本系列来源于蓝桥：https://www.lanqiao.cn/courses/2610 <br>
+同系列文已发布在<a href="https://blog.csdn.net/qq_28391061/article/details/118521068">CSDN</a></p>
+<h4 id="命令行中的shell通配符">命令行中的shell通配符</h4>
+<table>
+<thead>
+<tr>
+<th>字符</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>*</td>
+<td>匹配0或多个字符</td>
+</tr>
+<tr>
+<td>?</td>
+<td>匹配任意一个字符</td>
+</tr>
+<tr>
+<td>[list]</td>
+<td>匹配 list 中的任意单一字符</td>
+</tr>
+<tr>
+<td>[^list]</td>
+<td>匹配 除list 中的任意单一字符以外的字符</td>
+</tr>
+<tr>
+<td>[c1-c2]</td>
+<td>匹配 c1-c2之间的任意单一字符</td>
+</tr>
+<tr>
+<td>{string1, string2&hellip;}</td>
+<td>匹配 string1 或 string2 (或更多)其一字符串</td>
+</tr>
+<tr>
+<td>{c1..c2}</td>
+<td>匹配 c1-c2 中全部字符 如{1..10}</td>
+</tr>
+</tbody>
+</table>
+<h3 id="示例">示例</h3>
+<h4 id="创建用户lilei">创建用户lilei</h4>
+<p>sudo adduser lilei</p>
+<h4 id="将lilei加入sudo组">将lilei加入sudo组</h4>
+<p>sudo usermod -G sudo lilei</p>
+<h4 id="删除用户lilei">删除用户lilei</h4>
+<p>sudo deluser lilei &ndash;remove-home</p>
+<h3 id="问题">问题</h3>
+<h4 id="ls--l列出的每一行是什么意思">ls -l列出的每一行是什么意思？</h4>
+<p>例如：lrwxrwxrwx 1 root      root        14 7月   6 17:12 anaconda3 -&gt; /opt/anaconda3</p>
+<table>
+<thead>
+<tr>
+<th>示例</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>lrwxrwxrwx</td>
+<td>文件类型和权限</td>
+</tr>
+<tr>
+<td>2</td>
+<td>文件和权限</td>
+</tr>
+<tr>
+<td>root</td>
+<td>所有者</td>
+</tr>
+<tr>
+<td>root</td>
+<td>所属用户组</td>
+</tr>
+<tr>
+<td>14</td>
+<td>文件大小</td>
+</tr>
+<tr>
+<td>7月   6 17:12</td>
+<td>最后修改时间</td>
+</tr>
+<tr>
+<td>anaconda3 -&gt; /opt/anaconda3</td>
+<td>文件名</td>
+</tr>
+</tbody>
+</table>
+<h4 id="vim查漏补缺">vim查漏补缺</h4>
+<p><strong>添加或修改</strong></p>
+<pre><code>A在行末添加文本
+a在光标之后插入文本
+</code></pre><p><strong>删除</strong></p>
+<pre><code>x在正常(normal)模式下可删除光标所在的一个字符
+dw可删除一个单词，从光标当前位置到下一个单词起始处,d2w删除两个
+de从光标当前位置到单词结尾，d2e删除两个
+d$从当前光标删除至行末
+</code></pre><p><strong>移动</strong></p>
+<pre><code>2w向前移动2个单词
+3e光标移动到第三个单词的末尾
+0移动光标到行首
+</code></pre><p><strong>撤销</strong></p>
+<pre><code>U撤销对整行的修改
+CTRL+r重做，即撤销被撤销的命令
+</code></pre><p><strong>置入</strong></p>
+<pre><code>p将最后一次删除的内容置入光标下一行
+</code></pre><p><strong>替换</strong></p>
+<pre><code>r替换掉当前光标所在字符，例如rc代表把当前光标所谓位置字符替换为c
+R连续替换多个字符
+ce改变文本直到一个单词的末尾
+c$替换当前光标到行末的内容
+s/old/new/可替换当前光标所在行的第一个字符串
+s/old/new/g替换光标坐在行匹配到的所有字符串
+m,ns/old/new/g代表替换m到n行之间出现的每个匹配串
+%s/old/new/g替换整个文件中出现的每个匹配串
+%s/old/new/g找到整个文件中的每个匹配串并提示是否替换
+</code></pre><p><strong>定位及文件状态</strong></p>
+<pre><code>ctrl+g显示当前编辑文件中当前光标所在行位置以及文件状态信息
+行号+G可以直接跳转到该行（等同于:+行号）
+</code></pre><p><strong>搜索类命令</strong></p>
+<pre><code>/后n查找下一个,N查找上一个
+ctrl+o回到上一次查找的位置，可以重复按
+%可以查找配对的括号:)]}
+</code></pre><p><strong>执行外部命令</strong></p>
+<pre><code>:!+命令可以执行外部命令，例如:!ls
+</code></pre><p><strong>保存</strong></p>
+<pre><code>w+文件名另存为某文件
+v motion :w filename，选择性的保存文件，按v之后高亮选择文件，按:w filename保存到文件中
+</code></pre><p><strong>提取和合并文件</strong></p>
+<pre><code>:r FILENAME在光标中插入FILENAME文件里的内容
+:r !ls 将ls命令的结果插入当前光标之后 
+</code></pre><p><strong>复制粘贴</strong></p>
+<pre><code>v光标移动选择文本，y复制文本，p粘贴文本
+</code></pre><p><strong>设置</strong></p>
+<pre><code>:set ic, 设置查找时忽略大小写(ignore case)，取消设置set noic
+:set hls is, 匹配项高亮显示,取消设置 nohlsearch
+</code></pre><h2 id="linux进程">Linux进程</h2>
+<h3 id="fork">fork</h3>
+<p>fork是一个系统调用，主要作用就会为当前进程创建一个新的进程，这个新的进程就是它的子进程，这个子进程除了父进程的返回值和pid以外其他的都一模一样，如进程的执行代码段，内存信息，文件描述，寄存器状态等等</p>
+<h3 id="exec">exec</h3>
+<p>exec也是系统调用，作用是切换子进程中的执行程序，也就是替换其从父进程复制过来的代码段与数据段</p>
+<pre><code>ps －fxo user,ppid,pid,pgid,command
+</code></pre><h3 id="进程组与sessions">进程组与sessions</h3>
+<p>一般情况，进程组的 PGID 等同于进程组的第一个成员的 PID，并且这样的进程称为该进程组的领导者,也就是领导进程，进程一般通过使用 getpgrp() 系统调用来寻找其所在组的 PGID，领导进程可以先终结，此时进程组依然存在，并持有相同的PGID，直到进程组中最后一个进程终结</p>
+<h3 id="进程工作管理">进程工作管理</h3>
+<p>&amp; 命令后台运行 <br>
+ctrl+z 使正在执行中的命令到后台运行</p>
+<h4 id="jobs命令详解">jobs命令详解</h4>
+<p>jobs命令查看被停止并被放置在后台的工作，一共四列   </p>
+<table>
+<thead>
+<tr>
+<th>示例</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[1]</td>
+<td>放置在后台的job的编号</td>
+</tr>
+<tr>
+<td>+</td>
+<td>+表示最近刚被放置到后台的job,-表示倒数第二个被放置到后台的job,其他不会有修饰</td>
+</tr>
+<tr>
+<td>suspended</td>
+<td>表示状态</td>
+</tr>
+<tr>
+<td>tail -f TEST</td>
+<td>命令</td>
+</tr>
+</tbody>
+</table>
+<h4 id="fg">fg</h4>
+<p>将后台的工作拿到前台来 <br>
+直接使用fg表示提取预设工作，fg %2表示提取job编号为2的任务</p>
+<h4 id="kill">kill</h4>
+<p>kill -signal %jobnumber <br>
+kill -signal pid
+kill常用信号值</p>
+<table>
+<thead>
+<tr>
+<th>信号值</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-1</td>
+<td>重新读取参数运行，类似于restart</td>
+</tr>
+<tr>
+<td>-2</td>
+<td>如同ctrl+c的操作退出</td>
+</tr>
+<tr>
+<td>-9</td>
+<td>强制终止该任务</td>
+</tr>
+<tr>
+<td>-15</td>
+<td>正常的方式终止该任务</td>
+</tr>
+</tbody>
+</table>
+
+   </div>
+ </div>
+
+
+ <a href="https://github.com/laurel-he" class="twitter-share-button " data-size="small" data-count="none">Git hub</a>
+ <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+ <ul class="pager">
+      &nbsp;<li class="previous"><a href="https://laurel-he.github.io/operatingsystem/opratingsystem_02/"> 操作系统（2）-进程管理</a></li>
+      &nbsp;<li class="next"><a href="https://laurel-he.github.io/learn/hugo/"> hugo搭建github个人博客</a></li>
+</ul>
+
+
+
+    </ul>
+    </div>
+    <footer>
+
+        <p class="text-muted credit">&copy; 2021. All rights reserved. </p>
+    </footer>
+ 
+    <script src="https://laurel-he.github.io//js/jquery-1.10.2.min.js"></script>
+    <script src="https://laurel-he.github.io//js/bootstrap.min.js"></script>
+    <script src="https://laurel-he.github.io//js/bootstrap.js"></script>
+    <script type="text/javascript" src="https://laurel-he.github.io//js/hc.js"></script>
+</body>
+
+</html>
+

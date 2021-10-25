@@ -35,6 +35,25 @@ Taxonomies </description>
     </item>
     
     <item>
+      <title>目录</title>
+      <link>https://laurel-he.github.io/learn/totalcont/</link>
+      <pubDate>Sat, 26 Sep 2020 13:47:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/learn/totalcont/</guid>
+      <description>1 刷题
+2 设计模式
+3 数据库
+4 操作系统
+5 php
+6 go
+7 python
+8 前端
+9 云原生
+10 消息队列
+11 学习</description>
+    </item>
+    
+    <item>
       <title>计算相关</title>
       <link>https://laurel-he.github.io/learn/codecollect/</link>
       <pubDate>Tue, 25 Feb 2020 20:10:10 +0000</pubDate>
@@ -231,50 +250,6 @@ phpstrom快捷键 编辑
 使用Hbase 连接Hbase bin/hbase shell 创建表 create &amp;lsquo;test&amp;rsquo; （创建表需要添加列簇） create &amp;lsquo;表名&amp;rsquo; &amp;lsquo;列簇名1&amp;rsquo; &amp;lsquo;列簇名2&amp;rsquo; …… 添加数据 put &amp;lsquo;表名&amp;rsquo; &amp;lsquo;行名&amp;rsquo; &amp;lsquo;列簇名称&amp;rsquo; &amp;lsquo;value&amp;rsquo;（当列簇只有一列） put &amp;lsquo;表名&amp;rsquo; &amp;lsquo;行名&amp;rsquo; &amp;lsquo;列簇名称：列名称&amp;rsquo; &amp;lsquo;value&amp;rsquo; 查看表 list: 查看所有表 list &amp;lsquo;tablename&amp;rsquo; ： 查看表名为tablename的表 删除表 disable &amp;lsquo;表名&amp;rsquo;(对应enable &amp;lsquo;明白&amp;rsquo;) drop &amp;lsquo;表名&amp;rsquo;
 配置 ####基础配置 conf/hbase-site.xml
 注意事项 （1）表名，行，列都必须用引号括起来 {% plantuml %} {% endplantuml %}</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://laurel-he.github.io/learn/kafka/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/learn/kafka/</guid>
-      <description>php使用kafka1 环境安装 直接按照文档下载安装。需要注意的是： zookeeper直接使用curl或者wget下载的文件很可能会损坏，导致解压出错。 可以浏览器直接下载，下载好后通过scp传入到服务器中。
-安装的时候，python需要读取env的数据
-/usr/bin/env: ‘python’: No such file or directory如果安装的是python3，需要注意读取的是/usr/bin/python，这里加一个软连接即可
-使用 php使用kafka最好的解决方案是使用rdKafka插件。
-注意 kafka的版本不兼容可能会导致读取的所有数据都是null</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://laurel-he.github.io/learn/totalcont/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/learn/totalcont/</guid>
-      <description>目录 1 刷题
-2 设计模式
-2 数据库设计及优化
-3 操作系统(Linux，进程调度，基本命令等)
-网络攻击技术
-3 laravel框架
-4 yii框架
-5 go
-7 shell编程
-8 elasticsearch
-9 redis
-10 消息队列(beanstalk,kafka,rabit mq)
-11 k8s
-12 docker
-13 nginx配置及优化
-15 代码可读性（代码整洁之道）
-16 代码大全（）
-17 socket,tcp/ip协议，http协议，请求过程
-18 数据结构（各种查找，B树，二叉排序树等）
-19 基础前端（react，vue）
-20 redis（并发）
-21 大流量高并发系统设计
-22</description>
     </item>
     
     <item>

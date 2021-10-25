@@ -190,10 +190,10 @@ go语言用途 Go 语言被设计成一门应用于搭载 Web 服务器，存储
     
     <item>
       <title>操作系统（1）-基础和vim操作</title>
-      <link>https://laurel-he.github.io/linux/opratingsystem_01/</link>
+      <link>https://laurel-he.github.io/operatingsystem/opratingsystem_01/</link>
       <pubDate>Tue, 20 Jul 2021 16:34:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/linux/opratingsystem_01/</guid>
+      <guid>https://laurel-he.github.io/operatingsystem/opratingsystem_01/</guid>
       <description>本系列来源于蓝桥：https://www.lanqiao.cn/courses/2610 同系列文已发布在CSDN
 命令行中的shell通配符    字符 含义     * 匹配0或多个字符   ? 匹配任意一个字符   [list] 匹配 list 中的任意单一字符   [^list] 匹配 除list 中的任意单一字符以外的字符   [c1-c2] 匹配 c1-c2之间的任意单一字符   {string1, string2&amp;hellip;} 匹配 string1 或 string2 (或更多)其一字符串   {c1..c2} 匹配 c1-c2 中全部字符 如{1..10}    示例 创建用户lilei sudo adduser lilei
 将lilei加入sudo组 sudo usermod -G sudo lilei
@@ -202,10 +202,10 @@ go语言用途 Go 语言被设计成一门应用于搭载 Web 服务器，存储
     
     <item>
       <title>操作系统（2）-进程管理</title>
-      <link>https://laurel-he.github.io/linux/opratingsystem_02/</link>
+      <link>https://laurel-he.github.io/operatingsystem/opratingsystem_02/</link>
       <pubDate>Tue, 20 Jul 2021 16:34:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/linux/opratingsystem_02/</guid>
+      <guid>https://laurel-he.github.io/operatingsystem/opratingsystem_02/</guid>
       <description>蓝桥操作系统课程的学习笔记
 top 实时查看进程的状态 top第一行
    内容 解释     top 表示当前程序的名称   14:11:28 当前系统的时间   up 231 days, 20:31 表示改机器已经启动了多长时间   1 user 表示当前系统只有一个用户   load average: 0.24, 0.32, 0.19 分别对应1、5、15分钟内cpu的平均负载   top第二行    内容 解释   &amp;ndash; &amp;ndash;   Tasks: 26 toal 进程总数   1 running 1个正在运行的进程   25 sleeping 25个正在睡眠的进程数   0 stopped 没有停止的进程数   0 zombie 没有僵尸进程数   top第三行    基本是cpu使用情况的统计    内容 解释   &amp;ndash; &amp;ndash;   Cpu(s):1.</description>
@@ -213,10 +213,10 @@ top 实时查看进程的状态 top第一行
     
     <item>
       <title>操作系统（3）</title>
-      <link>https://laurel-he.github.io/linux/opratingsystem_03/</link>
+      <link>https://laurel-he.github.io/operatingsystem/opratingsystem_03/</link>
       <pubDate>Tue, 20 Jul 2021 16:34:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/linux/opratingsystem_03/</guid>
+      <guid>https://laurel-he.github.io/operatingsystem/opratingsystem_03/</guid>
       <description>Linux实现模拟多进程并发执行 示例：
 #!/bin/bash for((i=0;i&amp;lt;5;i++)) do { sleep 1; echo &amp;#34;$i--&amp;#34;&amp;gt;&amp;gt;aa &amp;amp;&amp;amp; echo &amp;#34;done&amp;#34; }&amp;amp; done wait cat aa | wc -l rm aa 解析 &amp;amp;代表并发执行，wait等待前面执行完了再执行，例如此示例中，如果没有wait很可能还没创建aa文件
 Linux下的中断 #include &amp;lt;stdlib.h&amp;gt;#include &amp;lt;stdio.h&amp;gt;#include &amp;lt;unistd.h&amp;gt; int main(void) { pid_t pid; //pid  printf(&amp;#34;Before fork... &amp;#34;); switch( pid = fork()) { case -1: printf(&amp;#34;fork call fail &amp;#34;); fflush(stdout); exit(1); case 0: printf(&amp;#34;child call &amp;#34;); printf(&amp;#34;the pid of child is %d &amp;#34;, getpid()); printf(&amp;#34;the pid of child&amp;#39;s parent is %d &amp;#34;, getppid()); printf(&amp;#34;child exiting.</description>
@@ -248,6 +248,25 @@ Linux下的中断 #include &amp;lt;stdlib.h&amp;gt;#include &amp;lt;stdio.h&amp;
 主键 一列（或一组列），其值能够唯一区分表中的每一行 主键建议 （1）不更新主键列中的值 （2）不重用组件列的值 （3）不在主键列中使用可能会更改的值
 mysql命令行连接参数 经常使用的参数:
    参数 解释     u 用户名   h host   P 端口号   p 密码    </description>
+    </item>
+    
+    <item>
+      <title>目录</title>
+      <link>https://laurel-he.github.io/learn/totalcont/</link>
+      <pubDate>Sat, 26 Sep 2020 13:47:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/learn/totalcont/</guid>
+      <description>1 刷题
+2 设计模式
+3 数据库
+4 操作系统
+5 php
+6 go
+7 python
+8 前端
+9 云原生
+10 消息队列
+11 学习</description>
     </item>
     
     <item>
@@ -363,10 +382,10 @@ docker exec(docker run) docker run 命令提供了docker容器的创建到启动
     
     <item>
       <title>linux命令大全</title>
-      <link>https://laurel-he.github.io/linux/linuxuse/</link>
+      <link>https://laurel-he.github.io/operatingsystem/linuxuse/</link>
       <pubDate>Thu, 27 Feb 2020 18:00:00 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/linux/linuxuse/</guid>
+      <guid>https://laurel-he.github.io/operatingsystem/linuxuse/</guid>
       <description>文件操作 cat 描述
 查看文件内容 参数
 -n 或 –number 由 1 开始对所有输出的行数编号 -b 或 –number-nonblank 和 -n 相似，只不过对于空白行不编号 -s 或 –squeeze-blank 当遇到有连续两行以上的空白行，就代换为一行的空白行 -v 或 –show-nonprinting 举例 1 从键盘创建一个文件： 2 将几个文件合并成一个文件： cd 描述
@@ -384,10 +403,10 @@ dmidecode 描述
     
     <item>
       <title>linux基础入门</title>
-      <link>https://laurel-he.github.io/linux/linuxbase/</link>
+      <link>https://laurel-he.github.io/operatingsystem/linuxbase/</link>
       <pubDate>Thu, 27 Feb 2020 18:00:00 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/linux/linuxbase/</guid>
+      <guid>https://laurel-he.github.io/operatingsystem/linuxbase/</guid>
       <description>学习心得，来自于蓝桥Linux基础入门
 用户相关 查看当前用户 whoami:查看当前用户名 who am i:可以列出用户名，当前登录的伪终端以及当前伪终端的启动时间等 注意事项 在有些情况下who am i或者who mom likes不会有输出，因为当前shell不是登录时的shell
 添加用户 例如添加用户lilei:

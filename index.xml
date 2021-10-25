@@ -241,10 +241,10 @@ Taxonomies </description>
     
     <item>
       <title>操作系统（1）-基础和vim操作</title>
-      <link>https://laurel-he.github.io/linux/opratingsystem_01/</link>
+      <link>https://laurel-he.github.io/operatingsystem/opratingsystem_01/</link>
       <pubDate>Tue, 20 Jul 2021 16:34:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/linux/opratingsystem_01/</guid>
+      <guid>https://laurel-he.github.io/operatingsystem/opratingsystem_01/</guid>
       <description>本系列来源于蓝桥：https://www.lanqiao.cn/courses/2610 同系列文已发布在CSDN
 命令行中的shell通配符    字符 含义     * 匹配0或多个字符   ? 匹配任意一个字符   [list] 匹配 list 中的任意单一字符   [^list] 匹配 除list 中的任意单一字符以外的字符   [c1-c2] 匹配 c1-c2之间的任意单一字符   {string1, string2&amp;hellip;} 匹配 string1 或 string2 (或更多)其一字符串   {c1..c2} 匹配 c1-c2 中全部字符 如{1..10}    示例 创建用户lilei sudo adduser lilei
 将lilei加入sudo组 sudo usermod -G sudo lilei
@@ -253,10 +253,10 @@ Taxonomies </description>
     
     <item>
       <title>操作系统（2）-进程管理</title>
-      <link>https://laurel-he.github.io/linux/opratingsystem_02/</link>
+      <link>https://laurel-he.github.io/operatingsystem/opratingsystem_02/</link>
       <pubDate>Tue, 20 Jul 2021 16:34:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/linux/opratingsystem_02/</guid>
+      <guid>https://laurel-he.github.io/operatingsystem/opratingsystem_02/</guid>
       <description>蓝桥操作系统课程的学习笔记
 top 实时查看进程的状态 top第一行
    内容 解释     top 表示当前程序的名称   14:11:28 当前系统的时间   up 231 days, 20:31 表示改机器已经启动了多长时间   1 user 表示当前系统只有一个用户   load average: 0.24, 0.32, 0.19 分别对应1、5、15分钟内cpu的平均负载   top第二行    内容 解释   &amp;ndash; &amp;ndash;   Tasks: 26 toal 进程总数   1 running 1个正在运行的进程   25 sleeping 25个正在睡眠的进程数   0 stopped 没有停止的进程数   0 zombie 没有僵尸进程数   top第三行    基本是cpu使用情况的统计    内容 解释   &amp;ndash; &amp;ndash;   Cpu(s):1.</description>
@@ -264,10 +264,10 @@ top 实时查看进程的状态 top第一行
     
     <item>
       <title>操作系统（3）</title>
-      <link>https://laurel-he.github.io/linux/opratingsystem_03/</link>
+      <link>https://laurel-he.github.io/operatingsystem/opratingsystem_03/</link>
       <pubDate>Tue, 20 Jul 2021 16:34:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/linux/opratingsystem_03/</guid>
+      <guid>https://laurel-he.github.io/operatingsystem/opratingsystem_03/</guid>
       <description>Linux实现模拟多进程并发执行 示例：
 #!/bin/bash for((i=0;i&amp;lt;5;i++)) do { sleep 1; echo &amp;#34;$i--&amp;#34;&amp;gt;&amp;gt;aa &amp;amp;&amp;amp; echo &amp;#34;done&amp;#34; }&amp;amp; done wait cat aa | wc -l rm aa 解析 &amp;amp;代表并发执行，wait等待前面执行完了再执行，例如此示例中，如果没有wait很可能还没创建aa文件
 Linux下的中断 #include &amp;lt;stdlib.h&amp;gt;#include &amp;lt;stdio.h&amp;gt;#include &amp;lt;unistd.h&amp;gt; int main(void) { pid_t pid; //pid  printf(&amp;#34;Before fork... &amp;#34;); switch( pid = fork()) { case -1: printf(&amp;#34;fork call fail &amp;#34;); fflush(stdout); exit(1); case 0: printf(&amp;#34;child call &amp;#34;); printf(&amp;#34;the pid of child is %d &amp;#34;, getpid()); printf(&amp;#34;the pid of child&amp;#39;s parent is %d &amp;#34;, getppid()); printf(&amp;#34;child exiting.</description>
@@ -299,6 +299,25 @@ Linux下的中断 #include &amp;lt;stdlib.h&amp;gt;#include &amp;lt;stdio.h&amp;
 主键 一列（或一组列），其值能够唯一区分表中的每一行 主键建议 （1）不更新主键列中的值 （2）不重用组件列的值 （3）不在主键列中使用可能会更改的值
 mysql命令行连接参数 经常使用的参数:
    参数 解释     u 用户名   h host   P 端口号   p 密码    </description>
+    </item>
+    
+    <item>
+      <title>目录</title>
+      <link>https://laurel-he.github.io/learn/totalcont/</link>
+      <pubDate>Sat, 26 Sep 2020 13:47:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/learn/totalcont/</guid>
+      <description>1 刷题
+2 设计模式
+3 数据库
+4 操作系统
+5 php
+6 go
+7 python
+8 前端
+9 云原生
+10 消息队列
+11 学习</description>
     </item>
     
     <item>
@@ -454,10 +473,10 @@ formatJsonData = (obj: any, name: string, moduleName?: string, getModuleName?: s
     
     <item>
       <title>linux命令大全</title>
-      <link>https://laurel-he.github.io/linux/linuxuse/</link>
+      <link>https://laurel-he.github.io/operatingsystem/linuxuse/</link>
       <pubDate>Thu, 27 Feb 2020 18:00:00 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/linux/linuxuse/</guid>
+      <guid>https://laurel-he.github.io/operatingsystem/linuxuse/</guid>
       <description>文件操作 cat 描述
 查看文件内容 参数
 -n 或 –number 由 1 开始对所有输出的行数编号 -b 或 –number-nonblank 和 -n 相似，只不过对于空白行不编号 -s 或 –squeeze-blank 当遇到有连续两行以上的空白行，就代换为一行的空白行 -v 或 –show-nonprinting 举例 1 从键盘创建一个文件： 2 将几个文件合并成一个文件： cd 描述
@@ -475,10 +494,10 @@ dmidecode 描述
     
     <item>
       <title>linux基础入门</title>
-      <link>https://laurel-he.github.io/linux/linuxbase/</link>
+      <link>https://laurel-he.github.io/operatingsystem/linuxbase/</link>
       <pubDate>Thu, 27 Feb 2020 18:00:00 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/linux/linuxbase/</guid>
+      <guid>https://laurel-he.github.io/operatingsystem/linuxbase/</guid>
       <description>学习心得，来自于蓝桥Linux基础入门
 用户相关 查看当前用户 whoami:查看当前用户名 who am i:可以列出用户名，当前登录的伪终端以及当前伪终端的启动时间等 注意事项 在有些情况下who am i或者who mom likes不会有输出，因为当前shell不是登录时的shell
 添加用户 例如添加用户lilei:
@@ -1164,10 +1183,10 @@ phpstrom快捷键 编辑
     
     <item>
       <title>vim学习笔记</title>
-      <link>https://laurel-he.github.io/linux/vim/</link>
+      <link>https://laurel-he.github.io/operatingsystem/vim/</link>
       <pubDate>Thu, 28 Feb 2019 16:34:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/linux/vim/</guid>
+      <guid>https://laurel-he.github.io/operatingsystem/vim/</guid>
       <description>光标移动 h 或 &amp;lt;- 表示向左 j 下 k 上 l 右
 ctrl + f 屏幕向下移动一页 ctrl + b 向上移动一页 ctrl + d 向下移动半页 ctrl + u 向上移动半页 &amp;lsquo;+&amp;rsquo; 光标移动到非空格符的下一行 &amp;lsquo;-&amp;rsquo; 光标移动到非空格符的 n[space] n表示数字，光标向右移动n个字符 0或[Home] 移动到这一行最开始的字符处 $或[End] 移动到这一行的最后面字符处 H 移动到这个屏幕最上方一行的第一个字符 M 移动到这个屏幕中央一行的第一个字符 L 移动到这个屏幕最下方一行的第一个字符 G 移动到这个文件的最后一行 nG(:n) 移动到这个文件的第n行 gg(1G) 移动到第一行 n[Enter] n为数字，表示向下移动n行
 查找与替换 /word 光标之下寻找名为word的字符串 ?word 光标之上寻找名为word的字符串 n 重复前一个查找的操作 N 反向进行前一个查找操作 :n1,n2s/word1/word2/g n1和n2是数字，在n1和n2行之间查找所有word,替换成word2 :1,$s/word1/word2/g :1,$s/word1/word2/gc c代表confirm,替换前显示确认信息
@@ -1278,50 +1297,6 @@ TCP/IP协议是什么 对应图
     
     <item>
       <title></title>
-      <link>https://laurel-he.github.io/learn/kafka/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/learn/kafka/</guid>
-      <description>php使用kafka1 环境安装 直接按照文档下载安装。需要注意的是： zookeeper直接使用curl或者wget下载的文件很可能会损坏，导致解压出错。 可以浏览器直接下载，下载好后通过scp传入到服务器中。
-安装的时候，python需要读取env的数据
-/usr/bin/env: ‘python’: No such file or directory如果安装的是python3，需要注意读取的是/usr/bin/python，这里加一个软连接即可
-使用 php使用kafka最好的解决方案是使用rdKafka插件。
-注意 kafka的版本不兼容可能会导致读取的所有数据都是null</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://laurel-he.github.io/learn/totalcont/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/learn/totalcont/</guid>
-      <description>目录 1 刷题
-2 设计模式
-2 数据库设计及优化
-3 操作系统(Linux，进程调度，基本命令等)
-网络攻击技术
-3 laravel框架
-4 yii框架
-5 go
-7 shell编程
-8 elasticsearch
-9 redis
-10 消息队列(beanstalk,kafka,rabit mq)
-11 k8s
-12 docker
-13 nginx配置及优化
-15 代码可读性（代码整洁之道）
-16 代码大全（）
-17 socket,tcp/ip协议，http协议，请求过程
-18 数据结构（各种查找，B树，二叉排序树等）
-19 基础前端（react，vue）
-20 redis（并发）
-21 大流量高并发系统设计
-22</description>
-    </item>
-    
-    <item>
-      <title></title>
       <link>https://laurel-he.github.io/learn/yii/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -1379,6 +1354,19 @@ use ori_new; alter table `order_product` add `departure_date` date DEFAULT NULL;
       <guid>https://laurel-he.github.io/private/fit/</guid>
       <description>title: 减肥 date: 2021-09-29 19:20:10 tags:
  减肥 categories: 减肥      阶段 截至时间 时间 详情     1 21-10-09 10d 4-116-58   1 21-10-19 10d 3-113-56.5   1 21-10-29 10d 2-111-55.5   1 21-11-08 10d 1-110-55   1 21-11-18 10d 1-109-54.5   1 21-11-28 10d 1-108-54   1 21-12-08 10d 2-106-53   1 21-12-18 10d 2-104-52   1 21-12-28 10d 3-101-50.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://laurel-he.github.io/queue/kafka/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/queue/kafka/</guid>
+      <description>php使用kafka1 环境安装 直接按照文档下载安装。需要注意的是： zookeeper直接使用curl或者wget下载的文件很可能会损坏，导致解压出错。 可以浏览器直接下载，下载好后通过scp传入到服务器中。
+安装的时候，python需要读取env的数据
+/usr/bin/env: ‘python’: No such file or directory如果安装的是python3，需要注意读取的是/usr/bin/python，这里加一个软连接即可
+使用 php使用kafka最好的解决方案是使用rdKafka插件。
+注意 kafka的版本不兼容可能会导致读取的所有数据都是null</description>
     </item>
     
     <item>

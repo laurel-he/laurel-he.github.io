@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OperatingSystems on </title>
+    <link>https://laurel-he.github.io/operatingsystem/</link>
+    <description>Recent content in OperatingSystems on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 20 Jul 2021 16:34:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/operatingsystem/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>操作系统（1）-基础和vim操作</title>
+      <link>https://laurel-he.github.io/operatingsystem/opratingsystem_01/</link>
+      <pubDate>Tue, 20 Jul 2021 16:34:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/operatingsystem/opratingsystem_01/</guid>
+      <description>本系列来源于蓝桥：https://www.lanqiao.cn/courses/2610 同系列文已发布在CSDN
+命令行中的shell通配符    字符 含义     * 匹配0或多个字符   ? 匹配任意一个字符   [list] 匹配 list 中的任意单一字符   [^list] 匹配 除list 中的任意单一字符以外的字符   [c1-c2] 匹配 c1-c2之间的任意单一字符   {string1, string2&amp;hellip;} 匹配 string1 或 string2 (或更多)其一字符串   {c1..c2} 匹配 c1-c2 中全部字符 如{1..10}    示例 创建用户lilei sudo adduser lilei
+将lilei加入sudo组 sudo usermod -G sudo lilei
+删除用户lilei sudo deluser lilei &amp;ndash;remove-home</description>
+    </item>
+    
+    <item>
+      <title>操作系统（2）-进程管理</title>
+      <link>https://laurel-he.github.io/operatingsystem/opratingsystem_02/</link>
+      <pubDate>Tue, 20 Jul 2021 16:34:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/operatingsystem/opratingsystem_02/</guid>
+      <description>蓝桥操作系统课程的学习笔记
+top 实时查看进程的状态 top第一行
+   内容 解释     top 表示当前程序的名称   14:11:28 当前系统的时间   up 231 days, 20:31 表示改机器已经启动了多长时间   1 user 表示当前系统只有一个用户   load average: 0.24, 0.32, 0.19 分别对应1、5、15分钟内cpu的平均负载   top第二行    内容 解释   &amp;ndash; &amp;ndash;   Tasks: 26 toal 进程总数   1 running 1个正在运行的进程   25 sleeping 25个正在睡眠的进程数   0 stopped 没有停止的进程数   0 zombie 没有僵尸进程数   top第三行    基本是cpu使用情况的统计    内容 解释   &amp;ndash; &amp;ndash;   Cpu(s):1.</description>
+    </item>
+    
+    <item>
+      <title>操作系统（3）</title>
+      <link>https://laurel-he.github.io/operatingsystem/opratingsystem_03/</link>
+      <pubDate>Tue, 20 Jul 2021 16:34:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/operatingsystem/opratingsystem_03/</guid>
+      <description>Linux实现模拟多进程并发执行 示例：
+#!/bin/bash for((i=0;i&amp;lt;5;i++)) do { sleep 1; echo &amp;#34;$i--&amp;#34;&amp;gt;&amp;gt;aa &amp;amp;&amp;amp; echo &amp;#34;done&amp;#34; }&amp;amp; done wait cat aa | wc -l rm aa 解析 &amp;amp;代表并发执行，wait等待前面执行完了再执行，例如此示例中，如果没有wait很可能还没创建aa文件
+Linux下的中断 #include &amp;lt;stdlib.h&amp;gt;#include &amp;lt;stdio.h&amp;gt;#include &amp;lt;unistd.h&amp;gt; int main(void) { pid_t pid; //pid  printf(&amp;#34;Before fork... &amp;#34;); switch( pid = fork()) { case -1: printf(&amp;#34;fork call fail &amp;#34;); fflush(stdout); exit(1); case 0: printf(&amp;#34;child call &amp;#34;); printf(&amp;#34;the pid of child is %d &amp;#34;, getpid()); printf(&amp;#34;the pid of child&amp;#39;s parent is %d &amp;#34;, getppid()); printf(&amp;#34;child exiting.</description>
+    </item>
+    
+    <item>
+      <title>linux命令大全</title>
+      <link>https://laurel-he.github.io/operatingsystem/linuxuse/</link>
+      <pubDate>Thu, 27 Feb 2020 18:00:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/operatingsystem/linuxuse/</guid>
+      <description>文件操作 cat 描述
+查看文件内容 参数
+-n 或 –number 由 1 开始对所有输出的行数编号 -b 或 –number-nonblank 和 -n 相似，只不过对于空白行不编号 -s 或 –squeeze-blank 当遇到有连续两行以上的空白行，就代换为一行的空白行 -v 或 –show-nonprinting 举例 1 从键盘创建一个文件： 2 将几个文件合并成一个文件： cd 描述
+系统信息 arch 描述
+显示机器的处理器架构 举例
+uname 描述
+显示机器的处理器架构 参数
+-a或&amp;ndash;all 显示全部的信息。 -m或&amp;ndash;machine 显示电脑类型。 -n或-nodename 显示在网络上的主机名称。 -r或&amp;ndash;release 显示操作系统的发行编号。 -s或&amp;ndash;sysname 显示操作系统名称。 -v 显示操作系统的版本。 &amp;ndash;help 显示帮助。 &amp;ndash;version 显示版本信息。 举例
+dmidecode 描述
+显示硬件信息，不常用，可忽略
+开关机 shutdown 描述
+关机或重启 参数
+-t seconds : 设定在几秒钟之后进行关机程序。 -k : 并不会真的关机，只是将警告讯息传送给所有使用者。 -r : 关机后重新开机。 -h : 关机后停机。 -n : 不采用正常程序来关机，用强迫的方式杀掉所有执行中的程序后自行关机。 -c : 取消目前已经进行中的关机动作。 -f : 关机时，不做 fcsk 动作(检查 Linux 档系统)。 -F : 关机时，强迫进行 fsck 动作。 time : 设定关机的时间。 message : 传送给所有使用者的警告讯息。</description>
+    </item>
+    
+    <item>
+      <title>linux基础入门</title>
+      <link>https://laurel-he.github.io/operatingsystem/linuxbase/</link>
+      <pubDate>Thu, 27 Feb 2020 18:00:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/operatingsystem/linuxbase/</guid>
+      <description>学习心得，来自于蓝桥Linux基础入门
+用户相关 查看当前用户 whoami:查看当前用户名 who am i:可以列出用户名，当前登录的伪终端以及当前伪终端的启动时间等 注意事项 在有些情况下who am i或者who mom likes不会有输出，因为当前shell不是登录时的shell
+添加用户 例如添加用户lilei:
+sudo adduser lilei 此命令在添加用户的同时还会创建用户的home目录
+添加用户组 groupadd [groupname]
+sudo groupadd lilei 将其他用户加入sudo用户组 当一个没有sudo权限的用户执行sudo命令时将报告当前用户不在sudoer文件中 使用一个有sudo权限的账户来添加，例如：
+sudo usermod -G sudo lilei 实际上，这里执行的操作就是将用户添加至工作组，这里的命令为：
+usermod -G [groupname] [username] 用户组 groups:查看用户所属的用户组，例如：
+groups lilei /etc/group文件 /etc/group文件保存了所有的用户和用户组信息，格式如下：
+group_name:password:GID:user_list 当password为x时表示密码不可见，如果用户的GID等于用户组的GID，那么user_list为空
+删除用户 sudo deluser lilei --remove-home &amp;ndash;remove-home表示在删除用户的时候同时删除用户的home目录
+删除用户组 groupdel命令
+文件相关 ll第一列的文件类型
+   名称 英文名 含义     d directory 目录   l link 软连接   b block 块设备   c char 字符设备   s socket 网络套接字   p pipe 管道   - - 普通文件    ll命令第一列解析如下： 可以通过ll -h更直观的看到文件大小 -a可以显示隐藏文件</description>
+    </item>
+    
+    <item>
+      <title>vim学习笔记</title>
+      <link>https://laurel-he.github.io/operatingsystem/vim/</link>
+      <pubDate>Thu, 28 Feb 2019 16:34:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/operatingsystem/vim/</guid>
+      <description>光标移动 h 或 &amp;lt;- 表示向左 j 下 k 上 l 右
+ctrl + f 屏幕向下移动一页 ctrl + b 向上移动一页 ctrl + d 向下移动半页 ctrl + u 向上移动半页 &amp;lsquo;+&amp;rsquo; 光标移动到非空格符的下一行 &amp;lsquo;-&amp;rsquo; 光标移动到非空格符的 n[space] n表示数字，光标向右移动n个字符 0或[Home] 移动到这一行最开始的字符处 $或[End] 移动到这一行的最后面字符处 H 移动到这个屏幕最上方一行的第一个字符 M 移动到这个屏幕中央一行的第一个字符 L 移动到这个屏幕最下方一行的第一个字符 G 移动到这个文件的最后一行 nG(:n) 移动到这个文件的第n行 gg(1G) 移动到第一行 n[Enter] n为数字，表示向下移动n行
+查找与替换 /word 光标之下寻找名为word的字符串 ?word 光标之上寻找名为word的字符串 n 重复前一个查找的操作 N 反向进行前一个查找操作 :n1,n2s/word1/word2/g n1和n2是数字，在n1和n2行之间查找所有word,替换成word2 :1,$s/word1/word2/g :1,$s/word1/word2/gc c代表confirm,替换前显示确认信息
+删除复制与粘贴 x 向后删除 X 向前删除 nx 向后删除n个字符 dd 删除（剪切）光标所在一整行 ndd 删除向下n行 d1G 删除光标所在到第一行的数据 dG 删除光标所在到最后一行的数据 d$ 删除光标所在处，到该行最后一个字符 d0 yy 复制该行 nyy y1G yG y0 y$ p 将已复制的数据在光标下一行粘贴 P 上一行 J 光标所在行与下一行数据结合成同一行 c 重复删除多个数据(10cj代表向下删除10行)删除后切换到编辑模式 u 回复 ctrl+r 重做 .</description>
+    </item>
+    
+  </channel>
+</rss>
