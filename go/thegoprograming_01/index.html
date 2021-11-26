@@ -1,0 +1,110 @@
+	
+	<!doctype html>
+<html lang="en">
+  <head>
+    <title>ALEXFINN - go语言圣经</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+    
+    <link href="/css/milk.min.css" rel="stylesheet">
+    <link href="/css/milk-responsive.min.css" rel="stylesheet">     
+    <link href="/css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/fonts.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="shortcut icon" href="/images/alexfinn.ico">
+    <link rel="apple-touch-icon" href="">
+    <link rel="canonical" href="https://laurel-he.github.io/go/thegoprograming_01/">
+
+    
+    <link href="/rss.xml" type="application/atom+xml" rel="alternate" title="">
+
+  </head>
+  <body>
+    <div class="navbar navbar-fixed-top">
+  <div id="navbar-inner">
+    <div id="logo">
+       <a href=""><img src="/images/letter-a.png" width="100px"></img></a>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="content">
+    <div class="row-fluid">
+      <div class="span12">
+        <div class="posts">
+
+
+	    
+	  <div class="post">
+	    <header class="post-header">
+	        <h1><a href="/go/thegoprograming_01/">go语言圣经</a></h1>
+	        <div class="post-time">August 27 2021</div>
+	    </header>
+	    <div class="post-after">
+	        <div class="tags">
+	            
+	                <a href="https://laurel-he.github.io//tags/%E5%AD%A6%E4%B9%A0">学习</a>
+	            
+	        </div>
+	    </div>
+	    <hr>
+	    <div class="post content">
+	        <h1 id="基本介绍">基本介绍</h1>
+<p>可以参考此文章：https://docs.hacknode.org/gopl-zh/ch0/ch0-02.html</p>
+<h1 id="基础使用">基础使用</h1>
+<h3 id="查看go版本">查看go版本</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">go version
+</code></pre></div><h3 id="引入代码">引入代码</h3>
+<p>需要在环境变量中添加GOPATH目录，然后使用go get 命令下载代码，以下为《go语言圣经》的示例</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">export GOPATH<span style="color:#f92672">=</span>$HOME/go    <span style="color:#75715e"># 选择工作目录</span>
+go get gopl.io/ch1/helloworld <span style="color:#75715e"># 获取/编译/安装</span>
+$GOPATH/bin/helloworld        <span style="color:#75715e"># 运行程序</span>
+</code></pre></div><h3 id="执行代码">执行代码</h3>
+<p>执行代码使用go run命令</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">go run hello.go
+</code></pre></div><h3 id="编译代码">编译代码</h3>
+<p>编译代码使用go build命令，执行完后会生成一个可执行文件</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">go build hello.go
+</code></pre></div><h3 id="代码详情">代码详情</h3>
+
+	    </div>
+	    
+	<div class="about">
+	<p> 
+     
+    </p>
+</div>
+		<nav id="pagination">
+			<a class="prev" href="https://laurel-he.github.io/go/gin/basic/">Prev</a>
+			<a class="next" href="https://laurel-he.github.io/post/hugo/">Next</a>
+		</nav>
+	
+		        <footer>
+		        	Built with <a href="https://github.com/spf13/hugo">Hugo</a>
+		        	<p>© Alexander Feller 2018</p>
+		        </footer>
+		    </div>
+		  </div>
+		</div>
+      </div>
+    </div>
+</body>
+
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u=(("https:" == document.location.protocol) ? "https" : "http") + ":change-me";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 4]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
+    g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+
+
+</html>
+

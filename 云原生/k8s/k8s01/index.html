@@ -1,104 +1,57 @@
-<!DOCTYPE html>
+	
+	<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>kubenetes权威指南1-2章</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.87.0" />
-  <link href="" rel="alternate" type="application/rss+xml" title="" />
-  <link href="https://laurel-he.github.io//css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://laurel-he.github.io//css/hc.css" rel="stylesheet">
-  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-  
+  <head>
+    <title>ALEXFINN - kubenetes权威指南1-2章</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
     
-    </head>
-    <body>
-<div class="nav-toggle"><i class="fa fa-bars fa-2x"></i> Herring Cove </div>
-      <div id = "wrapper">
+    <link href="/css/milk.min.css" rel="stylesheet">
+    <link href="/css/milk-responsive.min.css" rel="stylesheet">     
+    <link href="/css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/fonts.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="shortcut icon" href="/images/alexfinn.ico">
+    <link rel="apple-touch-icon" href="">
+    <link rel="canonical" href="https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/k8s/k8s01/">
 
+    
+    <link href="/rss.xml" type="application/atom+xml" rel="alternate" title="">
 
-<div class="navbar navbar-default" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a href="https://laurel-he.github.io//"><p class="navbar-brand"></p></a>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-					
-					
-					<li><a href="https://laurel-he.github.io//python/">Python </a></li>
-					
-					<li><a href="https://laurel-he.github.io//post/">主页 </a></li>
-					
-					<li><a href="https://laurel-he.github.io//categories/">分类 </a></li>
-					
-					<li><a href="https://laurel-he.github.io//acm/">刷题 </a></li>
-					
-					<li><a href="https://laurel-he.github.io//database/">数据库 </a></li>
-					
-					<li><a href="https://laurel-he.github.io//datastruct/">数据结构 </a></li>
-					
-					<li><a href="https://laurel-he.github.io//tags/">标签 </a></li>
-					
-					<li><a href="https://laurel-he.github.io//designpattern/">设计模式 </a></li>
-					
-          </ul>
-        </div>
-      </div>
+  </head>
+  <body>
+    <div class="navbar navbar-fixed-top">
+  <div id="navbar-inner">
+    <div id="logo">
+       <a href=""><img src="/images/letter-a.png" width="100px"></img></a>
     </div>
+  </div>
+</div>
 
 
-
-       
-       <div id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-					<img src="/images/avatar.jpg" />
-          <li class="sidebar-brand"><a href="https://laurel-he.github.io//"><h1 class="brand"></h1></a><h3></h3></li>
-          <hr />
-					
-						<li><a href="https://laurel-he.github.io//python/">Python </a></li>
-					
-						<li><a href="https://laurel-he.github.io//post/">主页 </a></li>
-					
-						<li><a href="https://laurel-he.github.io//categories/">分类 </a></li>
-					
-						<li><a href="https://laurel-he.github.io//acm/">刷题 </a></li>
-					
-						<li><a href="https://laurel-he.github.io//database/">数据库 </a></li>
-					
-						<li><a href="https://laurel-he.github.io//datastruct/">数据结构 </a></li>
-					
-						<li><a href="https://laurel-he.github.io//tags/">标签 </a></li>
-					
-						<li><a href="https://laurel-he.github.io//designpattern/">设计模式 </a></li>
-					
-          <hr />
-          <div id="social-wrapper">
-           
-           
-           
-           
-         </div>
-       </ul>
-     </div>
+<div class="container">
+  <div class="content">
+    <div class="row-fluid">
+      <div class="span12">
+        <div class="posts">
 
 
-
-     <div class="container">
-
-
-  <div id="article">
-   <div class="article-title">kubenetes权威指南1-2章</div>
-   <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> 2020-05-16</small></p> <hr/>
-   <div class="post">
-     <h2 id="kubenetes是什么">kubenetes是什么</h2>
+	    
+	  <div class="post">
+	    <header class="post-header">
+	        <h1><a href="/%E4%BA%91%E5%8E%9F%E7%94%9F/k8s/k8s01/">kubenetes权威指南1-2章</a></h1>
+	        <div class="post-time">May 16 2020</div>
+	    </header>
+	    <div class="post-after">
+	        <div class="tags">
+	            
+	                <a href="https://laurel-he.github.io//tags/%E5%AD%A6%E4%B9%A0">学习</a>
+	            
+	        </div>
+	    </div>
+	    <hr>
+	    <div class="post content">
+	        <h2 id="kubenetes是什么">kubenetes是什么</h2>
 <p>k8s是一个全新的基于容器技术的分布式架构领先方案，一个开放的开发平台，一个完备的分布式系统支撑平台</p>
 <h2 id="k8s重要资源对象介绍">k8s重要资源对象介绍</h2>
 <h3 id="master">Master</h3>
@@ -136,32 +89,42 @@ kubenetes里所有资源的增删改查等操作的唯一入口，也是集群�
 <p>kubectl apply：</p>
 <p>kubectl apply命令，根据配置文件里面列出来的内容，升级现有的。所以yaml文件的内容可以只写需要升级的属性</p>
 
-   </div>
- </div>
-
-
- <a href="https://github.com/laurel-he" class="twitter-share-button " data-size="small" data-count="none">Git hub</a>
- <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-
- <ul class="pager">
-      &nbsp;<li class="previous"><a href="https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/docker/docker01/"> 《第一本docker书》学习笔记01</a></li>
-      &nbsp;<li class="next"><a href="https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/k8s/kustomize01/"> kustomize使用文档</a></li>
-</ul>
-
-
-
-    </ul>
+	    </div>
+	    
+	<div class="about">
+	<p> 
+     
+    </p>
+</div>
+		<nav id="pagination">
+			<a class="prev" href="https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/k8s/kustomize01/">Prev</a>
+			<a class="next" href="https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/docker/docker01/">Next</a>
+		</nav>
+	
+		        <footer>
+		        	Built with <a href="https://github.com/spf13/hugo">Hugo</a>
+		        	<p>© Alexander Feller 2018</p>
+		        </footer>
+		    </div>
+		  </div>
+		</div>
+      </div>
     </div>
-    <footer>
-
-        <p class="text-muted credit">&copy; 2021. All rights reserved. </p>
-    </footer>
- 
-    <script src="https://laurel-he.github.io//js/jquery-1.10.2.min.js"></script>
-    <script src="https://laurel-he.github.io//js/bootstrap.min.js"></script>
-    <script src="https://laurel-he.github.io//js/bootstrap.js"></script>
-    <script type="text/javascript" src="https://laurel-he.github.io//js/hc.js"></script>
 </body>
+
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u=(("https:" == document.location.protocol) ? "https" : "http") + ":change-me";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 4]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
+    g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+
 
 </html>
 

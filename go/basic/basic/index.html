@@ -1,0 +1,156 @@
+	
+	<!doctype html>
+<html lang="en">
+  <head>
+    <title>ALEXFINN - (1)go基础学习-基础概念</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+    
+    <link href="/css/milk.min.css" rel="stylesheet">
+    <link href="/css/milk-responsive.min.css" rel="stylesheet">     
+    <link href="/css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/fonts.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="shortcut icon" href="/images/alexfinn.ico">
+    <link rel="apple-touch-icon" href="">
+    <link rel="canonical" href="https://laurel-he.github.io/go/basic/basic/">
+
+    
+    <link href="/rss.xml" type="application/atom+xml" rel="alternate" title="">
+
+  </head>
+  <body>
+    <div class="navbar navbar-fixed-top">
+  <div id="navbar-inner">
+    <div id="logo">
+       <a href=""><img src="/images/letter-a.png" width="100px"></img></a>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="content">
+    <div class="row-fluid">
+      <div class="span12">
+        <div class="posts">
+
+
+	    
+	  <div class="post">
+	    <header class="post-header">
+	        <h1><a href="/go/basic/basic/">(1)go基础学习-基础概念</a></h1>
+	        <div class="post-time">August 27 2021</div>
+	    </header>
+	    <div class="post-after">
+	        <div class="tags">
+	            
+	                <a href="https://laurel-he.github.io//tags/%E5%AD%A6%E4%B9%A0">学习</a>
+	            
+	        </div>
+	    </div>
+	    <hr>
+	    <div class="post content">
+	        <p>参考文档： <br>
+<a href="https://www.topgoer.com/">go文档</a> <br>
+<a href="https://www.runoob.com/go/go-tutorial.html">Go 语言教程</a> <br>
+可以先看<a href="https://www.topgoer.com/%E5%BC%80%E6%BA%90/go%E5%AD%A6%E4%B9%A0%E7%BA%BF%E8%B7%AF%E5%9B%BE.html">go语言学习路线图</a>，
+对大概学习路线有个了解。</p>
+<h1 id="基础概念">基础概念</h1>
+<h2 id="go语言特色">go语言特色</h2>
+<p>Go语言在多核并发上拥有原生的设计优势，
+Go语言从底层原生支持并发，无须第三方库、开发者的编程技巧和开发经验。</p>
+<p>经过 Go 语言重构的系统能使用更少的硬件资源获得更高的并发和I/O吞吐表现。
+充分挖掘硬件设备的潜力也满足当前精细化运营的市场大环境。</p>
+<p>Go语言的并发是基于 goroutine 的，goroutine 类似于线程，但并非线程。
+可以将 goroutine 理解为一种虚拟线程。
+Go 语言运行时会参与调度 goroutine，并将 goroutine 合理地分配到每个 CPU 中，最大限度地使用CPU性能。
+开启一个goroutine的消耗非常小（大约2KB的内存），你可以轻松创建数百万个goroutine。</p>
+<p>goroutine的特点：</p>
+<blockquote>
+<p>1.<code>goroutine</code>具有可增长的分段堆栈。这意味着它们只在需要时才会使用更多内存。 <br>
+2.<code>goroutine</code>的启动时间比线程快。    <br>
+3.<code>goroutine</code>原生支持利用channel安全地进行通信。  <br>
+4.<code>goroutine</code>共享数据结构时无需使用互斥锁。</p>
+</blockquote>
+<h3 id="go语言的主要特征">go语言的主要特征</h3>
+<blockquote>
+<p>1.自动立即回收。 <br>
+2.更丰富的内置类型。  <br>
+3.函数多返回值。  <br>
+4.错误处理。     <br>
+5.匿名函数和闭包。  <br>
+6.类型和接口。  <br>
+7.并发编程。     <br>
+8.反射。   <br>
+9.语言交互性。</p>
+</blockquote>
+<h3 id="总结">总结</h3>
+<p>Go语言天然支持并发，学习曲线平滑，代码风格统一</p>
+<h1 id="go应用场景">go应用场景</h1>
+<h2 id="go适合做什么">go适合做什么</h2>
+<p>服务端开发   <br>
+分布式系统，微服务    <br>
+网络编程   <br>
+区块链开发     <br>
+内存KV数据库，例如boltDB、levelDB <br>
+云平台</p>
+<h2 id="go语言用途">go语言用途</h2>
+<p>Go 语言被设计成一门应用于搭载 Web 服务器，存储集群或类似用途的巨型中央服务器的系统编程语言。 <br>
+对于高性能分布式系统领域而言，Go 语言无疑比大多数其它语言有着更高的开发效率。 <br>
+它提供了海量并行的支持，这对于游戏服务端的开发而言是再好不过了。</p>
+<h2 id="安装">安装</h2>
+<p>安装略</p>
+<h2 id="go项目目录">go项目目录</h2>
+<p>在进行Go语言开发的时候，我们的代码总是会保存在$GOPATH/src目录下。
+在工程经过go build、go install或go get等指令后，
+会将下载的第三方包源代码文件放在$GOPATH/src目录下， 
+产生的二进制可执行文件放在 $GOPATH/bin目录下，
+生成的中间缓存文件会被保存在 $GOPATH/pkg 下。</p>
+<p>如果我们使用版本管理工具（Version Control System，VCS。常用如Git）来管理我们的项目代码时，
+我们只需要添加$GOPATH/src目录的源代码即可。
+bin 和 pkg 目录的内容无需版本控制。</p>
+<h2 id="提问或demo实现">提问或demo实现</h2>
+<p>（1）使用go实现归并排序 <br>
+（2）使用go实现折半查找 <br>
+（3）Golang 单引号、双引号和反引号的区别</p>
+
+	    </div>
+	    
+	<div class="about">
+	<p> 
+     
+    </p>
+</div>
+		<nav id="pagination">
+			<a class="prev" href="https://laurel-he.github.io/acm/leetcode/121buyshares/">Prev</a>
+			<a class="next" href="https://laurel-he.github.io/go/basic/basicuse/">Next</a>
+		</nav>
+	
+		        <footer>
+		        	Built with <a href="https://github.com/spf13/hugo">Hugo</a>
+		        	<p>© Alexander Feller 2018</p>
+		        </footer>
+		    </div>
+		  </div>
+		</div>
+      </div>
+    </div>
+</body>
+
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u=(("https:" == document.location.protocol) ? "https" : "http") + ":change-me";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 4]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
+    g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+
+
+</html>
+

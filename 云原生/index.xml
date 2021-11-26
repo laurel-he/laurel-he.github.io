@@ -59,6 +59,18 @@ docker exec(docker run) docker run 命令提供了docker容器的创建到启动
     
     <item>
       <title></title>
+      <link>https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/docker/cent_lnmp_dockerfile/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/docker/cent_lnmp_dockerfile/</guid>
+      <description>使用统一docker环境 问题背景 目前大家本地环境有很大区别，有人用mac，有人用windows wsl ubuntu开发，如果引入新的工具大家开发时都要在本地装一套，做了很多重复工作，因此这里封装下不同开发环境下的dockerfile，供大家使用
+环境解析 基础镜像 centos7 php7.4 mysql5.6.51 zookeeper3.6.3 kafka2.12-2.8.1 以及php的一些扩展安装：
+opensslcurllnmp环境 nginx mysql
+FROMcentos:7MAINTAINERhexiaojiao&amp;lt;1570306409@qq.com&amp;gt;RUN yum -y install php-mysql php php-fpm# 目前两个项目需要开放的端口EXPOSE8080, 9504</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/docker/docker/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -71,6 +83,18 @@ sudo service docker start 测试运行hello world
 docker run hello-world 镜像加速 路径： /etc/docker/daemon.json 配置文件中加入(不存在则创建，我本地不存在此文件)：
 { &amp;quot;registry-mirrors&amp;quot;: [&amp;quot;http://hub-mirror.c.163.com&amp;quot;] } 基础知识 hello world
 docker run ubuntu:15.10 /bin/echo &amp;quot;Hello world&amp;quot; (验证,echo是可以直接echo的，不必写/bin/echo) 参数解析 docker:docker的二进制执行文件 run:与前面docker组合来运行一个容器 ubuntu:15.10 : 指定要运行的镜像，Docker首先从本地主机上查找镜像是否存在，如果不存在，Docker 就会从镜像仓库 Docker Hub 下载公共镜像。 /bin/echo &amp;ldquo;Hello world&amp;rdquo;: 在启动的容器里执行的命令 运行交互式的容器 通过docker的两个参数 -i -t，让docker运行的容器实现&amp;quot;对话&amp;quot;的能力</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/docker/wsl_docker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/docker/wsl_docker/</guid>
+      <description>wsl的ubuntu安装docker 参考文章：https://www.jianshu.com/p/a20c2d58eaac 步骤：
+（1）wsl切换到版本2  wsl --set-default-version 2 （2）查询ubuntu启动环境  wsl -l -v （3）如果 VERSION是1代表使用的WSL1  wsl --shutdown 首先关闭WSL下运行的Linux，执行： wsl --shutdown 然后执行：  wsl --set-version &amp;lt;Linux发行版名称&amp;gt; 2 发行版名称就是刚刚wsl -l -v命令显示的name
+cd \wsl$\Ubuntu-16.04\
+(1)wsl2下ubuntu docker安装 注意：这里可能会有文档中没有的报错，Package &amp;lsquo;docker-ce&amp;rsquo; has no installation candidate 可以参考此文章把docker-ce换成aliyun的镜像源:https://www.cnblogs.com/chengmf/p/13122013.html (2)dockerfile php 7.4 swoole 4.7 redis</description>
     </item>
     
   </channel>

@@ -1,0 +1,113 @@
+	
+	<!doctype html>
+<html lang="en">
+  <head>
+    <title>ALEXFINN - </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+    
+    <link href="/css/milk.min.css" rel="stylesheet">
+    <link href="/css/milk-responsive.min.css" rel="stylesheet">     
+    <link href="/css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/fonts.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="shortcut icon" href="/images/alexfinn.ico">
+    <link rel="apple-touch-icon" href="">
+    <link rel="canonical" href="https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/docker/wsl_docker/">
+
+    
+    <link href="/rss.xml" type="application/atom+xml" rel="alternate" title="">
+
+  </head>
+  <body>
+    <div class="navbar navbar-fixed-top">
+  <div id="navbar-inner">
+    <div id="logo">
+       <a href=""><img src="/images/letter-a.png" width="100px"></img></a>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="content">
+    <div class="row-fluid">
+      <div class="span12">
+        <div class="posts">
+
+
+	    
+	  <div class="post">
+	    <header class="post-header">
+	        <h1><a href="/%E4%BA%91%E5%8E%9F%E7%94%9F/docker/wsl_docker/"></a></h1>
+	        <div class="post-time">January 1 0001</div>
+	    </header>
+	    <div class="post-after">
+	        <div class="tags">
+	            
+	        </div>
+	    </div>
+	    <hr>
+	    <div class="post content">
+	        <h1 id="wsl的ubuntu安装docker">wsl的ubuntu安装docker</h1>
+<p>参考文章：https://www.jianshu.com/p/a20c2d58eaac
+步骤：<br>
+（1）wsl切换到版本2 <br>
+<code> wsl --set-default-version 2</code>
+（2）查询ubuntu启动环境 <br>
+<code> wsl -l -v</code>
+（3）如果 VERSION是1代表使用的WSL1 <br>
+<code> wsl --shutdown</code>
+首先关闭WSL下运行的Linux，执行：
+<code>wsl --shutdown</code>
+然后执行：
+<code> wsl --set-version &lt;Linux发行版名称&gt; 2</code>
+发行版名称就是刚刚wsl -l -v命令显示的name</p>
+<p>cd \wsl$\Ubuntu-16.04\</p>
+<p>(1)wsl2下ubuntu docker安装 <br>
+注意：这里可能会有文档中没有的报错，Package &lsquo;docker-ce&rsquo; has no installation candidate
+可以参考此文章把docker-ce换成aliyun的镜像源:https://www.cnblogs.com/chengmf/p/13122013.html
+(2)dockerfile
+php 7.4
+swoole 4.7
+redis</p>
+
+	    </div>
+	    
+	<div class="about">
+	<p> 
+     
+    </p>
+</div>
+		<nav id="pagination">
+			<a class="prev" href="https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/docker/docker/">Prev</a>
+			
+		</nav>
+	
+		        <footer>
+		        	Built with <a href="https://github.com/spf13/hugo">Hugo</a>
+		        	<p>© Alexander Feller 2018</p>
+		        </footer>
+		    </div>
+		  </div>
+		</div>
+      </div>
+    </div>
+</body>
+
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u=(("https:" == document.location.protocol) ? "https" : "http") + ":change-me";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 4]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
+    g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+
+
+</html>
+

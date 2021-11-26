@@ -7,9 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sat, 04 Sep 2021 16:34:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/corc++/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>表达式</title>
+      <link>https://laurel-he.github.io/corc&#43;&#43;/c/03expression/</link>
+      <pubDate>Sat, 04 Sep 2021 16:34:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/corc&#43;&#43;/c/03expression/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>c语言基础介绍</title>
       <link>https://laurel-he.github.io/corc&#43;&#43;/c/01basic/</link>
-      <pubDate>Sat, 04 Sep 2021 16:34:10 +0000</pubDate>
+      <pubDate>Wed, 04 Sep 2019 16:34:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/corc&#43;&#43;/c/01basic/</guid>
       <description>本系列来自于中国大学MOOC的 程序设计入门C语言 学习视频总结
@@ -28,22 +37,12 @@ C语言优点 为什么选择C语言： 使用范围广，做操作系统，嵌�
     <item>
       <title>开始编程</title>
       <link>https://laurel-he.github.io/corc&#43;&#43;/c/02first/</link>
-      <pubDate>Sat, 04 Sep 2021 16:34:10 +0000</pubDate>
+      <pubDate>Wed, 04 Sep 2019 16:34:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/corc&#43;&#43;/c/02first/</guid>
       <description>本系列来自于中国大学MOOC的 程序设计入门C语言 学习视频总结
 第一个程序 #include &amp;lt;stdio.h&amp;gt; int main(int argc, char ** argv) { printf(&amp;#34;Hello Word\n&amp;#34;); int i = 0; scanf(&amp;#34;%d&amp;#34;, &amp;amp;i); printf(&amp;#34;The res is: %d&amp;#34;, i + 10); return 0; } 程序的框架就是：
-#include &amp;lt;stdio.h&amp;gt;int main(){return 0;}换行和空格不意味着任何问题。
-浮点数 float</description>
-    </item>
-    
-    <item>
-      <title>表达式</title>
-      <link>https://laurel-he.github.io/corc&#43;&#43;/c/03expression/</link>
-      <pubDate>Sat, 04 Sep 2021 16:34:10 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/corc&#43;&#43;/c/03expression/</guid>
-      <description></description>
+#include &amp;lt;stdio.h&amp;gt;int main(){return 0;}换行和空格不意味着任何问题。 编程工具我使用的是codeblocks，原课件中推荐的是Dev C++,但个人试用后觉得没有codeBlocks好看，实际上，vscode是不错的选择！但是vscode需要单独安装gcc</description>
     </item>
     
   </channel>

@@ -1,104 +1,57 @@
-<!DOCTYPE html>
+	
+	<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>各种奇怪的坑</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.87.0" />
-  <link href="" rel="alternate" type="application/rss+xml" title="" />
-  <link href="https://laurel-he.github.io//css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://laurel-he.github.io//css/hc.css" rel="stylesheet">
-  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-  
+  <head>
+    <title>ALEXFINN - 各种奇怪的坑</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
     
-    </head>
-    <body>
-<div class="nav-toggle"><i class="fa fa-bars fa-2x"></i> Herring Cove </div>
-      <div id = "wrapper">
+    <link href="/css/milk.min.css" rel="stylesheet">
+    <link href="/css/milk-responsive.min.css" rel="stylesheet">     
+    <link href="/css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/fonts.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="shortcut icon" href="/images/alexfinn.ico">
+    <link rel="apple-touch-icon" href="">
+    <link rel="canonical" href="https://laurel-he.github.io/php/2019_01_01/">
 
+    
+    <link href="/rss.xml" type="application/atom+xml" rel="alternate" title="">
 
-<div class="navbar navbar-default" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a href="https://laurel-he.github.io//"><p class="navbar-brand"></p></a>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-					
-					
-					<li><a href="https://laurel-he.github.io//python/">Python </a></li>
-					
-					<li><a href="https://laurel-he.github.io//post/">主页 </a></li>
-					
-					<li><a href="https://laurel-he.github.io//categories/">分类 </a></li>
-					
-					<li><a href="https://laurel-he.github.io//acm/">刷题 </a></li>
-					
-					<li><a href="https://laurel-he.github.io//database/">数据库 </a></li>
-					
-					<li><a href="https://laurel-he.github.io//datastruct/">数据结构 </a></li>
-					
-					<li><a href="https://laurel-he.github.io//tags/">标签 </a></li>
-					
-					<li><a href="https://laurel-he.github.io//designpattern/">设计模式 </a></li>
-					
-          </ul>
-        </div>
-      </div>
+  </head>
+  <body>
+    <div class="navbar navbar-fixed-top">
+  <div id="navbar-inner">
+    <div id="logo">
+       <a href=""><img src="/images/letter-a.png" width="100px"></img></a>
     </div>
+  </div>
+</div>
 
 
-
-       
-       <div id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-					<img src="/images/avatar.jpg" />
-          <li class="sidebar-brand"><a href="https://laurel-he.github.io//"><h1 class="brand"></h1></a><h3></h3></li>
-          <hr />
-					
-						<li><a href="https://laurel-he.github.io//python/">Python </a></li>
-					
-						<li><a href="https://laurel-he.github.io//post/">主页 </a></li>
-					
-						<li><a href="https://laurel-he.github.io//categories/">分类 </a></li>
-					
-						<li><a href="https://laurel-he.github.io//acm/">刷题 </a></li>
-					
-						<li><a href="https://laurel-he.github.io//database/">数据库 </a></li>
-					
-						<li><a href="https://laurel-he.github.io//datastruct/">数据结构 </a></li>
-					
-						<li><a href="https://laurel-he.github.io//tags/">标签 </a></li>
-					
-						<li><a href="https://laurel-he.github.io//designpattern/">设计模式 </a></li>
-					
-          <hr />
-          <div id="social-wrapper">
-           
-           
-           
-           
-         </div>
-       </ul>
-     </div>
+<div class="container">
+  <div class="content">
+    <div class="row-fluid">
+      <div class="span12">
+        <div class="posts">
 
 
-
-     <div class="container">
-
-
-  <div id="article">
-   <div class="article-title">各种奇怪的坑</div>
-   <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> 2019-02-01</small></p> <hr/>
-   <div class="post">
-     <h4 id="1-strtotime">1 strtotime()</h4>
+	    
+	  <div class="post">
+	    <header class="post-header">
+	        <h1><a href="/php/2019_01_01/">各种奇怪的坑</a></h1>
+	        <div class="post-time">February 1 2019</div>
+	    </header>
+	    <div class="post-after">
+	        <div class="tags">
+	            
+	                <a href="https://laurel-he.github.io//tags/%E5%AD%A6%E4%B9%A0">学习</a>
+	            
+	        </div>
+	    </div>
+	    <hr>
+	    <div class="post content">
+	        <h4 id="1-strtotime">1 strtotime()</h4>
 <p><strong>描述</strong>
 获取上个月的时间可以是date(&lsquo;Y-m-d&rsquo;,strtotime('-1 month'));如果今天是31号而上个月没有31号，就会直接输出这个月1号；
 <strong>解决办法</strong>
@@ -113,32 +66,42 @@
 硬链接</p>
 <h4 id="4-laravel-get-toarray无法获取数据">4 laravel get()-&gt;toArray()无法获取数据</h4>
 
-   </div>
- </div>
-
-
- <a href="https://github.com/laurel-he" class="twitter-share-button " data-size="small" data-count="none">Git hub</a>
- <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-
- <ul class="pager">
-      &nbsp;<li class="previous"><a href="https://laurel-he.github.io/php/test-my-site/"> fastadmin自定义角色组</a></li>
-      &nbsp;<li class="next"><a href="https://laurel-he.github.io/python/20190202/"> python100例学习笔记</a></li>
-</ul>
-
-
-
-    </ul>
+	    </div>
+	    
+	<div class="about">
+	<p> 
+     
+    </p>
+</div>
+		<nav id="pagination">
+			<a class="prev" href="https://laurel-he.github.io/python/20190202/">Prev</a>
+			<a class="next" href="https://laurel-he.github.io/php/test-my-site/">Next</a>
+		</nav>
+	
+		        <footer>
+		        	Built with <a href="https://github.com/spf13/hugo">Hugo</a>
+		        	<p>© Alexander Feller 2018</p>
+		        </footer>
+		    </div>
+		  </div>
+		</div>
+      </div>
     </div>
-    <footer>
-
-        <p class="text-muted credit">&copy; 2021. All rights reserved. </p>
-    </footer>
- 
-    <script src="https://laurel-he.github.io//js/jquery-1.10.2.min.js"></script>
-    <script src="https://laurel-he.github.io//js/bootstrap.min.js"></script>
-    <script src="https://laurel-he.github.io//js/bootstrap.js"></script>
-    <script type="text/javascript" src="https://laurel-he.github.io//js/hc.js"></script>
 </body>
+
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u=(("https:" == document.location.protocol) ? "https" : "http") + ":change-me";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 4]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
+    g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+
 
 </html>
 

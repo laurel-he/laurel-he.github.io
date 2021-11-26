@@ -1,0 +1,125 @@
+	
+	<!doctype html>
+<html lang="en">
+  <head>
+    <title>ALEXFINN - php下es基本使用</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+    
+    <link href="/css/milk.min.css" rel="stylesheet">
+    <link href="/css/milk-responsive.min.css" rel="stylesheet">     
+    <link href="/css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/fonts.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="shortcut icon" href="/images/alexfinn.ico">
+    <link rel="apple-touch-icon" href="">
+    <link rel="canonical" href="https://laurel-he.github.io/database/es/basic/">
+
+    
+    <link href="/rss.xml" type="application/atom+xml" rel="alternate" title="">
+
+  </head>
+  <body>
+    <div class="navbar navbar-fixed-top">
+  <div id="navbar-inner">
+    <div id="logo">
+       <a href=""><img src="/images/letter-a.png" width="100px"></img></a>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="content">
+    <div class="row-fluid">
+      <div class="span12">
+        <div class="posts">
+
+
+	    
+	  <div class="post">
+	    <header class="post-header">
+	        <h1><a href="/database/es/basic/">php下es基本使用</a></h1>
+	        <div class="post-time">November 20 2021</div>
+	    </header>
+	    <div class="post-after">
+	        <div class="tags">
+	            
+	                <a href="https://laurel-he.github.io//tags/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E">搜索引擎</a>
+	            
+	        </div>
+	    </div>
+	    <hr>
+	    <div class="post content">
+	        <p><strong>本文参考文档:</strong> <br>
+<a href="https://learnku.com/docs/elasticsearch73/7.3/data-in-documents-and-indices/6446">es7.3文档</a> <br>
+<a href="http://www.ruanyifeng.com/blog/2017/08/elasticsearch.html">全文搜索引擎 Elasticsearch 入门教程</a></p>
+<h2 id="基础介绍">基础介绍</h2>
+<p>全文搜索属于最常见的需求，开源的 Elasticsearch是目前全文搜索引擎的首选。它可以快速地储存、搜索和分析海量数据。</p>
+<h2 id="安装">安装</h2>
+<p>不同环境下安装方式不同，可以采用下载安装包，apt-get，yum安装等各种方法，在wsl下linux安装需要注意，wsl下的Linux系统没有使用systemd，可以尝试用SysV init的命令代替systemd，或者安装systemd命令 <br>
+安装完后直接执行curl localhost:9200可以获取到es基本信息，例如我执行后结果如下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">&#34;name&#34;</span> : <span style="color:#e6db74">&#34;MS-RWTYITLHLCWO&#34;</span>,
+  <span style="color:#f92672">&#34;cluster_name&#34;</span> : <span style="color:#e6db74">&#34;elasticsearch&#34;</span>,
+  <span style="color:#f92672">&#34;cluster_uuid&#34;</span> : <span style="color:#e6db74">&#34;j9WVJcIFRq6bEa3bwXCARA&#34;</span>,
+  <span style="color:#f92672">&#34;version&#34;</span> : {
+    <span style="color:#f92672">&#34;number&#34;</span> : <span style="color:#e6db74">&#34;7.15.2&#34;</span>,
+    <span style="color:#f92672">&#34;build_flavor&#34;</span> : <span style="color:#e6db74">&#34;default&#34;</span>,
+    <span style="color:#f92672">&#34;build_type&#34;</span> : <span style="color:#e6db74">&#34;deb&#34;</span>,
+    <span style="color:#f92672">&#34;build_hash&#34;</span> : <span style="color:#e6db74">&#34;93d5a7f6192e8a1a12e154a2b81bf6fa7309da0c&#34;</span>,
+    <span style="color:#f92672">&#34;build_date&#34;</span> : <span style="color:#e6db74">&#34;2021-11-04T14:04:42.515624022Z&#34;</span>,
+    <span style="color:#f92672">&#34;build_snapshot&#34;</span> : <span style="color:#66d9ef">false</span>,
+    <span style="color:#f92672">&#34;lucene_version&#34;</span> : <span style="color:#e6db74">&#34;8.9.0&#34;</span>,
+    <span style="color:#f92672">&#34;minimum_wire_compatibility_version&#34;</span> : <span style="color:#e6db74">&#34;6.8.0&#34;</span>,
+    <span style="color:#f92672">&#34;minimum_index_compatibility_version&#34;</span> : <span style="color:#e6db74">&#34;6.0.0-beta1&#34;</span>
+  },
+  <span style="color:#f92672">&#34;tagline&#34;</span> : <span style="color:#e6db74">&#34;You Know, for Search&#34;</span>
+}
+</code></pre></div><h2 id="使用">使用</h2>
+<h3 id="引入包">引入包</h3>
+<p>正常通过Restful API方式使用在各个文档中都有详细介绍，在此省略，说一下在php中如何使用。 <br>
+在laravel或yii2等主流框架中都有自己使用es的包，例如yiisoft/yii2-elasticsearch或basemkhirat/elasticsearch等等，但假设使用的是自研框架呢？ <br>
+目前我使用的是基于swoole开发的自研框架，引入了elasticsearch/elasticsearch包，在composer require elasticsearch/elasticsearch时，会自动根据php版本引入包</p>
+<h3 id="配置">配置</h3>
+<h3 id="连接池">连接池</h3>
+
+	    </div>
+	    
+	<div class="about">
+	<p> 
+     
+    </p>
+</div>
+		<nav id="pagination">
+			<a class="prev" href="https://laurel-he.github.io/go/summary/">Prev</a>
+			<a class="next" href="https://laurel-he.github.io/php/swoole/basic/">Next</a>
+		</nav>
+	
+		        <footer>
+		        	Built with <a href="https://github.com/spf13/hugo">Hugo</a>
+		        	<p>© Alexander Feller 2018</p>
+		        </footer>
+		    </div>
+		  </div>
+		</div>
+      </div>
+    </div>
+</body>
+
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u=(("https:" == document.location.protocol) ? "https" : "http") + ":change-me";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 4]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
+    g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+
+
+</html>
+

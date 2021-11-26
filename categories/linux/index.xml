@@ -7,6 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 27 Feb 2020 18:00:00 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>awk</title>
+      <link>https://laurel-he.github.io/operatingsystem/linux/awk/</link>
+      <pubDate>Thu, 27 Feb 2020 18:00:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/operatingsystem/linux/awk/</guid>
+      <description>参考文档： awk 入门教程 Linux awk命令
+知识点 （1）-F指定分隔符，例如：awk -F &#39;:&#39; &#39;{print $1}&#39; demo.log （2）$0代表当前行，即所有内容，例如：awk &#39;{print $0}&#39; demo.log将会输出demo.log的所有内容 （3）$ + 数字表示某个字段，例如$2,$3分别表示第2第3个字段，也可以理解为列 （4）变量NF表示当前行有多少个字段，因此$NF就代表最后一个字段。例如：awk &#39;{print $NF}&#39; demo.log （5）$(NF-1)代表倒数第二个字段，即NF-数字代表倒数字段。 （6）输出时使用空格分隔，例如：awk &#39;{print $1, $(NF-1)}&#39; demo.log （7）要原样输出字符，需要放在&amp;quot;&amp;ldquo;里，例如awk -F &#39;:&#39; &#39;{print &amp;quot;(&amp;quot;,$5,&amp;quot;)&amp;quot;}&#39; demo.log （8）变量NR表示当前处理的是第几行，可以输出当前行数awk -F &#39;:&#39; &#39;{print NR &amp;quot;):(&amp;quot; $5 &amp;quot;)&amp;quot;}&#39; demo.log （9）awk有许多内置函数，例如转换大小写，详情见本文函数 （10）awk允许指定输出条件，可正则可根据行列计算等，非常重要 （11）awk提供判断语句（if else）
+awk是什么 awk是处理文本文件的一个应用程序，几乎所有 Linux 系统都自带这个程序。
+它依次处理文件的每一行，并读取里面的每一个字段。对于日志、CSV 那样的每行格式相同的文本文件，awk可能是最方便的工具。
+awk语法 awk [选项参数] &amp;#39;script&amp;#39; var=value file(s) #或 awk [选项参数] -f scriptfile var=value file(s) #或者可以解释为： #awk 动作 文件名 示例：</description>
+    </item>
+    
+    <item>
       <title>linux命令大全</title>
       <link>https://laurel-he.github.io/operatingsystem/linuxuse/</link>
       <pubDate>Thu, 27 Feb 2020 18:00:00 +0000</pubDate>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tools on </title>
+    <link>https://laurel-he.github.io/tools/</link>
+    <description>Recent content in Tools on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 20 Nov 2019 18:27:44 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/tools/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>版本管理工具git（1）-起步和基础</title>
+      <link>https://laurel-he.github.io/tools/git/git_01/</link>
+      <pubDate>Wed, 20 Nov 2019 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/tools/git/git_01/</guid>
+      <description>参考文档：git管理
+起步 作用 版本管理，git是分布式版本控制系统，既可以本地管理又可以协同合作
+特点 （1）直接记录快照，而非差异比较：Git对待数据更像一个快照流（在 Git 中，每当你提交更新或保存项目状态时，它基本上就会对当时的全部文件创建一个快照并保存这个快照的索引。 为了效率，如果文件没有修改，Git 不再重新存储该文件，而是只保留一个链接指向之前存储的文件。） （2）近乎所有操作都是本地执行 （3）Git保证完整性：Git 中所有的数据在存储前都计算校验和，然后以校验和来引用。 （4）Git 一般只添加数据
+git三种状态及对应区 git存在三种状态：已提交（committed）、已修改（modified） 和 已暂存（staged） 文档中对这三种状态作了解释，以下对这些解释做详细说明：
+ 已修改表示修改了文件，但还没保存到数据库中：可以理解为改了，但是没执行add操作
+  已暂存表示对一个已修改文件的当前版本做了标记，使之包含在下次提交的快照中: 可以理解为执行了add操作，但是还没执行commit操作
+  已提交表示数据已经安全地保存在本地数据库中:已经执行了commit操作
+ 以上三种状态可以对应Git项目的三个阶段：工作区、暂存区以及 Git 目录。
+配置 本文省略git安装过程，直接讲配置。三层git config:
+（1）/etc/gitconfig:包含系统上每一个用户及他们仓库的通用配置。 如果在执行 git config 时带上 &amp;ndash;system 选项，那么它就会读写该文件中的配置变量。 （由于它是系统配置文件，因此你需要管理员或超级用户权限来修改它。）,对于windows是在安装目录下 （2）~/.gitconfig 或 ~/.config/git/config 文件：只针对当前用户。 你可以传递 &amp;ndash;global 选项让 Git 读写此文件，这会对你系统上 所有 的仓库生效。 （3）当前使用仓库的 Git 目录中的 config 文件（即 .git/config）：针对该仓库。 你可以传递 &amp;ndash;local 选项让 Git 强制读写此文件，虽然默认情况下用的就是它。。 （当然，你需要进入某个 Git 仓库中才能让该选项生效。） 每一个级别会覆盖上一级别的配置，所以 .</description>
+    </item>
+    
+  </channel>
+</rss>

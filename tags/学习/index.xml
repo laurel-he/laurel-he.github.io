@@ -5,7 +5,33 @@
     <link>https://laurel-he.github.io/tags/%E5%AD%A6%E4%B9%A0/</link>
     <description>Recent content in 学习 on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 26 Sep 2021 13:47:00 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/tags/%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 25 Nov 2021 20:47:00 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/tags/%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>go语言学习</title>
+      <link>https://laurel-he.github.io/go/summary/</link>
+      <pubDate>Thu, 25 Nov 2021 20:47:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/go/summary/</guid>
+      <description>参考文档： go文档 Go 语言教程
+前言 知识查漏补缺第一站，学习go语言。 我去年曾经大概看过go语言的一些语法，但并没有实际操作过，因此，这里假定我需要做一个小的电商平台，一步一步来实现。
+步骤 首先大概拆分下需求，需要做的是电商平台，确认需要以下模块： （1）商品管理 （2）用户管理 （3）订单管理 （4）物流系统
+技术选型 开发语言及框架  1(2021-11-25). 确认使用go语言开发：因为go语言目前使用较为广泛，社区支持稳定，且学习成本不高，效率高过php 目前框架未定，经调研目前较火的框架有Gin,Beego,Buffalom,Echo,Iris,Revel 很好，目前这些框架我都只知道名字，在网上查了一下各大框架的优缺点，实话说，目前我还无法做出选择，因此技术选型暂时跳过框架,待后续补充
+ 数据库 基本数据库 确认使用mysql数据库：此需求数据结构稳定（订单，用户，商品）， 且mysql比较灵活，数据安全，innoDb引擎支持事务，环境搭建简单，开源； mysql有不同的存储引擎，应用场景广泛，拥有成熟的体系， 且我更擅长使用mysql
+缓存 使用redis做缓存
+队列 既然是商城，那么几乎都会涉及到秒杀等功能，那么就会有并发，就可能需要使用队列。</description>
+    </item>
+    
+    <item>
+      <title>swoole基本使用</title>
+      <link>https://laurel-he.github.io/php/swoole/basic/</link>
+      <pubDate>Sat, 20 Nov 2021 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/php/swoole/basic/</guid>
+      <description>本文参考swoole文档
+安装 安装过程大概可以参考如下dockerfile:
+FROMalpine:latest# 替换镜像源并安装基础服务RUN sed -i &amp;#39;s/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g&amp;#39; /etc/apk/repositories \  &amp;amp;&amp;amp; apk add php7 php7-fpm php7-opcache php7-curl php7-pdo php7-gd php7-dev php7-mbstring php7-mysqli php7-json vim \  &amp;amp;&amp;amp; apk add gcc g++ make autoconf libc-dev# 挂载VOLUME [&amp;#34;/data&amp;#34;]# 安装swooleCOPY swoole4.7.1.tar.gz /tmpCOPY apache-zookeeper-3.6.3-bin.tar.gz /tmpCOPY kafka_2.12-2.8.1.tgz /tmpRUN cd /tmp \  &amp;amp;&amp;amp; tar -zxvf swoole4.7.1.tar.gz \  &amp;amp;&amp;amp; cd swoole-src-4.7.1 \  &amp;amp;&amp;amp; phpize \  &amp;amp;&amp;amp; ./configure \  &amp;amp;&amp;amp; make \  &amp;amp;&amp;amp; make install \  &amp;amp;&amp;amp; echo &amp;#34;extension=swoole.</description>
+    </item>
+    
     <item>
       <title>pcntl</title>
       <link>https://laurel-he.github.io/php/pcntl/</link>
@@ -13,37 +39,6 @@
       
       <guid>https://laurel-he.github.io/php/pcntl/</guid>
       <description>pcntl_wait:等待或返回fork的子进程状态</description>
-    </item>
-    
-    <item>
-      <title>c语言基础介绍</title>
-      <link>https://laurel-he.github.io/corc&#43;&#43;/c/01basic/</link>
-      <pubDate>Sat, 04 Sep 2021 16:34:10 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/corc&#43;&#43;/c/01basic/</guid>
-      <description>本系列来自于中国大学MOOC的 程序设计入门C语言 学习视频总结
-基础 学习程序设计的目的 通过学习程序设计，理解计算机如何工作，计算机擅长做什么，不擅长做什么。
-计算机如何解决问题？ 告诉计算机的步骤，它会一步一步地去做。告诉计算机How to do而不是what to do
-编程语言的作用 编程语言的作用是，写下要计算机做事的步骤，让计算机去做。
-计算机懂什么语言？ 16进制数字组成的机器码，
-示例： 利用辗转相除法计算两个数的最大公约数： int u = 32; int v = 26; while (v != 0) { int temp = u % v; u = v; v = temp; } printf(&amp;#34;%d&amp;#34;, u); 计算机语言:计算机可以理解的语言，人几乎无法看懂 程序：程序员能够理解的语言 算法：描述成普通人可以理解的语言 要让计算机做的事情都是计算，我们要做的是把计算的步骤找到告诉计算机，计算的步骤叫做算法。
-计算机的思维方式 枚举，二分法。。。
-计算机如何执行程序？ 解释：一步一步将代码解释给计算机 编译：先有一个程序，把程序翻译出来，直接用翻译后的程序去执行 对于计算机的编程语言来说，语言本身没有解释和编译的区分的，任何语言都是既可以编译执行也可以解释执行， 只是有的习惯不同，例如C语言一般是编译执行，但是也可以使用解释器。
-C语言优点 为什么选择C语言： 使用范围广，做操作系统，嵌入式系统几乎没有其他选择，现代的编程语言在语法上的差异很小，基本都和C语言接近 针对各种应用的库可以完成大量工作，一般说某种语言厉害是因为它有更合适的库。 高效性，可移植性，功能丰富，面向程序员，灵活性
-简单历史 指针是C语言的灵魂，发展自B语言。
-线上开发环境 暂时采用codeBlocks(教程中使用的是dev C++，但是个人感觉界面太丑)</description>
-    </item>
-    
-    <item>
-      <title>开始编程</title>
-      <link>https://laurel-he.github.io/corc&#43;&#43;/c/02first/</link>
-      <pubDate>Sat, 04 Sep 2021 16:34:10 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/corc&#43;&#43;/c/02first/</guid>
-      <description>本系列来自于中国大学MOOC的 程序设计入门C语言 学习视频总结
-第一个程序 #include &amp;lt;stdio.h&amp;gt; int main(int argc, char ** argv) { printf(&amp;#34;Hello Word\n&amp;#34;); int i = 0; scanf(&amp;#34;%d&amp;#34;, &amp;amp;i); printf(&amp;#34;The res is: %d&amp;#34;, i + 10); return 0; } 程序的框架就是：
-#include &amp;lt;stdio.h&amp;gt;int main(){return 0;}换行和空格不意味着任何问题。
-浮点数 float</description>
     </item>
     
     <item>
@@ -177,15 +172,57 @@ class Solution { /** * @param Integer[] $prices * @return Integer */ function ma
     </item>
     
     <item>
-      <title>go基础</title>
-      <link>https://laurel-he.github.io/go/basic/</link>
+      <title>(1)go基础学习-基础概念</title>
+      <link>https://laurel-he.github.io/go/basic/basic/</link>
       <pubDate>Fri, 27 Aug 2021 13:47:00 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/go/basic/</guid>
-      <description>本系列参考go语言教程
-基础概念 go语言特色 简洁、快速、安全 并行、有趣、开源 内存管理、数组安全、编译迅速
+      <guid>https://laurel-he.github.io/go/basic/basic/</guid>
+      <description>参考文档： go文档 Go 语言教程 可以先看go语言学习路线图， 对大概学习路线有个了解。
+基础概念 go语言特色 Go语言在多核并发上拥有原生的设计优势， Go语言从底层原生支持并发，无须第三方库、开发者的编程技巧和开发经验。
+经过 Go 语言重构的系统能使用更少的硬件资源获得更高的并发和I/O吞吐表现。 充分挖掘硬件设备的潜力也满足当前精细化运营的市场大环境。
+Go语言的并发是基于 goroutine 的，goroutine 类似于线程，但并非线程。 可以将 goroutine 理解为一种虚拟线程。 Go 语言运行时会参与调度 goroutine，并将 goroutine 合理地分配到每个 CPU 中，最大限度地使用CPU性能。 开启一个goroutine的消耗非常小（大约2KB的内存），你可以轻松创建数百万个goroutine。
+goroutine的特点：
+ 1.goroutine具有可增长的分段堆栈。这意味着它们只在需要时才会使用更多内存。 2.goroutine的启动时间比线程快。 3.goroutine原生支持利用channel安全地进行通信。 4.goroutine共享数据结构时无需使用互斥锁。
+ go语言的主要特征  1.自动立即回收。 2.更丰富的内置类型。 3.函数多返回值。 4.错误处理。 5.匿名函数和闭包。 6.类型和接口。 7.并发编程。 8.反射。 9.语言交互性。
+ 总结 Go语言天然支持并发，学习曲线平滑，代码风格统一
+go应用场景 go适合做什么 服务端开发 分布式系统，微服务 网络编程 区块链开发 内存KV数据库，例如boltDB、levelDB 云平台
 go语言用途 Go 语言被设计成一门应用于搭载 Web 服务器，存储集群或类似用途的巨型中央服务器的系统编程语言。 对于高性能分布式系统领域而言，Go 语言无疑比大多数其它语言有着更高的开发效率。 它提供了海量并行的支持，这对于游戏服务端的开发而言是再好不过了。
-简单的go语言程序 package main import &amp;#34;fmt&amp;#34; func main() { var age, name string = &amp;#34;18&amp;#34;, &amp;#34;Joe&amp;#34; var res = fmt.Sprintf(&amp;#34;my name is %s, and my age is %s&amp;#34;, name, age) fmt.Println(res) } func init() { fmt.Println(&amp;#34;test init&amp;#34;) } func varTest() { var funcName, funcTime string = &amp;#34;varTest&amp;#34;, &amp;#34;now&amp;#34; fmt.Println(funcName + funcTime) } 使用go run来执行 使用go build 来生成二进制文件</description>
+安装 安装略
+go项目目录 在进行Go语言开发的时候，我们的代码总是会保存在$GOPATH/src目录下。 在工程经过go build、go install或go get等指令后， 会将下载的第三方包源代码文件放在$GOPATH/src目录下， 产生的二进制可执行文件放在 $GOPATH/bin目录下， 生成的中间缓存文件会被保存在 $GOPATH/pkg 下。</description>
+    </item>
+    
+    <item>
+      <title>(2)go基础学习-基本使用</title>
+      <link>https://laurel-he.github.io/go/basic/basicuse/</link>
+      <pubDate>Fri, 27 Aug 2021 13:47:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/go/basic/basicuse/</guid>
+      <description>参考文档： go文档 Go 语言教程
+简单的go语言程序 package main import &amp;#34;fmt&amp;#34; func main() { var age, name string = &amp;#34;18&amp;#34;, &amp;#34;Joe&amp;#34; var res = fmt.Sprintf(&amp;#34;my name is %s, and my age is %s&amp;#34;, name, age) fmt.Println(res) } func init() { fmt.Println(&amp;#34;test init&amp;#34;) } func varTest() { var funcName, funcTime string = &amp;#34;varTest&amp;#34;, &amp;#34;now&amp;#34; fmt.Println(funcName + funcTime) } 使用go run来执行 使用go build 来生成二进制文件
+go语言结构 go语言的基础组成部分如下：
+包声明 示例 package main解释 第一行代码 package main 定义了包名。 必须在源文件中非注释的第一行指明这个文件属于哪个包，如：package main。 package main表示一个可独立执行的程序，每个 Go 应用程序都包含一个名为 main 的包</description>
+    </item>
+    
+    <item>
+      <title>gin框架使用</title>
+      <link>https://laurel-he.github.io/go/gin/basic/</link>
+      <pubDate>Fri, 27 Aug 2021 13:47:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/go/gin/basic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>go语言圣经</title>
+      <link>https://laurel-he.github.io/go/thegoprograming_01/</link>
+      <pubDate>Fri, 27 Aug 2021 13:47:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/go/thegoprograming_01/</guid>
+      <description>基本介绍 可以参考此文章：https://docs.hacknode.org/gopl-zh/ch0/ch0-02.html
+基础使用 查看go版本 go version 引入代码 需要在环境变量中添加GOPATH目录，然后使用go get 命令下载代码，以下为《go语言圣经》的示例
+export GOPATH=$HOME/go # 选择工作目录 go get gopl.io/ch1/helloworld # 获取/编译/安装 $GOPATH/bin/helloworld # 运行程序 执行代码 执行代码使用go run命令
+go run hello.go 编译代码 编译代码使用go build命令，执行完后会生成一个可执行文件
+go build hello.go 代码详情 </description>
     </item>
     
     <item>
@@ -223,6 +260,20 @@ Linux下的中断 #include &amp;lt;stdlib.h&amp;gt;#include &amp;lt;stdio.h&amp;
     </item>
     
     <item>
+      <title>操作系统（清华大学）1-概述</title>
+      <link>https://laurel-he.github.io/operatingsystem/singhuaopsys_01/</link>
+      <pubDate>Tue, 20 Jul 2021 16:34:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/operatingsystem/singhuaopsys_01/</guid>
+      <description>教学内容 操作系统的实现 操作系统软件的结构 中断及系统调用 内存管理 进程和线程 处理机调度 进程间通信（同步互斥） 文件系统：组织文件，方便用户的读写查找 I/O子系统：上万种的差异设备连到同一个系统中 什么是操作系统？ 没有公认的精确定义
+定义 1 操作系统是一个控制程序，一个系统软件
+2 操作系统是一个资源管理器
+操作系统软件的组成 Shell&amp;ndash;命令行接口 GUI&amp;ndash;图形用户接口：直接操作，所见即所得
+操作系统内核特征 并发 共享 虚拟 异步
+ 批处理系统：顺序执行，速度提升 多道系统：提高效率，多道程序交替执行 分时系统：交替执行，时钟中断（暂停当前进程的执行）</description>
+    </item>
+    
+    <item>
       <title>数据结构学习笔记-1</title>
       <link>https://laurel-he.github.io/datastruct/datastruct_01/</link>
       <pubDate>Tue, 20 Jul 2021 16:34:10 +0000</pubDate>
@@ -232,22 +283,6 @@ Linux下的中断 #include &amp;lt;stdlib.h&amp;gt;#include &amp;lt;stdio.h&amp;
 定义 （1）数据结构是数据对象，以及存在于该对象的实例和组成实例的数据元素之间的各种联系。这些联系可以通过定义和相关的函数来给出 （2）数据结构是ADT(abstruct data type)的物理实现 （3）数据结构是计算机存储，组织数据的方式，通常情况下，精心选择的数据结构可以带来最有效率的算法
 示例 写程序实现一个函数printN，打印从1-N之间的所有正整数 。以下是两种实现方式的php实现代码：
 &amp;lt;?php function printN($n) { $i = 0; for($i = 0; $i &amp;lt; $n; $i++) { echo $i. &amp;#34;\n\r&amp;#34;; } } $begin1 = microtime(); printN(10000); $end1 = microtime(); $time1 = $end1 - $begin1; function printM($m) { if ($m) { printM($m - 1); echo $m. &amp;#34;\n\r&amp;#34;; } } $begin2 = microtime(); printM(10000); $end2 = microtime(); $time2 = $end2 - $begin2; echo $time2 - $time1; 递归和直接循环打印都可以实现，但是递归当数字大于1w左右就失败了，因为递归对空间的占用十分恐怖。解决问题方法的效率，也与空间的占用效率是有关的。</description>
-    </item>
-    
-    <item>
-      <title>mysql必知必会学习笔记-1-基础概念</title>
-      <link>https://laurel-he.github.io/database/mysql/mysqlmustknown_01/</link>
-      <pubDate>Fri, 02 Apr 2021 18:27:44 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/database/mysql/mysqlmustknown_01/</guid>
-      <description>概念 定义 数据库 数据库是用来保存有组织的数据的容器
-表 某种特定类型数据的结构化清单（在类似mongodb等nosql数据库中，表的类型和字段都不是固定的）
-列 表中的一个字段，所有的表都是由一个或多个列组成的
-数据类型 所容许的数据类型，每个表列都有 相应的数据类型，它限制或容许改列中存储的数据
-行 表中的一个记录
-主键 一列（或一组列），其值能够唯一区分表中的每一行 主键建议 （1）不更新主键列中的值 （2）不重用组件列的值 （3）不在主键列中使用可能会更改的值
-mysql命令行连接参数 经常使用的参数:
-   参数 解释     u 用户名   h host   P 端口号   p 密码    </description>
     </item>
     
     <item>
@@ -379,6 +414,19 @@ kubectl apply命令，根据配置文件里面列出来的内容，升级现有�
       <description>Docker与配置管理 docker的核心组件 （1）docker客户端和服务器，也称为docker引擎 （2）docker镜像 （3）Registry （4）Docker容器
 基本使用 docker info 查看docker程序是否存在，功能是否正常
 docker exec(docker run) docker run 命令提供了docker容器的创建到启动的功能 (1)-i:保证容器STDIN是开启的 (2)-t:为要撞见的容器分配一个伪tty终端 docker exec -it backend_jiapin /bi n/bash</description>
+    </item>
+    
+    <item>
+      <title>awk</title>
+      <link>https://laurel-he.github.io/operatingsystem/linux/awk/</link>
+      <pubDate>Thu, 27 Feb 2020 18:00:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/operatingsystem/linux/awk/</guid>
+      <description>参考文档： awk 入门教程 Linux awk命令
+知识点 （1）-F指定分隔符，例如：awk -F &#39;:&#39; &#39;{print $1}&#39; demo.log （2）$0代表当前行，即所有内容，例如：awk &#39;{print $0}&#39; demo.log将会输出demo.log的所有内容 （3）$ + 数字表示某个字段，例如$2,$3分别表示第2第3个字段，也可以理解为列 （4）变量NF表示当前行有多少个字段，因此$NF就代表最后一个字段。例如：awk &#39;{print $NF}&#39; demo.log （5）$(NF-1)代表倒数第二个字段，即NF-数字代表倒数字段。 （6）输出时使用空格分隔，例如：awk &#39;{print $1, $(NF-1)}&#39; demo.log （7）要原样输出字符，需要放在&amp;quot;&amp;ldquo;里，例如awk -F &#39;:&#39; &#39;{print &amp;quot;(&amp;quot;,$5,&amp;quot;)&amp;quot;}&#39; demo.log （8）变量NR表示当前处理的是第几行，可以输出当前行数awk -F &#39;:&#39; &#39;{print NR &amp;quot;):(&amp;quot; $5 &amp;quot;)&amp;quot;}&#39; demo.log （9）awk有许多内置函数，例如转换大小写，详情见本文函数 （10）awk允许指定输出条件，可正则可根据行列计算等，非常重要 （11）awk提供判断语句（if else）
+awk是什么 awk是处理文本文件的一个应用程序，几乎所有 Linux 系统都自带这个程序。
+它依次处理文件的每一行，并读取里面的每一个字段。对于日志、CSV 那样的每行格式相同的文本文件，awk可能是最方便的工具。
+awk语法 awk [选项参数] &amp;#39;script&amp;#39; var=value file(s) #或 awk [选项参数] -f scriptfile var=value file(s) #或者可以解释为： #awk 动作 文件名 示例：</description>
     </item>
     
     <item>
@@ -536,12 +584,76 @@ group_name:password:GID:user_list 当password为x时表示密码不可见，如�
     </item>
     
     <item>
+      <title>c语言基础介绍</title>
+      <link>https://laurel-he.github.io/corc&#43;&#43;/c/01basic/</link>
+      <pubDate>Wed, 04 Sep 2019 16:34:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/corc&#43;&#43;/c/01basic/</guid>
+      <description>本系列来自于中国大学MOOC的 程序设计入门C语言 学习视频总结
+基础 学习程序设计的目的 通过学习程序设计，理解计算机如何工作，计算机擅长做什么，不擅长做什么。
+计算机如何解决问题？ 告诉计算机的步骤，它会一步一步地去做。告诉计算机How to do而不是what to do
+编程语言的作用 编程语言的作用是，写下要计算机做事的步骤，让计算机去做。
+计算机懂什么语言？ 16进制数字组成的机器码，
+示例： 利用辗转相除法计算两个数的最大公约数： int u = 32; int v = 26; while (v != 0) { int temp = u % v; u = v; v = temp; } printf(&amp;#34;%d&amp;#34;, u); 计算机语言:计算机可以理解的语言，人几乎无法看懂 程序：程序员能够理解的语言 算法：描述成普通人可以理解的语言 要让计算机做的事情都是计算，我们要做的是把计算的步骤找到告诉计算机，计算的步骤叫做算法。
+计算机的思维方式 枚举，二分法。。。
+计算机如何执行程序？ 解释：一步一步将代码解释给计算机 编译：先有一个程序，把程序翻译出来，直接用翻译后的程序去执行 对于计算机的编程语言来说，语言本身没有解释和编译的区分的，任何语言都是既可以编译执行也可以解释执行， 只是有的习惯不同，例如C语言一般是编译执行，但是也可以使用解释器。
+C语言优点 为什么选择C语言： 使用范围广，做操作系统，嵌入式系统几乎没有其他选择，现代的编程语言在语法上的差异很小，基本都和C语言接近 针对各种应用的库可以完成大量工作，一般说某种语言厉害是因为它有更合适的库。 高效性，可移植性，功能丰富，面向程序员，灵活性
+简单历史 指针是C语言的灵魂，发展自B语言。
+线上开发环境 暂时采用codeBlocks(教程中使用的是dev C++，但是个人感觉界面太丑)</description>
+    </item>
+    
+    <item>
+      <title>开始编程</title>
+      <link>https://laurel-he.github.io/corc&#43;&#43;/c/02first/</link>
+      <pubDate>Wed, 04 Sep 2019 16:34:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/corc&#43;&#43;/c/02first/</guid>
+      <description>本系列来自于中国大学MOOC的 程序设计入门C语言 学习视频总结
+第一个程序 #include &amp;lt;stdio.h&amp;gt; int main(int argc, char ** argv) { printf(&amp;#34;Hello Word\n&amp;#34;); int i = 0; scanf(&amp;#34;%d&amp;#34;, &amp;amp;i); printf(&amp;#34;The res is: %d&amp;#34;, i + 10); return 0; } 程序的框架就是：
+#include &amp;lt;stdio.h&amp;gt;int main(){return 0;}换行和空格不意味着任何问题。 编程工具我使用的是codeblocks，原课件中推荐的是Dev C++,但个人试用后觉得没有codeBlocks好看，实际上，vscode是不错的选择！但是vscode需要单独安装gcc</description>
+    </item>
+    
+    <item>
       <title>react单元测试</title>
       <link>https://laurel-he.github.io/frontend/react/reactunit/</link>
       <pubDate>Mon, 29 Jul 2019 10:40:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/frontend/react/reactunit/</guid>
       <description>测试 ESLint 代码检查（分析JavaScript代码）,JSHint和JSLint是用于分析JavaScript代码的原生工具，并且可以为用户提供格式化代码的反馈意见；</description>
+    </item>
+    
+    <item>
+      <title>mysql必知必会学习笔记-2-检索数据</title>
+      <link>https://laurel-he.github.io/database/mysql/mysqlmustknown_02/</link>
+      <pubDate>Wed, 03 Apr 2019 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/database/mysql/mysqlmustknown_02/</guid>
+      <description>select语句 -- 简单的查询 select prod_name from ta_name; -- 查询几个列 select prod_id, prod_name from tb_name; -- 查询所有列，一般不建议，检索不需要的列通常会降低检索和应用程序的性能 select * from tb_name; -- 只返回不同的值 select distinct xxx_id from tb_name; -- 返回前5行 select prod_name from tb_name limit 5; -- 限制开始行和行数，例如从第3行开始，返回5行 select prod_name from tb_name limit 3,5; -- 从Mysql5开始，从第3行返回5行可以写作： select prod_mame from tb_name limit 5 OFFSET 3; 注意事项 （1）在原书中有这么一段话：
+ 不能部分使用DISTINCT。DISTINCT关键字应用于所有列而 不仅是前置它的列。如果给出SELECT DISTINCT vend_id, prod_price，除非指定的两个列都不同，否则所有行都将被 检索出来
+ 我自己建表试过，翻译一下就是，一般来说DISTINCT用于单列的去重，当用于多列的时候，当这两个列的值完全一样时会被去重，当其中一个值或者以上不同时，不会被去重。
+（2）第一行是行0, limit 1,1实际上返回的是第2行数据。带一个值的返回的是第0行，也就是人眼看到的第一行的数据。
+排序检索数据 关系数据库设计理论认为，如果不明确规定排序顺序，则不应该假定检索出的数据的顺序有意义。
+示例：</description>
+    </item>
+    
+    <item>
+      <title>mysql必知必会学习笔记-1-基础概念</title>
+      <link>https://laurel-he.github.io/database/mysql/mysqlmustknown_01/</link>
+      <pubDate>Tue, 02 Apr 2019 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/database/mysql/mysqlmustknown_01/</guid>
+      <description>基础复习 本书大概通读了一遍，内容几乎都是我知道或者学过的，但是我依然想再详细阅读一遍，并且跟着书中的示例来实际操作下，打牢基础。以下是学习笔记。
+概念 定义 数据库 数据库是用来保存有组织的数据的容器
+表 某种特定类型数据的结构化清单（在类似mongodb等nosql数据库中，表的类型和字段都不是固定的）
+列 表中的一个字段，所有的表都是由一个或多个列组成的
+数据类型 所容许的数据类型，每个表列都有相应的数据类型，它限制或容许改列中存储的数据
+行 表中的一条记录
+主键 一列（或一组列），其值能够唯一区分表中的每一行 主键建议 （1）不更新主键列中的值 （2）不重用组件列的值 （3）不在主键列中使用可能会更改的值
+模式 关于数据库和表的布局及特性的信息。
+分类 DBMS分为两种，一类为基于共享文件系统的DBMS，另一类为基于客户机—服务器的DBMS。
+客户机-服务器 与数据文件打交道的只有服务器软件。关于数据、数据添加、删除 和数据更新的所有请求都由服务器软件完成。这些请求或更改来自运行 客户机软件的计算机。客户机是与用户打交道的软件。例如，如果你请 求一个按字母顺序列出的产品表，则客户机软件通过网络提交该请求给 服务器软件。服务器软件处理这个请求，根据需要过滤、丢弃和排序数 据；然后把结果送回到你的客户机软件。
+使用 mysql命令行连接参数 经常使用的参数:
+   参数 解释     u 用户名   h host   P 端口号   p 密码    一些基础命令 -- 选择数据库 use db_name; -- 查看所有数据库 show databases; -- 查看所有表 SHOW TABLES; -- 显示表列 SHOW COLUMNS FROM tb_name; desc tb_name; describe tb_name; -- 显示广泛的服务器状态信息 SHOW STATUS; -- 显示创建数据库的信息 show create database db_name; -- 显示创建表的信息 show create table tb_name; -- 显示授权用户的安全权限 SHOW GRANTS; -- 显示服务器错误或警告信息 show errors; show warnings; -- 显示允许使用的show语句 help show; </description>
     </item>
     
     <item>

@@ -19,37 +19,6 @@ SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffer
     </item>
     
     <item>
-      <title>c语言基础介绍</title>
-      <link>https://laurel-he.github.io/corc&#43;&#43;/c/01basic/</link>
-      <pubDate>Sat, 04 Sep 2021 16:34:10 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/corc&#43;&#43;/c/01basic/</guid>
-      <description>本系列来自于中国大学MOOC的 程序设计入门C语言 学习视频总结
-基础 学习程序设计的目的 通过学习程序设计，理解计算机如何工作，计算机擅长做什么，不擅长做什么。
-计算机如何解决问题？ 告诉计算机的步骤，它会一步一步地去做。告诉计算机How to do而不是what to do
-编程语言的作用 编程语言的作用是，写下要计算机做事的步骤，让计算机去做。
-计算机懂什么语言？ 16进制数字组成的机器码，
-示例： 利用辗转相除法计算两个数的最大公约数： int u = 32; int v = 26; while (v != 0) { int temp = u % v; u = v; v = temp; } printf(&amp;#34;%d&amp;#34;, u); 计算机语言:计算机可以理解的语言，人几乎无法看懂 程序：程序员能够理解的语言 算法：描述成普通人可以理解的语言 要让计算机做的事情都是计算，我们要做的是把计算的步骤找到告诉计算机，计算的步骤叫做算法。
-计算机的思维方式 枚举，二分法。。。
-计算机如何执行程序？ 解释：一步一步将代码解释给计算机 编译：先有一个程序，把程序翻译出来，直接用翻译后的程序去执行 对于计算机的编程语言来说，语言本身没有解释和编译的区分的，任何语言都是既可以编译执行也可以解释执行， 只是有的习惯不同，例如C语言一般是编译执行，但是也可以使用解释器。
-C语言优点 为什么选择C语言： 使用范围广，做操作系统，嵌入式系统几乎没有其他选择，现代的编程语言在语法上的差异很小，基本都和C语言接近 针对各种应用的库可以完成大量工作，一般说某种语言厉害是因为它有更合适的库。 高效性，可移植性，功能丰富，面向程序员，灵活性
-简单历史 指针是C语言的灵魂，发展自B语言。
-线上开发环境 暂时采用codeBlocks(教程中使用的是dev C++，但是个人感觉界面太丑)</description>
-    </item>
-    
-    <item>
-      <title>开始编程</title>
-      <link>https://laurel-he.github.io/corc&#43;&#43;/c/02first/</link>
-      <pubDate>Sat, 04 Sep 2021 16:34:10 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/corc&#43;&#43;/c/02first/</guid>
-      <description>本系列来自于中国大学MOOC的 程序设计入门C语言 学习视频总结
-第一个程序 #include &amp;lt;stdio.h&amp;gt; int main(int argc, char ** argv) { printf(&amp;#34;Hello Word\n&amp;#34;); int i = 0; scanf(&amp;#34;%d&amp;#34;, &amp;amp;i); printf(&amp;#34;The res is: %d&amp;#34;, i + 10); return 0; } 程序的框架就是：
-#include &amp;lt;stdio.h&amp;gt;int main(){return 0;}换行和空格不意味着任何问题。
-浮点数 float</description>
-    </item>
-    
-    <item>
       <title>表达式</title>
       <link>https://laurel-he.github.io/corc&#43;&#43;/c/03expression/</link>
       <pubDate>Sat, 04 Sep 2021 16:34:10 +0000</pubDate>
@@ -226,6 +195,36 @@ C语言优点 为什么选择C语言： 使用范围广，做操作系统，嵌�
 a.创建一个命令接口： 接口定义接口名称，需要实现的操作名称，命令模式需要的操作为执行命令，后续可根据不同的命令来实现这个接口和执行命令方法。
 &amp;lt;?php abstract class Nodes { public function execute(){} } ?&amp;gt;b.创建一个请求类 定义拥有的请求方法 本例中操作有： （1）列出所有nodes: kubectl get node （2）删除节点：kubectl delete node $nodeName （3）查看对应node上的pods信息: kubectl get pods -o wide | grep $nodeName （4）在删除的node3对应的服务器上执行：kubeadm reset
 &amp;lt;?php class K8s { public function getNodes() { return &amp;#39;kubectl get node&amp;#39;; } public function delNodes($nodeName) { return &amp;#34;kubectl delete node $nodeName&amp;#34;; } } ?</description>
+    </item>
+    
+    <item>
+      <title>c语言基础介绍</title>
+      <link>https://laurel-he.github.io/corc&#43;&#43;/c/01basic/</link>
+      <pubDate>Wed, 04 Sep 2019 16:34:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/corc&#43;&#43;/c/01basic/</guid>
+      <description>本系列来自于中国大学MOOC的 程序设计入门C语言 学习视频总结
+基础 学习程序设计的目的 通过学习程序设计，理解计算机如何工作，计算机擅长做什么，不擅长做什么。
+计算机如何解决问题？ 告诉计算机的步骤，它会一步一步地去做。告诉计算机How to do而不是what to do
+编程语言的作用 编程语言的作用是，写下要计算机做事的步骤，让计算机去做。
+计算机懂什么语言？ 16进制数字组成的机器码，
+示例： 利用辗转相除法计算两个数的最大公约数： int u = 32; int v = 26; while (v != 0) { int temp = u % v; u = v; v = temp; } printf(&amp;#34;%d&amp;#34;, u); 计算机语言:计算机可以理解的语言，人几乎无法看懂 程序：程序员能够理解的语言 算法：描述成普通人可以理解的语言 要让计算机做的事情都是计算，我们要做的是把计算的步骤找到告诉计算机，计算的步骤叫做算法。
+计算机的思维方式 枚举，二分法。。。
+计算机如何执行程序？ 解释：一步一步将代码解释给计算机 编译：先有一个程序，把程序翻译出来，直接用翻译后的程序去执行 对于计算机的编程语言来说，语言本身没有解释和编译的区分的，任何语言都是既可以编译执行也可以解释执行， 只是有的习惯不同，例如C语言一般是编译执行，但是也可以使用解释器。
+C语言优点 为什么选择C语言： 使用范围广，做操作系统，嵌入式系统几乎没有其他选择，现代的编程语言在语法上的差异很小，基本都和C语言接近 针对各种应用的库可以完成大量工作，一般说某种语言厉害是因为它有更合适的库。 高效性，可移植性，功能丰富，面向程序员，灵活性
+简单历史 指针是C语言的灵魂，发展自B语言。
+线上开发环境 暂时采用codeBlocks(教程中使用的是dev C++，但是个人感觉界面太丑)</description>
+    </item>
+    
+    <item>
+      <title>开始编程</title>
+      <link>https://laurel-he.github.io/corc&#43;&#43;/c/02first/</link>
+      <pubDate>Wed, 04 Sep 2019 16:34:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/corc&#43;&#43;/c/02first/</guid>
+      <description>本系列来自于中国大学MOOC的 程序设计入门C语言 学习视频总结
+第一个程序 #include &amp;lt;stdio.h&amp;gt; int main(int argc, char ** argv) { printf(&amp;#34;Hello Word\n&amp;#34;); int i = 0; scanf(&amp;#34;%d&amp;#34;, &amp;amp;i); printf(&amp;#34;The res is: %d&amp;#34;, i + 10); return 0; } 程序的框架就是：
+#include &amp;lt;stdio.h&amp;gt;int main(){return 0;}换行和空格不意味着任何问题。 编程工具我使用的是codeblocks，原课件中推荐的是Dev C++,但个人试用后觉得没有codeBlocks好看，实际上，vscode是不错的选择！但是vscode需要单独安装gcc</description>
     </item>
     
     <item>

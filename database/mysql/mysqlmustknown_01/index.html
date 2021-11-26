@@ -1,104 +1,59 @@
-<!DOCTYPE html>
+	
+	<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>mysql必知必会学习笔记-1-基础概念</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.87.0" />
-  <link href="" rel="alternate" type="application/rss+xml" title="" />
-  <link href="https://laurel-he.github.io//css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://laurel-he.github.io//css/hc.css" rel="stylesheet">
-  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-  
+  <head>
+    <title>ALEXFINN - mysql必知必会学习笔记-1-基础概念</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
     
-    </head>
-    <body>
-<div class="nav-toggle"><i class="fa fa-bars fa-2x"></i> Herring Cove </div>
-      <div id = "wrapper">
+    <link href="/css/milk.min.css" rel="stylesheet">
+    <link href="/css/milk-responsive.min.css" rel="stylesheet">     
+    <link href="/css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/fonts.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="shortcut icon" href="/images/alexfinn.ico">
+    <link rel="apple-touch-icon" href="">
+    <link rel="canonical" href="https://laurel-he.github.io/database/mysql/mysqlmustknown_01/">
 
+    
+    <link href="/rss.xml" type="application/atom+xml" rel="alternate" title="">
 
-<div class="navbar navbar-default" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a href="https://laurel-he.github.io//"><p class="navbar-brand"></p></a>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-					
-					
-					<li><a href="https://laurel-he.github.io//python/">Python </a></li>
-					
-					<li><a href="https://laurel-he.github.io//post/">主页 </a></li>
-					
-					<li><a href="https://laurel-he.github.io//categories/">分类 </a></li>
-					
-					<li><a href="https://laurel-he.github.io//acm/">刷题 </a></li>
-					
-					<li><a href="https://laurel-he.github.io//database/">数据库 </a></li>
-					
-					<li><a href="https://laurel-he.github.io//datastruct/">数据结构 </a></li>
-					
-					<li><a href="https://laurel-he.github.io//tags/">标签 </a></li>
-					
-					<li><a href="https://laurel-he.github.io//designpattern/">设计模式 </a></li>
-					
-          </ul>
-        </div>
-      </div>
+  </head>
+  <body>
+    <div class="navbar navbar-fixed-top">
+  <div id="navbar-inner">
+    <div id="logo">
+       <a href=""><img src="/images/letter-a.png" width="100px"></img></a>
     </div>
+  </div>
+</div>
 
 
-
-       
-       <div id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-					<img src="/images/avatar.jpg" />
-          <li class="sidebar-brand"><a href="https://laurel-he.github.io//"><h1 class="brand"></h1></a><h3></h3></li>
-          <hr />
-					
-						<li><a href="https://laurel-he.github.io//python/">Python </a></li>
-					
-						<li><a href="https://laurel-he.github.io//post/">主页 </a></li>
-					
-						<li><a href="https://laurel-he.github.io//categories/">分类 </a></li>
-					
-						<li><a href="https://laurel-he.github.io//acm/">刷题 </a></li>
-					
-						<li><a href="https://laurel-he.github.io//database/">数据库 </a></li>
-					
-						<li><a href="https://laurel-he.github.io//datastruct/">数据结构 </a></li>
-					
-						<li><a href="https://laurel-he.github.io//tags/">标签 </a></li>
-					
-						<li><a href="https://laurel-he.github.io//designpattern/">设计模式 </a></li>
-					
-          <hr />
-          <div id="social-wrapper">
-           
-           
-           
-           
-         </div>
-       </ul>
-     </div>
+<div class="container">
+  <div class="content">
+    <div class="row-fluid">
+      <div class="span12">
+        <div class="posts">
 
 
-
-     <div class="container">
-
-
-  <div id="article">
-   <div class="article-title">mysql必知必会学习笔记-1-基础概念</div>
-   <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> 2021-04-02</small></p> <hr/>
-   <div class="post">
-     <h2 id="概念">概念</h2>
+	    
+	  <div class="post">
+	    <header class="post-header">
+	        <h1><a href="/database/mysql/mysqlmustknown_01/">mysql必知必会学习笔记-1-基础概念</a></h1>
+	        <div class="post-time">April 2 2019</div>
+	    </header>
+	    <div class="post-after">
+	        <div class="tags">
+	            
+	                <a href="https://laurel-he.github.io//tags/%E5%AD%A6%E4%B9%A0">学习</a>
+	            
+	        </div>
+	    </div>
+	    <hr>
+	    <div class="post content">
+	        <h1 id="基础复习">基础复习</h1>
+<p>本书大概通读了一遍，内容几乎都是我知道或者学过的，但是我依然想再详细阅读一遍，并且跟着书中的示例来实际操作下，打牢基础。以下是学习笔记。</p>
+<h2 id="概念">概念</h2>
 <h3 id="定义">定义</h3>
 <h4 id="数据库">数据库</h4>
 <p>数据库是用来保存有组织的数据的容器</p>
@@ -107,16 +62,27 @@
 <h4 id="列">列</h4>
 <p>表中的一个字段，所有的表都是由一个或多个列组成的</p>
 <h4 id="数据类型">数据类型</h4>
-<p>所容许的数据类型，每个表列都有
-相应的数据类型，它限制或容许改列中存储的数据</p>
+<p>所容许的数据类型，每个表列都有相应的数据类型，它限制或容许改列中存储的数据</p>
 <h4 id="行">行</h4>
-<p>表中的一个记录</p>
+<p>表中的一条记录</p>
 <h4 id="主键">主键</h4>
 <p>一列（或一组列），其值能够唯一区分表中的每一行
 <strong>主键建议</strong>
 （1）不更新主键列中的值 <br>
 （2）不重用组件列的值 <br>
 （3）不在主键列中使用可能会更改的值</p>
+<h4 id="模式">模式</h4>
+<p>关于数据库和表的布局及特性的信息。</p>
+<h3 id="分类">分类</h3>
+<p>DBMS分为两种，一类为基于共享文件系统的DBMS，另一类为基于客户机—服务器的DBMS。</p>
+<h4 id="客户机-服务器">客户机-服务器</h4>
+<p>与数据文件打交道的只有服务器软件。关于数据、数据添加、删除
+和数据更新的所有请求都由服务器软件完成。这些请求或更改来自运行
+客户机软件的计算机。客户机是与用户打交道的软件。例如，如果你请
+求一个按字母顺序列出的产品表，则客户机软件通过网络提交该请求给
+服务器软件。服务器软件处理这个请求，根据需要过滤、丢弃和排序数
+据；然后把结果送回到你的客户机软件。</p>
+<h3 id="使用">使用</h3>
 <h4 id="mysql命令行连接参数">mysql命令行连接参数</h4>
 <p>经常使用的参数:</p>
 <table>
@@ -145,33 +111,67 @@
 </tr>
 </tbody>
 </table>
-
-   </div>
- </div>
-
-
- <a href="https://github.com/laurel-he" class="twitter-share-button " data-size="small" data-count="none">Git hub</a>
- <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-
- <ul class="pager">
-      &nbsp;<li class="previous"><a href="https://laurel-he.github.io/acm/leetcode/1175primesort/"> 1175. 质数排列</a></li>
-      &nbsp;<li class="next"><a href="https://laurel-he.github.io/datastruct/datastruct_01/"> 数据结构学习笔记-1</a></li>
-</ul>
-
-
-
-    </ul>
+<h4 id="一些基础命令">一些基础命令</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#75715e">-- 选择数据库
+</span><span style="color:#75715e"></span>use db_name;
+<span style="color:#75715e">-- 查看所有数据库
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">show</span> databases;
+<span style="color:#75715e">-- 查看所有表
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">SHOW</span> TABLES;
+<span style="color:#75715e">-- 显示表列
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">SHOW</span> COLUMNS <span style="color:#66d9ef">FROM</span> tb_name;
+<span style="color:#66d9ef">desc</span> tb_name;
+<span style="color:#66d9ef">describe</span> tb_name;
+<span style="color:#75715e">-- 显示广泛的服务器状态信息
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">SHOW</span> STATUS;
+<span style="color:#75715e">-- 显示创建数据库的信息
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">show</span> <span style="color:#66d9ef">create</span> <span style="color:#66d9ef">database</span> db_name;
+<span style="color:#75715e">-- 显示创建表的信息
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">show</span> <span style="color:#66d9ef">create</span> <span style="color:#66d9ef">table</span> tb_name;
+<span style="color:#75715e">-- 显示授权用户的安全权限
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">SHOW</span> GRANTS;
+<span style="color:#75715e">-- 显示服务器错误或警告信息
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">show</span> errors;
+<span style="color:#66d9ef">show</span> warnings;
+<span style="color:#75715e">-- 显示允许使用的show语句
+</span><span style="color:#75715e"></span>help <span style="color:#66d9ef">show</span>;
+</code></pre></div>
+	    </div>
+	    
+	<div class="about">
+	<p> 
+     
+    </p>
+</div>
+		<nav id="pagination">
+			<a class="prev" href="https://laurel-he.github.io/database/mongo/mongo1/">Prev</a>
+			<a class="next" href="https://laurel-he.github.io/database/mysql/mysqlindex/">Next</a>
+		</nav>
+	
+		        <footer>
+		        	Built with <a href="https://github.com/spf13/hugo">Hugo</a>
+		        	<p>© Alexander Feller 2018</p>
+		        </footer>
+		    </div>
+		  </div>
+		</div>
+      </div>
     </div>
-    <footer>
-
-        <p class="text-muted credit">&copy; 2021. All rights reserved. </p>
-    </footer>
- 
-    <script src="https://laurel-he.github.io//js/jquery-1.10.2.min.js"></script>
-    <script src="https://laurel-he.github.io//js/bootstrap.min.js"></script>
-    <script src="https://laurel-he.github.io//js/bootstrap.js"></script>
-    <script type="text/javascript" src="https://laurel-he.github.io//js/hc.js"></script>
 </body>
+
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u=(("https:" == document.location.protocol) ? "https" : "http") + ":change-me";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 4]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
+    g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+
 
 </html>
 

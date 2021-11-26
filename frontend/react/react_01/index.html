@@ -1,104 +1,55 @@
-<!DOCTYPE html>
+	
+	<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>react学习-es6基础特性</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.87.0" />
-  <link href="" rel="alternate" type="application/rss+xml" title="" />
-  <link href="https://laurel-he.github.io//css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://laurel-he.github.io//css/hc.css" rel="stylesheet">
-  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-  
+  <head>
+    <title>ALEXFINN - react学习-es6基础特性</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
     
-    </head>
-    <body>
-<div class="nav-toggle"><i class="fa fa-bars fa-2x"></i> Herring Cove </div>
-      <div id = "wrapper">
+    <link href="/css/milk.min.css" rel="stylesheet">
+    <link href="/css/milk-responsive.min.css" rel="stylesheet">     
+    <link href="/css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/fonts.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="shortcut icon" href="/images/alexfinn.ico">
+    <link rel="apple-touch-icon" href="">
+    <link rel="canonical" href="https://laurel-he.github.io/frontend/react/react_01/">
 
+    
+    <link href="/rss.xml" type="application/atom+xml" rel="alternate" title="">
 
-<div class="navbar navbar-default" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a href="https://laurel-he.github.io//"><p class="navbar-brand"></p></a>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-					
-					
-					<li><a href="https://laurel-he.github.io//python/">Python </a></li>
-					
-					<li><a href="https://laurel-he.github.io//post/">主页 </a></li>
-					
-					<li><a href="https://laurel-he.github.io//categories/">分类 </a></li>
-					
-					<li><a href="https://laurel-he.github.io//acm/">刷题 </a></li>
-					
-					<li><a href="https://laurel-he.github.io//database/">数据库 </a></li>
-					
-					<li><a href="https://laurel-he.github.io//datastruct/">数据结构 </a></li>
-					
-					<li><a href="https://laurel-he.github.io//tags/">标签 </a></li>
-					
-					<li><a href="https://laurel-he.github.io//designpattern/">设计模式 </a></li>
-					
-          </ul>
-        </div>
-      </div>
+  </head>
+  <body>
+    <div class="navbar navbar-fixed-top">
+  <div id="navbar-inner">
+    <div id="logo">
+       <a href=""><img src="/images/letter-a.png" width="100px"></img></a>
     </div>
+  </div>
+</div>
 
 
-
-       
-       <div id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-					<img src="/images/avatar.jpg" />
-          <li class="sidebar-brand"><a href="https://laurel-he.github.io//"><h1 class="brand"></h1></a><h3></h3></li>
-          <hr />
-					
-						<li><a href="https://laurel-he.github.io//python/">Python </a></li>
-					
-						<li><a href="https://laurel-he.github.io//post/">主页 </a></li>
-					
-						<li><a href="https://laurel-he.github.io//categories/">分类 </a></li>
-					
-						<li><a href="https://laurel-he.github.io//acm/">刷题 </a></li>
-					
-						<li><a href="https://laurel-he.github.io//database/">数据库 </a></li>
-					
-						<li><a href="https://laurel-he.github.io//datastruct/">数据结构 </a></li>
-					
-						<li><a href="https://laurel-he.github.io//tags/">标签 </a></li>
-					
-						<li><a href="https://laurel-he.github.io//designpattern/">设计模式 </a></li>
-					
-          <hr />
-          <div id="social-wrapper">
-           
-           
-           
-           
-         </div>
-       </ul>
-     </div>
+<div class="container">
+  <div class="content">
+    <div class="row-fluid">
+      <div class="span12">
+        <div class="posts">
 
 
-
-     <div class="container">
-
-
-  <div id="article">
-   <div class="article-title">react学习-es6基础特性</div>
-   <p class="meta"><small>&nbsp;<i class="fa fa-calendar-o"></i> 2019-07-08</small></p> <hr/>
-   <div class="post">
-     <h1 id="react学习手册">react学习手册</h1>
+	    
+	  <div class="post">
+	    <header class="post-header">
+	        <h1><a href="/frontend/react/react_01/">react学习-es6基础特性</a></h1>
+	        <div class="post-time">July 8 2019</div>
+	    </header>
+	    <div class="post-after">
+	        <div class="tags">
+	            
+	        </div>
+	    </div>
+	    <hr>
+	    <div class="post content">
+	        <h1 id="react学习手册">react学习手册</h1>
 <h2 id="新特性">新特性</h2>
 <p>1 react开发者工具：react developer tools，可以查看网站react元素 <br>
 2 yarn进行依赖管理：yarn.lock文件，可以使用yarn install安装，npm install yarn,yarn add [package-name],yarn remove [package-name]</p>
@@ -333,32 +284,42 @@ ES6规范的javascript为模块提供了支持，javascript模块可以存储在
 CommonJs是所有版本的node.js都支持的模块模式。用户可以通过Babel和webpack使用，导出使用module.export; <br>
 CommonJs不支持imporr语句，使用require进行模块导入</p>
 
-   </div>
- </div>
-
-
- <a href="https://github.com/laurel-he" class="twitter-share-button " data-size="small" data-count="none">Git hub</a>
- <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-
- <ul class="pager">
-      &nbsp;<li class="previous"><a href="https://laurel-he.github.io/designpattern/others/basic/"> 设计模式基础</a></li>
-      &nbsp;<li class="next"><a href="https://laurel-he.github.io/frontend/react/react_02/"> react学习-javascript函数式编程</a></li>
-</ul>
-
-
-
-    </ul>
+	    </div>
+	    
+	<div class="about">
+	<p> 
+     
+    </p>
+</div>
+		<nav id="pagination">
+			<a class="prev" href="https://laurel-he.github.io/frontend/react/react_02/">Prev</a>
+			<a class="next" href="https://laurel-he.github.io/designpattern/others/basic/">Next</a>
+		</nav>
+	
+		        <footer>
+		        	Built with <a href="https://github.com/spf13/hugo">Hugo</a>
+		        	<p>© Alexander Feller 2018</p>
+		        </footer>
+		    </div>
+		  </div>
+		</div>
+      </div>
     </div>
-    <footer>
-
-        <p class="text-muted credit">&copy; 2021. All rights reserved. </p>
-    </footer>
- 
-    <script src="https://laurel-he.github.io//js/jquery-1.10.2.min.js"></script>
-    <script src="https://laurel-he.github.io//js/bootstrap.min.js"></script>
-    <script src="https://laurel-he.github.io//js/bootstrap.js"></script>
-    <script type="text/javascript" src="https://laurel-he.github.io//js/hc.js"></script>
 </body>
+
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u=(("https:" == document.location.protocol) ? "https" : "http") + ":change-me";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 4]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
+    g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+
 
 </html>
 

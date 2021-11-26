@@ -41,6 +41,33 @@ Linux下的中断 #include &amp;lt;stdlib.h&amp;gt;#include &amp;lt;stdio.h&amp;
     </item>
     
     <item>
+      <title>操作系统（清华大学）1-概述</title>
+      <link>https://laurel-he.github.io/operatingsystem/singhuaopsys_01/</link>
+      <pubDate>Tue, 20 Jul 2021 16:34:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/operatingsystem/singhuaopsys_01/</guid>
+      <description>教学内容 操作系统的实现 操作系统软件的结构 中断及系统调用 内存管理 进程和线程 处理机调度 进程间通信（同步互斥） 文件系统：组织文件，方便用户的读写查找 I/O子系统：上万种的差异设备连到同一个系统中 什么是操作系统？ 没有公认的精确定义
+定义 1 操作系统是一个控制程序，一个系统软件
+2 操作系统是一个资源管理器
+操作系统软件的组成 Shell&amp;ndash;命令行接口 GUI&amp;ndash;图形用户接口：直接操作，所见即所得
+操作系统内核特征 并发 共享 虚拟 异步
+ 批处理系统：顺序执行，速度提升 多道系统：提高效率，多道程序交替执行 分时系统：交替执行，时钟中断（暂停当前进程的执行）</description>
+    </item>
+    
+    <item>
+      <title>awk</title>
+      <link>https://laurel-he.github.io/operatingsystem/linux/awk/</link>
+      <pubDate>Thu, 27 Feb 2020 18:00:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/operatingsystem/linux/awk/</guid>
+      <description>参考文档： awk 入门教程 Linux awk命令
+知识点 （1）-F指定分隔符，例如：awk -F &#39;:&#39; &#39;{print $1}&#39; demo.log （2）$0代表当前行，即所有内容，例如：awk &#39;{print $0}&#39; demo.log将会输出demo.log的所有内容 （3）$ + 数字表示某个字段，例如$2,$3分别表示第2第3个字段，也可以理解为列 （4）变量NF表示当前行有多少个字段，因此$NF就代表最后一个字段。例如：awk &#39;{print $NF}&#39; demo.log （5）$(NF-1)代表倒数第二个字段，即NF-数字代表倒数字段。 （6）输出时使用空格分隔，例如：awk &#39;{print $1, $(NF-1)}&#39; demo.log （7）要原样输出字符，需要放在&amp;quot;&amp;ldquo;里，例如awk -F &#39;:&#39; &#39;{print &amp;quot;(&amp;quot;,$5,&amp;quot;)&amp;quot;}&#39; demo.log （8）变量NR表示当前处理的是第几行，可以输出当前行数awk -F &#39;:&#39; &#39;{print NR &amp;quot;):(&amp;quot; $5 &amp;quot;)&amp;quot;}&#39; demo.log （9）awk有许多内置函数，例如转换大小写，详情见本文函数 （10）awk允许指定输出条件，可正则可根据行列计算等，非常重要 （11）awk提供判断语句（if else）
+awk是什么 awk是处理文本文件的一个应用程序，几乎所有 Linux 系统都自带这个程序。
+它依次处理文件的每一行，并读取里面的每一个字段。对于日志、CSV 那样的每行格式相同的文本文件，awk可能是最方便的工具。
+awk语法 awk [选项参数] &amp;#39;script&amp;#39; var=value file(s) #或 awk [选项参数] -f scriptfile var=value file(s) #或者可以解释为： #awk 动作 文件名 示例：</description>
+    </item>
+    
+    <item>
       <title>linux命令大全</title>
       <link>https://laurel-he.github.io/operatingsystem/linuxuse/</link>
       <pubDate>Thu, 27 Feb 2020 18:00:00 +0000</pubDate>
@@ -93,6 +120,33 @@ group_name:password:GID:user_list 当password为x时表示密码不可见，如�
 ctrl + f 屏幕向下移动一页 ctrl + b 向上移动一页 ctrl + d 向下移动半页 ctrl + u 向上移动半页 &amp;lsquo;+&amp;rsquo; 光标移动到非空格符的下一行 &amp;lsquo;-&amp;rsquo; 光标移动到非空格符的 n[space] n表示数字，光标向右移动n个字符 0或[Home] 移动到这一行最开始的字符处 $或[End] 移动到这一行的最后面字符处 H 移动到这个屏幕最上方一行的第一个字符 M 移动到这个屏幕中央一行的第一个字符 L 移动到这个屏幕最下方一行的第一个字符 G 移动到这个文件的最后一行 nG(:n) 移动到这个文件的第n行 gg(1G) 移动到第一行 n[Enter] n为数字，表示向下移动n行
 查找与替换 /word 光标之下寻找名为word的字符串 ?word 光标之上寻找名为word的字符串 n 重复前一个查找的操作 N 反向进行前一个查找操作 :n1,n2s/word1/word2/g n1和n2是数字，在n1和n2行之间查找所有word,替换成word2 :1,$s/word1/word2/g :1,$s/word1/word2/gc c代表confirm,替换前显示确认信息
 删除复制与粘贴 x 向后删除 X 向前删除 nx 向后删除n个字符 dd 删除（剪切）光标所在一整行 ndd 删除向下n行 d1G 删除光标所在到第一行的数据 dG 删除光标所在到最后一行的数据 d$ 删除光标所在处，到该行最后一个字符 d0 yy 复制该行 nyy y1G yG y0 y$ p 将已复制的数据在光标下一行粘贴 P 上一行 J 光标所在行与下一行数据结合成同一行 c 重复删除多个数据(10cj代表向下删除10行)删除后切换到编辑模式 u 回复 ctrl+r 重做 .</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://laurel-he.github.io/operatingsystem/linux/grep/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/operatingsystem/linux/grep/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://laurel-he.github.io/operatingsystem/linux/ps/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/operatingsystem/linux/ps/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://laurel-he.github.io/operatingsystem/linux/sed/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/operatingsystem/linux/sed/</guid>
+      <description></description>
     </item>
     
   </channel>

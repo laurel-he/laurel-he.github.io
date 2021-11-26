@@ -1,0 +1,348 @@
+	
+	<!doctype html>
+<html lang="en">
+  <head>
+    <title>ALEXFINN - (2)go基础学习-基本使用</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+    
+    <link href="/css/milk.min.css" rel="stylesheet">
+    <link href="/css/milk-responsive.min.css" rel="stylesheet">     
+    <link href="/css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/fonts.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="shortcut icon" href="/images/alexfinn.ico">
+    <link rel="apple-touch-icon" href="">
+    <link rel="canonical" href="https://laurel-he.github.io/go/basic/basicuse/">
+
+    
+    <link href="/rss.xml" type="application/atom+xml" rel="alternate" title="">
+
+  </head>
+  <body>
+    <div class="navbar navbar-fixed-top">
+  <div id="navbar-inner">
+    <div id="logo">
+       <a href=""><img src="/images/letter-a.png" width="100px"></img></a>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="content">
+    <div class="row-fluid">
+      <div class="span12">
+        <div class="posts">
+
+
+	    
+	  <div class="post">
+	    <header class="post-header">
+	        <h1><a href="/go/basic/basicuse/">(2)go基础学习-基本使用</a></h1>
+	        <div class="post-time">August 27 2021</div>
+	    </header>
+	    <div class="post-after">
+	        <div class="tags">
+	            
+	                <a href="https://laurel-he.github.io//tags/%E5%AD%A6%E4%B9%A0">学习</a>
+	            
+	        </div>
+	    </div>
+	    <hr>
+	    <div class="post content">
+	        <p>参考文档： <br>
+<a href="https://www.topgoer.com/">go文档</a> <br>
+<a href="https://www.runoob.com/go/go-tutorial.html">Go 语言教程</a></p>
+<h1 id="简单的go语言程序">简单的go语言程序</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">age</span>, <span style="color:#a6e22e">name</span> <span style="color:#66d9ef">string</span> = <span style="color:#e6db74">&#34;18&#34;</span>, <span style="color:#e6db74">&#34;Joe&#34;</span>
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">res</span> = <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Sprintf</span>(<span style="color:#e6db74">&#34;my name is %s, and my age is %s&#34;</span>, <span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">age</span>)
+    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">res</span>)
+}
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">init</span>() {
+    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;test init&#34;</span>)
+}
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">varTest</span>() {
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">funcName</span>, <span style="color:#a6e22e">funcTime</span> <span style="color:#66d9ef">string</span> = <span style="color:#e6db74">&#34;varTest&#34;</span>, <span style="color:#e6db74">&#34;now&#34;</span>
+    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">funcName</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">funcTime</span>)
+}
+</code></pre></div><p>使用go run来执行 <br>
+使用go build 来生成二进制文件</p>
+<h1 id="go语言结构">go语言结构</h1>
+<p>go语言的基础组成部分如下：</p>
+<h2 id="包声明">包声明</h2>
+<h3 id="示例">示例</h3>
+<pre><code>package main
+</code></pre><h3 id="解释">解释</h3>
+<p>第一行代码 package main 定义了包名。
+必须在源文件中非注释的第一行指明这个文件属于哪个包，如：package main。
+package main表示一个可独立执行的程序，每个 Go 应用程序都包含一个名为 main 的包</p>
+<h2 id="引入包">引入包</h2>
+<pre><code>import &quot;fmt&quot;
+</code></pre><p>import &ldquo;fmt&rdquo; 告诉 Go 编译器这个程序需要使用 fmt 包（的函数，或其他元素），fmt 包实现了格式化 IO（输入/输出）的函数。</p>
+<h2 id="函数">函数</h2>
+<pre><code>func main() {
+  fmt.Println(&quot;&quot;)
+}
+</code></pre><p>”{“不能单独放在一行 <br>
+func main() 是程序开始执行的函数。
+main 函数是每一个可执行程序所必须包含的，一般来说都是在启动后第一个执行的函数（如果有 init() 函数则会先执行该函数）</p>
+<h2 id="变量">变量</h2>
+<pre><code>var name = 'Test Name'
+</code></pre><h2 id="语句--表达式">语句 &amp; 表达式</h2>
+<p>%d 表示整型数字，%s 表示字符串</p>
+<pre><code>var target_url=fmt.Sprintf(url,stockcode,enddate)
+fmt.Println(target_url)
+</code></pre><h2 id="注释">注释</h2>
+<p>/<em>&hellip;</em>/ 是注释，在程序执行时将被忽略。
+单行注释是最常见的注释形式，你可以在任何地方使用以 // 开头的单行注释。
+多行注释也叫块注释，均已以 /* 开头，并以 */ 结尾，且不可以嵌套使用，多行注释一般用于包的文档描述或注释成块的代码片段</p>
+<h2 id="标识符">标识符</h2>
+<p>当标识符（包括常量、变量、类型、函数名、结构字段等等）以一个大写字母开头，如：Group1，
+那么使用这种形式的标识符的对象就可以被外部包的代码所使用（客户端程序需要先导入这个包），
+这被称为导出（像面向对象语言中的 public）；标识符如果以小写字母开头，则对包外是不可见的，但是他们在整个包的内部是可见并且可用的（像面向对象语言中的 protected ）</p>
+<h1 id="数据类型">数据类型</h1>
+<h2 id="布尔型">布尔型</h2>
+<p>布尔型的值只可以是常量 true 或者 false</p>
+<h2 id="数字类型">数字类型</h2>
+<p>整型 int 和浮点型 float32、float64，Go 语言支持整型和浮点型数字，并且支持复数，其中位的运算采用补码。</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>uint8</td>
+<td>无符号 8 位整型 (0 到 255)</td>
+</tr>
+<tr>
+<td>uint16</td>
+<td>无符号 16 位整型 (0 到 65535)</td>
+</tr>
+<tr>
+<td>uint32</td>
+<td>无符号 32 位整型 (0 到 4294967295)</td>
+</tr>
+<tr>
+<td>uint64</td>
+<td>无符号 64 位整型 (0 到 18446744073709551615)</td>
+</tr>
+<tr>
+<td>int8</td>
+<td>有符号 8 位整型 (-128 到 127)</td>
+</tr>
+<tr>
+<td>int16</td>
+<td>有符号 16 位整型 (-32768 到 32767)</td>
+</tr>
+<tr>
+<td>int32</td>
+<td>有符号 32 位整型 (-2147483648 到 2147483647)</td>
+</tr>
+<tr>
+<td>int64</td>
+<td>有符号 64 位整型 (-9223372036854775808 到 9223372036854775807)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="浮点型">浮点型</h3>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>float32</td>
+<td>IEEE-754 32位浮点型数</td>
+</tr>
+<tr>
+<td>float64</td>
+<td>IEEE-754 64位浮点型数</td>
+</tr>
+<tr>
+<td>complex64</td>
+<td>32 位实数和虚数</td>
+</tr>
+<tr>
+<td>complex128</td>
+<td>64 位实数和虚数</td>
+</tr>
+</tbody>
+</table>
+<h3 id="其他数字类型">其他数字类型</h3>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>byte</td>
+<td>类似 uint8</td>
+</tr>
+<tr>
+<td>rune</td>
+<td>类似 int32</td>
+</tr>
+<tr>
+<td>uint</td>
+<td>32 或 64 位</td>
+</tr>
+<tr>
+<td>int</td>
+<td>与 uint 一样大小</td>
+</tr>
+<tr>
+<td>uintptr</td>
+<td>无符号整型，用于存放一个指针</td>
+</tr>
+</tbody>
+</table>
+<h2 id="字符串类型">字符串类型</h2>
+<p>字符串就是一串固定长度的字符连接起来的字符序列。
+Go 的字符串是由单个字节连接起来的。Go 语言的字符串的字节使用 UTF-8 编码标识 Unicode 文本。</p>
+<h2 id="派生类型">派生类型</h2>
+<p>(a) 指针类型（Pointer） <br>
+(b) 数组类型  <br>
+(c) 结构化类型(struct) <br>
+(d) Channel 类型 <br>
+(e) 函数类型 <br>
+(f) 切片类型 <br>
+(g) 接口类型（interface） <br>
+(h) Map 类型</p>
+<h1 id="go语言变量">go语言变量</h1>
+<p>一般使用var关键字声明变量：</p>
+<pre><code>var identifier type
+</code></pre><p>可以同时声明多个变量：</p>
+<pre><code>var identifier1, identifier2 type
+</code></pre><p>变量声明时如果没有设置默认值，那么默认值为0,string类型的默认值为空
+如果一个局部变量声明了但是没有使用，会报编译错误 <br>
+全局变量允许声明但不使用  <br>
+同一类型的多个变量可以声明在同一行 <br>
+如果你想要交换两个变量的值，则可以简单地使用 a, b = b, a，两个变量的类型必须是相同。 <br>
+_ 实际上是一个只写变量，你不能得到它的值。这样做是因为 Go 语言中你必须使用所有被声明的变量，但有时你并不需要使用从一个函数得到的所有返回值。</p>
+<pre><code>// 当变量已定义
+var a, b int
+var c string
+a, b, c = 3, 4, &quot;test&quot;
+//当变量未定义直接赋值
+a, b, c := 3, 4, &quot;test&quot;
+</code></pre><h2 id="常量">常量</h2>
+<p>定义格式：</p>
+<pre><code>const identifier [type] = value
+</code></pre><p>多个相同类型的声明简写为：</p>
+<pre><code>const c_name1, c_name2 = value1, value2
+</code></pre><p>常量还可用作枚举</p>
+<pre><code>const (
+    Unknown = 0
+    Female = 1
+    Male = 2
+)
+</code></pre><h3 id="iota">iota</h3>
+<p>特殊常量，可以认为是一个可以被编辑器修改的变量，示例如下：</p>
+<pre><code>hexiaojiao@MS-RWTYITLHLCWO:~/goPro/goTest$ cat iotaTest.go
+package main
+
+import &quot;fmt&quot;
+
+func main() {
+    const (
+        a = iota //iota
+        b
+        c
+        d
+        e = &quot;tete&quot;
+        f
+        g = 100
+        h
+        i
+        j = iota
+        k
+        l
+    )
+    fmt.Println(a, b, c, d, e, f, g, h, i, j, k, l)
+}
+// 0 1 2 3 tete tete 100 100 100 9 10 11
+</code></pre><p>特殊示例：</p>
+<pre><code>package main
+
+import &quot;fmt&quot;
+const (
+    i=1&lt;&lt;iota
+    j=3&lt;&lt;iota
+    k
+    l
+)
+
+func main() {
+    fmt.Println(&quot;i=&quot;,i)
+    fmt.Println(&quot;j=&quot;,j)
+    fmt.Println(&quot;k=&quot;,k)
+    fmt.Println(&quot;l=&quot;,l)
+}
+/**
+i= 1
+j= 6
+k= 12
+l= 24
+解析：
+i = 1 &lt;&lt; 0
+j = 3 &lt;&lt; 1
+k = 3 &lt;&lt; 2
+l = 3 &lt;&lt; 3
+**/
+</code></pre>
+	    </div>
+	    
+	<div class="about">
+	<p> 
+     
+    </p>
+</div>
+		<nav id="pagination">
+			<a class="prev" href="https://laurel-he.github.io/go/basic/basic/">Prev</a>
+			<a class="next" href="https://laurel-he.github.io/go/gin/basic/">Next</a>
+		</nav>
+	
+		        <footer>
+		        	Built with <a href="https://github.com/spf13/hugo">Hugo</a>
+		        	<p>© Alexander Feller 2018</p>
+		        </footer>
+		    </div>
+		  </div>
+		</div>
+      </div>
+    </div>
+</body>
+
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u=(("https:" == document.location.protocol) ? "https" : "http") + ":change-me";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 4]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
+    g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+
+
+</html>
+
