@@ -1,26 +1,23 @@
 <!DOCTYPE html>
-<html >
+<html lang="en" >
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="" />
+    <meta name="author" content="贺小娇" />
 	
 	
 	
-	<title>命令模式 ｜ </title>
+	<title>命令模式 ｜ 贺小娇的个人博客</title>
 	
     
     
-    <meta name="description" content="基础概念 基础介绍 （1）概念介绍： 命令模式（Command Pattern）是一种数据驱动的设计模式，它属于行为型模式。请求以命令的形式包裹在对象中，并传给调用对象。调用对象寻找可以处理该命令的合适的对象，并把该命令传给相应的对象，该对象执行命令。 （2）概念解析： 命令模式将一个请求封装成一个对象，从而可用不同的请求对客户进行参数化，对请求排队或记录请求日志，以及支持可撤销的操作。
-使用场景 在某些场合下，需要对行为进行&amp;quot;记录、撤销/重做、事务&amp;quot;等处理，需要将&amp;quot;行为请求者&amp;quot;与&amp;quot;行为实现者&amp;quot;解耦，将一组行为抽象为对象，可以实现二者之间的松耦合。认为是命令的地方都可以使用命令模式，比如： 1、GUI 中每一个按钮都是一条命令。 2、模拟 CMD。
-关键术语 （1）received：真正的命令执行对象 （2）Command：命令 （3）invoker：使用命令对象的入口
-实现步骤 以下以后台k8s删除node节点命令为例
-a.创建一个命令接口： 接口定义接口名称，需要实现的操作名称，命令模式需要的操作为执行命令，后续可根据不同的命令来实现这个接口和执行命令方法。
-&amp;lt;?php abstract class Nodes { public function execute(){} } ?&amp;gt;b.创建一个请求类 定义拥有的请求方法 本例中操作有： （1）列出所有nodes: kubectl get node （2）删除节点：kubectl delete node $nodeName （3）查看对应node上的pods信息: kubectl get pods -o wide | grep $nodeName （4）在删除的node3对应的服务器上执行：kubeadm reset
-&amp;lt;?php class K8s { public function getNodes() { return &amp;#39;kubectl get node&amp;#39;; } public function delNodes($nodeName) { return &amp;#34;kubectl delete node $nodeName&amp;#34;; } } ?" />
+    <meta name="description" content="基础概念 基础介绍 （1）概念介绍： 命令模式（Command Pattern）是一种数据驱动的设计模式，它属于行为型模式。请求以命令的形式包裹在对象中，并传给调用对象。调用对象寻找可以处理该命令的合适的对象" />
     
 
+    
+    
+    <meta name="keywords" content="Hugo, blog, php" />
     
 
 	
@@ -43,6 +40,22 @@ a.创建一个命令接口： 接口定义接口名称，需要实现的操作�
     <div class="site_nav" id="site_nav">
         <ul>
             
+            <li>
+                <a href="/">主页</a>
+            </li>
+            
+            <li>
+                <a href="/posts/">Archive</a>
+            </li>
+            
+            <li>
+                <a href="/tags/">Tags</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
         </ul>
     </div>
     <div class="menu_icon">
@@ -54,13 +67,31 @@ a.创建一个命令接口： 接口定义接口名称，需要实现的操作�
         <div class="site_title">
             <h1>
                 <a href="https://laurel-he.github.io/">
-                    <span></span>
+                    <span>贺小娇的个人博客</span>
                 </a>
             </h1>
         </div>
         <div class="description">
-            <p class="sub_title"></p>
+            <p class="sub_title">the summary of my programing life</p>
             <div class="my_socials">
+                
+                
+                <a href="%20" title="facebook" target="_blank"><i class="ri-facebook-fill"></i></a>
+                
+                
+                
+                <a href="https://github.com/laurel-he" title="github" target="_blank"><i class="ri-github-fill"></i></a>
+                
+                
+                
+                <a href="%20" title="instagram" target="_blank"><i class="ri-instagram-fill"></i></a>
+                
+                
+                
+                
+                
+                <a href="%20" title="weibo" target="_blank"><i class="ri-weibo-fill"></i></a>
+                
                 
                 <a href="https://laurel-he.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
                         class="ri-rss-fill"></i></a>
@@ -91,11 +122,11 @@ a.创建一个命令接口： 接口定义接口名称，需要实现的操作�
 <p>以下以后台k8s删除node节点命令为例</p>
 <h3 id="a创建一个命令接口">a.创建一个命令接口：</h3>
 <p>接口定义接口名称，需要实现的操作名称，命令模式需要的操作为执行命令，后续可根据不同的命令来实现这个接口和执行命令方法。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-<span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Nodes</span> {
-   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">execute</span>(){}
-}
-<span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
+<span class="k">abstract</span> <span class="k">class</span> <span class="nc">Nodes</span> <span class="p">{</span>
+   <span class="k">public</span> <span class="k">function</span> <span class="nf">execute</span><span class="p">(){}</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span><span class="err">
 </span></code></pre></div><h3 id="b创建一个请求类">b.创建一个请求类</h3>
 <p>定义拥有的请求方法     <br>
 本例中操作有： <br>
@@ -103,85 +134,85 @@ a.创建一个命令接口： 接口定义接口名称，需要实现的操作�
 （2）删除节点：kubectl delete node $nodeName
 （3）查看对应node上的pods信息: kubectl get pods -o wide | grep $nodeName <br>
 （4）在删除的node3对应的服务器上执行：kubeadm reset</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">K8s</span> {
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getNodes</span>()
-    {
-        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;kubectl get node&#39;</span>;
-    }
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">delNodes</span>($nodeName)
-    {
-        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;kubectl delete node </span><span style="color:#e6db74">$nodeName</span><span style="color:#e6db74"> &#34;</span>;
-    }
-}
-<span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
+<span class="k">class</span> <span class="nc">K8s</span> <span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getNodes</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="s1">&#39;kubectl get node&#39;</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">delNodes</span><span class="p">(</span><span class="nv">$nodeName</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="s2">&#34;kubectl delete node </span><span class="si">$nodeName</span><span class="s2"> &#34;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span><span class="err">
 </span></code></pre></div><h3 id="c创建实现接口的实体类">c.创建实现接口的实体类</h3>
 <p>针对不同的方法实现命令接口。即实现a步骤（创建一个命令接口）所创建的接口，b中的每个请求方法都需要实现对应的实体类。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">GetNodes</span> <span style="color:#66d9ef">implements</span> <span style="color:#a6e22e">Nodes</span> {
-   <span style="color:#66d9ef">private</span> $nodes <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">K8s</span>(); 
-   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getK8s</span>()<span style="color:#f92672">:</span><span style="color:#a6e22e">K8s</span>
-   {
-       <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">empty</span>($this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">nodes</span>)) {
-           $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">nodes</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">K8s</span>();
-       }
-       <span style="color:#66d9ef">return</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">nodes</span>;
-   }
-   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">execute</span>()
-   {
-       $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getK8s</span>()<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getNodes</span>();
-   }
-}
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DelNodes</span> <span style="color:#66d9ef">implements</span> <span style="color:#a6e22e">Nodes</span> {
-   <span style="color:#66d9ef">private</span> $nodes <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">K8s</span>(); 
-   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getK8s</span>()<span style="color:#f92672">:</span><span style="color:#a6e22e">K8s</span>
-   {
-       <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">empty</span>($this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">nodes</span>)) {
-           $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">nodes</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">K8s</span>();
-       }
-       <span style="color:#66d9ef">return</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">nodes</span>;
-   }
-   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">execute</span>()
-   {
-       $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getK8s</span>()<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">delNodes</span>();
-   }
-}
-<span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
+<span class="k">class</span> <span class="nc">GetNodes</span> <span class="k">implements</span> <span class="nx">Nodes</span> <span class="p">{</span>
+   <span class="k">private</span> <span class="nv">$nodes</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">K8s</span><span class="p">();</span> 
+   <span class="k">public</span> <span class="k">function</span> <span class="nf">getK8s</span><span class="p">()</span><span class="o">:</span><span class="nx">K8s</span>
+   <span class="p">{</span>
+       <span class="k">if</span> <span class="p">(</span><span class="k">empty</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">nodes</span><span class="p">))</span> <span class="p">{</span>
+           <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">nodes</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">K8s</span><span class="p">();</span>
+       <span class="p">}</span>
+       <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">nodes</span><span class="p">;</span>
+   <span class="p">}</span>
+   <span class="k">public</span> <span class="k">function</span> <span class="nf">execute</span><span class="p">()</span>
+   <span class="p">{</span>
+       <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">getK8s</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getNodes</span><span class="p">();</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+<span class="k">class</span> <span class="nc">DelNodes</span> <span class="k">implements</span> <span class="nx">Nodes</span> <span class="p">{</span>
+   <span class="k">private</span> <span class="nv">$nodes</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">K8s</span><span class="p">();</span> 
+   <span class="k">public</span> <span class="k">function</span> <span class="nf">getK8s</span><span class="p">()</span><span class="o">:</span><span class="nx">K8s</span>
+   <span class="p">{</span>
+       <span class="k">if</span> <span class="p">(</span><span class="k">empty</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">nodes</span><span class="p">))</span> <span class="p">{</span>
+           <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">nodes</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">K8s</span><span class="p">();</span>
+       <span class="p">}</span>
+       <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">nodes</span><span class="p">;</span>
+   <span class="p">}</span>
+   <span class="k">public</span> <span class="k">function</span> <span class="nf">execute</span><span class="p">()</span>
+   <span class="p">{</span>
+       <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">getK8s</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">delNodes</span><span class="p">();</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span><span class="err">
 </span></code></pre></div><h3 id="创建命令调用类">创建命令调用类</h3>
 <p>broker,用来调用命令</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Broker</span>{
-    <span style="color:#66d9ef">private</span> $commandList <span style="color:#f92672">=</span> [];
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">addList</span>($k8s)
-    {
-        <span style="color:#a6e22e">array_push</span>($this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">commandList</span>, $k8s);
-    }
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">executeList</span>()
-    {
-        <span style="color:#66d9ef">foreach</span> ($this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">commandList</span> <span style="color:#66d9ef">as</span> $command) {
-            $command<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">execute</span>();
-        }
-    }
-}
-<span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
+<span class="k">class</span> <span class="nc">Broker</span><span class="p">{</span>
+    <span class="k">private</span> <span class="nv">$commandList</span> <span class="o">=</span> <span class="p">[];</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">addList</span><span class="p">(</span><span class="nv">$k8s</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nx">array_push</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">commandList</span><span class="p">,</span> <span class="nv">$k8s</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">executeList</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">foreach</span> <span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">commandList</span> <span class="k">as</span> <span class="nv">$command</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nv">$command</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span><span class="err">
 </span></code></pre></div><h3 id="使用broker类来接受并执行命令">使用broker类来接受并执行命令</h3>
 <p>调用broker类，根据需要（顺序，需要使用的方法等）添加一个执行队列（数组），之后再执行</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CommandUse</span>
-{
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">executeCommand</span>()
-    {
-        $getNodes <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">GetNodes</span>();
-        $delNodes <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DeleNodes</span>();
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
+<span class="k">class</span> <span class="nc">CommandUse</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">executeCommand</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="nv">$getNodes</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">GetNodes</span><span class="p">();</span>
+        <span class="nv">$delNodes</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">DeleNodes</span><span class="p">();</span>
         
-        $broker <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Broker</span>();
-        $broker<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">addList</span>($getNodes);
-        $broker<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">addList</span>($delNodes);
+        <span class="nv">$broker</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Broker</span><span class="p">();</span>
+        <span class="nv">$broker</span><span class="o">-&gt;</span><span class="na">addList</span><span class="p">(</span><span class="nv">$getNodes</span><span class="p">);</span>
+        <span class="nv">$broker</span><span class="o">-&gt;</span><span class="na">addList</span><span class="p">(</span><span class="nv">$delNodes</span><span class="p">);</span>
         
-        $broker<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">executeList</span>();
-    }
-}
-<span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
+        <span class="nv">$broker</span><span class="o">-&gt;</span><span class="na">executeList</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span><span class="err">
 </span></code></pre></div><h3 id="执行程序输出结果">执行程序输出结果</h3>
 <h2 id="命令模式的优点">命令模式的优点</h2>
 <p>（1）比较容易设计出一个命令队列 <br>
@@ -221,7 +252,7 @@ a.创建一个命令接口： 接口定义接口名称，需要实现的操作�
     </div>
 
     <div class="footer_slogan">
-        <span></span>
+        <span>My spiritual home</span>
     </div>
 </footer>
     <script src="https://laurel-he.github.io/js/jquery-3.5.1.min.js"></script>
@@ -229,6 +260,43 @@ a.创建一个命令接口： 接口定义接口名称，需要实现的操作�
 <script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
 <script src="https://laurel-he.github.io/js/zozo.js"></script>
 
+
+<script type="text/javascript" async
+    src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\[\[', '\]\]']],
+                processEscapes: true,
+                processEnvironments: true,
+                skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                TeX: {
+                    equationNumbers: { autoNumber: "AMS" },
+                    extensions: ["AMSmath.js", "AMSsymbols.js"]
+                }
+            }
+        });
+
+        MathJax.Hub.Queue(function () {
+            
+            
+            
+            var all = MathJax.Hub.getAllJax(), i;
+            for (i = 0; i < all.length; i += 1) {
+                all[i].SourceElement().parentNode.className += ' has-jax';
+            }
+        });
+    </script>
+
+<style>
+    code.has-jax {
+        font: inherit;
+        font-size: 100%;
+        background: inherit;
+        border: inherit;
+        color: #515151;
+    }
+</style>
 
 
 

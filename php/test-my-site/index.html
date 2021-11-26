@@ -1,24 +1,23 @@
 <!DOCTYPE html>
-<html >
+<html lang="en" >
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="" />
+    <meta name="author" content="贺小娇" />
 	
 	
 	
-	<title>fastadmin自定义角色组 ｜ </title>
+	<title>fastadmin自定义角色组 ｜ 贺小娇的个人博客</title>
 	
     
     
-    <meta name="description" content="之前使用fastadmin，自定义角色组，发现编辑/删除/修改等等权限可以直接权限管理中选择，然后用不同的角色登陆，会显示对应的权限按钮。此时有一个新的需求就是增加审核和批量审核，并且也增加对应的权限。
- 添加按钮 先不写功能，在对应的位置上加上审核按钮。在顶头位置的批量审核需要得到的样式如下：
- 原先的创建按钮方法为： {:build_toolbar(&amp;lsquo;refresh,edit,checkall&amp;rsquo;)} 有时候不使用buid_toolbar来创建按钮，而是直接使用的
- &amp;lt;a href=&amp;quot;javascript:;&amp;quot; class=&amp;quot;btn btn-danger btn-del btn-disabled disabled {:$auth-&amp;gt;check(&#39;course/clabelong/del&#39;)?&#39;&#39;:&#39;hide&#39;}&amp;quot;  title=&amp;quot;{:(&amp;lsquo;Delete&amp;rsquo;)}&amp;quot; &amp;gt;{:(&amp;lsquo;Delete&amp;rsquo;)} 这种方式来创建按钮，这样虽然很直观，但是实际上使用却很不方便，因为这里对于权限的判定可能是有问题的。期待的结果是直接使用build_toolbar方法，设置checkall为批量审核，check为审核方法，对于各个权限组可以直接调用。 修改build_toolbar方法到如下结果：
-function build_toolbar($btns = NULL, $attr = []) { $auth = \app\admin\library\Auth::instance(); $controller = str_replace(&#39;.&#39;, &#39;/&#39;, strtolower(think\Request::instance()-&amp;gt;controller())); $btns = $btns ? $btns : [&#39;refresh&#39;, &#39;add&#39;, &#39;edit&#39;, &#39;del&#39;, &#39;import&#39;,&#39;checkall&#39;]; $btns = is_array($btns) ? $btns : explode(&#39;,&#39;, $btns); $index = array_search(&#39;delete&#39;, $btns); if ($index !== FALSE) { $btns[$index] = &#39;del&#39;; } $btnAttr = [ &#39;refresh&#39; =&amp;gt; [&#39;javascript:;&#39;, &#39;btn btn-primary btn-refresh&#39;, &#39;fa fa-refresh&#39;, &#39;&#39;, __(&#39;Refresh&#39;)], &#39;checkall&#39;=&amp;gt; [&#39;javascript:;&#39;, &#39;btn btn-success btn-checkall btn-disabled disabled&#39;, &#39;fa fa-flag-checkered&#39;, &#39; 批量审核&#39;, &#39;批量审核&#39;], &#39;add&#39; =&amp;gt; [&#39;javascript:;&#39;, &#39;btn btn-success btn-add&#39;, &#39;fa fa-plus&#39;, __(&#39;Add&#39;), __(&#39;Add&#39;)], &#39;edit&#39; =&amp;gt; [&#39;javascript:;&#39;, &#39;btn btn-success btn-edit btn-disabled disabled&#39;, &#39;fa fa-pencil&#39;, __(&#39;Edit&#39;), __(&#39;Edit&#39;)], &#39;del&#39; =&amp;gt; [&#39;javascript:;&#39;, &#39;btn btn-danger btn-del btn-disabled disabled&#39;, &#39;fa fa-trash&#39;, __(&#39;Delete&#39;), __(&#39;Delete&#39;)], &#39;import&#39; =&amp;gt; [&#39;javascript:;&#39;, &#39;btn btn-danger btn-import&#39;, &#39;fa fa-upload&#39;, __(&#39;Import&#39;), __(&#39;Import&#39;)], ]; $btnAttr = array_merge($btnAttr, $attr); $html = []; foreach ($btns as $k =&amp;gt; $v) { //如果未定义或没有权限 if (!" />
+    <meta name="description" content="之前使用fastadmin，自定义角色组，发现编辑/删除/修改等等权限可以直接权限管理中选择，然后用不同的角色登陆，会显示对应的权限按钮。此时有一个新的需求就是增加审核和批量审核，并且也增加对应的权限" />
     
 
+    
+    
+    <meta name="keywords" content="Hugo, blog, php" />
     
 
 	
@@ -41,6 +40,22 @@ function build_toolbar($btns = NULL, $attr = []) { $auth = \app\admin\library\Au
     <div class="site_nav" id="site_nav">
         <ul>
             
+            <li>
+                <a href="/">主页</a>
+            </li>
+            
+            <li>
+                <a href="/posts/">Archive</a>
+            </li>
+            
+            <li>
+                <a href="/tags/">Tags</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
         </ul>
     </div>
     <div class="menu_icon">
@@ -52,13 +67,31 @@ function build_toolbar($btns = NULL, $attr = []) { $auth = \app\admin\library\Au
         <div class="site_title">
             <h1>
                 <a href="https://laurel-he.github.io/">
-                    <span></span>
+                    <span>贺小娇的个人博客</span>
                 </a>
             </h1>
         </div>
         <div class="description">
-            <p class="sub_title"></p>
+            <p class="sub_title">the summary of my programing life</p>
             <div class="my_socials">
+                
+                
+                <a href="%20" title="facebook" target="_blank"><i class="ri-facebook-fill"></i></a>
+                
+                
+                
+                <a href="https://github.com/laurel-he" title="github" target="_blank"><i class="ri-github-fill"></i></a>
+                
+                
+                
+                <a href="%20" title="instagram" target="_blank"><i class="ri-instagram-fill"></i></a>
+                
+                
+                
+                
+                
+                <a href="%20" title="weibo" target="_blank"><i class="ri-weibo-fill"></i></a>
+                
                 
                 <a href="https://laurel-he.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
                         class="ri-rss-fill"></i></a>
@@ -84,8 +117,8 @@ function build_toolbar($btns = NULL, $attr = []) { $auth = \app\admin\library\Au
 有时候不使用buid_toolbar来创建按钮，而是直接使用的</p>
 <pre><code> &lt;a href=&quot;javascript:;&quot; class=&quot;btn btn-danger btn-del btn-disabled disabled {:$auth-&gt;check('course/clabelong/del')?'':'hide'}&quot;
 </code></pre>
-<p>title=&quot;{:<strong>(&lsquo;Delete&rsquo;)}&quot; &gt;<!-- raw HTML omitted --><!-- raw HTML omitted -->
-{:</strong>(&lsquo;Delete&rsquo;)}<!-- raw HTML omitted --></p>
+<p>title=&quot;{:<strong>(&lsquo;Delete&rsquo;)}&quot; &gt;<i class="fa fa-trash"></i>
+{:</strong>(&lsquo;Delete&rsquo;)}</a></p>
 </blockquote>
 <p>这种方式来创建按钮，这样虽然很直观，但是实际上使用却很不方便，因为这里对于权限的判定可能是有问题的。期待的结果是直接使用build_toolbar方法，设置checkall为批量审核，check为审核方法，对于各个权限组可以直接调用。
 修改build_toolbar方法到如下结果：</p>
@@ -261,7 +294,7 @@ data-operate-checkall=&quot;{:$auth-&gt;check('course/clabelong/checkall')}&quot
     </div>
 
     <div class="footer_slogan">
-        <span></span>
+        <span>My spiritual home</span>
     </div>
 </footer>
     <script src="https://laurel-he.github.io/js/jquery-3.5.1.min.js"></script>
@@ -269,6 +302,43 @@ data-operate-checkall=&quot;{:$auth-&gt;check('course/clabelong/checkall')}&quot
 <script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
 <script src="https://laurel-he.github.io/js/zozo.js"></script>
 
+
+<script type="text/javascript" async
+    src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\[\[', '\]\]']],
+                processEscapes: true,
+                processEnvironments: true,
+                skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                TeX: {
+                    equationNumbers: { autoNumber: "AMS" },
+                    extensions: ["AMSmath.js", "AMSsymbols.js"]
+                }
+            }
+        });
+
+        MathJax.Hub.Queue(function () {
+            
+            
+            
+            var all = MathJax.Hub.getAllJax(), i;
+            for (i = 0; i < all.length; i += 1) {
+                all[i].SourceElement().parentNode.className += ' has-jax';
+            }
+        });
+    </script>
+
+<style>
+    code.has-jax {
+        font: inherit;
+        font-size: 100%;
+        background: inherit;
+        border: inherit;
+        color: #515151;
+    }
+</style>
 
 
 

@@ -1,31 +1,23 @@
 <!DOCTYPE html>
-<html >
+<html lang="en" >
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="" />
+    <meta name="author" content="贺小娇" />
 	
 	
 	
-	<title>mysql必知必会学习笔记-1-基础概念 ｜ </title>
+	<title>mysql必知必会学习笔记-1-基础概念 ｜ 贺小娇的个人博客</title>
 	
     
     
-    <meta name="description" content="基础复习 本书大概通读了一遍，内容几乎都是我知道或者学过的，但是我依然想再详细阅读一遍，并且跟着书中的示例来实际操作下，打牢基础。以下是学习笔记。
-概念 定义 数据库 数据库是用来保存有组织的数据的容器
-表 某种特定类型数据的结构化清单（在类似mongodb等nosql数据库中，表的类型和字段都不是固定的）
-列 表中的一个字段，所有的表都是由一个或多个列组成的
-数据类型 所容许的数据类型，每个表列都有相应的数据类型，它限制或容许改列中存储的数据
-行 表中的一条记录
-主键 一列（或一组列），其值能够唯一区分表中的每一行 主键建议 （1）不更新主键列中的值 （2）不重用组件列的值 （3）不在主键列中使用可能会更改的值
-模式 关于数据库和表的布局及特性的信息。
-分类 DBMS分为两种，一类为基于共享文件系统的DBMS，另一类为基于客户机—服务器的DBMS。
-客户机-服务器 与数据文件打交道的只有服务器软件。关于数据、数据添加、删除 和数据更新的所有请求都由服务器软件完成。这些请求或更改来自运行 客户机软件的计算机。客户机是与用户打交道的软件。例如，如果你请 求一个按字母顺序列出的产品表，则客户机软件通过网络提交该请求给 服务器软件。服务器软件处理这个请求，根据需要过滤、丢弃和排序数 据；然后把结果送回到你的客户机软件。
-使用 mysql命令行连接参数 经常使用的参数:
-   参数 解释     u 用户名   h host   P 端口号   p 密码    一些基础命令 -- 选择数据库 use db_name; -- 查看所有数据库 show databases; -- 查看所有表 SHOW TABLES; -- 显示表列 SHOW COLUMNS FROM tb_name; desc tb_name; describe tb_name; -- 显示广泛的服务器状态信息 SHOW STATUS; -- 显示创建数据库的信息 show create database db_name; -- 显示创建表的信息 show create table tb_name; -- 显示授权用户的安全权限 SHOW GRANTS; -- 显示服务器错误或警告信息 show errors; show warnings; -- 显示允许使用的show语句 help show; " />
+    <meta name="description" content="基础复习 本书大概通读了一遍，内容几乎都是我知道或者学过的，但是我依然想再详细阅读一遍，并且跟着书中的示例来实际操作下，打牢基础。以下是学习笔记。 概念 定义 数据库 数据库是用来保存有组织的数据的容器 表 某种特" />
     
 
+    
+    
+    <meta name="keywords" content="Hugo, blog, php" />
     
 
 	
@@ -48,6 +40,22 @@
     <div class="site_nav" id="site_nav">
         <ul>
             
+            <li>
+                <a href="/">主页</a>
+            </li>
+            
+            <li>
+                <a href="/posts/">Archive</a>
+            </li>
+            
+            <li>
+                <a href="/tags/">Tags</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
         </ul>
     </div>
     <div class="menu_icon">
@@ -59,13 +67,31 @@
         <div class="site_title">
             <h1>
                 <a href="https://laurel-he.github.io/">
-                    <span></span>
+                    <span>贺小娇的个人博客</span>
                 </a>
             </h1>
         </div>
         <div class="description">
-            <p class="sub_title"></p>
+            <p class="sub_title">the summary of my programing life</p>
             <div class="my_socials">
+                
+                
+                <a href="%20" title="facebook" target="_blank"><i class="ri-facebook-fill"></i></a>
+                
+                
+                
+                <a href="https://github.com/laurel-he" title="github" target="_blank"><i class="ri-github-fill"></i></a>
+                
+                
+                
+                <a href="%20" title="instagram" target="_blank"><i class="ri-instagram-fill"></i></a>
+                
+                
+                
+                
+                
+                <a href="%20" title="weibo" target="_blank"><i class="ri-weibo-fill"></i></a>
+                
                 
                 <a href="https://laurel-he.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
                         class="ri-rss-fill"></i></a>
@@ -141,30 +167,30 @@
 </tbody>
 </table>
 <h4 id="一些基础命令">一些基础命令</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#75715e">-- 选择数据库
-</span><span style="color:#75715e"></span>use db_name;
-<span style="color:#75715e">-- 查看所有数据库
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">show</span> databases;
-<span style="color:#75715e">-- 查看所有表
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">SHOW</span> TABLES;
-<span style="color:#75715e">-- 显示表列
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">SHOW</span> COLUMNS <span style="color:#66d9ef">FROM</span> tb_name;
-<span style="color:#66d9ef">desc</span> tb_name;
-<span style="color:#66d9ef">describe</span> tb_name;
-<span style="color:#75715e">-- 显示广泛的服务器状态信息
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">SHOW</span> STATUS;
-<span style="color:#75715e">-- 显示创建数据库的信息
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">show</span> <span style="color:#66d9ef">create</span> <span style="color:#66d9ef">database</span> db_name;
-<span style="color:#75715e">-- 显示创建表的信息
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">show</span> <span style="color:#66d9ef">create</span> <span style="color:#66d9ef">table</span> tb_name;
-<span style="color:#75715e">-- 显示授权用户的安全权限
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">SHOW</span> GRANTS;
-<span style="color:#75715e">-- 显示服务器错误或警告信息
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">show</span> errors;
-<span style="color:#66d9ef">show</span> warnings;
-<span style="color:#75715e">-- 显示允许使用的show语句
-</span><span style="color:#75715e"></span>help <span style="color:#66d9ef">show</span>;
-</code></pre></div></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="c1">-- 选择数据库
+</span><span class="c1"></span><span class="n">use</span><span class="w"> </span><span class="n">db_name</span><span class="p">;</span><span class="w">
+</span><span class="w"></span><span class="c1">-- 查看所有数据库
+</span><span class="c1"></span><span class="k">show</span><span class="w"> </span><span class="n">databases</span><span class="p">;</span><span class="w">
+</span><span class="w"></span><span class="c1">-- 查看所有表
+</span><span class="c1"></span><span class="k">SHOW</span><span class="w"> </span><span class="n">TABLES</span><span class="p">;</span><span class="w">
+</span><span class="w"></span><span class="c1">-- 显示表列
+</span><span class="c1"></span><span class="k">SHOW</span><span class="w"> </span><span class="n">COLUMNS</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">tb_name</span><span class="p">;</span><span class="w">
+</span><span class="w"></span><span class="k">desc</span><span class="w"> </span><span class="n">tb_name</span><span class="p">;</span><span class="w">
+</span><span class="w"></span><span class="k">describe</span><span class="w"> </span><span class="n">tb_name</span><span class="p">;</span><span class="w">
+</span><span class="w"></span><span class="c1">-- 显示广泛的服务器状态信息
+</span><span class="c1"></span><span class="k">SHOW</span><span class="w"> </span><span class="n">STATUS</span><span class="p">;</span><span class="w">
+</span><span class="w"></span><span class="c1">-- 显示创建数据库的信息
+</span><span class="c1"></span><span class="k">show</span><span class="w"> </span><span class="k">create</span><span class="w"> </span><span class="k">database</span><span class="w"> </span><span class="n">db_name</span><span class="p">;</span><span class="w">
+</span><span class="w"></span><span class="c1">-- 显示创建表的信息
+</span><span class="c1"></span><span class="k">show</span><span class="w"> </span><span class="k">create</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">tb_name</span><span class="p">;</span><span class="w">
+</span><span class="w"></span><span class="c1">-- 显示授权用户的安全权限
+</span><span class="c1"></span><span class="k">SHOW</span><span class="w"> </span><span class="n">GRANTS</span><span class="p">;</span><span class="w">
+</span><span class="w"></span><span class="c1">-- 显示服务器错误或警告信息
+</span><span class="c1"></span><span class="k">show</span><span class="w"> </span><span class="n">errors</span><span class="p">;</span><span class="w">
+</span><span class="w"></span><span class="k">show</span><span class="w"> </span><span class="n">warnings</span><span class="p">;</span><span class="w">
+</span><span class="w"></span><span class="c1">-- 显示允许使用的show语句
+</span><span class="c1"></span><span class="n">help</span><span class="w"> </span><span class="k">show</span><span class="p">;</span><span class="w">
+</span></code></pre></div></div>
                     <div class="post_footer">
                         
                         <div class="meta">
@@ -195,7 +221,7 @@
     </div>
 
     <div class="footer_slogan">
-        <span></span>
+        <span>My spiritual home</span>
     </div>
 </footer>
     <script src="https://laurel-he.github.io/js/jquery-3.5.1.min.js"></script>
@@ -203,6 +229,43 @@
 <script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
 <script src="https://laurel-he.github.io/js/zozo.js"></script>
 
+
+<script type="text/javascript" async
+    src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\[\[', '\]\]']],
+                processEscapes: true,
+                processEnvironments: true,
+                skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                TeX: {
+                    equationNumbers: { autoNumber: "AMS" },
+                    extensions: ["AMSmath.js", "AMSsymbols.js"]
+                }
+            }
+        });
+
+        MathJax.Hub.Queue(function () {
+            
+            
+            
+            var all = MathJax.Hub.getAllJax(), i;
+            for (i = 0; i < all.length; i += 1) {
+                all[i].SourceElement().parentNode.className += ' has-jax';
+            }
+        });
+    </script>
+
+<style>
+    code.has-jax {
+        font: inherit;
+        font-size: 100%;
+        background: inherit;
+        border: inherit;
+        color: #515151;
+    }
+</style>
 
 
 

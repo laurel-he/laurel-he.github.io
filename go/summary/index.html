@@ -1,26 +1,23 @@
 <!DOCTYPE html>
-<html >
+<html lang="en" >
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="" />
+    <meta name="author" content="贺小娇" />
 	
 	
 	
-	<title>go语言学习 ｜ </title>
+	<title>go语言学习 ｜ 贺小娇的个人博客</title>
 	
     
     
-    <meta name="description" content="参考文档： go文档 Go 语言教程
-前言 知识查漏补缺第一站，学习go语言。 我去年曾经大概看过go语言的一些语法，但并没有实际操作过，因此，这里假定我需要做一个小的电商平台，一步一步来实现。
-步骤 首先大概拆分下需求，需要做的是电商平台，确认需要以下模块： （1）商品管理 （2）用户管理 （3）订单管理 （4）物流系统
-技术选型 开发语言及框架  1(2021-11-25). 确认使用go语言开发：因为go语言目前使用较为广泛，社区支持稳定，且学习成本不高，效率高过php 目前框架未定，经调研目前较火的框架有Gin,Beego,Buffalom,Echo,Iris,Revel 很好，目前这些框架我都只知道名字，在网上查了一下各大框架的优缺点，实话说，目前我还无法做出选择，因此技术选型暂时跳过框架,待后续补充
- 数据库 基本数据库 确认使用mysql数据库：此需求数据结构稳定（订单，用户，商品）， 且mysql比较灵活，数据安全，innoDb引擎支持事务，环境搭建简单，开源； mysql有不同的存储引擎，应用场景广泛，拥有成熟的体系， 且我更擅长使用mysql
-缓存 使用redis做缓存
-队列 既然是商城，那么几乎都会涉及到秒杀等功能，那么就会有并发，就可能需要使用队列。" />
+    <meta name="description" content="参考文档： go文档 Go 语言教程 前言 知识查漏补缺第一站，学习go语言。 我去年曾经大概看过go语言的一些语法，但并没有实际操作过，因此，这里假定我需要做一个小的电商平台，一步一步来实现。 步骤 首先大概拆分下需" />
     
 
+    
+    
+    <meta name="keywords" content="Hugo, blog, php" />
     
 
 	
@@ -43,6 +40,22 @@
     <div class="site_nav" id="site_nav">
         <ul>
             
+            <li>
+                <a href="/">主页</a>
+            </li>
+            
+            <li>
+                <a href="/posts/">Archive</a>
+            </li>
+            
+            <li>
+                <a href="/tags/">Tags</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
         </ul>
     </div>
     <div class="menu_icon">
@@ -54,13 +67,31 @@
         <div class="site_title">
             <h1>
                 <a href="https://laurel-he.github.io/">
-                    <span></span>
+                    <span>贺小娇的个人博客</span>
                 </a>
             </h1>
         </div>
         <div class="description">
-            <p class="sub_title"></p>
+            <p class="sub_title">the summary of my programing life</p>
             <div class="my_socials">
+                
+                
+                <a href="%20" title="facebook" target="_blank"><i class="ri-facebook-fill"></i></a>
+                
+                
+                
+                <a href="https://github.com/laurel-he" title="github" target="_blank"><i class="ri-github-fill"></i></a>
+                
+                
+                
+                <a href="%20" title="instagram" target="_blank"><i class="ri-instagram-fill"></i></a>
+                
+                
+                
+                
+                
+                <a href="%20" title="weibo" target="_blank"><i class="ri-weibo-fill"></i></a>
+                
                 
                 <a href="https://laurel-he.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
                         class="ri-rss-fill"></i></a>
@@ -136,7 +167,7 @@ mysql有不同的存储引擎，应用场景广泛，拥有成熟的体系，
     </div>
 
     <div class="footer_slogan">
-        <span></span>
+        <span>My spiritual home</span>
     </div>
 </footer>
     <script src="https://laurel-he.github.io/js/jquery-3.5.1.min.js"></script>
@@ -144,6 +175,43 @@ mysql有不同的存储引擎，应用场景广泛，拥有成熟的体系，
 <script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
 <script src="https://laurel-he.github.io/js/zozo.js"></script>
 
+
+<script type="text/javascript" async
+    src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\[\[', '\]\]']],
+                processEscapes: true,
+                processEnvironments: true,
+                skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                TeX: {
+                    equationNumbers: { autoNumber: "AMS" },
+                    extensions: ["AMSmath.js", "AMSsymbols.js"]
+                }
+            }
+        });
+
+        MathJax.Hub.Queue(function () {
+            
+            
+            
+            var all = MathJax.Hub.getAllJax(), i;
+            for (i = 0; i < all.length; i += 1) {
+                all[i].SourceElement().parentNode.className += ' has-jax';
+            }
+        });
+    </script>
+
+<style>
+    code.has-jax {
+        font: inherit;
+        font-size: 100%;
+        background: inherit;
+        border: inherit;
+        color: #515151;
+    }
+</style>
 
 
 

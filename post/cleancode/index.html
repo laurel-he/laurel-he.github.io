@@ -1,28 +1,23 @@
 <!DOCTYPE html>
-<html >
+<html lang="en" >
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="" />
+    <meta name="author" content="贺小娇" />
 	
 	
 	
-	<title>代码整洁之道1-9章 ｜ </title>
+	<title>代码整洁之道1-9章 ｜ 贺小娇的个人博客</title>
 	
     
     
-    <meta name="description" content="提要 要有代码：代码呈现了需求的细节，将需求明确到机器可以执行的细节程度 不要产生糟糕的、混乱的代码，勒布朗法则：稍后等于永不 制造混乱无益于赶上期限，做得快的唯一方法就是始终保持代码整洁。
-好代码的特点 优雅、搞笑；代码逻辑直截了当，缺陷难以隐藏； 尽量减少依赖关系，使之便于维护； 根据某种分层战略完善处理错误代码，性能调至最优 整洁的代码力求集中，每个函数、每个类和每个模块都全神贯注于一事，完全不受四周细节的干扰和污染 整洁的代码可由作者之外的开发者阅读和增补，它应当有单元测试和验收测试 尽量使用有意义的命名，它只提供一种而非多种做一件事的途径 尽量少的依赖关系，明确地定义和提供清晰、尽量少的API
-总结 （1）能通过所有测试 （2）没有重复代码 （3）体现系统中的全部设计理念 （4）包含尽量少的实体，比如类、方法、函数等 不要重复代码，只做一件事，表达力，小规模抽象
-有意义的命名 （1）如果名称需要注释来补充，那就不算是名副其实（之前出现过争议） （2）不要使用意义含糊的废话，如果名称相同但是意义不同，那么info和data与a an the一样毫无意义，不要使用废话，varable不应出现在便能两种，table不应出现在表中 （3）使用读得出来的名称，方便阅读 （4）使用方便搜索的名称 （5）避免使用编码 （6）应当把类和函数做得足够小，消除对成员前缀的需要，读代码的人通常不会读前缀 （7）不要在类名中使用奇怪的命名 （8）不要使用双关语
-函数 （1）函数应该尽可能小，20行封顶最佳 （2）每个函数都一目了然，每个函数都只说一件事，每个函数都依次带到下一个函数 （3）函数的缩进层不应该多余一层或两层
-需要遵循的原则 （1）确保每隔switch函数都埋藏在较低的抽象层而且永远不重复 （2）不要向函数传入布尔值（我以前经常这么做），因为传入布尔值表示函数会有多余的操作 （3）使用异常代替返回错误码（错误代码能从主路径代码中分离出来得到简化） （4）抽离try/catch代码块 （5）不要重复自己
-注释 注意 注释存在的时间越久，就离它所描述的代码越远，越来越变得全然错误，因为程序员不能坚持维护注释
-必要的注释（好的注释） （1）法律信息 （2）提供信息的注释 （3）对意图的解释 （4）阐释（如果参数或返回值是某个标准库的一部分或者不能修改的代码，帮助阐释其含义的代码就会有用） （5）警示
-单元测试 " />
+    <meta name="description" content="提要 要有代码：代码呈现了需求的细节，将需求明确到机器可以执行的细节程度 不要产生糟糕的、混乱的代码，勒布朗法则：稍后等于永不 制造混乱无益于赶上期限，做得快的唯一方法就是始终保持代码整洁。 好代码的特点 优雅" />
     
 
+    
+    
+    <meta name="keywords" content="Hugo, blog, php" />
     
 
 	
@@ -45,6 +40,22 @@
     <div class="site_nav" id="site_nav">
         <ul>
             
+            <li>
+                <a href="/">主页</a>
+            </li>
+            
+            <li>
+                <a href="/posts/">Archive</a>
+            </li>
+            
+            <li>
+                <a href="/tags/">Tags</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
         </ul>
     </div>
     <div class="menu_icon">
@@ -56,13 +67,31 @@
         <div class="site_title">
             <h1>
                 <a href="https://laurel-he.github.io/">
-                    <span></span>
+                    <span>贺小娇的个人博客</span>
                 </a>
             </h1>
         </div>
         <div class="description">
-            <p class="sub_title"></p>
+            <p class="sub_title">the summary of my programing life</p>
             <div class="my_socials">
+                
+                
+                <a href="%20" title="facebook" target="_blank"><i class="ri-facebook-fill"></i></a>
+                
+                
+                
+                <a href="https://github.com/laurel-he" title="github" target="_blank"><i class="ri-github-fill"></i></a>
+                
+                
+                
+                <a href="%20" title="instagram" target="_blank"><i class="ri-instagram-fill"></i></a>
+                
+                
+                
+                
+                
+                <a href="%20" title="weibo" target="_blank"><i class="ri-weibo-fill"></i></a>
+                
                 
                 <a href="https://laurel-he.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
                         class="ri-rss-fill"></i></a>
@@ -155,7 +184,7 @@
     </div>
 
     <div class="footer_slogan">
-        <span></span>
+        <span>My spiritual home</span>
     </div>
 </footer>
     <script src="https://laurel-he.github.io/js/jquery-3.5.1.min.js"></script>
@@ -163,6 +192,43 @@
 <script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
 <script src="https://laurel-he.github.io/js/zozo.js"></script>
 
+
+<script type="text/javascript" async
+    src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\[\[', '\]\]']],
+                processEscapes: true,
+                processEnvironments: true,
+                skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                TeX: {
+                    equationNumbers: { autoNumber: "AMS" },
+                    extensions: ["AMSmath.js", "AMSsymbols.js"]
+                }
+            }
+        });
+
+        MathJax.Hub.Queue(function () {
+            
+            
+            
+            var all = MathJax.Hub.getAllJax(), i;
+            for (i = 0; i < all.length; i += 1) {
+                all[i].SourceElement().parentNode.className += ' has-jax';
+            }
+        });
+    </script>
+
+<style>
+    code.has-jax {
+        font: inherit;
+        font-size: 100%;
+        background: inherit;
+        border: inherit;
+        color: #515151;
+    }
+</style>
 
 
 

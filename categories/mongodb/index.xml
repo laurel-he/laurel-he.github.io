@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>mongodb on </title>
+    <title>mongodb on 贺小娇的个人博客</title>
     <link>https://laurel-he.github.io/categories/mongodb/</link>
-    <description>Recent content in mongodb on </description>
+    <description>Recent content in mongodb on 贺小娇的个人博客</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Sun, 20 Oct 2019 18:27:44 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/mongodb/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>mongodb学习记录</title>
@@ -12,11 +13,7 @@
       <pubDate>Sun, 20 Oct 2019 18:27:44 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/database/mongo/mongocomplex/</guid>
-      <description>参考文档 http://www.mongoing.com/docs/reference/operator/aggregation/interface.html https://www.cnblogs.com/zhoujie/p/mongo1.html https://www.docs4dev.com/docs/zh/mongodb/v3.6/reference/tutorial-text-search-in-aggregation.html
-mongodb精准匹配 假设有需求如下：数据为多层级的数组，需要精准匹配到某一个层级，并进行更新或新增等操作，如何实现？
-实现方式 当Mongodb版本大于3.6.1，实现将会非常简单，因为mongodb3.6.1以上可以直接通过语句来实现精准匹配。 但由于实际场景中版本不支持，当匹配超过一级则会报错：Too many positional (i.e. &amp;lsquo;$&#39;) elements found in path &amp;lsquo;files.$.testConstruct.params.list.$.testRange&amp;rsquo; 当版本大于3.6.1，举例：
-db.test_db.update( {&#39;_id&#39;: {$in: [&#39;1242rererwwr&#39;]}, &#39;files.name&#39;: &#39;test1.json&#39;, &#39;files.testConstruct.params.list.type&#39;: &#39;NewData&#39;}, {$set: {&#39;files.$.structuredContent.params.list.$.testRange&#39;: {&#39;enable&#39;: false, &#39;min&#39;: 14, &#39;max&#39;: 90}}, $currentDate: { updatedDatetime: true }}, { multi: true }) 分析： 设置值时，&amp;lsquo;files.$.testConstruct.params.list.$.testRange&amp;rsquo;中的第一个&amp;quot;$&amp;ldquo;将会匹配到name=test1.json的数组，第二个&amp;rdquo;$&amp;ldquo;将会匹配到files.structuredContent.params.list.type=NewData的数组 优点： 使用简单，匹配精确，无需代码判断 缺点： 适用版本有限制，且由于多级匹配需要更多的条件，而实际业务中不一定能取到这些条件（例如知道要更新的key为testRange但是不知道上级查询条件无法匹配到） 如果版本过低，可只匹配第一级，其余的通过代码匹配。 当版本小于3.6.1举例：
-&amp;lt;?php public function batchUpdateContents(string $route, array $ids, string $editor, $updateItems, bool $needPublish): bool { $routes = explode(&amp;#39;-&amp;#39;, $route); array_shift($routes); $routes[2] = self::TYPE_LIST[$routes[2]]; $updateRoute = &amp;#39;files.</description>
+      <description>参考文档 http://www.mongoing.com/docs/reference/operator/aggregation/interface.html https://www.cnblogs.com/zhoujie/p/mongo1.html https://www.docs4dev.com/docs/zh/mongodb/v3.6/reference/tutorial-text-search-in-aggregation.html mongodb精准匹配 假设有需求如下：数据为多层级的数组，需要精准匹配到某一个层级，并进行更新或新增等操作，如何实现？ 实现方式 当Mongodb版本大于3.6.1，实现将会非常简单，因为m</description>
     </item>
     
     <item>
@@ -25,7 +22,7 @@ db.test_db.update( {&#39;_id&#39;: {$in: [&#39;1242rererwwr&#39;]}, &#39;files.n
       <pubDate>Tue, 02 Apr 2019 18:27:44 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/database/mongo/mongo1/</guid>
-      <description>基础  列出所有数据库:show dbs; 列出所有表：show tables;或show collections; 查询所有数据：db.taname.find().pretty(); 查询指定列所有数据：db.tbname.find({},{col1:1,col2:2,&amp;hellip;}).pretty(); 根据条件查询所有数据：db.tbname.find({name:&amp;ldquo;test&amp;rdquo;},{col1:1,col2:1}).pretty(); 查询结果不包含指定字段：db.tbname.find({},{status:0,col2:0}).pretty();  查询 1 查询所有数据 db.tbname.find().pretty();</description>
+      <description>基础 列出所有数据库:show dbs; 列出所有表：show tables;或show collections; 查询所有数据：db.taname.find().pretty(); 查询指定列所有数据：db.tbname.find({},{</description>
     </item>
     
   </channel>

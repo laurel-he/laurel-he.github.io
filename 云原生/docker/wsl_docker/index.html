@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html >
+<html lang="en" >
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="" />
+    <meta name="author" content="贺小娇" />
 	
 	
 	
-	<title> ｜ </title>
+	<title> ｜ 贺小娇的个人博客</title>
 	
     
     
-    <meta name="description" content="wsl的ubuntu安装docker 参考文章：https://www.jianshu.com/p/a20c2d58eaac 步骤：
-（1）wsl切换到版本2  wsl --set-default-version 2 （2）查询ubuntu启动环境  wsl -l -v （3）如果 VERSION是1代表使用的WSL1  wsl --shutdown 首先关闭WSL下运行的Linux，执行： wsl --shutdown 然后执行：  wsl --set-version &amp;lt;Linux发行版名称&amp;gt; 2 发行版名称就是刚刚wsl -l -v命令显示的name
-cd \wsl$\Ubuntu-16.04\
-(1)wsl2下ubuntu docker安装 注意：这里可能会有文档中没有的报错，Package &amp;lsquo;docker-ce&amp;rsquo; has no installation candidate 可以参考此文章把docker-ce换成aliyun的镜像源:https://www.cnblogs.com/chengmf/p/13122013.html (2)dockerfile php 7.4 swoole 4.7 redis" />
+    <meta name="description" content="wsl的ubuntu安装docker 参考文章：https://www.jianshu.com/p/a20c2d58eaac 步骤： （1）wsl切换到版本2 wsl --set-default-version 2 （2）查询ubuntu启动环境 wsl -l -v （3）" />
     
 
+    
+    
+    <meta name="keywords" content="Hugo, blog, php" />
     
 
 	
@@ -40,6 +40,22 @@ cd \wsl$\Ubuntu-16.04\
     <div class="site_nav" id="site_nav">
         <ul>
             
+            <li>
+                <a href="/">主页</a>
+            </li>
+            
+            <li>
+                <a href="/posts/">Archive</a>
+            </li>
+            
+            <li>
+                <a href="/tags/">Tags</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
         </ul>
     </div>
     <div class="menu_icon">
@@ -51,13 +67,31 @@ cd \wsl$\Ubuntu-16.04\
         <div class="site_title">
             <h1>
                 <a href="https://laurel-he.github.io/">
-                    <span></span>
+                    <span>贺小娇的个人博客</span>
                 </a>
             </h1>
         </div>
         <div class="description">
-            <p class="sub_title"></p>
+            <p class="sub_title">the summary of my programing life</p>
             <div class="my_socials">
+                
+                
+                <a href="%20" title="facebook" target="_blank"><i class="ri-facebook-fill"></i></a>
+                
+                
+                
+                <a href="https://github.com/laurel-he" title="github" target="_blank"><i class="ri-github-fill"></i></a>
+                
+                
+                
+                <a href="%20" title="instagram" target="_blank"><i class="ri-instagram-fill"></i></a>
+                
+                
+                
+                
+                
+                <a href="%20" title="weibo" target="_blank"><i class="ri-weibo-fill"></i></a>
+                
                 
                 <a href="https://laurel-he.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
                         class="ri-rss-fill"></i></a>
@@ -114,7 +148,7 @@ redis</p>
     </div>
 
     <div class="footer_slogan">
-        <span></span>
+        <span>My spiritual home</span>
     </div>
 </footer>
     <script src="https://laurel-he.github.io/js/jquery-3.5.1.min.js"></script>
@@ -122,6 +156,43 @@ redis</p>
 <script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
 <script src="https://laurel-he.github.io/js/zozo.js"></script>
 
+
+<script type="text/javascript" async
+    src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\[\[', '\]\]']],
+                processEscapes: true,
+                processEnvironments: true,
+                skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                TeX: {
+                    equationNumbers: { autoNumber: "AMS" },
+                    extensions: ["AMSmath.js", "AMSsymbols.js"]
+                }
+            }
+        });
+
+        MathJax.Hub.Queue(function () {
+            
+            
+            
+            var all = MathJax.Hub.getAllJax(), i;
+            for (i = 0; i < all.length; i += 1) {
+                all[i].SourceElement().parentNode.className += ' has-jax';
+            }
+        });
+    </script>
+
+<style>
+    code.has-jax {
+        font: inherit;
+        font-size: 100%;
+        background: inherit;
+        border: inherit;
+        color: #515151;
+    }
+</style>
 
 
 

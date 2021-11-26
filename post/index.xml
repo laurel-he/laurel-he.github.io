@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on </title>
+    <title>Posts on 贺小娇的个人博客</title>
     <link>https://laurel-he.github.io/post/</link>
-    <description>Recent content in Posts on </description>
+    <description>Recent content in Posts on 贺小娇的个人博客</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Thu, 30 Sep 2021 16:34:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>laravel配置params选项如MYSQL_ATTR_USE_BUFFERED_QUERY等</title>
@@ -12,10 +13,7 @@
       <pubDate>Thu, 30 Sep 2021 16:34:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/post/laravel_err_01/</guid>
-      <description>以下内容已同步至CSDN 绝了，laravel使用的是illuminate/database作为orm，我们用的swoole，在使用过程中报了如下错误：
-SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffered queries are active. Consider using PDOStatement::fetchAll()这个错误在网上一搜就能找到解决办法，就是给pdo加上一个params,&amp;lsquo;MYSQL_ATTR_USE_BUFFERED_QUERY&amp;rsquo; =&amp;gt; true,嚯，但是laravel和illuminate/database的文档都没有说怎么加这个params。。。真就大无语事件发生。我还是不死心网上各种搜解决办法，当然是一无所获，不然也不会有这篇博客了。原本想省事偷懒的我终究还是不得不去看源码，终于让我找到了这个东西： 经过分析，这个玩意儿就是把配置中的options加载进去，虽然按照正常人的思维，这玩意儿要是叫params我直接就能试出来，根本不用看源码了的说。
-/** * Get the PDO options based on the configuration. * * @param array $config * @return array */ public function getOptions(array $config) { $options = $config[&amp;#39;options&amp;#39;] ?? []; return array_diff_key($this-&amp;gt;options, $options) + $options; } 所以说，对于使用illuminate/database的框架来说，给pdo加选项就这这样的
-&#39;default&#39; =&amp;gt; [&#39;fetch&#39; =&amp;gt; PDO::FETCH_CLASS,&#39;driver&#39; =&amp;gt; &#39;mysql&#39;,&#39;host&#39; =&amp;gt; &#39;localhost&#39;,&#39;port&#39; =&amp;gt; &#39;3306&#39;,&#39;username&#39; =&amp;gt; &#39;&#39;,&#39;password&#39; =&amp;gt; &#39;&#39;,&#39;database&#39; =&amp;gt; &#39;test&#39;,&#39;charset&#39; =&amp;gt; &#39;latin1&#39;,&#39;collation&#39; =&amp;gt; &#39;latin1_general_ci&#39;,&#39;prefix&#39; =&amp;gt; &#39;&#39;,&#39;strict&#39; =&amp;gt; false,// 数据库连接参数&#39;options&#39; =&amp;gt; [&#39;MYSQL_ATTR_USE_BUFFERED_QUERY&#39; =&amp;gt; true,],],当然，你要是想也可以直接用原生的方法pdo连接，自然就不存在什么配置不好搞的问题了</description>
+      <description>以下内容已同步至CSDN 绝了，laravel使用的是illuminate/database作为orm，我们用的swoole，在使用过程中报了如下错误： SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffered queries are active. Consider using PDOStatement::fetchAll() 这个错误在网上一搜</description>
     </item>
     
     <item>
@@ -24,14 +22,7 @@ SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffer
       <pubDate>Thu, 12 Aug 2021 16:10:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/post/hugo/</guid>
-      <description>之前个人博客是使用的hexo搭建的，经常会出各种bug，而且时不时的升级，导致npm 也要对应，因此放弃，使用hugo,hugo是基于go语言开发的。
-步骤 下载安装 非常简单，略（如果是windows需要加入环境变量）
-命令 查看版本
-hugo version下载主题存放到themes目录下，假设下载的主题叫herring，那么本地预览命令为：
-hugo server --theme=herring创建文章
-hugo new post/test.md生成静态网站
-hugo --theme=herring --baseUrl=&amp;quot;https://YOURNAME.github.io/&amp;quot;在github上创建一个YOURNAME.github.io的项目，master分支控制public目录 每次新增了要提交的文章后执行命令，提交即可
-Taxonomies </description>
+      <description>之前个人博客是使用的hexo搭建的，经常会出各种bug，而且时不时的升级，导致npm 也要对应，因此放弃，使用hugo,hugo是基于go语言开发的。 步骤 下载安装 非常简单，略（如果是windows需要加</description>
     </item>
     
     <item>
@@ -40,18 +31,7 @@ Taxonomies </description>
       <pubDate>Thu, 03 Sep 2020 16:10:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/post/total/</guid>
-      <description>目录：
-1 刷题
-2 设计模式
-3 数据库
-4 操作系统
-5 php
-6 go
-7 python
-8 前端
-9 云原生
-10 消息队列
-11 学习</description>
+      <description>目录： 1 刷题 2 设计模式 3 数据库 4 操作系统 5 php 6 go 7 python 8 前端 9 云原生 10 消息队列 11 学习</description>
     </item>
     
     <item>
@@ -60,8 +40,7 @@ Taxonomies </description>
       <pubDate>Tue, 25 Feb 2020 20:10:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/post/codecollect/</guid>
-      <description>1 计算矩形是否相交 描述 给定两个矩形的左上角起始点坐标和矩形的宽，高，计算这两个矩形是否相交 分析 1 矩形1左上角坐标p1,右下角坐标p2,矩形2左上角坐标p3,右下角坐标p4 2 M点坐标为P1与P3点在X方向较大值与Y方向较大值的交点 3 N点坐标为P2与P4点在X方向较小值与Y方向较小值的交点 4 如果M点的X坐标和Y坐标值均比N点相应的X坐标和Y坐标值小，亦即M和N可以分别构成一个矩形的左上角点和右上角点，则两矩形相交；其余情况则不相交 代码
-&amp;lt;?php function checkRectInterSect($rect1, $rect2) { $x1 = $rect1[&amp;#39;x&amp;#39;]; $w1 = $rect1[&amp;#39;w&amp;#39;]; $y1 = $rect1[&amp;#39;y&amp;#39;]; $h1 = $rect1[&amp;#39;h&amp;#39;]; $x2 = $rect2[&amp;#39;x&amp;#39;]; $w2 = $rect2[&amp;#39;w&amp;#39;]; $y2 = $rect2[&amp;#39;y&amp;#39;]; $h2 = $rect2[&amp;#39;h&amp;#39;]; $p1 = [$x1, $y1]; $p2 = [$x1 + $w1, $y1 + $h1]; $p3 = [$x2, $y2]; $p4 = [$x2 + $w2, $y2 + $h2]; $M = [max($p1[0], $p3[0]), max($p1[1], $p1[1])]; $N = [min($p2[0], $p4[0]), min($p2[1], $p4[1])]; if ($M[0] &amp;lt; $N[0] &amp;amp;&amp;amp; $M[1] &amp;lt; $N[1]) { return true; } else { return false; } } ?</description>
+      <description>1 计算矩形是否相交 描述 给定两个矩形的左上角起始点坐标和矩形的宽，高，计算这两个矩形是否相交 分析 1 矩形1左上角坐标p1,右下角坐标p2,矩形2左上角坐标p3,右下角坐标p4 2 M点坐标为P1与P3点在X方</description>
     </item>
     
     <item>
@@ -70,9 +49,7 @@ Taxonomies </description>
       <pubDate>Tue, 25 Feb 2020 20:10:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/post/codecollect2/</guid>
-      <description>1 下载数据 描述 根据链接下载文件 代码
-&amp;lt;?php function downloadOldFile($url,$rename,$ext){ $file_path = &amp;#39;public/images/age_60-120/&amp;#39;; $ch = curl_init($url); curl_setopt($ch, CURLOPT_HEADER, 0); curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); curl_setopt($ch, CURLOPT_BINARYTRANSFER, 1); $rawdata=curl_exec ($ch); curl_close ($ch); // 使用中文文件名需要转码  $fp = fopen($file_path. $rename .&amp;#34;.&amp;#34;.$ext,&amp;#39;w&amp;#39;); fwrite($fp, $rawdata); fclose($fp); // 返回路径  return $_SERVER[&amp;#39;DOCUMENT_ROOT&amp;#39;].$file_path.$rename.&amp;#34;.&amp;#34;.$ext; } ?&amp;gt;2 按步骤执行方法 描述 经常有需求：分页执行脚本，例如前1000条执行完后继续分页，此时就需要自动跳页执行 代码
-&amp;lt;?php /** * @param mixed ...$args * @return bool * @throws Exception */ private function stepRun(...$args) { $count = $args[0]; $method = $args[1]; $step = array_key_exists(2, $args) ?</description>
+      <description>1 下载数据 描述 根据链接下载文件 代码 &amp;lt;?php function downloadOldFile($url,$rename,$ext){ $file_path = &amp;#39;public/images/age_60-120/&amp;#39;; $ch = curl_init($url); curl_setopt($ch, CURLOPT_HEADER, 0); curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); curl_setopt($ch, CURLOPT_BINARYTRANSFER, 1); $rawdata=curl_exec ($ch); curl_close ($ch); // 使用中文文件名需要转码 $fp = fopen($file_path. $rename .&amp;#34;.&amp;#34;.$ext,&amp;#39;w&amp;#39;); fwrite($fp, $rawdata); fclose($fp); // 返回路径 return $_SERVER[&amp;#39;DOCUMENT_ROOT&amp;#39;].$file_path.$rename.&amp;#34;.&amp;#34;.$ext; } ?&amp;gt;2 按步骤执行方法 描述 经常有需求：分页执行脚本，例如前1000条执行</description>
     </item>
     
     <item>
@@ -81,7 +58,7 @@ Taxonomies </description>
       <pubDate>Tue, 10 Dec 2019 12:34:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/post/unittest/</guid>
-      <description>单元测试 mock 接口测试 stub mock fakeserver </description>
+      <description>单元测试 mock 接口测试 stub mock fakeserver</description>
     </item>
     
     <item>
@@ -90,15 +67,7 @@ Taxonomies </description>
       <pubDate>Mon, 07 Oct 2019 17:40:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/post/cleancode/</guid>
-      <description>提要 要有代码：代码呈现了需求的细节，将需求明确到机器可以执行的细节程度 不要产生糟糕的、混乱的代码，勒布朗法则：稍后等于永不 制造混乱无益于赶上期限，做得快的唯一方法就是始终保持代码整洁。
-好代码的特点 优雅、搞笑；代码逻辑直截了当，缺陷难以隐藏； 尽量减少依赖关系，使之便于维护； 根据某种分层战略完善处理错误代码，性能调至最优 整洁的代码力求集中，每个函数、每个类和每个模块都全神贯注于一事，完全不受四周细节的干扰和污染 整洁的代码可由作者之外的开发者阅读和增补，它应当有单元测试和验收测试 尽量使用有意义的命名，它只提供一种而非多种做一件事的途径 尽量少的依赖关系，明确地定义和提供清晰、尽量少的API
-总结 （1）能通过所有测试 （2）没有重复代码 （3）体现系统中的全部设计理念 （4）包含尽量少的实体，比如类、方法、函数等 不要重复代码，只做一件事，表达力，小规模抽象
-有意义的命名 （1）如果名称需要注释来补充，那就不算是名副其实（之前出现过争议） （2）不要使用意义含糊的废话，如果名称相同但是意义不同，那么info和data与a an the一样毫无意义，不要使用废话，varable不应出现在便能两种，table不应出现在表中 （3）使用读得出来的名称，方便阅读 （4）使用方便搜索的名称 （5）避免使用编码 （6）应当把类和函数做得足够小，消除对成员前缀的需要，读代码的人通常不会读前缀 （7）不要在类名中使用奇怪的命名 （8）不要使用双关语
-函数 （1）函数应该尽可能小，20行封顶最佳 （2）每个函数都一目了然，每个函数都只说一件事，每个函数都依次带到下一个函数 （3）函数的缩进层不应该多余一层或两层
-需要遵循的原则 （1）确保每隔switch函数都埋藏在较低的抽象层而且永远不重复 （2）不要向函数传入布尔值（我以前经常这么做），因为传入布尔值表示函数会有多余的操作 （3）使用异常代替返回错误码（错误代码能从主路径代码中分离出来得到简化） （4）抽离try/catch代码块 （5）不要重复自己
-注释 注意 注释存在的时间越久，就离它所描述的代码越远，越来越变得全然错误，因为程序员不能坚持维护注释
-必要的注释（好的注释） （1）法律信息 （2）提供信息的注释 （3）对意图的解释 （4）阐释（如果参数或返回值是某个标准库的一部分或者不能修改的代码，帮助阐释其含义的代码就会有用） （5）警示
-单元测试 </description>
+      <description>提要 要有代码：代码呈现了需求的细节，将需求明确到机器可以执行的细节程度 不要产生糟糕的、混乱的代码，勒布朗法则：稍后等于永不 制造混乱无益于赶上期限，做得快的唯一方法就是始终保持代码整洁。 好代码的特点 优雅</description>
     </item>
     
     <item>
@@ -116,41 +85,7 @@ Taxonomies </description>
       <pubDate>Sat, 05 Oct 2019 10:40:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/post/codecomplate_01/</guid>
-      <description>前期准备 前期准备的重要性 不要立即开始写代码，要做好必要的需求分析和架构设计，写好需求文档和技术文档，防止浪费时间和精力制造错误的东西
-需求核对表 针对功能需求：
-1．是否详细定义了系统的全部输入，包括其来源、精度、取值范围、出现频率等？
-2．是否详细定义了系统的全部输出，包括其目的地、精度、取值范围、出现频率格式等？
-3．是否详细定义了所有的输出格式(如：web页面、报表等)？
-4．是否详细定义了所有硬件及软件的外部接口？
-5．是否详细定义了全部外部通信接口，包括握手协议、纠错协议、通信协议等？
-6．是否列出了用户所要做的全部事情？
-7．是否详细定义了每个任务所用数据，以及每个任务得到的数据
-针对非功能需求（质量需求）
-1.是否为全部必要的操作，从用户的角度，详细描述的期望的响应时间 ？
-2.是否详细描述了其他与计时有关的考虑，如处理时间、数据传输率、系统吞吐量等？
-3.是否详细定义了安全级别
-4.是否详细定义了可靠性，包括软件失灵的后果、发生故障时需要保护的至关重要的信息、错误检查与回复的策略等？
-5.是否详细定义了机器内存和剩余硬盘空间最小值？
-6.是否详细定义了系统的可维护性，包括适应特定功能的变更、操作环境的变更、与其他软件接口变更的能力？
-7.是否包含对“成功”的定义，“失败”的定义？
-需求的质量
-  需求是用户书写的吗？
-  每条需求都不与其他需求冲突吗？
-  是否详细定义了相互竞争的特性之间的权衡
-  是否避免在需求中规定设计(方案)
-  需求是否在详细程度上保持相当一致的水平？有些需求应当更详细的描述吗？有些需求应该更粗略的描述吗？
-  需求是否足够清晰，即使转交给一个独立的小组去构建，他们也能理解吗？开发者也这么想吗？
-  每个条款都与待解决的问题及解决方案相关吗？能从每个条款上溯到它的问题中的对应跟源吗？
-  是否每条需求都是可测试的？是否可应进行独立的测试，以检验满不满足各项需求
-  是否描述了所有可能对需求的改动，包括各项改动的可能性
-  需求的完备性
-1.对于在开始开发之前无法获得信息，是否详细描述了信息不完全的区域？
-2.需求的完备度是否达到这种程度：如果产品满足所有需求，那么它就是可接受的？
-3.你对全部需求都感觉舒服吗？你是否已经去掉了那些不可能完成的需求—那些只是为了安抚客户和老板的东西？
-花费在前期准备上的时间长度 花费在问题定义，需求分析，软件架构上的时间依据项目的需要而变化，一般占据10%-20%的工作量和20%-30%的时间
-良好的类接口 类的基础是抽象数据类型（我之前大部分时候没有使用抽象，只是把相关的方法和变量定义放在了一起，实际上是不符合面向对象变成原则的），抽象数据类型是指一些数据和 对这些数据所进行操作的集合。定义抽象类有助于代码规范，提高
-创建类的原因 （1）为显示世界中的对象建模 （2）为抽象的对象建模 （3）降低复杂度 （4）隔离复杂度 （5）隐藏实现细节 （6）让代码更易重用 （7）把相关的操作包装到一起
-应当避免的类 （1）避免创建万能类 （2）消除无关紧要的类 （3）避免用动词命名的类</description>
+      <description>前期准备 前期准备的重要性 不要立即开始写代码，要做好必要的需求分析和架构设计，写好需求文档和技术文档，防止浪费时间和精力制造错误的东西 需求核对表 针对功能需求： 1．是否详细定义了系统的全部输入，包括其来源</description>
     </item>
     
     <item>
@@ -159,17 +94,7 @@ Taxonomies </description>
       <pubDate>Sun, 28 Apr 2019 14:00:40 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/post/lanp/</guid>
-      <description>1 基础软件下载 virtual box ubuntu(ubuntu server)
-2 安装ubuntu (1)virtualbox创建虚拟电脑 注意：最好重新设置virtualbox-&amp;gt;管理-&amp;gt;全局设定-&amp;gt;默认虚拟电脑位置 (2)启动，网络设置成网络地址转换(NAT) (3)重启的时候需要弹出U盘或者改变镜像位置 (4)如果提示未指定nat网络名称，管理-&amp;gt;全局设定-&amp;gt;网络-&amp;gt;nat网络（添加一条） (5)
-3 配置ssh (1)添加端口映射（例如2222-&amp;gt;22）,注意主机端口不可重复，且子系统ip不填 (2)ubuntu安装ssh
-sudo apt-get install openssh-server (3)xshell等工具连接，端口号为转发的主机端口
-4 安装php nginx Mysql (1)安装php
-sudo apt-get install php7.0 (2)安装nginx
-sudo apt-get install nginx (3)安装Mysql
-sudo apt-get install mysql-server-5.7 mysql-client-5.7 5 基础配置 (1)安装PHPFastCGI管理器 sudo apt install php7.2-fpm
-6其他tips (1)配置sudo 修改 /etc/sudoers，末尾添加一行：
-test ALL=(ALL) NOPASSWD: ALL test表示用户名； 保存退出后执行一下命令：
-sudo usermod -aG test test (2)配置共享文件夹且自启动 1 virtualbox(设置-共享文件夹-勾选固定分配(不勾选自动挂载)) 2 ubuntu创建文件夹 3 挂载共享文件夹</description>
+      <description>1 基础软件下载 virtual box ubuntu(ubuntu server) 2 安装ubuntu (1)virtualbox创建虚拟电脑 注意：最好重新设置virtualbox-&amp;gt;管理-&amp;gt;全局设定-&amp;gt;默认虚拟电脑位置 (2)启动，网络设置成网络</description>
     </item>
     
     <item>
@@ -178,10 +103,7 @@ sudo usermod -aG test test (2)配置共享文件夹且自启动 1 virtualbox(设
       <pubDate>Wed, 24 Apr 2019 21:03:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/post/git/</guid>
-      <description>新建feature/hotfix进行项目开发  更新本地代码仓库缓存 git remote update git checkout develop git merge origin/develop git branch feature/20171012_hotel_enhance
-##补充 1 删除分支 git branch &amp;ndash;delete &amp;ndash;remotes origin/feature/20190214_monthly git push origin :feature/20190214_monthly 2 add之后回退 git reset HEAD 3 撤销commit git commit &amp;ndash;amend 4 撤销已经commit但是没有push git log 找到commit id git reset &amp;ndash;hard commit_id 完成撤销,同时将代码恢复到前一commit_id 对应的版本
-git reset commit_id 完成Commit命令的撤销，但是不对代码修改进行撤销，可以直接通过git commit 重新提交对本地代码的修改
-git fetch </description>
+      <description>新建feature/hotfix进行项目开发 更新本地代码仓库缓存 git remote update git checkout develop git merge origin/develop git branch feature/20171012_hotel_enhance ##补充 1 删除分支 git branch &amp;ndash;delete &amp;ndash;remotes origin/feature/20190214_monthly git push origin :feature/20190214_monthly 2 add之后回退 git reset HEAD 3 撤销commit git commit &amp;ndash;amend 4 撤销已经commit但是没有</description>
     </item>
     
     <item>
@@ -199,12 +121,7 @@ git fetch </description>
       <pubDate>Wed, 10 Apr 2019 18:27:44 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/post/crontab/</guid>
-      <description>1 简介 crond 是linux下用来周期性的执行某种任务或等待处理某些事件的一个守护进程，与windows下的计划任务类似，当安装完成操作系统后，默认会安装此服务 工具，并且会自动启动crond进程，crond进程每分钟会定期检查是否有要执行的任务，如果有要执行的任务，则自动执行该任务。
-2 格式 minute hour day month week command
-3 操作 crontab -l:列出所有任务
-laravel 定时任务 原文路径 https://learnku.com/docs/laravel/5.4/scheduling/1257
-其他解决方式 1 supervisor 举例
-[program:finance_svcs_autoreconciliation] command=php /opt/app/nginx/html/qa6/financesvcs/artisan queue:work beanstalkd --queue=autoreconciliation_broadcast --daemon directory=/opt/app/nginx/html/qa6/financesvcs autostart=true autorestart=true user=apache numprocs=1 redirect_stderr=true stdout_logfile=/var/log/supervisor/qa1/%(program_name)s-stdout.log stdout_logfile_maxbytes=10MB stdout_logfile_backups=10  </description>
+      <description>1 简介 crond 是linux下用来周期性的执行某种任务或等待处理某些事件的一个守护进程，与windows下的计划任务类似，当安装完成操作系统后，默认会安装此服务 工具，并且会自动启动crond进程，crond进</description>
     </item>
     
     <item>
@@ -213,8 +130,7 @@ laravel 定时任务 原文路径 https://learnku.com/docs/laravel/5.4/schedulin
       <pubDate>Mon, 01 Apr 2019 11:03:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/post/hexo/</guid>
-      <description>安装 简介 Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 安装前提 node.js git 安装步骤
-npm install -g hexo-cli 建站 hexo init &amp;lt;folder&amp;gt; cd &amp;lt;folder&amp;gt; npm install 创建博客 hexo new [layout] &amp;lt;title&amp;gt; #hexo n hexo generate（或者hexo g:生成静态文件） #hexo g hexo publish [layout] &amp;lt;filename&amp;gt;（发布草稿） hexo server（启动服务器） hexo deploy（或者hexo d:部署） hexo render &amp;lt;file1&amp;gt; [file2] ...（渲染文件） hexo migrate &amp;lt;type&amp;gt;（从其他博客迁移内容） hexo clean（清除缓存文件 (db.json) 和已生成的静态文件 (public)） hexo list（列出网站资料） hexo version（显示 Hexo 版本） #部署使用hexo deploy (hexo d,需要先编译) 添加评论 可以使用gitment或者valine valine评论 gitment评论 注意事项 1 如果添加了CNAME，回调地址需要填绑定的地址 2 如果需要开启评论，除了百度能搜到的步骤以外，还需要本地安装博客评论模块 npm i &amp;ndash;save gitment 再重新hexo g -d一下 3 作者的服务器停掉了，因此需要修改js源码来源： 修改源 （也可以wget将源码下载下来后修改源到自己服务器上）</description>
+      <description>安装 简介 Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 安装前提 node.js git 安装步骤 npm install -g hexo-cli 建站 hexo init &amp;lt;folder&amp;gt; cd &amp;lt;folder&amp;gt; npm install 创建博客 hexo new</description>
     </item>
     
     <item>
@@ -223,11 +139,7 @@ npm install -g hexo-cli 建站 hexo init &amp;lt;folder&amp;gt; cd &amp;lt;folde
       <pubDate>Thu, 28 Mar 2019 14:03:27 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/post/wechat/</guid>
-      <description>wxpy 直接排除，只有极少数人的微信可以使用，无法用来实现机器人；
-图灵机器人 图灵机器人可以接入微信，也可以实现群管理，但是是通过第三方来实现的
-   功能 详解 是否必要     接入微信公众号 群自动回复 是   主动触发回复 主动往群里发送消息 是   定时发送 定时给群发送消息 是    微群管家 图灵机器人推荐的微信个人号接入第三方插件，但只有windows版本可用，不适用于mac版本开发，但可以实现自定义开发，文档比较全面且免费，可以作为备选方案 功能介绍：
-   功能 详解 是否必要     关键词自动回复 群自动回复 是   主动触发回复 主动往群里发送消息 是   定时发送 定时给群发送消息 是    收费情况如下：
-   产品 功能 价格     &amp;mdash; &amp;mdash; 免费    建议：建议使用微群管家，免费</description>
+      <description>wxpy 直接排除，只有极少数人的微信可以使用，无法用来实现机器人； 图灵机器人 图灵机器人可以接入微信，也可以实现群管理，但是是通过第三方来实现的 功能 详解 是否必要 接入微信公众号 群自动回复 是 主动触发回复 主动往群里</description>
     </item>
     
     <item>
@@ -236,9 +148,7 @@ npm install -g hexo-cli 建站 hexo init &amp;lt;folder&amp;gt; cd &amp;lt;folde
       <pubDate>Tue, 05 Mar 2019 13:25:21 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/post/hotkey/</guid>
-      <description>navicat for mysql 快捷键 1.ctrl+q 打开查询窗口 2.ctrl+/ 注释sql语句 3.ctrl+shift +/ 解除注释 4.ctrl+r 运行查询窗口的sql语句 5.ctrl+shift+r 只运行选中的sql语句 6.F6 打开一个mysql命令行窗口 7.ctrl+l 删除一行 8.ctrl+n 打开一个新的查询窗口 9.ctrl+w 关闭一个查询窗口
-phpstrom快捷键 编辑
-   快捷键 作用     Ctrl + Space 代码自动完成（一般与输入法冲突）   Ctrl + Shift + Enter 智能完善代码（如:if()）   Ctrl + P 方法参数提示，显示默认参数   Ctrl + Q 显示注释代码   Ctrl + mouse over code 查看到简短的函数介绍   Ctrl + F1 显示错误或警告信息的描述（需要把光标放到错误或警告位置）   Alt + Insert 生成代码段（ 包括函数或类注释，版权信息，构造方法，抽象方法等）   Ctrl + O 插入覆盖父类的方法   Ctrl + I 实现抽象方法   Ctrl + Alt + T 选中的代码放在if.</description>
+      <description>navicat for mysql 快捷键 1.ctrl+q 打开查询窗口 2.ctrl+/ 注释sql语句 3.ctrl+shift +/ 解除注释 4.ctrl+r 运行查询窗口的sql语句 5.ctrl+shift+r 只运行选中的sql语句 6.F6 打开一个mysql命令行窗口 7.ctrl+l 删除一行 8.ctrl+n 打开一个新的查询窗口 9.ctrl+w 关闭一个查询窗口 phpstrom</description>
     </item>
     
     <item>
@@ -247,10 +157,7 @@ phpstrom快捷键 编辑
       <pubDate>Thu, 28 Feb 2019 11:03:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/post/hbase_01/</guid>
-      <description>Hbase基础命令 启动和停止Hbase 启动 hbase/bin ./start-hbase.sh 关闭 hbase/bin ./stop-hbase.sh
-使用Hbase 连接Hbase bin/hbase shell 创建表 create &amp;lsquo;test&amp;rsquo; （创建表需要添加列簇） create &amp;lsquo;表名&amp;rsquo; &amp;lsquo;列簇名1&amp;rsquo; &amp;lsquo;列簇名2&amp;rsquo; …… 添加数据 put &amp;lsquo;表名&amp;rsquo; &amp;lsquo;行名&amp;rsquo; &amp;lsquo;列簇名称&amp;rsquo; &amp;lsquo;value&amp;rsquo;（当列簇只有一列） put &amp;lsquo;表名&amp;rsquo; &amp;lsquo;行名&amp;rsquo; &amp;lsquo;列簇名称：列名称&amp;rsquo; &amp;lsquo;value&amp;rsquo; 查看表 list: 查看所有表 list &amp;lsquo;tablename&amp;rsquo; ： 查看表名为tablename的表 删除表 disable &amp;lsquo;表名&amp;rsquo;(对应enable &amp;lsquo;明白&amp;rsquo;) drop &amp;lsquo;表名&amp;rsquo;
-配置 ####基础配置 conf/hbase-site.xml
-注意事项 （1）表名，行，列都必须用引号括起来 {% plantuml %} {% endplantuml %}</description>
+      <description>Hbase基础命令 启动和停止Hbase 启动 hbase/bin ./start-hbase.sh 关闭 hbase/bin ./stop-hbase.sh 使用Hbase 连接Hbase bin/hbase shell 创建表 create &amp;lsquo;test&amp;rsquo; （创建表需要添加列簇） create &amp;lsquo;表名&amp;rsquo; &amp;lsquo;列簇名1&amp;rsquo; &amp;lsquo</description>
     </item>
     
     <item>
@@ -259,7 +166,7 @@ phpstrom快捷键 编辑
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/post/yii/</guid>
-      <description>yii 框架 </description>
+      <description>yii 框架</description>
     </item>
     
   </channel>

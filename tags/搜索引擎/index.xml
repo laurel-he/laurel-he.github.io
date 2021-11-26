@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>搜索引擎 on </title>
+    <title>搜索引擎 on 贺小娇的个人博客</title>
     <link>https://laurel-he.github.io/tags/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/</link>
-    <description>Recent content in 搜索引擎 on </description>
+    <description>Recent content in 搜索引擎 on 贺小娇的个人博客</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Sat, 20 Nov 2021 18:27:44 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/tags/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>php下es基本使用</title>
@@ -12,11 +13,7 @@
       <pubDate>Sat, 20 Nov 2021 18:27:44 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/database/es/basic/</guid>
-      <description>本文参考文档: es7.3文档 全文搜索引擎 Elasticsearch 入门教程
-基础介绍 全文搜索属于最常见的需求，开源的 Elasticsearch是目前全文搜索引擎的首选。它可以快速地储存、搜索和分析海量数据。
-安装 不同环境下安装方式不同，可以采用下载安装包，apt-get，yum安装等各种方法，在wsl下linux安装需要注意，wsl下的Linux系统没有使用systemd，可以尝试用SysV init的命令代替systemd，或者安装systemd命令 安装完后直接执行curl localhost:9200可以获取到es基本信息，例如我执行后结果如下：
-{ &amp;#34;name&amp;#34; : &amp;#34;MS-RWTYITLHLCWO&amp;#34;, &amp;#34;cluster_name&amp;#34; : &amp;#34;elasticsearch&amp;#34;, &amp;#34;cluster_uuid&amp;#34; : &amp;#34;j9WVJcIFRq6bEa3bwXCARA&amp;#34;, &amp;#34;version&amp;#34; : { &amp;#34;number&amp;#34; : &amp;#34;7.15.2&amp;#34;, &amp;#34;build_flavor&amp;#34; : &amp;#34;default&amp;#34;, &amp;#34;build_type&amp;#34; : &amp;#34;deb&amp;#34;, &amp;#34;build_hash&amp;#34; : &amp;#34;93d5a7f6192e8a1a12e154a2b81bf6fa7309da0c&amp;#34;, &amp;#34;build_date&amp;#34; : &amp;#34;2021-11-04T14:04:42.515624022Z&amp;#34;, &amp;#34;build_snapshot&amp;#34; : false, &amp;#34;lucene_version&amp;#34; : &amp;#34;8.9.0&amp;#34;, &amp;#34;minimum_wire_compatibility_version&amp;#34; : &amp;#34;6.8.0&amp;#34;, &amp;#34;minimum_index_compatibility_version&amp;#34; : &amp;#34;6.0.0-beta1&amp;#34; }, &amp;#34;tagline&amp;#34; : &amp;#34;You Know, for Search&amp;#34; } 使用 引入包 正常通过Restful API方式使用在各个文档中都有详细介绍，在此省略，说一下在php中如何使用。 在laravel或yii2等主流框架中都有自己使用es的包，例如yiisoft/yii2-elasticsearch或basemkhirat/elasticsearch等等，但假设使用的是自研框架呢？ 目前我使用的是基于swoole开发的自研框架，引入了elasticsearch/elasticsearch包，在composer require elasticsearch/elasticsearch时，会自动根据php版本引入包
-配置 连接池 </description>
+      <description>本文参考文档: es7.3文档 全文搜索引擎 Elasticsearch 入门教程 基础介绍 全文搜索属于最常见的需求，开源的 Elasticsearch是目前全文搜索引擎的首选。它可以快速地储存、搜索和分析海量数据。 安装 不同环境下安装方</description>
     </item>
     
   </channel>

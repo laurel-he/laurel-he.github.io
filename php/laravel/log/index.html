@@ -1,22 +1,23 @@
 <!DOCTYPE html>
-<html >
+<html lang="en" >
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="" />
+    <meta name="author" content="贺小娇" />
 	
 	
 	
-	<title>Laravel 日志系统 ｜ </title>
+	<title>Laravel 日志系统 ｜ 贺小娇的个人博客</title>
 	
     
     
-    <meta name="description" content="1 （自己摸索版本）5.2 1 定义路径 .env配置文件添加日志路径，例如
-LOG_PATH=/tmp/paytest 2 启动文件添加日志路径 $app-&amp;gt;configureMonologUsing(function($logger){ $logger-&amp;gt;pushHandler(new \Monolog\Handler\RotatingFileHandler(env(&amp;#39;LOG_PATH&amp;#39;).&amp;#39;.log&amp;#39;), 10); return $logger; }); 2 官方文档 1 异常处理 介绍 当您启动一个新的 Laravel 项目时，错误和异常处理就已为您配置。 应用程序触发的所有异常都被 App\Exceptions\Handler 类记录下来，然后渲染给用户。 我们将在本文档中深入介绍此类。 配置 （1）config/app.php 文件的 debug 选项，决定了是否向用户显示错误信息。默认情况下，此选项设置为存储在 .env 文件中的 APP_DEBUG 环境变量中。 （2）Laravel 支持 single 、daily 、 syslog 和 errorlog 日志模式。要配置 Laravel 使用的存储机制，应该修改 config/app.php 配置文件中的 log 选项。例如，如果您希望使用每日一个日志文件而不是单个文件，则应将 app 配置文件中的 log 值设置为 daily 日志等级 使用 Monolog 时，日志消息可能具有不同的日志等级。默认情况下，Laravel 将所有日志级别写入存储。但是，在生产环境中，您可能希望通过将 log_level 选项添加到 app.php 配置文件中来配置应记录的最低日志等级。
-一旦配置了此选项，Laravel 将记录大于或等于指定日志等级的所有级别。例如，默认将 log_level 设置为 error 那么将会记录 error , critical , alert 和 emergency 日志信息：" />
+    <meta name="description" content="1 （自己摸索版本）5.2 1 定义路径 .env配置文件添加日志路径，例如 LOG_PATH=/tmp/paytest 2 启动文件添加日志路径 $app-&amp;gt;configureMonologUsing(function($logger){ $logger-&amp;gt;pushHandler(new \Monolog\Handler\RotatingFileHandler(env(&amp;#39;LOG_PATH&amp;#39;).&amp;#39;.log&amp;#39;), 10); return $logger; }); 2 官方文档 1 异常处理 介绍 当您启动一个新的 Laravel 项目时，错误和异常处理就已为您配置。 应用程序触发的所" />
     
 
+    
+    
+    <meta name="keywords" content="Hugo, blog, php" />
     
 
 	
@@ -39,6 +40,22 @@ LOG_PATH=/tmp/paytest 2 启动文件添加日志路径 $app-&amp;gt;configureMon
     <div class="site_nav" id="site_nav">
         <ul>
             
+            <li>
+                <a href="/">主页</a>
+            </li>
+            
+            <li>
+                <a href="/posts/">Archive</a>
+            </li>
+            
+            <li>
+                <a href="/tags/">Tags</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
         </ul>
     </div>
     <div class="menu_icon">
@@ -50,13 +67,31 @@ LOG_PATH=/tmp/paytest 2 启动文件添加日志路径 $app-&amp;gt;configureMon
         <div class="site_title">
             <h1>
                 <a href="https://laurel-he.github.io/">
-                    <span></span>
+                    <span>贺小娇的个人博客</span>
                 </a>
             </h1>
         </div>
         <div class="description">
-            <p class="sub_title"></p>
+            <p class="sub_title">the summary of my programing life</p>
             <div class="my_socials">
+                
+                
+                <a href="%20" title="facebook" target="_blank"><i class="ri-facebook-fill"></i></a>
+                
+                
+                
+                <a href="https://github.com/laurel-he" title="github" target="_blank"><i class="ri-github-fill"></i></a>
+                
+                
+                
+                <a href="%20" title="instagram" target="_blank"><i class="ri-instagram-fill"></i></a>
+                
+                
+                
+                
+                
+                <a href="%20" title="weibo" target="_blank"><i class="ri-weibo-fill"></i></a>
+                
                 
                 <a href="https://laurel-he.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
                         class="ri-rss-fill"></i></a>
@@ -74,12 +109,12 @@ LOG_PATH=/tmp/paytest 2 启动文件添加日志路径 $app-&amp;gt;configureMon
                     <div class="post_content markdown"><h2 id="1-自己摸索版本52">1 （自己摸索版本）5.2</h2>
 <h4 id="1-定义路径">1 定义路径</h4>
 <p>.env配置文件添加日志路径，例如</p>
-<pre><code>LOG_PATH=/tmp/paytest
-</code></pre><h4 id="2-启动文件添加日志路径">2 启动文件添加日志路径</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$app<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">configureMonologUsing</span>(<span style="color:#66d9ef">function</span>($logger){
-    $logger<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">pushHandler</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">\Monolog\Handler\RotatingFileHandler</span>(<span style="color:#a6e22e">env</span>(<span style="color:#e6db74">&#39;LOG_PATH&#39;</span>)<span style="color:#f92672">.</span><span style="color:#e6db74">&#39;.log&#39;</span>), <span style="color:#ae81ff">10</span>);
-    <span style="color:#66d9ef">return</span> $logger;
-});
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">LOG_PATH=/tmp/paytest
+</code></pre></div><h4 id="2-启动文件添加日志路径">2 启动文件添加日志路径</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="nv">$app</span><span class="o">-&gt;</span><span class="na">configureMonologUsing</span><span class="p">(</span><span class="k">function</span><span class="p">(</span><span class="nv">$logger</span><span class="p">){</span>
+    <span class="nv">$logger</span><span class="o">-&gt;</span><span class="na">pushHandler</span><span class="p">(</span><span class="k">new</span> <span class="nx">\Monolog\Handler\RotatingFileHandler</span><span class="p">(</span><span class="nx">env</span><span class="p">(</span><span class="s1">&#39;LOG_PATH&#39;</span><span class="p">)</span><span class="o">.</span><span class="s1">&#39;.log&#39;</span><span class="p">),</span> <span class="mi">10</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nv">$logger</span><span class="p">;</span>
+<span class="p">});</span>
 </code></pre></div><h2 id="2-官方文档">2 官方文档</h2>
 <h4 id="1-异常处理">1 异常处理</h4>
 <p><strong>介绍</strong>
@@ -90,14 +125,14 @@ LOG_PATH=/tmp/paytest 2 启动文件添加日志路径 $app-&amp;gt;configureMon
 <strong>日志等级</strong>
 使用 Monolog 时，日志消息可能具有不同的日志等级。默认情况下，Laravel 将所有日志级别写入存储。但是，在生产环境中，您可能希望通过将 log_level 选项添加到 app.php 配置文件中来配置应记录的最低日志等级。</p>
 <p>一旦配置了此选项，Laravel 将记录大于或等于指定日志等级的所有级别。例如，默认将 log_level 设置为 error 那么将会记录 error , critical , alert 和 emergency 日志信息：</p>
-<pre><code>'log_level' =&gt; env('APP_LOG_LEVEL', 'error'),
-</code></pre><p><strong>注意事项</strong>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">&#39;log_level&#39; =&gt; env(&#39;APP_LOG_LEVEL&#39;, &#39;error&#39;),
+</code></pre></div><p><strong>注意事项</strong>
 Monolog 识别以下日志等级 - 从低到高为: debug , info , notice , warning , error , critical , alert , emergency
 <strong>Report方法</strong>
 所有异常都由 App\Exceptions\Handler 类处理。 这个类包含两个方法：report 和 render 。 我们将详细研究这些方法。 report 方法用于记录异常或将其发送到外部服务，如 Bugsnag 或 Sentry 。默认情况下，report 方法只是将异常传递给记录异常的基类。然而，你可以自由选择任何方式进行处理。
 <strong>render方法</strong>
 render 方法负责将异常转换成 HTTP 响应发送给浏览器。默认情况下，异常会传递给为您生成响应的基类。但是，您可以自由检查异常类型或返回您自己的自定义响应</p>
-<pre><code>/**
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">/**
  * 渲染异常并添加到 HTTP 响应中。
  *
  * @param  \Illuminate\Http\Request  $request
@@ -107,12 +142,12 @@ render 方法负责将异常转换成 HTTP 响应发送给浏览器。默认情�
 public function render($request, Exception $exception)
 {
     if ($exception instanceof CustomException) {
-        return response()-&gt;view('errors.custom', [], 500);
+        return response()-&gt;view(&#39;errors.custom&#39;, [], 500);
     }
 
     return parent::render($request, $exception);
 }
-</code></pre><p><strong>HTTP异常</strong>
+</code></pre></div><p><strong>HTTP异常</strong>
 可直接用abort()，例如abort(404),abort(403, &lsquo;Unauthorized action.');
 <strong>自定义错误页面</strong>
 如果您要自定义404 HTTP状态代码的错误页面，请创建一个 resources/views/errors/404.blade.php 。此文件将会用于渲染所有404错误。此目录中的视图文件命名应与它们对应的HTTP状态代码匹配。由 abort 函数引发的 HttpException 实例将作为 $exception 变量传递给视图。</p>
@@ -120,9 +155,9 @@ public function render($request, Exception $exception)
 <p><strong>介绍</strong>
 默认情况下，Laravel 日志目录为 storage/logs
 可以传递参数，例如：</p>
-<pre><code>$test = &quot;test&quot;;
-Log::info(222222222, ['te' =&gt; $test]);
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$test = &#34;test&#34;;
+Log::info(222222222, [&#39;te&#39; =&gt; $test]);
+</code></pre></div></div>
                     <div class="post_footer">
                         
                     </div>
@@ -142,7 +177,7 @@ Log::info(222222222, ['te' =&gt; $test]);
     </div>
 
     <div class="footer_slogan">
-        <span></span>
+        <span>My spiritual home</span>
     </div>
 </footer>
     <script src="https://laurel-he.github.io/js/jquery-3.5.1.min.js"></script>
@@ -150,6 +185,43 @@ Log::info(222222222, ['te' =&gt; $test]);
 <script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
 <script src="https://laurel-he.github.io/js/zozo.js"></script>
 
+
+<script type="text/javascript" async
+    src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\[\[', '\]\]']],
+                processEscapes: true,
+                processEnvironments: true,
+                skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                TeX: {
+                    equationNumbers: { autoNumber: "AMS" },
+                    extensions: ["AMSmath.js", "AMSsymbols.js"]
+                }
+            }
+        });
+
+        MathJax.Hub.Queue(function () {
+            
+            
+            
+            var all = MathJax.Hub.getAllJax(), i;
+            for (i = 0; i < all.length; i += 1) {
+                all[i].SourceElement().parentNode.className += ' has-jax';
+            }
+        });
+    </script>
+
+<style>
+    code.has-jax {
+        font: inherit;
+        font-size: 100%;
+        background: inherit;
+        border: inherit;
+        color: #515151;
+    }
+</style>
 
 
 

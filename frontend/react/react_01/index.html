@@ -1,27 +1,23 @@
 <!DOCTYPE html>
-<html >
+<html lang="en" >
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="" />
+    <meta name="author" content="贺小娇" />
 	
 	
 	
-	<title>react学习-es6基础特性 ｜ </title>
+	<title>react学习-es6基础特性 ｜ 贺小娇的个人博客</title>
 	
     
     
-    <meta name="description" content="react学习手册 新特性 1 react开发者工具：react developer tools，可以查看网站react元素 2 yarn进行依赖管理：yarn.lock文件，可以使用yarn install安装，npm install yarn,yarn add [package-name],yarn remove [package-name]
-变量声明 1 const:常量，不能被修改，重写会报错；
-2 let:变量，可以将变量作用域限定在任意代码块中（var不行） 3 模板字符串${}，可在字符串中插入变量
-箭头函数 1 介绍：用户可以不使用function关键字创建函数，通常还不需要return 2 箭头函数可以限制this的作用域，箭头函数没有自己的this,引用外层的this;
-ES6转译 1 介绍：浏览器运行前将代码转成符合ES5规范的代码，Bable是当前最流行的转译工具之一
-ES6的对象和数组 1 解构赋值： (1)允许用户将某个对象内的字段的作用域本地化，并且声明哪些值是将要使用的。 举例：
-var sandwich = { bread: &amp;#34;dutch crunch&amp;#34;, meat: &amp;#34;tuna&amp;#34;, cheese: &amp;#34;swiss&amp;#34;, toppings: [&amp;#34;lettuce&amp;#34;, &amp;#34;tomato&amp;#34;, &amp;#34;mustard&amp;#34;] } var {bread, meat} = sandwich console.log(bread, meat) bread = &amp;#34;garlic&amp;#34; meat = &amp;#34;turkey&amp;#34; console.log(bread,meat) console.log(sandwich.bread, sandwich.meat) (2)除了使用点符号访问对象内部属性之外，还可以在对象之外解构需要使用的值。
-var regularPerson = { firstname: &amp;#34;Bill&amp;#34;, lastname: &amp;#34;Wilson&amp;#34; }; var lordify = ({firstname}) =&amp;gt; { console." />
+    <meta name="description" content="react学习手册 新特性 1 react开发者工具：react developer tools，可以查看网站react元素 2 yarn进行依赖管理：yarn.lock文件，可以使用yarn install安装，npm install yarn,yarn add [package-name],yarn remove [package-name]" />
     
 
+    
+    
+    <meta name="keywords" content="Hugo, blog, php" />
     
 
 	
@@ -44,6 +40,22 @@ var regularPerson = { firstname: &amp;#34;Bill&amp;#34;, lastname: &amp;#34;Wils
     <div class="site_nav" id="site_nav">
         <ul>
             
+            <li>
+                <a href="/">主页</a>
+            </li>
+            
+            <li>
+                <a href="/posts/">Archive</a>
+            </li>
+            
+            <li>
+                <a href="/tags/">Tags</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
         </ul>
     </div>
     <div class="menu_icon">
@@ -55,13 +67,31 @@ var regularPerson = { firstname: &amp;#34;Bill&amp;#34;, lastname: &amp;#34;Wils
         <div class="site_title">
             <h1>
                 <a href="https://laurel-he.github.io/">
-                    <span></span>
+                    <span>贺小娇的个人博客</span>
                 </a>
             </h1>
         </div>
         <div class="description">
-            <p class="sub_title"></p>
+            <p class="sub_title">the summary of my programing life</p>
             <div class="my_socials">
+                
+                
+                <a href="%20" title="facebook" target="_blank"><i class="ri-facebook-fill"></i></a>
+                
+                
+                
+                <a href="https://github.com/laurel-he" title="github" target="_blank"><i class="ri-github-fill"></i></a>
+                
+                
+                
+                <a href="%20" title="instagram" target="_blank"><i class="ri-instagram-fill"></i></a>
+                
+                
+                
+                
+                
+                <a href="%20" title="weibo" target="_blank"><i class="ri-weibo-fill"></i></a>
+                
                 
                 <a href="https://laurel-he.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
                         class="ri-rss-fill"></i></a>
@@ -93,206 +123,206 @@ var regularPerson = { firstname: &amp;#34;Bill&amp;#34;, lastname: &amp;#34;Wils
 <p>1 解构赋值： <br>
 (1)允许用户将某个对象内的字段的作用域本地化，并且声明哪些值是将要使用的。
 举例：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"> <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">sandwich</span> <span style="color:#f92672">=</span>  {
-      <span style="color:#a6e22e">bread</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;dutch crunch&#34;</span>,
-      <span style="color:#a6e22e">meat</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;tuna&#34;</span>,
-      <span style="color:#a6e22e">cheese</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;swiss&#34;</span>,
-      <span style="color:#a6e22e">toppings</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;lettuce&#34;</span>, <span style="color:#e6db74">&#34;tomato&#34;</span>, <span style="color:#e6db74">&#34;mustard&#34;</span>]
-    }
-    <span style="color:#66d9ef">var</span> {<span style="color:#a6e22e">bread</span>, <span style="color:#a6e22e">meat</span>} <span style="color:#f92672">=</span> <span style="color:#a6e22e">sandwich</span>
-    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">bread</span>, <span style="color:#a6e22e">meat</span>)
-    <span style="color:#a6e22e">bread</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;garlic&#34;</span>
-    <span style="color:#a6e22e">meat</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;turkey&#34;</span>
-    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">bread</span>,<span style="color:#a6e22e">meat</span>)
-    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">sandwich</span>.<span style="color:#a6e22e">bread</span>, <span style="color:#a6e22e">sandwich</span>.<span style="color:#a6e22e">meat</span>)
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"> <span class="kd">var</span> <span class="nx">sandwich</span> <span class="o">=</span>  <span class="p">{</span>
+      <span class="nx">bread</span><span class="o">:</span> <span class="s2">&#34;dutch crunch&#34;</span><span class="p">,</span>
+      <span class="nx">meat</span><span class="o">:</span> <span class="s2">&#34;tuna&#34;</span><span class="p">,</span>
+      <span class="nx">cheese</span><span class="o">:</span> <span class="s2">&#34;swiss&#34;</span><span class="p">,</span>
+      <span class="nx">toppings</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;lettuce&#34;</span><span class="p">,</span> <span class="s2">&#34;tomato&#34;</span><span class="p">,</span> <span class="s2">&#34;mustard&#34;</span><span class="p">]</span>
+    <span class="p">}</span>
+    <span class="kd">var</span> <span class="p">{</span><span class="nx">bread</span><span class="p">,</span> <span class="nx">meat</span><span class="p">}</span> <span class="o">=</span> <span class="nx">sandwich</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">bread</span><span class="p">,</span> <span class="nx">meat</span><span class="p">)</span>
+    <span class="nx">bread</span> <span class="o">=</span> <span class="s2">&#34;garlic&#34;</span>
+    <span class="nx">meat</span> <span class="o">=</span> <span class="s2">&#34;turkey&#34;</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">bread</span><span class="p">,</span><span class="nx">meat</span><span class="p">)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sandwich</span><span class="p">.</span><span class="nx">bread</span><span class="p">,</span> <span class="nx">sandwich</span><span class="p">.</span><span class="nx">meat</span><span class="p">)</span>
 
 </code></pre></div><p>(2)除了使用点符号访问对象内部属性之外，还可以在对象之外解构需要使用的值。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">regularPerson</span> <span style="color:#f92672">=</span> {
-    <span style="color:#a6e22e">firstname</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Bill&#34;</span>,
-    <span style="color:#a6e22e">lastname</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Wilson&#34;</span>
-    };
-    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">lordify</span> <span style="color:#f92672">=</span> ({<span style="color:#a6e22e">firstname</span>}) =&gt; {
-    	<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">firstname</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> of regularPerson`</span>);
-    }
-    <span style="color:#a6e22e">lordify</span>(<span style="color:#a6e22e">regularPerson</span>);
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">regularPerson</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">firstname</span><span class="o">:</span> <span class="s2">&#34;Bill&#34;</span><span class="p">,</span>
+    <span class="nx">lastname</span><span class="o">:</span> <span class="s2">&#34;Wilson&#34;</span>
+    <span class="p">};</span>
+    <span class="kd">var</span> <span class="nx">lordify</span> <span class="o">=</span> <span class="p">({</span><span class="nx">firstname</span><span class="p">})</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">firstname</span><span class="si">}</span><span class="sb"> of regularPerson`</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="nx">lordify</span><span class="p">(</span><span class="nx">regularPerson</span><span class="p">);</span>
 </code></pre></div><p>(3)数组中的值也可以被解构，还可以使用都好进行列表匹配，跳过不需要的值；</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">   <span style="color:#66d9ef">var</span> [<span style="color:#a6e22e">firstResort</span>] <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Kirkwood&#34;</span>, <span style="color:#e6db74">&#34;Squaw&#34;</span>, <span style="color:#e6db74">&#34;Alpine&#34;</span>]
-    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">firstResort</span>)
-   <span style="color:#66d9ef">var</span> [, , <span style="color:#a6e22e">third</span>] <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Kirkwood&#34;</span>, <span style="color:#e6db74">&#34;Squaw&#34;</span>, <span style="color:#e6db74">&#34;Alpine&#34;</span>]
-   <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">third</span>)
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript">   <span class="kd">var</span> <span class="p">[</span><span class="nx">firstResort</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;Kirkwood&#34;</span><span class="p">,</span> <span class="s2">&#34;Squaw&#34;</span><span class="p">,</span> <span class="s2">&#34;Alpine&#34;</span><span class="p">]</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">firstResort</span><span class="p">)</span>
+   <span class="kd">var</span> <span class="p">[,</span> <span class="p">,</span> <span class="nx">third</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;Kirkwood&#34;</span><span class="p">,</span> <span class="s2">&#34;Squaw&#34;</span><span class="p">,</span> <span class="s2">&#34;Alpine&#34;</span><span class="p">]</span>
+   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">third</span><span class="p">)</span>
 </code></pre></div><p>2 对象语义增强 <br>
 可以从全局作用域中获得变量并转化成一个对象。还可以通过对象语义增强或重组构造对象的方法：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;yaya&#39;</span>;
-  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">ela</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;test&#39;</span>;
-  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">func</span> <span style="color:#f92672">=</span> {<span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">ela</span>};
-  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">test</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
-    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Mmt. </span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">  is aa </span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">ela</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> oo`</span>);
-  }
-  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;func&#39;</span>, <span style="color:#a6e22e">func</span>);
-  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">funclike</span> <span style="color:#f92672">=</span> {<span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">ela</span>, <span style="color:#a6e22e">test</span>};
-  <span style="color:#a6e22e">funclike</span>.<span style="color:#a6e22e">test</span>();
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript">  <span class="kd">let</span> <span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;yaya&#39;</span><span class="p">;</span>
+  <span class="kd">let</span> <span class="nx">ela</span> <span class="o">=</span> <span class="s1">&#39;test&#39;</span><span class="p">;</span>
+  <span class="kd">let</span> <span class="nx">func</span> <span class="o">=</span> <span class="p">{</span><span class="nx">name</span><span class="p">,</span> <span class="nx">ela</span><span class="p">};</span>
+  <span class="kd">let</span> <span class="nx">test</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Mmt. </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="si">}</span><span class="sb">  is aa </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">ela</span><span class="si">}</span><span class="sb"> oo`</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;func&#39;</span><span class="p">,</span> <span class="nx">func</span><span class="p">);</span>
+  <span class="kd">let</span> <span class="nx">funclike</span> <span class="o">=</span> <span class="p">{</span><span class="nx">name</span><span class="p">,</span> <span class="nx">ela</span><span class="p">,</span> <span class="nx">test</span><span class="p">};</span>
+  <span class="nx">funclike</span><span class="p">.</span><span class="nx">test</span><span class="p">();</span>
 </code></pre></div><p>定义了对象方法后就不需要使用关键字function了</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// 旧方案
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Léo Taillefer&#34;</span>
-    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">sound</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Kahh&#34;</span>
-    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">skier</span> <span style="color:#f92672">=</span> {
-      <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">name</span>,
-      <span style="color:#a6e22e">sound</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">sound</span>,
-      <span style="color:#a6e22e">powderYell</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>() {
-      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">yell</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">sound</span>.<span style="color:#a6e22e">toUpperCase</span>()
-      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">yell</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">yell</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">yell</span><span style="color:#e6db74">}</span><span style="color:#e6db74">!!!`</span>)
-    },
-      <span style="color:#a6e22e">speed</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">mph</span>) {
-        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">speed</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">mph</span>
-        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;speed:&#39;</span>, <span style="color:#a6e22e">mph</span>)
-      }
-    }
-    <span style="color:#a6e22e">skier</span>.<span style="color:#a6e22e">powderYell</span>()
-    <span style="color:#a6e22e">skier</span>.<span style="color:#a6e22e">speed</span>(<span style="color:#e6db74">&#34;hair on fire&#34;</span>)
-    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">skier</span>))
-</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// 新方案
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Julia Mancuso&#34;</span>
-    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">sound</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;go fast&#34;</span>
-    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">skier</span> <span style="color:#f92672">=</span> {
-      <span style="color:#a6e22e">name</span>,
-      <span style="color:#a6e22e">sound</span>,
-      <span style="color:#a6e22e">powderYell</span>() {
-        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">yell</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">sound</span>.<span style="color:#a6e22e">toUpperCase</span>()
-        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">yell</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">yell</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">yell</span><span style="color:#e6db74">}</span><span style="color:#e6db74">!!!`</span>)
-      },
-      <span style="color:#a6e22e">speed</span>(<span style="color:#a6e22e">mph</span>) {
-        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">speed</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">mph</span>
-        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;speed:&#39;</span>, <span style="color:#a6e22e">mph</span>)
-      }
-    }
-    <span style="color:#a6e22e">skier</span>.<span style="color:#a6e22e">powderYell</span>()
-    <span style="color:#a6e22e">skier</span>.<span style="color:#a6e22e">speed</span>(<span style="color:#ae81ff">350</span>)
-    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">skier</span>))
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// 旧方案
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="s2">&#34;Léo Taillefer&#34;</span>
+    <span class="kd">var</span> <span class="nx">sound</span> <span class="o">=</span> <span class="s2">&#34;Kahh&#34;</span>
+    <span class="kd">var</span> <span class="nx">skier</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="nx">name</span><span class="o">:</span> <span class="nx">name</span><span class="p">,</span>
+      <span class="nx">sound</span><span class="o">:</span> <span class="nx">sound</span><span class="p">,</span>
+      <span class="nx">powderYell</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+      <span class="kd">var</span> <span class="nx">yell</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">sound</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">()</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">yell</span><span class="si">}</span><span class="sb"> </span><span class="si">${</span><span class="nx">yell</span><span class="si">}</span><span class="sb"> </span><span class="si">${</span><span class="nx">yell</span><span class="si">}</span><span class="sb">!!!`</span><span class="p">)</span>
+    <span class="p">},</span>
+      <span class="nx">speed</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">mph</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">speed</span> <span class="o">=</span> <span class="nx">mph</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;speed:&#39;</span><span class="p">,</span> <span class="nx">mph</span><span class="p">)</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="nx">skier</span><span class="p">.</span><span class="nx">powderYell</span><span class="p">()</span>
+    <span class="nx">skier</span><span class="p">.</span><span class="nx">speed</span><span class="p">(</span><span class="s2">&#34;hair on fire&#34;</span><span class="p">)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">skier</span><span class="p">))</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// 新方案
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="s2">&#34;Julia Mancuso&#34;</span>
+    <span class="kd">var</span> <span class="nx">sound</span> <span class="o">=</span> <span class="s2">&#34;go fast&#34;</span>
+    <span class="kr">const</span> <span class="nx">skier</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="nx">name</span><span class="p">,</span>
+      <span class="nx">sound</span><span class="p">,</span>
+      <span class="nx">powderYell</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">let</span> <span class="nx">yell</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">sound</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">()</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">yell</span><span class="si">}</span><span class="sb"> </span><span class="si">${</span><span class="nx">yell</span><span class="si">}</span><span class="sb"> </span><span class="si">${</span><span class="nx">yell</span><span class="si">}</span><span class="sb">!!!`</span><span class="p">)</span>
+      <span class="p">},</span>
+      <span class="nx">speed</span><span class="p">(</span><span class="nx">mph</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">speed</span> <span class="o">=</span> <span class="nx">mph</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;speed:&#39;</span><span class="p">,</span> <span class="nx">mph</span><span class="p">)</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="nx">skier</span><span class="p">.</span><span class="nx">powderYell</span><span class="p">()</span>
+    <span class="nx">skier</span><span class="p">.</span><span class="nx">speed</span><span class="p">(</span><span class="mi">350</span><span class="p">)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">skier</span><span class="p">))</span>
 </code></pre></div><p>3 扩展运算符 <br>
 （1）扩展运算符允许联合数组中的内容：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">peaks</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Tallac&#34;</span>, <span style="color:#e6db74">&#34;Ralston&#34;</span>, <span style="color:#e6db74">&#34;Rose&#34;</span>]
-    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">canyons</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Ward&#34;</span>, <span style="color:#e6db74">&#34;Blackwood&#34;</span>]
-    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">tahoe</span> <span style="color:#f92672">=</span> [...<span style="color:#a6e22e">peaks</span>, ...<span style="color:#a6e22e">canyons</span>]
-    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">tahoe</span>.<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#39;, &#39;</span>))
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript">    <span class="kd">var</span> <span class="nx">peaks</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;Tallac&#34;</span><span class="p">,</span> <span class="s2">&#34;Ralston&#34;</span><span class="p">,</span> <span class="s2">&#34;Rose&#34;</span><span class="p">]</span>
+    <span class="kd">var</span> <span class="nx">canyons</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;Ward&#34;</span><span class="p">,</span> <span class="s2">&#34;Blackwood&#34;</span><span class="p">]</span>
+    <span class="kd">var</span> <span class="nx">tahoe</span> <span class="o">=</span> <span class="p">[...</span><span class="nx">peaks</span><span class="p">,</span> <span class="p">...</span><span class="nx">canyons</span><span class="p">]</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">tahoe</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39;, &#39;</span><span class="p">))</span>
 </code></pre></div><p>（2）可以创建副本，不需要改变数组原生解构</p>
-<pre><code>var peaks = [&quot;Tallac&quot;, &quot;Ralston&quot;, &quot;Rose&quot;]
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">var peaks = [&#34;Tallac&#34;, &#34;Ralston&#34;, &#34;Rose&#34;]
 var [last] = [...peaks].reverse()
 console.log(last);
-console.log(peaks.join(', '));
-</code></pre><p>（3）可以用来获取数组中的其余元素</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">peaks</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Tallac&#34;</span>, <span style="color:#e6db74">&#34;Ralston&#34;</span>, <span style="color:#e6db74">&#34;Rose&#34;</span>, <span style="color:#e6db74">&#34;te11&#34;</span>, <span style="color:#e6db74">&#34;tes12&#34;</span>]
-<span style="color:#66d9ef">var</span> [<span style="color:#a6e22e">last</span>, ...<span style="color:#a6e22e">rest</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">peaks</span>;
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">last</span>);
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">rest</span>.<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#39;, &#39;</span>));
+console.log(peaks.join(&#39;, &#39;));
+</code></pre></div><p>（3）可以用来获取数组中的其余元素</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">peaks</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;Tallac&#34;</span><span class="p">,</span> <span class="s2">&#34;Ralston&#34;</span><span class="p">,</span> <span class="s2">&#34;Rose&#34;</span><span class="p">,</span> <span class="s2">&#34;te11&#34;</span><span class="p">,</span> <span class="s2">&#34;tes12&#34;</span><span class="p">]</span>
+<span class="kd">var</span> <span class="p">[</span><span class="nx">last</span><span class="p">,</span> <span class="p">...</span><span class="nx">rest</span><span class="p">]</span> <span class="o">=</span> <span class="nx">peaks</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">last</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">rest</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39;, &#39;</span><span class="p">));</span>
 </code></pre></div><p>（4）可以将函数参数收集到一个数组中</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">directions</span>(...<span style="color:#a6e22e">args</span>) {
-      <span style="color:#66d9ef">var</span> [<span style="color:#a6e22e">start</span>, ...<span style="color:#a6e22e">remaining</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">args</span>
-      <span style="color:#66d9ef">var</span> [<span style="color:#a6e22e">finish</span>, ...<span style="color:#a6e22e">stops</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">remaining</span>.<span style="color:#a6e22e">reverse</span>()
-      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`drive through </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">args</span>.<span style="color:#a6e22e">length</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> towns`</span>)
-      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`start in </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">start</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>)
-      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`the destination is </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">finish</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>)
-      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`stopping </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">stops</span>.<span style="color:#a6e22e">length</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> times in between`</span>)
-    }
-    <span style="color:#a6e22e">directions</span>(<span style="color:#e6db74">&#34;Truckee&#34;</span>, <span style="color:#e6db74">&#34;Tahoe City&#34;</span>, <span style="color:#e6db74">&#34;Sunnyside&#34;</span>, <span style="color:#e6db74">&#34;Homewood&#34;</span>, <span style="color:#e6db74">&#34;Tahoma&#34;</span>)
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">directions</span><span class="p">(...</span><span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">var</span> <span class="p">[</span><span class="nx">start</span><span class="p">,</span> <span class="p">...</span><span class="nx">remaining</span><span class="p">]</span> <span class="o">=</span> <span class="nx">args</span>
+      <span class="kd">var</span> <span class="p">[</span><span class="nx">finish</span><span class="p">,</span> <span class="p">...</span><span class="nx">stops</span><span class="p">]</span> <span class="o">=</span> <span class="nx">remaining</span><span class="p">.</span><span class="nx">reverse</span><span class="p">()</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`drive through </span><span class="si">${</span><span class="nx">args</span><span class="p">.</span><span class="nx">length</span><span class="si">}</span><span class="sb"> towns`</span><span class="p">)</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`start in </span><span class="si">${</span><span class="nx">start</span><span class="si">}</span><span class="sb">`</span><span class="p">)</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`the destination is </span><span class="si">${</span><span class="nx">finish</span><span class="si">}</span><span class="sb">`</span><span class="p">)</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`stopping </span><span class="si">${</span><span class="nx">stops</span><span class="p">.</span><span class="nx">length</span><span class="si">}</span><span class="sb"> times in between`</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="nx">directions</span><span class="p">(</span><span class="s2">&#34;Truckee&#34;</span><span class="p">,</span> <span class="s2">&#34;Tahoe City&#34;</span><span class="p">,</span> <span class="s2">&#34;Sunnyside&#34;</span><span class="p">,</span> <span class="s2">&#34;Homewood&#34;</span><span class="p">,</span> <span class="s2">&#34;Tahoma&#34;</span><span class="p">)</span>
 </code></pre></div><p>（5）适用于对象</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">morning</span> <span style="color:#f92672">=</span> {
-  <span style="color:#a6e22e">breakfast</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;oatmeal&#34;</span>,
-  <span style="color:#a6e22e">lunch</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;peanut butter and jelly&#34;</span>
-}
-<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">dinner</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;mac and cheese&#34;</span>
-<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">backpackingMeals</span> <span style="color:#f92672">=</span> {
-  ...<span style="color:#a6e22e">morning</span>,
-  <span style="color:#a6e22e">dinner</span>
-}
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">backpackingMeals</span>)
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">morning</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">breakfast</span><span class="o">:</span> <span class="s2">&#34;oatmeal&#34;</span><span class="p">,</span>
+  <span class="nx">lunch</span><span class="o">:</span> <span class="s2">&#34;peanut butter and jelly&#34;</span>
+<span class="p">}</span>
+<span class="kd">var</span> <span class="nx">dinner</span> <span class="o">=</span> <span class="s2">&#34;mac and cheese&#34;</span>
+<span class="kd">var</span> <span class="nx">backpackingMeals</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="p">...</span><span class="nx">morning</span><span class="p">,</span>
+  <span class="nx">dinner</span>
+<span class="p">}</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">backpackingMeals</span><span class="p">)</span>
 </code></pre></div><h4 id="promise对象">Promise对象</h4>
 <p>1 介绍 <br>
 Promise提供了一种更合理的方式处理异步行为,then函数可以通过链式调用执行某些任务，还可以使用另一个回调函数处理异常</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">getFakeMembers</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">count</span> =&gt; <span style="color:#66d9ef">new</span> Promise((<span style="color:#a6e22e">resolves</span>, <span style="color:#a6e22e">rejects</span>) =&gt; {
-      <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">api</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`https://api.randomuser.me/?nat=US&amp;results=</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">count</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>
-      <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">request</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">XMLHttpRequest</span>()
-      <span style="color:#a6e22e">request</span>.<span style="color:#a6e22e">open</span>(<span style="color:#e6db74">&#39;GET&#39;</span>, <span style="color:#a6e22e">api</span>)
-      <span style="color:#a6e22e">request</span>.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</span> () =&gt;
-           (<span style="color:#a6e22e">request</span>.<span style="color:#a6e22e">status</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">200</span>) <span style="color:#f92672">?</span>
-            <span style="color:#a6e22e">resolves</span>(<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">request</span>.<span style="color:#a6e22e">response</span>).<span style="color:#a6e22e">results</span>) <span style="color:#f92672">:</span>
-            <span style="color:#a6e22e">rejects</span>(Error(<span style="color:#a6e22e">request</span>.<span style="color:#a6e22e">statusText</span>))
-      <span style="color:#a6e22e">request</span>.<span style="color:#a6e22e">onerror</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">err</span>) =&gt; <span style="color:#a6e22e">rejects</span>(<span style="color:#a6e22e">err</span>)
-      <span style="color:#a6e22e">request</span>.<span style="color:#a6e22e">send</span>()
-    })
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kr">const</span> <span class="nx">getFakeMembers</span> <span class="o">=</span> <span class="nx">count</span> <span class="p">=&gt;</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolves</span><span class="p">,</span> <span class="nx">rejects</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+      <span class="kr">const</span> <span class="nx">api</span> <span class="o">=</span> <span class="sb">`https://api.randomuser.me/?nat=US&amp;results=</span><span class="si">${</span><span class="nx">count</span><span class="si">}</span><span class="sb">`</span>
+      <span class="kr">const</span> <span class="nx">request</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">()</span>
+      <span class="nx">request</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="nx">api</span><span class="p">)</span>
+      <span class="nx">request</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span>
+           <span class="p">(</span><span class="nx">request</span><span class="p">.</span><span class="nx">status</span> <span class="o">===</span> <span class="mi">200</span><span class="p">)</span> <span class="o">?</span>
+            <span class="nx">resolves</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">request</span><span class="p">.</span><span class="nx">response</span><span class="p">).</span><span class="nx">results</span><span class="p">)</span> <span class="o">:</span>
+            <span class="nx">rejects</span><span class="p">(</span><span class="nb">Error</span><span class="p">(</span><span class="nx">request</span><span class="p">.</span><span class="nx">statusText</span><span class="p">))</span>
+      <span class="nx">request</span><span class="p">.</span><span class="nx">onerror</span> <span class="o">=</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">rejects</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+      <span class="nx">request</span><span class="p">.</span><span class="nx">send</span><span class="p">()</span>
+    <span class="p">})</span>
 
-    <span style="color:#a6e22e">getFakeMembers</span>(<span style="color:#ae81ff">5</span>).<span style="color:#a6e22e">then</span>(
-      <span style="color:#a6e22e">members</span> =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">members</span>),
-      <span style="color:#a6e22e">err</span> =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(
-          <span style="color:#66d9ef">new</span> Error(<span style="color:#e6db74">&#34;cannot load members from randomuser.me&#34;</span>))
-    )
+    <span class="nx">getFakeMembers</span><span class="p">(</span><span class="mi">5</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span>
+      <span class="nx">members</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">members</span><span class="p">),</span>
+      <span class="nx">err</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span>
+          <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s2">&#34;cannot load members from randomuser.me&#34;</span><span class="p">))</span>
+    <span class="p">)</span>
 </code></pre></div><h4 id="类">类</h4>
 <p>1 背景介绍： <br>
 以前javascript没有类的概念，类型定义通过函数完成，创建一个函数，通过原型在函数对象上定义方法</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">    <span style="color:#75715e">// Constructor and the prototype, the old way
-</span><span style="color:#75715e"></span>
-    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Vacation</span>(<span style="color:#a6e22e">destination</span>, <span style="color:#a6e22e">length</span>) {
-      <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">destination</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">destination</span>
-      <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">length</span>
-    }
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript">    <span class="c1">// Constructor and the prototype, the old way
+</span><span class="c1"></span>
+    <span class="kd">function</span> <span class="nx">Vacation</span><span class="p">(</span><span class="nx">destination</span><span class="p">,</span> <span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">destination</span> <span class="o">=</span> <span class="nx">destination</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">length</span> <span class="o">=</span> <span class="nx">length</span>
+    <span class="p">}</span>
 
-    <span style="color:#a6e22e">Vacation</span>.<span style="color:#a6e22e">prototype</span>.<span style="color:#a6e22e">print</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
-      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">destination</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; will take &#34;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; days&#34;</span>)
-    }
+    <span class="nx">Vacation</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">print</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">destination</span> <span class="o">+</span> <span class="s2">&#34; will take &#34;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">length</span> <span class="o">+</span> <span class="s2">&#34; days&#34;</span><span class="p">)</span>
+    <span class="p">}</span>
 
-    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">maui</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Vacation</span>(<span style="color:#e6db74">&#34;Maui&#34;</span>, <span style="color:#ae81ff">7</span>)
+    <span class="kd">var</span> <span class="nx">maui</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vacation</span><span class="p">(</span><span class="s2">&#34;Maui&#34;</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
 
-    <span style="color:#a6e22e">maui</span>.<span style="color:#a6e22e">print</span>()
+    <span class="nx">maui</span><span class="p">.</span><span class="nx">print</span><span class="p">()</span>
 </code></pre></div><p>2 新增语法 <br>
 工作机制相同，函数即对象，继承通过原型机制实现</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Vacation</span> {
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript">    <span class="kr">class</span> <span class="nx">Vacation</span> <span class="p">{</span>
 
-    <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">destination</span>, <span style="color:#a6e22e">length</span>) {
-      <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">destination</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">destination</span>
-      <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">length</span>
-    }
+    <span class="nx">constructor</span><span class="p">(</span><span class="nx">destination</span><span class="p">,</span> <span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">destination</span> <span class="o">=</span> <span class="nx">destination</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">length</span> <span class="o">=</span> <span class="nx">length</span>
+    <span class="p">}</span>
 
-    <span style="color:#a6e22e">print</span>() {
-      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">destination</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> will take </span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">length</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> days.`</span>)
-    }
+    <span class="nx">print</span><span class="p">()</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">destination</span><span class="si">}</span><span class="sb"> will take </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">length</span><span class="si">}</span><span class="sb"> days.`</span><span class="p">)</span>
+    <span class="p">}</span>
 
-    }
+    <span class="p">}</span>
 
-    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">trip</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Vacation</span>(<span style="color:#e6db74">&#34;Santiago, Chile&#34;</span>, <span style="color:#ae81ff">9</span>)
+    <span class="kr">const</span> <span class="nx">trip</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vacation</span><span class="p">(</span><span class="s2">&#34;Santiago, Chile&#34;</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
 
-    <span style="color:#a6e22e">trip</span>.<span style="color:#a6e22e">print</span>()
+    <span class="nx">trip</span><span class="p">.</span><span class="nx">print</span><span class="p">()</span>
 </code></pre></div><p>3 类的继承 <br>
 不仅可以直接继承，还可将类当做抽象类，添加新参数</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Vacation</span> {
-      <span style="color:#66d9ef">constructor</span>(<span style="color:#a6e22e">destination</span>, <span style="color:#a6e22e">length</span>) {
-        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">destination</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">destination</span>
-        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">length</span>
-      }
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">class</span> <span class="nx">Vacation</span> <span class="p">{</span>
+      <span class="kr">constructor</span><span class="p">(</span><span class="nx">destination</span><span class="p">,</span> <span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">destination</span> <span class="o">=</span> <span class="nx">destination</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">length</span> <span class="o">=</span> <span class="nx">length</span>
+      <span class="p">}</span>
 
-      <span style="color:#a6e22e">print() {</span>
-        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">destination</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> will take </span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">length</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> days.`</span>)
-      }
+      <span class="nx">print() {</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">destination</span><span class="si">}</span><span class="sb"> will take </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">length</span><span class="si">}</span><span class="sb"> days.`</span><span class="p">)</span>
+      <span class="p">}</span>
 
-    }
+    <span class="p">}</span>
 
-    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Expedition</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Vacation</span> {
-      <span style="color:#66d9ef">constructor</span>(<span style="color:#a6e22e">destination</span>, <span style="color:#a6e22e">length</span>, <span style="color:#a6e22e">gear</span>) {
-        <span style="color:#66d9ef">super</span>(<span style="color:#a6e22e">destination</span>, <span style="color:#a6e22e">length</span>)
-        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">gear</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">gear</span>
-      }
+    <span class="kr">class</span> <span class="nx">Expedition</span> <span class="kr">extends</span> <span class="nx">Vacation</span> <span class="p">{</span>
+      <span class="kr">constructor</span><span class="p">(</span><span class="nx">destination</span><span class="p">,</span> <span class="nx">length</span><span class="p">,</span> <span class="nx">gear</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kr">super</span><span class="p">(</span><span class="nx">destination</span><span class="p">,</span> <span class="nx">length</span><span class="p">)</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">gear</span> <span class="o">=</span> <span class="nx">gear</span>
+      <span class="p">}</span>
 
-      <span style="color:#a6e22e">print() {</span>
-        <span style="color:#66d9ef">super</span>.<span style="color:#a6e22e">print</span>()
-        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`bring your </span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">gear</span>.<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#34; and your &#34;</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>)
-      }
-    }
+      <span class="nx">print() {</span>
+        <span class="kr">super</span><span class="p">.</span><span class="nx">print</span><span class="p">()</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`bring your </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">gear</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s2">&#34; and your &#34;</span><span class="p">)</span><span class="si">}</span><span class="sb">`</span><span class="p">)</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
 
-    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">trip</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Expedition</span>(
-      <span style="color:#e6db74">&#34;Mt. Whitney&#34;</span>,
-      <span style="color:#ae81ff">3</span>,
-      [<span style="color:#e6db74">&#34;sunglasses&#34;</span>, <span style="color:#e6db74">&#34;prayer flags&#34;</span>, <span style="color:#e6db74">&#34;camera&#34;</span>]
-    )
+    <span class="kr">const</span> <span class="nx">trip</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Expedition</span><span class="p">(</span>
+      <span class="s2">&#34;Mt. Whitney&#34;</span><span class="p">,</span>
+      <span class="mi">3</span><span class="p">,</span>
+      <span class="p">[</span><span class="s2">&#34;sunglasses&#34;</span><span class="p">,</span> <span class="s2">&#34;prayer flags&#34;</span><span class="p">,</span> <span class="s2">&#34;camera&#34;</span><span class="p">]</span>
+    <span class="p">)</span>
 
-    <span style="color:#a6e22e">trip</span>.<span style="color:#a6e22e">print</span>()
+    <span class="nx">trip</span><span class="p">.</span><span class="nx">print</span><span class="p">()</span>
 </code></pre></div><h4 id="es6模块">ES6模块</h4>
 <p>1 介绍 <br>
 ES6规范的javascript为模块提供了支持，javascript模块可以存储在独立的文件中，一个文件对应一个模块，
@@ -304,7 +334,7 @@ ES6规范的javascript为模块提供了支持，javascript模块可以存储在
 与export相对，在其他javascript文件中调用模块： <br>
 （1）包含多个export语句的模块还可以进行对象解构 <br>
 （2）使用export default的模块还可以被导入到单个变量中：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">freel</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;/test&#39;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kr">import</span> <span class="nx">freel</span> <span class="nx">from</span> <span class="s1">&#39;/test&#39;</span>
 </code></pre></div><p>（3）可以使用别名实现模块变量的本地化</p>
 <h4 id="commonjs">CommonJS</h4>
 <p>1 介绍： <br>
@@ -330,7 +360,7 @@ CommonJs不支持imporr语句，使用require进行模块导入</p>
     </div>
 
     <div class="footer_slogan">
-        <span></span>
+        <span>My spiritual home</span>
     </div>
 </footer>
     <script src="https://laurel-he.github.io/js/jquery-3.5.1.min.js"></script>
@@ -338,6 +368,43 @@ CommonJs不支持imporr语句，使用require进行模块导入</p>
 <script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
 <script src="https://laurel-he.github.io/js/zozo.js"></script>
 
+
+<script type="text/javascript" async
+    src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\[\[', '\]\]']],
+                processEscapes: true,
+                processEnvironments: true,
+                skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                TeX: {
+                    equationNumbers: { autoNumber: "AMS" },
+                    extensions: ["AMSmath.js", "AMSsymbols.js"]
+                }
+            }
+        });
+
+        MathJax.Hub.Queue(function () {
+            
+            
+            
+            var all = MathJax.Hub.getAllJax(), i;
+            for (i = 0; i < all.length; i += 1) {
+                all[i].SourceElement().parentNode.className += ' has-jax';
+            }
+        });
+    </script>
+
+<style>
+    code.has-jax {
+        font: inherit;
+        font-size: 100%;
+        background: inherit;
+        border: inherit;
+        color: #515151;
+    }
+</style>
 
 
 

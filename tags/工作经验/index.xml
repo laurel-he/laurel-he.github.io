@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>工作经验 on </title>
+    <title>工作经验 on 贺小娇的个人博客</title>
     <link>https://laurel-he.github.io/tags/%E5%B7%A5%E4%BD%9C%E7%BB%8F%E9%AA%8C/</link>
-    <description>Recent content in 工作经验 on </description>
+    <description>Recent content in 工作经验 on 贺小娇的个人博客</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Thu, 16 Apr 2020 18:27:44 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/tags/%E5%B7%A5%E4%BD%9C%E7%BB%8F%E9%AA%8C/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>php多维数组相关处理</title>
@@ -12,9 +13,7 @@
       <pubDate>Thu, 16 Apr 2020 18:27:44 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/php/multiarr/</guid>
-      <description>使用场景 在工作中遇到了两次需要把不确定维度的多维数组渲染出来的情况，且还需要修改值和结构，如果使用json-patch会受到限制（需要根据不同的情况打补丁，且由于结构不一定一致，打补丁可能会错误地修改某些文件），因此需要自行设计批量修改如yaml,json等类似于多级结构的方法
-具体解析 多维数组转化的json前端渲染 结构不固定,获取对应的json，ts实现
-formatJsonData = (obj: any, name: string, moduleName?: string, getModuleName?: string): any[] =&amp;gt; { const arr: any[] = [] if (Object.keys(obj)) { let keys = Object.keys(obj); let i = 0; return keys.map((items) =&amp;gt; { i++; if (obj[items] instanceof Object) { let itemRes = items; if (obj[items][&#39;type&#39;]) { itemRes = obj[items][&#39;type&#39;]; } const names = name + &#39;=&#39; + itemRes return this.formatJsonData(obj[items], names, moduleName); } else { const resItems = name + &#39;=&#39; + items; this.</description>
+      <description>使用场景 在工作中遇到了两次需要把不确定维度的多维数组渲染出来的情况，且还需要修改值和结构，如果使用json-patch会受到限制（需要根据不同的情况打补丁，且由于结构不一定一致，打补丁可能会错误地修改</description>
     </item>
     
   </channel>

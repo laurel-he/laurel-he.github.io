@@ -1,33 +1,23 @@
 <!DOCTYPE html>
-<html >
+<html lang="en" >
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="" />
+    <meta name="author" content="贺小娇" />
 	
 	
 	
-	<title>kubenetes权威指南1-2章 ｜ </title>
+	<title>kubenetes权威指南1-2章 ｜ 贺小娇的个人博客</title>
 	
     
     
-    <meta name="description" content="kubenetes是什么 k8s是一个全新的基于容器技术的分布式架构领先方案，一个开放的开发平台，一个完备的分布式系统支撑平台
-k8s重要资源对象介绍 Master 概念介绍 k8s中的Master指的是集群控制节点，在每个集群里都需要有一个Master来负责整个集群的管理和控制。
-关键进程 （1）Kubenetes API Server(kube-apiserver):提供了HTTP Rest接口的额关键服务进程，是 kubenetes里所有资源的增删改查等操作的唯一入口，也是集群控制的入口进程 （2）kubenetes Controller Manager(kube-controller-manager):kubenetes里所有资源对象的自动化控制中心，可以将其理解为资源对象的大总管 （3）Kubenetes Scheduler(kube-scheduler):负责资源调度(Pod调度)的进程，相当于哦公交公司的调度室
-Node 概念介绍 除了Master,Kubenetes集群中的其他机器被称为Node。Node是集群中的工作负载节点，每个Node都会被Master分配一些工作负载(Docker容器)，当某个Node宕机时，其上的工作负载会被Master自动转移到其他节点上
-关键进程 （1）kubelet:负责Pod对应的容器的创建、启停等任务，同时与Master密切协作，，实现集群管理的基本功能 （2）kube-proxy:实现kubenetes Service的通信与负载均衡的重要组件 （3）Docker Engine：负责本机的容器的创建和管理工作
-Pod 概念介绍 在Kubernetes中，最小的管理元素不是一个个独立的容器，而是Pod,Pod是最小的，管理，创建，计划的最小单元.
-部分概念 （1）可以设置限额的计算资源有CPU和Memory两种： 通常以千分之一的CPU配额为最小单位，用m来表示 Memory配额也是一个绝对值，单位是内存字节数 （2）Event是一个事件的记录，记录了事件的最早产生事件，最后重现事件，重复次数，发起者，类型，以及导致此事件的原因等众多信息。
-Label 概念 一个Label是一个key=value的键值对,可类似于sql查询语句一样来进行查询
-Deployment Deployment内部使用了Replica Set来实现目的
-kubectl的create命令和apply命令的区别 kubectl create：
-（1）kubectl create命令，是先删除所有现有的东西，重新根据yaml文件生成新的。所以要求yaml文件中的配置必须是完整的
-（2）kubectl create命令，用同一个yaml 文件执行替换replace命令，将会不成功，fail掉。
-kubectl apply：
-kubectl apply命令，根据配置文件里面列出来的内容，升级现有的。所以yaml文件的内容可以只写需要升级的属性" />
+    <meta name="description" content="kubenetes是什么 k8s是一个全新的基于容器技术的分布式架构领先方案，一个开放的开发平台，一个完备的分布式系统支撑平台 k8s重要资源对象介绍 Master 概念介绍 k8s中的Master指的是集群控制节点，在" />
     
 
+    
+    
+    <meta name="keywords" content="Hugo, blog, php" />
     
 
 	
@@ -50,6 +40,22 @@ kubectl apply命令，根据配置文件里面列出来的内容，升级现有�
     <div class="site_nav" id="site_nav">
         <ul>
             
+            <li>
+                <a href="/">主页</a>
+            </li>
+            
+            <li>
+                <a href="/posts/">Archive</a>
+            </li>
+            
+            <li>
+                <a href="/tags/">Tags</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
         </ul>
     </div>
     <div class="menu_icon">
@@ -61,13 +67,31 @@ kubectl apply命令，根据配置文件里面列出来的内容，升级现有�
         <div class="site_title">
             <h1>
                 <a href="https://laurel-he.github.io/">
-                    <span></span>
+                    <span>贺小娇的个人博客</span>
                 </a>
             </h1>
         </div>
         <div class="description">
-            <p class="sub_title"></p>
+            <p class="sub_title">the summary of my programing life</p>
             <div class="my_socials">
+                
+                
+                <a href="%20" title="facebook" target="_blank"><i class="ri-facebook-fill"></i></a>
+                
+                
+                
+                <a href="https://github.com/laurel-he" title="github" target="_blank"><i class="ri-github-fill"></i></a>
+                
+                
+                
+                <a href="%20" title="instagram" target="_blank"><i class="ri-instagram-fill"></i></a>
+                
+                
+                
+                
+                
+                <a href="%20" title="weibo" target="_blank"><i class="ri-weibo-fill"></i></a>
+                
                 
                 <a href="https://laurel-he.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
                         class="ri-rss-fill"></i></a>
@@ -150,7 +174,7 @@ kubenetes里所有资源的增删改查等操作的唯一入口，也是集群�
     </div>
 
     <div class="footer_slogan">
-        <span></span>
+        <span>My spiritual home</span>
     </div>
 </footer>
     <script src="https://laurel-he.github.io/js/jquery-3.5.1.min.js"></script>
@@ -158,6 +182,43 @@ kubenetes里所有资源的增删改查等操作的唯一入口，也是集群�
 <script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
 <script src="https://laurel-he.github.io/js/zozo.js"></script>
 
+
+<script type="text/javascript" async
+    src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\[\[', '\]\]']],
+                processEscapes: true,
+                processEnvironments: true,
+                skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                TeX: {
+                    equationNumbers: { autoNumber: "AMS" },
+                    extensions: ["AMSmath.js", "AMSsymbols.js"]
+                }
+            }
+        });
+
+        MathJax.Hub.Queue(function () {
+            
+            
+            
+            var all = MathJax.Hub.getAllJax(), i;
+            for (i = 0; i < all.length; i += 1) {
+                all[i].SourceElement().parentNode.className += ' has-jax';
+            }
+        });
+    </script>
+
+<style>
+    code.has-jax {
+        font: inherit;
+        font-size: 100%;
+        background: inherit;
+        border: inherit;
+        color: #515151;
+    }
+</style>
 
 
 

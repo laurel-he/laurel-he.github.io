@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html >
+<html lang="en" >
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="" />
+    <meta name="author" content="贺小娇" />
 	
 	
 	
-	<title> ｜ </title>
+	<title> ｜ 贺小娇的个人博客</title>
 	
     
     
-    <meta name="description" content="几种工厂模式 包括抽象工厂模式，工厂方法模式，简单工厂模式和静态工厂模式在内，都是属于创建型模式， 那么它们都是什么意思呢？
-抽象工厂模式 在不指定具体类的情况下创建一系列相关或依赖对象。 通常创建的类都实现相同的接口。 抽象工厂的客户并不关心这些对象是如何创建的，它只是知道它们是如何一起运行的。
-自然语言描述 抽象工厂模式是属于创造型模式，也就是说是用来创建类的。 可以想象成有一个工厂(Factory)，可以生产桌子(table)，椅子(chair)等等家具（furniture），它们都有共同的流程：组装（assemble） 现在要组装一个桌子，只需要拿到桌子的配件进行组装
-举例 interface Furniture { public function assemble(); } class Table implements Furniture { public function assemble() { echo &amp;#39;__ This function will assemble a table...&amp;#39;; } } class Chair implements Furniture { public function assemble() { echo &amp;#39;__ This function will &amp;#39;; } } 实验：实现一个用到所有设计模式的项目" />
+    <meta name="description" content="几种工厂模式 包括抽象工厂模式，工厂方法模式，简单工厂模式和静态工厂模式在内，都是属于创建型模式， 那么它们都是什么意思呢？ 抽象工厂模式 在不指定具体类的情况下创建一系列相关或依赖对象。 通常创建的类都实现相" />
     
 
+    
+    
+    <meta name="keywords" content="Hugo, blog, php" />
     
 
 	
@@ -40,6 +40,22 @@
     <div class="site_nav" id="site_nav">
         <ul>
             
+            <li>
+                <a href="/">主页</a>
+            </li>
+            
+            <li>
+                <a href="/posts/">Archive</a>
+            </li>
+            
+            <li>
+                <a href="/tags/">Tags</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
         </ul>
     </div>
     <div class="menu_icon">
@@ -51,13 +67,31 @@
         <div class="site_title">
             <h1>
                 <a href="https://laurel-he.github.io/">
-                    <span></span>
+                    <span>贺小娇的个人博客</span>
                 </a>
             </h1>
         </div>
         <div class="description">
-            <p class="sub_title"></p>
+            <p class="sub_title">the summary of my programing life</p>
             <div class="my_socials">
+                
+                
+                <a href="%20" title="facebook" target="_blank"><i class="ri-facebook-fill"></i></a>
+                
+                
+                
+                <a href="https://github.com/laurel-he" title="github" target="_blank"><i class="ri-github-fill"></i></a>
+                
+                
+                
+                <a href="%20" title="instagram" target="_blank"><i class="ri-instagram-fill"></i></a>
+                
+                
+                
+                
+                
+                <a href="%20" title="weibo" target="_blank"><i class="ri-weibo-fill"></i></a>
+                
                 
                 <a href="https://laurel-he.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
                         class="ri-rss-fill"></i></a>
@@ -84,24 +118,24 @@
 可以想象成有一个工厂(Factory)，可以生产桌子(table)，椅子(chair)等等家具（furniture），它们都有共同的流程：组装（assemble）
 现在要组装一个桌子，只需要拿到桌子的配件进行组装</p>
 <h3 id="举例">举例</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Furniture</span>
-{
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">assemble</span>();
-}
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Table</span> <span style="color:#66d9ef">implements</span> <span style="color:#a6e22e">Furniture</span>
-{
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">assemble</span>()
-    {
-        <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#39;__ This function will assemble a table...&#39;</span>;
-    }
-}
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Chair</span> <span style="color:#66d9ef">implements</span> <span style="color:#a6e22e">Furniture</span>
-{
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">assemble</span>()
-    {
-    <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#39;__ This function will &#39;</span>;
-    }
-}
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="k">interface</span> <span class="nx">Furniture</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">assemble</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="k">class</span> <span class="nc">Table</span> <span class="k">implements</span> <span class="nx">Furniture</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">assemble</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">echo</span> <span class="s1">&#39;__ This function will assemble a table...&#39;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="k">class</span> <span class="nc">Chair</span> <span class="k">implements</span> <span class="nx">Furniture</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">assemble</span><span class="p">()</span>
+    <span class="p">{</span>
+    <span class="k">echo</span> <span class="s1">&#39;__ This function will &#39;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div><p>实验：实现一个用到所有设计模式的项目</p>
 </div>
                     <div class="post_footer">
@@ -123,7 +157,7 @@
     </div>
 
     <div class="footer_slogan">
-        <span></span>
+        <span>My spiritual home</span>
     </div>
 </footer>
     <script src="https://laurel-he.github.io/js/jquery-3.5.1.min.js"></script>
@@ -131,6 +165,43 @@
 <script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
 <script src="https://laurel-he.github.io/js/zozo.js"></script>
 
+
+<script type="text/javascript" async
+    src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\[\[', '\]\]']],
+                processEscapes: true,
+                processEnvironments: true,
+                skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                TeX: {
+                    equationNumbers: { autoNumber: "AMS" },
+                    extensions: ["AMSmath.js", "AMSsymbols.js"]
+                }
+            }
+        });
+
+        MathJax.Hub.Queue(function () {
+            
+            
+            
+            var all = MathJax.Hub.getAllJax(), i;
+            for (i = 0; i < all.length; i += 1) {
+                all[i].SourceElement().parentNode.className += ' has-jax';
+            }
+        });
+    </script>
+
+<style>
+    code.has-jax {
+        font: inherit;
+        font-size: 100%;
+        background: inherit;
+        border: inherit;
+        color: #515151;
+    }
+</style>
 
 
 

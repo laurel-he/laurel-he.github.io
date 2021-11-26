@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>文件相关 on </title>
+    <title>文件相关 on 贺小娇的个人博客</title>
     <link>https://laurel-he.github.io/categories/%E6%96%87%E4%BB%B6%E7%9B%B8%E5%85%B3/</link>
-    <description>Recent content in 文件相关 on </description>
+    <description>Recent content in 文件相关 on 贺小娇的个人博客</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Thu, 27 Feb 2020 18:00:00 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/%E6%96%87%E4%BB%B6%E7%9B%B8%E5%85%B3/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>linux命令大全</title>
@@ -12,19 +13,7 @@
       <pubDate>Thu, 27 Feb 2020 18:00:00 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/operatingsystem/linuxuse/</guid>
-      <description>文件操作 cat 描述
-查看文件内容 参数
--n 或 –number 由 1 开始对所有输出的行数编号 -b 或 –number-nonblank 和 -n 相似，只不过对于空白行不编号 -s 或 –squeeze-blank 当遇到有连续两行以上的空白行，就代换为一行的空白行 -v 或 –show-nonprinting 举例 1 从键盘创建一个文件： 2 将几个文件合并成一个文件： cd 描述
-系统信息 arch 描述
-显示机器的处理器架构 举例
-uname 描述
-显示机器的处理器架构 参数
--a或&amp;ndash;all 显示全部的信息。 -m或&amp;ndash;machine 显示电脑类型。 -n或-nodename 显示在网络上的主机名称。 -r或&amp;ndash;release 显示操作系统的发行编号。 -s或&amp;ndash;sysname 显示操作系统名称。 -v 显示操作系统的版本。 &amp;ndash;help 显示帮助。 &amp;ndash;version 显示版本信息。 举例
-dmidecode 描述
-显示硬件信息，不常用，可忽略
-开关机 shutdown 描述
-关机或重启 参数
--t seconds : 设定在几秒钟之后进行关机程序。 -k : 并不会真的关机，只是将警告讯息传送给所有使用者。 -r : 关机后重新开机。 -h : 关机后停机。 -n : 不采用正常程序来关机，用强迫的方式杀掉所有执行中的程序后自行关机。 -c : 取消目前已经进行中的关机动作。 -f : 关机时，不做 fcsk 动作(检查 Linux 档系统)。 -F : 关机时，强迫进行 fsck 动作。 time : 设定关机的时间。 message : 传送给所有使用者的警告讯息。</description>
+      <description>文件操作 cat 描述 查看文件内容 参数 -n 或 –number 由 1 开始对所有输出的行数编号 -b 或 –number-nonblank 和 -n 相似，只不过对于空白行不编号 -s 或 –squeeze-blank 当遇到有连续两行以上的空</description>
     </item>
     
   </channel>

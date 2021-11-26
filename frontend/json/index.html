@@ -1,20 +1,23 @@
 <!DOCTYPE html>
-<html >
+<html lang="en" >
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="" />
+    <meta name="author" content="贺小娇" />
 	
 	
 	
-	<title>生成json映射表 ｜ </title>
+	<title>生成json映射表 ｜ 贺小娇的个人博客</title>
 	
     
     
-    <meta name="description" content="生成json映射表代码 &amp;lt;?php $dic = [ &amp;#39;qd&amp;#39; =&amp;gt; [...], &amp;#39;mp&amp;#39; =&amp;gt; [... 100], &amp;#39;jl&amp;#39; =&amp;gt; [...], &amp;#39;sb&amp;#39; =&amp;gt; [..., 50, 60, 70, 85, 100], &amp;#39;ly&amp;#39; =&amp;gt; [..., 50, 60, 70, 85, 100], &amp;#39;dy&amp;#39; =&amp;gt; [...0, 50, 60, 70, 85, 100], &amp;#39;sl&amp;#39; =&amp;gt; [...55, 60, 65, 70, 85, 100], &amp;#39;xl&amp;#39; =&amp;gt; [... 50, 55, 65, 75, 85, 100], &amp;#39;vl&amp;#39; =&amp;gt; [...50, 60, 70, 80, 90, 100], &amp;#39;rh&amp;#39; =&amp;gt; [... 100] ]; function getJson($dic) { $res = []; foreach($dic as $k =&amp;gt; $v){ $res[$k] = []; foreach($v as $key =&amp;gt; $val) { $res[$k][&amp;#39;mapV&amp;#39;][$key] = [ &amp;#39;label&amp;#39; =&amp;gt; (string)$key, &amp;#39;value&amp;#39; =&amp;gt; (string)$val ]; } } var_dump(json_encode($res)); } getJSON($dic); ?" />
+    <meta name="description" content="生成json映射表代码 &amp;lt;?php $dic = [ &amp;#39;qd&amp;#39; =&amp;gt; [...], &amp;#39;mp&amp;#39; =&amp;gt; [... 100], &amp;#39;jl&amp;#39; =&amp;gt; [...], &amp;#39;sb&amp;#39; =&amp;gt; [..., 50, 60, 70, 85, 100], &amp;#39;ly&amp;#39; =&amp;gt; [..., 50, 60, 70, 85, 100], &amp;#39;dy&amp;#39; =&amp;gt; [...0, 50, 60, 70, 85, 100], &amp;#39;sl&amp;#39; =&amp;gt; [...55, 60, 65, 70, 85, 100], &amp;#39;xl&amp;#39; =&amp;gt; [... 50, 55, 65, 75, 85, 100], &amp;#39;vl&amp;#39; =&amp;gt; [...50, 60, 70, 80, 90, 100], &amp;#39;rh&amp;#39; =&amp;gt; [... 100] ]; function getJson($dic) { $res = []; foreach($dic as $k =&amp;gt; $v){ $res[$k] = []; foreach($v as $key =&amp;gt; $val) { $res[$k][&amp;#39;mapV&amp;#39;][$key]" />
     
 
+    
+    
+    <meta name="keywords" content="Hugo, blog, php" />
     
 
 	
@@ -37,6 +40,22 @@
     <div class="site_nav" id="site_nav">
         <ul>
             
+            <li>
+                <a href="/">主页</a>
+            </li>
+            
+            <li>
+                <a href="/posts/">Archive</a>
+            </li>
+            
+            <li>
+                <a href="/tags/">Tags</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
         </ul>
     </div>
     <div class="menu_icon">
@@ -48,13 +67,31 @@
         <div class="site_title">
             <h1>
                 <a href="https://laurel-he.github.io/">
-                    <span></span>
+                    <span>贺小娇的个人博客</span>
                 </a>
             </h1>
         </div>
         <div class="description">
-            <p class="sub_title"></p>
+            <p class="sub_title">the summary of my programing life</p>
             <div class="my_socials">
+                
+                
+                <a href="%20" title="facebook" target="_blank"><i class="ri-facebook-fill"></i></a>
+                
+                
+                
+                <a href="https://github.com/laurel-he" title="github" target="_blank"><i class="ri-github-fill"></i></a>
+                
+                
+                
+                <a href="%20" title="instagram" target="_blank"><i class="ri-instagram-fill"></i></a>
+                
+                
+                
+                
+                
+                <a href="%20" title="weibo" target="_blank"><i class="ri-weibo-fill"></i></a>
+                
                 
                 <a href="https://laurel-he.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
                         class="ri-rss-fill"></i></a>
@@ -70,35 +107,35 @@
                         <span class="date">2019.08.15</span>
                     </div>
                     <div class="post_content markdown"><h2 id="生成json映射表代码">生成json映射表代码</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-$dic <span style="color:#f92672">=</span> [
-            <span style="color:#e6db74">&#39;qd&#39;</span> <span style="color:#f92672">=&gt;</span> [<span style="color:#f92672">...</span>],
-            <span style="color:#e6db74">&#39;mp&#39;</span> <span style="color:#f92672">=&gt;</span> [<span style="color:#f92672">...</span> <span style="color:#ae81ff">100</span>],
-            <span style="color:#e6db74">&#39;jl&#39;</span> <span style="color:#f92672">=&gt;</span> [<span style="color:#f92672">...</span>],
-            <span style="color:#e6db74">&#39;sb&#39;</span> <span style="color:#f92672">=&gt;</span> [<span style="color:#f92672">...</span>, <span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">60</span>, <span style="color:#ae81ff">70</span>, <span style="color:#ae81ff">85</span>, <span style="color:#ae81ff">100</span>],
-            <span style="color:#e6db74">&#39;ly&#39;</span> <span style="color:#f92672">=&gt;</span> [<span style="color:#f92672">...</span>, <span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">60</span>, <span style="color:#ae81ff">70</span>, <span style="color:#ae81ff">85</span>, <span style="color:#ae81ff">100</span>],
-            <span style="color:#e6db74">&#39;dy&#39;</span> <span style="color:#f92672">=&gt;</span> [<span style="color:#f92672">...</span><span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">60</span>, <span style="color:#ae81ff">70</span>, <span style="color:#ae81ff">85</span>, <span style="color:#ae81ff">100</span>],
-            <span style="color:#e6db74">&#39;sl&#39;</span> <span style="color:#f92672">=&gt;</span> [<span style="color:#f92672">...</span><span style="color:#ae81ff">55</span>, <span style="color:#ae81ff">60</span>, <span style="color:#ae81ff">65</span>, <span style="color:#ae81ff">70</span>, <span style="color:#ae81ff">85</span>, <span style="color:#ae81ff">100</span>],
-            <span style="color:#e6db74">&#39;xl&#39;</span> <span style="color:#f92672">=&gt;</span> [<span style="color:#f92672">...</span> <span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">55</span>, <span style="color:#ae81ff">65</span>, <span style="color:#ae81ff">75</span>, <span style="color:#ae81ff">85</span>, <span style="color:#ae81ff">100</span>],
-            <span style="color:#e6db74">&#39;vl&#39;</span> <span style="color:#f92672">=&gt;</span> [<span style="color:#f92672">...</span><span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">60</span>, <span style="color:#ae81ff">70</span>, <span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">90</span>, <span style="color:#ae81ff">100</span>],
-            <span style="color:#e6db74">&#39;rh&#39;</span> <span style="color:#f92672">=&gt;</span> [<span style="color:#f92672">...</span> <span style="color:#ae81ff">100</span>]
-        ];
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getJson</span>($dic) {
-    $res <span style="color:#f92672">=</span> [];
-<span style="color:#66d9ef">foreach</span>($dic <span style="color:#66d9ef">as</span> $k <span style="color:#f92672">=&gt;</span> $v){
-    $res[$k] <span style="color:#f92672">=</span> [];
-    <span style="color:#66d9ef">foreach</span>($v <span style="color:#66d9ef">as</span> $key <span style="color:#f92672">=&gt;</span> $val) {
-        $res[$k][<span style="color:#e6db74">&#39;mapV&#39;</span>][$key] <span style="color:#f92672">=</span> [
-            <span style="color:#e6db74">&#39;label&#39;</span> <span style="color:#f92672">=&gt;</span> (<span style="color:#a6e22e">string</span>)$key,
-            <span style="color:#e6db74">&#39;value&#39;</span> <span style="color:#f92672">=&gt;</span> (<span style="color:#a6e22e">string</span>)$val
-];
-}
-}
-<span style="color:#a6e22e">var_dump</span>(<span style="color:#a6e22e">json_encode</span>($res));
-}
-<span style="color:#a6e22e">getJSON</span>($dic);
-<span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
+<span class="nv">$dic</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="s1">&#39;qd&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="o">...</span><span class="p">],</span>
+            <span class="s1">&#39;mp&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="o">...</span> <span class="mi">100</span><span class="p">],</span>
+            <span class="s1">&#39;jl&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="o">...</span><span class="p">],</span>
+            <span class="s1">&#39;sb&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">100</span><span class="p">],</span>
+            <span class="s1">&#39;ly&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">100</span><span class="p">],</span>
+            <span class="s1">&#39;dy&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="o">...</span><span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">100</span><span class="p">],</span>
+            <span class="s1">&#39;sl&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="o">...</span><span class="mi">55</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">100</span><span class="p">],</span>
+            <span class="s1">&#39;xl&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="o">...</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">75</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">100</span><span class="p">],</span>
+            <span class="s1">&#39;vl&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="o">...</span><span class="mi">50</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">100</span><span class="p">],</span>
+            <span class="s1">&#39;rh&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="o">...</span> <span class="mi">100</span><span class="p">]</span>
+        <span class="p">];</span>
+<span class="k">function</span> <span class="nf">getJson</span><span class="p">(</span><span class="nv">$dic</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$res</span> <span class="o">=</span> <span class="p">[];</span>
+<span class="k">foreach</span><span class="p">(</span><span class="nv">$dic</span> <span class="k">as</span> <span class="nv">$k</span> <span class="o">=&gt;</span> <span class="nv">$v</span><span class="p">){</span>
+    <span class="nv">$res</span><span class="p">[</span><span class="nv">$k</span><span class="p">]</span> <span class="o">=</span> <span class="p">[];</span>
+    <span class="k">foreach</span><span class="p">(</span><span class="nv">$v</span> <span class="k">as</span> <span class="nv">$key</span> <span class="o">=&gt;</span> <span class="nv">$val</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nv">$res</span><span class="p">[</span><span class="nv">$k</span><span class="p">][</span><span class="s1">&#39;mapV&#39;</span><span class="p">][</span><span class="nv">$key</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="s1">&#39;label&#39;</span> <span class="o">=&gt;</span> <span class="p">(</span><span class="nx">string</span><span class="p">)</span><span class="nv">$key</span><span class="p">,</span>
+            <span class="s1">&#39;value&#39;</span> <span class="o">=&gt;</span> <span class="p">(</span><span class="nx">string</span><span class="p">)</span><span class="nv">$val</span>
+<span class="p">];</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="nx">var_dump</span><span class="p">(</span><span class="nx">json_encode</span><span class="p">(</span><span class="nv">$res</span><span class="p">));</span>
+<span class="p">}</span>
+<span class="nx">getJSON</span><span class="p">(</span><span class="nv">$dic</span><span class="p">);</span>
+<span class="cp">?&gt;</span><span class="err">
+</span><span class="err">
 </span></code></pre></div></div>
                     <div class="post_footer">
                         
@@ -119,7 +156,7 @@ $dic <span style="color:#f92672">=</span> [
     </div>
 
     <div class="footer_slogan">
-        <span></span>
+        <span>My spiritual home</span>
     </div>
 </footer>
     <script src="https://laurel-he.github.io/js/jquery-3.5.1.min.js"></script>
@@ -127,6 +164,43 @@ $dic <span style="color:#f92672">=</span> [
 <script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
 <script src="https://laurel-he.github.io/js/zozo.js"></script>
 
+
+<script type="text/javascript" async
+    src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\[\[', '\]\]']],
+                processEscapes: true,
+                processEnvironments: true,
+                skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                TeX: {
+                    equationNumbers: { autoNumber: "AMS" },
+                    extensions: ["AMSmath.js", "AMSsymbols.js"]
+                }
+            }
+        });
+
+        MathJax.Hub.Queue(function () {
+            
+            
+            
+            var all = MathJax.Hub.getAllJax(), i;
+            for (i = 0; i < all.length; i += 1) {
+                all[i].SourceElement().parentNode.className += ' has-jax';
+            }
+        });
+    </script>
+
+<style>
+    code.has-jax {
+        font: inherit;
+        font-size: 100%;
+        background: inherit;
+        border: inherit;
+        color: #515151;
+    }
+</style>
 
 
 

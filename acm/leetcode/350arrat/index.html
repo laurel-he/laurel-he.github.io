@@ -1,28 +1,23 @@
 <!DOCTYPE html>
-<html >
+<html lang="en" >
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="" />
+    <meta name="author" content="贺小娇" />
 	
 	
 	
-	<title>350. 两个数组的交集 II ｜ </title>
+	<title>350. 两个数组的交集 II ｜ 贺小娇的个人博客</title>
 	
     
     
-    <meta name="description" content="题目链接350. 两个数组的交集 II
-题目描述 难度 简单
-描述 给定两个数组，编写一个函数来计算它们的交集。
-示例 1： 输入：nums1 = [1,2,2,1], nums2 = [2,2] 输出：[2,2]
-示例 2: 输入：nums1 = [4,9,5], nums2 = [9,4,9,8,4] 输出：[4,9]
-说明： 输出结果中每个元素出现的次数，应与元素在两个数组中出现次数的最小值一致。 我们可以不考虑输出结果的顺序。
-进阶： 如果给定的数组已经排好序呢？你将如何优化你的算法？ 如果nums1的大小比nums2小很多，哪种方法更优？ 如果nums2的元素存储在磁盘上，内存是有限的，并且你不能一次加载所有的元素到内存中，你该怎么办？
-自行解法 思路 这里需要获取两个数组的交集，php有一个函数（array_intersect）可以获取两个数组的交集，但是和要求不符合。 当某个元素在数组a中存在，且在数组b中存在不止一次，array_intersect获得的交集不正确。 因此分析，可以直接循环较短的数组，和另一个较长的数组比较，当获得了一个交集元素的时候，就删除被比较的元素，代码如下：
-class Solution { function delOneFromArr($val, $delArr) { /** 删除数组中一个值为$val的数据 */ foreach($delArr as $key =&amp;gt; $arr) { if ($arr == $val) { unset($delArr[$key]); break; } } return $delArr; } /** * @param Integer[] $nums1 * @param Integer[] $nums2 * @return Integer[] */ function intersect($nums1, $nums2) { /** 循环较短的数组，挨个判断 */ list($checkArr, $otherArr) = count($nums1) &amp;gt;= count($nums2) ?" />
+    <meta name="description" content="题目链接350. 两个数组的交集 II 题目描述 难度 简单 描述 给定两个数组，编写一个函数来计算它们的交集。 示例 1： 输入：nums1 = [1,2,2,1], nums2 = [2,2] 输出：[2,2] 示例 2: 输入：nums1 = [4,9,5], nums2 = [9,4,9,8,4] 输出：[4,9] 说明：" />
     
 
+    
+    
+    <meta name="keywords" content="Hugo, blog, php" />
     
 
 	
@@ -45,6 +40,22 @@ class Solution { function delOneFromArr($val, $delArr) { /** 删除数组中一�
     <div class="site_nav" id="site_nav">
         <ul>
             
+            <li>
+                <a href="/">主页</a>
+            </li>
+            
+            <li>
+                <a href="/posts/">Archive</a>
+            </li>
+            
+            <li>
+                <a href="/tags/">Tags</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
         </ul>
     </div>
     <div class="menu_icon">
@@ -56,13 +67,31 @@ class Solution { function delOneFromArr($val, $delArr) { /** 删除数组中一�
         <div class="site_title">
             <h1>
                 <a href="https://laurel-he.github.io/">
-                    <span></span>
+                    <span>贺小娇的个人博客</span>
                 </a>
             </h1>
         </div>
         <div class="description">
-            <p class="sub_title"></p>
+            <p class="sub_title">the summary of my programing life</p>
             <div class="my_socials">
+                
+                
+                <a href="%20" title="facebook" target="_blank"><i class="ri-facebook-fill"></i></a>
+                
+                
+                
+                <a href="https://github.com/laurel-he" title="github" target="_blank"><i class="ri-github-fill"></i></a>
+                
+                
+                
+                <a href="%20" title="instagram" target="_blank"><i class="ri-instagram-fill"></i></a>
+                
+                
+                
+                
+                
+                <a href="%20" title="weibo" target="_blank"><i class="ri-weibo-fill"></i></a>
+                
                 
                 <a href="https://laurel-he.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
                         class="ri-rss-fill"></i></a>
@@ -101,41 +130,41 @@ class Solution { function delOneFromArr($val, $delArr) { /** 删除数组中一�
 <p>这里需要获取两个数组的交集，php有一个函数（array_intersect）可以获取两个数组的交集，但是和要求不符合。
 当某个元素在数组a中存在，且在数组b中存在不止一次，array_intersect获得的交集不正确。 <br>
 因此分析，可以直接循环较短的数组，和另一个较长的数组比较，当获得了一个交集元素的时候，就删除被比较的元素，代码如下：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
-    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">delOneFromArr</span>($val, $delArr)
-    {
-        <span style="color:#e6db74">/**
-</span><span style="color:#e6db74">        删除数组中一个值为$val的数据
-</span><span style="color:#e6db74">         */</span>
-        <span style="color:#66d9ef">foreach</span>($delArr <span style="color:#66d9ef">as</span> $key <span style="color:#f92672">=&gt;</span> $arr) {
-            <span style="color:#66d9ef">if</span> ($arr <span style="color:#f92672">==</span> $val) {
-                <span style="color:#a6e22e">unset</span>($delArr[$key]);
-                <span style="color:#66d9ef">break</span>;
-            }
-        }
-        <span style="color:#66d9ef">return</span> $delArr;
-    }
-    <span style="color:#e6db74">/**
-</span><span style="color:#e6db74">     * @param Integer[] $nums1
-</span><span style="color:#e6db74">     * @param Integer[] $nums2
-</span><span style="color:#e6db74">     * @return Integer[]
-</span><span style="color:#e6db74">     */</span>
-    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">intersect</span>($nums1, $nums2) {
-        <span style="color:#e6db74">/**
-</span><span style="color:#e6db74">        循环较短的数组，挨个判断
-</span><span style="color:#e6db74">         */</span>
-         <span style="color:#66d9ef">list</span>($checkArr, $otherArr) <span style="color:#f92672">=</span> <span style="color:#a6e22e">count</span>($nums1) <span style="color:#f92672">&gt;=</span> <span style="color:#a6e22e">count</span>($nums2) <span style="color:#f92672">?</span> [$nums2, $nums1] <span style="color:#f92672">:</span> [$nums1, $nums2];
-         $ret <span style="color:#f92672">=</span> [];
-         <span style="color:#66d9ef">foreach</span> ($checkArr <span style="color:#66d9ef">as</span> $check) {
-            <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">in_array</span>($check, $otherArr)) {
-                $otherArr <span style="color:#f92672">=</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">delOneFromArr</span>($check, $otherArr);
-                $ret[] <span style="color:#f92672">=</span> $check;
-            }
-         }
-         <span style="color:#66d9ef">return</span> $ret;
-    }
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+    <span class="k">function</span> <span class="nf">delOneFromArr</span><span class="p">(</span><span class="nv">$val</span><span class="p">,</span> <span class="nv">$delArr</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="sd">/**
+</span><span class="sd">        删除数组中一个值为$val的数据
+</span><span class="sd">         */</span>
+        <span class="k">foreach</span><span class="p">(</span><span class="nv">$delArr</span> <span class="k">as</span> <span class="nv">$key</span> <span class="o">=&gt;</span> <span class="nv">$arr</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nv">$arr</span> <span class="o">==</span> <span class="nv">$val</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">unset</span><span class="p">(</span><span class="nv">$delArr</span><span class="p">[</span><span class="nv">$key</span><span class="p">]);</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="nv">$delArr</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="sd">/**
+</span><span class="sd">     * @param Integer[] $nums1
+</span><span class="sd">     * @param Integer[] $nums2
+</span><span class="sd">     * @return Integer[]
+</span><span class="sd">     */</span>
+    <span class="k">function</span> <span class="nf">intersect</span><span class="p">(</span><span class="nv">$nums1</span><span class="p">,</span> <span class="nv">$nums2</span><span class="p">)</span> <span class="p">{</span>
+        <span class="sd">/**
+</span><span class="sd">        循环较短的数组，挨个判断
+</span><span class="sd">         */</span>
+         <span class="k">list</span><span class="p">(</span><span class="nv">$checkArr</span><span class="p">,</span> <span class="nv">$otherArr</span><span class="p">)</span> <span class="o">=</span> <span class="nx">count</span><span class="p">(</span><span class="nv">$nums1</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="nx">count</span><span class="p">(</span><span class="nv">$nums2</span><span class="p">)</span> <span class="o">?</span> <span class="p">[</span><span class="nv">$nums2</span><span class="p">,</span> <span class="nv">$nums1</span><span class="p">]</span> <span class="o">:</span> <span class="p">[</span><span class="nv">$nums1</span><span class="p">,</span> <span class="nv">$nums2</span><span class="p">];</span>
+         <span class="nv">$ret</span> <span class="o">=</span> <span class="p">[];</span>
+         <span class="k">foreach</span> <span class="p">(</span><span class="nv">$checkArr</span> <span class="k">as</span> <span class="nv">$check</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nx">in_array</span><span class="p">(</span><span class="nv">$check</span><span class="p">,</span> <span class="nv">$otherArr</span><span class="p">))</span> <span class="p">{</span>
+                <span class="nv">$otherArr</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">delOneFromArr</span><span class="p">(</span><span class="nv">$check</span><span class="p">,</span> <span class="nv">$otherArr</span><span class="p">);</span>
+                <span class="nv">$ret</span><span class="p">[]</span> <span class="o">=</span> <span class="nv">$check</span><span class="p">;</span>
+            <span class="p">}</span>
+         <span class="p">}</span>
+         <span class="k">return</span> <span class="nv">$ret</span><span class="p">;</span>
+    <span class="p">}</span>
 
-}
+<span class="p">}</span>
 </code></pre></div><h2 id="其他优质解法">其他优质解法</h2>
 </div>
                     <div class="post_footer">
@@ -168,7 +197,7 @@ class Solution { function delOneFromArr($val, $delArr) { /** 删除数组中一�
     </div>
 
     <div class="footer_slogan">
-        <span></span>
+        <span>My spiritual home</span>
     </div>
 </footer>
     <script src="https://laurel-he.github.io/js/jquery-3.5.1.min.js"></script>
@@ -176,6 +205,43 @@ class Solution { function delOneFromArr($val, $delArr) { /** 删除数组中一�
 <script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
 <script src="https://laurel-he.github.io/js/zozo.js"></script>
 
+
+<script type="text/javascript" async
+    src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\[\[', '\]\]']],
+                processEscapes: true,
+                processEnvironments: true,
+                skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                TeX: {
+                    equationNumbers: { autoNumber: "AMS" },
+                    extensions: ["AMSmath.js", "AMSsymbols.js"]
+                }
+            }
+        });
+
+        MathJax.Hub.Queue(function () {
+            
+            
+            
+            var all = MathJax.Hub.getAllJax(), i;
+            for (i = 0; i < all.length; i += 1) {
+                all[i].SourceElement().parentNode.className += ' has-jax';
+            }
+        });
+    </script>
+
+<style>
+    code.has-jax {
+        font: inherit;
+        font-size: 100%;
+        background: inherit;
+        border: inherit;
+        color: #515151;
+    }
+</style>
 
 
 

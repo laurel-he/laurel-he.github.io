@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>go on </title>
+    <title>go on 贺小娇的个人博客</title>
     <link>https://laurel-he.github.io/categories/go/</link>
-    <description>Recent content in go on </description>
+    <description>Recent content in go on 贺小娇的个人博客</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Thu, 25 Nov 2021 20:47:00 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/go/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>go语言学习</title>
@@ -12,13 +13,7 @@
       <pubDate>Thu, 25 Nov 2021 20:47:00 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/go/summary/</guid>
-      <description>参考文档： go文档 Go 语言教程
-前言 知识查漏补缺第一站，学习go语言。 我去年曾经大概看过go语言的一些语法，但并没有实际操作过，因此，这里假定我需要做一个小的电商平台，一步一步来实现。
-步骤 首先大概拆分下需求，需要做的是电商平台，确认需要以下模块： （1）商品管理 （2）用户管理 （3）订单管理 （4）物流系统
-技术选型 开发语言及框架  1(2021-11-25). 确认使用go语言开发：因为go语言目前使用较为广泛，社区支持稳定，且学习成本不高，效率高过php 目前框架未定，经调研目前较火的框架有Gin,Beego,Buffalom,Echo,Iris,Revel 很好，目前这些框架我都只知道名字，在网上查了一下各大框架的优缺点，实话说，目前我还无法做出选择，因此技术选型暂时跳过框架,待后续补充
- 数据库 基本数据库 确认使用mysql数据库：此需求数据结构稳定（订单，用户，商品）， 且mysql比较灵活，数据安全，innoDb引擎支持事务，环境搭建简单，开源； mysql有不同的存储引擎，应用场景广泛，拥有成熟的体系， 且我更擅长使用mysql
-缓存 使用redis做缓存
-队列 既然是商城，那么几乎都会涉及到秒杀等功能，那么就会有并发，就可能需要使用队列。</description>
+      <description>参考文档： go文档 Go 语言教程 前言 知识查漏补缺第一站，学习go语言。 我去年曾经大概看过go语言的一些语法，但并没有实际操作过，因此，这里假定我需要做一个小的电商平台，一步一步来实现。 步骤 首先大概拆分下需</description>
     </item>
     
     <item>
@@ -27,18 +22,7 @@
       <pubDate>Fri, 27 Aug 2021 13:47:00 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/go/basic/basic/</guid>
-      <description>参考文档： go文档 Go 语言教程 可以先看go语言学习路线图， 对大概学习路线有个了解。
-基础概念 go语言特色 Go语言在多核并发上拥有原生的设计优势， Go语言从底层原生支持并发，无须第三方库、开发者的编程技巧和开发经验。
-经过 Go 语言重构的系统能使用更少的硬件资源获得更高的并发和I/O吞吐表现。 充分挖掘硬件设备的潜力也满足当前精细化运营的市场大环境。
-Go语言的并发是基于 goroutine 的，goroutine 类似于线程，但并非线程。 可以将 goroutine 理解为一种虚拟线程。 Go 语言运行时会参与调度 goroutine，并将 goroutine 合理地分配到每个 CPU 中，最大限度地使用CPU性能。 开启一个goroutine的消耗非常小（大约2KB的内存），你可以轻松创建数百万个goroutine。
-goroutine的特点：
- 1.goroutine具有可增长的分段堆栈。这意味着它们只在需要时才会使用更多内存。 2.goroutine的启动时间比线程快。 3.goroutine原生支持利用channel安全地进行通信。 4.goroutine共享数据结构时无需使用互斥锁。
- go语言的主要特征  1.自动立即回收。 2.更丰富的内置类型。 3.函数多返回值。 4.错误处理。 5.匿名函数和闭包。 6.类型和接口。 7.并发编程。 8.反射。 9.语言交互性。
- 总结 Go语言天然支持并发，学习曲线平滑，代码风格统一
-go应用场景 go适合做什么 服务端开发 分布式系统，微服务 网络编程 区块链开发 内存KV数据库，例如boltDB、levelDB 云平台
-go语言用途 Go 语言被设计成一门应用于搭载 Web 服务器，存储集群或类似用途的巨型中央服务器的系统编程语言。 对于高性能分布式系统领域而言，Go 语言无疑比大多数其它语言有着更高的开发效率。 它提供了海量并行的支持，这对于游戏服务端的开发而言是再好不过了。
-安装 安装略
-go项目目录 在进行Go语言开发的时候，我们的代码总是会保存在$GOPATH/src目录下。 在工程经过go build、go install或go get等指令后， 会将下载的第三方包源代码文件放在$GOPATH/src目录下， 产生的二进制可执行文件放在 $GOPATH/bin目录下， 生成的中间缓存文件会被保存在 $GOPATH/pkg 下。</description>
+      <description>参考文档： go文档 Go 语言教程 可以先看go语言学习路线图， 对大概学习路线有个了解。 基础概念 go语言特色 Go语言在多核并发上拥有原生的设计优势， Go语言从底层原生支持并发，无须第三方库、开发者的编程技巧和</description>
     </item>
     
     <item>
@@ -47,10 +31,7 @@ go项目目录 在进行Go语言开发的时候，我们的代码总是会保存
       <pubDate>Fri, 27 Aug 2021 13:47:00 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/go/basic/basicuse/</guid>
-      <description>参考文档： go文档 Go 语言教程
-简单的go语言程序 package main import &amp;#34;fmt&amp;#34; func main() { var age, name string = &amp;#34;18&amp;#34;, &amp;#34;Joe&amp;#34; var res = fmt.Sprintf(&amp;#34;my name is %s, and my age is %s&amp;#34;, name, age) fmt.Println(res) } func init() { fmt.Println(&amp;#34;test init&amp;#34;) } func varTest() { var funcName, funcTime string = &amp;#34;varTest&amp;#34;, &amp;#34;now&amp;#34; fmt.Println(funcName + funcTime) } 使用go run来执行 使用go build 来生成二进制文件
-go语言结构 go语言的基础组成部分如下：
-包声明 示例 package main解释 第一行代码 package main 定义了包名。 必须在源文件中非注释的第一行指明这个文件属于哪个包，如：package main。 package main表示一个可独立执行的程序，每个 Go 应用程序都包含一个名为 main 的包</description>
+      <description>参考文档： go文档 Go 语言教程 简单的go语言程序 package main import &amp;#34;fmt&amp;#34; func main() { var age, name string = &amp;#34;18&amp;#34;, &amp;#34;Joe&amp;#34; var res = fmt.Sprintf(&amp;#34;my name is %s, and my age is %s&amp;#34;, name, age) fmt.Println(res) } func init() { fmt.Println(&amp;#34;test init&amp;#34;) } func varTest() { var funcName, funcTime string = &amp;#34;varTest&amp;#34;, &amp;#34;now&amp;#34; fmt.Println(funcName + funcTime) } 使用go run来执行 使用go build 来生成二进制文件 go语言</description>
     </item>
     
     <item>
@@ -68,11 +49,7 @@ go语言结构 go语言的基础组成部分如下：
       <pubDate>Fri, 27 Aug 2021 13:47:00 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/go/thegoprograming_01/</guid>
-      <description>基本介绍 可以参考此文章：https://docs.hacknode.org/gopl-zh/ch0/ch0-02.html
-基础使用 查看go版本 go version 引入代码 需要在环境变量中添加GOPATH目录，然后使用go get 命令下载代码，以下为《go语言圣经》的示例
-export GOPATH=$HOME/go # 选择工作目录 go get gopl.io/ch1/helloworld # 获取/编译/安装 $GOPATH/bin/helloworld # 运行程序 执行代码 执行代码使用go run命令
-go run hello.go 编译代码 编译代码使用go build命令，执行完后会生成一个可执行文件
-go build hello.go 代码详情 </description>
+      <description>基本介绍 可以参考此文章：https://docs.hacknode.org/gopl-zh/ch0/ch0-02.html 基础使用 查看go版本 go version 引入代码 需要在环境变量中添加GOPATH目录，然后使用</description>
     </item>
     
   </channel>

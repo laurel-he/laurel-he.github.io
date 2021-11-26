@@ -1,27 +1,23 @@
 <!DOCTYPE html>
-<html >
+<html lang="en" >
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="" />
+    <meta name="author" content="贺小娇" />
 	
 	
 	
-	<title>26. 删除有序数组中的重复项 ｜ </title>
+	<title>26. 删除有序数组中的重复项 ｜ 贺小娇的个人博客</title>
 	
     
     
-    <meta name="description" content="题目来源26. 删除有序数组中的重复项
-题目描述 难度 简单
-描述 给你一个有序数组 nums ，请你 原地 删除重复出现的元素，使每个元素 只出现一次 ，返回删除后数组的新长度。 不要使用额外的数组空间，你必须在 原地 修改输入数组 并在使用 O(1) 额外空间的条件下完成。
-说明: 为什么返回数值是整数，但输出的答案是数组呢?
-请注意，输入数组是以「引用」方式传递的，这意味着在函数里修改输入数组对于调用者是可见的。
-你可以想象内部操作如下:
-// nums 是以“引用”方式传递的。也就是说，不对实参做任何拷贝int len = removeDuplicates(nums);// 在函数里修改输入数组对于调用者是可见的。// 根据你的函数返回的长度, 它会打印出数组中 该长度范围内 的所有元素。for (int i = 0; i &amp;lt; len; i&#43;&#43;) {print(nums[i]);}示例 1： 输入：nums = [1,1,2] 输出：2, nums = [1,2] 解释：函数应该返回新的长度 2 ，并且原数组 nums 的前两个元素被修改为 1, 2 。不需要考虑数组中超出新长度后面的元素。
-示例 2： 输入：nums = [0,0,1,1,1,2,2,3,3,4] 输出：5, nums = [0,1,2,3,4] 解释：函数应该返回新的长度 5 ， 并且原数组 nums 的前五个元素被修改为 0, 1, 2, 3, 4 。不需要考虑数组中超出新长度后面的元素。" />
+    <meta name="description" content="题目来源26. 删除有序数组中的重复项 题目描述 难度 简单 描述 给你一个有序数组 nums ，请你 原地 删除重复出现的元素，使每个元素 只出现一次 ，返回删除后数组的新长度。 不要使用额外的数组空间，你必须在 原地 修改输入数组 并" />
     
 
+    
+    
+    <meta name="keywords" content="Hugo, blog, php" />
     
 
 	
@@ -44,6 +40,22 @@
     <div class="site_nav" id="site_nav">
         <ul>
             
+            <li>
+                <a href="/">主页</a>
+            </li>
+            
+            <li>
+                <a href="/posts/">Archive</a>
+            </li>
+            
+            <li>
+                <a href="/tags/">Tags</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
         </ul>
     </div>
     <div class="menu_icon">
@@ -55,13 +67,31 @@
         <div class="site_title">
             <h1>
                 <a href="https://laurel-he.github.io/">
-                    <span></span>
+                    <span>贺小娇的个人博客</span>
                 </a>
             </h1>
         </div>
         <div class="description">
-            <p class="sub_title"></p>
+            <p class="sub_title">the summary of my programing life</p>
             <div class="my_socials">
+                
+                
+                <a href="%20" title="facebook" target="_blank"><i class="ri-facebook-fill"></i></a>
+                
+                
+                
+                <a href="https://github.com/laurel-he" title="github" target="_blank"><i class="ri-github-fill"></i></a>
+                
+                
+                
+                <a href="%20" title="instagram" target="_blank"><i class="ri-instagram-fill"></i></a>
+                
+                
+                
+                
+                
+                <a href="%20" title="weibo" target="_blank"><i class="ri-weibo-fill"></i></a>
+                
                 
                 <a href="https://laurel-he.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
                         class="ri-rss-fill"></i></a>
@@ -87,7 +117,7 @@
 为什么返回数值是整数，但输出的答案是数组呢?</p>
 <p>请注意，输入数组是以「引用」方式传递的，这意味着在函数里修改输入数组对于调用者是可见的。</p>
 <p>你可以想象内部操作如下:</p>
-<pre><code>// nums 是以“引用”方式传递的。也就是说，不对实参做任何拷贝
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">// nums 是以“引用”方式传递的。也就是说，不对实参做任何拷贝
 int len = removeDuplicates(nums);
 
 // 在函数里修改输入数组对于调用者是可见的。
@@ -95,7 +125,7 @@ int len = removeDuplicates(nums);
 for (int i = 0; i &lt; len; i++) {
 print(nums[i]);
 }
-</code></pre><p><strong>示例 1：</strong>
+</code></pre></div><p><strong>示例 1：</strong>
 输入：nums = [1,1,2]
 输出：2, nums = [1,2]
 解释：函数应该返回新的长度 2 ，并且原数组 nums 的前两个元素被修改为 1, 2 。不需要考虑数组中超出新长度后面的元素。</p>
@@ -109,35 +139,35 @@ print(nums[i]);
 nums 已按升序排列</p>
 <h2 id="自行解法">自行解法</h2>
 <p>1 php有封装好的去重的函数，假设使用这个函数，将会变得非常简单：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
 
-    <span style="color:#e6db74">/**
-</span><span style="color:#e6db74">     * @param Integer[] $nums
-</span><span style="color:#e6db74">     * @return Integer
-</span><span style="color:#e6db74">     */</span>
-    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">removeDuplicates</span>(<span style="color:#f92672">&amp;</span>$nums) {
-        $nums <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_unique</span>($nums);
-        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">count</span>($nums);
-    }
-}
+    <span class="sd">/**
+</span><span class="sd">     * @param Integer[] $nums
+</span><span class="sd">     * @return Integer
+</span><span class="sd">     */</span>
+    <span class="k">function</span> <span class="nf">removeDuplicates</span><span class="p">(</span><span class="o">&amp;</span><span class="nv">$nums</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nv">$nums</span> <span class="o">=</span> <span class="nx">array_unique</span><span class="p">(</span><span class="nv">$nums</span><span class="p">);</span>
+        <span class="k">return</span> <span class="nx">count</span><span class="p">(</span><span class="nv">$nums</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div><p>2 但实际上这个题目考查的是有序数组去重，假设不使用自带的函数，由于数组是有序的，
 那么重复只会发生在相邻的值之间，每一个只需要和上一个比较，如果重复那么去掉即可</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
 
-    <span style="color:#e6db74">/**
-</span><span style="color:#e6db74">     * @param Integer[] $nums
-</span><span style="color:#e6db74">     * @return Integer
-</span><span style="color:#e6db74">     */</span>
-    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">removeDuplicates</span>(<span style="color:#f92672">&amp;</span>$nums) {
-        $countNum <span style="color:#f92672">=</span> <span style="color:#a6e22e">count</span>($nums);
-        <span style="color:#66d9ef">for</span> ($i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; $i <span style="color:#f92672">&lt;</span> $countNum; $i<span style="color:#f92672">++</span>) {
-            <span style="color:#66d9ef">if</span> ($nums[$i] <span style="color:#f92672">==</span> $nums[$i <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>]) {
-                <span style="color:#a6e22e">unset</span>($nums[$i <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>]);
-            }
-        }
-        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">count</span>($nums);
-    }
-}
+    <span class="sd">/**
+</span><span class="sd">     * @param Integer[] $nums
+</span><span class="sd">     * @return Integer
+</span><span class="sd">     */</span>
+    <span class="k">function</span> <span class="nf">removeDuplicates</span><span class="p">(</span><span class="o">&amp;</span><span class="nv">$nums</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nv">$countNum</span> <span class="o">=</span> <span class="nx">count</span><span class="p">(</span><span class="nv">$nums</span><span class="p">);</span>
+        <span class="k">for</span> <span class="p">(</span><span class="nv">$i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">&lt;</span> <span class="nv">$countNum</span><span class="p">;</span> <span class="nv">$i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nv">$nums</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span> <span class="o">==</span> <span class="nv">$nums</span><span class="p">[</span><span class="nv">$i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])</span> <span class="p">{</span>
+                <span class="nx">unset</span><span class="p">(</span><span class="nv">$nums</span><span class="p">[</span><span class="nv">$i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="nx">count</span><span class="p">(</span><span class="nv">$nums</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div></div>
                     <div class="post_footer">
                         
@@ -169,7 +199,7 @@ nums 已按升序排列</p>
     </div>
 
     <div class="footer_slogan">
-        <span></span>
+        <span>My spiritual home</span>
     </div>
 </footer>
     <script src="https://laurel-he.github.io/js/jquery-3.5.1.min.js"></script>
@@ -177,6 +207,43 @@ nums 已按升序排列</p>
 <script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
 <script src="https://laurel-he.github.io/js/zozo.js"></script>
 
+
+<script type="text/javascript" async
+    src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\[\[', '\]\]']],
+                processEscapes: true,
+                processEnvironments: true,
+                skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                TeX: {
+                    equationNumbers: { autoNumber: "AMS" },
+                    extensions: ["AMSmath.js", "AMSsymbols.js"]
+                }
+            }
+        });
+
+        MathJax.Hub.Queue(function () {
+            
+            
+            
+            var all = MathJax.Hub.getAllJax(), i;
+            for (i = 0; i < all.length; i += 1) {
+                all[i].SourceElement().parentNode.className += ' has-jax';
+            }
+        });
+    </script>
+
+<style>
+    code.has-jax {
+        font: inherit;
+        font-size: 100%;
+        background: inherit;
+        border: inherit;
+        color: #515151;
+    }
+</style>
 
 
 

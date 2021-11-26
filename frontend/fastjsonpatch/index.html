@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html >
+<html lang="en" >
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="" />
+    <meta name="author" content="贺小娇" />
 	
 	
 	
-	<title>fast-json-patch ｜ </title>
+	<title>fast-json-patch ｜ 贺小娇的个人博客</title>
 	
     
     
-    <meta name="description" content="fast-json-patch包使用 网上关于json-patch的中文介绍太少了，官方文档没有翻译版，所以写一下自己的学习文档，以下只是自己根据英文文档的理解，不保证正确。
-基础操作 json patch几大基础操作包括：add, replace, move, test, remove, copy
-applyPatch 给定文档和操作，执行操作
-import {applyOperation, applyPatch} from &amp;#39;fast-json-patch&amp;#39;; let document = document = { firstName: &amp;#34;Albert&amp;#34;, contactDetails: { phoneNumbers: [] } }; let patch = [ { op: &amp;#34;replace&amp;#34;, path: &amp;#34;/firstName&amp;#34;, value: &amp;#34;Joachim&amp;#34; }, { op: &amp;#34;add&amp;#34;, path: &amp;#34;/lastName&amp;#34;, value: &amp;#34;Wester&amp;#34; }, { op: &amp;#34;add&amp;#34;, path: &amp;#34;/contactDetails/phoneNumbers/0&amp;#34;, value: { number: &amp;#34;555-123&amp;#34; } } ]; const docu = applyPatch(document, patch) applyOperation 执行单独的操作而不是连贯操作,举例如下：" />
+    <meta name="description" content="fast-json-patch包使用 网上关于json-patch的中文介绍太少了，官方文档没有翻译版，所以写一下自己的学习文档，以下只是自己根据英文文档的理解，不保证正确。 基础操作 json patch几大基础" />
     
 
+    
+    
+    <meta name="keywords" content="Hugo, blog, php" />
     
 
 	
@@ -40,6 +40,22 @@ import {applyOperation, applyPatch} from &amp;#39;fast-json-patch&amp;#39;; let 
     <div class="site_nav" id="site_nav">
         <ul>
             
+            <li>
+                <a href="/">主页</a>
+            </li>
+            
+            <li>
+                <a href="/posts/">Archive</a>
+            </li>
+            
+            <li>
+                <a href="/tags/">Tags</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
         </ul>
     </div>
     <div class="menu_icon">
@@ -51,13 +67,31 @@ import {applyOperation, applyPatch} from &amp;#39;fast-json-patch&amp;#39;; let 
         <div class="site_title">
             <h1>
                 <a href="https://laurel-he.github.io/">
-                    <span></span>
+                    <span>贺小娇的个人博客</span>
                 </a>
             </h1>
         </div>
         <div class="description">
-            <p class="sub_title"></p>
+            <p class="sub_title">the summary of my programing life</p>
             <div class="my_socials">
+                
+                
+                <a href="%20" title="facebook" target="_blank"><i class="ri-facebook-fill"></i></a>
+                
+                
+                
+                <a href="https://github.com/laurel-he" title="github" target="_blank"><i class="ri-github-fill"></i></a>
+                
+                
+                
+                <a href="%20" title="instagram" target="_blank"><i class="ri-instagram-fill"></i></a>
+                
+                
+                
+                
+                
+                <a href="%20" title="weibo" target="_blank"><i class="ri-weibo-fill"></i></a>
+                
                 
                 <a href="https://laurel-he.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
                         class="ri-rss-fill"></i></a>
@@ -78,71 +112,71 @@ import {applyOperation, applyPatch} from &amp;#39;fast-json-patch&amp;#39;; let 
 <p>json patch几大基础操作包括：add, replace, move, test, remove, copy</p>
 <h2 id="applypatch">applyPatch</h2>
 <p>给定文档和操作，执行操作</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#66d9ef">import</span> {<span style="color:#a6e22e">applyOperation</span>, <span style="color:#a6e22e">applyPatch</span>} <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;fast-json-patch&#39;</span>;
-<span style="color:#66d9ef">let</span> document <span style="color:#f92672">=</span> document <span style="color:#f92672">=</span> { <span style="color:#a6e22e">firstName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Albert&#34;</span>, <span style="color:#a6e22e">contactDetails</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">phoneNumbers</span><span style="color:#f92672">:</span> [] } };
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">patch</span> <span style="color:#f92672">=</span> [
-  { <span style="color:#a6e22e">op</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;replace&#34;</span>, <span style="color:#a6e22e">path</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;/firstName&#34;</span>, <span style="color:#a6e22e">value</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Joachim&#34;</span> },
-  { <span style="color:#a6e22e">op</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;add&#34;</span>, <span style="color:#a6e22e">path</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;/lastName&#34;</span>, <span style="color:#a6e22e">value</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Wester&#34;</span> },
-  { <span style="color:#a6e22e">op</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;add&#34;</span>, <span style="color:#a6e22e">path</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;/contactDetails/phoneNumbers/0&#34;</span>, <span style="color:#a6e22e">value</span><span style="color:#f92672">:</span> { <span style="color:#66d9ef">number</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;555-123&#34;</span> }  }
-];
-<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">docu</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">applyPatch</span>(document, <span style="color:#a6e22e">patch</span>)
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="p">{</span><span class="nx">applyOperation</span><span class="p">,</span> <span class="nx">applyPatch</span><span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;fast-json-patch&#39;</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nb">document</span> <span class="o">=</span> <span class="nb">document</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">firstName</span><span class="o">:</span> <span class="s2">&#34;Albert&#34;</span><span class="p">,</span> <span class="nx">contactDetails</span><span class="o">:</span> <span class="p">{</span> <span class="nx">phoneNumbers</span><span class="o">:</span> <span class="p">[]</span> <span class="p">}</span> <span class="p">};</span>
+<span class="kd">let</span> <span class="nx">patch</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="p">{</span> <span class="nx">op</span><span class="o">:</span> <span class="s2">&#34;replace&#34;</span><span class="p">,</span> <span class="nx">path</span><span class="o">:</span> <span class="s2">&#34;/firstName&#34;</span><span class="p">,</span> <span class="nx">value</span><span class="o">:</span> <span class="s2">&#34;Joachim&#34;</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="nx">op</span><span class="o">:</span> <span class="s2">&#34;add&#34;</span><span class="p">,</span> <span class="nx">path</span><span class="o">:</span> <span class="s2">&#34;/lastName&#34;</span><span class="p">,</span> <span class="nx">value</span><span class="o">:</span> <span class="s2">&#34;Wester&#34;</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="nx">op</span><span class="o">:</span> <span class="s2">&#34;add&#34;</span><span class="p">,</span> <span class="nx">path</span><span class="o">:</span> <span class="s2">&#34;/contactDetails/phoneNumbers/0&#34;</span><span class="p">,</span> <span class="nx">value</span><span class="o">:</span> <span class="p">{</span> <span class="kt">number</span><span class="o">:</span> <span class="s2">&#34;555-123&#34;</span> <span class="p">}</span>  <span class="p">}</span>
+<span class="p">];</span>
+<span class="kr">const</span> <span class="nx">docu</span> <span class="o">=</span> <span class="nx">applyPatch</span><span class="p">(</span><span class="nb">document</span><span class="p">,</span> <span class="nx">patch</span><span class="p">)</span>
 </code></pre></div><h2 id="applyoperation">applyOperation</h2>
 <p>执行单独的操作而不是连贯操作,举例如下：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#66d9ef">var</span> document <span style="color:#f92672">=</span> { <span style="color:#a6e22e">firstName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Albert&#34;</span>, <span style="color:#a6e22e">contactDetails</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">phoneNumbers</span><span style="color:#f92672">:</span> [] } };
-<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">operation</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">op</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;replace&#34;</span>, <span style="color:#a6e22e">path</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;/firstName&#34;</span>, <span style="color:#a6e22e">value</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Joachim&#34;</span> };
-document <span style="color:#f92672">=</span> <span style="color:#a6e22e">jsonpatch</span>.<span style="color:#a6e22e">applyOperation</span>(document, <span style="color:#a6e22e">operation</span>).<span style="color:#a6e22e">newDocument</span>;
-<span style="color:#75715e">// document == { firstName: &#34;Joachim&#34;, contactDetails: { phoneNumbers: [] }}
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kd">var</span> <span class="nb">document</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">firstName</span><span class="o">:</span> <span class="s2">&#34;Albert&#34;</span><span class="p">,</span> <span class="nx">contactDetails</span><span class="o">:</span> <span class="p">{</span> <span class="nx">phoneNumbers</span><span class="o">:</span> <span class="p">[]</span> <span class="p">}</span> <span class="p">};</span>
+<span class="kd">var</span> <span class="nx">operation</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">op</span><span class="o">:</span> <span class="s2">&#34;replace&#34;</span><span class="p">,</span> <span class="nx">path</span><span class="o">:</span> <span class="s2">&#34;/firstName&#34;</span><span class="p">,</span> <span class="nx">value</span><span class="o">:</span> <span class="s2">&#34;Joachim&#34;</span> <span class="p">};</span>
+<span class="nb">document</span> <span class="o">=</span> <span class="nx">jsonpatch</span><span class="p">.</span><span class="nx">applyOperation</span><span class="p">(</span><span class="nb">document</span><span class="p">,</span> <span class="nx">operation</span><span class="p">).</span><span class="nx">newDocument</span><span class="p">;</span>
+<span class="c1">// document == { firstName: &#34;Joachim&#34;, contactDetails: { phoneNumbers: [] }}
 </span></code></pre></div><h2 id="applyreducer">applyReducer</h2>
 <p>看了英文原文文档并不很确定，只能根据自己的理解来看。 <br>
 javascript的reduce是一个累加器，使用applyReducer作为累加操作，当定义的操作是一组数组时，使用applyReducer执行操作，示例如下：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#66d9ef">var</span> document <span style="color:#f92672">=</span> { <span style="color:#a6e22e">firstName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Albert&#34;</span>, <span style="color:#a6e22e">contactDetails</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">phoneNumbers</span><span style="color:#f92672">:</span> [ ] } };
-<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">patch</span> <span style="color:#f92672">=</span> [
-  { <span style="color:#a6e22e">op</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;replace&#34;</span>, <span style="color:#a6e22e">path</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;/firstName&#34;</span>, <span style="color:#a6e22e">value</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Joachim&#34;</span> },
-  { <span style="color:#a6e22e">op</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;add&#34;</span>, <span style="color:#a6e22e">path</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;/lastName&#34;</span>, <span style="color:#a6e22e">value</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Wester&#34;</span> },
-  { <span style="color:#a6e22e">op</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;add&#34;</span>, <span style="color:#a6e22e">path</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;/contactDetails/phoneNumbers/0&#34;</span>, <span style="color:#a6e22e">value</span><span style="color:#f92672">:</span> { <span style="color:#66d9ef">number</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;555-123&#34;</span> } }
-];
-<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">updatedDocument</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">patch</span>.<span style="color:#a6e22e">reduce</span>(<span style="color:#a6e22e">applyReducer</span>, document);
-<span style="color:#75715e">// updatedDocument == { firstName:&#34;Joachim&#34;, lastName:&#34;Wester&#34;, contactDetails:{ phoneNumbers[ {number:&#34;555-123&#34;} ] } };
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kd">var</span> <span class="nb">document</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">firstName</span><span class="o">:</span> <span class="s2">&#34;Albert&#34;</span><span class="p">,</span> <span class="nx">contactDetails</span><span class="o">:</span> <span class="p">{</span> <span class="nx">phoneNumbers</span><span class="o">:</span> <span class="p">[</span> <span class="p">]</span> <span class="p">}</span> <span class="p">};</span>
+<span class="kd">var</span> <span class="nx">patch</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="p">{</span> <span class="nx">op</span><span class="o">:</span><span class="s2">&#34;replace&#34;</span><span class="p">,</span> <span class="nx">path</span><span class="o">:</span> <span class="s2">&#34;/firstName&#34;</span><span class="p">,</span> <span class="nx">value</span><span class="o">:</span> <span class="s2">&#34;Joachim&#34;</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="nx">op</span><span class="o">:</span><span class="s2">&#34;add&#34;</span><span class="p">,</span> <span class="nx">path</span><span class="o">:</span> <span class="s2">&#34;/lastName&#34;</span><span class="p">,</span> <span class="nx">value</span><span class="o">:</span> <span class="s2">&#34;Wester&#34;</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="nx">op</span><span class="o">:</span><span class="s2">&#34;add&#34;</span><span class="p">,</span> <span class="nx">path</span><span class="o">:</span> <span class="s2">&#34;/contactDetails/phoneNumbers/0&#34;</span><span class="p">,</span> <span class="nx">value</span><span class="o">:</span> <span class="p">{</span> <span class="kt">number</span><span class="o">:</span> <span class="s2">&#34;555-123&#34;</span> <span class="p">}</span> <span class="p">}</span>
+<span class="p">];</span>
+<span class="kd">var</span> <span class="nx">updatedDocument</span> <span class="o">=</span> <span class="nx">patch</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="nx">applyReducer</span><span class="p">,</span> <span class="nb">document</span><span class="p">);</span>
+<span class="c1">// updatedDocument == { firstName:&#34;Joachim&#34;, lastName:&#34;Wester&#34;, contactDetails:{ phoneNumbers[ {number:&#34;555-123&#34;} ] } };
 </span></code></pre></div><h2 id="generating-patches">Generating patches</h2>
 <p>提供一个类似于观察者，先获取原始文档结构（observe），之后文档进行变化，最后执行操作，可以得到应有的操作流程。示例如下：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#66d9ef">var</span> document <span style="color:#f92672">=</span> { <span style="color:#a6e22e">firstName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Joachim&#34;</span>, <span style="color:#a6e22e">lastName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Wester&#34;</span>, <span style="color:#a6e22e">contactDetails</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">phoneNumbers</span><span style="color:#f92672">:</span> [ { <span style="color:#66d9ef">number</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;555-123&#34;</span> }] } };
-<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">observer</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">jsonpatch</span>.<span style="color:#a6e22e">observe</span>(document);
-document.<span style="color:#a6e22e">firstName</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Albert&#34;</span>;
-document.<span style="color:#a6e22e">contactDetails</span>.<span style="color:#a6e22e">phoneNumbers</span>[<span style="color:#ae81ff">0</span>].<span style="color:#66d9ef">number</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;123&#34;</span>;
-document.<span style="color:#a6e22e">contactDetails</span>.<span style="color:#a6e22e">phoneNumbers</span>.<span style="color:#a6e22e">push</span>({ <span style="color:#66d9ef">number</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;456&#34;</span> });
-<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">patch</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">jsonpatch</span>.<span style="color:#a6e22e">generate</span>(<span style="color:#a6e22e">observer</span>);
-<span style="color:#75715e">// patch  == [
-</span><span style="color:#75715e">//   { op: &#34;replace&#34;, path: &#34;/firstName&#34;, value: &#34;Albert&#34;},
-</span><span style="color:#75715e">//   { op: &#34;replace&#34;, path: &#34;/contactDetails/phoneNumbers/0/number&#34;, value: &#34;123&#34; },
-</span><span style="color:#75715e">//   { op: &#34;add&#34;, path: &#34;/contactDetails/phoneNumbers/1&#34;, value: {number:&#34;456&#34;}}
-</span><span style="color:#75715e">// ];
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kd">var</span> <span class="nb">document</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">firstName</span><span class="o">:</span> <span class="s2">&#34;Joachim&#34;</span><span class="p">,</span> <span class="nx">lastName</span><span class="o">:</span> <span class="s2">&#34;Wester&#34;</span><span class="p">,</span> <span class="nx">contactDetails</span><span class="o">:</span> <span class="p">{</span> <span class="nx">phoneNumbers</span><span class="o">:</span> <span class="p">[</span> <span class="p">{</span> <span class="kt">number</span><span class="o">:</span><span class="s2">&#34;555-123&#34;</span> <span class="p">}]</span> <span class="p">}</span> <span class="p">};</span>
+<span class="kd">var</span> <span class="nx">observer</span> <span class="o">=</span> <span class="nx">jsonpatch</span><span class="p">.</span><span class="nx">observe</span><span class="p">(</span><span class="nb">document</span><span class="p">);</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">firstName</span> <span class="o">=</span> <span class="s2">&#34;Albert&#34;</span><span class="p">;</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">contactDetails</span><span class="p">.</span><span class="nx">phoneNumbers</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="kt">number</span> <span class="o">=</span> <span class="s2">&#34;123&#34;</span><span class="p">;</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">contactDetails</span><span class="p">.</span><span class="nx">phoneNumbers</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span> <span class="kt">number</span><span class="o">:</span><span class="s2">&#34;456&#34;</span> <span class="p">});</span>
+<span class="kd">var</span> <span class="nx">patch</span> <span class="o">=</span> <span class="nx">jsonpatch</span><span class="p">.</span><span class="nx">generate</span><span class="p">(</span><span class="nx">observer</span><span class="p">);</span>
+<span class="c1">// patch  == [
+</span><span class="c1">//   { op: &#34;replace&#34;, path: &#34;/firstName&#34;, value: &#34;Albert&#34;},
+</span><span class="c1">//   { op: &#34;replace&#34;, path: &#34;/contactDetails/phoneNumbers/0/number&#34;, value: &#34;123&#34; },
+</span><span class="c1">//   { op: &#34;add&#34;, path: &#34;/contactDetails/phoneNumbers/1&#34;, value: {number:&#34;456&#34;}}
+</span><span class="c1">// ];
 </span></code></pre></div><h2 id="比较两个文档-compare">比较两个文档-compare</h2>
 <p>直接比较两个文档，得出从文档A到文档B应有哪些操作（得到操作后可以尝试用这个操作来更新B文档）</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">documentA</span> <span style="color:#f92672">=</span> {<span style="color:#a6e22e">user</span><span style="color:#f92672">:</span> {<span style="color:#a6e22e">firstName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Albert&#34;</span>, <span style="color:#a6e22e">lastName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Einstein&#34;</span>}};
-<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">documentB</span> <span style="color:#f92672">=</span> {<span style="color:#a6e22e">user</span><span style="color:#f92672">:</span> {<span style="color:#a6e22e">firstName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Albert&#34;</span>, <span style="color:#a6e22e">lastName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Collins&#34;</span>}};
-<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">diff</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">jsonpatch</span>.<span style="color:#a6e22e">compare</span>(<span style="color:#a6e22e">documentA</span>, <span style="color:#a6e22e">documentB</span>);
-<span style="color:#75715e">//diff == [{op: &#34;replace&#34;, path: &#34;/user/lastName&#34;, value: &#34;Collins&#34;}]
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kd">var</span> <span class="nx">documentA</span> <span class="o">=</span> <span class="p">{</span><span class="nx">user</span><span class="o">:</span> <span class="p">{</span><span class="nx">firstName</span><span class="o">:</span> <span class="s2">&#34;Albert&#34;</span><span class="p">,</span> <span class="nx">lastName</span><span class="o">:</span> <span class="s2">&#34;Einstein&#34;</span><span class="p">}};</span>
+<span class="kd">var</span> <span class="nx">documentB</span> <span class="o">=</span> <span class="p">{</span><span class="nx">user</span><span class="o">:</span> <span class="p">{</span><span class="nx">firstName</span><span class="o">:</span> <span class="s2">&#34;Albert&#34;</span><span class="p">,</span> <span class="nx">lastName</span><span class="o">:</span> <span class="s2">&#34;Collins&#34;</span><span class="p">}};</span>
+<span class="kd">var</span> <span class="nx">diff</span> <span class="o">=</span> <span class="nx">jsonpatch</span><span class="p">.</span><span class="nx">compare</span><span class="p">(</span><span class="nx">documentA</span><span class="p">,</span> <span class="nx">documentB</span><span class="p">);</span>
+<span class="c1">//diff == [{op: &#34;replace&#34;, path: &#34;/user/lastName&#34;, value: &#34;Collins&#34;}]
 </span></code></pre></div><h2 id="验证修补程序序列">验证修补程序序列</h2>
 <p>对patch做校验，验证这个补丁是否可以应用到指定的对象上（可能是这个意思）,如果出错可以打印出错误信息</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span> {<span style="color:#a6e22e">user</span><span style="color:#f92672">:</span> {<span style="color:#a6e22e">firstName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Albert&#34;</span>}};
-<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">patches</span> <span style="color:#f92672">=</span> [{<span style="color:#a6e22e">op</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;replace&#34;</span>, <span style="color:#a6e22e">path</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;/user/firstName&#34;</span>, <span style="color:#a6e22e">value</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Albert&#34;</span>}, {<span style="color:#a6e22e">op</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;replace&#34;</span>, <span style="color:#a6e22e">path</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;/user/lastName&#34;</span>, <span style="color:#a6e22e">value</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Einstein&#34;</span>}];
-<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">errors</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">jsonpatch</span>.<span style="color:#a6e22e">validate</span>(<span style="color:#a6e22e">patches</span>, <span style="color:#a6e22e">obj</span>);
-<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">errors</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>) {
- <span style="color:#75715e">//there are no errors!
-</span><span style="color:#75715e"></span>}
-<span style="color:#66d9ef">else</span> {
-  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">errors</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
-    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">errors</span>[<span style="color:#a6e22e">i</span>]) {
-      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Valid patch at index&#34;</span>, <span style="color:#a6e22e">i</span>, <span style="color:#a6e22e">patches</span>[<span style="color:#a6e22e">i</span>]);
-    }
-    <span style="color:#66d9ef">else</span> {
-      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#e6db74">&#34;Invalid patch at index&#34;</span>, <span style="color:#a6e22e">i</span>, <span style="color:#a6e22e">errors</span>[<span style="color:#a6e22e">i</span>], <span style="color:#a6e22e">patches</span>[<span style="color:#a6e22e">i</span>]);
-    }
-  }
-}
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span><span class="nx">user</span><span class="o">:</span> <span class="p">{</span><span class="nx">firstName</span><span class="o">:</span> <span class="s2">&#34;Albert&#34;</span><span class="p">}};</span>
+<span class="kd">var</span> <span class="nx">patches</span> <span class="o">=</span> <span class="p">[{</span><span class="nx">op</span><span class="o">:</span> <span class="s2">&#34;replace&#34;</span><span class="p">,</span> <span class="nx">path</span><span class="o">:</span> <span class="s2">&#34;/user/firstName&#34;</span><span class="p">,</span> <span class="nx">value</span><span class="o">:</span> <span class="s2">&#34;Albert&#34;</span><span class="p">},</span> <span class="p">{</span><span class="nx">op</span><span class="o">:</span> <span class="s2">&#34;replace&#34;</span><span class="p">,</span> <span class="nx">path</span><span class="o">:</span> <span class="s2">&#34;/user/lastName&#34;</span><span class="p">,</span> <span class="nx">value</span><span class="o">:</span> <span class="s2">&#34;Einstein&#34;</span><span class="p">}];</span>
+<span class="kd">var</span> <span class="nx">errors</span> <span class="o">=</span> <span class="nx">jsonpatch</span><span class="p">.</span><span class="nx">validate</span><span class="p">(</span><span class="nx">patches</span><span class="p">,</span> <span class="nx">obj</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">errors</span><span class="p">.</span><span class="nx">length</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+ <span class="c1">//there are no errors!
+</span><span class="c1"></span><span class="p">}</span>
+<span class="k">else</span> <span class="p">{</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">errors</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">errors</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Valid patch at index&#34;</span><span class="p">,</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">patches</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">&#34;Invalid patch at index&#34;</span><span class="p">,</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">errors</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span> <span class="nx">patches</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div><h1 id="json-patch-api">Json Patch API</h1>
 <p>函数原型：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">applyPatch</span>&lt;<span style="color:#f92672">T</span>&gt;(document<span style="color:#f92672">:</span> <span style="color:#a6e22e">T</span>, <span style="color:#a6e22e">patch</span>: <span style="color:#66d9ef">Operation</span>[], <span style="color:#a6e22e">validateOperation?</span>: <span style="color:#66d9ef">boolean</span> <span style="color:#f92672">|</span> <span style="color:#a6e22e">Validator</span>&lt;<span style="color:#f92672">T</span>&gt;, <span style="color:#a6e22e">mutateDocument</span>: <span style="color:#66d9ef">boolean</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>, <span style="color:#a6e22e">banPrototypeModifications</span>: <span style="color:#66d9ef">boolean</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>)<span style="color:#f92672">:</span> <span style="color:#a6e22e">PatchResult</span>&lt;<span style="color:#f92672">T</span>&gt;
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kd">function</span> <span class="nx">applyPatch</span><span class="p">&lt;</span><span class="nt">T</span><span class="p">&gt;(</span><span class="nb">document</span><span class="o">:</span> <span class="nx">T</span><span class="p">,</span> <span class="nx">patch</span>: <span class="kt">Operation</span><span class="p">[],</span> <span class="nx">validateOperation?</span>: <span class="kt">boolean</span> <span class="o">|</span> <span class="nx">Validator</span><span class="p">&lt;</span><span class="nt">T</span><span class="p">&gt;,</span> <span class="nx">mutateDocument</span>: <span class="kt">boolean</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span> <span class="nx">banPrototypeModifications</span>: <span class="kt">boolean</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span><span class="o">:</span> <span class="nx">PatchResult</span><span class="p">&lt;</span><span class="nt">T</span><span class="p">&gt;</span>
 </code></pre></div><p>对参数的释义：</p>
 <ul>
 <li>document：将要patch的文档；</li>
@@ -182,7 +216,7 @@ document.<span style="color:#a6e22e">contactDetails</span>.<span style="color:#a
     </div>
 
     <div class="footer_slogan">
-        <span></span>
+        <span>My spiritual home</span>
     </div>
 </footer>
     <script src="https://laurel-he.github.io/js/jquery-3.5.1.min.js"></script>
@@ -190,6 +224,43 @@ document.<span style="color:#a6e22e">contactDetails</span>.<span style="color:#a
 <script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
 <script src="https://laurel-he.github.io/js/zozo.js"></script>
 
+
+<script type="text/javascript" async
+    src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\[\[', '\]\]']],
+                processEscapes: true,
+                processEnvironments: true,
+                skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                TeX: {
+                    equationNumbers: { autoNumber: "AMS" },
+                    extensions: ["AMSmath.js", "AMSsymbols.js"]
+                }
+            }
+        });
+
+        MathJax.Hub.Queue(function () {
+            
+            
+            
+            var all = MathJax.Hub.getAllJax(), i;
+            for (i = 0; i < all.length; i += 1) {
+                all[i].SourceElement().parentNode.className += ' has-jax';
+            }
+        });
+    </script>
+
+<style>
+    code.has-jax {
+        font: inherit;
+        font-size: 100%;
+        background: inherit;
+        border: inherit;
+        color: #515151;
+    }
+</style>
 
 
 

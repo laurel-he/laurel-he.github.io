@@ -1,24 +1,23 @@
 <!DOCTYPE html>
-<html >
+<html lang="en" >
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="" />
+    <meta name="author" content="贺小娇" />
 	
 	
 	
-	<title>php下es基本使用 ｜ </title>
+	<title>php下es基本使用 ｜ 贺小娇的个人博客</title>
 	
     
     
-    <meta name="description" content="本文参考文档: es7.3文档 全文搜索引擎 Elasticsearch 入门教程
-基础介绍 全文搜索属于最常见的需求，开源的 Elasticsearch是目前全文搜索引擎的首选。它可以快速地储存、搜索和分析海量数据。
-安装 不同环境下安装方式不同，可以采用下载安装包，apt-get，yum安装等各种方法，在wsl下linux安装需要注意，wsl下的Linux系统没有使用systemd，可以尝试用SysV init的命令代替systemd，或者安装systemd命令 安装完后直接执行curl localhost:9200可以获取到es基本信息，例如我执行后结果如下：
-{ &amp;#34;name&amp;#34; : &amp;#34;MS-RWTYITLHLCWO&amp;#34;, &amp;#34;cluster_name&amp;#34; : &amp;#34;elasticsearch&amp;#34;, &amp;#34;cluster_uuid&amp;#34; : &amp;#34;j9WVJcIFRq6bEa3bwXCARA&amp;#34;, &amp;#34;version&amp;#34; : { &amp;#34;number&amp;#34; : &amp;#34;7.15.2&amp;#34;, &amp;#34;build_flavor&amp;#34; : &amp;#34;default&amp;#34;, &amp;#34;build_type&amp;#34; : &amp;#34;deb&amp;#34;, &amp;#34;build_hash&amp;#34; : &amp;#34;93d5a7f6192e8a1a12e154a2b81bf6fa7309da0c&amp;#34;, &amp;#34;build_date&amp;#34; : &amp;#34;2021-11-04T14:04:42.515624022Z&amp;#34;, &amp;#34;build_snapshot&amp;#34; : false, &amp;#34;lucene_version&amp;#34; : &amp;#34;8.9.0&amp;#34;, &amp;#34;minimum_wire_compatibility_version&amp;#34; : &amp;#34;6.8.0&amp;#34;, &amp;#34;minimum_index_compatibility_version&amp;#34; : &amp;#34;6.0.0-beta1&amp;#34; }, &amp;#34;tagline&amp;#34; : &amp;#34;You Know, for Search&amp;#34; } 使用 引入包 正常通过Restful API方式使用在各个文档中都有详细介绍，在此省略，说一下在php中如何使用。 在laravel或yii2等主流框架中都有自己使用es的包，例如yiisoft/yii2-elasticsearch或basemkhirat/elasticsearch等等，但假设使用的是自研框架呢？ 目前我使用的是基于swoole开发的自研框架，引入了elasticsearch/elasticsearch包，在composer require elasticsearch/elasticsearch时，会自动根据php版本引入包
-配置 连接池 " />
+    <meta name="description" content="本文参考文档: es7.3文档 全文搜索引擎 Elasticsearch 入门教程 基础介绍 全文搜索属于最常见的需求，开源的 Elasticsearch是目前全文搜索引擎的首选。它可以快速地储存、搜索和分析海量数据。 安装 不同环境下安装方" />
     
 
+    
+    
+    <meta name="keywords" content="Hugo, blog, php" />
     
 
 	
@@ -41,6 +40,22 @@
     <div class="site_nav" id="site_nav">
         <ul>
             
+            <li>
+                <a href="/">主页</a>
+            </li>
+            
+            <li>
+                <a href="/posts/">Archive</a>
+            </li>
+            
+            <li>
+                <a href="/tags/">Tags</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
         </ul>
     </div>
     <div class="menu_icon">
@@ -52,13 +67,31 @@
         <div class="site_title">
             <h1>
                 <a href="https://laurel-he.github.io/">
-                    <span></span>
+                    <span>贺小娇的个人博客</span>
                 </a>
             </h1>
         </div>
         <div class="description">
-            <p class="sub_title"></p>
+            <p class="sub_title">the summary of my programing life</p>
             <div class="my_socials">
+                
+                
+                <a href="%20" title="facebook" target="_blank"><i class="ri-facebook-fill"></i></a>
+                
+                
+                
+                <a href="https://github.com/laurel-he" title="github" target="_blank"><i class="ri-github-fill"></i></a>
+                
+                
+                
+                <a href="%20" title="instagram" target="_blank"><i class="ri-instagram-fill"></i></a>
+                
+                
+                
+                
+                
+                <a href="%20" title="weibo" target="_blank"><i class="ri-weibo-fill"></i></a>
+                
                 
                 <a href="https://laurel-he.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
                         class="ri-rss-fill"></i></a>
@@ -81,23 +114,23 @@
 <h2 id="安装">安装</h2>
 <p>不同环境下安装方式不同，可以采用下载安装包，apt-get，yum安装等各种方法，在wsl下linux安装需要注意，wsl下的Linux系统没有使用systemd，可以尝试用SysV init的命令代替systemd，或者安装systemd命令 <br>
 安装完后直接执行curl localhost:9200可以获取到es基本信息，例如我执行后结果如下：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-  <span style="color:#f92672">&#34;name&#34;</span> : <span style="color:#e6db74">&#34;MS-RWTYITLHLCWO&#34;</span>,
-  <span style="color:#f92672">&#34;cluster_name&#34;</span> : <span style="color:#e6db74">&#34;elasticsearch&#34;</span>,
-  <span style="color:#f92672">&#34;cluster_uuid&#34;</span> : <span style="color:#e6db74">&#34;j9WVJcIFRq6bEa3bwXCARA&#34;</span>,
-  <span style="color:#f92672">&#34;version&#34;</span> : {
-    <span style="color:#f92672">&#34;number&#34;</span> : <span style="color:#e6db74">&#34;7.15.2&#34;</span>,
-    <span style="color:#f92672">&#34;build_flavor&#34;</span> : <span style="color:#e6db74">&#34;default&#34;</span>,
-    <span style="color:#f92672">&#34;build_type&#34;</span> : <span style="color:#e6db74">&#34;deb&#34;</span>,
-    <span style="color:#f92672">&#34;build_hash&#34;</span> : <span style="color:#e6db74">&#34;93d5a7f6192e8a1a12e154a2b81bf6fa7309da0c&#34;</span>,
-    <span style="color:#f92672">&#34;build_date&#34;</span> : <span style="color:#e6db74">&#34;2021-11-04T14:04:42.515624022Z&#34;</span>,
-    <span style="color:#f92672">&#34;build_snapshot&#34;</span> : <span style="color:#66d9ef">false</span>,
-    <span style="color:#f92672">&#34;lucene_version&#34;</span> : <span style="color:#e6db74">&#34;8.9.0&#34;</span>,
-    <span style="color:#f92672">&#34;minimum_wire_compatibility_version&#34;</span> : <span style="color:#e6db74">&#34;6.8.0&#34;</span>,
-    <span style="color:#f92672">&#34;minimum_index_compatibility_version&#34;</span> : <span style="color:#e6db74">&#34;6.0.0-beta1&#34;</span>
-  },
-  <span style="color:#f92672">&#34;tagline&#34;</span> : <span style="color:#e6db74">&#34;You Know, for Search&#34;</span>
-}
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+  <span class="nt">&#34;name&#34;</span> <span class="p">:</span> <span class="s2">&#34;MS-RWTYITLHLCWO&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;cluster_name&#34;</span> <span class="p">:</span> <span class="s2">&#34;elasticsearch&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;cluster_uuid&#34;</span> <span class="p">:</span> <span class="s2">&#34;j9WVJcIFRq6bEa3bwXCARA&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;version&#34;</span> <span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&#34;number&#34;</span> <span class="p">:</span> <span class="s2">&#34;7.15.2&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;build_flavor&#34;</span> <span class="p">:</span> <span class="s2">&#34;default&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;build_type&#34;</span> <span class="p">:</span> <span class="s2">&#34;deb&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;build_hash&#34;</span> <span class="p">:</span> <span class="s2">&#34;93d5a7f6192e8a1a12e154a2b81bf6fa7309da0c&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;build_date&#34;</span> <span class="p">:</span> <span class="s2">&#34;2021-11-04T14:04:42.515624022Z&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;build_snapshot&#34;</span> <span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&#34;lucene_version&#34;</span> <span class="p">:</span> <span class="s2">&#34;8.9.0&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;minimum_wire_compatibility_version&#34;</span> <span class="p">:</span> <span class="s2">&#34;6.8.0&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;minimum_index_compatibility_version&#34;</span> <span class="p">:</span> <span class="s2">&#34;6.0.0-beta1&#34;</span>
+  <span class="p">},</span>
+  <span class="nt">&#34;tagline&#34;</span> <span class="p">:</span> <span class="s2">&#34;You Know, for Search&#34;</span>
+<span class="p">}</span>
 </code></pre></div><h2 id="使用">使用</h2>
 <h3 id="引入包">引入包</h3>
 <p>正常通过Restful API方式使用在各个文档中都有详细介绍，在此省略，说一下在php中如何使用。 <br>
@@ -136,7 +169,7 @@
     </div>
 
     <div class="footer_slogan">
-        <span></span>
+        <span>My spiritual home</span>
     </div>
 </footer>
     <script src="https://laurel-he.github.io/js/jquery-3.5.1.min.js"></script>
@@ -144,6 +177,43 @@
 <script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
 <script src="https://laurel-he.github.io/js/zozo.js"></script>
 
+
+<script type="text/javascript" async
+    src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\[\[', '\]\]']],
+                processEscapes: true,
+                processEnvironments: true,
+                skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                TeX: {
+                    equationNumbers: { autoNumber: "AMS" },
+                    extensions: ["AMSmath.js", "AMSsymbols.js"]
+                }
+            }
+        });
+
+        MathJax.Hub.Queue(function () {
+            
+            
+            
+            var all = MathJax.Hub.getAllJax(), i;
+            for (i = 0; i < all.length; i += 1) {
+                all[i].SourceElement().parentNode.className += ' has-jax';
+            }
+        });
+    </script>
+
+<style>
+    code.has-jax {
+        font: inherit;
+        font-size: 100%;
+        background: inherit;
+        border: inherit;
+        color: #515151;
+    }
+</style>
 
 
 

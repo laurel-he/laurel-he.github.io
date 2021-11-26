@@ -1,31 +1,23 @@
 <!DOCTYPE html>
-<html >
+<html lang="en" >
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="" />
+    <meta name="author" content="贺小娇" />
 	
 	
 	
-	<title>(1)go基础学习-基础概念 ｜ </title>
+	<title>(1)go基础学习-基础概念 ｜ 贺小娇的个人博客</title>
 	
     
     
-    <meta name="description" content="参考文档： go文档 Go 语言教程 可以先看go语言学习路线图， 对大概学习路线有个了解。
-基础概念 go语言特色 Go语言在多核并发上拥有原生的设计优势， Go语言从底层原生支持并发，无须第三方库、开发者的编程技巧和开发经验。
-经过 Go 语言重构的系统能使用更少的硬件资源获得更高的并发和I/O吞吐表现。 充分挖掘硬件设备的潜力也满足当前精细化运营的市场大环境。
-Go语言的并发是基于 goroutine 的，goroutine 类似于线程，但并非线程。 可以将 goroutine 理解为一种虚拟线程。 Go 语言运行时会参与调度 goroutine，并将 goroutine 合理地分配到每个 CPU 中，最大限度地使用CPU性能。 开启一个goroutine的消耗非常小（大约2KB的内存），你可以轻松创建数百万个goroutine。
-goroutine的特点：
- 1.goroutine具有可增长的分段堆栈。这意味着它们只在需要时才会使用更多内存。 2.goroutine的启动时间比线程快。 3.goroutine原生支持利用channel安全地进行通信。 4.goroutine共享数据结构时无需使用互斥锁。
- go语言的主要特征  1.自动立即回收。 2.更丰富的内置类型。 3.函数多返回值。 4.错误处理。 5.匿名函数和闭包。 6.类型和接口。 7.并发编程。 8.反射。 9.语言交互性。
- 总结 Go语言天然支持并发，学习曲线平滑，代码风格统一
-go应用场景 go适合做什么 服务端开发 分布式系统，微服务 网络编程 区块链开发 内存KV数据库，例如boltDB、levelDB 云平台
-go语言用途 Go 语言被设计成一门应用于搭载 Web 服务器，存储集群或类似用途的巨型中央服务器的系统编程语言。 对于高性能分布式系统领域而言，Go 语言无疑比大多数其它语言有着更高的开发效率。 它提供了海量并行的支持，这对于游戏服务端的开发而言是再好不过了。
-安装 安装略
-go项目目录 在进行Go语言开发的时候，我们的代码总是会保存在$GOPATH/src目录下。 在工程经过go build、go install或go get等指令后， 会将下载的第三方包源代码文件放在$GOPATH/src目录下， 产生的二进制可执行文件放在 $GOPATH/bin目录下， 生成的中间缓存文件会被保存在 $GOPATH/pkg 下。" />
+    <meta name="description" content="参考文档： go文档 Go 语言教程 可以先看go语言学习路线图， 对大概学习路线有个了解。 基础概念 go语言特色 Go语言在多核并发上拥有原生的设计优势， Go语言从底层原生支持并发，无须第三方库、开发者的编程技巧和" />
     
 
+    
+    
+    <meta name="keywords" content="Hugo, blog, php" />
     
 
 	
@@ -48,6 +40,22 @@ go项目目录 在进行Go语言开发的时候，我们的代码总是会保存
     <div class="site_nav" id="site_nav">
         <ul>
             
+            <li>
+                <a href="/">主页</a>
+            </li>
+            
+            <li>
+                <a href="/posts/">Archive</a>
+            </li>
+            
+            <li>
+                <a href="/tags/">Tags</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
         </ul>
     </div>
     <div class="menu_icon">
@@ -59,13 +67,31 @@ go项目目录 在进行Go语言开发的时候，我们的代码总是会保存
         <div class="site_title">
             <h1>
                 <a href="https://laurel-he.github.io/">
-                    <span></span>
+                    <span>贺小娇的个人博客</span>
                 </a>
             </h1>
         </div>
         <div class="description">
-            <p class="sub_title"></p>
+            <p class="sub_title">the summary of my programing life</p>
             <div class="my_socials">
+                
+                
+                <a href="%20" title="facebook" target="_blank"><i class="ri-facebook-fill"></i></a>
+                
+                
+                
+                <a href="https://github.com/laurel-he" title="github" target="_blank"><i class="ri-github-fill"></i></a>
+                
+                
+                
+                <a href="%20" title="instagram" target="_blank"><i class="ri-instagram-fill"></i></a>
+                
+                
+                
+                
+                
+                <a href="%20" title="weibo" target="_blank"><i class="ri-weibo-fill"></i></a>
+                
                 
                 <a href="https://laurel-he.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
                         class="ri-rss-fill"></i></a>
@@ -174,7 +200,7 @@ bin 和 pkg 目录的内容无需版本控制。</p>
     </div>
 
     <div class="footer_slogan">
-        <span></span>
+        <span>My spiritual home</span>
     </div>
 </footer>
     <script src="https://laurel-he.github.io/js/jquery-3.5.1.min.js"></script>
@@ -182,6 +208,43 @@ bin 和 pkg 目录的内容无需版本控制。</p>
 <script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
 <script src="https://laurel-he.github.io/js/zozo.js"></script>
 
+
+<script type="text/javascript" async
+    src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\[\[', '\]\]']],
+                processEscapes: true,
+                processEnvironments: true,
+                skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                TeX: {
+                    equationNumbers: { autoNumber: "AMS" },
+                    extensions: ["AMSmath.js", "AMSsymbols.js"]
+                }
+            }
+        });
+
+        MathJax.Hub.Queue(function () {
+            
+            
+            
+            var all = MathJax.Hub.getAllJax(), i;
+            for (i = 0; i < all.length; i += 1) {
+                all[i].SourceElement().parentNode.className += ' has-jax';
+            }
+        });
+    </script>
+
+<style>
+    code.has-jax {
+        font: inherit;
+        font-size: 100%;
+        background: inherit;
+        border: inherit;
+        color: #515151;
+    }
+</style>
 
 
 

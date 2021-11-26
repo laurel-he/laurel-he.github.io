@@ -1,33 +1,23 @@
 <!DOCTYPE html>
-<html >
+<html lang="en" >
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="" />
+    <meta name="author" content="贺小娇" />
 	
 	
 	
-	<title>linux基础入门 ｜ </title>
+	<title>linux基础入门 ｜ 贺小娇的个人博客</title>
 	
     
     
-    <meta name="description" content="学习心得，来自于蓝桥Linux基础入门
-用户相关 查看当前用户 whoami:查看当前用户名 who am i:可以列出用户名，当前登录的伪终端以及当前伪终端的启动时间等 注意事项 在有些情况下who am i或者who mom likes不会有输出，因为当前shell不是登录时的shell
-添加用户 例如添加用户lilei:
-sudo adduser lilei 此命令在添加用户的同时还会创建用户的home目录
-添加用户组 groupadd [groupname]
-sudo groupadd lilei 将其他用户加入sudo用户组 当一个没有sudo权限的用户执行sudo命令时将报告当前用户不在sudoer文件中 使用一个有sudo权限的账户来添加，例如：
-sudo usermod -G sudo lilei 实际上，这里执行的操作就是将用户添加至工作组，这里的命令为：
-usermod -G [groupname] [username] 用户组 groups:查看用户所属的用户组，例如：
-groups lilei /etc/group文件 /etc/group文件保存了所有的用户和用户组信息，格式如下：
-group_name:password:GID:user_list 当password为x时表示密码不可见，如果用户的GID等于用户组的GID，那么user_list为空
-删除用户 sudo deluser lilei --remove-home &amp;ndash;remove-home表示在删除用户的时候同时删除用户的home目录
-删除用户组 groupdel命令
-文件相关 ll第一列的文件类型
-   名称 英文名 含义     d directory 目录   l link 软连接   b block 块设备   c char 字符设备   s socket 网络套接字   p pipe 管道   - - 普通文件    ll命令第一列解析如下： 可以通过ll -h更直观的看到文件大小 -a可以显示隐藏文件" />
+    <meta name="description" content="学习心得，来自于蓝桥Linux基础入门 用户相关 查看当前用户 whoami:查看当前用户名 who am i:可以列出用户名，当前登录的伪终端以及当前伪终端的启动时间等 注意事项 在有些情况下who am i或者who mom lik" />
     
 
+    
+    
+    <meta name="keywords" content="Hugo, blog, php" />
     
 
 	
@@ -50,6 +40,22 @@ group_name:password:GID:user_list 当password为x时表示密码不可见，如�
     <div class="site_nav" id="site_nav">
         <ul>
             
+            <li>
+                <a href="/">主页</a>
+            </li>
+            
+            <li>
+                <a href="/posts/">Archive</a>
+            </li>
+            
+            <li>
+                <a href="/tags/">Tags</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
         </ul>
     </div>
     <div class="menu_icon">
@@ -61,13 +67,31 @@ group_name:password:GID:user_list 当password为x时表示密码不可见，如�
         <div class="site_title">
             <h1>
                 <a href="https://laurel-he.github.io/">
-                    <span></span>
+                    <span>贺小娇的个人博客</span>
                 </a>
             </h1>
         </div>
         <div class="description">
-            <p class="sub_title"></p>
+            <p class="sub_title">the summary of my programing life</p>
             <div class="my_socials">
+                
+                
+                <a href="%20" title="facebook" target="_blank"><i class="ri-facebook-fill"></i></a>
+                
+                
+                
+                <a href="https://github.com/laurel-he" title="github" target="_blank"><i class="ri-github-fill"></i></a>
+                
+                
+                
+                <a href="%20" title="instagram" target="_blank"><i class="ri-instagram-fill"></i></a>
+                
+                
+                
+                
+                
+                <a href="%20" title="weibo" target="_blank"><i class="ri-weibo-fill"></i></a>
+                
                 
                 <a href="https://laurel-he.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
                         class="ri-rss-fill"></i></a>
@@ -91,26 +115,26 @@ who am i:可以列出用户名，当前登录的伪终端以及当前伪终端�
 在有些情况下who am i或者who mom likes不会有输出，因为当前shell不是登录时的shell</p>
 <h2 id="添加用户">添加用户</h2>
 <p>例如添加用户lilei:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo adduser lilei
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">sudo adduser lilei
 </code></pre></div><p>此命令在添加用户的同时还会创建用户的home目录</p>
 <h3 id="添加用户组">添加用户组</h3>
 <p>groupadd [groupname]</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo groupadd lilei
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">sudo groupadd lilei
 </code></pre></div><h3 id="将其他用户加入sudo用户组">将其他用户加入sudo用户组</h3>
 <p>当一个没有sudo权限的用户执行sudo命令时将报告当前用户不在sudoer文件中 <br>
 使用一个有sudo权限的账户来添加，例如：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo usermod -G sudo lilei
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">sudo usermod -G sudo lilei
 </code></pre></div><p>实际上，这里执行的操作就是将用户添加至工作组，这里的命令为：</p>
-<pre><code>usermod -G [groupname] [username]
-</code></pre><h2 id="用户组">用户组</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">usermod -G [groupname] [username]
+</code></pre></div><h2 id="用户组">用户组</h2>
 <p>groups:查看用户所属的用户组，例如：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">groups lilei
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">groups lilei
 </code></pre></div><h3 id="etcgroup文件">/etc/group文件</h3>
 <p>/etc/group文件保存了所有的用户和用户组信息，格式如下：</p>
-<pre><code>group_name:password:GID:user_list
-</code></pre><p>当password为x时表示密码不可见，如果用户的GID等于用户组的GID，那么user_list为空</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">group_name:password:GID:user_list
+</code></pre></div><p>当password为x时表示密码不可见，如果用户的GID等于用户组的GID，那么user_list为空</p>
 <h2 id="删除用户">删除用户</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo deluser lilei --remove-home
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">sudo deluser lilei --remove-home
 </code></pre></div><p>&ndash;remove-home表示在删除用户的时候同时删除用户的home目录</p>
 <h3 id="删除用户组">删除用户组</h3>
 <p>groupdel命令</p>
@@ -169,12 +193,12 @@ who am i:可以列出用户名，当前登录的伪终端以及当前伪终端�
 <h2 id="目录结构">目录结构</h2>
 <p><img src="../images/linux/4-1.png" alt="linux目录结构"></p>
 <h3 id="批量重命名">批量重命名</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 批量创建文件</span>
-touch file<span style="color:#f92672">{</span>1..5<span style="color:#f92672">}</span>.txt
-<span style="color:#75715e"># 批量重命名</span>
-rename <span style="color:#e6db74">&#39;s/\.txt/\.ct/&#39;</span> *.txt
-<span style="color:#75715e"># 批量替换成大写</span>
-rename <span style="color:#e6db74">&#39;y/a-z/A-Z/&#39;</span> *.ct
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># 批量创建文件</span>
+touch file<span class="o">{</span>1..5<span class="o">}</span>.txt
+<span class="c1"># 批量重命名</span>
+rename <span class="s1">&#39;s/\.txt/\.ct/&#39;</span> *.txt
+<span class="c1"># 批量替换成大写</span>
+rename <span class="s1">&#39;y/a-z/A-Z/&#39;</span> *.ct
 </code></pre></div></div>
                     <div class="post_footer">
                         
@@ -206,7 +230,7 @@ rename <span style="color:#e6db74">&#39;y/a-z/A-Z/&#39;</span> *.ct
     </div>
 
     <div class="footer_slogan">
-        <span></span>
+        <span>My spiritual home</span>
     </div>
 </footer>
     <script src="https://laurel-he.github.io/js/jquery-3.5.1.min.js"></script>
@@ -214,6 +238,43 @@ rename <span style="color:#e6db74">&#39;y/a-z/A-Z/&#39;</span> *.ct
 <script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
 <script src="https://laurel-he.github.io/js/zozo.js"></script>
 
+
+<script type="text/javascript" async
+    src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\[\[', '\]\]']],
+                processEscapes: true,
+                processEnvironments: true,
+                skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                TeX: {
+                    equationNumbers: { autoNumber: "AMS" },
+                    extensions: ["AMSmath.js", "AMSsymbols.js"]
+                }
+            }
+        });
+
+        MathJax.Hub.Queue(function () {
+            
+            
+            
+            var all = MathJax.Hub.getAllJax(), i;
+            for (i = 0; i < all.length; i += 1) {
+                all[i].SourceElement().parentNode.className += ' has-jax';
+            }
+        });
+    </script>
+
+<style>
+    code.has-jax {
+        font: inherit;
+        font-size: 100%;
+        background: inherit;
+        border: inherit;
+        color: #515151;
+    }
+</style>
 
 
 

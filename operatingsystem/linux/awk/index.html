@@ -1,24 +1,23 @@
 <!DOCTYPE html>
-<html >
+<html lang="en" >
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="" />
+    <meta name="author" content="贺小娇" />
 	
 	
 	
-	<title>awk ｜ </title>
+	<title>awk ｜ 贺小娇的个人博客</title>
 	
     
     
-    <meta name="description" content="参考文档： awk 入门教程 Linux awk命令
-知识点 （1）-F指定分隔符，例如：awk -F &#39;:&#39; &#39;{print $1}&#39; demo.log （2）$0代表当前行，即所有内容，例如：awk &#39;{print $0}&#39; demo.log将会输出demo.log的所有内容 （3）$ &#43; 数字表示某个字段，例如$2,$3分别表示第2第3个字段，也可以理解为列 （4）变量NF表示当前行有多少个字段，因此$NF就代表最后一个字段。例如：awk &#39;{print $NF}&#39; demo.log （5）$(NF-1)代表倒数第二个字段，即NF-数字代表倒数字段。 （6）输出时使用空格分隔，例如：awk &#39;{print $1, $(NF-1)}&#39; demo.log （7）要原样输出字符，需要放在&amp;quot;&amp;ldquo;里，例如awk -F &#39;:&#39; &#39;{print &amp;quot;(&amp;quot;,$5,&amp;quot;)&amp;quot;}&#39; demo.log （8）变量NR表示当前处理的是第几行，可以输出当前行数awk -F &#39;:&#39; &#39;{print NR &amp;quot;):(&amp;quot; $5 &amp;quot;)&amp;quot;}&#39; demo.log （9）awk有许多内置函数，例如转换大小写，详情见本文函数 （10）awk允许指定输出条件，可正则可根据行列计算等，非常重要 （11）awk提供判断语句（if else）
-awk是什么 awk是处理文本文件的一个应用程序，几乎所有 Linux 系统都自带这个程序。
-它依次处理文件的每一行，并读取里面的每一个字段。对于日志、CSV 那样的每行格式相同的文本文件，awk可能是最方便的工具。
-awk语法 awk [选项参数] &amp;#39;script&amp;#39; var=value file(s) #或 awk [选项参数] -f scriptfile var=value file(s) #或者可以解释为： #awk 动作 文件名 示例：" />
+    <meta name="description" content="参考文档： awk 入门教程 Linux awk命令 知识点 （1）-F指定分隔符，例如：awk -F &#39;:&#39; &#39;{print $1}&#39; demo.log （2）$0代表当前行，即所有内容，例如：awk &#39;{print $0}&#39; demo.log将会输出demo.log的所有内容 （3）$ &#43; 数字表示" />
     
 
+    
+    
+    <meta name="keywords" content="Hugo, blog, php" />
     
 
 	
@@ -41,6 +40,22 @@ awk语法 awk [选项参数] &amp;#39;script&amp;#39; var=value file(s) #或 awk
     <div class="site_nav" id="site_nav">
         <ul>
             
+            <li>
+                <a href="/">主页</a>
+            </li>
+            
+            <li>
+                <a href="/posts/">Archive</a>
+            </li>
+            
+            <li>
+                <a href="/tags/">Tags</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
         </ul>
     </div>
     <div class="menu_icon">
@@ -52,13 +67,31 @@ awk语法 awk [选项参数] &amp;#39;script&amp;#39; var=value file(s) #或 awk
         <div class="site_title">
             <h1>
                 <a href="https://laurel-he.github.io/">
-                    <span></span>
+                    <span>贺小娇的个人博客</span>
                 </a>
             </h1>
         </div>
         <div class="description">
-            <p class="sub_title"></p>
+            <p class="sub_title">the summary of my programing life</p>
             <div class="my_socials">
+                
+                
+                <a href="%20" title="facebook" target="_blank"><i class="ri-facebook-fill"></i></a>
+                
+                
+                
+                <a href="https://github.com/laurel-he" title="github" target="_blank"><i class="ri-github-fill"></i></a>
+                
+                
+                
+                <a href="%20" title="instagram" target="_blank"><i class="ri-instagram-fill"></i></a>
+                
+                
+                
+                
+                
+                <a href="%20" title="weibo" target="_blank"><i class="ri-weibo-fill"></i></a>
+                
                 
                 <a href="https://laurel-he.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
                         class="ri-rss-fill"></i></a>
@@ -92,28 +125,28 @@ awk语法 awk [选项参数] &amp;#39;script&amp;#39; var=value file(s) #或 awk
 <p>awk是处理文本文件的一个应用程序，几乎所有 Linux 系统都自带这个程序。</p>
 <p>它依次处理文件的每一行，并读取里面的每一个字段。对于日志、CSV 那样的每行格式相同的文本文件，awk可能是最方便的工具。</p>
 <h2 id="awk语法">awk语法</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">awk <span style="color:#f92672">[</span>选项参数<span style="color:#f92672">]</span> <span style="color:#e6db74">&#39;script&#39;</span> var<span style="color:#f92672">=</span>value file<span style="color:#f92672">(</span>s<span style="color:#f92672">)</span>
-<span style="color:#75715e">#或</span>
-awk <span style="color:#f92672">[</span>选项参数<span style="color:#f92672">]</span> -f scriptfile var<span style="color:#f92672">=</span>value file<span style="color:#f92672">(</span>s<span style="color:#f92672">)</span>
-<span style="color:#75715e">#或者可以解释为：</span>
-<span style="color:#75715e">#awk 动作 文件名</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">awk <span class="o">[</span>选项参数<span class="o">]</span> <span class="s1">&#39;script&#39;</span> <span class="nv">var</span><span class="o">=</span>value file<span class="o">(</span>s<span class="o">)</span>
+<span class="c1">#或</span>
+awk <span class="o">[</span>选项参数<span class="o">]</span> -f scriptfile <span class="nv">var</span><span class="o">=</span>value file<span class="o">(</span>s<span class="o">)</span>
+<span class="c1">#或者可以解释为：</span>
+<span class="c1">#awk 动作 文件名</span>
 </code></pre></div><p>示例：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">awk <span style="color:#e6db74">&#39;{print $1}&#39;</span> demo.log <span style="color:#75715e"># 打印第一列</span>
-echo <span style="color:#e6db74">&#39;this is a test&#39;</span> | awk <span style="color:#e6db74">&#39;{print $0}&#39;</span> <span style="color:#75715e"># 打印当前行</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">awk <span class="s1">&#39;{print $1}&#39;</span> demo.log <span class="c1"># 打印第一列</span>
+<span class="nb">echo</span> <span class="s1">&#39;this is a test&#39;</span> <span class="p">|</span> awk <span class="s1">&#39;{print $0}&#39;</span> <span class="c1"># 打印当前行</span>
 </code></pre></div><h3 id="举例">举例：</h3>
 <p>demo.log文件内容为：</p>
-<pre><code>this is number 1
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">this is number 1
 and this is number 2
 xxxx this is number 3
 emmm this is number 4
-</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">awk <span style="color:#e6db74">&#39;{print $1}&#39;</span> demo.log
-<span style="color:#75715e"># 执行结果为：</span>
-<span style="color:#75715e"># this</span>
-<span style="color:#75715e"># and</span>
-<span style="color:#75715e"># xxxx</span>
-<span style="color:#75715e"># emmm</span>
-</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">awk <span style="color:#e6db74">&#39;{print $0}&#39;</span> test.log
-<span style="color:#75715e"># 执行结果为整个文件原样输出</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">awk <span class="s1">&#39;{print $1}&#39;</span> demo.log
+<span class="c1"># 执行结果为：</span>
+<span class="c1"># this</span>
+<span class="c1"># and</span>
+<span class="c1"># xxxx</span>
+<span class="c1"># emmm</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">awk <span class="s1">&#39;{print $0}&#39;</span> test.log
+<span class="c1"># 执行结果为整个文件原样输出</span>
 </code></pre></div><h2 id="awk内置变量">awk内置变量</h2>
 <p>$0表示当前行，即输出时输出所有 <br>
 $ + 数字表示某个字段  <br>
@@ -139,28 +172,28 @@ sqrt()：平方根。
 rand()：随机数。</p>
 <h2 id="条件">条件</h2>
 <p>awk允许指定输出条件，只输出符合条件的行。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">awk <span style="color:#e6db74">&#39;条件 动作&#39;</span> 文件名
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">awk <span class="s1">&#39;条件 动作&#39;</span> 文件名
 </code></pre></div><p>这个条件可以是正则表达式或者计算规则，例如：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">awk -F <span style="color:#e6db74">&#39;:&#39;</span> <span style="color:#e6db74">&#39;$3 == 0 {print $0}&#39;</span> demo.log <span style="color:#75715e"># 只有分隔后第三个字段为0的行才全部输出    </span>
-awk -F <span style="color:#e6db74">&#39;:&#39;</span> <span style="color:#e6db74">&#39;/sys/ {print $NF}&#39;</span> demo.log <span style="color:#75715e"># 只有正则匹配到sys的行才输出最后一个字段    </span>
-awk -F <span style="color:#e6db74">&#39;:&#39;</span> <span style="color:#e6db74">&#39;/[s]?bin/ {print $NF}&#39;</span> demo.log <span style="color:#75715e"># 匹配sbin或bin存在的行，输出最后一个字段    </span>
-awk -F <span style="color:#e6db74">&#39;:&#39;</span> <span style="color:#e6db74">&#39;NR % 2 == 0 {print $0}&#39;</span> demo.log <span style="color:#75715e"># 只输出偶数行    </span>
-awk -F <span style="color:#e6db74">&#39;:&#39;</span> <span style="color:#e6db74">&#39;NR &gt; 3 {print $0}&#39;</span> demo.log <span style="color:#75715e"># 只输出第三行以后的行      </span>
-awk -F <span style="color:#e6db74">&#39;:&#39;</span> <span style="color:#e6db74">&#39;$1 == &#34;sys&#34; {print $0}&#39;</span> demo.log <span style="color:#75715e"># 输出第n个字段值为指定值的行</span>
-awk -F <span style="color:#e6db74">&#39;:&#39;</span> <span style="color:#e6db74">&#39;$1 ~ /^r/ {print $1}&#39;</span> demo.log <span style="color:#75715e"># ~表示开始正则匹配，输出第一列以r开头的</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">awk -F <span class="s1">&#39;:&#39;</span> <span class="s1">&#39;$3 == 0 {print $0}&#39;</span> demo.log <span class="c1"># 只有分隔后第三个字段为0的行才全部输出    </span>
+awk -F <span class="s1">&#39;:&#39;</span> <span class="s1">&#39;/sys/ {print $NF}&#39;</span> demo.log <span class="c1"># 只有正则匹配到sys的行才输出最后一个字段    </span>
+awk -F <span class="s1">&#39;:&#39;</span> <span class="s1">&#39;/[s]?bin/ {print $NF}&#39;</span> demo.log <span class="c1"># 匹配sbin或bin存在的行，输出最后一个字段    </span>
+awk -F <span class="s1">&#39;:&#39;</span> <span class="s1">&#39;NR % 2 == 0 {print $0}&#39;</span> demo.log <span class="c1"># 只输出偶数行    </span>
+awk -F <span class="s1">&#39;:&#39;</span> <span class="s1">&#39;NR &gt; 3 {print $0}&#39;</span> demo.log <span class="c1"># 只输出第三行以后的行      </span>
+awk -F <span class="s1">&#39;:&#39;</span> <span class="s1">&#39;$1 == &#34;sys&#34; {print $0}&#39;</span> demo.log <span class="c1"># 输出第n个字段值为指定值的行</span>
+awk -F <span class="s1">&#39;:&#39;</span> <span class="s1">&#39;$1 ~ /^r/ {print $1}&#39;</span> demo.log <span class="c1"># ~表示开始正则匹配，输出第一列以r开头的</span>
 </code></pre></div><h2 id="判断语句">判断语句</h2>
 <p>可以只用if，也可以if + else，例如：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">awk -F <span style="color:#e6db74">&#39;:&#39;</span> <span style="color:#e6db74">&#39;{if ($1 &gt; &#34;s&#34;) print $1}&#39;</span> demo.log <span style="color:#75715e"># 输出第一个字段的第一个字符大于s的列    </span>
-awk -F <span style="color:#e6db74">&#39;:&#39;</span> <span style="color:#e6db74">&#39;{if ($1 &gt; &#34;s&#34;) print $1; else print &#34;----&#34;}&#39;</span> demo.log <span style="color:#75715e"># 加else条件，记得一定要用;分隔，否则会语法错误    </span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">awk -F <span class="s1">&#39;:&#39;</span> <span class="s1">&#39;{if ($1 &gt; &#34;s&#34;) print $1}&#39;</span> demo.log <span class="c1"># 输出第一个字段的第一个字符大于s的列    </span>
+awk -F <span class="s1">&#39;:&#39;</span> <span class="s1">&#39;{if ($1 &gt; &#34;s&#34;) print $1; else print &#34;----&#34;}&#39;</span> demo.log <span class="c1"># 加else条件，记得一定要用;分隔，否则会语法错误    </span>
 </code></pre></div><p>注意：这里的if不能直接当做条件来使用，而是直接使用，否则会语法错误：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">hexiaojiao@MS-RWTYITLHLCWO:~/datas$ awk -F <span style="color:#e6db74">&#39;:&#39;</span> <span style="color:#e6db74">&#39;if ($1 &gt; &#34;s&#34;) {print $1}&#39;</span> demo.log
-awk: cmd. line:1: <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>$1 &gt; <span style="color:#e6db74">&#34;s&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>print $1<span style="color:#f92672">}</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">hexiaojiao@MS-RWTYITLHLCWO:~/datas$ awk -F <span class="s1">&#39;:&#39;</span> <span class="s1">&#39;if ($1 &gt; &#34;s&#34;) {print $1}&#39;</span> demo.log
+awk: cmd. line:1: <span class="k">if</span> <span class="o">(</span><span class="nv">$1</span> &gt; <span class="s2">&#34;s&#34;</span><span class="o">)</span> <span class="o">{</span>print <span class="nv">$1</span><span class="o">}</span>
 awk: cmd. line:1: ^ syntax error
 </code></pre></div><h2 id="其他写法">其他写法</h2>
 <p>示例中的：<code>awk -F ':' '{print NR &quot;):(&quot; toupper($5) &quot;)&quot;}' demo.log</code>
 也可以写成</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">awk -F <span style="color:#e6db74">&#39;:&#39;</span> <span style="color:#e6db74">&#39;{printf(&#34;%s):(%s)\n&#34;,NR,toupper($5))}&#39;</span> demo.log    
-awk -F <span style="color:#e6db74">&#39;:&#39;</span> <span style="color:#e6db74">&#39;{printf &#34;%-8s %-10s\n&#34;,$1,$4}&#39;</span> demo.log
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">awk -F <span class="s1">&#39;:&#39;</span> <span class="s1">&#39;{printf(&#34;%s):(%s)\n&#34;,NR,toupper($5))}&#39;</span> demo.log    
+awk -F <span class="s1">&#39;:&#39;</span> <span class="s1">&#39;{printf &#34;%-8s %-10s\n&#34;,$1,$4}&#39;</span> demo.log
 </code></pre></div></div>
                     <div class="post_footer">
                         
@@ -192,7 +225,7 @@ awk -F <span style="color:#e6db74">&#39;:&#39;</span> <span style="color:#e6db74
     </div>
 
     <div class="footer_slogan">
-        <span></span>
+        <span>My spiritual home</span>
     </div>
 </footer>
     <script src="https://laurel-he.github.io/js/jquery-3.5.1.min.js"></script>
@@ -200,6 +233,43 @@ awk -F <span style="color:#e6db74">&#39;:&#39;</span> <span style="color:#e6db74
 <script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
 <script src="https://laurel-he.github.io/js/zozo.js"></script>
 
+
+<script type="text/javascript" async
+    src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\[\[', '\]\]']],
+                processEscapes: true,
+                processEnvironments: true,
+                skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                TeX: {
+                    equationNumbers: { autoNumber: "AMS" },
+                    extensions: ["AMSmath.js", "AMSsymbols.js"]
+                }
+            }
+        });
+
+        MathJax.Hub.Queue(function () {
+            
+            
+            
+            var all = MathJax.Hub.getAllJax(), i;
+            for (i = 0; i < all.length; i += 1) {
+                all[i].SourceElement().parentNode.className += ' has-jax';
+            }
+        });
+    </script>
+
+<style>
+    code.has-jax {
+        font: inherit;
+        font-size: 100%;
+        background: inherit;
+        border: inherit;
+        color: #515151;
+    }
+</style>
 
 
 

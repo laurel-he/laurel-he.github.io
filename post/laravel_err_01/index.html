@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html >
+<html lang="en" >
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="" />
+    <meta name="author" content="贺小娇" />
 	
 	
 	
-	<title>laravel配置params选项如MYSQL_ATTR_USE_BUFFERED_QUERY等 ｜ </title>
+	<title>laravel配置params选项如MYSQL_ATTR_USE_BUFFERED_QUERY等 ｜ 贺小娇的个人博客</title>
 	
     
     
-    <meta name="description" content="以下内容已同步至CSDN 绝了，laravel使用的是illuminate/database作为orm，我们用的swoole，在使用过程中报了如下错误：
-SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffered queries are active. Consider using PDOStatement::fetchAll()这个错误在网上一搜就能找到解决办法，就是给pdo加上一个params,&amp;lsquo;MYSQL_ATTR_USE_BUFFERED_QUERY&amp;rsquo; =&amp;gt; true,嚯，但是laravel和illuminate/database的文档都没有说怎么加这个params。。。真就大无语事件发生。我还是不死心网上各种搜解决办法，当然是一无所获，不然也不会有这篇博客了。原本想省事偷懒的我终究还是不得不去看源码，终于让我找到了这个东西： 经过分析，这个玩意儿就是把配置中的options加载进去，虽然按照正常人的思维，这玩意儿要是叫params我直接就能试出来，根本不用看源码了的说。
-/** * Get the PDO options based on the configuration. * * @param array $config * @return array */ public function getOptions(array $config) { $options = $config[&amp;#39;options&amp;#39;] ?? []; return array_diff_key($this-&amp;gt;options, $options) &#43; $options; } 所以说，对于使用illuminate/database的框架来说，给pdo加选项就这这样的
-&#39;default&#39; =&amp;gt; [&#39;fetch&#39; =&amp;gt; PDO::FETCH_CLASS,&#39;driver&#39; =&amp;gt; &#39;mysql&#39;,&#39;host&#39; =&amp;gt; &#39;localhost&#39;,&#39;port&#39; =&amp;gt; &#39;3306&#39;,&#39;username&#39; =&amp;gt; &#39;&#39;,&#39;password&#39; =&amp;gt; &#39;&#39;,&#39;database&#39; =&amp;gt; &#39;test&#39;,&#39;charset&#39; =&amp;gt; &#39;latin1&#39;,&#39;collation&#39; =&amp;gt; &#39;latin1_general_ci&#39;,&#39;prefix&#39; =&amp;gt; &#39;&#39;,&#39;strict&#39; =&amp;gt; false,// 数据库连接参数&#39;options&#39; =&amp;gt; [&#39;MYSQL_ATTR_USE_BUFFERED_QUERY&#39; =&amp;gt; true,],],当然，你要是想也可以直接用原生的方法pdo连接，自然就不存在什么配置不好搞的问题了" />
+    <meta name="description" content="以下内容已同步至CSDN 绝了，laravel使用的是illuminate/database作为orm，我们用的swoole，在使用过程中报了如下错误： SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffered queries are active. Consider using PDOStatement::fetchAll() 这个错误在网上一搜" />
     
 
+    
+    
+    <meta name="keywords" content="Hugo, blog, php" />
     
 
 	
@@ -40,6 +40,22 @@ SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffer
     <div class="site_nav" id="site_nav">
         <ul>
             
+            <li>
+                <a href="/">主页</a>
+            </li>
+            
+            <li>
+                <a href="/posts/">Archive</a>
+            </li>
+            
+            <li>
+                <a href="/tags/">Tags</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
         </ul>
     </div>
     <div class="menu_icon">
@@ -51,13 +67,31 @@ SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffer
         <div class="site_title">
             <h1>
                 <a href="https://laurel-he.github.io/">
-                    <span></span>
+                    <span>贺小娇的个人博客</span>
                 </a>
             </h1>
         </div>
         <div class="description">
-            <p class="sub_title"></p>
+            <p class="sub_title">the summary of my programing life</p>
             <div class="my_socials">
+                
+                
+                <a href="%20" title="facebook" target="_blank"><i class="ri-facebook-fill"></i></a>
+                
+                
+                
+                <a href="https://github.com/laurel-he" title="github" target="_blank"><i class="ri-github-fill"></i></a>
+                
+                
+                
+                <a href="%20" title="instagram" target="_blank"><i class="ri-instagram-fill"></i></a>
+                
+                
+                
+                
+                
+                <a href="%20" title="weibo" target="_blank"><i class="ri-weibo-fill"></i></a>
+                
                 
                 <a href="https://laurel-he.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
                         class="ri-rss-fill"></i></a>
@@ -74,42 +108,42 @@ SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffer
                     </div>
                     <div class="post_content markdown"><p>以下内容已同步至CSDN <br>
 绝了，laravel使用的是illuminate/database作为orm，我们用的swoole，在使用过程中报了如下错误：</p>
-<pre><code>SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffered queries are active.  Consider using PDOStatement::fetchAll()
-</code></pre><p>这个错误在网上一搜就能找到解决办法，就是给pdo加上一个params,&lsquo;MYSQL_ATTR_USE_BUFFERED_QUERY&rsquo; =&gt; true,嚯，但是laravel和illuminate/database的文档都没有说怎么加这个params。。。真就大无语事件发生。我还是不死心网上各种搜解决办法，当然是一无所获，不然也不会有这篇博客了。原本想省事偷懒的我终究还是不得不去看源码，终于让我找到了这个东西：
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffered queries are active.  Consider using PDOStatement::fetchAll()
+</code></pre></div><p>这个错误在网上一搜就能找到解决办法，就是给pdo加上一个params,&lsquo;MYSQL_ATTR_USE_BUFFERED_QUERY&rsquo; =&gt; true,嚯，但是laravel和illuminate/database的文档都没有说怎么加这个params。。。真就大无语事件发生。我还是不死心网上各种搜解决办法，当然是一无所获，不然也不会有这篇博客了。原本想省事偷懒的我终究还是不得不去看源码，终于让我找到了这个东西：
 <img src="../images/php/01.png" alt="获取信息">
 <img src="../images/php/02.png" alt="设置配置">
 经过分析，这个玩意儿就是把配置中的options加载进去，虽然按照正常人的思维，这玩意儿要是叫params我直接就能试出来，根本不用看源码了的说。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">    <span style="color:#e6db74">/**
-</span><span style="color:#e6db74">     * Get the PDO options based on the configuration.
-</span><span style="color:#e6db74">     *
-</span><span style="color:#e6db74">     * @param  array  $config
-</span><span style="color:#e6db74">     * @return array
-</span><span style="color:#e6db74">     */</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getOptions</span>(<span style="color:#66d9ef">array</span> $config)
-    {
-        $options <span style="color:#f92672">=</span> $config[<span style="color:#e6db74">&#39;options&#39;</span>] <span style="color:#f92672">??</span> [];
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php">    <span class="sd">/**
+</span><span class="sd">     * Get the PDO options based on the configuration.
+</span><span class="sd">     *
+</span><span class="sd">     * @param  array  $config
+</span><span class="sd">     * @return array
+</span><span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getOptions</span><span class="p">(</span><span class="k">array</span> <span class="nv">$config</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$options</span> <span class="o">=</span> <span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;options&#39;</span><span class="p">]</span> <span class="o">??</span> <span class="p">[];</span>
 
-        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">array_diff_key</span>($this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">options</span>, $options) <span style="color:#f92672">+</span> $options;
-    }
+        <span class="k">return</span> <span class="nx">array_diff_key</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">options</span><span class="p">,</span> <span class="nv">$options</span><span class="p">)</span> <span class="o">+</span> <span class="nv">$options</span><span class="p">;</span>
+    <span class="p">}</span>
 </code></pre></div><p>所以说，对于使用illuminate/database的框架来说，给pdo加选项就这这样的</p>
-<pre><code>'default' =&gt; [
-            'fetch'     =&gt; PDO::FETCH_CLASS,
-            'driver'    =&gt; 'mysql',
-            'host'      =&gt; 'localhost',
-            'port'      =&gt; '3306',
-            'username'  =&gt; '',
-            'password'  =&gt; '',
-            'database'  =&gt; 'test',
-            'charset'   =&gt; 'latin1',
-            'collation' =&gt; 'latin1_general_ci',
-            'prefix'    =&gt; '',
-            'strict'    =&gt; false,
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">&#39;default&#39; =&gt; [
+            &#39;fetch&#39;     =&gt; PDO::FETCH_CLASS,
+            &#39;driver&#39;    =&gt; &#39;mysql&#39;,
+            &#39;host&#39;      =&gt; &#39;localhost&#39;,
+            &#39;port&#39;      =&gt; &#39;3306&#39;,
+            &#39;username&#39;  =&gt; &#39;&#39;,
+            &#39;password&#39;  =&gt; &#39;&#39;,
+            &#39;database&#39;  =&gt; &#39;test&#39;,
+            &#39;charset&#39;   =&gt; &#39;latin1&#39;,
+            &#39;collation&#39; =&gt; &#39;latin1_general_ci&#39;,
+            &#39;prefix&#39;    =&gt; &#39;&#39;,
+            &#39;strict&#39;    =&gt; false,
             // 数据库连接参数
-            'options'         =&gt; [
-                'MYSQL_ATTR_USE_BUFFERED_QUERY' =&gt; true,
+            &#39;options&#39;         =&gt; [
+                &#39;MYSQL_ATTR_USE_BUFFERED_QUERY&#39; =&gt; true,
             ],
         ],
-</code></pre><p>当然，你要是想也可以直接用原生的方法pdo连接，自然就不存在什么配置不好搞的问题了</p>
+</code></pre></div><p>当然，你要是想也可以直接用原生的方法pdo连接，自然就不存在什么配置不好搞的问题了</p>
 </div>
                     <div class="post_footer">
                         
@@ -141,7 +175,7 @@ SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffer
     </div>
 
     <div class="footer_slogan">
-        <span></span>
+        <span>My spiritual home</span>
     </div>
 </footer>
     <script src="https://laurel-he.github.io/js/jquery-3.5.1.min.js"></script>
@@ -149,6 +183,43 @@ SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffer
 <script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
 <script src="https://laurel-he.github.io/js/zozo.js"></script>
 
+
+<script type="text/javascript" async
+    src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\[\[', '\]\]']],
+                processEscapes: true,
+                processEnvironments: true,
+                skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                TeX: {
+                    equationNumbers: { autoNumber: "AMS" },
+                    extensions: ["AMSmath.js", "AMSsymbols.js"]
+                }
+            }
+        });
+
+        MathJax.Hub.Queue(function () {
+            
+            
+            
+            var all = MathJax.Hub.getAllJax(), i;
+            for (i = 0; i < all.length; i += 1) {
+                all[i].SourceElement().parentNode.className += ' has-jax';
+            }
+        });
+    </script>
+
+<style>
+    code.has-jax {
+        font: inherit;
+        font-size: 100%;
+        background: inherit;
+        border: inherit;
+        color: #515151;
+    }
+</style>
 
 
 

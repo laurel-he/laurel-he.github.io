@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>学习 on </title>
+    <title>学习 on 贺小娇的个人博客</title>
     <link>https://laurel-he.github.io/categories/%E5%AD%A6%E4%B9%A0/</link>
-    <description>Recent content in 学习 on </description>
+    <description>Recent content in 学习 on 贺小娇的个人博客</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Thu, 30 Sep 2021 16:34:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>laravel配置params选项如MYSQL_ATTR_USE_BUFFERED_QUERY等</title>
@@ -12,10 +13,7 @@
       <pubDate>Thu, 30 Sep 2021 16:34:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/post/laravel_err_01/</guid>
-      <description>以下内容已同步至CSDN 绝了，laravel使用的是illuminate/database作为orm，我们用的swoole，在使用过程中报了如下错误：
-SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffered queries are active. Consider using PDOStatement::fetchAll()这个错误在网上一搜就能找到解决办法，就是给pdo加上一个params,&amp;lsquo;MYSQL_ATTR_USE_BUFFERED_QUERY&amp;rsquo; =&amp;gt; true,嚯，但是laravel和illuminate/database的文档都没有说怎么加这个params。。。真就大无语事件发生。我还是不死心网上各种搜解决办法，当然是一无所获，不然也不会有这篇博客了。原本想省事偷懒的我终究还是不得不去看源码，终于让我找到了这个东西： 经过分析，这个玩意儿就是把配置中的options加载进去，虽然按照正常人的思维，这玩意儿要是叫params我直接就能试出来，根本不用看源码了的说。
-/** * Get the PDO options based on the configuration. * * @param array $config * @return array */ public function getOptions(array $config) { $options = $config[&amp;#39;options&amp;#39;] ?? []; return array_diff_key($this-&amp;gt;options, $options) + $options; } 所以说，对于使用illuminate/database的框架来说，给pdo加选项就这这样的
-&#39;default&#39; =&amp;gt; [&#39;fetch&#39; =&amp;gt; PDO::FETCH_CLASS,&#39;driver&#39; =&amp;gt; &#39;mysql&#39;,&#39;host&#39; =&amp;gt; &#39;localhost&#39;,&#39;port&#39; =&amp;gt; &#39;3306&#39;,&#39;username&#39; =&amp;gt; &#39;&#39;,&#39;password&#39; =&amp;gt; &#39;&#39;,&#39;database&#39; =&amp;gt; &#39;test&#39;,&#39;charset&#39; =&amp;gt; &#39;latin1&#39;,&#39;collation&#39; =&amp;gt; &#39;latin1_general_ci&#39;,&#39;prefix&#39; =&amp;gt; &#39;&#39;,&#39;strict&#39; =&amp;gt; false,// 数据库连接参数&#39;options&#39; =&amp;gt; [&#39;MYSQL_ATTR_USE_BUFFERED_QUERY&#39; =&amp;gt; true,],],当然，你要是想也可以直接用原生的方法pdo连接，自然就不存在什么配置不好搞的问题了</description>
+      <description>以下内容已同步至CSDN 绝了，laravel使用的是illuminate/database作为orm，我们用的swoole，在使用过程中报了如下错误： SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffered queries are active. Consider using PDOStatement::fetchAll() 这个错误在网上一搜</description>
     </item>
     
     <item>
@@ -33,10 +31,7 @@ SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffer
       <pubDate>Tue, 20 Jul 2021 16:34:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/datastruct/datastruct_01/</guid>
-      <description>数据结构学习系列都来自于中国大学MOOC上的浙江大学数据结构学习课程。原课程代码全部采用C语言实现，由于本菜平时最擅长（zhihuiyong）使用php，因此所有算法全部翻译成了php实现。课程链接：数据结构 全文已同步发布到CSDN
-定义 （1）数据结构是数据对象，以及存在于该对象的实例和组成实例的数据元素之间的各种联系。这些联系可以通过定义和相关的函数来给出 （2）数据结构是ADT(abstruct data type)的物理实现 （3）数据结构是计算机存储，组织数据的方式，通常情况下，精心选择的数据结构可以带来最有效率的算法
-示例 写程序实现一个函数printN，打印从1-N之间的所有正整数 。以下是两种实现方式的php实现代码：
-&amp;lt;?php function printN($n) { $i = 0; for($i = 0; $i &amp;lt; $n; $i++) { echo $i. &amp;#34;\n\r&amp;#34;; } } $begin1 = microtime(); printN(10000); $end1 = microtime(); $time1 = $end1 - $begin1; function printM($m) { if ($m) { printM($m - 1); echo $m. &amp;#34;\n\r&amp;#34;; } } $begin2 = microtime(); printM(10000); $end2 = microtime(); $time2 = $end2 - $begin2; echo $time2 - $time1; 递归和直接循环打印都可以实现，但是递归当数字大于1w左右就失败了，因为递归对空间的占用十分恐怖。解决问题方法的效率，也与空间的占用效率是有关的。</description>
+      <description>数据结构学习系列都来自于中国大学MOOC上的浙江大学数据结构学习课程。原课程代码全部采用C语言实现，由于本菜平时最擅长（zhihuiyong）使用php，因此所有算法全部翻译成了php实现。课程链接：</description>
     </item>
     
     <item>
@@ -45,18 +40,7 @@ SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffer
       <pubDate>Thu, 03 Sep 2020 16:10:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/post/total/</guid>
-      <description>目录：
-1 刷题
-2 设计模式
-3 数据库
-4 操作系统
-5 php
-6 go
-7 python
-8 前端
-9 云原生
-10 消息队列
-11 学习</description>
+      <description>目录： 1 刷题 2 设计模式 3 数据库 4 操作系统 5 php 6 go 7 python 8 前端 9 云原生 10 消息队列 11 学习</description>
     </item>
     
     <item>
@@ -65,10 +49,7 @@ SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffer
       <pubDate>Tue, 10 Dec 2019 12:34:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/go/webassembly_go_1/</guid>
-      <description>使用go编写webassembly并在浏览器执行 参考博客 用go写WebAssembly入门
-下载安装 go
-编写测试文件hello.go package main import &amp;quot;fmt&amp;quot; func main() { fmt.Println(&amp;quot;Hello World!&amp;quot;) } 生成wasm文件  GOARCH=wasm GOOS=js go build -o hello.wasm hello.go 在windows下需要先设置环境变量：$env:GOARCH=&amp;quot;wasm&amp;quot;;$env:GOOS=&amp;quot;js&amp;quot;;
-添加依赖 cp $(go env GOROOT)/misc/wasm/wasm_exec.{html,js} . 添加一个测试http服务器 //http.go package main import ( &amp;quot;flag&amp;quot; &amp;quot;log&amp;quot; &amp;quot;net/http&amp;quot; &amp;quot;strings&amp;quot; ) var ( listen = flag.String(&amp;quot;listen&amp;quot;, &amp;quot;:8080&amp;quot;, &amp;quot;listen address&amp;quot;) dir = flag.String(&amp;quot;dir&amp;quot;, &amp;quot;.&amp;quot;, &amp;quot;directory to serve&amp;quot;) ) func main() { flag.Parse() log.Printf(&amp;quot;listening on %q...&amp;quot;, *listen) log.Fatal(http.ListenAndServe(*listen, http.HandlerFunc(func(resp http.ResponseWriter, req *http.</description>
+      <description>使用go编写webassembly并在浏览器执行 参考博客 用go写WebAssembly入门 下载安装 go 编写测试文件hello.go package main import &amp;#34;fmt&amp;#34; func main() { fmt.Println(&amp;#34;Hello World!&amp;#34;) } 生成wasm文件 GOARCH=wasm GOOS=js go build -o hello.wasm hello.go 在windows下需要</description>
     </item>
     
     <item>
@@ -77,7 +58,7 @@ SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffer
       <pubDate>Tue, 10 Dec 2019 12:34:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/post/unittest/</guid>
-      <description>单元测试 mock 接口测试 stub mock fakeserver </description>
+      <description>单元测试 mock 接口测试 stub mock fakeserver</description>
     </item>
     
     <item>
@@ -86,15 +67,7 @@ SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffer
       <pubDate>Mon, 07 Oct 2019 17:40:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/post/cleancode/</guid>
-      <description>提要 要有代码：代码呈现了需求的细节，将需求明确到机器可以执行的细节程度 不要产生糟糕的、混乱的代码，勒布朗法则：稍后等于永不 制造混乱无益于赶上期限，做得快的唯一方法就是始终保持代码整洁。
-好代码的特点 优雅、搞笑；代码逻辑直截了当，缺陷难以隐藏； 尽量减少依赖关系，使之便于维护； 根据某种分层战略完善处理错误代码，性能调至最优 整洁的代码力求集中，每个函数、每个类和每个模块都全神贯注于一事，完全不受四周细节的干扰和污染 整洁的代码可由作者之外的开发者阅读和增补，它应当有单元测试和验收测试 尽量使用有意义的命名，它只提供一种而非多种做一件事的途径 尽量少的依赖关系，明确地定义和提供清晰、尽量少的API
-总结 （1）能通过所有测试 （2）没有重复代码 （3）体现系统中的全部设计理念 （4）包含尽量少的实体，比如类、方法、函数等 不要重复代码，只做一件事，表达力，小规模抽象
-有意义的命名 （1）如果名称需要注释来补充，那就不算是名副其实（之前出现过争议） （2）不要使用意义含糊的废话，如果名称相同但是意义不同，那么info和data与a an the一样毫无意义，不要使用废话，varable不应出现在便能两种，table不应出现在表中 （3）使用读得出来的名称，方便阅读 （4）使用方便搜索的名称 （5）避免使用编码 （6）应当把类和函数做得足够小，消除对成员前缀的需要，读代码的人通常不会读前缀 （7）不要在类名中使用奇怪的命名 （8）不要使用双关语
-函数 （1）函数应该尽可能小，20行封顶最佳 （2）每个函数都一目了然，每个函数都只说一件事，每个函数都依次带到下一个函数 （3）函数的缩进层不应该多余一层或两层
-需要遵循的原则 （1）确保每隔switch函数都埋藏在较低的抽象层而且永远不重复 （2）不要向函数传入布尔值（我以前经常这么做），因为传入布尔值表示函数会有多余的操作 （3）使用异常代替返回错误码（错误代码能从主路径代码中分离出来得到简化） （4）抽离try/catch代码块 （5）不要重复自己
-注释 注意 注释存在的时间越久，就离它所描述的代码越远，越来越变得全然错误，因为程序员不能坚持维护注释
-必要的注释（好的注释） （1）法律信息 （2）提供信息的注释 （3）对意图的解释 （4）阐释（如果参数或返回值是某个标准库的一部分或者不能修改的代码，帮助阐释其含义的代码就会有用） （5）警示
-单元测试 </description>
+      <description>提要 要有代码：代码呈现了需求的细节，将需求明确到机器可以执行的细节程度 不要产生糟糕的、混乱的代码，勒布朗法则：稍后等于永不 制造混乱无益于赶上期限，做得快的唯一方法就是始终保持代码整洁。 好代码的特点 优雅</description>
     </item>
     
     <item>
@@ -103,15 +76,7 @@ SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffer
       <pubDate>Mon, 07 Oct 2019 17:40:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/designpattern/others/codeprinceple/</guid>
-      <description>本文参考了设计模式六大原则
-单一职责原则（SPR:Single Responsibility Principle） 一个类应该有且仅有一个原因导致该类的变更，即一个类应该只负责一项职责 但是在实际工作中，职责是会扩散的，一个类可能会新增更多的职责， 只有逻辑足够简单，才可以在代码级别上违反单一职责原则；只有类中方法数量足够少，才可以在方法级别上违反单一职责原则
-遵循单一职责原的优点： （1）可以降低类的复杂度，一个类只负责一项职责，其逻辑肯定要比负责多项职责简单的多； （2）提高类的可读性，提高系统的可维护性； （3）变更引起的风险降低，变更是必然的，如果单一职责原则遵守的好，当修改一个功能时，可以显著降低对其他功能的影响。
-第二：里氏替换原则（LSP:Liskcov Substitution Principle） 定义 定义1：如果对每一个类型为 T1的对象 o1，都有类型为 T2 的对象o2，使得以 T1定义的所有程序 P 在所有的对象 o1 都代换成 o2 时，程序 P 的行为没有发生变化，那么类型 T2 是类型 T1 的子类型。 定义2：所有引用基类的地方必须能透明地使用其子类的对象。 可以简单的理解为子类型能够替换它们的基类型
-含义解析 （1）子类可以实现父类的抽象方法，但不能覆盖父类的非抽象方法。 （2）子类中可以增加自己特有的方法。 （3）当子类的方法重载父类的方法时，方法的前置条件（即方法的形参）要比父类方法的输入参数更宽松。 （4）当子类的方法实现父类的抽象方法时，方法的后置条件（即方法的返回值）要比父类更严格
-违反里氏替换原则的危害 （1）反直觉。期望所有子类行为是一致的，但如果不一致可能需要文档记录，或者在代码跑失败后涨此知识； （2）不可读。如果子类行为不一致，可能需要不同的逻辑分支来适配不同的行为，徒增代码复杂度； （3）不可用。可能出错的地方终将会出错。 如果非要重写父类的方法，比较通用的做法是：原来的父类和子类都继承一个更通俗的基类，原有的继承关系去掉，采用依赖、聚合，组合等关系代替
-第三：依赖倒置原则（DIP:Dependence Inversion Principle） 定义 高层模块不应该依赖低层模块，二者都应该依赖其抽象；抽象不应该依赖细节；细节应该依赖抽象 针对接口编程，不要针对实现编程
-解释 依赖倒置原则基于这样一个事实： 相对于细节的多变性，抽象的东西要稳定的多。以抽象为基础搭建起来的架构比以细节为基础搭建起来的架构要稳定的多。 在java中，抽象指的是接口或者抽象类，细节就是具体的实现类，使用接口或者抽象类的目的是制定好规范和契约，而不去涉及任何具体的操作，把展现细节的任务交给他们的实现类去完成。
-示例 /** * 高层类Library需要实现readContent，但是readContent针对不同 * 类有不同的表现形式，于是抽象出来，这样不管怎么扩展修改，Library不用改 **/ class DesignController { /** *yii design/run */ public function actionRun() { $user = new User(); $data = $user-&amp;gt;gotoLibrary(); var_dump($data); } } class User { public function gotoLibrary() { $book = (new Library())-&amp;gt;read(new Book()); $news = (new Library())-&amp;gt;read(new Newspaper()); return [$book, $news]; } } class Library { public function read(IReader $reader) { return $reader-&amp;gt;readContent(); } } interface IReader { /** * 读取内容 * @return mixed */ public function readContent(); } class Book implements IReader { public function readContent() { return &amp;#39;书籍：小王子&amp;#39;; } } class Newspaper implements IReader { public function readContent() { return &amp;#39;报纸：今天奥运会结束了&amp;#39;; } } 第四：接口隔离原则(ISP:Interface Segregation Principle) 定义 客户端不应该依赖它不需要的接口；一个类对另一个类的依赖应该建立在最小的接口上。</description>
+      <description>本文参考了设计模式六大原则 单一职责原则（SPR:Single Responsibility Principle） 一个类应该有且仅有一个原因导致该类的变更，即一个类应该只负责一项职责 但是在实际工作中，职责是会扩散的，一个类可能会新增</description>
     </item>
     
     <item>
@@ -120,8 +85,7 @@ SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffer
       <pubDate>Sun, 06 Oct 2019 10:40:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/designpattern/phpallpattern/singlemode/</guid>
-      <description>基础介绍 概念介绍 作为对象的创建模式，单例模式确保某一个类只有一个实例，并且对外提供这个全局实例的访问入口。它不会创建实例副本，而是会向单例类内部存储的实例返回一个引用。
-单例模式三要素  需要一个保存类的唯一实例的静态成员变量。 构造函数和克隆函数必须声明为私有的，防止外部程序创建或复制实例副本。 必须提供一个访问这个实例的公共静态方法，从而返回唯一实例的一个引用。  </description>
+      <description>基础介绍 概念介绍 作为对象的创建模式，单例模式确保某一个类只有一个实例，并且对外提供这个全局实例的访问入口。它不会创建实例副本，而是会向单例类内部存储的实例返回一个引用。 单例模式三要素 需要一个保存类的唯</description>
     </item>
     
     <item>
@@ -130,13 +94,7 @@ SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffer
       <pubDate>Sat, 05 Oct 2019 17:40:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/designpattern/phpallpattern/producerconsumer/</guid>
-      <description>基础概念 概念介绍 某块模块负责产生数据，这些数据由另一个模块来负责处理。产生数据的模块，就形象地称为生产者；而处理数据的模块，就称为消费者。 该模式还需要有一个缓冲区处于生产者和消费者之间，作为一个中介。生产者把数据放入缓冲区，而消费者从缓冲区取出数据 缓冲区作用
-  解耦，生产者和消费者只依赖缓冲区，而不互相依赖
-  支持并发和异步
-  支持生产者和消费者忙闲不均（来不及消费缓冲区可以暂存）
-  使用场景 队列(类似，但并不完全相等，有的队列没有缓冲区); swoole(业务逻辑(生产者)将数据单元通过swoole的send函数弄到swoole的一个缓冲区之间，通过work进程进行分发，task进程(消费者)进行消费。)
-代码解析 CICD创建项目流程类似于生产者消费者模式；
-（1）用户填写表单，创建一条CICD数据，生产者向数据表添加一条状态为pending的数据，类似于向缓冲区添加数据 （2）定时任务读取状态为pending的数据，消费处理后修改状态</description>
+      <description>基础概念 概念介绍 某块模块负责产生数据，这些数据由另一个模块来负责处理。产生数据的模块，就形象地称为生产者；而处理数据的模块，就称为消费者。 该模式还需要有一个缓冲区处于生产者和消费者之间，作为一个中介。</description>
     </item>
     
     <item>
@@ -145,41 +103,7 @@ SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffer
       <pubDate>Sat, 05 Oct 2019 10:40:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/post/codecomplate_01/</guid>
-      <description>前期准备 前期准备的重要性 不要立即开始写代码，要做好必要的需求分析和架构设计，写好需求文档和技术文档，防止浪费时间和精力制造错误的东西
-需求核对表 针对功能需求：
-1．是否详细定义了系统的全部输入，包括其来源、精度、取值范围、出现频率等？
-2．是否详细定义了系统的全部输出，包括其目的地、精度、取值范围、出现频率格式等？
-3．是否详细定义了所有的输出格式(如：web页面、报表等)？
-4．是否详细定义了所有硬件及软件的外部接口？
-5．是否详细定义了全部外部通信接口，包括握手协议、纠错协议、通信协议等？
-6．是否列出了用户所要做的全部事情？
-7．是否详细定义了每个任务所用数据，以及每个任务得到的数据
-针对非功能需求（质量需求）
-1.是否为全部必要的操作，从用户的角度，详细描述的期望的响应时间 ？
-2.是否详细描述了其他与计时有关的考虑，如处理时间、数据传输率、系统吞吐量等？
-3.是否详细定义了安全级别
-4.是否详细定义了可靠性，包括软件失灵的后果、发生故障时需要保护的至关重要的信息、错误检查与回复的策略等？
-5.是否详细定义了机器内存和剩余硬盘空间最小值？
-6.是否详细定义了系统的可维护性，包括适应特定功能的变更、操作环境的变更、与其他软件接口变更的能力？
-7.是否包含对“成功”的定义，“失败”的定义？
-需求的质量
-  需求是用户书写的吗？
-  每条需求都不与其他需求冲突吗？
-  是否详细定义了相互竞争的特性之间的权衡
-  是否避免在需求中规定设计(方案)
-  需求是否在详细程度上保持相当一致的水平？有些需求应当更详细的描述吗？有些需求应该更粗略的描述吗？
-  需求是否足够清晰，即使转交给一个独立的小组去构建，他们也能理解吗？开发者也这么想吗？
-  每个条款都与待解决的问题及解决方案相关吗？能从每个条款上溯到它的问题中的对应跟源吗？
-  是否每条需求都是可测试的？是否可应进行独立的测试，以检验满不满足各项需求
-  是否描述了所有可能对需求的改动，包括各项改动的可能性
-  需求的完备性
-1.对于在开始开发之前无法获得信息，是否详细描述了信息不完全的区域？
-2.需求的完备度是否达到这种程度：如果产品满足所有需求，那么它就是可接受的？
-3.你对全部需求都感觉舒服吗？你是否已经去掉了那些不可能完成的需求—那些只是为了安抚客户和老板的东西？
-花费在前期准备上的时间长度 花费在问题定义，需求分析，软件架构上的时间依据项目的需要而变化，一般占据10%-20%的工作量和20%-30%的时间
-良好的类接口 类的基础是抽象数据类型（我之前大部分时候没有使用抽象，只是把相关的方法和变量定义放在了一起，实际上是不符合面向对象变成原则的），抽象数据类型是指一些数据和 对这些数据所进行操作的集合。定义抽象类有助于代码规范，提高
-创建类的原因 （1）为显示世界中的对象建模 （2）为抽象的对象建模 （3）降低复杂度 （4）隔离复杂度 （5）隐藏实现细节 （6）让代码更易重用 （7）把相关的操作包装到一起
-应当避免的类 （1）避免创建万能类 （2）消除无关紧要的类 （3）避免用动词命名的类</description>
+      <description>前期准备 前期准备的重要性 不要立即开始写代码，要做好必要的需求分析和架构设计，写好需求文档和技术文档，防止浪费时间和精力制造错误的东西 需求核对表 针对功能需求： 1．是否详细定义了系统的全部输入，包括其来源</description>
     </item>
     
     <item>
@@ -188,13 +112,7 @@ SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffer
       <pubDate>Fri, 04 Oct 2019 17:40:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/designpattern/phpallpattern/commandmode/</guid>
-      <description>基础概念 基础介绍 （1）概念介绍： 命令模式（Command Pattern）是一种数据驱动的设计模式，它属于行为型模式。请求以命令的形式包裹在对象中，并传给调用对象。调用对象寻找可以处理该命令的合适的对象，并把该命令传给相应的对象，该对象执行命令。 （2）概念解析： 命令模式将一个请求封装成一个对象，从而可用不同的请求对客户进行参数化，对请求排队或记录请求日志，以及支持可撤销的操作。
-使用场景 在某些场合下，需要对行为进行&amp;quot;记录、撤销/重做、事务&amp;quot;等处理，需要将&amp;quot;行为请求者&amp;quot;与&amp;quot;行为实现者&amp;quot;解耦，将一组行为抽象为对象，可以实现二者之间的松耦合。认为是命令的地方都可以使用命令模式，比如： 1、GUI 中每一个按钮都是一条命令。 2、模拟 CMD。
-关键术语 （1）received：真正的命令执行对象 （2）Command：命令 （3）invoker：使用命令对象的入口
-实现步骤 以下以后台k8s删除node节点命令为例
-a.创建一个命令接口： 接口定义接口名称，需要实现的操作名称，命令模式需要的操作为执行命令，后续可根据不同的命令来实现这个接口和执行命令方法。
-&amp;lt;?php abstract class Nodes { public function execute(){} } ?&amp;gt;b.创建一个请求类 定义拥有的请求方法 本例中操作有： （1）列出所有nodes: kubectl get node （2）删除节点：kubectl delete node $nodeName （3）查看对应node上的pods信息: kubectl get pods -o wide | grep $nodeName （4）在删除的node3对应的服务器上执行：kubeadm reset
-&amp;lt;?php class K8s { public function getNodes() { return &amp;#39;kubectl get node&amp;#39;; } public function delNodes($nodeName) { return &amp;#34;kubectl delete node $nodeName&amp;#34;; } } ?</description>
+      <description>基础概念 基础介绍 （1）概念介绍： 命令模式（Command Pattern）是一种数据驱动的设计模式，它属于行为型模式。请求以命令的形式包裹在对象中，并传给调用对象。调用对象寻找可以处理该命令的合适的对象</description>
     </item>
     
     <item>
@@ -203,17 +121,7 @@ a.创建一个命令接口： 接口定义接口名称，需要实现的操作�
       <pubDate>Wed, 04 Sep 2019 16:34:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/corc&#43;&#43;/c/01basic/</guid>
-      <description>本系列来自于中国大学MOOC的 程序设计入门C语言 学习视频总结
-基础 学习程序设计的目的 通过学习程序设计，理解计算机如何工作，计算机擅长做什么，不擅长做什么。
-计算机如何解决问题？ 告诉计算机的步骤，它会一步一步地去做。告诉计算机How to do而不是what to do
-编程语言的作用 编程语言的作用是，写下要计算机做事的步骤，让计算机去做。
-计算机懂什么语言？ 16进制数字组成的机器码，
-示例： 利用辗转相除法计算两个数的最大公约数： int u = 32; int v = 26; while (v != 0) { int temp = u % v; u = v; v = temp; } printf(&amp;#34;%d&amp;#34;, u); 计算机语言:计算机可以理解的语言，人几乎无法看懂 程序：程序员能够理解的语言 算法：描述成普通人可以理解的语言 要让计算机做的事情都是计算，我们要做的是把计算的步骤找到告诉计算机，计算的步骤叫做算法。
-计算机的思维方式 枚举，二分法。。。
-计算机如何执行程序？ 解释：一步一步将代码解释给计算机 编译：先有一个程序，把程序翻译出来，直接用翻译后的程序去执行 对于计算机的编程语言来说，语言本身没有解释和编译的区分的，任何语言都是既可以编译执行也可以解释执行， 只是有的习惯不同，例如C语言一般是编译执行，但是也可以使用解释器。
-C语言优点 为什么选择C语言： 使用范围广，做操作系统，嵌入式系统几乎没有其他选择，现代的编程语言在语法上的差异很小，基本都和C语言接近 针对各种应用的库可以完成大量工作，一般说某种语言厉害是因为它有更合适的库。 高效性，可移植性，功能丰富，面向程序员，灵活性
-简单历史 指针是C语言的灵魂，发展自B语言。
-线上开发环境 暂时采用codeBlocks(教程中使用的是dev C++，但是个人感觉界面太丑)</description>
+      <description>本系列来自于中国大学MOOC的 程序设计入门C语言 学习视频总结 基础 学习程序设计的目的 通过学习程序设计，理解计算机如何工作，计算机擅长做什么，不擅长做什么。 计算机如何解决问题？ 告诉计算机的步骤，它会一步一</description>
     </item>
     
     <item>
@@ -222,9 +130,7 @@ C语言优点 为什么选择C语言： 使用范围广，做操作系统，嵌�
       <pubDate>Wed, 04 Sep 2019 16:34:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/corc&#43;&#43;/c/02first/</guid>
-      <description>本系列来自于中国大学MOOC的 程序设计入门C语言 学习视频总结
-第一个程序 #include &amp;lt;stdio.h&amp;gt; int main(int argc, char ** argv) { printf(&amp;#34;Hello Word\n&amp;#34;); int i = 0; scanf(&amp;#34;%d&amp;#34;, &amp;amp;i); printf(&amp;#34;The res is: %d&amp;#34;, i + 10); return 0; } 程序的框架就是：
-#include &amp;lt;stdio.h&amp;gt;int main(){return 0;}换行和空格不意味着任何问题。 编程工具我使用的是codeblocks，原课件中推荐的是Dev C++,但个人试用后觉得没有codeBlocks好看，实际上，vscode是不错的选择！但是vscode需要单独安装gcc</description>
+      <description>本系列来自于中国大学MOOC的 程序设计入门C语言 学习视频总结 第一个程序 #include &amp;lt;stdio.h&amp;gt; int main(int argc, char ** argv) { printf(&amp;#34;Hello Word\n&amp;#34;); int i = 0; scanf(&amp;#34;%d&amp;#34;, &amp;amp;i); printf(&amp;#34;The res is: %d&amp;#34;, i + 10); return 0; } 程序的框架就是： #include &amp;lt;stdio.h&amp;gt; int main() { return 0; } 换行和空格不意味着任何问题。 编程工具我使用的</description>
     </item>
     
     <item>
@@ -233,10 +139,7 @@ C语言优点 为什么选择C语言： 使用范围广，做操作系统，嵌�
       <pubDate>Mon, 29 Jul 2019 14:37:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/designpattern/phpallpattern/strategy/</guid>
-      <description>概念 定义 策略模式定义了算法族，分别封装起来，让他们之间可以相互替换，该模式让算法独立于使用它的客户而独立变化
-组成 1 抽象策略角色：策略类，通常由一个接口或者抽象类实现 2 具体策略角色：包装了相关的算法和行为。 3 环境角色：持有一个策略类的引用，最终给客户端调用。
-分析 策略模式用一个抽象策略角色提供一个类（一般是接口或抽象类），每个策略都实现了这个抽象策略角色，环境角色去调用（依赖注入）
-代码 &amp;lt;?php /** * @author: hexiaojiao@jiapinai.com * @todo: * time: 2019-07-30 20:07 */ /** * 定义抽象角色类` * Interface CollectInter */ interface CollectInter { public function collect($price, $num); public function input(); } class Base { public function input($discount = 1) { fwrite(STDOUT, &amp;#39;请输入单价&amp;#39;); $price = trim(fgets(STDIN)); fwrite(STDOUT, &amp;#39;请输入数量&amp;#39;); $num = trim(fgets(STDIN)); $res = $this-&amp;gt;collect($price, $num, $discount); return $res; } } /** * 定义具体策略类 * Class Collect02 */ class Collect02 extends Base implements CollectInter { public function collect($price, $num, $discount = 1) { var_dump(&amp;#39;Collect02:&amp;#39;, $price * $num * $discount); return true; } } /** * Class Discount */ class Discount extends Base implements CollectInter { public function collect($price, $num, $discount = 0.</description>
+      <description>概念 定义 策略模式定义了算法族，分别封装起来，让他们之间可以相互替换，该模式让算法独立于使用它的客户而独立变化 组成 1 抽象策略角色：策略类，通常由一个接口或者抽象类实现 2 具体策略角色：包装了相关的算法和行</description>
     </item>
     
     <item>
@@ -245,13 +148,7 @@ C语言优点 为什么选择C语言： 使用范围广，做操作系统，嵌�
       <pubDate>Wed, 24 Jul 2019 10:40:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/designpattern/phpallpattern/simplefactory/</guid>
-      <description>引入 实现计算器 代码实现 1 实现一个基础的计算器功能，代码见https://github.com/laurel-he/design_pattern/blob/master/simpleFactory/calculator01.php
-问题分析 （1）错误处理只判断了除数是否为0，对于字符超长，不可计算等都未处理，可以加上try catch； （2）代码不可复用，耦合性很高
-使用面向对象处理 （1）使用面向对象的方式实现，将输入输出流和逻辑代码分离，可以提高代码复用性，降低耦合，代码见https://github.com/laurel-he/design_pattern/blob/master/simpleFactory/Calculate2.php
-紧耦合vs松耦合 思考：什么情况下使用继承和多态（各种运算可以继承自运算基类，便于扩展，多态考虑输入的不同类型，对于字符串怎样运算） 根据以上思考，完成有继承和多态的代码如下： https://github.com/laurel-he/design_pattern/blob/master/simpleFactory/Calculate03.php 思考：以上代码实现方式虽然使用到了继承，但是如何知道应该调用哪个类呢？难道像之前预估的一样，还是要使用switch判断？
-简单工厂模式 解决问题，实例化谁，将来会不会增加实例化的对象等容易变化的地方，考虑用一个单独的类来做这个创造实例的过程 在此基础上实现一个简单工厂类，代码如下： https://github.com/laurel-he/design_pattern/blob/master/simpleFactory/Calculate04.php 如果需要修改运算，可以只修改对应的类，如果需要添加运算，只需要添加运算类，并在工厂中添加对应的分支就可以了 简单工厂模式的工厂类一般是使用静态方法，通过接受的参数的不同来返回不同的对象实例
-工厂方法模式 1 简单工厂模式优点： （1）简单工厂包含必要的判断逻辑，实现了对象的创建和使用的分离； （2）客户端无需知道所创建的具体产品类的类名，只需要具体产品类对应的参数即可； （3）在不修改任何客户端代码的情况下更换和增加新的具体产品类，在一定程度上提高了系统的灵活性 2 简单工厂模式缺点： （1）工厂类职责过重，它出问题整个系统都会崩溃 （2）添加新的类的时候，系统中的简单工厂类都要修改，违反了开放-封闭原则 （3）简单工厂的静态方法，使得工厂角色无法形成基于继承的等级结构 工厂方法模式每一种算法都对应一种工厂， 工厂方法模式优点： （1）
-抽象工厂 </description>
+      <description>引入 实现计算器 代码实现 1 实现一个基础的计算器功能，代码见https://github.com/laurel-he/design_pattern/blob/master/simpleFactory/ca</description>
     </item>
     
     <item>
@@ -260,10 +157,7 @@ C语言优点 为什么选择C语言： 使用范围广，做操作系统，嵌�
       <pubDate>Mon, 22 Jul 2019 17:40:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/designpattern/phpallpattern/abstractfactory/</guid>
-      <description>参考：抽象工厂模式（Abstract Factory）
-目的 在不指定具体类的情况下创建一系列相关或依赖对象。 通常创建的类都实现相同的接口。 抽象工厂的客户并不关心这些对象是如何创建的，它只是知道它们是如何一起运行的。
-举例  &amp;lt;?php class KuaidiBirdLogic extends BaseLogic { private $basic; private $num; public function __construct(int $num, int $basic) { $this-&amp;gt;num = $num; $this-&amp;gt;basic = $basic; } } class KuaidiOneLogic implements KuaidiBase { private $num; public function __construct(int $num) { $this-&amp;gt;num = $num; } } 定义抽象工厂类
-&amp;lt;?php class ExpressFactory extends Model { public function getKuaidiBirdList() { return new KuaidiBirdLogic(12, 13); } public function getKuaidiOneLogic() { return new KuaidiOneLogic(); } } 几种工厂模式的区别 抽象工厂模式 类似于示例Basic</description>
+      <description>参考：抽象工厂模式（Abstract Factory） 目的 在不指定具体类的情况下创建一系列相关或依赖对象。 通常创建的类都实现相同的接口。 抽象工厂的客户并不关心这些对象是如何创建的，它只是知道它们是如何一</description>
     </item>
     
     <item>
@@ -272,18 +166,7 @@ C语言优点 为什么选择C语言： 使用范围广，做操作系统，嵌�
       <pubDate>Sun, 07 Jul 2019 17:40:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/designpattern/others/basic/</guid>
-      <description>本文参考了书籍《大话设计模式》/文章从招式与内功谈起——设计模式概述 以及系列文章PHP 设计模式系列
-定义 在软件工程中，设计模式（Design Pattern）是对软件设计中普遍存在（反复出现）的各种问题，所提出的解决方案。 这个术语是由埃里希·伽玛（Erich Gamma）等人在1990年代从建筑设计领域引入到计算机科学的。 设计模式并不直接用来完成代码的编写，而是描述在各种不同情况下，要怎么解决问题的一种方案。 面向对象设计模式通常以类或对象来描述其中的关系和相互作用，但不涉及用来完成应用程序的特定类或对象。 设计模式能使不稳定依赖于相对稳定、具体依赖于相对抽象，避免会引起麻烦的紧耦合，以增强软件设计面对并适应变化的能力。
-并非所有的软件模式都是设计模式，设计模式特指软件“设计”层次上的问题。还有其它非设计模式的模式，如架构模式。同时，算法不能算是一种设计模式，因为算法主要是用来解决计算上的问题，而非设计上的问题。
-设计模式的作用 (1)设计模式经过多年的使用和实践，包含了大量成功的，可维护可复用的设计方案，在很多情况下，设计模式可以提高开发效率，节约时间 (2)设计模式跨语言、跨平台、跨应用、跨国界，提供了通用的词汇和使用方式，节约交流时间 (3)大部分设计模式都兼顾了系统的可重用性和扩展性，这使很多系统可以重用，减少代码重复 (4)合理使用设计模式有助于别人理解自己的代码 (5)有助于更为深刻地理解面对对象编程
-如何掌握设计模式 a.这个设计模式的意图是什么 b.它要解决一个什么问题 c.什么时候可以使用它 d.它是如何解决问题的 e.掌握它的结构图 f.记住它的关键代码 g.能够想到至少两个它的应用实例，一个生活中的，一个软件中的 h.这个模式的优缺点是什么 i.在使用时要注意什么
-注意事项 （1）最好的掌握设计模式的方法是使用它们 （2）千万不要滥用模式
-设计模式分类 设计模式可以分为三大类，创建型，结构型，行为型
-创建型 在软件工程中，创建型设计模式是处理对象创建机制的设计模式，试图以适当的方式来创建对象。 对象创建的基本形式可能会带来设计问题，亦或增加了设计的复杂度。 创建型设计模式通过控制这个对象的创建方式来解决此问题。 在软件工程中，创建型设计模式用于处理对象的实例化：
-常用创建型模式 （1）抽象工厂模式（Abstract Factory） （2）建造者模式（Builder） （3）工厂方法模式（Factory Method） （4）多例模式（Multiton） （5）对象池模式（Pool） （6）原型模式（Prototype） （7）简单工厂模式（Simple Factory） （8）单例模式（Singleton） （9）静态工厂模式（Static Factory）
-结构型 在软件工程中，结构型设计模式是通过识别实体之间关系来简化设计的设计模式。 结构型设计模式用于处理类和对象的组合
-常用结构型模式 （1）适配器模式（Adapter） （2）桥梁模式（Bridge） （3）组合模式（Composite） （4）数据映射模式（Data Mapper） （5）装饰模式（Decorator） （6）依赖注入模式（Dependency Injection） （7）门面模式（Facade） （8）流接口模式（Fluent Interface） （9）代理模式（Proxy） （10）注册模式（Registry）
-行为型 在软件工程中，行为设计模式是识别对象之间的通用通信模式并实现这些模式的设计模式。 通过这样做，这些模式增加了执行此通信的灵活性。 行为型设计模式用于处理类的对象间通信：</description>
+      <description>本文参考了书籍《大话设计模式》/文章从招式与内功谈起——设计模式概述 以及系列文章PHP 设计模式系列 定义 在软件工程中，设计模式（Design Pattern）是对软件设计中普遍存在（反复出现）的各种问题，</description>
     </item>
     
     <item>
@@ -292,10 +175,7 @@ C语言优点 为什么选择C语言： 使用范围广，做操作系统，嵌�
       <pubDate>Fri, 01 Feb 2019 16:10:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/php/2019_01_01/</guid>
-      <description>1 strtotime() 描述 获取上个月的时间可以是date(&amp;lsquo;Y-m-d&amp;rsquo;,strtotime(&#39;-1 month&#39;));如果今天是31号而上个月没有31号，就会直接输出这个月1号； 解决办法 使用last day of -1 month来获取上个月的最后一天
-2 php 字符串和数字比较 描述 遇到一个问题，传过来的参数可能是0，可能是字符串，然后与0作比较，但是当传递的参数是字符串时，与0比较，结果是true 解决办法 直接与&#39;0&amp;rsquo;比较。0===&amp;lsquo;0&amp;rsquo;可以返回true,可以直接比较，字符串与&#39;0&amp;rsquo;比较也不等
-3 virtualbox共享文件夹不能执行virtualenv env，只能在其他文件夹下运行，暂时没想到解决办法 virtualbox的共享文件夹有保护机制，不允许直接运行virtualenv env，只能在其他文件夹下运行,解决办法： 硬链接
-4 laravel get()-&amp;gt;toArray()无法获取数据 </description>
+      <description>1 strtotime() 描述 获取上个月的时间可以是date(&amp;lsquo;Y-m-d&amp;rsquo;,strtotime(&#39;-1 month&#39;));如果今天是31号而上个月没有31号，就会直接输出这个月1号； 解决办法 使用la</description>
     </item>
     
   </channel>

@@ -1,30 +1,23 @@
 <!DOCTYPE html>
-<html >
+<html lang="en" >
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="" />
+    <meta name="author" content="贺小娇" />
 	
 	
 	
-	<title>virtualbox搭建LANP环境（ubuntu） ｜ </title>
+	<title>virtualbox搭建LANP环境（ubuntu） ｜ 贺小娇的个人博客</title>
 	
     
     
-    <meta name="description" content="1 基础软件下载 virtual box ubuntu(ubuntu server)
-2 安装ubuntu (1)virtualbox创建虚拟电脑 注意：最好重新设置virtualbox-&amp;gt;管理-&amp;gt;全局设定-&amp;gt;默认虚拟电脑位置 (2)启动，网络设置成网络地址转换(NAT) (3)重启的时候需要弹出U盘或者改变镜像位置 (4)如果提示未指定nat网络名称，管理-&amp;gt;全局设定-&amp;gt;网络-&amp;gt;nat网络（添加一条） (5)
-3 配置ssh (1)添加端口映射（例如2222-&amp;gt;22）,注意主机端口不可重复，且子系统ip不填 (2)ubuntu安装ssh
-sudo apt-get install openssh-server (3)xshell等工具连接，端口号为转发的主机端口
-4 安装php nginx Mysql (1)安装php
-sudo apt-get install php7.0 (2)安装nginx
-sudo apt-get install nginx (3)安装Mysql
-sudo apt-get install mysql-server-5.7 mysql-client-5.7 5 基础配置 (1)安装PHPFastCGI管理器 sudo apt install php7.2-fpm
-6其他tips (1)配置sudo 修改 /etc/sudoers，末尾添加一行：
-test ALL=(ALL) NOPASSWD: ALL test表示用户名； 保存退出后执行一下命令：
-sudo usermod -aG test test (2)配置共享文件夹且自启动 1 virtualbox(设置-共享文件夹-勾选固定分配(不勾选自动挂载)) 2 ubuntu创建文件夹 3 挂载共享文件夹" />
+    <meta name="description" content="1 基础软件下载 virtual box ubuntu(ubuntu server) 2 安装ubuntu (1)virtualbox创建虚拟电脑 注意：最好重新设置virtualbox-&amp;gt;管理-&amp;gt;全局设定-&amp;gt;默认虚拟电脑位置 (2)启动，网络设置成网络" />
     
 
+    
+    
+    <meta name="keywords" content="Hugo, blog, php" />
     
 
 	
@@ -47,6 +40,22 @@ sudo usermod -aG test test (2)配置共享文件夹且自启动 1 virtualbox(设
     <div class="site_nav" id="site_nav">
         <ul>
             
+            <li>
+                <a href="/">主页</a>
+            </li>
+            
+            <li>
+                <a href="/posts/">Archive</a>
+            </li>
+            
+            <li>
+                <a href="/tags/">Tags</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
         </ul>
     </div>
     <div class="menu_icon">
@@ -58,13 +67,31 @@ sudo usermod -aG test test (2)配置共享文件夹且自启动 1 virtualbox(设
         <div class="site_title">
             <h1>
                 <a href="https://laurel-he.github.io/">
-                    <span></span>
+                    <span>贺小娇的个人博客</span>
                 </a>
             </h1>
         </div>
         <div class="description">
-            <p class="sub_title"></p>
+            <p class="sub_title">the summary of my programing life</p>
             <div class="my_socials">
+                
+                
+                <a href="%20" title="facebook" target="_blank"><i class="ri-facebook-fill"></i></a>
+                
+                
+                
+                <a href="https://github.com/laurel-he" title="github" target="_blank"><i class="ri-github-fill"></i></a>
+                
+                
+                
+                <a href="%20" title="instagram" target="_blank"><i class="ri-instagram-fill"></i></a>
+                
+                
+                
+                
+                
+                <a href="%20" title="weibo" target="_blank"><i class="ri-weibo-fill"></i></a>
+                
                 
                 <a href="https://laurel-he.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
                         class="ri-rss-fill"></i></a>
@@ -92,31 +119,31 @@ ubuntu(ubuntu server)</p>
 <h2 id="3-配置ssh">3 配置ssh</h2>
 <p>(1)添加端口映射（例如2222-&gt;22）,注意主机端口不可重复，且子系统ip不填
 (2)ubuntu安装ssh</p>
-<pre><code>sudo apt-get install openssh-server
-</code></pre><p>(3)xshell等工具连接，端口号为转发的主机端口</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">sudo apt-get install openssh-server
+</code></pre></div><p>(3)xshell等工具连接，端口号为转发的主机端口</p>
 <h2 id="4-安装php-nginx-mysql">4 安装php nginx Mysql</h2>
 <p>(1)安装php</p>
-<pre><code>sudo apt-get install php7.0 
-</code></pre><p>(2)安装nginx</p>
-<pre><code>sudo apt-get install nginx
-</code></pre><p>(3)安装Mysql</p>
-<pre><code>sudo apt-get install mysql-server-5.7 mysql-client-5.7
-</code></pre><h2 id="5-基础配置">5 基础配置</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">sudo apt-get install php7.0 
+</code></pre></div><p>(2)安装nginx</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">sudo apt-get install nginx
+</code></pre></div><p>(3)安装Mysql</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">sudo apt-get install mysql-server-5.7 mysql-client-5.7
+</code></pre></div><h2 id="5-基础配置">5 基础配置</h2>
 <p>(1)安装PHPFastCGI管理器
 sudo apt install php7.2-fpm</p>
 <h2 id="6其他tips">6其他tips</h2>
 <p>(1)配置sudo
 修改 /etc/sudoers，末尾添加一行：</p>
-<pre><code>test    ALL=(ALL) NOPASSWD: ALL
-</code></pre><p>test表示用户名；
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">test    ALL=(ALL) NOPASSWD: ALL
+</code></pre></div><p>test表示用户名；
 保存退出后执行一下命令：</p>
-<pre><code>sudo usermod -aG test test
-</code></pre><p>(2)配置共享文件夹且自启动
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">sudo usermod -aG test test
+</code></pre></div><p>(2)配置共享文件夹且自启动
 1 virtualbox(设置-共享文件夹-勾选固定分配(不勾选自动挂载))
 2 ubuntu创建文件夹
 3 挂载共享文件夹</p>
-<pre><code>sudo mount -t vboxsf filesname /mnt/filesname
-</code></pre><p><strong>报错</strong>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">sudo mount -t vboxsf filesname /mnt/filesname
+</code></pre></div><p><strong>报错</strong>
 可能报错wrong fs type, bad option, bad superblock
 ，经过搜索需要安装<code>apt-get install nfs-common</code><br>
 但是安装后依旧报错，查看系统日志，报错信息如下：
@@ -124,21 +151,21 @@ sudo apt install php7.2-fpm</p>
 只查到了一条有用的记录，且是英文的，原来这是virtualbox的一个bug，我记得virtualbox还有一个bug,就是不能在共享文件夹里使用python的虚拟环境，但是这版直接共享文件夹都不能挂载了。路径如下：
 <a href="https://www.virtualbox.org/ticket/9307" title="virtualbox bug">virtualbox bug</a>
 再安装两个插件即可</p>
-<pre><code>sudo apt install cifs-utils
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">sudo apt install cifs-utils
 sudo apt install virtualbox-guest-utils
-</code></pre><p>4 共享文件挂载自启动
+</code></pre></div><p>4 共享文件挂载自启动
 (3)配置rsa
 1 windows生成私钥</p>
-<pre><code>ssh-keygen -t rsa -C &lt;your_email@example.com&gt;
-</code></pre><p>2 git配置
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">ssh-keygen -t rsa -C &lt;your_email@example.com&gt;
+</code></pre></div><p>2 git配置
 在git配置上加上公钥
 3 linux配置对应rsa
 进入当前用户的home目录(~)，创建.ssh文件夹,复制私钥到文件夹下，进入项目目录，即可执行git clone(可能权限不够，可以暂时把项目目录设置成777)</p>
 <h2 id="7-配置">7 配置</h2>
 <h4 id="1-配置nginx">1 配置nginx</h4>
-<pre><code>sudo vim /etc/nginx/sites-enabled/default
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">sudo vim /etc/nginx/sites-enabled/default
 //需要给默认index加上index.php
-</code></pre></div>
+</code></pre></div></div>
                     <div class="post_footer">
                         
                     </div>
@@ -158,7 +185,7 @@ sudo apt install virtualbox-guest-utils
     </div>
 
     <div class="footer_slogan">
-        <span></span>
+        <span>My spiritual home</span>
     </div>
 </footer>
     <script src="https://laurel-he.github.io/js/jquery-3.5.1.min.js"></script>
@@ -166,6 +193,43 @@ sudo apt install virtualbox-guest-utils
 <script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
 <script src="https://laurel-he.github.io/js/zozo.js"></script>
 
+
+<script type="text/javascript" async
+    src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\[\[', '\]\]']],
+                processEscapes: true,
+                processEnvironments: true,
+                skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                TeX: {
+                    equationNumbers: { autoNumber: "AMS" },
+                    extensions: ["AMSmath.js", "AMSsymbols.js"]
+                }
+            }
+        });
+
+        MathJax.Hub.Queue(function () {
+            
+            
+            
+            var all = MathJax.Hub.getAllJax(), i;
+            for (i = 0; i < all.length; i += 1) {
+                all[i].SourceElement().parentNode.className += ' has-jax';
+            }
+        });
+    </script>
+
+<style>
+    code.has-jax {
+        font: inherit;
+        font-size: 100%;
+        background: inherit;
+        border: inherit;
+        color: #515151;
+    }
+</style>
 
 
 

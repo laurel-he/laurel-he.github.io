@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Phps on </title>
+    <title>Phps on 贺小娇的个人博客</title>
     <link>https://laurel-he.github.io/php/</link>
-    <description>Recent content in Phps on </description>
+    <description>Recent content in Phps on 贺小娇的个人博客</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Sat, 20 Nov 2021 18:27:44 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/php/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>swoole基本使用</title>
@@ -12,9 +13,7 @@
       <pubDate>Sat, 20 Nov 2021 18:27:44 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/php/swoole/basic/</guid>
-      <description>本文参考swoole文档
-安装 安装过程大概可以参考如下dockerfile:
-FROMalpine:latest# 替换镜像源并安装基础服务RUN sed -i &amp;#39;s/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g&amp;#39; /etc/apk/repositories \  &amp;amp;&amp;amp; apk add php7 php7-fpm php7-opcache php7-curl php7-pdo php7-gd php7-dev php7-mbstring php7-mysqli php7-json vim \  &amp;amp;&amp;amp; apk add gcc g++ make autoconf libc-dev# 挂载VOLUME [&amp;#34;/data&amp;#34;]# 安装swooleCOPY swoole4.7.1.tar.gz /tmpCOPY apache-zookeeper-3.6.3-bin.tar.gz /tmpCOPY kafka_2.12-2.8.1.tgz /tmpRUN cd /tmp \  &amp;amp;&amp;amp; tar -zxvf swoole4.7.1.tar.gz \  &amp;amp;&amp;amp; cd swoole-src-4.7.1 \  &amp;amp;&amp;amp; phpize \  &amp;amp;&amp;amp; ./configure \  &amp;amp;&amp;amp; make \  &amp;amp;&amp;amp; make install \  &amp;amp;&amp;amp; echo &amp;#34;extension=swoole.</description>
+      <description>本文参考swoole文档 安装 安装过程大概可以参考如下dockerfile: FROMalpine:latest# 替换镜像源并安装基础服务RUN sed -i &amp;#39;s/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g&amp;#39; /etc/apk/repositories \ &amp;amp;&amp;amp; apk add php7 php7-fpm php7-opcache php7-curl php7-pdo php7-gd php7-dev php7-mbstring php7-mysqli php7-json vim \ &amp;amp;&amp;amp; apk add gcc g++ make autoconf libc-dev# 挂载VOLUME [&amp;#34;/data&amp;#34;]# 安装swooleCO</description>
     </item>
     
     <item>
@@ -32,9 +31,7 @@ FROMalpine:latest# 替换镜像源并安装基础服务RUN sed -i &amp;#39;s/dl-
       <pubDate>Thu, 16 Apr 2020 18:27:44 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/php/multiarr/</guid>
-      <description>使用场景 在工作中遇到了两次需要把不确定维度的多维数组渲染出来的情况，且还需要修改值和结构，如果使用json-patch会受到限制（需要根据不同的情况打补丁，且由于结构不一定一致，打补丁可能会错误地修改某些文件），因此需要自行设计批量修改如yaml,json等类似于多级结构的方法
-具体解析 多维数组转化的json前端渲染 结构不固定,获取对应的json，ts实现
-formatJsonData = (obj: any, name: string, moduleName?: string, getModuleName?: string): any[] =&amp;gt; { const arr: any[] = [] if (Object.keys(obj)) { let keys = Object.keys(obj); let i = 0; return keys.map((items) =&amp;gt; { i++; if (obj[items] instanceof Object) { let itemRes = items; if (obj[items][&#39;type&#39;]) { itemRes = obj[items][&#39;type&#39;]; } const names = name + &#39;=&#39; + itemRes return this.formatJsonData(obj[items], names, moduleName); } else { const resItems = name + &#39;=&#39; + items; this.</description>
+      <description>使用场景 在工作中遇到了两次需要把不确定维度的多维数组渲染出来的情况，且还需要修改值和结构，如果使用json-patch会受到限制（需要根据不同的情况打补丁，且由于结构不一定一致，打补丁可能会错误地修改</description>
     </item>
     
     <item>
@@ -43,7 +40,7 @@ formatJsonData = (obj: any, name: string, moduleName?: string, getModuleName?: s
       <pubDate>Thu, 16 Jan 2020 12:34:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/php/usefulcode1/</guid>
-      <description>分步骤执行 &amp;lt;?php /** * @param mixed ...$args * @return bool * @throws Exception */ public function stepRun(...$args): bool { $count = $args[0]; $method = $args[1]; $step = array_key_exists(2, $args) ? $args[2] : 10; $limit = array_key_exists(3, $args) ? $args[3] : 10; $param = array_key_exists(4, $args) ? $args[4] : &amp;#39;&amp;#39;; $stepCount = ceil($count / $step); for ($nowStep = 0; $nowStep &amp;lt; $stepCount; $nowStep ++) { $this-&amp;gt;$method($limit, $nowStep * $step, $param); sleep(1); } sleep(1); return true; } ?</description>
+      <description>分步骤执行 &amp;lt;?php /** * @param mixed ...$args * @return bool * @throws Exception */ public function stepRun(...$args): bool { $count = $args[0]; $method = $args[1]; $step = array_key_exists(2, $args) ? $args[2] : 10; $limit = array_key_exists(3, $args) ? $args[3] : 10; $param = array_key_exists(4, $args) ? $args[4] : &amp;#39;&amp;#39;; $stepCount = ceil($count / $step); for ($nowStep = 0; $nowStep &amp;lt; $stepCount; $nowStep ++) { $this-&amp;gt;$method($limit, $nowStep * $step, $param); sleep(1); } sleep(1); return true; } ?&amp;gt;使用方法 &amp;lt;?php $this-&amp;gt;stepRun($groupChangeCount, &amp;#39;loopGetData&amp;#39;, 30, 30); ?&amp;gt;分析</description>
     </item>
     
     <item>
@@ -52,9 +49,7 @@ formatJsonData = (obj: any, name: string, moduleName?: string, getModuleName?: s
       <pubDate>Thu, 11 Apr 2019 15:23:44 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/php/laravel/log/</guid>
-      <description>1 （自己摸索版本）5.2 1 定义路径 .env配置文件添加日志路径，例如
-LOG_PATH=/tmp/paytest 2 启动文件添加日志路径 $app-&amp;gt;configureMonologUsing(function($logger){ $logger-&amp;gt;pushHandler(new \Monolog\Handler\RotatingFileHandler(env(&amp;#39;LOG_PATH&amp;#39;).&amp;#39;.log&amp;#39;), 10); return $logger; }); 2 官方文档 1 异常处理 介绍 当您启动一个新的 Laravel 项目时，错误和异常处理就已为您配置。 应用程序触发的所有异常都被 App\Exceptions\Handler 类记录下来，然后渲染给用户。 我们将在本文档中深入介绍此类。 配置 （1）config/app.php 文件的 debug 选项，决定了是否向用户显示错误信息。默认情况下，此选项设置为存储在 .env 文件中的 APP_DEBUG 环境变量中。 （2）Laravel 支持 single 、daily 、 syslog 和 errorlog 日志模式。要配置 Laravel 使用的存储机制，应该修改 config/app.php 配置文件中的 log 选项。例如，如果您希望使用每日一个日志文件而不是单个文件，则应将 app 配置文件中的 log 值设置为 daily 日志等级 使用 Monolog 时，日志消息可能具有不同的日志等级。默认情况下，Laravel 将所有日志级别写入存储。但是，在生产环境中，您可能希望通过将 log_level 选项添加到 app.php 配置文件中来配置应记录的最低日志等级。
-一旦配置了此选项，Laravel 将记录大于或等于指定日志等级的所有级别。例如，默认将 log_level 设置为 error 那么将会记录 error , critical , alert 和 emergency 日志信息：</description>
+      <description>1 （自己摸索版本）5.2 1 定义路径 .env配置文件添加日志路径，例如 LOG_PATH=/tmp/paytest 2 启动文件添加日志路径 $app-&amp;gt;configureMonologUsing(function($logger){ $logger-&amp;gt;pushHandler(new \Monolog\Handler\RotatingFileHandler(env(&amp;#39;LOG_PATH&amp;#39;).&amp;#39;.log&amp;#39;), 10); return $logger; }); 2 官方文档 1 异常处理 介绍 当您启动一个新的 Laravel 项目时，错误和异常处理就已为您配置。 应用程序触发的所</description>
     </item>
     
     <item>
@@ -63,9 +58,7 @@ LOG_PATH=/tmp/paytest 2 启动文件添加日志路径 $app-&amp;gt;configureMon
       <pubDate>Mon, 08 Apr 2019 18:27:44 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/php/phpalg/</guid>
-      <description>排序算法 1 冒泡排序 解析 从零开始，每一位和剩余位数比较，如果大于（小于）则交换，最后一位最终会是最大（最小）的。 代码
-&amp;lt;?php $arr = [2,3,1,4,7,6,9]; var_dump(bubbleSort($arr)); function bubbleSort($arr) { $len = count($arr); for($i = 0;$i &amp;lt; $len; $i++) { for($j = $len - 1;$j &amp;gt; $i;$j--) { if($arr[$j] &amp;lt; $arr[$j-1]) { $tmp = $arr[$j]; $arr[$j ] = $arr[$j - 1]; $arr[$j - 1] = $tmp; } } } return $arr; } 2 快速排序 解析 选中一个值（一般是$arr[0]）作为基准，通过一次排序分割成比基准数小和比基准数大的两部分
-&amp;lt;?php $arr = [3,4,1,5,7,2,6]; function quickSort($arr) { if(count($arr) &amp;lt;= 1) { return $arr; } $mid = $arr[0]; $left = array(); $right = array(); for($i = 1;$i&amp;lt;count($arr);$i++) { if($mid &amp;lt; $arr[$i]) { $right[] = $arr[$i]; } else { $left[] = $arr[$i]; } } $left = quickSort($left); $right = quickSort($right); return array_merge($left,array($mid),$right); } var_dump(quickSort($arr)); 注意事项 array_merge()需要将左边，中间和右边都合并</description>
+      <description>排序算法 1 冒泡排序 解析 从零开始，每一位和剩余位数比较，如果大于（小于）则交换，最后一位最终会是最大（最小）的。 代码 &amp;lt;?php $arr = [2,3,1,4,7,6,9]; var_dump(bubbleSort($arr)); function bubbleSort($arr) { $len = count($arr); for($i = 0;$i &amp;lt; $len; $i++) { for($j = $len - 1;$j &amp;gt; $i;$j--) { if($arr[$j] &amp;lt; $arr[$j-1]) { $tmp = $arr[$j]; $arr[$j ] = $arr[$j - 1]; $arr[$j - 1] =</description>
     </item>
     
     <item>
@@ -74,7 +67,7 @@ LOG_PATH=/tmp/paytest 2 启动文件添加日志路径 $app-&amp;gt;configureMon
       <pubDate>Sun, 07 Apr 2019 18:27:44 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/php/phppsr/</guid>
-      <description>安装pear（参考文档：https://www.cnblogs.com/huangbx/p/php_codesniffer.html）   从以下网址：http://pear.php.net/go-pear.phar下载代码，或直接另存为文件go-pear.phar 运行php go-pear.phar（注意是否加了环境变量，没有可在php.exe目录下运行） 如果报错“ERROR, enter the php.exe path”，输入选项13，选择php.exe所在目录  安装php sniffer   运行命令“pear install PHP_CodeSniffer” 配置phpstorm（其他IDE请自行Google），Settings-&amp;gt;Languages &amp;amp; Frameworks-&amp;gt;php-&amp;gt;Code Sniffer，选择刚才安装的phpcs.bat文件，validate 看看会不会报错 如果校验报错，可能是找不到autoload路径，打开phpcs文件，更改include路径，例如我可以直接改成include_once &amp;lsquo;/pear/PHP/CodeSniffer/autoload.php&amp;rsquo; 选择Settings-&amp;gt;Inspections-&amp;gt;PHP Code Sniffer validation，点击刷新按钮，选择&amp;quot;PSR2&amp;quot; 此时如果有不规范的代码可以看到有phpcs的报错了  配置本地git   打开.git/hooks,新建文件pre-commit 示例代码如下  #!/bin/bash # # check PHP code syntax error and standard with phpcs # author : star[github.com/star1989] # date : 2017-02-24 PROJECT=$(git rev-parse --show-toplevel) cd $PROJECT SFILES=$(git diff --cached --name-only --diff-filter=ACMR HEAD | grep \\.</description>
+      <description>安装pear（参考文档：https://www.cnblogs.com/huangbx/p/php_codesniffer.html） 从以下网址：http://pear.php.net/go-pear</description>
     </item>
     
     <item>
@@ -83,8 +76,7 @@ LOG_PATH=/tmp/paytest 2 启动文件添加日志路径 $app-&amp;gt;configureMon
       <pubDate>Thu, 28 Mar 2019 14:00:40 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/php/laurel/</guid>
-      <description>argc和argv $argv代表传递的参数,$argc代表参数个数（相对路径+传的参数） 示例
-&amp;lt;?php echo $argv[0]; echo &amp;#34;\n&amp;#34;; var_dump($argv[1]); echo &amp;#34;\n&amp;#34;; var_dump(intval($argv[2])); echo &amp;#34;\n&amp;#34;; echo $argv[3]; echo &amp;#34;\n&amp;#34;; echo $argc; </description>
+      <description>argc和argv $argv代表传递的参数,$argc代表参数个数（相对路径+传的参数） 示例 &amp;lt;?php echo $argv[0]; echo &amp;#34;\n&amp;#34;; var_dump($argv[1]); echo &amp;#34;\n&amp;#34;; var_dump(intval($argv[2])); echo &amp;#34;\n&amp;#34;; echo $argv[3]; echo &amp;#34;\n&amp;#34;; echo $argc;</description>
     </item>
     
     <item>
@@ -93,10 +85,7 @@ LOG_PATH=/tmp/paytest 2 启动文件添加日志路径 $app-&amp;gt;configureMon
       <pubDate>Fri, 01 Feb 2019 16:10:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/php/2019_01_01/</guid>
-      <description>1 strtotime() 描述 获取上个月的时间可以是date(&amp;lsquo;Y-m-d&amp;rsquo;,strtotime(&#39;-1 month&#39;));如果今天是31号而上个月没有31号，就会直接输出这个月1号； 解决办法 使用last day of -1 month来获取上个月的最后一天
-2 php 字符串和数字比较 描述 遇到一个问题，传过来的参数可能是0，可能是字符串，然后与0作比较，但是当传递的参数是字符串时，与0比较，结果是true 解决办法 直接与&#39;0&amp;rsquo;比较。0===&amp;lsquo;0&amp;rsquo;可以返回true,可以直接比较，字符串与&#39;0&amp;rsquo;比较也不等
-3 virtualbox共享文件夹不能执行virtualenv env，只能在其他文件夹下运行，暂时没想到解决办法 virtualbox的共享文件夹有保护机制，不允许直接运行virtualenv env，只能在其他文件夹下运行,解决办法： 硬链接
-4 laravel get()-&amp;gt;toArray()无法获取数据 </description>
+      <description>1 strtotime() 描述 获取上个月的时间可以是date(&amp;lsquo;Y-m-d&amp;rsquo;,strtotime(&#39;-1 month&#39;));如果今天是31号而上个月没有31号，就会直接输出这个月1号； 解决办法 使用la</description>
     </item>
     
     <item>
@@ -105,11 +94,7 @@ LOG_PATH=/tmp/paytest 2 启动文件添加日志路径 $app-&amp;gt;configureMon
       <pubDate>Thu, 31 Jan 2019 17:36:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/php/test-my-site/</guid>
-      <description>之前使用fastadmin，自定义角色组，发现编辑/删除/修改等等权限可以直接权限管理中选择，然后用不同的角色登陆，会显示对应的权限按钮。此时有一个新的需求就是增加审核和批量审核，并且也增加对应的权限。
- 添加按钮 先不写功能，在对应的位置上加上审核按钮。在顶头位置的批量审核需要得到的样式如下：
- 原先的创建按钮方法为： {:build_toolbar(&amp;lsquo;refresh,edit,checkall&amp;rsquo;)} 有时候不使用buid_toolbar来创建按钮，而是直接使用的
- &amp;lt;a href=&amp;quot;javascript:;&amp;quot; class=&amp;quot;btn btn-danger btn-del btn-disabled disabled {:$auth-&amp;gt;check(&#39;course/clabelong/del&#39;)?&#39;&#39;:&#39;hide&#39;}&amp;quot;  title=&amp;quot;{:(&amp;lsquo;Delete&amp;rsquo;)}&amp;quot; &amp;gt;{:(&amp;lsquo;Delete&amp;rsquo;)} 这种方式来创建按钮，这样虽然很直观，但是实际上使用却很不方便，因为这里对于权限的判定可能是有问题的。期待的结果是直接使用build_toolbar方法，设置checkall为批量审核，check为审核方法，对于各个权限组可以直接调用。 修改build_toolbar方法到如下结果：
-function build_toolbar($btns = NULL, $attr = []) { $auth = \app\admin\library\Auth::instance(); $controller = str_replace(&#39;.&#39;, &#39;/&#39;, strtolower(think\Request::instance()-&amp;gt;controller())); $btns = $btns ? $btns : [&#39;refresh&#39;, &#39;add&#39;, &#39;edit&#39;, &#39;del&#39;, &#39;import&#39;,&#39;checkall&#39;]; $btns = is_array($btns) ? $btns : explode(&#39;,&#39;, $btns); $index = array_search(&#39;delete&#39;, $btns); if ($index !== FALSE) { $btns[$index] = &#39;del&#39;; } $btnAttr = [ &#39;refresh&#39; =&amp;gt; [&#39;javascript:;&#39;, &#39;btn btn-primary btn-refresh&#39;, &#39;fa fa-refresh&#39;, &#39;&#39;, __(&#39;Refresh&#39;)], &#39;checkall&#39;=&amp;gt; [&#39;javascript:;&#39;, &#39;btn btn-success btn-checkall btn-disabled disabled&#39;, &#39;fa fa-flag-checkered&#39;, &#39; 批量审核&#39;, &#39;批量审核&#39;], &#39;add&#39; =&amp;gt; [&#39;javascript:;&#39;, &#39;btn btn-success btn-add&#39;, &#39;fa fa-plus&#39;, __(&#39;Add&#39;), __(&#39;Add&#39;)], &#39;edit&#39; =&amp;gt; [&#39;javascript:;&#39;, &#39;btn btn-success btn-edit btn-disabled disabled&#39;, &#39;fa fa-pencil&#39;, __(&#39;Edit&#39;), __(&#39;Edit&#39;)], &#39;del&#39; =&amp;gt; [&#39;javascript:;&#39;, &#39;btn btn-danger btn-del btn-disabled disabled&#39;, &#39;fa fa-trash&#39;, __(&#39;Delete&#39;), __(&#39;Delete&#39;)], &#39;import&#39; =&amp;gt; [&#39;javascript:;&#39;, &#39;btn btn-danger btn-import&#39;, &#39;fa fa-upload&#39;, __(&#39;Import&#39;), __(&#39;Import&#39;)], ]; $btnAttr = array_merge($btnAttr, $attr); $html = []; foreach ($btns as $k =&amp;gt; $v) { //如果未定义或没有权限 if (!</description>
+      <description>之前使用fastadmin，自定义角色组，发现编辑/删除/修改等等权限可以直接权限管理中选择，然后用不同的角色登陆，会显示对应的权限按钮。此时有一个新的需求就是增加审核和批量审核，并且也增加对应的权限</description>
     </item>
     
     <item>
@@ -118,7 +103,7 @@ function build_toolbar($btns = NULL, $attr = []) { $auth = \app\admin\library\Au
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/php/swoole_coroutine_pdo_same/</guid>
-      <description>swoole连接池 </description>
+      <description>swoole连接池</description>
     </item>
     
   </channel>

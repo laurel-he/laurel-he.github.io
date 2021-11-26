@@ -1,30 +1,23 @@
 <!DOCTYPE html>
-<html >
+<html lang="en" >
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="" />
+    <meta name="author" content="贺小娇" />
 	
 	
 	
-	<title>53.最大子序和 ｜ </title>
+	<title>53.最大子序和 ｜ 贺小娇的个人博客</title>
 	
     
     
-    <meta name="description" content="题目链接：53.最大子序和
-题目描述 难度 简单 描述 给定一个整数数组 nums，找到一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。
-示例 1： 输入：nums = [-2,1,-3,4,-1,2,1,-5,4] 输出：6 解释：连续子数组[4,-1,2,1] 的和最大，为6 。
-示例 2： 输入：nums = [1] 输出：1
-示例 3： 输入：nums = [0] 输出：0
-示例 4： 输入：nums = [-1] 输出：-1
-示例 5： 输入：nums = [-100000] 输出：-100000
-提示： 1 &amp;lt;= nums.length &amp;lt;= 3 * 104 -105 &amp;lt;= nums[i] &amp;lt;= 105
-进阶：如果你已经实现复杂度为 O(n) 的解法，尝试使用更为精妙的 分治法 求解。
-自行解法 一开始并没有想到合适的解法，于是想到最暴力的方式，获取所有子序和并比较
-class Solution { /** * 出所有的子序和之后进行比较 * @param Integer[] $nums * @return Integer */ function maxSubArray($nums) { $maxForI = []; for ($i = 0; $i &amp;lt; count($nums); $i&#43;&#43;) { $sumForI = $nums[$i]; $maxForJ = []; $max = max($nums); for ($j = $i &#43; 1; $j &amp;lt; count($nums); $j&#43;&#43;) { if ($i == $j) { $sumForI = $nums[$i]; } else { $sumForI &#43;= $nums[$j]; } $maxForJ[] = max($maxNum, $sumForI, $max); $maxNum = $sumForI; } if (count($nums) == 1) { $maxForJ = $nums; } $maxForI[$i] = max($maxForJ); } return max($maxForI); } } 这种方式可以通过绝大部分测试用例，但是当$nums增加到一定数量级后会超时" />
+    <meta name="description" content="题目链接：53.最大子序和 题目描述 难度 简单 描述 给定一个整数数组 nums，找到一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。 示例 1： 输入：nums = [-2,1,-3,4,-1,2,1,-5,4] 输出：6 解释：连续子数组[4," />
     
 
+    
+    
+    <meta name="keywords" content="Hugo, blog, php" />
     
 
 	
@@ -47,6 +40,22 @@ class Solution { /** * 出所有的子序和之后进行比较 * @param Integer[
     <div class="site_nav" id="site_nav">
         <ul>
             
+            <li>
+                <a href="/">主页</a>
+            </li>
+            
+            <li>
+                <a href="/posts/">Archive</a>
+            </li>
+            
+            <li>
+                <a href="/tags/">Tags</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
         </ul>
     </div>
     <div class="menu_icon">
@@ -58,13 +67,31 @@ class Solution { /** * 出所有的子序和之后进行比较 * @param Integer[
         <div class="site_title">
             <h1>
                 <a href="https://laurel-he.github.io/">
-                    <span></span>
+                    <span>贺小娇的个人博客</span>
                 </a>
             </h1>
         </div>
         <div class="description">
-            <p class="sub_title"></p>
+            <p class="sub_title">the summary of my programing life</p>
             <div class="my_socials">
+                
+                
+                <a href="%20" title="facebook" target="_blank"><i class="ri-facebook-fill"></i></a>
+                
+                
+                
+                <a href="https://github.com/laurel-he" title="github" target="_blank"><i class="ri-github-fill"></i></a>
+                
+                
+                
+                <a href="%20" title="instagram" target="_blank"><i class="ri-instagram-fill"></i></a>
+                
+                
+                
+                
+                
+                <a href="%20" title="weibo" target="_blank"><i class="ri-weibo-fill"></i></a>
+                
                 
                 <a href="https://laurel-he.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
                         class="ri-rss-fill"></i></a>
@@ -107,58 +134,58 @@ class Solution { /** * 出所有的子序和之后进行比较 * @param Integer[
 <p>进阶：如果你已经实现复杂度为 O(n) 的解法，尝试使用更为精妙的 分治法 求解。</p>
 <h2 id="自行解法">自行解法</h2>
 <p>一开始并没有想到合适的解法，于是想到最暴力的方式，获取所有子序和并比较</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
-    <span style="color:#e6db74">/**
-</span><span style="color:#e6db74">     * 出所有的子序和之后进行比较
-</span><span style="color:#e6db74">     * @param Integer[] $nums
-</span><span style="color:#e6db74">     * @return Integer
-</span><span style="color:#e6db74">     */</span>
-    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">maxSubArray</span>($nums) {
-        $maxForI <span style="color:#f92672">=</span> [];
-        <span style="color:#66d9ef">for</span> ($i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; $i <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">count</span>($nums); $i<span style="color:#f92672">++</span>) {
-            $sumForI <span style="color:#f92672">=</span> $nums[$i];
-            $maxForJ <span style="color:#f92672">=</span> [];
-            $max <span style="color:#f92672">=</span> <span style="color:#a6e22e">max</span>($nums);
-            <span style="color:#66d9ef">for</span> ($j <span style="color:#f92672">=</span> $i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>; $j <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">count</span>($nums); $j<span style="color:#f92672">++</span>) {
-                <span style="color:#66d9ef">if</span> ($i <span style="color:#f92672">==</span> $j) {
-                    $sumForI <span style="color:#f92672">=</span> $nums[$i];
-                } <span style="color:#66d9ef">else</span> {
-                    $sumForI <span style="color:#f92672">+=</span> $nums[$j];
-                }
-                $maxForJ[] <span style="color:#f92672">=</span> <span style="color:#a6e22e">max</span>($maxNum, $sumForI, $max);
-                $maxNum <span style="color:#f92672">=</span> $sumForI;
-            }
-            <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">count</span>($nums) <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>) {
-                $maxForJ <span style="color:#f92672">=</span> $nums;
-            }
-            $maxForI[$i] <span style="color:#f92672">=</span> <span style="color:#a6e22e">max</span>($maxForJ);
-        }
-        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">max</span>($maxForI);
-    }
-}
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+    <span class="sd">/**
+</span><span class="sd">     * 出所有的子序和之后进行比较
+</span><span class="sd">     * @param Integer[] $nums
+</span><span class="sd">     * @return Integer
+</span><span class="sd">     */</span>
+    <span class="k">function</span> <span class="nf">maxSubArray</span><span class="p">(</span><span class="nv">$nums</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nv">$maxForI</span> <span class="o">=</span> <span class="p">[];</span>
+        <span class="k">for</span> <span class="p">(</span><span class="nv">$i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">&lt;</span> <span class="nx">count</span><span class="p">(</span><span class="nv">$nums</span><span class="p">);</span> <span class="nv">$i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nv">$sumForI</span> <span class="o">=</span> <span class="nv">$nums</span><span class="p">[</span><span class="nv">$i</span><span class="p">];</span>
+            <span class="nv">$maxForJ</span> <span class="o">=</span> <span class="p">[];</span>
+            <span class="nv">$max</span> <span class="o">=</span> <span class="nx">max</span><span class="p">(</span><span class="nv">$nums</span><span class="p">);</span>
+            <span class="k">for</span> <span class="p">(</span><span class="nv">$j</span> <span class="o">=</span> <span class="nv">$i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="nv">$j</span> <span class="o">&lt;</span> <span class="nx">count</span><span class="p">(</span><span class="nv">$nums</span><span class="p">);</span> <span class="nv">$j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nv">$i</span> <span class="o">==</span> <span class="nv">$j</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="nv">$sumForI</span> <span class="o">=</span> <span class="nv">$nums</span><span class="p">[</span><span class="nv">$i</span><span class="p">];</span>
+                <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                    <span class="nv">$sumForI</span> <span class="o">+=</span> <span class="nv">$nums</span><span class="p">[</span><span class="nv">$j</span><span class="p">];</span>
+                <span class="p">}</span>
+                <span class="nv">$maxForJ</span><span class="p">[]</span> <span class="o">=</span> <span class="nx">max</span><span class="p">(</span><span class="nv">$maxNum</span><span class="p">,</span> <span class="nv">$sumForI</span><span class="p">,</span> <span class="nv">$max</span><span class="p">);</span>
+                <span class="nv">$maxNum</span> <span class="o">=</span> <span class="nv">$sumForI</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nx">count</span><span class="p">(</span><span class="nv">$nums</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nv">$maxForJ</span> <span class="o">=</span> <span class="nv">$nums</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="nv">$maxForI</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">max</span><span class="p">(</span><span class="nv">$maxForJ</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="nx">max</span><span class="p">(</span><span class="nv">$maxForI</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div><p>这种方式可以通过绝大部分测试用例，但是当$nums增加到一定数量级后会超时</p>
 <h2 id="其他解法">其他解法</h2>
 <p>经过查阅资料，发现这里会有更好的解法</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
 
-    <span style="color:#e6db74">/**
-</span><span style="color:#e6db74">     * @param Integer[] $nums
-</span><span style="color:#e6db74">     * @return Integer
-</span><span style="color:#e6db74">     */</span>
-    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">maxSubArray</span>($nums) {
-        $res <span style="color:#f92672">=</span> $nums[<span style="color:#ae81ff">0</span>];
-        $sum <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-        <span style="color:#66d9ef">foreach</span> ($nums <span style="color:#66d9ef">as</span> $num) {
-            <span style="color:#66d9ef">if</span> ($sum <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>) {
-                $sum <span style="color:#f92672">+=</span> $num;
-            } <span style="color:#66d9ef">else</span> {
-                $sum <span style="color:#f92672">=</span> $num;
-            }
-            $res <span style="color:#f92672">=</span> <span style="color:#a6e22e">max</span>($res, $sum);           
-        }
-        <span style="color:#66d9ef">return</span> $res;
-    }
-}
+    <span class="sd">/**
+</span><span class="sd">     * @param Integer[] $nums
+</span><span class="sd">     * @return Integer
+</span><span class="sd">     */</span>
+    <span class="k">function</span> <span class="nf">maxSubArray</span><span class="p">(</span><span class="nv">$nums</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nv">$res</span> <span class="o">=</span> <span class="nv">$nums</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+        <span class="nv">$sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">foreach</span> <span class="p">(</span><span class="nv">$nums</span> <span class="k">as</span> <span class="nv">$num</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nv">$sum</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nv">$sum</span> <span class="o">+=</span> <span class="nv">$num</span><span class="p">;</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="nv">$sum</span> <span class="o">=</span> <span class="nv">$num</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="nv">$res</span> <span class="o">=</span> <span class="nx">max</span><span class="p">(</span><span class="nv">$res</span><span class="p">,</span> <span class="nv">$sum</span><span class="p">);</span>           
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="nv">$res</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div></div>
                     <div class="post_footer">
                         
@@ -190,7 +217,7 @@ class Solution { /** * 出所有的子序和之后进行比较 * @param Integer[
     </div>
 
     <div class="footer_slogan">
-        <span></span>
+        <span>My spiritual home</span>
     </div>
 </footer>
     <script src="https://laurel-he.github.io/js/jquery-3.5.1.min.js"></script>
@@ -198,6 +225,43 @@ class Solution { /** * 出所有的子序和之后进行比较 * @param Integer[
 <script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
 <script src="https://laurel-he.github.io/js/zozo.js"></script>
 
+
+<script type="text/javascript" async
+    src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\[\[', '\]\]']],
+                processEscapes: true,
+                processEnvironments: true,
+                skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                TeX: {
+                    equationNumbers: { autoNumber: "AMS" },
+                    extensions: ["AMSmath.js", "AMSsymbols.js"]
+                }
+            }
+        });
+
+        MathJax.Hub.Queue(function () {
+            
+            
+            
+            var all = MathJax.Hub.getAllJax(), i;
+            for (i = 0; i < all.length; i += 1) {
+                all[i].SourceElement().parentNode.className += ' has-jax';
+            }
+        });
+    </script>
+
+<style>
+    code.has-jax {
+        font: inherit;
+        font-size: 100%;
+        background: inherit;
+        border: inherit;
+        color: #515151;
+    }
+</style>
 
 
 

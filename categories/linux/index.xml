@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>linux on </title>
+    <title>linux on 贺小娇的个人博客</title>
     <link>https://laurel-he.github.io/categories/linux/</link>
-    <description>Recent content in linux on </description>
+    <description>Recent content in linux on 贺小娇的个人博客</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Thu, 27 Feb 2020 18:00:00 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>awk</title>
@@ -12,11 +13,7 @@
       <pubDate>Thu, 27 Feb 2020 18:00:00 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/operatingsystem/linux/awk/</guid>
-      <description>参考文档： awk 入门教程 Linux awk命令
-知识点 （1）-F指定分隔符，例如：awk -F &#39;:&#39; &#39;{print $1}&#39; demo.log （2）$0代表当前行，即所有内容，例如：awk &#39;{print $0}&#39; demo.log将会输出demo.log的所有内容 （3）$ + 数字表示某个字段，例如$2,$3分别表示第2第3个字段，也可以理解为列 （4）变量NF表示当前行有多少个字段，因此$NF就代表最后一个字段。例如：awk &#39;{print $NF}&#39; demo.log （5）$(NF-1)代表倒数第二个字段，即NF-数字代表倒数字段。 （6）输出时使用空格分隔，例如：awk &#39;{print $1, $(NF-1)}&#39; demo.log （7）要原样输出字符，需要放在&amp;quot;&amp;ldquo;里，例如awk -F &#39;:&#39; &#39;{print &amp;quot;(&amp;quot;,$5,&amp;quot;)&amp;quot;}&#39; demo.log （8）变量NR表示当前处理的是第几行，可以输出当前行数awk -F &#39;:&#39; &#39;{print NR &amp;quot;):(&amp;quot; $5 &amp;quot;)&amp;quot;}&#39; demo.log （9）awk有许多内置函数，例如转换大小写，详情见本文函数 （10）awk允许指定输出条件，可正则可根据行列计算等，非常重要 （11）awk提供判断语句（if else）
-awk是什么 awk是处理文本文件的一个应用程序，几乎所有 Linux 系统都自带这个程序。
-它依次处理文件的每一行，并读取里面的每一个字段。对于日志、CSV 那样的每行格式相同的文本文件，awk可能是最方便的工具。
-awk语法 awk [选项参数] &amp;#39;script&amp;#39; var=value file(s) #或 awk [选项参数] -f scriptfile var=value file(s) #或者可以解释为： #awk 动作 文件名 示例：</description>
+      <description>参考文档： awk 入门教程 Linux awk命令 知识点 （1）-F指定分隔符，例如：awk -F &#39;:&#39; &#39;{print $1}&#39; demo.log （2）$0代表当前行，即所有内容，例如：awk &#39;{print $0}&#39; demo.log将会输出demo.log的所有内容 （3）$ + 数字表示</description>
     </item>
     
     <item>
@@ -25,19 +22,7 @@ awk语法 awk [选项参数] &amp;#39;script&amp;#39; var=value file(s) #或 awk
       <pubDate>Thu, 27 Feb 2020 18:00:00 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/operatingsystem/linuxuse/</guid>
-      <description>文件操作 cat 描述
-查看文件内容 参数
--n 或 –number 由 1 开始对所有输出的行数编号 -b 或 –number-nonblank 和 -n 相似，只不过对于空白行不编号 -s 或 –squeeze-blank 当遇到有连续两行以上的空白行，就代换为一行的空白行 -v 或 –show-nonprinting 举例 1 从键盘创建一个文件： 2 将几个文件合并成一个文件： cd 描述
-系统信息 arch 描述
-显示机器的处理器架构 举例
-uname 描述
-显示机器的处理器架构 参数
--a或&amp;ndash;all 显示全部的信息。 -m或&amp;ndash;machine 显示电脑类型。 -n或-nodename 显示在网络上的主机名称。 -r或&amp;ndash;release 显示操作系统的发行编号。 -s或&amp;ndash;sysname 显示操作系统名称。 -v 显示操作系统的版本。 &amp;ndash;help 显示帮助。 &amp;ndash;version 显示版本信息。 举例
-dmidecode 描述
-显示硬件信息，不常用，可忽略
-开关机 shutdown 描述
-关机或重启 参数
--t seconds : 设定在几秒钟之后进行关机程序。 -k : 并不会真的关机，只是将警告讯息传送给所有使用者。 -r : 关机后重新开机。 -h : 关机后停机。 -n : 不采用正常程序来关机，用强迫的方式杀掉所有执行中的程序后自行关机。 -c : 取消目前已经进行中的关机动作。 -f : 关机时，不做 fcsk 动作(检查 Linux 档系统)。 -F : 关机时，强迫进行 fsck 动作。 time : 设定关机的时间。 message : 传送给所有使用者的警告讯息。</description>
+      <description>文件操作 cat 描述 查看文件内容 参数 -n 或 –number 由 1 开始对所有输出的行数编号 -b 或 –number-nonblank 和 -n 相似，只不过对于空白行不编号 -s 或 –squeeze-blank 当遇到有连续两行以上的空</description>
     </item>
     
     <item>
@@ -46,20 +31,7 @@ dmidecode 描述
       <pubDate>Thu, 27 Feb 2020 18:00:00 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/operatingsystem/linuxbase/</guid>
-      <description>学习心得，来自于蓝桥Linux基础入门
-用户相关 查看当前用户 whoami:查看当前用户名 who am i:可以列出用户名，当前登录的伪终端以及当前伪终端的启动时间等 注意事项 在有些情况下who am i或者who mom likes不会有输出，因为当前shell不是登录时的shell
-添加用户 例如添加用户lilei:
-sudo adduser lilei 此命令在添加用户的同时还会创建用户的home目录
-添加用户组 groupadd [groupname]
-sudo groupadd lilei 将其他用户加入sudo用户组 当一个没有sudo权限的用户执行sudo命令时将报告当前用户不在sudoer文件中 使用一个有sudo权限的账户来添加，例如：
-sudo usermod -G sudo lilei 实际上，这里执行的操作就是将用户添加至工作组，这里的命令为：
-usermod -G [groupname] [username] 用户组 groups:查看用户所属的用户组，例如：
-groups lilei /etc/group文件 /etc/group文件保存了所有的用户和用户组信息，格式如下：
-group_name:password:GID:user_list 当password为x时表示密码不可见，如果用户的GID等于用户组的GID，那么user_list为空
-删除用户 sudo deluser lilei --remove-home &amp;ndash;remove-home表示在删除用户的时候同时删除用户的home目录
-删除用户组 groupdel命令
-文件相关 ll第一列的文件类型
-   名称 英文名 含义     d directory 目录   l link 软连接   b block 块设备   c char 字符设备   s socket 网络套接字   p pipe 管道   - - 普通文件    ll命令第一列解析如下： 可以通过ll -h更直观的看到文件大小 -a可以显示隐藏文件</description>
+      <description>学习心得，来自于蓝桥Linux基础入门 用户相关 查看当前用户 whoami:查看当前用户名 who am i:可以列出用户名，当前登录的伪终端以及当前伪终端的启动时间等 注意事项 在有些情况下who am i或者who mom lik</description>
     </item>
     
     <item>
@@ -68,12 +40,7 @@ group_name:password:GID:user_list 当password为x时表示密码不可见，如�
       <pubDate>Wed, 10 Apr 2019 18:27:44 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/post/crontab/</guid>
-      <description>1 简介 crond 是linux下用来周期性的执行某种任务或等待处理某些事件的一个守护进程，与windows下的计划任务类似，当安装完成操作系统后，默认会安装此服务 工具，并且会自动启动crond进程，crond进程每分钟会定期检查是否有要执行的任务，如果有要执行的任务，则自动执行该任务。
-2 格式 minute hour day month week command
-3 操作 crontab -l:列出所有任务
-laravel 定时任务 原文路径 https://learnku.com/docs/laravel/5.4/scheduling/1257
-其他解决方式 1 supervisor 举例
-[program:finance_svcs_autoreconciliation] command=php /opt/app/nginx/html/qa6/financesvcs/artisan queue:work beanstalkd --queue=autoreconciliation_broadcast --daemon directory=/opt/app/nginx/html/qa6/financesvcs autostart=true autorestart=true user=apache numprocs=1 redirect_stderr=true stdout_logfile=/var/log/supervisor/qa1/%(program_name)s-stdout.log stdout_logfile_maxbytes=10MB stdout_logfile_backups=10  </description>
+      <description>1 简介 crond 是linux下用来周期性的执行某种任务或等待处理某些事件的一个守护进程，与windows下的计划任务类似，当安装完成操作系统后，默认会安装此服务 工具，并且会自动启动crond进程，crond进</description>
     </item>
     
   </channel>

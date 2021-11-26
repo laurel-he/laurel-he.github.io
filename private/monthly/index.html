@@ -1,20 +1,23 @@
 <!DOCTYPE html>
-<html >
+<html lang="en" >
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="" />
+    <meta name="author" content="贺小娇" />
 	
 	
 	
-	<title>重新实现monthly步骤 ｜ </title>
+	<title>重新实现monthly步骤 ｜ 贺小娇的个人博客</title>
 	
     
     
-    <meta name="description" content="1 bi新建已收、已付、应收、应付表 CREATE TABLE `order_product_set_pay`( `id` int(10) unsigned NOT NULL, `order_product_id` int(10) unsigned NOT NULL, `parent_order_product_id` int(10) unsigned DEFAULT &#39;0&#39; COMMENT &#39;parent order_product_id&#39;, `has_settlement` decimal(10,2) NOT NULL DEFAULT &#39;0.00&#39;, `should_settlement` decimal(10,2) NOT NULL DEFAULT &#39;0.00&#39;, `has_pay` decimal(10,2) NOT NULL DEFAULT &#39;0.00&#39;, `should_pay` decimal(10,2) NOT NULL DEFAULT &#39;0.00&#39;, `settlement_pay_time` timestamp NOT NULL DEFAULT &#39;0000-00-00 00:00:00&#39;, `pay_pay_status` varchar(255) NOT NULL DEFAULT &#39;Pending&#39;, `pay_pay_time` timestamp NOT NULL DEFAULT &#39;0000-00-00 00:00:00&#39;, PRIMARY KEY (`id`) ) ENGINE=InnoDB DEFAULT CHARSET=utf8; alter table `order_product_set_pay` drop primary key; alter table `order_product_set_pay` add `settlement_id` int(10) unsigned NOT NULL; 2 从bi表中查询数据 1 已收 （总收）/比例 比例 =" />
+    <meta name="description" content="1 bi新建已收、已付、应收、应付表 CREATETABLE`order_product_set_pay`(`id`int(10)unsignedNOTNULL,`order_product_id`int(10)unsignedNOTNULL,`parent_order_product_id`int(10)unsignedDEFAULT&amp;#39;0&amp;#39;COMMENT&amp;#39;parent order_product_id&amp;#39;,`has_settlement`decimal(10,2)NOTNULLDEFAULT&amp;#39;0.00&amp;#39;,`should_settlement`decimal(10,2)NOTNULLDEFAULT&amp;#39;0.00&amp;#39;,`has_pay`decimal(10,2)NOTNULLDEFAULT&amp;#39;0.00&amp;#39;,`should_pay`decimal(10,2)NOTNULLDEFAULT&amp;#39;0.00&amp;#39;,`settlement_pay_time`timestampNOTNULLDEFAULT&amp;#39;0000-00-00 00:00:00&amp;#39;,`pay_pay_status`varchar(255)NOTNULLDEFAULT&amp;#39;Pending&amp;#39;,`pay_pay_time`timestampNOTNULLDEFAULT&amp;#39;0000-00-00 00:00:00&amp;#39;,PRIMARYKEY(`id`))ENGINE=InnoDBDEFAULTCHARSET=utf8;altertable`order_product_set_pay`dropprimarykey;altertable`order_product_set_pay`add`settlement_id`int(10)unsignedNOTNULL;2 从bi表中查询数据 1 已收 （总收）/比例 比例 = mysql查询优化 优化结果 SELECTop.order_product_id,op.parent_order_pr" />
     
 
+    
+    
+    <meta name="keywords" content="Hugo, blog, php" />
     
 
 	
@@ -37,6 +40,22 @@
     <div class="site_nav" id="site_nav">
         <ul>
             
+            <li>
+                <a href="/">主页</a>
+            </li>
+            
+            <li>
+                <a href="/posts/">Archive</a>
+            </li>
+            
+            <li>
+                <a href="/tags/">Tags</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
         </ul>
     </div>
     <div class="menu_icon">
@@ -48,13 +67,31 @@
         <div class="site_title">
             <h1>
                 <a href="https://laurel-he.github.io/">
-                    <span></span>
+                    <span>贺小娇的个人博客</span>
                 </a>
             </h1>
         </div>
         <div class="description">
-            <p class="sub_title"></p>
+            <p class="sub_title">the summary of my programing life</p>
             <div class="my_socials">
+                
+                
+                <a href="%20" title="facebook" target="_blank"><i class="ri-facebook-fill"></i></a>
+                
+                
+                
+                <a href="https://github.com/laurel-he" title="github" target="_blank"><i class="ri-github-fill"></i></a>
+                
+                
+                
+                <a href="%20" title="instagram" target="_blank"><i class="ri-instagram-fill"></i></a>
+                
+                
+                
+                
+                
+                <a href="%20" title="weibo" target="_blank"><i class="ri-weibo-fill"></i></a>
+                
                 
                 <a href="https://laurel-he.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
                         class="ri-rss-fill"></i></a>
@@ -70,143 +107,143 @@
                         <span class="date">2019.03.25</span>
                     </div>
                     <div class="post_content markdown"><h1 id="1-bi新建已收已付应收应付表">1 bi新建已收、已付、应收、应付表</h1>
-<pre><code>CREATE TABLE `order_product_set_pay`(
-`id` int(10) unsigned NOT NULL,
-`order_product_id` int(10) unsigned NOT NULL,
-`parent_order_product_id` int(10) unsigned DEFAULT '0' COMMENT 'parent order_product_id',
-`has_settlement` decimal(10,2) NOT NULL DEFAULT '0.00',
-`should_settlement` decimal(10,2) NOT NULL DEFAULT '0.00',
-`has_pay` decimal(10,2) NOT NULL DEFAULT '0.00',
-`should_pay` decimal(10,2) NOT NULL DEFAULT '0.00',
-`settlement_pay_time` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-`pay_pay_status` varchar(255) NOT NULL DEFAULT 'Pending',
-`pay_pay_time` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-
-alter table `order_product_set_pay` drop primary key;
-alter table `order_product_set_pay` add `settlement_id` int(10) unsigned NOT NULL;
-</code></pre><h1 id="2-从bi表中查询数据">2 从bi表中查询数据</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">`</span><span class="n">order_product_set_pay</span><span class="o">`</span><span class="p">(</span><span class="w">
+</span><span class="w"></span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="w"> </span><span class="kt">int</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="k">unsigned</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="no">NULL</span><span class="p">,</span><span class="w">
+</span><span class="w"></span><span class="o">`</span><span class="n">order_product_id</span><span class="o">`</span><span class="w"> </span><span class="kt">int</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="k">unsigned</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="no">NULL</span><span class="p">,</span><span class="w">
+</span><span class="w"></span><span class="o">`</span><span class="n">parent_order_product_id</span><span class="o">`</span><span class="w"> </span><span class="kt">int</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="k">unsigned</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="s1">&#39;0&#39;</span><span class="w"> </span><span class="n">COMMENT</span><span class="w"> </span><span class="s1">&#39;parent order_product_id&#39;</span><span class="p">,</span><span class="w">
+</span><span class="w"></span><span class="o">`</span><span class="n">has_settlement</span><span class="o">`</span><span class="w"> </span><span class="kt">decimal</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="no">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="s1">&#39;0.00&#39;</span><span class="p">,</span><span class="w">
+</span><span class="w"></span><span class="o">`</span><span class="n">should_settlement</span><span class="o">`</span><span class="w"> </span><span class="kt">decimal</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="no">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="s1">&#39;0.00&#39;</span><span class="p">,</span><span class="w">
+</span><span class="w"></span><span class="o">`</span><span class="n">has_pay</span><span class="o">`</span><span class="w"> </span><span class="kt">decimal</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="no">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="s1">&#39;0.00&#39;</span><span class="p">,</span><span class="w">
+</span><span class="w"></span><span class="o">`</span><span class="n">should_pay</span><span class="o">`</span><span class="w"> </span><span class="kt">decimal</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="no">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="s1">&#39;0.00&#39;</span><span class="p">,</span><span class="w">
+</span><span class="w"></span><span class="o">`</span><span class="n">settlement_pay_time</span><span class="o">`</span><span class="w"> </span><span class="kt">timestamp</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="no">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="s1">&#39;0000-00-00 00:00:00&#39;</span><span class="p">,</span><span class="w">
+</span><span class="w"></span><span class="o">`</span><span class="n">pay_pay_status</span><span class="o">`</span><span class="w"> </span><span class="kt">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="no">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="s1">&#39;Pending&#39;</span><span class="p">,</span><span class="w">
+</span><span class="w"></span><span class="o">`</span><span class="n">pay_pay_time</span><span class="o">`</span><span class="w"> </span><span class="kt">timestamp</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="no">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="s1">&#39;0000-00-00 00:00:00&#39;</span><span class="p">,</span><span class="w">
+</span><span class="w"></span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="p">)</span><span class="w">
+</span><span class="w"></span><span class="p">)</span><span class="w"> </span><span class="kp">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="kp">CHARSET</span><span class="o">=</span><span class="n">utf8</span><span class="p">;</span><span class="w">
+</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="k">alter</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="o">`</span><span class="n">order_product_set_pay</span><span class="o">`</span><span class="w"> </span><span class="k">drop</span><span class="w"> </span><span class="k">primary</span><span class="w"> </span><span class="k">key</span><span class="p">;</span><span class="w">
+</span><span class="w"></span><span class="k">alter</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="o">`</span><span class="n">order_product_set_pay</span><span class="o">`</span><span class="w"> </span><span class="k">add</span><span class="w"> </span><span class="o">`</span><span class="n">settlement_id</span><span class="o">`</span><span class="w"> </span><span class="kt">int</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="k">unsigned</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="no">NULL</span><span class="p">;</span><span class="w">
+</span></code></pre></div><h1 id="2-从bi表中查询数据">2 从bi表中查询数据</h1>
 <p>1 已收
 （总收）/比例
 比例 =</p>
 <h1 id="mysql查询优化">mysql查询优化</h1>
 <p><strong>优化结果</strong></p>
-<pre><code> SELECT
-                    op.order_product_id,
-                    op.parent_order_product_id,
-                    op.product_retail,
-                    op.product_discount,
-                    op.insurance_retail,
-                    op.order_id,
-                    op.product_cost,
-                    opi.`bill_status` AS bill_status,
-                    fs.settlement_id,
-                    fs.type,
-                    fs.`status`,
-                    fs.paid_usd_amount AS should_usd,
-                    fs.updated_at AS modify_time,
-                    (
-                        SELECT
-                            sum((
-                                                CASE 
-                                                WHEN (cu.`code`='CNY') THEN
-                                                    ROUND((opii.`amount`)/LEFT(SUBSTRING_INDEX(o.rate_info, '&quot;CNY&quot;:', - 1), 6), 2)
-                                                WHEN (cu.`code`='GBP') THEN
-                                                    ROUND((opii.`amount`)/LEFT(SUBSTRING_INDEX(o.rate_info, '&quot;GBP&quot;:', - 1), 6), 2)
-                                                WHEN (cu.`code`='AUD') THEN
-                                                    ROUND((opii.`amount`)/LEFT(SUBSTRING_INDEX(o.rate_info, '&quot;AUD&quot;:', - 1), 6), 2)
-                                                WHEN (cu.`code`='NZD') THEN
-                                                    ROUND((opii.`amount`)/LEFT(SUBSTRING_INDEX(o.rate_info, '&quot;NZD&quot;:', - 1), 6), 2)
-                                                WHEN (cu.`code`='EUR') THEN
-                                                    ROUND((opii.`amount`)/LEFT(SUBSTRING_INDEX(o.rate_info, '&quot;EUR&quot;:', - 1), 6), 2)
-                                                WHEN (cu.`code`='CAD') THEN
-                                                    ROUND((opii.`amount`)/LEFT(SUBSTRING_INDEX(o.rate_info, '&quot;CAD&quot;:', - 1), 6), 2)
-                                                WHEN (cu.`code`='SUR') THEN
-                                                    ROUND((opii.`amount`)/LEFT(SUBSTRING_INDEX(o.rate_info, '&quot;SUR&quot;:', - 1), 6), 2)
-                                                WHEN (cu.`code`='JPY') THEN
-                                                    ROUND((opii.`amount`)/LEFT(SUBSTRING_INDEX(o.rate_info, '&quot;JPY&quot;:', - 1), 6), 2)
-                                                WHEN (cu.`code`='ZAR') THEN
-                                                    ROUND((opii.`amount`)/LEFT(SUBSTRING_INDEX(o.rate_info, '&quot;ZAR&quot;:', - 1), 6), 2)
-                                                WHEN (cu.`code`='NOK') THEN
-                                                    ROUND((opii.`amount`)/LEFT(SUBSTRING_INDEX(o.rate_info, '&quot;NOK&quot;:', - 1), 6), 2)
-                                                WHEN (cu.`code`='PHP') THEN
-                                                    ROUND((opii.`amount`)/LEFT(SUBSTRING_INDEX(o.rate_info, '&quot;PHP&quot;:', - 1), 6), 2)
-                                                WHEN (cu.`code`='SEK') THEN
-                                                    ROUND((opii.`amount`)/LEFT(SUBSTRING_INDEX(o.rate_info, '&quot;SEK&quot;:', - 1), 6), 2)
-                                                WHEN (cu.`code`='CHF') THEN
-                                                    ROUND((opii.`amount`)/LEFT(SUBSTRING_INDEX(o.rate_info, '&quot;CHF&quot;:', - 1), 6), 2)
-                                                WHEN (cu.`code`='DKK') THEN
-                                                    ROUND((opii.`amount`)/LEFT(SUBSTRING_INDEX(o.rate_info, '&quot;DKK&quot;:', - 1), 6), 2)
-                                                WHEN (cu.`code`='HKD') THEN
-                                                    ROUND((opii.`amount`)/LEFT(SUBSTRING_INDEX(o.rate_info, '&quot;HKD&quot;:', - 1), 6), 2)
-                                                WHEN (cu.`code`='USD') THEN  opii.`amount`
-                                                END
-                                                )) has_paid
-                        FROM
-                            `bi`.`order_product_item` opii
-                        LEFT JOIN `bi`.`order` AS o ON opii.order_id= o.order_id    
-                        LEFT JOIN `ori_new`.`financial_bill` AS fb ON opii.bill_id= fb.id
-                                                LEFT JOIN `bi`.`order_product` AS opp ON opii.order_product_id= opp.order_product_id
-                                                LEFT JOIN `ori_new`.`tff_provider` tp on opp.provider_id=tp.provider_id
-                                                LEFT JOIN `bi`.`currency` cu on tp.currency_id=cu.currency_id
-                        WHERE
-                            opii.order_product_id = op.order_product_id
-                        AND (
-                            opii.`bill_status` = 'Finished'
-                            OR opii.`bill_status` = 'Paid'
-                        )
-                    ) has_paid,
-                    (
-                        SELECT
-                            fb.updated_at
-                        FROM
-                            `ori_new`.`financial_bill` fb
-                        LEFT JOIN `bi`.`order_product_item` opii  ON opii.bill_id= fb.id
-                        WHERE
-                            opii.order_product_id = op.order_product_id
-                        AND opii.`bill_status` = 'Paid'
-                        limit 1
-                    ) `pay_pay_time`,
-                    (
-                        SELECT
-                            sum(opa.product_retail) AS total_retail
-                        FROM
-                            `bi`.`order_product` opa
-                        WHERE
-                            opa.order_id = op.order_id
-                        AND opa.product_line != 'combine'
-                    ) total_retail,
-                    (
-                        SELECT
-                            sum(opa.insurance_retail) AS insurance_total
-                        FROM
-                            `bi`.`order_product` opa
-                        WHERE
-                            opa.order_id = op.order_id
-                        AND opa.product_line != 'combine'
-                    ) insurance_total,
-                    (
-                        SELECT
-                            count(opa.order_product_id) AS op_num
-                        FROM
-                            `bi`.`order_product` opa
-                        WHERE
-                            opa.order_id = op.order_id
-                    ) op_num
-                FROM
-                    `bi`.`order_product` op
-                LEFT JOIN `bi`.`order_product_item` opi ON op.order_product_id = opi.order_product_id
-                LEFT JOIN `ori_new`.financial_settlement AS fs ON fs.order_id = op.order_id
-                LEFT JOIN `ori_new`.financial_payment_method AS p ON fs.payment_method_id = p.payment_method_id
-                WHERE
-                    op.order_product_id in ({0})
-                AND op.product_line != 'combine'
-</code></pre><h1 id="用过的命令">用过的命令</h1>
-<pre><code>sudo awk -F '[ ;]+' '{if($2&gt;2) print $1,$2}' test.txt | awk  '{print $1}' |xargs  |tr &quot;\n&quot; &quot; &quot;|sed 's/ /,/g'
-sudo sed -i 's/api.bi.tff.com/127.0.0.1:5003/g' `find ./dist/ -name '*js'`
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="w"> </span><span class="k">SELECT</span><span class="w">
+</span><span class="w">                    </span><span class="n">op</span><span class="p">.</span><span class="n">order_product_id</span><span class="p">,</span><span class="w">
+</span><span class="w">                    </span><span class="n">op</span><span class="p">.</span><span class="n">parent_order_product_id</span><span class="p">,</span><span class="w">
+</span><span class="w">                    </span><span class="n">op</span><span class="p">.</span><span class="n">product_retail</span><span class="p">,</span><span class="w">
+</span><span class="w">                    </span><span class="n">op</span><span class="p">.</span><span class="n">product_discount</span><span class="p">,</span><span class="w">
+</span><span class="w">                    </span><span class="n">op</span><span class="p">.</span><span class="n">insurance_retail</span><span class="p">,</span><span class="w">
+</span><span class="w">                    </span><span class="n">op</span><span class="p">.</span><span class="n">order_id</span><span class="p">,</span><span class="w">
+</span><span class="w">                    </span><span class="n">op</span><span class="p">.</span><span class="n">product_cost</span><span class="p">,</span><span class="w">
+</span><span class="w">                    </span><span class="n">opi</span><span class="p">.</span><span class="o">`</span><span class="n">bill_status</span><span class="o">`</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">bill_status</span><span class="p">,</span><span class="w">
+</span><span class="w">                    </span><span class="n">fs</span><span class="p">.</span><span class="n">settlement_id</span><span class="p">,</span><span class="w">
+</span><span class="w">                    </span><span class="n">fs</span><span class="p">.</span><span class="n">type</span><span class="p">,</span><span class="w">
+</span><span class="w">                    </span><span class="n">fs</span><span class="p">.</span><span class="o">`</span><span class="n">status</span><span class="o">`</span><span class="p">,</span><span class="w">
+</span><span class="w">                    </span><span class="n">fs</span><span class="p">.</span><span class="n">paid_usd_amount</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">should_usd</span><span class="p">,</span><span class="w">
+</span><span class="w">                    </span><span class="n">fs</span><span class="p">.</span><span class="n">updated_at</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">modify_time</span><span class="p">,</span><span class="w">
+</span><span class="w">                    </span><span class="p">(</span><span class="w">
+</span><span class="w">                        </span><span class="k">SELECT</span><span class="w">
+</span><span class="w">                            </span><span class="nf">sum</span><span class="p">((</span><span class="w">
+</span><span class="w">                                                </span><span class="k">CASE</span><span class="w"> 
+</span><span class="w">                                                </span><span class="k">WHEN</span><span class="w"> </span><span class="p">(</span><span class="n">cu</span><span class="p">.</span><span class="o">`</span><span class="n">code</span><span class="o">`=</span><span class="s1">&#39;CNY&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">THEN</span><span class="w">
+</span><span class="w">                                                    </span><span class="nf">ROUND</span><span class="p">((</span><span class="n">opii</span><span class="p">.</span><span class="o">`</span><span class="n">amount</span><span class="o">`</span><span class="p">)</span><span class="o">/</span><span class="k">LEFT</span><span class="p">(</span><span class="nf">SUBSTRING_INDEX</span><span class="p">(</span><span class="n">o</span><span class="p">.</span><span class="n">rate_info</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;&#34;CNY&#34;:&#39;</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="mi">6</span><span class="p">),</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w">
+</span><span class="w">                                                </span><span class="k">WHEN</span><span class="w"> </span><span class="p">(</span><span class="n">cu</span><span class="p">.</span><span class="o">`</span><span class="n">code</span><span class="o">`=</span><span class="s1">&#39;GBP&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">THEN</span><span class="w">
+</span><span class="w">                                                    </span><span class="nf">ROUND</span><span class="p">((</span><span class="n">opii</span><span class="p">.</span><span class="o">`</span><span class="n">amount</span><span class="o">`</span><span class="p">)</span><span class="o">/</span><span class="k">LEFT</span><span class="p">(</span><span class="nf">SUBSTRING_INDEX</span><span class="p">(</span><span class="n">o</span><span class="p">.</span><span class="n">rate_info</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;&#34;GBP&#34;:&#39;</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="mi">6</span><span class="p">),</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w">
+</span><span class="w">                                                </span><span class="k">WHEN</span><span class="w"> </span><span class="p">(</span><span class="n">cu</span><span class="p">.</span><span class="o">`</span><span class="n">code</span><span class="o">`=</span><span class="s1">&#39;AUD&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">THEN</span><span class="w">
+</span><span class="w">                                                    </span><span class="nf">ROUND</span><span class="p">((</span><span class="n">opii</span><span class="p">.</span><span class="o">`</span><span class="n">amount</span><span class="o">`</span><span class="p">)</span><span class="o">/</span><span class="k">LEFT</span><span class="p">(</span><span class="nf">SUBSTRING_INDEX</span><span class="p">(</span><span class="n">o</span><span class="p">.</span><span class="n">rate_info</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;&#34;AUD&#34;:&#39;</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="mi">6</span><span class="p">),</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w">
+</span><span class="w">                                                </span><span class="k">WHEN</span><span class="w"> </span><span class="p">(</span><span class="n">cu</span><span class="p">.</span><span class="o">`</span><span class="n">code</span><span class="o">`=</span><span class="s1">&#39;NZD&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">THEN</span><span class="w">
+</span><span class="w">                                                    </span><span class="nf">ROUND</span><span class="p">((</span><span class="n">opii</span><span class="p">.</span><span class="o">`</span><span class="n">amount</span><span class="o">`</span><span class="p">)</span><span class="o">/</span><span class="k">LEFT</span><span class="p">(</span><span class="nf">SUBSTRING_INDEX</span><span class="p">(</span><span class="n">o</span><span class="p">.</span><span class="n">rate_info</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;&#34;NZD&#34;:&#39;</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="mi">6</span><span class="p">),</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w">
+</span><span class="w">                                                </span><span class="k">WHEN</span><span class="w"> </span><span class="p">(</span><span class="n">cu</span><span class="p">.</span><span class="o">`</span><span class="n">code</span><span class="o">`=</span><span class="s1">&#39;EUR&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">THEN</span><span class="w">
+</span><span class="w">                                                    </span><span class="nf">ROUND</span><span class="p">((</span><span class="n">opii</span><span class="p">.</span><span class="o">`</span><span class="n">amount</span><span class="o">`</span><span class="p">)</span><span class="o">/</span><span class="k">LEFT</span><span class="p">(</span><span class="nf">SUBSTRING_INDEX</span><span class="p">(</span><span class="n">o</span><span class="p">.</span><span class="n">rate_info</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;&#34;EUR&#34;:&#39;</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="mi">6</span><span class="p">),</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w">
+</span><span class="w">                                                </span><span class="k">WHEN</span><span class="w"> </span><span class="p">(</span><span class="n">cu</span><span class="p">.</span><span class="o">`</span><span class="n">code</span><span class="o">`=</span><span class="s1">&#39;CAD&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">THEN</span><span class="w">
+</span><span class="w">                                                    </span><span class="nf">ROUND</span><span class="p">((</span><span class="n">opii</span><span class="p">.</span><span class="o">`</span><span class="n">amount</span><span class="o">`</span><span class="p">)</span><span class="o">/</span><span class="k">LEFT</span><span class="p">(</span><span class="nf">SUBSTRING_INDEX</span><span class="p">(</span><span class="n">o</span><span class="p">.</span><span class="n">rate_info</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;&#34;CAD&#34;:&#39;</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="mi">6</span><span class="p">),</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w">
+</span><span class="w">                                                </span><span class="k">WHEN</span><span class="w"> </span><span class="p">(</span><span class="n">cu</span><span class="p">.</span><span class="o">`</span><span class="n">code</span><span class="o">`=</span><span class="s1">&#39;SUR&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">THEN</span><span class="w">
+</span><span class="w">                                                    </span><span class="nf">ROUND</span><span class="p">((</span><span class="n">opii</span><span class="p">.</span><span class="o">`</span><span class="n">amount</span><span class="o">`</span><span class="p">)</span><span class="o">/</span><span class="k">LEFT</span><span class="p">(</span><span class="nf">SUBSTRING_INDEX</span><span class="p">(</span><span class="n">o</span><span class="p">.</span><span class="n">rate_info</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;&#34;SUR&#34;:&#39;</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="mi">6</span><span class="p">),</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w">
+</span><span class="w">                                                </span><span class="k">WHEN</span><span class="w"> </span><span class="p">(</span><span class="n">cu</span><span class="p">.</span><span class="o">`</span><span class="n">code</span><span class="o">`=</span><span class="s1">&#39;JPY&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">THEN</span><span class="w">
+</span><span class="w">                                                    </span><span class="nf">ROUND</span><span class="p">((</span><span class="n">opii</span><span class="p">.</span><span class="o">`</span><span class="n">amount</span><span class="o">`</span><span class="p">)</span><span class="o">/</span><span class="k">LEFT</span><span class="p">(</span><span class="nf">SUBSTRING_INDEX</span><span class="p">(</span><span class="n">o</span><span class="p">.</span><span class="n">rate_info</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;&#34;JPY&#34;:&#39;</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="mi">6</span><span class="p">),</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w">
+</span><span class="w">                                                </span><span class="k">WHEN</span><span class="w"> </span><span class="p">(</span><span class="n">cu</span><span class="p">.</span><span class="o">`</span><span class="n">code</span><span class="o">`=</span><span class="s1">&#39;ZAR&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">THEN</span><span class="w">
+</span><span class="w">                                                    </span><span class="nf">ROUND</span><span class="p">((</span><span class="n">opii</span><span class="p">.</span><span class="o">`</span><span class="n">amount</span><span class="o">`</span><span class="p">)</span><span class="o">/</span><span class="k">LEFT</span><span class="p">(</span><span class="nf">SUBSTRING_INDEX</span><span class="p">(</span><span class="n">o</span><span class="p">.</span><span class="n">rate_info</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;&#34;ZAR&#34;:&#39;</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="mi">6</span><span class="p">),</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w">
+</span><span class="w">                                                </span><span class="k">WHEN</span><span class="w"> </span><span class="p">(</span><span class="n">cu</span><span class="p">.</span><span class="o">`</span><span class="n">code</span><span class="o">`=</span><span class="s1">&#39;NOK&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">THEN</span><span class="w">
+</span><span class="w">                                                    </span><span class="nf">ROUND</span><span class="p">((</span><span class="n">opii</span><span class="p">.</span><span class="o">`</span><span class="n">amount</span><span class="o">`</span><span class="p">)</span><span class="o">/</span><span class="k">LEFT</span><span class="p">(</span><span class="nf">SUBSTRING_INDEX</span><span class="p">(</span><span class="n">o</span><span class="p">.</span><span class="n">rate_info</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;&#34;NOK&#34;:&#39;</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="mi">6</span><span class="p">),</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w">
+</span><span class="w">                                                </span><span class="k">WHEN</span><span class="w"> </span><span class="p">(</span><span class="n">cu</span><span class="p">.</span><span class="o">`</span><span class="n">code</span><span class="o">`=</span><span class="s1">&#39;PHP&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">THEN</span><span class="w">
+</span><span class="w">                                                    </span><span class="nf">ROUND</span><span class="p">((</span><span class="n">opii</span><span class="p">.</span><span class="o">`</span><span class="n">amount</span><span class="o">`</span><span class="p">)</span><span class="o">/</span><span class="k">LEFT</span><span class="p">(</span><span class="nf">SUBSTRING_INDEX</span><span class="p">(</span><span class="n">o</span><span class="p">.</span><span class="n">rate_info</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;&#34;PHP&#34;:&#39;</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="mi">6</span><span class="p">),</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w">
+</span><span class="w">                                                </span><span class="k">WHEN</span><span class="w"> </span><span class="p">(</span><span class="n">cu</span><span class="p">.</span><span class="o">`</span><span class="n">code</span><span class="o">`=</span><span class="s1">&#39;SEK&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">THEN</span><span class="w">
+</span><span class="w">                                                    </span><span class="nf">ROUND</span><span class="p">((</span><span class="n">opii</span><span class="p">.</span><span class="o">`</span><span class="n">amount</span><span class="o">`</span><span class="p">)</span><span class="o">/</span><span class="k">LEFT</span><span class="p">(</span><span class="nf">SUBSTRING_INDEX</span><span class="p">(</span><span class="n">o</span><span class="p">.</span><span class="n">rate_info</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;&#34;SEK&#34;:&#39;</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="mi">6</span><span class="p">),</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w">
+</span><span class="w">                                                </span><span class="k">WHEN</span><span class="w"> </span><span class="p">(</span><span class="n">cu</span><span class="p">.</span><span class="o">`</span><span class="n">code</span><span class="o">`=</span><span class="s1">&#39;CHF&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">THEN</span><span class="w">
+</span><span class="w">                                                    </span><span class="nf">ROUND</span><span class="p">((</span><span class="n">opii</span><span class="p">.</span><span class="o">`</span><span class="n">amount</span><span class="o">`</span><span class="p">)</span><span class="o">/</span><span class="k">LEFT</span><span class="p">(</span><span class="nf">SUBSTRING_INDEX</span><span class="p">(</span><span class="n">o</span><span class="p">.</span><span class="n">rate_info</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;&#34;CHF&#34;:&#39;</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="mi">6</span><span class="p">),</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w">
+</span><span class="w">                                                </span><span class="k">WHEN</span><span class="w"> </span><span class="p">(</span><span class="n">cu</span><span class="p">.</span><span class="o">`</span><span class="n">code</span><span class="o">`=</span><span class="s1">&#39;DKK&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">THEN</span><span class="w">
+</span><span class="w">                                                    </span><span class="nf">ROUND</span><span class="p">((</span><span class="n">opii</span><span class="p">.</span><span class="o">`</span><span class="n">amount</span><span class="o">`</span><span class="p">)</span><span class="o">/</span><span class="k">LEFT</span><span class="p">(</span><span class="nf">SUBSTRING_INDEX</span><span class="p">(</span><span class="n">o</span><span class="p">.</span><span class="n">rate_info</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;&#34;DKK&#34;:&#39;</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="mi">6</span><span class="p">),</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w">
+</span><span class="w">                                                </span><span class="k">WHEN</span><span class="w"> </span><span class="p">(</span><span class="n">cu</span><span class="p">.</span><span class="o">`</span><span class="n">code</span><span class="o">`=</span><span class="s1">&#39;HKD&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">THEN</span><span class="w">
+</span><span class="w">                                                    </span><span class="nf">ROUND</span><span class="p">((</span><span class="n">opii</span><span class="p">.</span><span class="o">`</span><span class="n">amount</span><span class="o">`</span><span class="p">)</span><span class="o">/</span><span class="k">LEFT</span><span class="p">(</span><span class="nf">SUBSTRING_INDEX</span><span class="p">(</span><span class="n">o</span><span class="p">.</span><span class="n">rate_info</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;&#34;HKD&#34;:&#39;</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="mi">6</span><span class="p">),</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w">
+</span><span class="w">                                                </span><span class="k">WHEN</span><span class="w"> </span><span class="p">(</span><span class="n">cu</span><span class="p">.</span><span class="o">`</span><span class="n">code</span><span class="o">`=</span><span class="s1">&#39;USD&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">THEN</span><span class="w">  </span><span class="n">opii</span><span class="p">.</span><span class="o">`</span><span class="n">amount</span><span class="o">`</span><span class="w">
+</span><span class="w">                                                </span><span class="n">END</span><span class="w">
+</span><span class="w">                                                </span><span class="p">))</span><span class="w"> </span><span class="n">has_paid</span><span class="w">
+</span><span class="w">                        </span><span class="k">FROM</span><span class="w">
+</span><span class="w">                            </span><span class="o">`</span><span class="n">bi</span><span class="o">`</span><span class="p">.</span><span class="o">`</span><span class="n">order_product_item</span><span class="o">`</span><span class="w"> </span><span class="n">opii</span><span class="w">
+</span><span class="w">                        </span><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="o">`</span><span class="n">bi</span><span class="o">`</span><span class="p">.</span><span class="o">`</span><span class="k">order</span><span class="o">`</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">o</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">opii</span><span class="p">.</span><span class="n">order_id</span><span class="o">=</span><span class="w"> </span><span class="n">o</span><span class="p">.</span><span class="n">order_id</span><span class="w">    
+</span><span class="w">                        </span><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="o">`</span><span class="n">ori_new</span><span class="o">`</span><span class="p">.</span><span class="o">`</span><span class="n">financial_bill</span><span class="o">`</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">fb</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">opii</span><span class="p">.</span><span class="n">bill_id</span><span class="o">=</span><span class="w"> </span><span class="n">fb</span><span class="p">.</span><span class="n">id</span><span class="w">
+</span><span class="w">                                                </span><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="o">`</span><span class="n">bi</span><span class="o">`</span><span class="p">.</span><span class="o">`</span><span class="n">order_product</span><span class="o">`</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">opp</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">opii</span><span class="p">.</span><span class="n">order_product_id</span><span class="o">=</span><span class="w"> </span><span class="n">opp</span><span class="p">.</span><span class="n">order_product_id</span><span class="w">
+</span><span class="w">                                                </span><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="o">`</span><span class="n">ori_new</span><span class="o">`</span><span class="p">.</span><span class="o">`</span><span class="n">tff_provider</span><span class="o">`</span><span class="w"> </span><span class="n">tp</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">opp</span><span class="p">.</span><span class="n">provider_id</span><span class="o">=</span><span class="n">tp</span><span class="p">.</span><span class="n">provider_id</span><span class="w">
+</span><span class="w">                                                </span><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="o">`</span><span class="n">bi</span><span class="o">`</span><span class="p">.</span><span class="o">`</span><span class="n">currency</span><span class="o">`</span><span class="w"> </span><span class="n">cu</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">tp</span><span class="p">.</span><span class="n">currency_id</span><span class="o">=</span><span class="n">cu</span><span class="p">.</span><span class="n">currency_id</span><span class="w">
+</span><span class="w">                        </span><span class="k">WHERE</span><span class="w">
+</span><span class="w">                            </span><span class="n">opii</span><span class="p">.</span><span class="n">order_product_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">op</span><span class="p">.</span><span class="n">order_product_id</span><span class="w">
+</span><span class="w">                        </span><span class="k">AND</span><span class="w"> </span><span class="p">(</span><span class="w">
+</span><span class="w">                            </span><span class="n">opii</span><span class="p">.</span><span class="o">`</span><span class="n">bill_status</span><span class="o">`</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Finished&#39;</span><span class="w">
+</span><span class="w">                            </span><span class="k">OR</span><span class="w"> </span><span class="n">opii</span><span class="p">.</span><span class="o">`</span><span class="n">bill_status</span><span class="o">`</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Paid&#39;</span><span class="w">
+</span><span class="w">                        </span><span class="p">)</span><span class="w">
+</span><span class="w">                    </span><span class="p">)</span><span class="w"> </span><span class="n">has_paid</span><span class="p">,</span><span class="w">
+</span><span class="w">                    </span><span class="p">(</span><span class="w">
+</span><span class="w">                        </span><span class="k">SELECT</span><span class="w">
+</span><span class="w">                            </span><span class="n">fb</span><span class="p">.</span><span class="n">updated_at</span><span class="w">
+</span><span class="w">                        </span><span class="k">FROM</span><span class="w">
+</span><span class="w">                            </span><span class="o">`</span><span class="n">ori_new</span><span class="o">`</span><span class="p">.</span><span class="o">`</span><span class="n">financial_bill</span><span class="o">`</span><span class="w"> </span><span class="n">fb</span><span class="w">
+</span><span class="w">                        </span><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="o">`</span><span class="n">bi</span><span class="o">`</span><span class="p">.</span><span class="o">`</span><span class="n">order_product_item</span><span class="o">`</span><span class="w"> </span><span class="n">opii</span><span class="w">  </span><span class="k">ON</span><span class="w"> </span><span class="n">opii</span><span class="p">.</span><span class="n">bill_id</span><span class="o">=</span><span class="w"> </span><span class="n">fb</span><span class="p">.</span><span class="n">id</span><span class="w">
+</span><span class="w">                        </span><span class="k">WHERE</span><span class="w">
+</span><span class="w">                            </span><span class="n">opii</span><span class="p">.</span><span class="n">order_product_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">op</span><span class="p">.</span><span class="n">order_product_id</span><span class="w">
+</span><span class="w">                        </span><span class="k">AND</span><span class="w"> </span><span class="n">opii</span><span class="p">.</span><span class="o">`</span><span class="n">bill_status</span><span class="o">`</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Paid&#39;</span><span class="w">
+</span><span class="w">                        </span><span class="k">limit</span><span class="w"> </span><span class="mi">1</span><span class="w">
+</span><span class="w">                    </span><span class="p">)</span><span class="w"> </span><span class="o">`</span><span class="n">pay_pay_time</span><span class="o">`</span><span class="p">,</span><span class="w">
+</span><span class="w">                    </span><span class="p">(</span><span class="w">
+</span><span class="w">                        </span><span class="k">SELECT</span><span class="w">
+</span><span class="w">                            </span><span class="nf">sum</span><span class="p">(</span><span class="n">opa</span><span class="p">.</span><span class="n">product_retail</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">total_retail</span><span class="w">
+</span><span class="w">                        </span><span class="k">FROM</span><span class="w">
+</span><span class="w">                            </span><span class="o">`</span><span class="n">bi</span><span class="o">`</span><span class="p">.</span><span class="o">`</span><span class="n">order_product</span><span class="o">`</span><span class="w"> </span><span class="n">opa</span><span class="w">
+</span><span class="w">                        </span><span class="k">WHERE</span><span class="w">
+</span><span class="w">                            </span><span class="n">opa</span><span class="p">.</span><span class="n">order_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">op</span><span class="p">.</span><span class="n">order_id</span><span class="w">
+</span><span class="w">                        </span><span class="k">AND</span><span class="w"> </span><span class="n">opa</span><span class="p">.</span><span class="n">product_line</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s1">&#39;combine&#39;</span><span class="w">
+</span><span class="w">                    </span><span class="p">)</span><span class="w"> </span><span class="n">total_retail</span><span class="p">,</span><span class="w">
+</span><span class="w">                    </span><span class="p">(</span><span class="w">
+</span><span class="w">                        </span><span class="k">SELECT</span><span class="w">
+</span><span class="w">                            </span><span class="nf">sum</span><span class="p">(</span><span class="n">opa</span><span class="p">.</span><span class="n">insurance_retail</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">insurance_total</span><span class="w">
+</span><span class="w">                        </span><span class="k">FROM</span><span class="w">
+</span><span class="w">                            </span><span class="o">`</span><span class="n">bi</span><span class="o">`</span><span class="p">.</span><span class="o">`</span><span class="n">order_product</span><span class="o">`</span><span class="w"> </span><span class="n">opa</span><span class="w">
+</span><span class="w">                        </span><span class="k">WHERE</span><span class="w">
+</span><span class="w">                            </span><span class="n">opa</span><span class="p">.</span><span class="n">order_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">op</span><span class="p">.</span><span class="n">order_id</span><span class="w">
+</span><span class="w">                        </span><span class="k">AND</span><span class="w"> </span><span class="n">opa</span><span class="p">.</span><span class="n">product_line</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s1">&#39;combine&#39;</span><span class="w">
+</span><span class="w">                    </span><span class="p">)</span><span class="w"> </span><span class="n">insurance_total</span><span class="p">,</span><span class="w">
+</span><span class="w">                    </span><span class="p">(</span><span class="w">
+</span><span class="w">                        </span><span class="k">SELECT</span><span class="w">
+</span><span class="w">                            </span><span class="nf">count</span><span class="p">(</span><span class="n">opa</span><span class="p">.</span><span class="n">order_product_id</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">op_num</span><span class="w">
+</span><span class="w">                        </span><span class="k">FROM</span><span class="w">
+</span><span class="w">                            </span><span class="o">`</span><span class="n">bi</span><span class="o">`</span><span class="p">.</span><span class="o">`</span><span class="n">order_product</span><span class="o">`</span><span class="w"> </span><span class="n">opa</span><span class="w">
+</span><span class="w">                        </span><span class="k">WHERE</span><span class="w">
+</span><span class="w">                            </span><span class="n">opa</span><span class="p">.</span><span class="n">order_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">op</span><span class="p">.</span><span class="n">order_id</span><span class="w">
+</span><span class="w">                    </span><span class="p">)</span><span class="w"> </span><span class="n">op_num</span><span class="w">
+</span><span class="w">                </span><span class="k">FROM</span><span class="w">
+</span><span class="w">                    </span><span class="o">`</span><span class="n">bi</span><span class="o">`</span><span class="p">.</span><span class="o">`</span><span class="n">order_product</span><span class="o">`</span><span class="w"> </span><span class="n">op</span><span class="w">
+</span><span class="w">                </span><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="o">`</span><span class="n">bi</span><span class="o">`</span><span class="p">.</span><span class="o">`</span><span class="n">order_product_item</span><span class="o">`</span><span class="w"> </span><span class="n">opi</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">op</span><span class="p">.</span><span class="n">order_product_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">opi</span><span class="p">.</span><span class="n">order_product_id</span><span class="w">
+</span><span class="w">                </span><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="o">`</span><span class="n">ori_new</span><span class="o">`</span><span class="p">.</span><span class="n">financial_settlement</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">fs</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">fs</span><span class="p">.</span><span class="n">order_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">op</span><span class="p">.</span><span class="n">order_id</span><span class="w">
+</span><span class="w">                </span><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="o">`</span><span class="n">ori_new</span><span class="o">`</span><span class="p">.</span><span class="n">financial_payment_method</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">fs</span><span class="p">.</span><span class="n">payment_method_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">payment_method_id</span><span class="w">
+</span><span class="w">                </span><span class="k">WHERE</span><span class="w">
+</span><span class="w">                    </span><span class="n">op</span><span class="p">.</span><span class="n">order_product_id</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="p">(</span><span class="err">{</span><span class="mi">0</span><span class="err">}</span><span class="p">)</span><span class="w">
+</span><span class="w">                </span><span class="k">AND</span><span class="w"> </span><span class="n">op</span><span class="p">.</span><span class="n">product_line</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s1">&#39;combine&#39;</span><span class="w">
+</span></code></pre></div><h1 id="用过的命令">用过的命令</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">sudo awk -F &#39;[ ;]+&#39; &#39;{if($2&gt;2) print $1,$2}&#39; test.txt | awk  &#39;{print $1}&#39; |xargs  |tr &#34;\n&#34; &#34; &#34;|sed &#39;s/ /,/g&#39;
+sudo sed -i &#39;s/api.bi.tff.com/127.0.0.1:5003/g&#39; `find ./dist/ -name &#39;*js&#39;`
+</code></pre></div></div>
                     <div class="post_footer">
                         
                     </div>
@@ -226,7 +263,7 @@ sudo sed -i 's/api.bi.tff.com/127.0.0.1:5003/g' `find ./dist/ -name '*js'`
     </div>
 
     <div class="footer_slogan">
-        <span></span>
+        <span>My spiritual home</span>
     </div>
 </footer>
     <script src="https://laurel-he.github.io/js/jquery-3.5.1.min.js"></script>
@@ -234,6 +271,43 @@ sudo sed -i 's/api.bi.tff.com/127.0.0.1:5003/g' `find ./dist/ -name '*js'`
 <script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
 <script src="https://laurel-he.github.io/js/zozo.js"></script>
 
+
+<script type="text/javascript" async
+    src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\[\[', '\]\]']],
+                processEscapes: true,
+                processEnvironments: true,
+                skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                TeX: {
+                    equationNumbers: { autoNumber: "AMS" },
+                    extensions: ["AMSmath.js", "AMSsymbols.js"]
+                }
+            }
+        });
+
+        MathJax.Hub.Queue(function () {
+            
+            
+            
+            var all = MathJax.Hub.getAllJax(), i;
+            for (i = 0; i < all.length; i += 1) {
+                all[i].SourceElement().parentNode.className += ' has-jax';
+            }
+        });
+    </script>
+
+<style>
+    code.has-jax {
+        font: inherit;
+        font-size: 100%;
+        background: inherit;
+        border: inherit;
+        color: #515151;
+    }
+</style>
 
 
 

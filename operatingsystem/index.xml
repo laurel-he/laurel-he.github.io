@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>OperatingSystems on </title>
+    <title>OperatingSystems on 贺小娇的个人博客</title>
     <link>https://laurel-he.github.io/operatingsystem/</link>
-    <description>Recent content in OperatingSystems on </description>
+    <description>Recent content in OperatingSystems on 贺小娇的个人博客</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Tue, 20 Jul 2021 16:34:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/operatingsystem/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>操作系统（1）-基础和vim操作</title>
@@ -12,10 +13,7 @@
       <pubDate>Tue, 20 Jul 2021 16:34:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/operatingsystem/opratingsystem_01/</guid>
-      <description>本系列来源于蓝桥：https://www.lanqiao.cn/courses/2610 同系列文已发布在CSDN
-命令行中的shell通配符    字符 含义     * 匹配0或多个字符   ? 匹配任意一个字符   [list] 匹配 list 中的任意单一字符   [^list] 匹配 除list 中的任意单一字符以外的字符   [c1-c2] 匹配 c1-c2之间的任意单一字符   {string1, string2&amp;hellip;} 匹配 string1 或 string2 (或更多)其一字符串   {c1..c2} 匹配 c1-c2 中全部字符 如{1..10}    示例 创建用户lilei sudo adduser lilei
-将lilei加入sudo组 sudo usermod -G sudo lilei
-删除用户lilei sudo deluser lilei &amp;ndash;remove-home</description>
+      <description>本系列来源于蓝桥：https://www.lanqiao.cn/courses/2610 同系列文已发布在CSDN 命令行中的shell通配符 字符 含义 * 匹配0或多个字符 ? 匹配任意一个字符 [list] 匹配 list 中的任意单</description>
     </item>
     
     <item>
@@ -24,9 +22,7 @@
       <pubDate>Tue, 20 Jul 2021 16:34:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/operatingsystem/opratingsystem_02/</guid>
-      <description>蓝桥操作系统课程的学习笔记
-top 实时查看进程的状态 top第一行
-   内容 解释     top 表示当前程序的名称   14:11:28 当前系统的时间   up 231 days, 20:31 表示改机器已经启动了多长时间   1 user 表示当前系统只有一个用户   load average: 0.24, 0.32, 0.19 分别对应1、5、15分钟内cpu的平均负载   top第二行    内容 解释   &amp;ndash; &amp;ndash;   Tasks: 26 toal 进程总数   1 running 1个正在运行的进程   25 sleeping 25个正在睡眠的进程数   0 stopped 没有停止的进程数   0 zombie 没有僵尸进程数   top第三行    基本是cpu使用情况的统计    内容 解释   &amp;ndash; &amp;ndash;   Cpu(s):1.</description>
+      <description>蓝桥操作系统课程的学习笔记 top 实时查看进程的状态 top第一行 内容 解释 top 表示当前程序的名称 14:11:28 当前系统的时间 up 231 days, 20:31 表示改机器已经启动了多长时间 1 user 表示当前系统只有一个用户 load average: 0.24, 0.32, 0.19 分别对应1、5、15分钟</description>
     </item>
     
     <item>
@@ -35,9 +31,7 @@ top 实时查看进程的状态 top第一行
       <pubDate>Tue, 20 Jul 2021 16:34:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/operatingsystem/opratingsystem_03/</guid>
-      <description>Linux实现模拟多进程并发执行 示例：
-#!/bin/bash for((i=0;i&amp;lt;5;i++)) do { sleep 1; echo &amp;#34;$i--&amp;#34;&amp;gt;&amp;gt;aa &amp;amp;&amp;amp; echo &amp;#34;done&amp;#34; }&amp;amp; done wait cat aa | wc -l rm aa 解析 &amp;amp;代表并发执行，wait等待前面执行完了再执行，例如此示例中，如果没有wait很可能还没创建aa文件
-Linux下的中断 #include &amp;lt;stdlib.h&amp;gt;#include &amp;lt;stdio.h&amp;gt;#include &amp;lt;unistd.h&amp;gt; int main(void) { pid_t pid; //pid  printf(&amp;#34;Before fork... &amp;#34;); switch( pid = fork()) { case -1: printf(&amp;#34;fork call fail &amp;#34;); fflush(stdout); exit(1); case 0: printf(&amp;#34;child call &amp;#34;); printf(&amp;#34;the pid of child is %d &amp;#34;, getpid()); printf(&amp;#34;the pid of child&amp;#39;s parent is %d &amp;#34;, getppid()); printf(&amp;#34;child exiting.</description>
+      <description>Linux实现模拟多进程并发执行 示例： #!/bin/bash for((i=0;i&amp;lt;5;i++)) do { sleep 1; echo &amp;#34;$i--&amp;#34;&amp;gt;&amp;gt;aa &amp;amp;&amp;amp; echo &amp;#34;done&amp;#34; }&amp;amp; done wait cat aa | wc -l rm aa 解析 &amp;amp;代表并发执行，wait等待前面执行完了再执行，例如此示例中，如果没有wait很可能还没创建aa文件 Linu</description>
     </item>
     
     <item>
@@ -46,12 +40,7 @@ Linux下的中断 #include &amp;lt;stdlib.h&amp;gt;#include &amp;lt;stdio.h&amp;
       <pubDate>Tue, 20 Jul 2021 16:34:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/operatingsystem/singhuaopsys_01/</guid>
-      <description>教学内容 操作系统的实现 操作系统软件的结构 中断及系统调用 内存管理 进程和线程 处理机调度 进程间通信（同步互斥） 文件系统：组织文件，方便用户的读写查找 I/O子系统：上万种的差异设备连到同一个系统中 什么是操作系统？ 没有公认的精确定义
-定义 1 操作系统是一个控制程序，一个系统软件
-2 操作系统是一个资源管理器
-操作系统软件的组成 Shell&amp;ndash;命令行接口 GUI&amp;ndash;图形用户接口：直接操作，所见即所得
-操作系统内核特征 并发 共享 虚拟 异步
- 批处理系统：顺序执行，速度提升 多道系统：提高效率，多道程序交替执行 分时系统：交替执行，时钟中断（暂停当前进程的执行）</description>
+      <description>教学内容 操作系统的实现 操作系统软件的结构 中断及系统调用 内存管理 进程和线程 处理机调度 进程间通信（同步互斥） 文件系统：组织文件，方便用户的读写查找 I/O子系统：上万种的差异设备连到同一个系统中 什么是操作系</description>
     </item>
     
     <item>
@@ -60,11 +49,7 @@ Linux下的中断 #include &amp;lt;stdlib.h&amp;gt;#include &amp;lt;stdio.h&amp;
       <pubDate>Thu, 27 Feb 2020 18:00:00 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/operatingsystem/linux/awk/</guid>
-      <description>参考文档： awk 入门教程 Linux awk命令
-知识点 （1）-F指定分隔符，例如：awk -F &#39;:&#39; &#39;{print $1}&#39; demo.log （2）$0代表当前行，即所有内容，例如：awk &#39;{print $0}&#39; demo.log将会输出demo.log的所有内容 （3）$ + 数字表示某个字段，例如$2,$3分别表示第2第3个字段，也可以理解为列 （4）变量NF表示当前行有多少个字段，因此$NF就代表最后一个字段。例如：awk &#39;{print $NF}&#39; demo.log （5）$(NF-1)代表倒数第二个字段，即NF-数字代表倒数字段。 （6）输出时使用空格分隔，例如：awk &#39;{print $1, $(NF-1)}&#39; demo.log （7）要原样输出字符，需要放在&amp;quot;&amp;ldquo;里，例如awk -F &#39;:&#39; &#39;{print &amp;quot;(&amp;quot;,$5,&amp;quot;)&amp;quot;}&#39; demo.log （8）变量NR表示当前处理的是第几行，可以输出当前行数awk -F &#39;:&#39; &#39;{print NR &amp;quot;):(&amp;quot; $5 &amp;quot;)&amp;quot;}&#39; demo.log （9）awk有许多内置函数，例如转换大小写，详情见本文函数 （10）awk允许指定输出条件，可正则可根据行列计算等，非常重要 （11）awk提供判断语句（if else）
-awk是什么 awk是处理文本文件的一个应用程序，几乎所有 Linux 系统都自带这个程序。
-它依次处理文件的每一行，并读取里面的每一个字段。对于日志、CSV 那样的每行格式相同的文本文件，awk可能是最方便的工具。
-awk语法 awk [选项参数] &amp;#39;script&amp;#39; var=value file(s) #或 awk [选项参数] -f scriptfile var=value file(s) #或者可以解释为： #awk 动作 文件名 示例：</description>
+      <description>参考文档： awk 入门教程 Linux awk命令 知识点 （1）-F指定分隔符，例如：awk -F &#39;:&#39; &#39;{print $1}&#39; demo.log （2）$0代表当前行，即所有内容，例如：awk &#39;{print $0}&#39; demo.log将会输出demo.log的所有内容 （3）$ + 数字表示</description>
     </item>
     
     <item>
@@ -73,19 +58,7 @@ awk语法 awk [选项参数] &amp;#39;script&amp;#39; var=value file(s) #或 awk
       <pubDate>Thu, 27 Feb 2020 18:00:00 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/operatingsystem/linuxuse/</guid>
-      <description>文件操作 cat 描述
-查看文件内容 参数
--n 或 –number 由 1 开始对所有输出的行数编号 -b 或 –number-nonblank 和 -n 相似，只不过对于空白行不编号 -s 或 –squeeze-blank 当遇到有连续两行以上的空白行，就代换为一行的空白行 -v 或 –show-nonprinting 举例 1 从键盘创建一个文件： 2 将几个文件合并成一个文件： cd 描述
-系统信息 arch 描述
-显示机器的处理器架构 举例
-uname 描述
-显示机器的处理器架构 参数
--a或&amp;ndash;all 显示全部的信息。 -m或&amp;ndash;machine 显示电脑类型。 -n或-nodename 显示在网络上的主机名称。 -r或&amp;ndash;release 显示操作系统的发行编号。 -s或&amp;ndash;sysname 显示操作系统名称。 -v 显示操作系统的版本。 &amp;ndash;help 显示帮助。 &amp;ndash;version 显示版本信息。 举例
-dmidecode 描述
-显示硬件信息，不常用，可忽略
-开关机 shutdown 描述
-关机或重启 参数
--t seconds : 设定在几秒钟之后进行关机程序。 -k : 并不会真的关机，只是将警告讯息传送给所有使用者。 -r : 关机后重新开机。 -h : 关机后停机。 -n : 不采用正常程序来关机，用强迫的方式杀掉所有执行中的程序后自行关机。 -c : 取消目前已经进行中的关机动作。 -f : 关机时，不做 fcsk 动作(检查 Linux 档系统)。 -F : 关机时，强迫进行 fsck 动作。 time : 设定关机的时间。 message : 传送给所有使用者的警告讯息。</description>
+      <description>文件操作 cat 描述 查看文件内容 参数 -n 或 –number 由 1 开始对所有输出的行数编号 -b 或 –number-nonblank 和 -n 相似，只不过对于空白行不编号 -s 或 –squeeze-blank 当遇到有连续两行以上的空</description>
     </item>
     
     <item>
@@ -94,20 +67,7 @@ dmidecode 描述
       <pubDate>Thu, 27 Feb 2020 18:00:00 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/operatingsystem/linuxbase/</guid>
-      <description>学习心得，来自于蓝桥Linux基础入门
-用户相关 查看当前用户 whoami:查看当前用户名 who am i:可以列出用户名，当前登录的伪终端以及当前伪终端的启动时间等 注意事项 在有些情况下who am i或者who mom likes不会有输出，因为当前shell不是登录时的shell
-添加用户 例如添加用户lilei:
-sudo adduser lilei 此命令在添加用户的同时还会创建用户的home目录
-添加用户组 groupadd [groupname]
-sudo groupadd lilei 将其他用户加入sudo用户组 当一个没有sudo权限的用户执行sudo命令时将报告当前用户不在sudoer文件中 使用一个有sudo权限的账户来添加，例如：
-sudo usermod -G sudo lilei 实际上，这里执行的操作就是将用户添加至工作组，这里的命令为：
-usermod -G [groupname] [username] 用户组 groups:查看用户所属的用户组，例如：
-groups lilei /etc/group文件 /etc/group文件保存了所有的用户和用户组信息，格式如下：
-group_name:password:GID:user_list 当password为x时表示密码不可见，如果用户的GID等于用户组的GID，那么user_list为空
-删除用户 sudo deluser lilei --remove-home &amp;ndash;remove-home表示在删除用户的时候同时删除用户的home目录
-删除用户组 groupdel命令
-文件相关 ll第一列的文件类型
-   名称 英文名 含义     d directory 目录   l link 软连接   b block 块设备   c char 字符设备   s socket 网络套接字   p pipe 管道   - - 普通文件    ll命令第一列解析如下： 可以通过ll -h更直观的看到文件大小 -a可以显示隐藏文件</description>
+      <description>学习心得，来自于蓝桥Linux基础入门 用户相关 查看当前用户 whoami:查看当前用户名 who am i:可以列出用户名，当前登录的伪终端以及当前伪终端的启动时间等 注意事项 在有些情况下who am i或者who mom lik</description>
     </item>
     
     <item>
@@ -116,10 +76,7 @@ group_name:password:GID:user_list 当password为x时表示密码不可见，如�
       <pubDate>Thu, 28 Feb 2019 16:34:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/operatingsystem/vim/</guid>
-      <description>光标移动 h 或 &amp;lt;- 表示向左 j 下 k 上 l 右
-ctrl + f 屏幕向下移动一页 ctrl + b 向上移动一页 ctrl + d 向下移动半页 ctrl + u 向上移动半页 &amp;lsquo;+&amp;rsquo; 光标移动到非空格符的下一行 &amp;lsquo;-&amp;rsquo; 光标移动到非空格符的 n[space] n表示数字，光标向右移动n个字符 0或[Home] 移动到这一行最开始的字符处 $或[End] 移动到这一行的最后面字符处 H 移动到这个屏幕最上方一行的第一个字符 M 移动到这个屏幕中央一行的第一个字符 L 移动到这个屏幕最下方一行的第一个字符 G 移动到这个文件的最后一行 nG(:n) 移动到这个文件的第n行 gg(1G) 移动到第一行 n[Enter] n为数字，表示向下移动n行
-查找与替换 /word 光标之下寻找名为word的字符串 ?word 光标之上寻找名为word的字符串 n 重复前一个查找的操作 N 反向进行前一个查找操作 :n1,n2s/word1/word2/g n1和n2是数字，在n1和n2行之间查找所有word,替换成word2 :1,$s/word1/word2/g :1,$s/word1/word2/gc c代表confirm,替换前显示确认信息
-删除复制与粘贴 x 向后删除 X 向前删除 nx 向后删除n个字符 dd 删除（剪切）光标所在一整行 ndd 删除向下n行 d1G 删除光标所在到第一行的数据 dG 删除光标所在到最后一行的数据 d$ 删除光标所在处，到该行最后一个字符 d0 yy 复制该行 nyy y1G yG y0 y$ p 将已复制的数据在光标下一行粘贴 P 上一行 J 光标所在行与下一行数据结合成同一行 c 重复删除多个数据(10cj代表向下删除10行)删除后切换到编辑模式 u 回复 ctrl+r 重做 .</description>
+      <description>光标移动 h 或 &amp;lt;- 表示向左 j 下 k 上 l 右 ctrl + f 屏幕向下移动一页 ctrl + b 向上移动一页 ctrl + d 向下移动半页 ctrl + u 向上移动半页 &amp;lsquo;+&amp;rsquo; 光标移动到非空格符的下一行 &amp;lsquo;-&amp;rsquo; 光标移动到非空格符的 n[space] n表示数字，光标向右移动n个字符 0或[</description>
     </item>
     
     <item>

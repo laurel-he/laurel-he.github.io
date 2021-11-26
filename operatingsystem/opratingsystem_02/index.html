@@ -1,22 +1,23 @@
 <!DOCTYPE html>
-<html >
+<html lang="en" >
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="" />
+    <meta name="author" content="贺小娇" />
 	
 	
 	
-	<title>操作系统（2）-进程管理 ｜ </title>
+	<title>操作系统（2）-进程管理 ｜ 贺小娇的个人博客</title>
 	
     
     
-    <meta name="description" content="蓝桥操作系统课程的学习笔记
-top 实时查看进程的状态 top第一行
-   内容 解释     top 表示当前程序的名称   14:11:28 当前系统的时间   up 231 days, 20:31 表示改机器已经启动了多长时间   1 user 表示当前系统只有一个用户   load average: 0.24, 0.32, 0.19 分别对应1、5、15分钟内cpu的平均负载   top第二行    内容 解释   &amp;ndash; &amp;ndash;   Tasks: 26 toal 进程总数   1 running 1个正在运行的进程   25 sleeping 25个正在睡眠的进程数   0 stopped 没有停止的进程数   0 zombie 没有僵尸进程数   top第三行    基本是cpu使用情况的统计    内容 解释   &amp;ndash; &amp;ndash;   Cpu(s):1." />
+    <meta name="description" content="蓝桥操作系统课程的学习笔记 top 实时查看进程的状态 top第一行 内容 解释 top 表示当前程序的名称 14:11:28 当前系统的时间 up 231 days, 20:31 表示改机器已经启动了多长时间 1 user 表示当前系统只有一个用户 load average: 0.24, 0.32, 0.19 分别对应1、5、15分钟" />
     
 
+    
+    
+    <meta name="keywords" content="Hugo, blog, php" />
     
 
 	
@@ -39,6 +40,22 @@ top 实时查看进程的状态 top第一行
     <div class="site_nav" id="site_nav">
         <ul>
             
+            <li>
+                <a href="/">主页</a>
+            </li>
+            
+            <li>
+                <a href="/posts/">Archive</a>
+            </li>
+            
+            <li>
+                <a href="/tags/">Tags</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
         </ul>
     </div>
     <div class="menu_icon">
@@ -50,13 +67,31 @@ top 实时查看进程的状态 top第一行
         <div class="site_title">
             <h1>
                 <a href="https://laurel-he.github.io/">
-                    <span></span>
+                    <span>贺小娇的个人博客</span>
                 </a>
             </h1>
         </div>
         <div class="description">
-            <p class="sub_title"></p>
+            <p class="sub_title">the summary of my programing life</p>
             <div class="my_socials">
+                
+                
+                <a href="%20" title="facebook" target="_blank"><i class="ri-facebook-fill"></i></a>
+                
+                
+                
+                <a href="https://github.com/laurel-he" title="github" target="_blank"><i class="ri-github-fill"></i></a>
+                
+                
+                
+                <a href="%20" title="instagram" target="_blank"><i class="ri-instagram-fill"></i></a>
+                
+                
+                
+                
+                
+                <a href="%20" title="weibo" target="_blank"><i class="ri-weibo-fill"></i></a>
+                
                 
                 <a href="https://laurel-he.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
                         class="ri-rss-fill"></i></a>
@@ -364,10 +399,10 @@ top 实时查看进程的状态 top第一行
 </tbody>
 </table>
 <h3 id="查看物理cpu的个数">查看物理CPU的个数</h3>
-<pre><code>cat /proc/cpuinfo |grep &quot;physical id&quot;|sort |uniq|wc -l
-</code></pre><h3 id="每个cpu的核心数">每个cpu的核心数</h3>
-<pre><code>cat /proc/cpuinfo |grep &quot;physical id&quot;|grep &quot;0&quot;|wc -l
-</code></pre><h1 id="ps-1">ps</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">cat /proc/cpuinfo |grep &#34;physical id&#34;|sort |uniq|wc -l
+</code></pre></div><h3 id="每个cpu的核心数">每个cpu的核心数</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">cat /proc/cpuinfo |grep &#34;physical id&#34;|grep &#34;0&#34;|wc -l
+</code></pre></div><h1 id="ps-1">ps</h1>
 <p>静态查看当前的进程信息</p>
 <h1 id="pstree">pstree</h1>
 <p>查看当前活跃进程的树形结构</p>
@@ -391,9 +426,9 @@ top 实时查看进程的状态 top第一行
 </table>
 <h1 id="进程的执行顺序">进程的执行顺序</h1>
 <p>进程的优先级由pr和nice值来控制和体现，nice值的取值范围是-20到19，可以通过nice命令进行操控</p>
-<pre><code>nice -n -5 vim &amp;  //-n后跟需要设置的谦让值，正数需要管理员权限，负数不需要
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">nice -n -5 vim &amp;  //-n后跟需要设置的谦让值，正数需要管理员权限，负数不需要
 renice -5 pid
-</code></pre></div>
+</code></pre></div></div>
                     <div class="post_footer">
                         
                         <div class="meta">
@@ -424,7 +459,7 @@ renice -5 pid
     </div>
 
     <div class="footer_slogan">
-        <span></span>
+        <span>My spiritual home</span>
     </div>
 </footer>
     <script src="https://laurel-he.github.io/js/jquery-3.5.1.min.js"></script>
@@ -432,6 +467,43 @@ renice -5 pid
 <script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
 <script src="https://laurel-he.github.io/js/zozo.js"></script>
 
+
+<script type="text/javascript" async
+    src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\[\[', '\]\]']],
+                processEscapes: true,
+                processEnvironments: true,
+                skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                TeX: {
+                    equationNumbers: { autoNumber: "AMS" },
+                    extensions: ["AMSmath.js", "AMSsymbols.js"]
+                }
+            }
+        });
+
+        MathJax.Hub.Queue(function () {
+            
+            
+            
+            var all = MathJax.Hub.getAllJax(), i;
+            for (i = 0; i < all.length; i += 1) {
+                all[i].SourceElement().parentNode.className += ' has-jax';
+            }
+        });
+    </script>
+
+<style>
+    code.has-jax {
+        font: inherit;
+        font-size: 100%;
+        background: inherit;
+        border: inherit;
+        color: #515151;
+    }
+</style>
 
 
 

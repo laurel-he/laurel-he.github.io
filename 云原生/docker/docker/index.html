@@ -1,27 +1,23 @@
 <!DOCTYPE html>
-<html >
+<html lang="en" >
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="" />
+    <meta name="author" content="贺小娇" />
 	
 	
 	
-	<title> ｜ </title>
+	<title> ｜ 贺小娇的个人博客</title>
 	
     
     
-    <meta name="description" content="title: docker使用心得 date: 2019-04-24 21:03:10 tags:
- 使用心得 categories: docker   准备工作 1 前提条件 ubuntu内核版本高于 3.10 uname -r 
-2 安装docker 本文是基于ubuntu的，基于centos安装路径博客如下： centos windows
-wget -qO- https://get.docker.com/ | sh 当要以非root用户可以直接运行docker时，需要执行 sudo usermod -aG docker runoob 命令，然后重新登陆 启动docker服务
-sudo service docker start 测试运行hello world
-docker run hello-world 镜像加速 路径： /etc/docker/daemon.json 配置文件中加入(不存在则创建，我本地不存在此文件)：
-{ &amp;quot;registry-mirrors&amp;quot;: [&amp;quot;http://hub-mirror.c.163.com&amp;quot;] } 基础知识 hello world
-docker run ubuntu:15.10 /bin/echo &amp;quot;Hello world&amp;quot; (验证,echo是可以直接echo的，不必写/bin/echo) 参数解析 docker:docker的二进制执行文件 run:与前面docker组合来运行一个容器 ubuntu:15.10 : 指定要运行的镜像，Docker首先从本地主机上查找镜像是否存在，如果不存在，Docker 就会从镜像仓库 Docker Hub 下载公共镜像。 /bin/echo &amp;ldquo;Hello world&amp;rdquo;: 在启动的容器里执行的命令 运行交互式的容器 通过docker的两个参数 -i -t，让docker运行的容器实现&amp;quot;对话&amp;quot;的能力" />
+    <meta name="description" content="title: docker使用心得 date: 2019-04-24 21:03:10 tags: 使用心得 categories: docker 准备工作 1 前提条件 ubuntu内核版本高于 3.10 uname -r 2 安装docker 本文是基于ubuntu的，基于centos安装路径博客如下： centos windows wget -qO- https://get.docker.com/ | sh 当要以非root用" />
     
 
+    
+    
+    <meta name="keywords" content="Hugo, blog, php" />
     
 
 	
@@ -44,6 +40,22 @@ docker run ubuntu:15.10 /bin/echo &amp;quot;Hello world&amp;quot; (验证,echo�
     <div class="site_nav" id="site_nav">
         <ul>
             
+            <li>
+                <a href="/">主页</a>
+            </li>
+            
+            <li>
+                <a href="/posts/">Archive</a>
+            </li>
+            
+            <li>
+                <a href="/tags/">Tags</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
         </ul>
     </div>
     <div class="menu_icon">
@@ -55,13 +67,31 @@ docker run ubuntu:15.10 /bin/echo &amp;quot;Hello world&amp;quot; (验证,echo�
         <div class="site_title">
             <h1>
                 <a href="https://laurel-he.github.io/">
-                    <span></span>
+                    <span>贺小娇的个人博客</span>
                 </a>
             </h1>
         </div>
         <div class="description">
-            <p class="sub_title"></p>
+            <p class="sub_title">the summary of my programing life</p>
             <div class="my_socials">
+                
+                
+                <a href="%20" title="facebook" target="_blank"><i class="ri-facebook-fill"></i></a>
+                
+                
+                
+                <a href="https://github.com/laurel-he" title="github" target="_blank"><i class="ri-github-fill"></i></a>
+                
+                
+                
+                <a href="%20" title="instagram" target="_blank"><i class="ri-instagram-fill"></i></a>
+                
+                
+                
+                
+                
+                <a href="%20" title="weibo" target="_blank"><i class="ri-weibo-fill"></i></a>
+                
                 
                 <a href="https://laurel-he.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
                         class="ri-rss-fill"></i></a>
@@ -92,22 +122,22 @@ categories:</li>
 <p>本文是基于ubuntu的，基于centos安装路径博客如下：
 <a href="http://www.runoob.com/docker/centos-docker-install.html" title="centos">centos</a>
 <a href="http://www.runoob.com/docker/windows-docker-install.html" title="windows">windows</a></p>
-<pre><code>wget -qO- https://get.docker.com/ | sh
-</code></pre><p>当要以非root用户可以直接运行docker时，需要执行 sudo usermod -aG docker runoob 命令，然后重新登陆
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">wget -qO- https://get.docker.com/ | sh
+</code></pre></div><p>当要以非root用户可以直接运行docker时，需要执行 sudo usermod -aG docker runoob 命令，然后重新登陆
 启动docker服务</p>
-<pre><code>sudo service docker start
-</code></pre><p><strong>测试运行hello world</strong></p>
-<pre><code>docker run hello-world
-</code></pre><p><strong>镜像加速</strong>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">sudo service docker start
+</code></pre></div><p><strong>测试运行hello world</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">docker run hello-world
+</code></pre></div><p><strong>镜像加速</strong>
 路径：<code> /etc/docker/daemon.json</code>
 配置文件中加入(不存在则创建，我本地不存在此文件)：</p>
-<pre><code>{
-  &quot;registry-mirrors&quot;: [&quot;http://hub-mirror.c.163.com&quot;]
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">{
+  &#34;registry-mirrors&#34;: [&#34;http://hub-mirror.c.163.com&#34;]
 }
-</code></pre><h2 id="基础知识">基础知识</h2>
+</code></pre></div><h2 id="基础知识">基础知识</h2>
 <p><strong>hello world</strong></p>
-<pre><code>docker run ubuntu:15.10 /bin/echo &quot;Hello world&quot;
-</code></pre><p>(验证,echo是可以直接echo的，不必写/bin/echo)
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">docker run ubuntu:15.10 /bin/echo &#34;Hello world&#34;
+</code></pre></div><p>(验证,echo是可以直接echo的，不必写/bin/echo)
 <strong>参数解析</strong>
 docker:docker的二进制执行文件
 run:与前面docker组合来运行一个容器
@@ -115,12 +145,12 @@ ubuntu:15.10 : 指定要运行的镜像，Docker首先从本地主机上查找�
 /bin/echo &ldquo;Hello world&rdquo;: 在启动的容器里执行的命令
 <strong>运行交互式的容器</strong>
 通过docker的两个参数 -i -t，让docker运行的容器实现&quot;对话&quot;的能力</p>
-<pre><code>docker run -i -t ubuntu:15.10 /bin/bash
-</code></pre><p>-t:在新容器内指定一个伪终端或终端。
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">docker run -i -t ubuntu:15.10 /bin/bash
+</code></pre></div><p>-t:在新容器内指定一个伪终端或终端。
 -i:允许对容器内的标准输入进行交互
 <strong>启动容器（后台模式）</strong></p>
-<pre><code>docker run -d ubuntu:15.10 /bin/sh -c &quot;while true; do echo hello world; sleep 1; done&quot;
-</code></pre><p>输出一串长字符，是容器ID,对每个容器来说都是唯一的，我们可以通过容器ID来查看对应的容器发生了什么。
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">docker run -d ubuntu:15.10 /bin/sh -c &#34;while true; do echo hello world; sleep 1; done&#34;
+</code></pre></div><p>输出一串长字符，是容器ID,对每个容器来说都是唯一的，我们可以通过容器ID来查看对应的容器发生了什么。
 <code>docker ps</code>可以查看有容器在运行
 CONTAINER ID:容器ID
 NAMES:自动分配的容器名称
@@ -152,7 +182,7 @@ NAMES:自动分配的容器名称
     </div>
 
     <div class="footer_slogan">
-        <span></span>
+        <span>My spiritual home</span>
     </div>
 </footer>
     <script src="https://laurel-he.github.io/js/jquery-3.5.1.min.js"></script>
@@ -160,6 +190,43 @@ NAMES:自动分配的容器名称
 <script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
 <script src="https://laurel-he.github.io/js/zozo.js"></script>
 
+
+<script type="text/javascript" async
+    src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\[\[', '\]\]']],
+                processEscapes: true,
+                processEnvironments: true,
+                skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                TeX: {
+                    equationNumbers: { autoNumber: "AMS" },
+                    extensions: ["AMSmath.js", "AMSsymbols.js"]
+                }
+            }
+        });
+
+        MathJax.Hub.Queue(function () {
+            
+            
+            
+            var all = MathJax.Hub.getAllJax(), i;
+            for (i = 0; i < all.length; i += 1) {
+                all[i].SourceElement().parentNode.className += ' has-jax';
+            }
+        });
+    </script>
+
+<style>
+    code.has-jax {
+        font: inherit;
+        font-size: 100%;
+        background: inherit;
+        border: inherit;
+        color: #515151;
+    }
+</style>
 
 
 

@@ -1,27 +1,23 @@
 <!DOCTYPE html>
-<html >
+<html lang="en" >
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="" />
+    <meta name="author" content="贺小娇" />
 	
 	
 	
-	<title> ｜ </title>
+	<title> ｜ 贺小娇的个人博客</title>
 	
     
     
-    <meta name="description" content="不能够开放
-1 知识点 添加日志 引入logging包，引入log文件即可
-logging.basicConfig(filename=&amp;quot;/tmp/bi_dsvcs/app.log&amp;quot;, level = logging.DEBUG) 有四种级别INFO, DEBUG, WARNING, ERROR, CRITICAL, FATAL
-获取月份列表 需求 需要获取月份数据[&amp;lsquo;00&amp;rsquo;, &amp;lsquo;01&amp;rsquo;, &amp;lsquo;02&amp;rsquo;, &amp;lsquo;03&amp;rsquo;, &amp;lsquo;04&amp;rsquo;, &amp;lsquo;05&amp;rsquo;, &amp;lsquo;06&amp;rsquo;, &amp;lsquo;07&amp;rsquo;, &amp;lsquo;08&amp;rsquo;, &amp;lsquo;09&amp;rsquo;, &amp;lsquo;10&amp;rsquo;, &amp;lsquo;11&amp;rsquo;] 原本解决办法 直接定义了一个这样的数组 新方法 range()从0到13，再在一位数前补零 实现代码
-theMonth = range(0, 13) monthKey = map(lambda x:&#39;%02d&#39; % x, theMonth) 新方法2 [&amp;quot;%02d&amp;quot; % x for x in range(1,13)]
-数据库导入导出 shell脚本里添加mysqldump导出数据 导入数据为避免更改表结构，直接mysql -u……连接到库，执行insert操作
-gunicorn配置 使用supervisor配置gunicorn，我本地虚拟机配置如下
-[program:bi_dsvcs] command=python /usr/bin/gunicorn -c /spython/bi_dsvcs/gunicorn.cnf dsvcs:app process_name=%(program_name)s/%(process_num)d directory=/spython/bi_dsvcs numprocs=1 autostart=true autorestart=true user=developer redirect_stderr=true stdout_logfile=/tmp/bi_dsvcs." />
+    <meta name="description" content="不能够开放 1 知识点 添加日志 引入logging包，引入log文件即可 logging.basicConfig(filename=&amp;#34;/tmp/bi_dsvcs/app.log&amp;#34;, level = logging.DEBUG) 有四种级别INFO, DEBUG, WARNING, ERROR, CRITICAL, FATAL 获取月份列表 需求 需要获取月份数据[&amp;lsquo;00&amp;rsquo;, &amp;lsquo;01&amp;rsquo;, &amp;lsquo;02&amp;rsquo;, &amp;lsquo;03&amp;rsquo;, &amp;lsquo;04&amp;rsquo;, &amp;lsquo;05&amp;rsquo;, &amp;lsquo;06&amp;rsquo;, &amp;lsquo;07&amp;rsquo;, &amp;lsquo;08&amp;rsquo;, &amp;lsquo;09&amp;rsquo;, &amp;lsquo;10&amp;rsquo;, &amp;lsquo;11&amp;rsquo;] 原本解" />
     
 
+    
+    
+    <meta name="keywords" content="Hugo, blog, php" />
     
 
 	
@@ -44,6 +40,22 @@ gunicorn配置 使用supervisor配置gunicorn，我本地虚拟机配置如下
     <div class="site_nav" id="site_nav">
         <ul>
             
+            <li>
+                <a href="/">主页</a>
+            </li>
+            
+            <li>
+                <a href="/posts/">Archive</a>
+            </li>
+            
+            <li>
+                <a href="/tags/">Tags</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
         </ul>
     </div>
     <div class="menu_icon">
@@ -55,13 +67,31 @@ gunicorn配置 使用supervisor配置gunicorn，我本地虚拟机配置如下
         <div class="site_title">
             <h1>
                 <a href="https://laurel-he.github.io/">
-                    <span></span>
+                    <span>贺小娇的个人博客</span>
                 </a>
             </h1>
         </div>
         <div class="description">
-            <p class="sub_title"></p>
+            <p class="sub_title">the summary of my programing life</p>
             <div class="my_socials">
+                
+                
+                <a href="%20" title="facebook" target="_blank"><i class="ri-facebook-fill"></i></a>
+                
+                
+                
+                <a href="https://github.com/laurel-he" title="github" target="_blank"><i class="ri-github-fill"></i></a>
+                
+                
+                
+                <a href="%20" title="instagram" target="_blank"><i class="ri-instagram-fill"></i></a>
+                
+                
+                
+                
+                
+                <a href="%20" title="weibo" target="_blank"><i class="ri-weibo-fill"></i></a>
+                
                 
                 <a href="https://laurel-he.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
                         class="ri-rss-fill"></i></a>
@@ -80,8 +110,8 @@ gunicorn配置 使用supervisor配置gunicorn，我本地虚拟机配置如下
 <h2 id="1-知识点">1 知识点</h2>
 <h4 id="添加日志">添加日志</h4>
 <p>引入logging包，引入log文件即可</p>
-<pre><code>logging.basicConfig(filename=&quot;/tmp/bi_dsvcs/app.log&quot;, level = logging.DEBUG)
-</code></pre><p>有四种级别INFO, DEBUG, WARNING, ERROR, CRITICAL, FATAL</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">logging.basicConfig(filename=&#34;/tmp/bi_dsvcs/app.log&#34;, level = logging.DEBUG)
+</code></pre></div><p>有四种级别INFO, DEBUG, WARNING, ERROR, CRITICAL, FATAL</p>
 <h4 id="获取月份列表">获取月份列表</h4>
 <p><strong>需求</strong>
 需要获取月份数据[&lsquo;00&rsquo;, &lsquo;01&rsquo;, &lsquo;02&rsquo;, &lsquo;03&rsquo;, &lsquo;04&rsquo;, &lsquo;05&rsquo;, &lsquo;06&rsquo;, &lsquo;07&rsquo;, &lsquo;08&rsquo;, &lsquo;09&rsquo;, &lsquo;10&rsquo;, &lsquo;11&rsquo;]
@@ -90,16 +120,16 @@ gunicorn配置 使用supervisor配置gunicorn，我本地虚拟机配置如下
 <strong>新方法</strong>
 range()从0到13，再在一位数前补零
 <strong>实现代码</strong></p>
-<pre><code>theMonth = range(0, 13)
-monthKey = map(lambda x:'%02d' % x, theMonth)
-</code></pre><p><strong>新方法2</strong>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">theMonth = range(0, 13)
+monthKey = map(lambda x:&#39;%02d&#39; % x, theMonth)
+</code></pre></div><p><strong>新方法2</strong>
 [&quot;%02d&quot; % x for x in range(1,13)]</p>
 <h4 id="数据库导入导出">数据库导入导出</h4>
 <p>shell脚本里添加mysqldump导出数据
 导入数据为避免更改表结构，直接mysql -u……连接到库，执行insert操作</p>
 <h4 id="gunicorn配置">gunicorn配置</h4>
 <p>使用supervisor配置gunicorn，我本地虚拟机配置如下</p>
-<pre><code>[program:bi_dsvcs]
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">[program:bi_dsvcs]
 command=python /usr/bin/gunicorn -c /spython/bi_dsvcs/gunicorn.cnf dsvcs:app
 process_name=%(program_name)s/%(process_num)d
 directory=/spython/bi_dsvcs
@@ -110,17 +140,17 @@ user=developer
 redirect_stderr=true
 stdout_logfile=/tmp/bi_dsvcs.interface.info_stdout.log
 stderr_logfile=/tmpbi_dsvcs.interface.error_stderr.loga
-</code></pre><p>##2 注意事项</p>
+</code></pre></div><p>##2 注意事项</p>
 <h4 id="group_concat">group_concat</h4>
 <p>GROUP_CONCAT()会截断数据，限制长度为1024字节</p>
 <h4 id="dict">dict</h4>
 <p>dict不可以直接添加二维数据,需要判断第一维是否已经存在</p>
-<pre><code>def addtwodimdict(thedict, key_a, key_b, val): 
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">def addtwodimdict(thedict, key_a, key_b, val): 
     if key_a in adic:
         thedict[key_a].update({key_b: val})
     else:
         thedict.update({key_a:{key_b: val}})
-</code></pre><h4 id="list的append和extend区别">list的append()和extend()区别</h4>
+</code></pre></div><h4 id="list的append和extend区别">list的append()和extend()区别</h4>
 <p>(1)append()
 接受任意数据类型添加到list尾部
 (2)extend()
@@ -147,7 +177,7 @@ stderr_logfile=/tmpbi_dsvcs.interface.error_stderr.loga
     </div>
 
     <div class="footer_slogan">
-        <span></span>
+        <span>My spiritual home</span>
     </div>
 </footer>
     <script src="https://laurel-he.github.io/js/jquery-3.5.1.min.js"></script>
@@ -155,6 +185,43 @@ stderr_logfile=/tmpbi_dsvcs.interface.error_stderr.loga
 <script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
 <script src="https://laurel-he.github.io/js/zozo.js"></script>
 
+
+<script type="text/javascript" async
+    src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\[\[', '\]\]']],
+                processEscapes: true,
+                processEnvironments: true,
+                skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                TeX: {
+                    equationNumbers: { autoNumber: "AMS" },
+                    extensions: ["AMSmath.js", "AMSsymbols.js"]
+                }
+            }
+        });
+
+        MathJax.Hub.Queue(function () {
+            
+            
+            
+            var all = MathJax.Hub.getAllJax(), i;
+            for (i = 0; i < all.length; i += 1) {
+                all[i].SourceElement().parentNode.className += ' has-jax';
+            }
+        });
+    </script>
+
+<style>
+    code.has-jax {
+        font: inherit;
+        font-size: 100%;
+        background: inherit;
+        border: inherit;
+        color: #515151;
+    }
+</style>
 
 
 

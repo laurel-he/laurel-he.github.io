@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Privates on </title>
+    <title>Privates on 贺小娇的个人博客</title>
     <link>https://laurel-he.github.io/private/</link>
-    <description>Recent content in Privates on </description>
+    <description>Recent content in Privates on 贺小娇的个人博客</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Wed, 08 Jul 2020 20:00:40 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/private/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>学习计划</title>
@@ -12,27 +13,7 @@
       <pubDate>Wed, 08 Jul 2020 20:00:40 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/private/learn_main/</guid>
-      <description>语言： 继续学习go python php 操作系统：深入了解linux 前端：es6 react 熟悉TCP/IP、HTTP等协议 socket网络编程开发 尝试对已完成的项目进行压测 1 设计模式
-2 数据库设计及优化
-3 操作系统(Linux，进程调度，基本命令等)
-网络攻击技术
-3 laravel框架
-4 yii框架
-5 go
-7 shell编程
-8 elasticsearch
-9 redis
-10 消息队列(beanstalk,kafka,rabit mq)
-11 k8s
-12 docker
-13 nginx配置及优化
-15 代码可读性（代码整洁之道）
-16 代码大全（）
-17 socket,tcp/ip协议，http协议，请求过程
-18 数据结构（各种查找，B树，二叉排序树等）
-19 基础前端（react，vue）
-20 redis（并发）
-21 大流量高并发系统设计</description>
+      <description>语言： 继续学习go python php 操作系统：深入了解linux 前端：es6 react 熟悉TCP/IP、HTTP等协议 socket网络编程开发 尝试对已完成的项目进行压测 1 设计模式 2 数据库设计及优化 3 操作系统(Linux，进</description>
     </item>
     
     <item>
@@ -41,18 +22,7 @@
       <pubDate>Thu, 23 May 2019 11:50:00 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/private/fit01/</guid>
-      <description>创立原因及目标 我的表姐要在圣诞节前一天结婚（不是崇洋媚外，只是那时候恰好是个良辰吉日，我们老家又比较喜欢冬天结婚，这样很多亲戚都回家了）。算下来现在距离那天也差不多二百多天，我如果能够成功减肥，这样也不至于在她其他漂亮伴娘的衬托下给她丢脸了（这其中关系比较复杂，就不细说了）。 基于以上原因，我创立了一个200天减肥法，在200天内，以一个小基数（虽然我120斤也不算小基数了）的情况，减肥20斤左右。
-如何执行 我定下的这个200天减肥计划是可以立即执行的，而不是说要先做什么准备，因为如果准备时间过长，或者要准备的东西太多了，人很可能在这个时候就放弃。 但是既然是减肥，怎么可能什么准备都没有呢？当然是有的，只不过准备时间也包含在了减肥时间以内，这样就可以直接开始了。 而且我这个计划也不会太激进，避免人产生逆反心理。毕竟我也的确是一个好吃懒做的人，我特别爱吃火锅，烤串，辣条，又特别讨厌运动。从刚上大学就开始琢磨着减肥，到如今也已经六年过去了，体重还是120，真是可怕。
-具体信息 整个200天减肥计划分成了8个阶段，为了避免放弃，避免产生逆反心理，避免反弹，我实在是做了很多前期调研。自己几斤几两我还是知道的，什么21天减肥法，轻断食，各种减肥操，跑步我都试过，最后无一例外全部反弹了，大三的时候我曾经瘦到过102斤，可惜最终也没能保持住，半年不到就反弹回来了，所以说，我需要一个稳妥的，进度也许不够快但是绝对有效的减肥方案。
-概述 这八个阶段分别是:10天适应期，20天习惯养成期，50天正常减肥期（上），20天疯狂减脂期，10天塑身期，50天正常减肥期（下），20天恢复期，20天稳定期
-分条解析 10天适应期 最终目标 适应期的最终目标非常简单，就是十天的时间，把长期处于996，生活作息极其不规律的自己变成一个作息规律，已经为减肥做好了准备的自己，严格来说，就是一个准备阶段。 既然是准备阶段，自然要求不会太苛刻，只有几点基本要求:形成良好的饮食，睡眠，喝水等习惯，绝对不可以暴饮暴食，不能说预料到接下来会有很长一段时间要开始减肥了，就趁现在疯狂进食。这个阶段需要形成良好的生活习惯，为后期打好基础。
-目标解析 维持良好的睡眠 每天至少睡6.5小时（因为我是程序员，而且996，偶尔还会加班，所以说至少6.5，正常来说要减肥每天起码要睡7－8小时，我大部分都可以控制到这个时间）
-对食物的控制 开始注意食物搭配，保持吃饭规律，慢慢形成少食多餐的习惯，拒绝零食（如果实在想吃可以吃一些不是零食的小吃，比如烤冷面，手抓饼等，前提是这些小吃会占据一顿饭）
-放松压力 这没什么好说的，比较唯心，就是舒缓情绪，不要过分紧张等等
-物品准备 这十天准备期可以买一些减肥必备的物品，牌子不重要，多看一些评价自然知道好不好了 （1）燕麦（最好带坚果的，可以选择含有少量糖的，不然太难吃了，很可能吃一半就放弃了，这可是将来的晚餐，别变成了摆设） （2）瑜伽垫（可以选择厚一些的）
-（3）滚轴（放松小腿用）
-（4）运动套装（至少两件运动内衣，跑步用的裤子） （5）运动鞋（舒适，性价比高就可以） （6）坚果（选评价高的就行） （7）全麦面包（或者其他类似的可增加饱腹感，能量又不高的食物） （8）运动用手机包 还有其他必须有但是一般人都有的东西：耳机（最好是蓝牙耳机），体重秤，软尺（量腰围用）
-其他准备 初始体重：120斤（60kg） 目标体重：97（58.5kg） #阶段划分 减肥时间总共200天，以下是按照不同阶段进行时间划分 ##适应期 10天，此阶段需要达到的目标如下： （1）逐渐形成规律的睡眠时间：6.5-8.5小时 （2）逐步减少食量</description>
+      <description>创立原因及目标 我的表姐要在圣诞节前一天结婚（不是崇洋媚外，只是那时候恰好是个良辰吉日，我们老家又比较喜欢冬天结婚，这样很多亲戚都回家了）。算下来现在距离那天也差不多二百多天，我如果能够成功减肥，这样也</description>
     </item>
     
     <item>
@@ -61,7 +31,7 @@
       <pubDate>Mon, 25 Mar 2019 09:41:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/private/monthly/</guid>
-      <description>1 bi新建已收、已付、应收、应付表 CREATE TABLE `order_product_set_pay`( `id` int(10) unsigned NOT NULL, `order_product_id` int(10) unsigned NOT NULL, `parent_order_product_id` int(10) unsigned DEFAULT &#39;0&#39; COMMENT &#39;parent order_product_id&#39;, `has_settlement` decimal(10,2) NOT NULL DEFAULT &#39;0.00&#39;, `should_settlement` decimal(10,2) NOT NULL DEFAULT &#39;0.00&#39;, `has_pay` decimal(10,2) NOT NULL DEFAULT &#39;0.00&#39;, `should_pay` decimal(10,2) NOT NULL DEFAULT &#39;0.00&#39;, `settlement_pay_time` timestamp NOT NULL DEFAULT &#39;0000-00-00 00:00:00&#39;, `pay_pay_status` varchar(255) NOT NULL DEFAULT &#39;Pending&#39;, `pay_pay_time` timestamp NOT NULL DEFAULT &#39;0000-00-00 00:00:00&#39;, PRIMARY KEY (`id`) ) ENGINE=InnoDB DEFAULT CHARSET=utf8; alter table `order_product_set_pay` drop primary key; alter table `order_product_set_pay` add `settlement_id` int(10) unsigned NOT NULL; 2 从bi表中查询数据 1 已收 （总收）/比例 比例 =</description>
+      <description>1 bi新建已收、已付、应收、应付表 CREATETABLE`order_product_set_pay`(`id`int(10)unsignedNOTNULL,`order_product_id`int(10)unsignedNOTNULL,`parent_order_product_id`int(10)unsignedDEFAULT&amp;#39;0&amp;#39;COMMENT&amp;#39;parent order_product_id&amp;#39;,`has_settlement`decimal(10,2)NOTNULLDEFAULT&amp;#39;0.00&amp;#39;,`should_settlement`decimal(10,2)NOTNULLDEFAULT&amp;#39;0.00&amp;#39;,`has_pay`decimal(10,2)NOTNULLDEFAULT&amp;#39;0.00&amp;#39;,`should_pay`decimal(10,2)NOTNULLDEFAULT&amp;#39;0.00&amp;#39;,`settlement_pay_time`timestampNOTNULLDEFAULT&amp;#39;0000-00-00 00:00:00&amp;#39;,`pay_pay_status`varchar(255)NOTNULLDEFAULT&amp;#39;Pending&amp;#39;,`pay_pay_time`timestampNOTNULLDEFAULT&amp;#39;0000-00-00 00:00:00&amp;#39;,PRIMARYKEY(`id`))ENGINE=InnoDBDEFAULTCHARSET=utf8;altertable`order_product_set_pay`dropprimarykey;altertable`order_product_set_pay`add`settlement_id`int(10)unsignedNOTNULL;2 从bi表中查询数据 1 已收 （总收）/比例 比例 = mysql查询优化 优化结果 SELECTop.order_product_id,op.parent_order_pr</description>
     </item>
     
     <item>
@@ -70,14 +40,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/private/2019-02-26/</guid>
-      <description>不能够开放
-1 知识点 添加日志 引入logging包，引入log文件即可
-logging.basicConfig(filename=&amp;quot;/tmp/bi_dsvcs/app.log&amp;quot;, level = logging.DEBUG) 有四种级别INFO, DEBUG, WARNING, ERROR, CRITICAL, FATAL
-获取月份列表 需求 需要获取月份数据[&amp;lsquo;00&amp;rsquo;, &amp;lsquo;01&amp;rsquo;, &amp;lsquo;02&amp;rsquo;, &amp;lsquo;03&amp;rsquo;, &amp;lsquo;04&amp;rsquo;, &amp;lsquo;05&amp;rsquo;, &amp;lsquo;06&amp;rsquo;, &amp;lsquo;07&amp;rsquo;, &amp;lsquo;08&amp;rsquo;, &amp;lsquo;09&amp;rsquo;, &amp;lsquo;10&amp;rsquo;, &amp;lsquo;11&amp;rsquo;] 原本解决办法 直接定义了一个这样的数组 新方法 range()从0到13，再在一位数前补零 实现代码
-theMonth = range(0, 13) monthKey = map(lambda x:&#39;%02d&#39; % x, theMonth) 新方法2 [&amp;quot;%02d&amp;quot; % x for x in range(1,13)]
-数据库导入导出 shell脚本里添加mysqldump导出数据 导入数据为避免更改表结构，直接mysql -u……连接到库，执行insert操作
-gunicorn配置 使用supervisor配置gunicorn，我本地虚拟机配置如下
-[program:bi_dsvcs] command=python /usr/bin/gunicorn -c /spython/bi_dsvcs/gunicorn.cnf dsvcs:app process_name=%(program_name)s/%(process_num)d directory=/spython/bi_dsvcs numprocs=1 autostart=true autorestart=true user=developer redirect_stderr=true stdout_logfile=/tmp/bi_dsvcs.</description>
+      <description>不能够开放 1 知识点 添加日志 引入logging包，引入log文件即可 logging.basicConfig(filename=&amp;#34;/tmp/bi_dsvcs/app.log&amp;#34;, level = logging.DEBUG) 有四种级别INFO, DEBUG, WARNING, ERROR, CRITICAL, FATAL 获取月份列表 需求 需要获取月份数据[&amp;lsquo;00&amp;rsquo;, &amp;lsquo;01&amp;rsquo;, &amp;lsquo;02&amp;rsquo;, &amp;lsquo;03&amp;rsquo;, &amp;lsquo;04&amp;rsquo;, &amp;lsquo;05&amp;rsquo;, &amp;lsquo;06&amp;rsquo;, &amp;lsquo;07&amp;rsquo;, &amp;lsquo;08&amp;rsquo;, &amp;lsquo;09&amp;rsquo;, &amp;lsquo;10&amp;rsquo;, &amp;lsquo;11&amp;rsquo;] 原本解</description>
     </item>
     
     <item>
@@ -86,12 +49,7 @@ gunicorn配置 使用supervisor配置gunicorn，我本地虚拟机配置如下
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/private/20190213/</guid>
-      <description>一：导入数据 1. bi_etl:通过定时任务脚本将数据从源数据库导出： （1） 修改配置文件，执行dump_order.sh，导入部分测试数据 （2）其中mysqldump导出数据到文件中 （3）shell无法直接执行source，可以用bash来操作，命令：sudo bash dump_order.sh （4）sh文件可能是在windows下面编辑的，在vim中使用set fileformat=unix 去除\M字符 （5）运行sh文件可在data目录下生成sql文件 （6）注意事项： 为什么不使用增量：因为有个中间表没有update_at，financial的表不能随意加字段
-1-1修改: （1）第一步导数据，源数据（来自于order_system）已经执行了删除五张表的三个字段，因此导出的数据结构和以前导出的数据结构是不一样的；
-2. 通过jump server将bi_etl的数据文件导出到bi_new的upload中(本地无法部署)** （1）由于本地无法直接部署jump server,直接拷贝刚才生成的文件到bi_new的upload中； （2）load_new.sh文件读取的是data.tar.gz压缩文件，因此直接压缩整个data文件夹到upload文件夹下
-3. bi_dsvcs读取数据并存入bi_new数据库 （1）修改配置文件（不修改可能会覆盖线上数据） （2）执行脚本并去除\M字符(会读取conf文件，set ff=unix可以去除/r字符) （2）在load_new.sh脚本中（使用了mysql的source命令）将刚才文件中的数据导入ori_new数据库中 （4）注意事项：sh文件中使用了tar -xvf 解压data文件，但是实际上没有解压成功，文件不存在，可以直接复制所有文件
-3-2修改： （1）执行sql命令直接修改ori_new的结构，命令如下：
-use ori_new; alter table `order_product` add `departure_date` date DEFAULT NULL; alter table `order_product` add `end_date` date DEFAULT NULL; alter table `order_product` add `product_status` int(11) NOT NULL DEFAULT &amp;#39;10000&amp;#39;; alter table `order_order_product_combine` drop column `departure_date`, drop column `end_date`, drop column `product_status`; alter table `order_order_product_customize` drop column `departure_date`, drop column `end_date`, drop column `product_status`; alter table `order_order_product_hotel` drop column `departure_date`, drop column `end_date`, drop column `product_status`; alter table `order_order_product_oneday` drop column `departure_date`, drop column `end_date`, drop column `product_status`; alter table `order_order_product_ticket` drop column `departure_date`, drop column `end_date`, drop column `product_status`; alter table `order_order_product_tour` drop column `departure_date`, drop column `end_date`, drop column `product_status`; 4.</description>
+      <description>一：导入数据 1. bi_etl:通过定时任务脚本将数据从源数据库导出： （1） 修改配置文件，执行dump_order.sh，导入部分测试数据 （2）其中mysqldump导出数据到文件中 （3）shell无法直</description>
     </item>
     
     <item>
@@ -100,10 +58,7 @@ use ori_new; alter table `order_product` add `departure_date` date DEFAULT NULL;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/private/20190214/</guid>
-      <description>1 计算规则（都在订单产品维度） 1 已收 （1）计算此订单产品所在的订单的所有已收款 （2）计算此订单产品所在的订单有多少订单产品 （3）所有已收款除以订单产品数量，平均得出每个订单产品的已收款
-2 基础接口实现 1 注意事项 每次更新代码supervisor都需要重启
-2 添加路由和方法 创建finance_monthly controller,并在dsvcs.py中引入
-3 导入bill表 需要导入bill和bill_item表进ori_new以及bi表中</description>
+      <description>1 计算规则（都在订单产品维度） 1 已收 （1）计算此订单产品所在的订单的所有已收款 （2）计算此订单产品所在的订单有多少订单产品 （3）所有已收款除以订单产品数量，平均得出每个订单产品的已收款 2 基础接口实现 1</description>
     </item>
     
     <item>
@@ -112,8 +67,7 @@ use ori_new; alter table `order_product` add `departure_date` date DEFAULT NULL;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/private/fit/</guid>
-      <description>title: 减肥 date: 2021-09-29 19:20:10 tags:
- 减肥 categories: 减肥      阶段 截至时间 时间 详情     1 21-10-09 10d 4-116-58   1 21-10-19 10d 3-113-56.5   1 21-10-29 10d 2-111-55.5   1 21-11-08 10d 1-110-55   1 21-11-18 10d 1-109-54.5   1 21-11-28 10d 1-108-54   1 21-12-08 10d 2-106-53   1 21-12-18 10d 2-104-52   1 21-12-28 10d 3-101-50.</description>
+      <description>title: 减肥 date: 2021-09-29 19:20:10 tags: 减肥 categories: 减肥 阶段 截至时间 时间 详情 1 21-10-09 10d 4-116-58 1 21-10-19 10d 3-113-56.5 1 21-10-29 10d 2-111-55.5 1 21-11-08 10d 1-110-55 1 21-11-18 10d 1-109-54.5 1 21-11-28 10d 1-108-54 1 21-12-08 10d 2-106-53 1 21-12-18 10d 2-104-52 1 21-12-28 10d 3-101-50.5 1 22-01-07 10d 2-99-49.5 1 22-01-17 10d 0.5-98.5-49.25 1 22-01-27 10d 0.5-98-49 1 22-02-06 10d 0-98-49</description>
     </item>
     
   </channel>

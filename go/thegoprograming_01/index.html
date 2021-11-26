@@ -1,24 +1,23 @@
 <!DOCTYPE html>
-<html >
+<html lang="en" >
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="" />
+    <meta name="author" content="贺小娇" />
 	
 	
 	
-	<title>go语言圣经 ｜ </title>
+	<title>go语言圣经 ｜ 贺小娇的个人博客</title>
 	
     
     
-    <meta name="description" content="基本介绍 可以参考此文章：https://docs.hacknode.org/gopl-zh/ch0/ch0-02.html
-基础使用 查看go版本 go version 引入代码 需要在环境变量中添加GOPATH目录，然后使用go get 命令下载代码，以下为《go语言圣经》的示例
-export GOPATH=$HOME/go # 选择工作目录 go get gopl.io/ch1/helloworld # 获取/编译/安装 $GOPATH/bin/helloworld # 运行程序 执行代码 执行代码使用go run命令
-go run hello.go 编译代码 编译代码使用go build命令，执行完后会生成一个可执行文件
-go build hello.go 代码详情 " />
+    <meta name="description" content="基本介绍 可以参考此文章：https://docs.hacknode.org/gopl-zh/ch0/ch0-02.html 基础使用 查看go版本 go version 引入代码 需要在环境变量中添加GOPATH目录，然后使用" />
     
 
+    
+    
+    <meta name="keywords" content="Hugo, blog, php" />
     
 
 	
@@ -41,6 +40,22 @@ go build hello.go 代码详情 " />
     <div class="site_nav" id="site_nav">
         <ul>
             
+            <li>
+                <a href="/">主页</a>
+            </li>
+            
+            <li>
+                <a href="/posts/">Archive</a>
+            </li>
+            
+            <li>
+                <a href="/tags/">Tags</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
         </ul>
     </div>
     <div class="menu_icon">
@@ -52,13 +67,31 @@ go build hello.go 代码详情 " />
         <div class="site_title">
             <h1>
                 <a href="https://laurel-he.github.io/">
-                    <span></span>
+                    <span>贺小娇的个人博客</span>
                 </a>
             </h1>
         </div>
         <div class="description">
-            <p class="sub_title"></p>
+            <p class="sub_title">the summary of my programing life</p>
             <div class="my_socials">
+                
+                
+                <a href="%20" title="facebook" target="_blank"><i class="ri-facebook-fill"></i></a>
+                
+                
+                
+                <a href="https://github.com/laurel-he" title="github" target="_blank"><i class="ri-github-fill"></i></a>
+                
+                
+                
+                <a href="%20" title="instagram" target="_blank"><i class="ri-instagram-fill"></i></a>
+                
+                
+                
+                
+                
+                <a href="%20" title="weibo" target="_blank"><i class="ri-weibo-fill"></i></a>
+                
                 
                 <a href="https://laurel-he.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
                         class="ri-rss-fill"></i></a>
@@ -77,18 +110,18 @@ go build hello.go 代码详情 " />
 <p>可以参考此文章：https://docs.hacknode.org/gopl-zh/ch0/ch0-02.html</p>
 <h1 id="基础使用">基础使用</h1>
 <h3 id="查看go版本">查看go版本</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">go version
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">go version
 </code></pre></div><h3 id="引入代码">引入代码</h3>
 <p>需要在环境变量中添加GOPATH目录，然后使用go get 命令下载代码，以下为《go语言圣经》的示例</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">export GOPATH<span style="color:#f92672">=</span>$HOME/go    <span style="color:#75715e"># 选择工作目录</span>
-go get gopl.io/ch1/helloworld <span style="color:#75715e"># 获取/编译/安装</span>
-$GOPATH/bin/helloworld        <span style="color:#75715e"># 运行程序</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">export</span> <span class="nv">GOPATH</span><span class="o">=</span><span class="nv">$HOME</span>/go    <span class="c1"># 选择工作目录</span>
+go get gopl.io/ch1/helloworld <span class="c1"># 获取/编译/安装</span>
+<span class="nv">$GOPATH</span>/bin/helloworld        <span class="c1"># 运行程序</span>
 </code></pre></div><h3 id="执行代码">执行代码</h3>
 <p>执行代码使用go run命令</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">go run hello.go
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">go run hello.go
 </code></pre></div><h3 id="编译代码">编译代码</h3>
 <p>编译代码使用go build命令，执行完后会生成一个可执行文件</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">go build hello.go
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">go build hello.go
 </code></pre></div><h3 id="代码详情">代码详情</h3>
 </div>
                     <div class="post_footer">
@@ -121,7 +154,7 @@ $GOPATH/bin/helloworld        <span style="color:#75715e"># 运行程序</span>
     </div>
 
     <div class="footer_slogan">
-        <span></span>
+        <span>My spiritual home</span>
     </div>
 </footer>
     <script src="https://laurel-he.github.io/js/jquery-3.5.1.min.js"></script>
@@ -129,6 +162,43 @@ $GOPATH/bin/helloworld        <span style="color:#75715e"># 运行程序</span>
 <script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
 <script src="https://laurel-he.github.io/js/zozo.js"></script>
 
+
+<script type="text/javascript" async
+    src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\[\[', '\]\]']],
+                processEscapes: true,
+                processEnvironments: true,
+                skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                TeX: {
+                    equationNumbers: { autoNumber: "AMS" },
+                    extensions: ["AMSmath.js", "AMSsymbols.js"]
+                }
+            }
+        });
+
+        MathJax.Hub.Queue(function () {
+            
+            
+            
+            var all = MathJax.Hub.getAllJax(), i;
+            for (i = 0; i < all.length; i += 1) {
+                all[i].SourceElement().parentNode.className += ' has-jax';
+            }
+        });
+    </script>
+
+<style>
+    code.has-jax {
+        font: inherit;
+        font-size: 100%;
+        background: inherit;
+        border: inherit;
+        color: #515151;
+    }
+</style>
 
 
 

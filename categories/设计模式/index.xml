@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>设计模式 on </title>
+    <title>设计模式 on 贺小娇的个人博客</title>
     <link>https://laurel-he.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
-    <description>Recent content in 设计模式 on </description>
+    <description>Recent content in 设计模式 on 贺小娇的个人博客</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Tue, 29 Oct 2019 17:40:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>单例模式</title>
@@ -12,9 +13,7 @@
       <pubDate>Tue, 29 Oct 2019 17:40:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/designpattern/phpallpattern/design_singleton/</guid>
-      <description>概念介绍 情景介绍 一个类只需要被实例化一次，但是不应该由调用方来判断是否被实例化过
-基础介绍 所有类都有构造方法，不编码则系统默认生成空的构造方法，若有显示定义的构造方法，默认的构造方法就会失效。 类把构造方法设置为私有，使所有的方法都不能直接实例化这个类。然后类内部写一个公共方法来判断这个类是否被实例化过，调用方无需判断
-单例模式 单例模式：保证一个类仅有一个实例，并提供一个访问它的全局访问点。 通常可以让一个全局变量使得一个对象被访问，但它不能防止实例化多个对象。一个最好的办法就是，让类自身负责保存它的唯一实例，这个类可以保证没有其他实例可以被创建，并且它可以提供一个访问该实例的方法。</description>
+      <description>概念介绍 情景介绍 一个类只需要被实例化一次，但是不应该由调用方来判断是否被实例化过 基础介绍 所有类都有构造方法，不编码则系统默认生成空的构造方法，若有显示定义的构造方法，默认的构造方法就会失效。 类把构造方</description>
     </item>
     
     <item>
@@ -23,15 +22,7 @@
       <pubDate>Mon, 07 Oct 2019 17:40:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/designpattern/others/codeprinceple/</guid>
-      <description>本文参考了设计模式六大原则
-单一职责原则（SPR:Single Responsibility Principle） 一个类应该有且仅有一个原因导致该类的变更，即一个类应该只负责一项职责 但是在实际工作中，职责是会扩散的，一个类可能会新增更多的职责， 只有逻辑足够简单，才可以在代码级别上违反单一职责原则；只有类中方法数量足够少，才可以在方法级别上违反单一职责原则
-遵循单一职责原的优点： （1）可以降低类的复杂度，一个类只负责一项职责，其逻辑肯定要比负责多项职责简单的多； （2）提高类的可读性，提高系统的可维护性； （3）变更引起的风险降低，变更是必然的，如果单一职责原则遵守的好，当修改一个功能时，可以显著降低对其他功能的影响。
-第二：里氏替换原则（LSP:Liskcov Substitution Principle） 定义 定义1：如果对每一个类型为 T1的对象 o1，都有类型为 T2 的对象o2，使得以 T1定义的所有程序 P 在所有的对象 o1 都代换成 o2 时，程序 P 的行为没有发生变化，那么类型 T2 是类型 T1 的子类型。 定义2：所有引用基类的地方必须能透明地使用其子类的对象。 可以简单的理解为子类型能够替换它们的基类型
-含义解析 （1）子类可以实现父类的抽象方法，但不能覆盖父类的非抽象方法。 （2）子类中可以增加自己特有的方法。 （3）当子类的方法重载父类的方法时，方法的前置条件（即方法的形参）要比父类方法的输入参数更宽松。 （4）当子类的方法实现父类的抽象方法时，方法的后置条件（即方法的返回值）要比父类更严格
-违反里氏替换原则的危害 （1）反直觉。期望所有子类行为是一致的，但如果不一致可能需要文档记录，或者在代码跑失败后涨此知识； （2）不可读。如果子类行为不一致，可能需要不同的逻辑分支来适配不同的行为，徒增代码复杂度； （3）不可用。可能出错的地方终将会出错。 如果非要重写父类的方法，比较通用的做法是：原来的父类和子类都继承一个更通俗的基类，原有的继承关系去掉，采用依赖、聚合，组合等关系代替
-第三：依赖倒置原则（DIP:Dependence Inversion Principle） 定义 高层模块不应该依赖低层模块，二者都应该依赖其抽象；抽象不应该依赖细节；细节应该依赖抽象 针对接口编程，不要针对实现编程
-解释 依赖倒置原则基于这样一个事实： 相对于细节的多变性，抽象的东西要稳定的多。以抽象为基础搭建起来的架构比以细节为基础搭建起来的架构要稳定的多。 在java中，抽象指的是接口或者抽象类，细节就是具体的实现类，使用接口或者抽象类的目的是制定好规范和契约，而不去涉及任何具体的操作，把展现细节的任务交给他们的实现类去完成。
-示例 /** * 高层类Library需要实现readContent，但是readContent针对不同 * 类有不同的表现形式，于是抽象出来，这样不管怎么扩展修改，Library不用改 **/ class DesignController { /** *yii design/run */ public function actionRun() { $user = new User(); $data = $user-&amp;gt;gotoLibrary(); var_dump($data); } } class User { public function gotoLibrary() { $book = (new Library())-&amp;gt;read(new Book()); $news = (new Library())-&amp;gt;read(new Newspaper()); return [$book, $news]; } } class Library { public function read(IReader $reader) { return $reader-&amp;gt;readContent(); } } interface IReader { /** * 读取内容 * @return mixed */ public function readContent(); } class Book implements IReader { public function readContent() { return &amp;#39;书籍：小王子&amp;#39;; } } class Newspaper implements IReader { public function readContent() { return &amp;#39;报纸：今天奥运会结束了&amp;#39;; } } 第四：接口隔离原则(ISP:Interface Segregation Principle) 定义 客户端不应该依赖它不需要的接口；一个类对另一个类的依赖应该建立在最小的接口上。</description>
+      <description>本文参考了设计模式六大原则 单一职责原则（SPR:Single Responsibility Principle） 一个类应该有且仅有一个原因导致该类的变更，即一个类应该只负责一项职责 但是在实际工作中，职责是会扩散的，一个类可能会新增</description>
     </item>
     
     <item>
@@ -40,8 +31,7 @@
       <pubDate>Sun, 06 Oct 2019 10:40:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/designpattern/phpallpattern/singlemode/</guid>
-      <description>基础介绍 概念介绍 作为对象的创建模式，单例模式确保某一个类只有一个实例，并且对外提供这个全局实例的访问入口。它不会创建实例副本，而是会向单例类内部存储的实例返回一个引用。
-单例模式三要素  需要一个保存类的唯一实例的静态成员变量。 构造函数和克隆函数必须声明为私有的，防止外部程序创建或复制实例副本。 必须提供一个访问这个实例的公共静态方法，从而返回唯一实例的一个引用。  </description>
+      <description>基础介绍 概念介绍 作为对象的创建模式，单例模式确保某一个类只有一个实例，并且对外提供这个全局实例的访问入口。它不会创建实例副本，而是会向单例类内部存储的实例返回一个引用。 单例模式三要素 需要一个保存类的唯</description>
     </item>
     
     <item>
@@ -50,13 +40,7 @@
       <pubDate>Sat, 05 Oct 2019 17:40:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/designpattern/phpallpattern/producerconsumer/</guid>
-      <description>基础概念 概念介绍 某块模块负责产生数据，这些数据由另一个模块来负责处理。产生数据的模块，就形象地称为生产者；而处理数据的模块，就称为消费者。 该模式还需要有一个缓冲区处于生产者和消费者之间，作为一个中介。生产者把数据放入缓冲区，而消费者从缓冲区取出数据 缓冲区作用
-  解耦，生产者和消费者只依赖缓冲区，而不互相依赖
-  支持并发和异步
-  支持生产者和消费者忙闲不均（来不及消费缓冲区可以暂存）
-  使用场景 队列(类似，但并不完全相等，有的队列没有缓冲区); swoole(业务逻辑(生产者)将数据单元通过swoole的send函数弄到swoole的一个缓冲区之间，通过work进程进行分发，task进程(消费者)进行消费。)
-代码解析 CICD创建项目流程类似于生产者消费者模式；
-（1）用户填写表单，创建一条CICD数据，生产者向数据表添加一条状态为pending的数据，类似于向缓冲区添加数据 （2）定时任务读取状态为pending的数据，消费处理后修改状态</description>
+      <description>基础概念 概念介绍 某块模块负责产生数据，这些数据由另一个模块来负责处理。产生数据的模块，就形象地称为生产者；而处理数据的模块，就称为消费者。 该模式还需要有一个缓冲区处于生产者和消费者之间，作为一个中介。</description>
     </item>
     
     <item>
@@ -65,13 +49,7 @@
       <pubDate>Fri, 04 Oct 2019 17:40:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/designpattern/phpallpattern/commandmode/</guid>
-      <description>基础概念 基础介绍 （1）概念介绍： 命令模式（Command Pattern）是一种数据驱动的设计模式，它属于行为型模式。请求以命令的形式包裹在对象中，并传给调用对象。调用对象寻找可以处理该命令的合适的对象，并把该命令传给相应的对象，该对象执行命令。 （2）概念解析： 命令模式将一个请求封装成一个对象，从而可用不同的请求对客户进行参数化，对请求排队或记录请求日志，以及支持可撤销的操作。
-使用场景 在某些场合下，需要对行为进行&amp;quot;记录、撤销/重做、事务&amp;quot;等处理，需要将&amp;quot;行为请求者&amp;quot;与&amp;quot;行为实现者&amp;quot;解耦，将一组行为抽象为对象，可以实现二者之间的松耦合。认为是命令的地方都可以使用命令模式，比如： 1、GUI 中每一个按钮都是一条命令。 2、模拟 CMD。
-关键术语 （1）received：真正的命令执行对象 （2）Command：命令 （3）invoker：使用命令对象的入口
-实现步骤 以下以后台k8s删除node节点命令为例
-a.创建一个命令接口： 接口定义接口名称，需要实现的操作名称，命令模式需要的操作为执行命令，后续可根据不同的命令来实现这个接口和执行命令方法。
-&amp;lt;?php abstract class Nodes { public function execute(){} } ?&amp;gt;b.创建一个请求类 定义拥有的请求方法 本例中操作有： （1）列出所有nodes: kubectl get node （2）删除节点：kubectl delete node $nodeName （3）查看对应node上的pods信息: kubectl get pods -o wide | grep $nodeName （4）在删除的node3对应的服务器上执行：kubeadm reset
-&amp;lt;?php class K8s { public function getNodes() { return &amp;#39;kubectl get node&amp;#39;; } public function delNodes($nodeName) { return &amp;#34;kubectl delete node $nodeName&amp;#34;; } } ?</description>
+      <description>基础概念 基础介绍 （1）概念介绍： 命令模式（Command Pattern）是一种数据驱动的设计模式，它属于行为型模式。请求以命令的形式包裹在对象中，并传给调用对象。调用对象寻找可以处理该命令的合适的对象</description>
     </item>
     
     <item>
@@ -80,10 +58,7 @@ a.创建一个命令接口： 接口定义接口名称，需要实现的操作�
       <pubDate>Mon, 29 Jul 2019 14:37:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/designpattern/phpallpattern/strategy/</guid>
-      <description>概念 定义 策略模式定义了算法族，分别封装起来，让他们之间可以相互替换，该模式让算法独立于使用它的客户而独立变化
-组成 1 抽象策略角色：策略类，通常由一个接口或者抽象类实现 2 具体策略角色：包装了相关的算法和行为。 3 环境角色：持有一个策略类的引用，最终给客户端调用。
-分析 策略模式用一个抽象策略角色提供一个类（一般是接口或抽象类），每个策略都实现了这个抽象策略角色，环境角色去调用（依赖注入）
-代码 &amp;lt;?php /** * @author: hexiaojiao@jiapinai.com * @todo: * time: 2019-07-30 20:07 */ /** * 定义抽象角色类` * Interface CollectInter */ interface CollectInter { public function collect($price, $num); public function input(); } class Base { public function input($discount = 1) { fwrite(STDOUT, &amp;#39;请输入单价&amp;#39;); $price = trim(fgets(STDIN)); fwrite(STDOUT, &amp;#39;请输入数量&amp;#39;); $num = trim(fgets(STDIN)); $res = $this-&amp;gt;collect($price, $num, $discount); return $res; } } /** * 定义具体策略类 * Class Collect02 */ class Collect02 extends Base implements CollectInter { public function collect($price, $num, $discount = 1) { var_dump(&amp;#39;Collect02:&amp;#39;, $price * $num * $discount); return true; } } /** * Class Discount */ class Discount extends Base implements CollectInter { public function collect($price, $num, $discount = 0.</description>
+      <description>概念 定义 策略模式定义了算法族，分别封装起来，让他们之间可以相互替换，该模式让算法独立于使用它的客户而独立变化 组成 1 抽象策略角色：策略类，通常由一个接口或者抽象类实现 2 具体策略角色：包装了相关的算法和行</description>
     </item>
     
     <item>
@@ -92,13 +67,7 @@ a.创建一个命令接口： 接口定义接口名称，需要实现的操作�
       <pubDate>Wed, 24 Jul 2019 10:40:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/designpattern/phpallpattern/simplefactory/</guid>
-      <description>引入 实现计算器 代码实现 1 实现一个基础的计算器功能，代码见https://github.com/laurel-he/design_pattern/blob/master/simpleFactory/calculator01.php
-问题分析 （1）错误处理只判断了除数是否为0，对于字符超长，不可计算等都未处理，可以加上try catch； （2）代码不可复用，耦合性很高
-使用面向对象处理 （1）使用面向对象的方式实现，将输入输出流和逻辑代码分离，可以提高代码复用性，降低耦合，代码见https://github.com/laurel-he/design_pattern/blob/master/simpleFactory/Calculate2.php
-紧耦合vs松耦合 思考：什么情况下使用继承和多态（各种运算可以继承自运算基类，便于扩展，多态考虑输入的不同类型，对于字符串怎样运算） 根据以上思考，完成有继承和多态的代码如下： https://github.com/laurel-he/design_pattern/blob/master/simpleFactory/Calculate03.php 思考：以上代码实现方式虽然使用到了继承，但是如何知道应该调用哪个类呢？难道像之前预估的一样，还是要使用switch判断？
-简单工厂模式 解决问题，实例化谁，将来会不会增加实例化的对象等容易变化的地方，考虑用一个单独的类来做这个创造实例的过程 在此基础上实现一个简单工厂类，代码如下： https://github.com/laurel-he/design_pattern/blob/master/simpleFactory/Calculate04.php 如果需要修改运算，可以只修改对应的类，如果需要添加运算，只需要添加运算类，并在工厂中添加对应的分支就可以了 简单工厂模式的工厂类一般是使用静态方法，通过接受的参数的不同来返回不同的对象实例
-工厂方法模式 1 简单工厂模式优点： （1）简单工厂包含必要的判断逻辑，实现了对象的创建和使用的分离； （2）客户端无需知道所创建的具体产品类的类名，只需要具体产品类对应的参数即可； （3）在不修改任何客户端代码的情况下更换和增加新的具体产品类，在一定程度上提高了系统的灵活性 2 简单工厂模式缺点： （1）工厂类职责过重，它出问题整个系统都会崩溃 （2）添加新的类的时候，系统中的简单工厂类都要修改，违反了开放-封闭原则 （3）简单工厂的静态方法，使得工厂角色无法形成基于继承的等级结构 工厂方法模式每一种算法都对应一种工厂， 工厂方法模式优点： （1）
-抽象工厂 </description>
+      <description>引入 实现计算器 代码实现 1 实现一个基础的计算器功能，代码见https://github.com/laurel-he/design_pattern/blob/master/simpleFactory/ca</description>
     </item>
     
     <item>
@@ -107,10 +76,7 @@ a.创建一个命令接口： 接口定义接口名称，需要实现的操作�
       <pubDate>Mon, 22 Jul 2019 17:40:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/designpattern/phpallpattern/abstractfactory/</guid>
-      <description>参考：抽象工厂模式（Abstract Factory）
-目的 在不指定具体类的情况下创建一系列相关或依赖对象。 通常创建的类都实现相同的接口。 抽象工厂的客户并不关心这些对象是如何创建的，它只是知道它们是如何一起运行的。
-举例  &amp;lt;?php class KuaidiBirdLogic extends BaseLogic { private $basic; private $num; public function __construct(int $num, int $basic) { $this-&amp;gt;num = $num; $this-&amp;gt;basic = $basic; } } class KuaidiOneLogic implements KuaidiBase { private $num; public function __construct(int $num) { $this-&amp;gt;num = $num; } } 定义抽象工厂类
-&amp;lt;?php class ExpressFactory extends Model { public function getKuaidiBirdList() { return new KuaidiBirdLogic(12, 13); } public function getKuaidiOneLogic() { return new KuaidiOneLogic(); } } 几种工厂模式的区别 抽象工厂模式 类似于示例Basic</description>
+      <description>参考：抽象工厂模式（Abstract Factory） 目的 在不指定具体类的情况下创建一系列相关或依赖对象。 通常创建的类都实现相同的接口。 抽象工厂的客户并不关心这些对象是如何创建的，它只是知道它们是如何一</description>
     </item>
     
     <item>
@@ -119,18 +85,7 @@ a.创建一个命令接口： 接口定义接口名称，需要实现的操作�
       <pubDate>Sun, 07 Jul 2019 17:40:10 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/designpattern/others/basic/</guid>
-      <description>本文参考了书籍《大话设计模式》/文章从招式与内功谈起——设计模式概述 以及系列文章PHP 设计模式系列
-定义 在软件工程中，设计模式（Design Pattern）是对软件设计中普遍存在（反复出现）的各种问题，所提出的解决方案。 这个术语是由埃里希·伽玛（Erich Gamma）等人在1990年代从建筑设计领域引入到计算机科学的。 设计模式并不直接用来完成代码的编写，而是描述在各种不同情况下，要怎么解决问题的一种方案。 面向对象设计模式通常以类或对象来描述其中的关系和相互作用，但不涉及用来完成应用程序的特定类或对象。 设计模式能使不稳定依赖于相对稳定、具体依赖于相对抽象，避免会引起麻烦的紧耦合，以增强软件设计面对并适应变化的能力。
-并非所有的软件模式都是设计模式，设计模式特指软件“设计”层次上的问题。还有其它非设计模式的模式，如架构模式。同时，算法不能算是一种设计模式，因为算法主要是用来解决计算上的问题，而非设计上的问题。
-设计模式的作用 (1)设计模式经过多年的使用和实践，包含了大量成功的，可维护可复用的设计方案，在很多情况下，设计模式可以提高开发效率，节约时间 (2)设计模式跨语言、跨平台、跨应用、跨国界，提供了通用的词汇和使用方式，节约交流时间 (3)大部分设计模式都兼顾了系统的可重用性和扩展性，这使很多系统可以重用，减少代码重复 (4)合理使用设计模式有助于别人理解自己的代码 (5)有助于更为深刻地理解面对对象编程
-如何掌握设计模式 a.这个设计模式的意图是什么 b.它要解决一个什么问题 c.什么时候可以使用它 d.它是如何解决问题的 e.掌握它的结构图 f.记住它的关键代码 g.能够想到至少两个它的应用实例，一个生活中的，一个软件中的 h.这个模式的优缺点是什么 i.在使用时要注意什么
-注意事项 （1）最好的掌握设计模式的方法是使用它们 （2）千万不要滥用模式
-设计模式分类 设计模式可以分为三大类，创建型，结构型，行为型
-创建型 在软件工程中，创建型设计模式是处理对象创建机制的设计模式，试图以适当的方式来创建对象。 对象创建的基本形式可能会带来设计问题，亦或增加了设计的复杂度。 创建型设计模式通过控制这个对象的创建方式来解决此问题。 在软件工程中，创建型设计模式用于处理对象的实例化：
-常用创建型模式 （1）抽象工厂模式（Abstract Factory） （2）建造者模式（Builder） （3）工厂方法模式（Factory Method） （4）多例模式（Multiton） （5）对象池模式（Pool） （6）原型模式（Prototype） （7）简单工厂模式（Simple Factory） （8）单例模式（Singleton） （9）静态工厂模式（Static Factory）
-结构型 在软件工程中，结构型设计模式是通过识别实体之间关系来简化设计的设计模式。 结构型设计模式用于处理类和对象的组合
-常用结构型模式 （1）适配器模式（Adapter） （2）桥梁模式（Bridge） （3）组合模式（Composite） （4）数据映射模式（Data Mapper） （5）装饰模式（Decorator） （6）依赖注入模式（Dependency Injection） （7）门面模式（Facade） （8）流接口模式（Fluent Interface） （9）代理模式（Proxy） （10）注册模式（Registry）
-行为型 在软件工程中，行为设计模式是识别对象之间的通用通信模式并实现这些模式的设计模式。 通过这样做，这些模式增加了执行此通信的灵活性。 行为型设计模式用于处理类的对象间通信：</description>
+      <description>本文参考了书籍《大话设计模式》/文章从招式与内功谈起——设计模式概述 以及系列文章PHP 设计模式系列 定义 在软件工程中，设计模式（Design Pattern）是对软件设计中普遍存在（反复出现）的各种问题，</description>
     </item>
     
   </channel>
