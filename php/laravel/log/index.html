@@ -154,7 +154,25 @@ Log::info(222222222, [&#39;te&#39; =&gt; $test]);
                 </div>
                 
                 
-                <div class="doc_comments"></div>
+                
+<div class="doc_comments">
+    <div class="comments_block_title">发表评论</div>
+    <div id="vcomments"></div>
+</div>
+
+<link rel="stylesheet" href="https://laurel-he.github.io/css/comments.css" />
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
+<script type="text/javascript">
+    new Valine({
+        el: '#vcomments',
+        appId: 'SWEItAag34n7U5AR3T95AhRG-gzGzoHsz',
+        appKey: 'zAM901B4LKIxfrnTb7ie5e5K',
+        placeholder: '如果你要评论',
+        visitor: 'true',
+    })
+</script>
                 
             </div>
         </div>
