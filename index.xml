@@ -742,7 +742,7 @@
       <pubDate>Tue, 02 Apr 2019 18:27:44 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/database/mysql/mysqlindex/</guid>
-      <description>1 查看查询语句执行效率 语法 explain select … from … [where &amp;hellip;] 示例 explain select * from news; 只查询一行数据： 查询多行数据：执行查询 执行explain: 2 属性详解 属性 作用 id SELECT的查询序列号 select_type SELECT的查询序列号 table 显示这一行的数据</description>
+      <description>1 查看查询语句执行效率 语法 explain select … from … [where &amp;hellip;] 示例 explain select * from news; 只查询一行数据： comment: &amp;lt;&amp;gt; (![const](../../images/mysqlIndex/const.png)) 查询多行数据：执行查询 comment: &amp;lt;&amp;gt; (![towrow](../../images/mysqlIndex/towrow.png)) 执行explain: 2 属性详解 属性 作用 id SELECT的查询序列号 select_type SELECT的查询序列号 table 显示</description>
     </item>
     
     <item>

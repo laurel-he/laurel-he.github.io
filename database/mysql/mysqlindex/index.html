@@ -12,7 +12,7 @@
 	
     
     
-    <meta name="description" content="1 查看查询语句执行效率 语法 explain select … from … [where &amp;hellip;] 示例 explain select * from news; 只查询一行数据： 查询多行数据：执行查询 执行explain: 2 属性详解 属性 作用 id SELECT的查询序列号 select_type SELECT的查询序列号 table 显示这一行的数据" />
+    <meta name="description" content="1 查看查询语句执行效率 语法 explain select … from … [where &amp;hellip;] 示例 explain select * from news; 只查询一行数据： comment: &amp;lt;&amp;gt; (![const](../../images/mysqlIndex/const.png)) 查询多行数据：执行查询 comment: &amp;lt;&amp;gt; (![towrow](../../images/mysqlIndex/towrow.png)) 执行explain: 2 属性详解 属性 作用 id SELECT的查询序列号 select_type SELECT的查询序列号 table 显示" />
     
 
     
@@ -101,13 +101,39 @@
 explain select … from … [where &hellip;]
 <strong>示例</strong></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">explain select * from news;
-</code></pre></div><p><img src="../../images/mysqlIndex/exp.png" alt="explain"></p>
+</code></pre></div>
+
+<div class="fancybox">
+    <a data-fancybox="gallery" href="https://laurel-he.github.io/images/mysqlIndex/exp.png" data-caption="">
+        <img src="https://laurel-he.github.io/images/mysqlIndex/exp.png" />
+    </a>
+</div>
 <p>只查询一行数据：
-<img src="../../images/mysqlIndex/const.png" alt="const"></p>
+
+
+<div class="fancybox">
+    <a data-fancybox="gallery" href="https://laurel-he.github.io/images/mysqlIndex/const.png" data-caption="">
+        <img src="https://laurel-he.github.io/images/mysqlIndex/const.png" />
+    </a>
+</div>
+<a href="" title="![explain](../../images/mysqlIndex/exp.png)">comment</a>: &lt;&gt; (![const](../../images/mysqlIndex/const.png))</p>
 <p>查询多行数据：执行查询
-<img src="../../images/mysqlIndex/towrow.png" alt="towrow">
+
+
+<div class="fancybox">
+    <a data-fancybox="gallery" href="https://laurel-he.github.io/images/mysqlIndex/towrow.png" data-caption="">
+        <img src="https://laurel-he.github.io/images/mysqlIndex/towrow.png" />
+    </a>
+</div>
+<a href="" title="![explain](../../images/mysqlIndex/exp.png)">comment</a>: &lt;&gt; (![towrow](../../images/mysqlIndex/towrow.png))
 执行explain:
-<img src="../../images/mysqlIndex/towrowres.png" alt="towrowres"></p>
+
+
+<div class="fancybox">
+    <a data-fancybox="gallery" href="https://laurel-he.github.io/images/mysqlIndex/towrowres.png" data-caption="">
+        <img src="https://laurel-he.github.io/images/mysqlIndex/towrowres.png" />
+    </a>
+</div></p>
 <h2 id="2-属性详解">2 属性详解</h2>
 <table>
 <thead>
