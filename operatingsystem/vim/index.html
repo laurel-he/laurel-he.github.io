@@ -1,57 +1,78 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="" />
 	
-	<!doctype html>
-<html lang="en">
-  <head>
-    <title>ALEXFINN - vim学习笔记</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+	
+	
+	<title>vim学习笔记 ｜ </title>
+	
+    
+    
+    <meta name="description" content="光标移动 h 或 &amp;lt;- 表示向左 j 下 k 上 l 右
+ctrl &#43; f 屏幕向下移动一页 ctrl &#43; b 向上移动一页 ctrl &#43; d 向下移动半页 ctrl &#43; u 向上移动半页 &amp;lsquo;&#43;&amp;rsquo; 光标移动到非空格符的下一行 &amp;lsquo;-&amp;rsquo; 光标移动到非空格符的 n[space] n表示数字，光标向右移动n个字符 0或[Home] 移动到这一行最开始的字符处 $或[End] 移动到这一行的最后面字符处 H 移动到这个屏幕最上方一行的第一个字符 M 移动到这个屏幕中央一行的第一个字符 L 移动到这个屏幕最下方一行的第一个字符 G 移动到这个文件的最后一行 nG(:n) 移动到这个文件的第n行 gg(1G) 移动到第一行 n[Enter] n为数字，表示向下移动n行
+查找与替换 /word 光标之下寻找名为word的字符串 ?word 光标之上寻找名为word的字符串 n 重复前一个查找的操作 N 反向进行前一个查找操作 :n1,n2s/word1/word2/g n1和n2是数字，在n1和n2行之间查找所有word,替换成word2 :1,$s/word1/word2/g :1,$s/word1/word2/gc c代表confirm,替换前显示确认信息
+删除复制与粘贴 x 向后删除 X 向前删除 nx 向后删除n个字符 dd 删除（剪切）光标所在一整行 ndd 删除向下n行 d1G 删除光标所在到第一行的数据 dG 删除光标所在到最后一行的数据 d$ 删除光标所在处，到该行最后一个字符 d0 yy 复制该行 nyy y1G yG y0 y$ p 将已复制的数据在光标下一行粘贴 P 上一行 J 光标所在行与下一行数据结合成同一行 c 重复删除多个数据(10cj代表向下删除10行)删除后切换到编辑模式 u 回复 ctrl&#43;r 重做 ." />
+    
 
     
-    <link href="/css/milk.min.css" rel="stylesheet">
-    <link href="/css/milk-responsive.min.css" rel="stylesheet">     
-    <link href="/css/style.css" rel="stylesheet" type="text/css" media="all">
-    <link href="/css/fonts.css" rel="stylesheet" type="text/css" media="all">
-    <link rel="shortcut icon" href="/images/alexfinn.ico">
-    <link rel="apple-touch-icon" href="">
-    <link rel="canonical" href="https://laurel-he.github.io/operatingsystem/vim/">
+
+	
+    
+    <link rel="shortcut icon" href="https://laurel-he.github.io/images/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/zozo.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/highlight.css" />
 
     
-    <link href="/rss.xml" type="application/atom+xml" rel="alternate" title="">
+    
+</head>
 
-  </head>
-  <body>
-    <div class="navbar navbar-fixed-top">
-  <div id="navbar-inner">
-    <div id="logo">
-       <a href=""><img src="/images/letter-a.png" width="100px"></img></a>
+<body>
+    <div class="main animate__animated animate__fadeInDown">
+        <div class="nav_container animated fadeInDown">
+    <div class="site_nav" id="site_nav">
+        <ul>
+            
+        </ul>
     </div>
-  </div>
+    <div class="menu_icon">
+        <a id="menu_icon"><i class="ri-menu-line"></i></a>
+    </div>
 </div>
-
-
-<div class="container">
-  <div class="content">
-    <div class="row-fluid">
-      <div class="span12">
-        <div class="posts">
-
-
-	    
-	  <div class="post">
-	    <header class="post-header">
-	        <h1><a href="/operatingsystem/vim/">vim学习笔记</a></h1>
-	        <div class="post-time">February 28 2019</div>
-	    </header>
-	    <div class="post-after">
-	        <div class="tags">
-	            
-	                <a href="https://laurel-he.github.io//tags/%E6%96%87%E6%A1%A3">文档</a>
-	            
-	        </div>
-	    </div>
-	    <hr>
-	    <div class="post content">
-	        <h2 id="光标移动">光标移动</h2>
+        <div class="header animated fadeInDown">
+    <div class="site_title_container">
+        <div class="site_title">
+            <h1>
+                <a href="https://laurel-he.github.io/">
+                    <span></span>
+                </a>
+            </h1>
+        </div>
+        <div class="description">
+            <p class="sub_title"></p>
+            <div class="my_socials">
+                
+                <a href="https://laurel-he.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
+                        class="ri-rss-fill"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="content">
+            <div class="post_page">
+                <div class="post animate__animated animate__fadeInDown">
+                    <div class="post_title post_detail_title">
+                        <h2><a href='/operatingsystem/vim/'>vim学习笔记</a></h2>
+                        <span class="date">2019.02.28</span>
+                    </div>
+                    <div class="post_content markdown"><h2 id="光标移动">光标移动</h2>
 <p>h 或 &lt;- 表示向左
 j 下
 k 上
@@ -179,43 +200,48 @@ iconv -f 原本编码 -t 新编码 filename [-o newfilw]
 1 设置-添加共享文件，选择固定分配
 2 添加挂载：sudo mount -t vboxsf rezb2b /mnt/rezb2b
 3 自启动挂载命令：sudo vim /etc/rc.local 添加命令</p>
-
-	    </div>
-	    
-	<div class="about">
-	<p> 
-     
-    </p>
 </div>
-		<nav id="pagination">
-			<a class="prev" href="https://laurel-he.github.io/post/hotkey/">Prev</a>
-			<a class="next" href="https://laurel-he.github.io/post/hbase_01/">Next</a>
-		</nav>
-	
-		        <footer>
-		        	Built with <a href="https://github.com/spf13/hugo">Hugo</a>
-		        	<p>© Alexander Feller 2018</p>
-		        </footer>
-		    </div>
-		  </div>
-		</div>
-      </div>
+                    <div class="post_footer">
+                        
+                        <div class="meta">
+                            <div class="info">
+                                <span class="field tags">
+                                    <i class="ri-stack-line"></i>
+                                    
+                                    <a href="https://laurel-he.github.io/tags/%E6%96%87%E6%A1%A3/">文档</a>
+                                    
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                
+                <div class="doc_comments"></div>
+                
+            </div>
+        </div>
     </div>
+    <a id="back_to_top" href="#" class="back_to_top"><i class="ri-arrow-up-s-line"></i></a>
+    <footer class="footer">
+    <div class="powered_by">
+        <a href="https://varkai.com">Designed by VarKai,</a>
+        <a href="http://www.gohugo.io/">Proudly published with Hugo</a>
+    </div>
+
+    <div class="footer_slogan">
+        <span></span>
+    </div>
+</footer>
+    <script src="https://laurel-he.github.io/js/jquery-3.5.1.min.js"></script>
+<link href="https://laurel-he.github.io/css/fancybox.min.css" rel="stylesheet">
+<script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
+<script src="https://laurel-he.github.io/js/zozo.js"></script>
+
+
+
+
 </body>
 
-<script type="text/javascript">
-  var _paq = _paq || [];
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u=(("https:" == document.location.protocol) ? "https" : "http") + ":change-me";
-    _paq.push(['setTrackerUrl', u+'piwik.php']);
-    _paq.push(['setSiteId', 4]);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
-    g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-
-
 </html>
-

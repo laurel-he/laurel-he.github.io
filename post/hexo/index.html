@@ -1,55 +1,76 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="" />
 	
-	<!doctype html>
-<html lang="en">
-  <head>
-    <title>ALEXFINN - 在github上使用Hexo 搭建个人博客</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+	
+	
+	<title>在github上使用Hexo 搭建个人博客 ｜ </title>
+	
+    
+    
+    <meta name="description" content="安装 简介 Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 安装前提 node.js git 安装步骤
+npm install -g hexo-cli 建站 hexo init &amp;lt;folder&amp;gt; cd &amp;lt;folder&amp;gt; npm install 创建博客 hexo new [layout] &amp;lt;title&amp;gt; #hexo n hexo generate（或者hexo g:生成静态文件） #hexo g hexo publish [layout] &amp;lt;filename&amp;gt;（发布草稿） hexo server（启动服务器） hexo deploy（或者hexo d:部署） hexo render &amp;lt;file1&amp;gt; [file2] ...（渲染文件） hexo migrate &amp;lt;type&amp;gt;（从其他博客迁移内容） hexo clean（清除缓存文件 (db.json) 和已生成的静态文件 (public)） hexo list（列出网站资料） hexo version（显示 Hexo 版本） #部署使用hexo deploy (hexo d,需要先编译) 添加评论 可以使用gitment或者valine valine评论 gitment评论 注意事项 1 如果添加了CNAME，回调地址需要填绑定的地址 2 如果需要开启评论，除了百度能搜到的步骤以外，还需要本地安装博客评论模块 npm i &amp;ndash;save gitment 再重新hexo g -d一下 3 作者的服务器停掉了，因此需要修改js源码来源： 修改源 （也可以wget将源码下载下来后修改源到自己服务器上）" />
+    
 
     
-    <link href="/css/milk.min.css" rel="stylesheet">
-    <link href="/css/milk-responsive.min.css" rel="stylesheet">     
-    <link href="/css/style.css" rel="stylesheet" type="text/css" media="all">
-    <link href="/css/fonts.css" rel="stylesheet" type="text/css" media="all">
-    <link rel="shortcut icon" href="/images/alexfinn.ico">
-    <link rel="apple-touch-icon" href="">
-    <link rel="canonical" href="https://laurel-he.github.io/post/hexo/">
+
+	
+    
+    <link rel="shortcut icon" href="https://laurel-he.github.io/images/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/zozo.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/highlight.css" />
 
     
-    <link href="/rss.xml" type="application/atom+xml" rel="alternate" title="">
+    
+</head>
 
-  </head>
-  <body>
-    <div class="navbar navbar-fixed-top">
-  <div id="navbar-inner">
-    <div id="logo">
-       <a href=""><img src="/images/letter-a.png" width="100px"></img></a>
+<body>
+    <div class="main animate__animated animate__fadeInDown">
+        <div class="nav_container animated fadeInDown">
+    <div class="site_nav" id="site_nav">
+        <ul>
+            
+        </ul>
     </div>
-  </div>
+    <div class="menu_icon">
+        <a id="menu_icon"><i class="ri-menu-line"></i></a>
+    </div>
 </div>
-
-
-<div class="container">
-  <div class="content">
-    <div class="row-fluid">
-      <div class="span12">
-        <div class="posts">
-
-
-	    
-	  <div class="post">
-	    <header class="post-header">
-	        <h1><a href="/post/hexo/">在github上使用Hexo 搭建个人博客</a></h1>
-	        <div class="post-time">April 1 2019</div>
-	    </header>
-	    <div class="post-after">
-	        <div class="tags">
-	            
-	        </div>
-	    </div>
-	    <hr>
-	    <div class="post content">
-	        <h1 id="安装">安装</h1>
+        <div class="header animated fadeInDown">
+    <div class="site_title_container">
+        <div class="site_title">
+            <h1>
+                <a href="https://laurel-he.github.io/">
+                    <span></span>
+                </a>
+            </h1>
+        </div>
+        <div class="description">
+            <p class="sub_title"></p>
+            <div class="my_socials">
+                
+                <a href="https://laurel-he.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
+                        class="ri-rss-fill"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="content">
+            <div class="post_page">
+                <div class="post animate__animated animate__fadeInDown">
+                    <div class="post_title post_detail_title">
+                        <h2><a href='/post/hexo/'>在github上使用Hexo 搭建个人博客</a></h2>
+                        <span class="date">2019.04.01</span>
+                    </div>
+                    <div class="post_content markdown"><h1 id="安装">安装</h1>
 <p><strong>简介</strong>
 Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。
 <strong>安装前提</strong>
@@ -85,43 +106,37 @@ npm i &ndash;save gitment
 3 作者的服务器停掉了，因此需要修改js源码来源：
 <a href="https://blog.csdn.net/wardseptember/article/details/82828391" title="修改源">修改源</a>
 （也可以wget将源码下载下来后修改源到自己服务器上）</p>
-
-	    </div>
-	    
-	<div class="about">
-	<p> 
-     
-    </p>
 </div>
-		<nav id="pagination">
-			<a class="prev" href="https://laurel-he.github.io/database/mysql/mysqlindex/">Prev</a>
-			<a class="next" href="https://laurel-he.github.io/database/mysql/mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BB%B4%E6%8A%A4/">Next</a>
-		</nav>
-	
-		        <footer>
-		        	Built with <a href="https://github.com/spf13/hugo">Hugo</a>
-		        	<p>© Alexander Feller 2018</p>
-		        </footer>
-		    </div>
-		  </div>
-		</div>
-      </div>
+                    <div class="post_footer">
+                        
+                    </div>
+                </div>
+                
+                
+                <div class="doc_comments"></div>
+                
+            </div>
+        </div>
     </div>
+    <a id="back_to_top" href="#" class="back_to_top"><i class="ri-arrow-up-s-line"></i></a>
+    <footer class="footer">
+    <div class="powered_by">
+        <a href="https://varkai.com">Designed by VarKai,</a>
+        <a href="http://www.gohugo.io/">Proudly published with Hugo</a>
+    </div>
+
+    <div class="footer_slogan">
+        <span></span>
+    </div>
+</footer>
+    <script src="https://laurel-he.github.io/js/jquery-3.5.1.min.js"></script>
+<link href="https://laurel-he.github.io/css/fancybox.min.css" rel="stylesheet">
+<script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
+<script src="https://laurel-he.github.io/js/zozo.js"></script>
+
+
+
+
 </body>
 
-<script type="text/javascript">
-  var _paq = _paq || [];
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u=(("https:" == document.location.protocol) ? "https" : "http") + ":change-me";
-    _paq.push(['setTrackerUrl', u+'piwik.php']);
-    _paq.push(['setSiteId', 4]);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
-    g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-
-
 </html>
-

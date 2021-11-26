@@ -1,57 +1,76 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="" />
 	
-	<!doctype html>
-<html lang="en">
-  <head>
-    <title>ALEXFINN - 计算相关</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+	
+	
+	<title>计算相关 ｜ </title>
+	
+    
+    
+    <meta name="description" content="1 计算矩形是否相交 描述 给定两个矩形的左上角起始点坐标和矩形的宽，高，计算这两个矩形是否相交 分析 1 矩形1左上角坐标p1,右下角坐标p2,矩形2左上角坐标p3,右下角坐标p4 2 M点坐标为P1与P3点在X方向较大值与Y方向较大值的交点 3 N点坐标为P2与P4点在X方向较小值与Y方向较小值的交点 4 如果M点的X坐标和Y坐标值均比N点相应的X坐标和Y坐标值小，亦即M和N可以分别构成一个矩形的左上角点和右上角点，则两矩形相交；其余情况则不相交 代码
+&amp;lt;?php function checkRectInterSect($rect1, $rect2) { $x1 = $rect1[&amp;#39;x&amp;#39;]; $w1 = $rect1[&amp;#39;w&amp;#39;]; $y1 = $rect1[&amp;#39;y&amp;#39;]; $h1 = $rect1[&amp;#39;h&amp;#39;]; $x2 = $rect2[&amp;#39;x&amp;#39;]; $w2 = $rect2[&amp;#39;w&amp;#39;]; $y2 = $rect2[&amp;#39;y&amp;#39;]; $h2 = $rect2[&amp;#39;h&amp;#39;]; $p1 = [$x1, $y1]; $p2 = [$x1 &#43; $w1, $y1 &#43; $h1]; $p3 = [$x2, $y2]; $p4 = [$x2 &#43; $w2, $y2 &#43; $h2]; $M = [max($p1[0], $p3[0]), max($p1[1], $p1[1])]; $N = [min($p2[0], $p4[0]), min($p2[1], $p4[1])]; if ($M[0] &amp;lt; $N[0] &amp;amp;&amp;amp; $M[1] &amp;lt; $N[1]) { return true; } else { return false; } } ?" />
+    
 
     
-    <link href="/css/milk.min.css" rel="stylesheet">
-    <link href="/css/milk-responsive.min.css" rel="stylesheet">     
-    <link href="/css/style.css" rel="stylesheet" type="text/css" media="all">
-    <link href="/css/fonts.css" rel="stylesheet" type="text/css" media="all">
-    <link rel="shortcut icon" href="/images/alexfinn.ico">
-    <link rel="apple-touch-icon" href="">
-    <link rel="canonical" href="https://laurel-he.github.io/post/codecollect/">
+
+	
+    
+    <link rel="shortcut icon" href="https://laurel-he.github.io/images/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/zozo.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/highlight.css" />
 
     
-    <link href="/rss.xml" type="application/atom+xml" rel="alternate" title="">
+    
+</head>
 
-  </head>
-  <body>
-    <div class="navbar navbar-fixed-top">
-  <div id="navbar-inner">
-    <div id="logo">
-       <a href=""><img src="/images/letter-a.png" width="100px"></img></a>
+<body>
+    <div class="main animate__animated animate__fadeInDown">
+        <div class="nav_container animated fadeInDown">
+    <div class="site_nav" id="site_nav">
+        <ul>
+            
+        </ul>
     </div>
-  </div>
+    <div class="menu_icon">
+        <a id="menu_icon"><i class="ri-menu-line"></i></a>
+    </div>
 </div>
-
-
-<div class="container">
-  <div class="content">
-    <div class="row-fluid">
-      <div class="span12">
-        <div class="posts">
-
-
-	    
-	  <div class="post">
-	    <header class="post-header">
-	        <h1><a href="/post/codecollect/">计算相关</a></h1>
-	        <div class="post-time">February 25 2020</div>
-	    </header>
-	    <div class="post-after">
-	        <div class="tags">
-	            
-	                <a href="https://laurel-he.github.io//tags/%E5%AD%A6%E4%B9%A0">学习</a>
-	            
-	        </div>
-	    </div>
-	    <hr>
-	    <div class="post content">
-	        <h4 id="1-计算矩形是否相交">1 计算矩形是否相交</h4>
+        <div class="header animated fadeInDown">
+    <div class="site_title_container">
+        <div class="site_title">
+            <h1>
+                <a href="https://laurel-he.github.io/">
+                    <span></span>
+                </a>
+            </h1>
+        </div>
+        <div class="description">
+            <p class="sub_title"></p>
+            <div class="my_socials">
+                
+                <a href="https://laurel-he.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
+                        class="ri-rss-fill"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="content">
+            <div class="post_page">
+                <div class="post animate__animated animate__fadeInDown">
+                    <div class="post_title post_detail_title">
+                        <h2><a href='/post/codecollect/'>计算相关</a></h2>
+                        <span class="date">2020.02.25</span>
+                    </div>
+                    <div class="post_content markdown"><h4 id="1-计算矩形是否相交">1 计算矩形是否相交</h4>
 <p><strong>描述</strong>
 给定两个矩形的左上角起始点坐标和矩形的宽，高，计算这两个矩形是否相交 <br>
 <strong>分析</strong>
@@ -112,43 +131,48 @@
         <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
     }
 <span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div>
-	    </div>
-	    
-	<div class="about">
-	<p> 
-     
-    </p>
-</div>
-		<nav id="pagination">
-			<a class="prev" href="https://laurel-he.github.io/operatingsystem/linuxbase/">Prev</a>
-			<a class="next" href="https://laurel-he.github.io/post/codecollect2/">Next</a>
-		</nav>
-	
-		        <footer>
-		        	Built with <a href="https://github.com/spf13/hugo">Hugo</a>
-		        	<p>© Alexander Feller 2018</p>
-		        </footer>
-		    </div>
-		  </div>
-		</div>
-      </div>
+</span></code></pre></div></div>
+                    <div class="post_footer">
+                        
+                        <div class="meta">
+                            <div class="info">
+                                <span class="field tags">
+                                    <i class="ri-stack-line"></i>
+                                    
+                                    <a href="https://laurel-he.github.io/tags/%E5%AD%A6%E4%B9%A0/">学习</a>
+                                    
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                
+                <div class="doc_comments"></div>
+                
+            </div>
+        </div>
     </div>
+    <a id="back_to_top" href="#" class="back_to_top"><i class="ri-arrow-up-s-line"></i></a>
+    <footer class="footer">
+    <div class="powered_by">
+        <a href="https://varkai.com">Designed by VarKai,</a>
+        <a href="http://www.gohugo.io/">Proudly published with Hugo</a>
+    </div>
+
+    <div class="footer_slogan">
+        <span></span>
+    </div>
+</footer>
+    <script src="https://laurel-he.github.io/js/jquery-3.5.1.min.js"></script>
+<link href="https://laurel-he.github.io/css/fancybox.min.css" rel="stylesheet">
+<script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
+<script src="https://laurel-he.github.io/js/zozo.js"></script>
+
+
+
+
 </body>
 
-<script type="text/javascript">
-  var _paq = _paq || [];
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u=(("https:" == document.location.protocol) ? "https" : "http") + ":change-me";
-    _paq.push(['setTrackerUrl', u+'piwik.php']);
-    _paq.push(['setSiteId', 4]);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
-    g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-
-
 </html>
-

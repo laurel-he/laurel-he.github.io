@@ -1,57 +1,77 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="" />
 	
-	<!doctype html>
-<html lang="en">
-  <head>
-    <title>ALEXFINN - 操作系统（3）</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+	
+	
+	<title>操作系统（3） ｜ </title>
+	
+    
+    
+    <meta name="description" content="Linux实现模拟多进程并发执行 示例：
+#!/bin/bash for((i=0;i&amp;lt;5;i&#43;&#43;)) do { sleep 1; echo &amp;#34;$i--&amp;#34;&amp;gt;&amp;gt;aa &amp;amp;&amp;amp; echo &amp;#34;done&amp;#34; }&amp;amp; done wait cat aa | wc -l rm aa 解析 &amp;amp;代表并发执行，wait等待前面执行完了再执行，例如此示例中，如果没有wait很可能还没创建aa文件
+Linux下的中断 #include &amp;lt;stdlib.h&amp;gt;#include &amp;lt;stdio.h&amp;gt;#include &amp;lt;unistd.h&amp;gt; int main(void) { pid_t pid; //pid  printf(&amp;#34;Before fork... &amp;#34;); switch( pid = fork()) { case -1: printf(&amp;#34;fork call fail &amp;#34;); fflush(stdout); exit(1); case 0: printf(&amp;#34;child call &amp;#34;); printf(&amp;#34;the pid of child is %d &amp;#34;, getpid()); printf(&amp;#34;the pid of child&amp;#39;s parent is %d &amp;#34;, getppid()); printf(&amp;#34;child exiting." />
+    
 
     
-    <link href="/css/milk.min.css" rel="stylesheet">
-    <link href="/css/milk-responsive.min.css" rel="stylesheet">     
-    <link href="/css/style.css" rel="stylesheet" type="text/css" media="all">
-    <link href="/css/fonts.css" rel="stylesheet" type="text/css" media="all">
-    <link rel="shortcut icon" href="/images/alexfinn.ico">
-    <link rel="apple-touch-icon" href="">
-    <link rel="canonical" href="https://laurel-he.github.io/operatingsystem/opratingsystem_03/">
+
+	
+    
+    <link rel="shortcut icon" href="https://laurel-he.github.io/images/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/zozo.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/highlight.css" />
 
     
-    <link href="/rss.xml" type="application/atom+xml" rel="alternate" title="">
+    
+</head>
 
-  </head>
-  <body>
-    <div class="navbar navbar-fixed-top">
-  <div id="navbar-inner">
-    <div id="logo">
-       <a href=""><img src="/images/letter-a.png" width="100px"></img></a>
+<body>
+    <div class="main animate__animated animate__fadeInDown">
+        <div class="nav_container animated fadeInDown">
+    <div class="site_nav" id="site_nav">
+        <ul>
+            
+        </ul>
     </div>
-  </div>
+    <div class="menu_icon">
+        <a id="menu_icon"><i class="ri-menu-line"></i></a>
+    </div>
 </div>
-
-
-<div class="container">
-  <div class="content">
-    <div class="row-fluid">
-      <div class="span12">
-        <div class="posts">
-
-
-	    
-	  <div class="post">
-	    <header class="post-header">
-	        <h1><a href="/operatingsystem/opratingsystem_03/">操作系统（3）</a></h1>
-	        <div class="post-time">July 20 2021</div>
-	    </header>
-	    <div class="post-after">
-	        <div class="tags">
-	            
-	                <a href="https://laurel-he.github.io//tags/%E5%AD%A6%E4%B9%A0">学习</a>
-	            
-	        </div>
-	    </div>
-	    <hr>
-	    <div class="post content">
-	        <h1 id="linux实现模拟多进程并发执行">Linux实现模拟多进程并发执行</h1>
+        <div class="header animated fadeInDown">
+    <div class="site_title_container">
+        <div class="site_title">
+            <h1>
+                <a href="https://laurel-he.github.io/">
+                    <span></span>
+                </a>
+            </h1>
+        </div>
+        <div class="description">
+            <p class="sub_title"></p>
+            <div class="my_socials">
+                
+                <a href="https://laurel-he.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
+                        class="ri-rss-fill"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="content">
+            <div class="post_page">
+                <div class="post animate__animated animate__fadeInDown">
+                    <div class="post_title post_detail_title">
+                        <h2><a href='/operatingsystem/opratingsystem_03/'>操作系统（3）</a></h2>
+                        <span class="date">2021.07.20</span>
+                    </div>
+                    <div class="post_content markdown"><h1 id="linux实现模拟多进程并发执行">Linux实现模拟多进程并发执行</h1>
 <p>示例：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span><span style="color:#f92672">((</span>i<span style="color:#f92672">=</span>0;i&lt;5;i++<span style="color:#f92672">))</span>
@@ -107,43 +127,48 @@ rm aa
 
 }
 
-</code></pre></div>
-	    </div>
-	    
-	<div class="about">
-	<p> 
-     
-    </p>
-</div>
-		<nav id="pagination">
-			<a class="prev" href="https://laurel-he.github.io/operatingsystem/opratingsystem_02/">Prev</a>
-			<a class="next" href="https://laurel-he.github.io/operatingsystem/singhuaopsys_01/">Next</a>
-		</nav>
-	
-		        <footer>
-		        	Built with <a href="https://github.com/spf13/hugo">Hugo</a>
-		        	<p>© Alexander Feller 2018</p>
-		        </footer>
-		    </div>
-		  </div>
-		</div>
-      </div>
+</code></pre></div></div>
+                    <div class="post_footer">
+                        
+                        <div class="meta">
+                            <div class="info">
+                                <span class="field tags">
+                                    <i class="ri-stack-line"></i>
+                                    
+                                    <a href="https://laurel-he.github.io/tags/%E5%AD%A6%E4%B9%A0/">学习</a>
+                                    
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                
+                <div class="doc_comments"></div>
+                
+            </div>
+        </div>
     </div>
+    <a id="back_to_top" href="#" class="back_to_top"><i class="ri-arrow-up-s-line"></i></a>
+    <footer class="footer">
+    <div class="powered_by">
+        <a href="https://varkai.com">Designed by VarKai,</a>
+        <a href="http://www.gohugo.io/">Proudly published with Hugo</a>
+    </div>
+
+    <div class="footer_slogan">
+        <span></span>
+    </div>
+</footer>
+    <script src="https://laurel-he.github.io/js/jquery-3.5.1.min.js"></script>
+<link href="https://laurel-he.github.io/css/fancybox.min.css" rel="stylesheet">
+<script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
+<script src="https://laurel-he.github.io/js/zozo.js"></script>
+
+
+
+
 </body>
 
-<script type="text/javascript">
-  var _paq = _paq || [];
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u=(("https:" == document.location.protocol) ? "https" : "http") + ":change-me";
-    _paq.push(['setTrackerUrl', u+'piwik.php']);
-    _paq.push(['setSiteId', 4]);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
-    g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-
-
 </html>
-

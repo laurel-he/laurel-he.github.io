@@ -1,57 +1,86 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="" />
 	
-	<!doctype html>
-<html lang="en">
-  <head>
-    <title>ALEXFINN - 设计模式基础</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+	
+	
+	<title>设计模式基础 ｜ </title>
+	
+    
+    
+    <meta name="description" content="本文参考了书籍《大话设计模式》/文章从招式与内功谈起——设计模式概述 以及系列文章PHP 设计模式系列
+定义 在软件工程中，设计模式（Design Pattern）是对软件设计中普遍存在（反复出现）的各种问题，所提出的解决方案。 这个术语是由埃里希·伽玛（Erich Gamma）等人在1990年代从建筑设计领域引入到计算机科学的。 设计模式并不直接用来完成代码的编写，而是描述在各种不同情况下，要怎么解决问题的一种方案。 面向对象设计模式通常以类或对象来描述其中的关系和相互作用，但不涉及用来完成应用程序的特定类或对象。 设计模式能使不稳定依赖于相对稳定、具体依赖于相对抽象，避免会引起麻烦的紧耦合，以增强软件设计面对并适应变化的能力。
+并非所有的软件模式都是设计模式，设计模式特指软件“设计”层次上的问题。还有其它非设计模式的模式，如架构模式。同时，算法不能算是一种设计模式，因为算法主要是用来解决计算上的问题，而非设计上的问题。
+设计模式的作用 (1)设计模式经过多年的使用和实践，包含了大量成功的，可维护可复用的设计方案，在很多情况下，设计模式可以提高开发效率，节约时间 (2)设计模式跨语言、跨平台、跨应用、跨国界，提供了通用的词汇和使用方式，节约交流时间 (3)大部分设计模式都兼顾了系统的可重用性和扩展性，这使很多系统可以重用，减少代码重复 (4)合理使用设计模式有助于别人理解自己的代码 (5)有助于更为深刻地理解面对对象编程
+如何掌握设计模式 a.这个设计模式的意图是什么 b.它要解决一个什么问题 c.什么时候可以使用它 d.它是如何解决问题的 e.掌握它的结构图 f.记住它的关键代码 g.能够想到至少两个它的应用实例，一个生活中的，一个软件中的 h.这个模式的优缺点是什么 i.在使用时要注意什么
+注意事项 （1）最好的掌握设计模式的方法是使用它们 （2）千万不要滥用模式
+设计模式分类 设计模式可以分为三大类，创建型，结构型，行为型
+创建型 在软件工程中，创建型设计模式是处理对象创建机制的设计模式，试图以适当的方式来创建对象。 对象创建的基本形式可能会带来设计问题，亦或增加了设计的复杂度。 创建型设计模式通过控制这个对象的创建方式来解决此问题。 在软件工程中，创建型设计模式用于处理对象的实例化：
+常用创建型模式 （1）抽象工厂模式（Abstract Factory） （2）建造者模式（Builder） （3）工厂方法模式（Factory Method） （4）多例模式（Multiton） （5）对象池模式（Pool） （6）原型模式（Prototype） （7）简单工厂模式（Simple Factory） （8）单例模式（Singleton） （9）静态工厂模式（Static Factory）
+结构型 在软件工程中，结构型设计模式是通过识别实体之间关系来简化设计的设计模式。 结构型设计模式用于处理类和对象的组合
+常用结构型模式 （1）适配器模式（Adapter） （2）桥梁模式（Bridge） （3）组合模式（Composite） （4）数据映射模式（Data Mapper） （5）装饰模式（Decorator） （6）依赖注入模式（Dependency Injection） （7）门面模式（Facade） （8）流接口模式（Fluent Interface） （9）代理模式（Proxy） （10）注册模式（Registry）
+行为型 在软件工程中，行为设计模式是识别对象之间的通用通信模式并实现这些模式的设计模式。 通过这样做，这些模式增加了执行此通信的灵活性。 行为型设计模式用于处理类的对象间通信：" />
+    
 
     
-    <link href="/css/milk.min.css" rel="stylesheet">
-    <link href="/css/milk-responsive.min.css" rel="stylesheet">     
-    <link href="/css/style.css" rel="stylesheet" type="text/css" media="all">
-    <link href="/css/fonts.css" rel="stylesheet" type="text/css" media="all">
-    <link rel="shortcut icon" href="/images/alexfinn.ico">
-    <link rel="apple-touch-icon" href="">
-    <link rel="canonical" href="https://laurel-he.github.io/designpattern/others/basic/">
+
+	
+    
+    <link rel="shortcut icon" href="https://laurel-he.github.io/images/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/zozo.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/highlight.css" />
 
     
-    <link href="/rss.xml" type="application/atom+xml" rel="alternate" title="">
+    
+</head>
 
-  </head>
-  <body>
-    <div class="navbar navbar-fixed-top">
-  <div id="navbar-inner">
-    <div id="logo">
-       <a href=""><img src="/images/letter-a.png" width="100px"></img></a>
+<body>
+    <div class="main animate__animated animate__fadeInDown">
+        <div class="nav_container animated fadeInDown">
+    <div class="site_nav" id="site_nav">
+        <ul>
+            
+        </ul>
     </div>
-  </div>
+    <div class="menu_icon">
+        <a id="menu_icon"><i class="ri-menu-line"></i></a>
+    </div>
 </div>
-
-
-<div class="container">
-  <div class="content">
-    <div class="row-fluid">
-      <div class="span12">
-        <div class="posts">
-
-
-	    
-	  <div class="post">
-	    <header class="post-header">
-	        <h1><a href="/designpattern/others/basic/">设计模式基础</a></h1>
-	        <div class="post-time">July 7 2019</div>
-	    </header>
-	    <div class="post-after">
-	        <div class="tags">
-	            
-	                <a href="https://laurel-he.github.io//tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F">设计模式</a>
-	            
-	        </div>
-	    </div>
-	    <hr>
-	    <div class="post content">
-	        <p>本文参考了书籍《大话设计模式》/文章<a href="https://blog.csdn.net/lovelion/article/details/7420866">从招式与内功谈起——设计模式概述</a>
+        <div class="header animated fadeInDown">
+    <div class="site_title_container">
+        <div class="site_title">
+            <h1>
+                <a href="https://laurel-he.github.io/">
+                    <span></span>
+                </a>
+            </h1>
+        </div>
+        <div class="description">
+            <p class="sub_title"></p>
+            <div class="my_socials">
+                
+                <a href="https://laurel-he.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
+                        class="ri-rss-fill"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="content">
+            <div class="post_page">
+                <div class="post animate__animated animate__fadeInDown">
+                    <div class="post_title post_detail_title">
+                        <h2><a href='/designpattern/others/basic/'>设计模式基础</a></h2>
+                        <span class="date">2019.07.07</span>
+                    </div>
+                    <div class="post_content markdown"><p>本文参考了书籍《大话设计模式》/文章<a href="https://blog.csdn.net/lovelion/article/details/7420866">从招式与内功谈起——设计模式概述</a>
 以及系列文章<a href="https://laravelacademy.org/books/php-design-pattern">PHP 设计模式系列</a></p>
 <h1 id="定义">定义</h1>
 <p>在软件工程中，设计模式（Design Pattern）是对软件设计中普遍存在（反复出现）的各种问题，所提出的解决方案。
@@ -131,43 +160,48 @@ i.在使用时要注意什么</p>
 <p>（1）委托模式（Delegation） <br>
 （2）服务定位器模式（Service Locator） <br>
 （3）资源库模式（Repository）</p>
-
-	    </div>
-	    
-	<div class="about">
-	<p> 
-     
-    </p>
 </div>
-		<nav id="pagination">
-			<a class="prev" href="https://laurel-he.github.io/frontend/react/react_01/">Prev</a>
-			<a class="next" href="https://laurel-he.github.io/private/fit01/">Next</a>
-		</nav>
-	
-		        <footer>
-		        	Built with <a href="https://github.com/spf13/hugo">Hugo</a>
-		        	<p>© Alexander Feller 2018</p>
-		        </footer>
-		    </div>
-		  </div>
-		</div>
-      </div>
+                    <div class="post_footer">
+                        
+                        <div class="meta">
+                            <div class="info">
+                                <span class="field tags">
+                                    <i class="ri-stack-line"></i>
+                                    
+                                    <a href="https://laurel-he.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</a>
+                                    
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                
+                <div class="doc_comments"></div>
+                
+            </div>
+        </div>
     </div>
+    <a id="back_to_top" href="#" class="back_to_top"><i class="ri-arrow-up-s-line"></i></a>
+    <footer class="footer">
+    <div class="powered_by">
+        <a href="https://varkai.com">Designed by VarKai,</a>
+        <a href="http://www.gohugo.io/">Proudly published with Hugo</a>
+    </div>
+
+    <div class="footer_slogan">
+        <span></span>
+    </div>
+</footer>
+    <script src="https://laurel-he.github.io/js/jquery-3.5.1.min.js"></script>
+<link href="https://laurel-he.github.io/css/fancybox.min.css" rel="stylesheet">
+<script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
+<script src="https://laurel-he.github.io/js/zozo.js"></script>
+
+
+
+
 </body>
 
-<script type="text/javascript">
-  var _paq = _paq || [];
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u=(("https:" == document.location.protocol) ? "https" : "http") + ":change-me";
-    _paq.push(['setTrackerUrl', u+'piwik.php']);
-    _paq.push(['setSiteId', 4]);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
-    g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-
-
 </html>
-

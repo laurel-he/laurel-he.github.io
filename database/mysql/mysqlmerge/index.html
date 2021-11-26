@@ -1,55 +1,95 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="" />
 	
-	<!doctype html>
-<html lang="en">
-  <head>
-    <title>ALEXFINN - Mysql分库分表</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+	
+	
+	<title>Mysql分库分表 ｜ </title>
+	
+    
+    
+    <meta name="description" content="本文参考MySQL：互联网公司常用分库分表方案汇总！
+水平分割和垂直分割 把表数据分成多少多少条，叫做水平分割 表的字段很长，把部分大字段分到另外一个表中，叫垂直分割
+瓶颈 IO瓶颈 第一种：磁盘读IO瓶颈，热点数据太多，数据库缓存放不下，每次查询时会产生大量的IO，降低查询速度 -&amp;gt; 分库和垂直分表。 第二种：网络IO瓶颈，请求的数据太多，网络带宽不够 -&amp;gt; 分库。
+CPU瓶颈 第一种：SQL问题，如SQL中包含join，group by，order by，非索引字段条件查询等，增加CPU运算的操作 -&amp;gt; SQL优化，建立合适的索引，在业务Service层进行业务计算。 第二种：单表数据量太大，查询时扫描的行太多，SQL效率低，CPU率先出现瓶颈 -&amp;gt; 水平分表。
+分库分表 水平分库 概念 以字段为依据，按照一定策略（hash、range等），将一个库中的数据拆分到多个库中。
+示例 假设是电商场景，根据不同的公司，分成不同的表
+结果 每个库的结构都一样； 每个库的数据都不一样，没有交集； 所有库的并集是全量数据；
+场景 系统绝对并发量上来了，分表难以根本上解决问题，并且还没有明显的业务归属来垂直分库。
+分析 库多了，io和cpu的压力自然可以成倍缓解。
+水平分表 概念 以字段为依据，按照一定策略（hash、range等），将一个表中的数据拆分到多个表中。
+示例 假设数据库中存在一个字段：学号:stu_num，可以按照尾号为0-9分成9个库
+结果 每个表的结构都一样； 每个表的数据都不一样，没有交集； 所有表的并集是全量数据；
+场景 系统绝对并发量并没有上来，只是单表的数据量太多，影响了SQL效率，加重了CPU负担，以至于成为瓶颈。
+分析 表的数据量少了，单次SQL执行效率高，自然减轻了CPU的负担。
+垂直分库 概念 以表为依据，按照业务归属不同，将不同的表拆分到不同的库中。
+示例 电商包括订单，用户，物流等模块，前期都放在同一个库里，后期不同的模块使用不同的库
+结果 每个库的结构都不一样； 每个库的数据也不一样，没有交集； 所有库的并集是全量数据；
+场景 系统绝对并发量上来了，并且可以抽象出单独的业务模块。
+分析 到这一步，基本上就可以服务化了。 例如，随着业务的发展一些公用的配置表、字典表等越来越多，这时可以将这些表拆到单独的库中，甚至可以服务化。 再有，随着业务的发展孵化出了一套业务模式，这时可以将相关的表拆到单独的库中，甚至可以服务化。
+垂直分表 概念 以字段为依据，按照字段的活跃性，将表中字段拆到不同的表（主表和扩展表）中。
+结果 每个表的结构都不一样； 每个表的数据也不一样，一般来说，每个表的字段至少有一列交集，一般是主键，用于关联数据； 所有表的并集是全量数据；" />
+    
 
     
-    <link href="/css/milk.min.css" rel="stylesheet">
-    <link href="/css/milk-responsive.min.css" rel="stylesheet">     
-    <link href="/css/style.css" rel="stylesheet" type="text/css" media="all">
-    <link href="/css/fonts.css" rel="stylesheet" type="text/css" media="all">
-    <link rel="shortcut icon" href="/images/alexfinn.ico">
-    <link rel="apple-touch-icon" href="">
-    <link rel="canonical" href="https://laurel-he.github.io/database/mysql/mysqlmerge/">
+
+	
+    
+    <link rel="shortcut icon" href="https://laurel-he.github.io/images/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/zozo.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/highlight.css" />
 
     
-    <link href="/rss.xml" type="application/atom+xml" rel="alternate" title="">
+    
+</head>
 
-  </head>
-  <body>
-    <div class="navbar navbar-fixed-top">
-  <div id="navbar-inner">
-    <div id="logo">
-       <a href=""><img src="/images/letter-a.png" width="100px"></img></a>
+<body>
+    <div class="main animate__animated animate__fadeInDown">
+        <div class="nav_container animated fadeInDown">
+    <div class="site_nav" id="site_nav">
+        <ul>
+            
+        </ul>
     </div>
-  </div>
+    <div class="menu_icon">
+        <a id="menu_icon"><i class="ri-menu-line"></i></a>
+    </div>
 </div>
-
-
-<div class="container">
-  <div class="content">
-    <div class="row-fluid">
-      <div class="span12">
-        <div class="posts">
-
-
-	    
-	  <div class="post">
-	    <header class="post-header">
-	        <h1><a href="/database/mysql/mysqlmerge/">Mysql分库分表</a></h1>
-	        <div class="post-time">April 8 2019</div>
-	    </header>
-	    <div class="post-after">
-	        <div class="tags">
-	            
-	        </div>
-	    </div>
-	    <hr>
-	    <div class="post content">
-	        <p>本文参考<a href="https://zhuanlan.zhihu.com/p/137368446">MySQL：互联网公司常用分库分表方案汇总！</a></p>
+        <div class="header animated fadeInDown">
+    <div class="site_title_container">
+        <div class="site_title">
+            <h1>
+                <a href="https://laurel-he.github.io/">
+                    <span></span>
+                </a>
+            </h1>
+        </div>
+        <div class="description">
+            <p class="sub_title"></p>
+            <div class="my_socials">
+                
+                <a href="https://laurel-he.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
+                        class="ri-rss-fill"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="content">
+            <div class="post_page">
+                <div class="post animate__animated animate__fadeInDown">
+                    <div class="post_title post_detail_title">
+                        <h2><a href='/database/mysql/mysqlmerge/'>Mysql分库分表</a></h2>
+                        <span class="date">2019.04.08</span>
+                    </div>
+                    <div class="post_content markdown"><p>本文参考<a href="https://zhuanlan.zhihu.com/p/137368446">MySQL：互联网公司常用分库分表方案汇总！</a></p>
 <h1 id="水平分割和垂直分割">水平分割和垂直分割</h1>
 <p>把表数据分成多少多少条，叫做水平分割 <br>
 表的字段很长，把部分大字段分到另外一个表中，叫垂直分割</p>
@@ -119,43 +159,37 @@
 但记住，千万别用join，因为join不仅会增加CPU负担并且会讲两个表耦合在一起（必须在一个数据库实例上）。
 关联数据，应该在业务Service层做文章，分别获取主表和扩展表数据然后用关联字段关联得到全部数据。</p>
 <h1 id="分布式事务">分布式事务</h1>
-
-	    </div>
-	    
-	<div class="about">
-	<p> 
-     
-    </p>
 </div>
-		<nav id="pagination">
-			<a class="prev" href="https://laurel-he.github.io/post/crontab/">Prev</a>
-			<a class="next" href="https://laurel-he.github.io/php/phpalg/">Next</a>
-		</nav>
-	
-		        <footer>
-		        	Built with <a href="https://github.com/spf13/hugo">Hugo</a>
-		        	<p>© Alexander Feller 2018</p>
-		        </footer>
-		    </div>
-		  </div>
-		</div>
-      </div>
+                    <div class="post_footer">
+                        
+                    </div>
+                </div>
+                
+                
+                <div class="doc_comments"></div>
+                
+            </div>
+        </div>
     </div>
+    <a id="back_to_top" href="#" class="back_to_top"><i class="ri-arrow-up-s-line"></i></a>
+    <footer class="footer">
+    <div class="powered_by">
+        <a href="https://varkai.com">Designed by VarKai,</a>
+        <a href="http://www.gohugo.io/">Proudly published with Hugo</a>
+    </div>
+
+    <div class="footer_slogan">
+        <span></span>
+    </div>
+</footer>
+    <script src="https://laurel-he.github.io/js/jquery-3.5.1.min.js"></script>
+<link href="https://laurel-he.github.io/css/fancybox.min.css" rel="stylesheet">
+<script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
+<script src="https://laurel-he.github.io/js/zozo.js"></script>
+
+
+
+
 </body>
 
-<script type="text/javascript">
-  var _paq = _paq || [];
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u=(("https:" == document.location.protocol) ? "https" : "http") + ":change-me";
-    _paq.push(['setTrackerUrl', u+'piwik.php']);
-    _paq.push(['setSiteId', 4]);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
-    g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-
-
 </html>
-

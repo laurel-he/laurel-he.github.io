@@ -1,55 +1,82 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="" />
 	
-	<!doctype html>
-<html lang="en">
-  <head>
-    <title>ALEXFINN - </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+	
+	
+	<title> ｜ </title>
+	
+    
+    
+    <meta name="description" content="title: docker使用心得 date: 2019-04-24 21:03:10 tags:
+ 使用心得 categories: docker   准备工作 1 前提条件 ubuntu内核版本高于 3.10 uname -r 
+2 安装docker 本文是基于ubuntu的，基于centos安装路径博客如下： centos windows
+wget -qO- https://get.docker.com/ | sh 当要以非root用户可以直接运行docker时，需要执行 sudo usermod -aG docker runoob 命令，然后重新登陆 启动docker服务
+sudo service docker start 测试运行hello world
+docker run hello-world 镜像加速 路径： /etc/docker/daemon.json 配置文件中加入(不存在则创建，我本地不存在此文件)：
+{ &amp;quot;registry-mirrors&amp;quot;: [&amp;quot;http://hub-mirror.c.163.com&amp;quot;] } 基础知识 hello world
+docker run ubuntu:15.10 /bin/echo &amp;quot;Hello world&amp;quot; (验证,echo是可以直接echo的，不必写/bin/echo) 参数解析 docker:docker的二进制执行文件 run:与前面docker组合来运行一个容器 ubuntu:15.10 : 指定要运行的镜像，Docker首先从本地主机上查找镜像是否存在，如果不存在，Docker 就会从镜像仓库 Docker Hub 下载公共镜像。 /bin/echo &amp;ldquo;Hello world&amp;rdquo;: 在启动的容器里执行的命令 运行交互式的容器 通过docker的两个参数 -i -t，让docker运行的容器实现&amp;quot;对话&amp;quot;的能力" />
+    
 
     
-    <link href="/css/milk.min.css" rel="stylesheet">
-    <link href="/css/milk-responsive.min.css" rel="stylesheet">     
-    <link href="/css/style.css" rel="stylesheet" type="text/css" media="all">
-    <link href="/css/fonts.css" rel="stylesheet" type="text/css" media="all">
-    <link rel="shortcut icon" href="/images/alexfinn.ico">
-    <link rel="apple-touch-icon" href="">
-    <link rel="canonical" href="https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/docker/docker/">
+
+	
+    
+    <link rel="shortcut icon" href="https://laurel-he.github.io/images/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/zozo.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/highlight.css" />
 
     
-    <link href="/rss.xml" type="application/atom+xml" rel="alternate" title="">
+    
+</head>
 
-  </head>
-  <body>
-    <div class="navbar navbar-fixed-top">
-  <div id="navbar-inner">
-    <div id="logo">
-       <a href=""><img src="/images/letter-a.png" width="100px"></img></a>
+<body>
+    <div class="main animate__animated animate__fadeInDown">
+        <div class="nav_container animated fadeInDown">
+    <div class="site_nav" id="site_nav">
+        <ul>
+            
+        </ul>
     </div>
-  </div>
+    <div class="menu_icon">
+        <a id="menu_icon"><i class="ri-menu-line"></i></a>
+    </div>
 </div>
-
-
-<div class="container">
-  <div class="content">
-    <div class="row-fluid">
-      <div class="span12">
-        <div class="posts">
-
-
-	    
-	  <div class="post">
-	    <header class="post-header">
-	        <h1><a href="/%E4%BA%91%E5%8E%9F%E7%94%9F/docker/docker/"></a></h1>
-	        <div class="post-time">January 1 0001</div>
-	    </header>
-	    <div class="post-after">
-	        <div class="tags">
-	            
-	        </div>
-	    </div>
-	    <hr>
-	    <div class="post content">
-	        <p>title: docker使用心得
+        <div class="header animated fadeInDown">
+    <div class="site_title_container">
+        <div class="site_title">
+            <h1>
+                <a href="https://laurel-he.github.io/">
+                    <span></span>
+                </a>
+            </h1>
+        </div>
+        <div class="description">
+            <p class="sub_title"></p>
+            <div class="my_socials">
+                
+                <a href="https://laurel-he.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
+                        class="ri-rss-fill"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="content">
+            <div class="post_page">
+                <div class="post animate__animated animate__fadeInDown">
+                    <div class="post_title post_detail_title">
+                        <h2><a href='/%E4%BA%91%E5%8E%9F%E7%94%9F/docker/docker/'></a></h2>
+                        <span class="date">0001.01.01</span>
+                    </div>
+                    <div class="post_content markdown"><p>title: docker使用心得
 date: 2019-04-24 21:03:10
 tags:</p>
 <ul>
@@ -105,43 +132,37 @@ NAMES:自动分配的容器名称
 ##docker容器使用
 <code>docker</code>命令可以直接查看Docker客户端的所有选项
 <code>docker comman --help</code>更深入地了解指定地docker命令使用方法</p>
-
-	    </div>
-	    
-	<div class="about">
-	<p> 
-     
-    </p>
 </div>
-		<nav id="pagination">
-			<a class="prev" href="https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/docker/cent_lnmp_dockerfile/">Prev</a>
-			<a class="next" href="https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/docker/wsl_docker/">Next</a>
-		</nav>
-	
-		        <footer>
-		        	Built with <a href="https://github.com/spf13/hugo">Hugo</a>
-		        	<p>© Alexander Feller 2018</p>
-		        </footer>
-		    </div>
-		  </div>
-		</div>
-      </div>
+                    <div class="post_footer">
+                        
+                    </div>
+                </div>
+                
+                
+                <div class="doc_comments"></div>
+                
+            </div>
+        </div>
     </div>
+    <a id="back_to_top" href="#" class="back_to_top"><i class="ri-arrow-up-s-line"></i></a>
+    <footer class="footer">
+    <div class="powered_by">
+        <a href="https://varkai.com">Designed by VarKai,</a>
+        <a href="http://www.gohugo.io/">Proudly published with Hugo</a>
+    </div>
+
+    <div class="footer_slogan">
+        <span></span>
+    </div>
+</footer>
+    <script src="https://laurel-he.github.io/js/jquery-3.5.1.min.js"></script>
+<link href="https://laurel-he.github.io/css/fancybox.min.css" rel="stylesheet">
+<script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
+<script src="https://laurel-he.github.io/js/zozo.js"></script>
+
+
+
+
 </body>
 
-<script type="text/javascript">
-  var _paq = _paq || [];
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u=(("https:" == document.location.protocol) ? "https" : "http") + ":change-me";
-    _paq.push(['setTrackerUrl', u+'piwik.php']);
-    _paq.push(['setSiteId', 4]);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
-    g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-
-
 </html>
-

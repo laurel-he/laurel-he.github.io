@@ -1,55 +1,77 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="" />
 	
-	<!doctype html>
-<html lang="en">
-  <head>
-    <title>ALEXFINN - Laravel 日志系统</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+	
+	
+	<title>Laravel 日志系统 ｜ </title>
+	
+    
+    
+    <meta name="description" content="1 （自己摸索版本）5.2 1 定义路径 .env配置文件添加日志路径，例如
+LOG_PATH=/tmp/paytest 2 启动文件添加日志路径 $app-&amp;gt;configureMonologUsing(function($logger){ $logger-&amp;gt;pushHandler(new \Monolog\Handler\RotatingFileHandler(env(&amp;#39;LOG_PATH&amp;#39;).&amp;#39;.log&amp;#39;), 10); return $logger; }); 2 官方文档 1 异常处理 介绍 当您启动一个新的 Laravel 项目时，错误和异常处理就已为您配置。 应用程序触发的所有异常都被 App\Exceptions\Handler 类记录下来，然后渲染给用户。 我们将在本文档中深入介绍此类。 配置 （1）config/app.php 文件的 debug 选项，决定了是否向用户显示错误信息。默认情况下，此选项设置为存储在 .env 文件中的 APP_DEBUG 环境变量中。 （2）Laravel 支持 single 、daily 、 syslog 和 errorlog 日志模式。要配置 Laravel 使用的存储机制，应该修改 config/app.php 配置文件中的 log 选项。例如，如果您希望使用每日一个日志文件而不是单个文件，则应将 app 配置文件中的 log 值设置为 daily 日志等级 使用 Monolog 时，日志消息可能具有不同的日志等级。默认情况下，Laravel 将所有日志级别写入存储。但是，在生产环境中，您可能希望通过将 log_level 选项添加到 app.php 配置文件中来配置应记录的最低日志等级。
+一旦配置了此选项，Laravel 将记录大于或等于指定日志等级的所有级别。例如，默认将 log_level 设置为 error 那么将会记录 error , critical , alert 和 emergency 日志信息：" />
+    
 
     
-    <link href="/css/milk.min.css" rel="stylesheet">
-    <link href="/css/milk-responsive.min.css" rel="stylesheet">     
-    <link href="/css/style.css" rel="stylesheet" type="text/css" media="all">
-    <link href="/css/fonts.css" rel="stylesheet" type="text/css" media="all">
-    <link rel="shortcut icon" href="/images/alexfinn.ico">
-    <link rel="apple-touch-icon" href="">
-    <link rel="canonical" href="https://laurel-he.github.io/php/laravel/log/">
+
+	
+    
+    <link rel="shortcut icon" href="https://laurel-he.github.io/images/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/zozo.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/highlight.css" />
 
     
-    <link href="/rss.xml" type="application/atom+xml" rel="alternate" title="">
+    
+</head>
 
-  </head>
-  <body>
-    <div class="navbar navbar-fixed-top">
-  <div id="navbar-inner">
-    <div id="logo">
-       <a href=""><img src="/images/letter-a.png" width="100px"></img></a>
+<body>
+    <div class="main animate__animated animate__fadeInDown">
+        <div class="nav_container animated fadeInDown">
+    <div class="site_nav" id="site_nav">
+        <ul>
+            
+        </ul>
     </div>
-  </div>
+    <div class="menu_icon">
+        <a id="menu_icon"><i class="ri-menu-line"></i></a>
+    </div>
 </div>
-
-
-<div class="container">
-  <div class="content">
-    <div class="row-fluid">
-      <div class="span12">
-        <div class="posts">
-
-
-	    
-	  <div class="post">
-	    <header class="post-header">
-	        <h1><a href="/php/laravel/log/">Laravel 日志系统</a></h1>
-	        <div class="post-time">April 11 2019</div>
-	    </header>
-	    <div class="post-after">
-	        <div class="tags">
-	            
-	        </div>
-	    </div>
-	    <hr>
-	    <div class="post content">
-	        <h2 id="1-自己摸索版本52">1 （自己摸索版本）5.2</h2>
+        <div class="header animated fadeInDown">
+    <div class="site_title_container">
+        <div class="site_title">
+            <h1>
+                <a href="https://laurel-he.github.io/">
+                    <span></span>
+                </a>
+            </h1>
+        </div>
+        <div class="description">
+            <p class="sub_title"></p>
+            <div class="my_socials">
+                
+                <a href="https://laurel-he.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
+                        class="ri-rss-fill"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="content">
+            <div class="post_page">
+                <div class="post animate__animated animate__fadeInDown">
+                    <div class="post_title post_detail_title">
+                        <h2><a href='/php/laravel/log/'>Laravel 日志系统</a></h2>
+                        <span class="date">2019.04.11</span>
+                    </div>
+                    <div class="post_content markdown"><h2 id="1-自己摸索版本52">1 （自己摸索版本）5.2</h2>
 <h4 id="1-定义路径">1 定义路径</h4>
 <p>.env配置文件添加日志路径，例如</p>
 <pre><code>LOG_PATH=/tmp/paytest
@@ -100,43 +122,37 @@ public function render($request, Exception $exception)
 可以传递参数，例如：</p>
 <pre><code>$test = &quot;test&quot;;
 Log::info(222222222, ['te' =&gt; $test]);
-</code></pre>
-	    </div>
-	    
-	<div class="about">
-	<p> 
-     
-    </p>
-</div>
-		<nav id="pagination">
-			<a class="prev" href="https://laurel-he.github.io/post/githubguide/">Prev</a>
-			<a class="next" href="https://laurel-he.github.io/post/crontab/">Next</a>
-		</nav>
-	
-		        <footer>
-		        	Built with <a href="https://github.com/spf13/hugo">Hugo</a>
-		        	<p>© Alexander Feller 2018</p>
-		        </footer>
-		    </div>
-		  </div>
-		</div>
-      </div>
+</code></pre></div>
+                    <div class="post_footer">
+                        
+                    </div>
+                </div>
+                
+                
+                <div class="doc_comments"></div>
+                
+            </div>
+        </div>
     </div>
+    <a id="back_to_top" href="#" class="back_to_top"><i class="ri-arrow-up-s-line"></i></a>
+    <footer class="footer">
+    <div class="powered_by">
+        <a href="https://varkai.com">Designed by VarKai,</a>
+        <a href="http://www.gohugo.io/">Proudly published with Hugo</a>
+    </div>
+
+    <div class="footer_slogan">
+        <span></span>
+    </div>
+</footer>
+    <script src="https://laurel-he.github.io/js/jquery-3.5.1.min.js"></script>
+<link href="https://laurel-he.github.io/css/fancybox.min.css" rel="stylesheet">
+<script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
+<script src="https://laurel-he.github.io/js/zozo.js"></script>
+
+
+
+
 </body>
 
-<script type="text/javascript">
-  var _paq = _paq || [];
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u=(("https:" == document.location.protocol) ? "https" : "http") + ":change-me";
-    _paq.push(['setTrackerUrl', u+'piwik.php']);
-    _paq.push(['setSiteId', 4]);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
-    g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-
-
 </html>
-

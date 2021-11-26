@@ -1,57 +1,109 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="" />
 	
-	<!doctype html>
-<html lang="en">
-  <head>
-    <title>ALEXFINN - 代码大全</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+	
+	
+	<title>代码大全 ｜ </title>
+	
+    
+    
+    <meta name="description" content="前期准备 前期准备的重要性 不要立即开始写代码，要做好必要的需求分析和架构设计，写好需求文档和技术文档，防止浪费时间和精力制造错误的东西
+需求核对表 针对功能需求：
+1．是否详细定义了系统的全部输入，包括其来源、精度、取值范围、出现频率等？
+2．是否详细定义了系统的全部输出，包括其目的地、精度、取值范围、出现频率格式等？
+3．是否详细定义了所有的输出格式(如：web页面、报表等)？
+4．是否详细定义了所有硬件及软件的外部接口？
+5．是否详细定义了全部外部通信接口，包括握手协议、纠错协议、通信协议等？
+6．是否列出了用户所要做的全部事情？
+7．是否详细定义了每个任务所用数据，以及每个任务得到的数据
+针对非功能需求（质量需求）
+1.是否为全部必要的操作，从用户的角度，详细描述的期望的响应时间 ？
+2.是否详细描述了其他与计时有关的考虑，如处理时间、数据传输率、系统吞吐量等？
+3.是否详细定义了安全级别
+4.是否详细定义了可靠性，包括软件失灵的后果、发生故障时需要保护的至关重要的信息、错误检查与回复的策略等？
+5.是否详细定义了机器内存和剩余硬盘空间最小值？
+6.是否详细定义了系统的可维护性，包括适应特定功能的变更、操作环境的变更、与其他软件接口变更的能力？
+7.是否包含对“成功”的定义，“失败”的定义？
+需求的质量
+  需求是用户书写的吗？
+  每条需求都不与其他需求冲突吗？
+  是否详细定义了相互竞争的特性之间的权衡
+  是否避免在需求中规定设计(方案)
+  需求是否在详细程度上保持相当一致的水平？有些需求应当更详细的描述吗？有些需求应该更粗略的描述吗？
+  需求是否足够清晰，即使转交给一个独立的小组去构建，他们也能理解吗？开发者也这么想吗？
+  每个条款都与待解决的问题及解决方案相关吗？能从每个条款上溯到它的问题中的对应跟源吗？
+  是否每条需求都是可测试的？是否可应进行独立的测试，以检验满不满足各项需求
+  是否描述了所有可能对需求的改动，包括各项改动的可能性
+  需求的完备性
+1.对于在开始开发之前无法获得信息，是否详细描述了信息不完全的区域？
+2.需求的完备度是否达到这种程度：如果产品满足所有需求，那么它就是可接受的？
+3.你对全部需求都感觉舒服吗？你是否已经去掉了那些不可能完成的需求—那些只是为了安抚客户和老板的东西？
+花费在前期准备上的时间长度 花费在问题定义，需求分析，软件架构上的时间依据项目的需要而变化，一般占据10%-20%的工作量和20%-30%的时间
+良好的类接口 类的基础是抽象数据类型（我之前大部分时候没有使用抽象，只是把相关的方法和变量定义放在了一起，实际上是不符合面向对象变成原则的），抽象数据类型是指一些数据和 对这些数据所进行操作的集合。定义抽象类有助于代码规范，提高
+创建类的原因 （1）为显示世界中的对象建模 （2）为抽象的对象建模 （3）降低复杂度 （4）隔离复杂度 （5）隐藏实现细节 （6）让代码更易重用 （7）把相关的操作包装到一起
+应当避免的类 （1）避免创建万能类 （2）消除无关紧要的类 （3）避免用动词命名的类" />
+    
 
     
-    <link href="/css/milk.min.css" rel="stylesheet">
-    <link href="/css/milk-responsive.min.css" rel="stylesheet">     
-    <link href="/css/style.css" rel="stylesheet" type="text/css" media="all">
-    <link href="/css/fonts.css" rel="stylesheet" type="text/css" media="all">
-    <link rel="shortcut icon" href="/images/alexfinn.ico">
-    <link rel="apple-touch-icon" href="">
-    <link rel="canonical" href="https://laurel-he.github.io/post/codecomplate_01/">
+
+	
+    
+    <link rel="shortcut icon" href="https://laurel-he.github.io/images/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/zozo.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/highlight.css" />
 
     
-    <link href="/rss.xml" type="application/atom+xml" rel="alternate" title="">
+    
+</head>
 
-  </head>
-  <body>
-    <div class="navbar navbar-fixed-top">
-  <div id="navbar-inner">
-    <div id="logo">
-       <a href=""><img src="/images/letter-a.png" width="100px"></img></a>
+<body>
+    <div class="main animate__animated animate__fadeInDown">
+        <div class="nav_container animated fadeInDown">
+    <div class="site_nav" id="site_nav">
+        <ul>
+            
+        </ul>
     </div>
-  </div>
+    <div class="menu_icon">
+        <a id="menu_icon"><i class="ri-menu-line"></i></a>
+    </div>
 </div>
-
-
-<div class="container">
-  <div class="content">
-    <div class="row-fluid">
-      <div class="span12">
-        <div class="posts">
-
-
-	    
-	  <div class="post">
-	    <header class="post-header">
-	        <h1><a href="/post/codecomplate_01/">代码大全</a></h1>
-	        <div class="post-time">October 5 2019</div>
-	    </header>
-	    <div class="post-after">
-	        <div class="tags">
-	            
-	                <a href="https://laurel-he.github.io//tags/%E5%AD%A6%E4%B9%A0">学习</a>
-	            
-	        </div>
-	    </div>
-	    <hr>
-	    <div class="post content">
-	        <h2 id="前期准备">前期准备</h2>
+        <div class="header animated fadeInDown">
+    <div class="site_title_container">
+        <div class="site_title">
+            <h1>
+                <a href="https://laurel-he.github.io/">
+                    <span></span>
+                </a>
+            </h1>
+        </div>
+        <div class="description">
+            <p class="sub_title"></p>
+            <div class="my_socials">
+                
+                <a href="https://laurel-he.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
+                        class="ri-rss-fill"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="content">
+            <div class="post_page">
+                <div class="post animate__animated animate__fadeInDown">
+                    <div class="post_title post_detail_title">
+                        <h2><a href='/post/codecomplate_01/'>代码大全</a></h2>
+                        <span class="date">2019.10.05</span>
+                    </div>
+                    <div class="post_content markdown"><h2 id="前期准备">前期准备</h2>
 <h3 id="前期准备的重要性">前期准备的重要性</h3>
 <p>不要立即开始写代码，要做好必要的需求分析和架构设计，写好需求文档和技术文档，防止浪费时间和精力制造错误的东西</p>
 <h3 id="需求核对表">需求核对表</h3>
@@ -162,43 +214,48 @@
 <h3 id="重构">重构</h3>
 <h3 id="软件工艺">软件工艺</h3>
 <h4 id="布局与风格">布局与风格</h4>
-
-	    </div>
-	    
-	<div class="about">
-	<p> 
-     
-    </p>
 </div>
-		<nav id="pagination">
-			<a class="prev" href="https://laurel-he.github.io/designpattern/phpallpattern/producerconsumer/">Prev</a>
-			<a class="next" href="https://laurel-he.github.io/designpattern/phpallpattern/commandmode/">Next</a>
-		</nav>
-	
-		        <footer>
-		        	Built with <a href="https://github.com/spf13/hugo">Hugo</a>
-		        	<p>© Alexander Feller 2018</p>
-		        </footer>
-		    </div>
-		  </div>
-		</div>
-      </div>
+                    <div class="post_footer">
+                        
+                        <div class="meta">
+                            <div class="info">
+                                <span class="field tags">
+                                    <i class="ri-stack-line"></i>
+                                    
+                                    <a href="https://laurel-he.github.io/tags/%E5%AD%A6%E4%B9%A0/">学习</a>
+                                    
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                
+                <div class="doc_comments"></div>
+                
+            </div>
+        </div>
     </div>
+    <a id="back_to_top" href="#" class="back_to_top"><i class="ri-arrow-up-s-line"></i></a>
+    <footer class="footer">
+    <div class="powered_by">
+        <a href="https://varkai.com">Designed by VarKai,</a>
+        <a href="http://www.gohugo.io/">Proudly published with Hugo</a>
+    </div>
+
+    <div class="footer_slogan">
+        <span></span>
+    </div>
+</footer>
+    <script src="https://laurel-he.github.io/js/jquery-3.5.1.min.js"></script>
+<link href="https://laurel-he.github.io/css/fancybox.min.css" rel="stylesheet">
+<script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
+<script src="https://laurel-he.github.io/js/zozo.js"></script>
+
+
+
+
 </body>
 
-<script type="text/javascript">
-  var _paq = _paq || [];
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u=(("https:" == document.location.protocol) ? "https" : "http") + ":change-me";
-    _paq.push(['setTrackerUrl', u+'piwik.php']);
-    _paq.push(['setSiteId', 4]);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
-    g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-
-
 </html>
-
