@@ -100,6 +100,20 @@
 绝了，laravel使用的是illuminate/database作为orm，我们用的swoole，在使用过程中报了如下错误：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffered queries are active.  Consider using PDOStatement::fetchAll()
 </code></pre></div><p>这个错误在网上一搜就能找到解决办法，就是给pdo加上一个params,&lsquo;MYSQL_ATTR_USE_BUFFERED_QUERY&rsquo; =&gt; true,嚯，但是laravel和illuminate/database的文档都没有说怎么加这个params。。。真就大无语事件发生。我还是不死心网上各种搜解决办法，当然是一无所获，不然也不会有这篇博客了。原本想省事偷懒的我终究还是不得不去看源码，终于让我找到了这个东西：
+
+
+<div class="fancybox">
+    <a data-fancybox="gallery" href="https://laurel-he.github.io/images/php/01.png" data-caption="">
+        <img src="https://laurel-he.github.io/images/php/01.png" />
+    </a>
+</div>
+
+
+<div class="fancybox">
+    <a data-fancybox="gallery" href="https://laurel-he.github.io/images/php/02.png" data-caption="">
+        <img src="https://laurel-he.github.io/images/php/02.png" />
+    </a>
+</div>
 <img src="../images/php/01.png" alt="获取信息">
 <img src="../images/php/02.png" alt="设置配置">
 经过分析，这个玩意儿就是把配置中的options加载进去，虽然按照正常人的思维，这玩意儿要是叫params我直接就能试出来，根本不用看源码了的说。</p>
