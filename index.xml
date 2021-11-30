@@ -170,12 +170,21 @@
     </item>
     
     <item>
-      <title>go语言圣经</title>
-      <link>https://laurel-he.github.io/go/thegoprograming_01/</link>
+      <title>go语言圣经-(1)入门</title>
+      <link>https://laurel-he.github.io/go/basic/thegoprograming/01/</link>
       <pubDate>Fri, 27 Aug 2021 13:47:00 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/go/thegoprograming_01/</guid>
+      <guid>https://laurel-he.github.io/go/basic/thegoprograming/01/</guid>
       <description>基本介绍 可以参考此文章：https://docs.hacknode.org/gopl-zh/ch0/ch0-02.html 基础使用 查看go版本 go version 引入代码 需要在环境变量中添加GOPATH目录，然后使用</description>
+    </item>
+    
+    <item>
+      <title>分组过滤练习题</title>
+      <link>https://laurel-he.github.io/acm/%E7%89%9B%E5%AE%A2%E7%BD%91/mysql/having_group/</link>
+      <pubDate>Fri, 27 Aug 2021 13:47:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/acm/%E7%89%9B%E5%AE%A2%E7%BD%91/mysql/having_group/</guid>
+      <description>题目解答 题目来源 牛客网： 分组过滤练习题 参考文章： Mysql中having和where的区别 MySQL聚合函数 MySQL count()函数 题目解析 输入： drop table if exists user_profile; CREATE TABLE user_profile ( id int NOT NULL, device_id int NOT NULL, gender varchar(14) NOT NULL, age int , university varchar(32) NOT NULL, gpa</description>
     </item>
     
     <item>
@@ -968,6 +977,15 @@
       
       <guid>https://laurel-he.github.io/php/swoole_coroutine_pdo_same/</guid>
       <description>swoole连接池</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://laurel-he.github.io/php/test/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/php/test/</guid>
+      <description>#!/bin/bash #j=$1 # 从501到489684 for ((i=504; i&amp;lt;=2000; i++)) do echo &amp;#34;INSERT INTO \`t_enquiry_item\` VALUES ($i, $i, 111, 10, 10, &amp;#39;2021-11-22 10:12:35&amp;#39;,&amp;#39;2021-11-26 17:10:25&amp;#39;); &amp;#34; &amp;gt;&amp;gt; &amp;#39;./data.sql&amp;#39; done</description>
     </item>
     
     <item>

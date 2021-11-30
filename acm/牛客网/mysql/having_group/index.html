@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="贺小娇" />
+	
+	
+	
+	<title>分组过滤练习题 ｜ hexiaojiao</title>
+	
+    
+    
+    <meta name="description" content="题目解答 题目来源 牛客网： 分组过滤练习题 参考文章： Mysql中having和where的区别 MySQL聚合函数 MySQL count()函数 题目解析 输入： drop table if exists user_profile; CREATE TABLE user_profile ( id int NOT NULL, device_id int NOT NULL, gender varchar(14) NOT NULL, age int , university varchar(32) NOT NULL, gpa" />
+    
+
+    
+    
+    <meta name="keywords" content="Hugo, blog, php" />
+    
+
+	
+    
+    <link rel="shortcut icon" href="https://laurel-he.github.io/images/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/zozo.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/highlight.css" />
+
+    
+    
+</head>
+
+<body>
+    <div class="main animate__animated animate__fadeInDown">
+        <div class="nav_container animated fadeInDown">
+    <div class="site_nav" id="site_nav">
+        <ul>
+            
+            <li>
+                <a href="/">主页</a>
+            </li>
+            
+            <li>
+                <a href="/categories/">分类</a>
+            </li>
+            
+            <li>
+                <a href="/tags/">标签</a>
+            </li>
+            
+            <li>
+                <a href="/post/">其他</a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="menu_icon">
+        <a id="menu_icon"><i class="ri-menu-line"></i></a>
+    </div>
+</div>
+        <div class="header animated fadeInDown">
+    <div class="site_title_container">
+        <div class="site_title">
+            <h1>
+                <a href="https://laurel-he.github.io/">
+                    <span>hexiaojiao</span>
+                </a>
+            </h1>
+        </div>
+        <div class="description">
+            <p class="sub_title">the summary of my programing life</p>
+            <div class="my_socials">
+                
+                
+                <a href="https://github.com/laurel-he" title="github" target="_blank"><i class="ri-github-fill"></i></a>
+                
+                
+                
+                <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1570306409&amp;site=qq&amp;menu=yes" title="qq" target="_blank"><i class="ri-qq-fill"></i></a>
+                
+                
+                
+                <a href="https://stackoverflow.com/users/9809769/laurel-he" title="stack-overflow" target="_blank"><i class="ri-stack-overflow-fill"></i></a>
+                
+                
+                
+                <a href="https://weibo.com/u/3783884100" title="weibo" target="_blank"><i class="ri-weibo-fill"></i></a>
+                
+                
+                <a href="https://laurel-he.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
+                        class="ri-rss-fill"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="content">
+            <div class="post_page">
+                <div class="post animate__animated animate__fadeInDown">
+                    <div class="post_title post_detail_title">
+                        <h2><a href='/acm/%E7%89%9B%E5%AE%A2%E7%BD%91/mysql/having_group/'>分组过滤练习题</a></h2>
+                        <span class="date">2021.08.27</span>
+                    </div>
+                    <div class="post_content markdown"><h1 id="题目解答">题目解答</h1>
+<h2 id="题目来源">题目来源</h2>
+<p>牛客网： <a href="https://www.nowcoder.com/questionTerminal/ddbcedcd9600403296038ee44a172f2d">分组过滤练习题</a> <br>
+参考文章：  <br>
+<a href="https://blog.csdn.net/ryan007liu/article/details/91441479">Mysql中having和where的区别</a> <br>
+<a href="https://www.yiibai.com/mysql/aggregate-functions.html">MySQL聚合函数</a> <br>
+<a href="https://www.yiibai.com/mysql/count.html">MySQL count()函数</a></p>
+<h2 id="题目解析">题目解析</h2>
+<p>输入：</p>
+<blockquote>
+<p>drop table if exists user_profile;
+CREATE TABLE <code>user_profile</code> (
+<code>id</code> int NOT NULL,
+<code>device_id</code> int NOT NULL,
+<code>gender</code> varchar(14) NOT NULL,
+<code>age</code> int ,
+<code>university</code> varchar(32) NOT NULL,
+<code>gpa</code> float,
+<code>active_days_within_30</code> int ,
+<code>question_cnt</code> float,
+<code>answer_cnt</code> float
+);
+INSERT INTO user_profile VALUES(1,2138,&lsquo;male&rsquo;,21,&lsquo;北京大学&rsquo;,3.4,7,2,12);
+INSERT INTO user_profile VALUES(2,3214,&lsquo;male&rsquo;,null,&lsquo;复旦大学&rsquo;,4.0,15,5,25);
+INSERT INTO user_profile VALUES(3,6543,&lsquo;female&rsquo;,20,&lsquo;北京大学&rsquo;,3.2,12,3,30);
+INSERT INTO user_profile VALUES(4,2315,&lsquo;female&rsquo;,23,&lsquo;浙江大学&rsquo;,3.6,5,1,2);
+INSERT INTO user_profile VALUES(5,5432,&lsquo;male&rsquo;,25,&lsquo;山东大学&rsquo;,3.8,20,15,70);
+INSERT INTO user_profile VALUES(6,2131,&lsquo;male&rsquo;,28,&lsquo;山东大学&rsquo;,3.3,15,7,13);
+INSERT INTO user_profile VALUES(7,4321,&lsquo;male&rsquo;,28,&lsquo;复旦大学&rsquo;,3.6,9,6,52);</p>
+</blockquote>
+<p>题目：现在运营想查看每个学校用户的平均发贴和回帖情况，寻找低活跃度学校进行重点运营，请取出平均发贴数低于5的学校或平均回帖数小于20的学校。</p>
+<h2 id="解答">解答</h2>
+<p>根据以上分析，是要把分组后的值作为条件，不能直接使用where，需要使用having</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="k">SELECT</span><span class="w"> 
+</span><span class="w">    </span><span class="o">`</span><span class="n">university</span><span class="o">`</span><span class="p">,</span><span class="w">
+</span><span class="w">    </span><span class="nf">avg</span><span class="p">(</span><span class="o">`</span><span class="n">question_cnt</span><span class="o">`</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="o">`</span><span class="n">avg_question_cnt</span><span class="o">`</span><span class="p">,</span><span class="w">
+</span><span class="w">    </span><span class="nf">avg</span><span class="p">(</span><span class="o">`</span><span class="n">answer_cnt</span><span class="o">`</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="o">`</span><span class="n">avg_answer_cnt</span><span class="o">`</span><span class="w"> 
+</span><span class="w"></span><span class="k">FROM</span><span class="w"> </span><span class="o">`</span><span class="n">user_profile</span><span class="o">`</span><span class="w"> 
+</span><span class="w">    </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="o">`</span><span class="n">university</span><span class="o">`</span><span class="w">
+</span><span class="w">    </span><span class="k">HAVING</span><span class="w"> </span><span class="o">`</span><span class="n">avg_question_cnt</span><span class="o">`</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="w"> 
+</span><span class="w">    </span><span class="k">OR</span><span class="w"> </span><span class="o">`</span><span class="n">avg_answer_cnt</span><span class="o">`</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="p">;</span><span class="w">
+</span></code></pre></div><h1 id="扩展学习">扩展学习</h1>
+<h2 id="having和where的区别">having和where的区别</h2>
+<p>having是在分组后对数据进行过滤     <br>
+where是在分组前对数据进行过滤    <br>
+having后面可以使用聚合函数  <br>
+where后面不可以使用聚合  <br>
+在查询过程中的执行顺序为：from&gt;where&gt;group（含聚合）&gt;having&gt;order&gt;select   <br>
+having就是来弥补where在分组数据判断时的不足。因为where执行优先级别要快于聚合语句。</p>
+<h2 id="聚合函数">聚合函数</h2>
+<p>如AVG()，COUNT()，SUM()，MAX()和MIN()等，作用在分组上的函数，除了count函数外，其他聚合函数在执行时会忽略NULL值。</p>
+<h3 id="count">count</h3>
+<p>COUNT函数有几种形式：COUNT(*)，COUNT(expression)和COUNT(DISTINCT expression)。</p>
+<blockquote>
+<p>COUNT(<em>)函数返回由SELECT语句返回的结果集中的行数。COUNT(</em>)函数计算包含NULL和非NULL值的行，即：所有行。</p>
+</blockquote>
+<blockquote>
+<p>COUNT(expression)返回不包含NULL值的行数。</p>
+</blockquote>
+<blockquote>
+<p>COUNT(expression)返回不包含NULL值的行数。</p>
+</blockquote>
+<p><strong>示例1：</strong> <br>
+有一个表department，数据如下：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="o">`</span><span class="n">department</span><span class="o">`</span><span class="p">;</span><span class="w">
+</span></code></pre></div><p>返回：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="o">+------+---------+-------+</span><span class="w">
+</span><span class="w"></span><span class="o">|</span><span class="w"> </span><span class="n">id</span><span class="w">   </span><span class="o">|</span><span class="w"> </span><span class="n">revenue</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">month</span><span class="w"> </span><span class="o">|</span><span class="w">
+</span><span class="w"></span><span class="o">+------+---------+-------+</span><span class="w">
+</span><span class="w"></span><span class="o">|</span><span class="w">    </span><span class="mi">1</span><span class="w"> </span><span class="o">|</span><span class="w">    </span><span class="mi">8000</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Jan</span><span class="w">   </span><span class="o">|</span><span class="w">
+</span><span class="w"></span><span class="o">|</span><span class="w">    </span><span class="mi">2</span><span class="w"> </span><span class="o">|</span><span class="w">    </span><span class="mi">9000</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Jan</span><span class="w">   </span><span class="o">|</span><span class="w">
+</span><span class="w"></span><span class="o">|</span><span class="w">    </span><span class="mi">3</span><span class="w"> </span><span class="o">|</span><span class="w">   </span><span class="mi">10000</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Feb</span><span class="w">   </span><span class="o">|</span><span class="w">
+</span><span class="w"></span><span class="o">|</span><span class="w">    </span><span class="mi">1</span><span class="w"> </span><span class="o">|</span><span class="w">    </span><span class="mi">7000</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Feb</span><span class="w">   </span><span class="o">|</span><span class="w">
+</span><span class="w"></span><span class="o">|</span><span class="w">    </span><span class="mi">1</span><span class="w"> </span><span class="o">|</span><span class="w">    </span><span class="mi">6000</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Mar</span><span class="w">   </span><span class="o">|</span><span class="w">
+</span><span class="w"></span><span class="o">|</span><span class="w"> </span><span class="no">NULL</span><span class="w"> </span><span class="o">|</span><span class="w">    </span><span class="mi">8000</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Jan</span><span class="w">   </span><span class="o">|</span><span class="w">
+</span><span class="w"></span><span class="o">|</span><span class="w"> </span><span class="no">NULL</span><span class="w"> </span><span class="o">|</span><span class="w">    </span><span class="mi">8000</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Feb</span><span class="w">   </span><span class="o">|</span><span class="w">
+</span><span class="w"></span><span class="o">|</span><span class="w"> </span><span class="no">NULL</span><span class="w"> </span><span class="o">|</span><span class="w">    </span><span class="mi">9000</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Jan</span><span class="w">   </span><span class="o">|</span><span class="w">
+</span><span class="w"></span><span class="o">|</span><span class="w"> </span><span class="no">NULL</span><span class="w"> </span><span class="o">|</span><span class="w">    </span><span class="mi">9000</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Feb</span><span class="w">   </span><span class="o">|</span><span class="w">
+</span><span class="w"></span><span class="o">+------+---------+-------+</span><span class="w">
+</span></code></pre></div><p>此时执行<code>select count(*) from department;</code>,返回数据为9;
+<strong>示例2：</strong> <br>
+当执行：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="k">select</span><span class="w"> </span><span class="nf">count</span><span class="p">(</span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="p">)</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="o">`</span><span class="n">department</span><span class="o">`</span><span class="p">;</span><span class="w">
+</span></code></pre></div><p>返回：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="o">+-----------+</span><span class="w">
+</span><span class="w"></span><span class="o">|</span><span class="w"> </span><span class="nf">count</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w">
+</span><span class="w"></span><span class="o">+-----------+</span><span class="w">
+</span><span class="w"></span><span class="o">|</span><span class="w">         </span><span class="mi">5</span><span class="w"> </span><span class="o">|</span><span class="w">
+</span><span class="w"></span><span class="o">+-----------+</span><span class="w">
+</span></code></pre></div><p><strong>示例3：</strong> <br>
+当执行：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="k">select</span><span class="w"> </span><span class="nf">count</span><span class="p">(</span><span class="k">DISTINCT</span><span class="w"> </span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="p">)</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="o">`</span><span class="n">department</span><span class="o">`</span><span class="p">;</span><span class="w">
+</span></code></pre></div><p>返回：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="o">+--------------------+</span><span class="w">
+</span><span class="w"></span><span class="o">|</span><span class="w"> </span><span class="nf">count</span><span class="p">(</span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w">
+</span><span class="w"></span><span class="o">+--------------------+</span><span class="w">
+</span><span class="w"></span><span class="o">|</span><span class="w">                  </span><span class="mi">3</span><span class="w"> </span><span class="o">|</span><span class="w">
+</span><span class="w"></span><span class="o">+--------------------+</span><span class="w">
+</span></code></pre></div><h4 id="count-if">COUNT IF</h4>
+<p>还是前一个示例的表，使用IF来进行流程判断，那么语句为：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="k">select</span><span class="w"> </span><span class="nf">count</span><span class="p">(</span><span class="k">IF</span><span class="p">(</span><span class="o">`</span><span class="n">revenue</span><span class="o">`=</span><span class="mi">9000</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="no">NULL</span><span class="p">))</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">department</span><span class="p">;</span><span class="w">
+</span></code></pre></div><h3 id="sum">SUM</h3>
+<p>依然是不计算NULL的值，可用FORMAT()进行格式化，例如：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="k">select</span><span class="w"> </span><span class="nf">FORMAT</span><span class="p">(</span><span class="nf">SUM</span><span class="p">(</span><span class="o">`</span><span class="n">revenue</span><span class="o">`</span><span class="p">),</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="o">`</span><span class="n">department</span><span class="o">`</span><span class="p">;</span><span class="w">
+</span></code></pre></div><p>输出</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="o">+-------------------------+</span><span class="w">
+</span><span class="w"></span><span class="o">|</span><span class="w"> </span><span class="n">total</span><span class="w">  </span><span class="o">|</span><span class="w">
+</span><span class="w"></span><span class="o">+-------------------------+</span><span class="w">
+</span><span class="w"></span><span class="o">|</span><span class="w"> </span><span class="mi">74</span><span class="p">,</span><span class="mi">000</span><span class="p">.</span><span class="mi">00</span><span class="w">               </span><span class="o">|</span><span class="w">
+</span><span class="w"></span><span class="o">+-------------------------+</span><span class="w">
+</span></code></pre></div></div>
+                    <div class="post_footer">
+                        
+                        <div class="meta">
+                            <div class="info">
+                                <span class="field tags">
+                                    <i class="ri-stack-line"></i>
+                                    
+                                    <a href="https://laurel-he.github.io/tags/%E5%AD%A6%E4%B9%A0/">学习</a>
+                                    
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                
+                
+<div class="doc_comments">
+    <div class="comments_block_title">发表评论</div>
+    <div id="vcomments"></div>
+</div>
+
+<link rel="stylesheet" href="https://laurel-he.github.io/css/comments.css" />
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
+<script type="text/javascript">
+    new Valine({
+        el: '#vcomments',
+        appId: 'SWEItAag34n7U5AR3T95AhRG-gzGzoHsz',
+        appKey: 'zAM901B4LKIxfrnTb7ie5e5K',
+        placeholder: '在此输入评论...',
+        visitor: 'true',
+    })
+</script>
+                
+            </div>
+        </div>
+    </div>
+    <a id="back_to_top" href="#" class="back_to_top"><i class="ri-arrow-up-s-line"></i></a>
+    <footer class="footer">
+    <div class="powered_by">
+        <a href="https://varkai.com">Designed by VarKai,</a>
+        <a href="http://www.gohugo.io/">Proudly published with Hugo</a>
+    </div>
+
+    <div class="footer_slogan">
+        <span>贺小娇的个人博客</span>
+    </div>
+</footer>
+    <script src="https://laurel-he.github.io/js/jquery-3.5.1.min.js"></script>
+<link href="https://laurel-he.github.io/css/fancybox.min.css" rel="stylesheet">
+<script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
+<script src="https://laurel-he.github.io/js/zozo.js"></script>
+
+
+<script type="text/javascript" async
+    src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\[\[', '\]\]']],
+                processEscapes: true,
+                processEnvironments: true,
+                skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                TeX: {
+                    equationNumbers: { autoNumber: "AMS" },
+                    extensions: ["AMSmath.js", "AMSsymbols.js"]
+                }
+            }
+        });
+
+        MathJax.Hub.Queue(function () {
+            
+            
+            
+            var all = MathJax.Hub.getAllJax(), i;
+            for (i = 0; i < all.length; i += 1) {
+                all[i].SourceElement().parentNode.className += ' has-jax';
+            }
+        });
+    </script>
+
+<style>
+    code.has-jax {
+        font: inherit;
+        font-size: 100%;
+        background: inherit;
+        border: inherit;
+        color: #515151;
+    }
+</style>
+
+
+
+</body>
+
+</html>
