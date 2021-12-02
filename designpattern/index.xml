@@ -6,7 +6,16 @@
     <description>Recent content in Designpatterns on hexiaojiao</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 29 Oct 2019 17:40:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/designpattern/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 28 Nov 2021 17:40:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/designpattern/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>设计模式学习——前言</title>
+      <link>https://laurel-he.github.io/designpattern/basic/</link>
+      <pubDate>Sun, 28 Nov 2021 17:40:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/designpattern/basic/</guid>
+      <description>参考文档： PHP 设计模式系列 基本介绍 设计模式分类 基本所有的设计模式书籍或文档都会介绍到一个概念，就是设计模式的类型。 设计模式分为创建型，结构型，行为型以及部分其他类型的设计模式 创建型模式 在软件工程中，创建</description>
+    </item>
+    
     <item>
       <title>单例模式</title>
       <link>https://laurel-he.github.io/designpattern/phpallpattern/design_singleton/</link>
@@ -95,6 +104,15 @@
       
       <guid>https://laurel-he.github.io/designpattern/phpallpattern/02/</guid>
       <description>几种工厂模式 包括抽象工厂模式，工厂方法模式，简单工厂模式和静态工厂模式在内，都是属于创建型模式， 那么它们都是什么意思呢？ 抽象工厂模式 在不指定具体类的情况下创建一系列相关或依赖对象。 通常创建的类都实现相</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://laurel-he.github.io/designpattern/type_build/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/designpattern/type_build/</guid>
+      <description>创建型模式： 创建型模式可以理解为用来实例化对象的，不同的创建型模式通过不同的方式去new一个对象。 抽象工厂模式（Abstract Factory）</description>
     </item>
     
   </channel>

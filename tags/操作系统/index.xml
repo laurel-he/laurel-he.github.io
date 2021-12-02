@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>操作系统 on hexiaojiao</title>
+    <link>https://laurel-he.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</link>
+    <description>Recent content in 操作系统 on hexiaojiao</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 28 Nov 2021 17:40:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>操作系统（哈工大李治军老师）32讲（全）- 01 概述</title>
+      <link>https://laurel-he.github.io/operatingsystem/learnopesys/summary/</link>
+      <pubDate>Sun, 28 Nov 2021 17:40:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/operatingsystem/learnopesys/summary/</guid>
+      <description>来源： 本系列来源于操作系统（哈工大李治军老师）32讲（全）的学习笔记： 操作系统 蓝桥-操作系统练习 操作系统概述 计算机的基本组成： 用计算机这个工具来解决一些实际问题。 操作系统：计算机硬件和应用之间的一层软</description>
+    </item>
+    
+  </channel>
+</rss>
