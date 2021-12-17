@@ -8,7 +8,7 @@
 	
 	
 	
-	<title>php下es基本使用 ｜ hexiaojiao</title>
+	<title>php下es基本使用 ｜ 风瑶</title>
 	
     
     
@@ -67,12 +67,12 @@
         <div class="site_title">
             <h1>
                 <a href="https://laurel-he.github.io/">
-                    <span>hexiaojiao</span>
+                    <span>风瑶</span>
                 </a>
             </h1>
         </div>
         <div class="description">
-            <p class="sub_title">the summary of my programing life</p>
+            <p class="sub_title">贺胖娇的编程之旅......</p>
             <div class="my_socials">
                 
                 
@@ -136,6 +136,12 @@
 目前我使用的是基于swoole开发的自研框架，引入了elasticsearch/elasticsearch包，在composer require elasticsearch/elasticsearch时，会自动根据php版本引入包</p>
 <h3 id="配置">配置</h3>
 <h3 id="连接池">连接池</h3>
+<p>index:索引是文档的容器，是一类文档的集合
+type：可以理解成关系数据库中Table，不建议使用
+Document：Index 里面单条的记录称为Document（文档）。等同于关系型数据库表中的行。
+id：Doc的主键。在写入的时候，可以指定该Doc的ID值，如果不指定，则系统自动生成一个唯一的UUID值。
+body
+endpoint</p>
 </div>
                     <div class="post_footer">
                         
@@ -193,43 +199,6 @@
 <script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
 <script src="https://laurel-he.github.io/js/zozo.js"></script>
 
-
-<script type="text/javascript" async
-    src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-        MathJax.Hub.Config({
-            tex2jax: {
-                inlineMath: [['$', '$'], ['\\(', '\\)']],
-                displayMath: [['$$', '$$'], ['\[\[', '\]\]']],
-                processEscapes: true,
-                processEnvironments: true,
-                skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-                TeX: {
-                    equationNumbers: { autoNumber: "AMS" },
-                    extensions: ["AMSmath.js", "AMSsymbols.js"]
-                }
-            }
-        });
-
-        MathJax.Hub.Queue(function () {
-            
-            
-            
-            var all = MathJax.Hub.getAllJax(), i;
-            for (i = 0; i < all.length; i += 1) {
-                all[i].SourceElement().parentNode.className += ' has-jax';
-            }
-        });
-    </script>
-
-<style>
-    code.has-jax {
-        font: inherit;
-        font-size: 100%;
-        background: inherit;
-        border: inherit;
-        color: #515151;
-    }
-</style>
 
 
 

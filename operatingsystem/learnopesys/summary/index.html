@@ -8,7 +8,7 @@
 	
 	
 	
-	<title>操作系统（哈工大李治军老师）32讲（全）- 01 概述 ｜ hexiaojiao</title>
+	<title>操作系统（哈工大李治军老师）32讲（全）- 01 概述 ｜ 风瑶</title>
 	
     
     
@@ -67,12 +67,12 @@
         <div class="site_title">
             <h1>
                 <a href="https://laurel-he.github.io/">
-                    <span>hexiaojiao</span>
+                    <span>风瑶</span>
                 </a>
             </h1>
         </div>
         <div class="description">
-            <p class="sub_title">the summary of my programing life</p>
+            <p class="sub_title">贺胖娇的编程之旅......</p>
             <div class="my_socials">
                 
                 
@@ -135,7 +135,57 @@
 实验四：扩展文件系统：扩展实现一个文件管理</p>
 <h2 id="实验楼题目">实验楼题目</h2>
 <p><a href="http://www.shiyanlou.com/courses/115">http://www.shiyanlou.com/courses/115</a> <br>
-完成其中的实验项目一：熟悉实验环境。</p>
+完成其中的实验项目一：熟悉实验环境。 <br>
+基本命令：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># 环境  hit-oslab 集成环境    </span>
+<span class="c1"># 安装位置 /home/shiyanlou/    </span>
+<span class="c1"># 编译器：GCC    </span>
+<span class="c1"># 调试器：GDB 调试器    </span>
+
+<span class="c1"># 解压到指定目录</span>
+tar -zxvf hit-oslab-linux-20110823.tar.gz <span class="se">\
+</span><span class="se"></span>  -C /home/shiyanlou/
+
+<span class="c1"># 编译内核</span>
+<span class="nb">cd</span> ./linux-0.11/
+make
+
+<span class="c1"># 在bochs中运行编译好的内核</span>
+<span class="c1"># 注意是在上层目录</span>
+<span class="c1"># 刚刚编译是在 oslab/linux-0.11/ 文件夹下</span>
+$ <span class="nb">cd</span> ~/oslab/
+<span class="c1"># 执行 run 脚本</span>
+$ ./run
+</code></pre></div><p>汇编级调试：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># 确认在 oslab 目录下</span>
+<span class="nb">cd</span> ~/oslab/
+
+<span class="c1"># 运行脚本前确定已经关闭刚刚运行的 Bochs</span>
+./dbg-asm
+</code></pre></div><p>C语言级调试：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># 首先执行</span>
+<span class="nb">cd</span> ~/oslab
+./dbg-c
+
+<span class="c1"># 再打开一个终端窗口，执行</span>
+<span class="nb">cd</span> ~/oslab
+./rungdb
+</code></pre></div><h3 id="文件交换">文件交换</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># 启动挂载脚本</span>
+<span class="nb">cd</span> ~/oslab/
+sudo ./mount-hdc
+
+<span class="c1"># 进入挂载到 Ubuntu 上的目录</span>
+<span class="nb">cd</span> ~/oslab/hdc
+<span class="c1"># 查看内容</span>
+ls -al
+
+<span class="c1"># 读写完毕后，卸载系统</span>
+<span class="nb">cd</span> ~/oslab/
+<span class="c1"># 卸载</span>
+sudo umount hdc
+</code></pre></div><p>注意 1：不要在 0.11 内核运行的时候 mount 镜像文件，否则可能会损坏文件系统。同理，也不要在已经 mount 的时候运行 0.11 内核。</p>
+<p>注意 2：在关闭 Bochs 之前，需要先在 0.11 的命令行运行 “sync”，确保所有缓存数据都存盘后，再关闭 Bochs。</p>
 </div>
                     <div class="post_footer">
                         
@@ -193,43 +243,6 @@
 <script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
 <script src="https://laurel-he.github.io/js/zozo.js"></script>
 
-
-<script type="text/javascript" async
-    src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-        MathJax.Hub.Config({
-            tex2jax: {
-                inlineMath: [['$', '$'], ['\\(', '\\)']],
-                displayMath: [['$$', '$$'], ['\[\[', '\]\]']],
-                processEscapes: true,
-                processEnvironments: true,
-                skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-                TeX: {
-                    equationNumbers: { autoNumber: "AMS" },
-                    extensions: ["AMSmath.js", "AMSsymbols.js"]
-                }
-            }
-        });
-
-        MathJax.Hub.Queue(function () {
-            
-            
-            
-            var all = MathJax.Hub.getAllJax(), i;
-            for (i = 0; i < all.length; i += 1) {
-                all[i].SourceElement().parentNode.className += ' has-jax';
-            }
-        });
-    </script>
-
-<style>
-    code.has-jax {
-        font: inherit;
-        font-size: 100%;
-        background: inherit;
-        border: inherit;
-        color: #515151;
-    }
-</style>
 
 
 

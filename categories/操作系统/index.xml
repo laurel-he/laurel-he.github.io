@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>操作系统 on hexiaojiao</title>
+    <title>操作系统 on 风瑶</title>
     <link>https://laurel-he.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</link>
-    <description>Recent content in 操作系统 on hexiaojiao</description>
+    <description>Recent content in 操作系统 on 风瑶</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sun, 28 Nov 2021 17:40:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>操作系统（东北大学）- 01 概述</title>
+      <link>https://laurel-he.github.io/operatingsystem/leanopesys2/guide/</link>
+      <pubDate>Sun, 28 Nov 2021 17:40:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/operatingsystem/leanopesys2/guide/</guid>
+      <description>操作系统 基本概念 需要学习： 操作系统是如何工作的 操作系统内部算法和数据结构 设计操作系统过程中的问题和解决方案 学习目的 操作系统的基本概念，基本结构及运行环境 操作系统原理，设计方法和实现技术 概述 操作系统：管</description>
+    </item>
+    
     <item>
       <title>操作系统（哈工大李治军老师）32讲（全）- 01 概述</title>
       <link>https://laurel-he.github.io/operatingsystem/learnopesys/summary/</link>
@@ -14,6 +23,15 @@
       
       <guid>https://laurel-he.github.io/operatingsystem/learnopesys/summary/</guid>
       <description>来源： 本系列来源于操作系统（哈工大李治军老师）32讲（全）的学习笔记： 操作系统 蓝桥-操作系统练习 操作系统概述 计算机的基本组成： 用计算机这个工具来解决一些实际问题。 操作系统：计算机硬件和应用之间的一层软</description>
+    </item>
+    
+    <item>
+      <title>操作系统（哈工大李治军老师）32讲（全）- 02 操作系统引导</title>
+      <link>https://laurel-he.github.io/operatingsystem/learnopesys/guide/</link>
+      <pubDate>Sun, 28 Nov 2021 17:40:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/operatingsystem/learnopesys/guide/</guid>
+      <description>来源： 本系列来源于操作系统（哈工大李治军老师）32讲（全）的学习笔记： 操作系统 蓝桥-操作系统练习 课程目标 了解操作系统提供的接口 操作系统内部操作 思索 计算机如何工作的（取指执行）？ 思索过程-&amp;gt;变成程</description>
     </item>
     
     <item>
@@ -50,6 +68,15 @@
       
       <guid>https://laurel-he.github.io/operatingsystem/singhuaopsys_01/</guid>
       <description>教学内容 操作系统的实现 操作系统软件的结构 中断及系统调用 内存管理 进程和线程 处理机调度 进程间通信（同步互斥） 文件系统：组织文件，方便用户的读写查找 I/O子系统：上万种的差异设备连到同一个系统中 什么是操作系</description>
+    </item>
+    
+    <item>
+      <title>lnmp环境搭建</title>
+      <link>https://laurel-he.github.io/operatingsystem/linux/lnmp/</link>
+      <pubDate>Sun, 28 Mar 2021 14:03:27 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/operatingsystem/linux/lnmp/</guid>
+      <description>参考文档： 百度百科:lnmp 问题背景 根据部分5W/1H原则来解释下问题背景（where/when/who基本不用说了,How单独起一个） LNMP环境是什么（What） lnmp环境通常就是指linux+</description>
     </item>
     
     <item>

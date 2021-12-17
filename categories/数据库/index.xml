@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>数据库 on hexiaojiao</title>
+    <title>数据库 on 风瑶</title>
     <link>https://laurel-he.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
-    <description>Recent content in 数据库 on hexiaojiao</description>
+    <description>Recent content in 数据库 on 风瑶</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 20 Oct 2019 18:27:44 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 28 Mar 2021 14:03:27 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>mql数据导入导出</title>
+      <link>https://laurel-he.github.io/database/mysql/%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA/</link>
+      <pubDate>Sun, 28 Mar 2021 14:03:27 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/database/mysql/%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA/</guid>
+      <description>mysqldump mysqldump -u 用户名 -p [&amp;ndash;opt] DATABASENAME [Table] &amp;gt;导出SQL文件名 source</description>
+    </item>
+    
     <item>
       <title>mongodb学习记录</title>
       <link>https://laurel-he.github.io/database/mongo/mongocomplex/</link>

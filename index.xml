@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>hexiaojiao</title>
+    <title>风瑶</title>
     <link>https://laurel-he.github.io/</link>
-    <description>Recent content on hexiaojiao</description>
+    <description>Recent content on 风瑶</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sun, 28 Nov 2021 17:40:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>操作系统（东北大学）- 01 概述</title>
+      <link>https://laurel-he.github.io/operatingsystem/leanopesys2/guide/</link>
+      <pubDate>Sun, 28 Nov 2021 17:40:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/operatingsystem/leanopesys2/guide/</guid>
+      <description>操作系统 基本概念 需要学习： 操作系统是如何工作的 操作系统内部算法和数据结构 设计操作系统过程中的问题和解决方案 学习目的 操作系统的基本概念，基本结构及运行环境 操作系统原理，设计方法和实现技术 概述 操作系统：管</description>
+    </item>
+    
     <item>
       <title>操作系统（哈工大李治军老师）32讲（全）- 01 概述</title>
       <link>https://laurel-he.github.io/operatingsystem/learnopesys/summary/</link>
@@ -14,6 +23,15 @@
       
       <guid>https://laurel-he.github.io/operatingsystem/learnopesys/summary/</guid>
       <description>来源： 本系列来源于操作系统（哈工大李治军老师）32讲（全）的学习笔记： 操作系统 蓝桥-操作系统练习 操作系统概述 计算机的基本组成： 用计算机这个工具来解决一些实际问题。 操作系统：计算机硬件和应用之间的一层软</description>
+    </item>
+    
+    <item>
+      <title>操作系统（哈工大李治军老师）32讲（全）- 02 操作系统引导</title>
+      <link>https://laurel-he.github.io/operatingsystem/learnopesys/guide/</link>
+      <pubDate>Sun, 28 Nov 2021 17:40:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/operatingsystem/learnopesys/guide/</guid>
+      <description>来源： 本系列来源于操作系统（哈工大李治军老师）32讲（全）的学习笔记： 操作系统 蓝桥-操作系统练习 课程目标 了解操作系统提供的接口 操作系统内部操作 思索 计算机如何工作的（取指执行）？ 思索过程-&amp;gt;变成程</description>
     </item>
     
     <item>
@@ -257,6 +275,24 @@
       
       <guid>https://laurel-he.github.io/datastruct/datastruct_01/</guid>
       <description>数据结构学习系列都来自于中国大学MOOC上的浙江大学数据结构学习课程。原课程代码全部采用C语言实现，由于本菜平时最擅长（zhihuiyong）使用php，因此所有算法全部翻译成了php实现。课程链接：</description>
+    </item>
+    
+    <item>
+      <title>lnmp环境搭建</title>
+      <link>https://laurel-he.github.io/operatingsystem/linux/lnmp/</link>
+      <pubDate>Sun, 28 Mar 2021 14:03:27 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/operatingsystem/linux/lnmp/</guid>
+      <description>参考文档： 百度百科:lnmp 问题背景 根据部分5W/1H原则来解释下问题背景（where/when/who基本不用说了,How单独起一个） LNMP环境是什么（What） lnmp环境通常就是指linux+</description>
+    </item>
+    
+    <item>
+      <title>mql数据导入导出</title>
+      <link>https://laurel-he.github.io/database/mysql/%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA/</link>
+      <pubDate>Sun, 28 Mar 2021 14:03:27 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/database/mysql/%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA/</guid>
+      <description>mysqldump mysqldump -u 用户名 -p [&amp;ndash;opt] DATABASENAME [Table] &amp;gt;导出SQL文件名 source</description>
     </item>
     
     <item>
@@ -945,6 +981,15 @@
     
     <item>
       <title></title>
+      <link>https://laurel-he.github.io/database/redis/basic/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/database/redis/basic/</guid>
+      <description>redis-cli -h 127.0.0.1 -p 6379 shutdown redis-server /etc/redis/redis.conf Could not connect to Redis at 127.0.0.1:6379: Connection refused: 报价，询价埋点</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://laurel-he.github.io/designpattern/phpallpattern/02/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -990,10 +1035,28 @@
     
     <item>
       <title></title>
+      <link>https://laurel-he.github.io/operatingsystem/linux/sar/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/operatingsystem/linux/sar/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://laurel-he.github.io/operatingsystem/linux/sed/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/operatingsystem/linux/sed/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://laurel-he.github.io/operatingsystem/linux/top/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/operatingsystem/linux/top/</guid>
       <description></description>
     </item>
     
@@ -1026,6 +1089,15 @@
     
     <item>
       <title></title>
+      <link>https://laurel-he.github.io/post/%E6%9E%B6%E6%9E%84/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/post/%E6%9E%B6%E6%9E%84/</guid>
+      <description>架构 正向代理与反向代理：</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://laurel-he.github.io/private/2019-02-26/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -1049,6 +1121,15 @@
       
       <guid>https://laurel-he.github.io/private/20190214/</guid>
       <description>1 计算规则（都在订单产品维度） 1 已收 （1）计算此订单产品所在的订单的所有已收款 （2）计算此订单产品所在的订单有多少订单产品 （3）所有已收款除以订单产品数量，平均得出每个订单产品的已收款 2 基础接口实现 1</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://laurel-he.github.io/private/cbti/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/private/cbti/</guid>
+      <description>1）把这些令你感到焦虑的念头写下来； 年龄焦虑： 2）针对每一个念头，进行真实性评估； 3）用更加现实的想法来替代这些念头。 证据分析：支持它的证据有哪些？不支持它的证据有哪些？ 概率评估：综合双方面的证据，它</description>
     </item>
     
     <item>
