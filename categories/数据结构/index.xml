@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>数据结构 on 风瑶</title>
+    <title>数据结构 on 瑶风</title>
     <link>https://laurel-he.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
-    <description>Recent content in 数据结构 on 风瑶</description>
+    <description>Recent content in 数据结构 on 瑶风</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 01 Sep 2021 18:27:44 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 02 Oct 2021 18:27:44 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>数据结构学习</title>
+      <link>https://laurel-he.github.io/datastruct/base/</link>
+      <pubDate>Sat, 02 Oct 2021 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/datastruct/base/</guid>
+      <description>参考文章 算法路线图 学习路线图： [comment]: &amp;lt;&amp;gt; (![explain](../images/数据结构/640.webp))</description>
+    </item>
+    
     <item>
       <title>b树</title>
       <link>https://laurel-he.github.io/datastruct/btree/</link>

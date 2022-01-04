@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>mysql on 风瑶</title>
+    <title>mysql on 瑶风</title>
     <link>https://laurel-he.github.io/categories/mysql/</link>
-    <description>Recent content in mysql on 风瑶</description>
+    <description>Recent content in mysql on 瑶风</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Fri, 27 Aug 2021 13:47:00 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/mysql/index.xml" rel="self" type="application/rss+xml" />
@@ -23,6 +23,24 @@
       
       <guid>https://laurel-he.github.io/database/mysql/%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA/</guid>
       <description>mysqldump mysqldump -u 用户名 -p [&amp;ndash;opt] DATABASENAME [Table] &amp;gt;导出SQL文件名 source</description>
+    </item>
+    
+    <item>
+      <title>mysql引擎</title>
+      <link>https://laurel-he.github.io/database/mysql/mysqlengine/</link>
+      <pubDate>Sun, 28 Mar 2021 14:03:27 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/database/mysql/mysqlengine/</guid>
+      <description>参考文档： Mysql四种常见数据库引擎 MySQL引擎是什么 数据库存储引擎是数据库底层软件组织，数据库管理系统（DBMS）使用数据引擎进行创建、查询、更新和删除数据。不同的存储引擎提供不同的存储机制、索</description>
+    </item>
+    
+    <item>
+      <title>mysql锁</title>
+      <link>https://laurel-he.github.io/database/mysql/mysqllock/</link>
+      <pubDate>Sun, 28 Mar 2021 14:03:27 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/database/mysql/mysqllock/</guid>
+      <description>为什么需要加锁？</description>
     </item>
     
     <item>

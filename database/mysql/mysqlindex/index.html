@@ -8,7 +8,7 @@
 	
 	
 	
-	<title>mysql索引优化 ｜ 风瑶</title>
+	<title>mysql索引优化 ｜ 瑶风</title>
 	
     
     
@@ -67,7 +67,7 @@
         <div class="site_title">
             <h1>
                 <a href="https://laurel-he.github.io/">
-                    <span>风瑶</span>
+                    <span>瑶风</span>
                 </a>
             </h1>
         </div>
@@ -246,6 +246,8 @@ explain select … from … [where &hellip;]
 <p>索引从好到坏依次是：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">system &gt; const &gt; eq_ref &gt; ref &gt; fulltext &gt; ref_or_null &gt; index_merge &gt; unique_subquery &gt; index_subquery &gt; range &gt; index &gt; ALL
 </code></pre></div><p>一般来说，得保证查询至少达到range级别，最好能达到ref，否则就可能会出现性能问题。</p>
+<p>索引最左前缀原则
+覆盖索引</p>
 </div>
                     <div class="post_footer">
                         
