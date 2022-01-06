@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>mongodb on 瑶风</title>
-    <link>https://laurel-he.github.io/categories/mongodb/</link>
+    <link>https://YOURNAME.github.io/categories/mongodb/</link>
     <description>Recent content in mongodb on 瑶风</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 20 Oct 2019 18:27:44 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/mongodb/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 20 Oct 2019 18:27:44 +0000</lastBuildDate><atom:link href="https://YOURNAME.github.io/categories/mongodb/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>mongodb学习记录</title>
-      <link>https://laurel-he.github.io/database/mongo/mongocomplex/</link>
+      <link>https://YOURNAME.github.io/database/mongo/mongocomplex/</link>
       <pubDate>Sun, 20 Oct 2019 18:27:44 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/database/mongo/mongocomplex/</guid>
+      <guid>https://YOURNAME.github.io/database/mongo/mongocomplex/</guid>
       <description>参考文档 http://www.mongoing.com/docs/reference/operator/aggregation/interface.html https://www.cnblogs.com/zhoujie/p/mongo1.html https://www.docs4dev.com/docs/zh/mongodb/v3.6/reference/tutorial-text-search-in-aggregation.html mongodb精准匹配 假设有需求如下：数据为多层级的数组，需要精准匹配到某一个层级，并进行更新或新增等操作，如何实现？ 实现方式 当Mongodb版本大于3.6.1，实现将会非常简单，因为m</description>
     </item>
     
     <item>
       <title>mongodb使用</title>
-      <link>https://laurel-he.github.io/database/mongo/mongo1/</link>
+      <link>https://YOURNAME.github.io/database/mongo/mongo1/</link>
       <pubDate>Tue, 02 Apr 2019 18:27:44 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/database/mongo/mongo1/</guid>
+      <guid>https://YOURNAME.github.io/database/mongo/mongo1/</guid>
       <description>基础 列出所有数据库:show dbs; 列出所有表：show tables;或show collections; 查询所有数据：db.taname.find().pretty(); 查询指定列所有数据：db.tbname.find({},{</description>
     </item>
     

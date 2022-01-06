@@ -2,179 +2,188 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>学习 on 瑶风</title>
-    <link>https://laurel-he.github.io/categories/%E5%AD%A6%E4%B9%A0/</link>
+    <link>https://YOURNAME.github.io/categories/%E5%AD%A6%E4%B9%A0/</link>
     <description>Recent content in 学习 on 瑶风</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 30 Sep 2021 16:34:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 30 Sep 2021 16:34:10 +0000</lastBuildDate><atom:link href="https://YOURNAME.github.io/categories/%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>laravel配置params选项如MYSQL_ATTR_USE_BUFFERED_QUERY等</title>
-      <link>https://laurel-he.github.io/post/laravel_err_01/</link>
+      <link>https://YOURNAME.github.io/post/laravel_err_01/</link>
       <pubDate>Thu, 30 Sep 2021 16:34:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/laravel_err_01/</guid>
+      <guid>https://YOURNAME.github.io/post/laravel_err_01/</guid>
       <description>以下内容已同步至CSDN 绝了，laravel使用的是illuminate/database作为orm，我们用的swoole，在使用过程中报了如下错误： SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffered queries are active. Consider using PDOStatement::fetchAll() 这个错误在网上一搜</description>
     </item>
     
     <item>
       <title>表达式</title>
-      <link>https://laurel-he.github.io/corc&#43;&#43;/c/03expression/</link>
+      <link>https://YOURNAME.github.io/corc&#43;&#43;/c/03expression/</link>
       <pubDate>Sat, 04 Sep 2021 16:34:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/corc&#43;&#43;/c/03expression/</guid>
+      <guid>https://YOURNAME.github.io/corc&#43;&#43;/c/03expression/</guid>
       <description></description>
     </item>
     
     <item>
       <title>数据结构学习笔记-1</title>
-      <link>https://laurel-he.github.io/datastruct/datastruct_01/</link>
+      <link>https://YOURNAME.github.io/datastruct/datastruct_01/</link>
       <pubDate>Tue, 20 Jul 2021 16:34:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/datastruct/datastruct_01/</guid>
+      <guid>https://YOURNAME.github.io/datastruct/datastruct_01/</guid>
       <description>数据结构学习系列都来自于中国大学MOOC上的浙江大学数据结构学习课程。原课程代码全部采用C语言实现，由于本菜平时最擅长（zhihuiyong）使用php，因此所有算法全部翻译成了php实现。课程链接：</description>
     </item>
     
     <item>
       <title>目录</title>
-      <link>https://laurel-he.github.io/post/total/</link>
+      <link>https://YOURNAME.github.io/post/total/</link>
       <pubDate>Thu, 03 Sep 2020 16:10:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/total/</guid>
+      <guid>https://YOURNAME.github.io/post/total/</guid>
       <description>目录： 1 刷题 2 设计模式 3 数据库 4 操作系统 5 php 6 go 7 python 8 前端 9 云原生 10 消息队列 11 学习</description>
     </item>
     
     <item>
       <title>使用go编写webassembly</title>
-      <link>https://laurel-he.github.io/go/webassembly_go_1/</link>
+      <link>https://YOURNAME.github.io/go/webassembly_go_1/</link>
       <pubDate>Tue, 10 Dec 2019 12:34:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/go/webassembly_go_1/</guid>
+      <guid>https://YOURNAME.github.io/go/webassembly_go_1/</guid>
       <description>使用go编写webassembly并在浏览器执行 参考博客 用go写WebAssembly入门 下载安装 go 编写测试文件hello.go package main import &amp;#34;fmt&amp;#34; func main() { fmt.Println(&amp;#34;Hello World!&amp;#34;) } 生成wasm文件 GOARCH=wasm GOOS=js go build -o hello.wasm hello.go 在windows下需要</description>
     </item>
     
     <item>
       <title>测试</title>
-      <link>https://laurel-he.github.io/post/unittest/</link>
+      <link>https://YOURNAME.github.io/post/unittest/</link>
       <pubDate>Tue, 10 Dec 2019 12:34:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/unittest/</guid>
+      <guid>https://YOURNAME.github.io/post/unittest/</guid>
       <description>单元测试 mock 接口测试 stub mock fakeserver</description>
     </item>
     
     <item>
       <title>代码整洁之道1-9章</title>
-      <link>https://laurel-he.github.io/post/cleancode/</link>
+      <link>https://YOURNAME.github.io/post/cleancode/</link>
       <pubDate>Mon, 07 Oct 2019 17:40:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/cleancode/</guid>
+      <guid>https://YOURNAME.github.io/post/cleancode/</guid>
       <description>需求描述 第一章：整洁代码 要有代码 代码呈现了需求的细节，将需求明确到机器可以执行的细节程度 糟糕的代码 不要产生糟糕的、混乱的代码，勒布朗法则：稍后等于永不 混乱的代价 花时间保持代码整洁不但有关效率，还有关生</description>
     </item>
     
     <item>
       <title>设计模式六大原则</title>
-      <link>https://laurel-he.github.io/designpattern/others/codeprinceple/</link>
+      <link>https://YOURNAME.github.io/designpattern/others/codeprinceple/</link>
       <pubDate>Mon, 07 Oct 2019 17:40:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/designpattern/others/codeprinceple/</guid>
+      <guid>https://YOURNAME.github.io/designpattern/others/codeprinceple/</guid>
       <description>本文参考了设计模式六大原则 单一职责原则（SPR:Single Responsibility Principle） 一个类应该有且仅有一个原因导致该类的变更，即一个类应该只负责一项职责 但是在实际工作中，职责是会扩散的，一个类可能会新增</description>
     </item>
     
     <item>
       <title>单例模式</title>
-      <link>https://laurel-he.github.io/designpattern/phpallpattern/singlemode/</link>
+      <link>https://YOURNAME.github.io/designpattern/phpallpattern/singlemode/</link>
       <pubDate>Sun, 06 Oct 2019 10:40:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/designpattern/phpallpattern/singlemode/</guid>
+      <guid>https://YOURNAME.github.io/designpattern/phpallpattern/singlemode/</guid>
       <description>基础介绍 概念介绍 作为对象的创建模式，单例模式确保某一个类只有一个实例，并且对外提供这个全局实例的访问入口。它不会创建实例副本，而是会向单例类内部存储的实例返回一个引用。 单例模式三要素 需要一个保存类的唯</description>
     </item>
     
     <item>
       <title>生产者消费者模式</title>
-      <link>https://laurel-he.github.io/designpattern/phpallpattern/producerconsumer/</link>
+      <link>https://YOURNAME.github.io/designpattern/phpallpattern/producerconsumer/</link>
       <pubDate>Sat, 05 Oct 2019 17:40:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/designpattern/phpallpattern/producerconsumer/</guid>
+      <guid>https://YOURNAME.github.io/designpattern/phpallpattern/producerconsumer/</guid>
       <description>基础概念 概念介绍 某块模块负责产生数据，这些数据由另一个模块来负责处理。产生数据的模块，就形象地称为生产者；而处理数据的模块，就称为消费者。 该模式还需要有一个缓冲区处于生产者和消费者之间，作为一个中介。</description>
     </item>
     
     <item>
       <title>代码大全</title>
-      <link>https://laurel-he.github.io/post/codecomplate_01/</link>
+      <link>https://YOURNAME.github.io/post/codecomplate_01/</link>
       <pubDate>Sat, 05 Oct 2019 10:40:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/codecomplate_01/</guid>
+      <guid>https://YOURNAME.github.io/post/codecomplate_01/</guid>
       <description>前期准备 前期准备的重要性 不要立即开始写代码，要做好必要的需求分析和架构设计，写好需求文档和技术文档，防止浪费时间和精力制造错误的东西 需求核对表 针对功能需求： 1．是否详细定义了系统的全部输入，包括其来源</description>
     </item>
     
     <item>
       <title>命令模式</title>
-      <link>https://laurel-he.github.io/designpattern/phpallpattern/commandmode/</link>
+      <link>https://YOURNAME.github.io/designpattern/phpallpattern/commandmode/</link>
       <pubDate>Fri, 04 Oct 2019 17:40:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/designpattern/phpallpattern/commandmode/</guid>
+      <guid>https://YOURNAME.github.io/designpattern/phpallpattern/commandmode/</guid>
       <description>基础概念 基础介绍 （1）概念介绍： 命令模式（Command Pattern）是一种数据驱动的设计模式，它属于行为型模式。请求以命令的形式包裹在对象中，并传给调用对象。调用对象寻找可以处理该命令的合适的对象</description>
     </item>
     
     <item>
       <title>c语言基础介绍</title>
-      <link>https://laurel-he.github.io/corc&#43;&#43;/c/01basic/</link>
+      <link>https://YOURNAME.github.io/corc&#43;&#43;/c/basic/</link>
       <pubDate>Wed, 04 Sep 2019 16:34:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/corc&#43;&#43;/c/01basic/</guid>
+      <guid>https://YOURNAME.github.io/corc&#43;&#43;/c/basic/</guid>
       <description>本系列来自于中国大学MOOC的 程序设计入门C语言 学习视频总结 基础 学习程序设计的目的 通过学习程序设计，理解计算机如何工作，计算机擅长做什么，不擅长做什么。 计算机如何解决问题？ 告诉计算机的步骤，它会一步一</description>
     </item>
     
     <item>
-      <title>开始编程</title>
-      <link>https://laurel-he.github.io/corc&#43;&#43;/c/02first/</link>
+      <title>第一周_开始编程</title>
+      <link>https://YOURNAME.github.io/corc&#43;&#43;/c/01first/</link>
       <pubDate>Wed, 04 Sep 2019 16:34:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/corc&#43;&#43;/c/02first/</guid>
-      <description>本系列来自于中国大学MOOC的 程序设计入门C语言 学习视频总结 第一个程序 #include &amp;lt;stdio.h&amp;gt; int main(int argc, char ** argv) { printf(&amp;#34;Hello Word\n&amp;#34;); int i = 0; scanf(&amp;#34;%d&amp;#34;, &amp;amp;i); printf(&amp;#34;The res is: %d&amp;#34;, i + 10); return 0; } 程序的框架就是： #include &amp;lt;stdio.h&amp;gt; int main() { return 0; } 换行和空格不意味着任何问题。 编程工具我使用的</description>
+      <guid>https://YOURNAME.github.io/corc&#43;&#43;/c/01first/</guid>
+      <description>本系列来自于中国大学MOOC的 程序设计入门C语言 学习视频总结 第一个程序 #include &amp;lt;stdio.h&amp;gt; int main(int argc, char ** argv) { printf(&amp;#34;Hello Word\n&amp;#34;); int i = 0; scanf(&amp;#34;%d&amp;#34;, &amp;amp;i); printf(&amp;#34;The res is: %d&amp;#34;, i + 10); return 0; } 换行和空格不意味着任何问题。 编程工具可以使用codeblocks或原课件中推</description>
+    </item>
+    
+    <item>
+      <title>第一周_计算</title>
+      <link>https://YOURNAME.github.io/corc&#43;&#43;/c/02%E8%AE%A1%E7%AE%97/</link>
+      <pubDate>Wed, 04 Sep 2019 16:34:10 +0000</pubDate>
+      
+      <guid>https://YOURNAME.github.io/corc&#43;&#43;/c/02%E8%AE%A1%E7%AE%97/</guid>
+      <description>c语言32个关键字 类型 包含关键字 类型说明保留字 int,long,short,float,double,char,unsigned,signed,const,void,volatile,enum,struct,union 语句定义保留字 if,else,goto,switch,case,do,while,for,continue,break,return,default,typedef 存储类说明保留字 auto,register,extern,static 长度运算符保留字 sizeof 变量 如何输入数字运行？ 1 需要有个地方可以放置 2 有地方可以输入 3 可以对输入进行运算 一个简单的计算找零程</description>
     </item>
     
     <item>
       <title>策略模式</title>
-      <link>https://laurel-he.github.io/designpattern/phpallpattern/strategy/</link>
+      <link>https://YOURNAME.github.io/designpattern/phpallpattern/strategy/</link>
       <pubDate>Mon, 29 Jul 2019 14:37:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/designpattern/phpallpattern/strategy/</guid>
+      <guid>https://YOURNAME.github.io/designpattern/phpallpattern/strategy/</guid>
       <description>概念 定义 策略模式定义了算法族，分别封装起来，让他们之间可以相互替换，该模式让算法独立于使用它的客户而独立变化 组成 1 抽象策略角色：策略类，通常由一个接口或者抽象类实现 2 具体策略角色：包装了相关的算法和行</description>
     </item>
     
     <item>
       <title>简单工厂模式</title>
-      <link>https://laurel-he.github.io/designpattern/phpallpattern/simplefactory/</link>
+      <link>https://YOURNAME.github.io/designpattern/phpallpattern/simplefactory/</link>
       <pubDate>Wed, 24 Jul 2019 10:40:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/designpattern/phpallpattern/simplefactory/</guid>
+      <guid>https://YOURNAME.github.io/designpattern/phpallpattern/simplefactory/</guid>
       <description>引入 实现计算器 代码实现 1 实现一个基础的计算器功能，代码见https://github.com/laurel-he/design_pattern/blob/master/simpleFactory/ca</description>
     </item>
     
     <item>
       <title>抽象工厂模式</title>
-      <link>https://laurel-he.github.io/designpattern/phpallpattern/abstractfactory/</link>
+      <link>https://YOURNAME.github.io/designpattern/phpallpattern/abstractfactory/</link>
       <pubDate>Mon, 22 Jul 2019 17:40:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/designpattern/phpallpattern/abstractfactory/</guid>
+      <guid>https://YOURNAME.github.io/designpattern/phpallpattern/abstractfactory/</guid>
       <description>参考：抽象工厂模式（Abstract Factory） 目的 在不指定具体类的情况下创建一系列相关或依赖对象。 通常创建的类都实现相同的接口。 抽象工厂的客户并不关心这些对象是如何创建的，它只是知道它们是如何一</description>
     </item>
     
     <item>
       <title>设计模式基础</title>
-      <link>https://laurel-he.github.io/designpattern/others/basic/</link>
+      <link>https://YOURNAME.github.io/designpattern/others/basic/</link>
       <pubDate>Sun, 07 Jul 2019 17:40:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/designpattern/others/basic/</guid>
+      <guid>https://YOURNAME.github.io/designpattern/others/basic/</guid>
       <description>本文参考了书籍《大话设计模式》/文章从招式与内功谈起——设计模式概述 以及系列文章PHP 设计模式系列 定义 在软件工程中，设计模式（Design Pattern）是对软件设计中普遍存在（反复出现）的各种问题，</description>
     </item>
     
     <item>
       <title>各种奇怪的坑</title>
-      <link>https://laurel-he.github.io/php/2019_01_01/</link>
+      <link>https://YOURNAME.github.io/php/2019_01_01/</link>
       <pubDate>Fri, 01 Feb 2019 16:10:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/php/2019_01_01/</guid>
+      <guid>https://YOURNAME.github.io/php/2019_01_01/</guid>
       <description>1 strtotime() 描述 获取上个月的时间可以是date(&amp;lsquo;Y-m-d&amp;rsquo;,strtotime(&#39;-1 month&#39;));如果今天是31号而上个月没有31号，就会直接输出这个月1号； 解决办法 使用la</description>
     </item>
     

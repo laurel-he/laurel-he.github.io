@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>docker on 瑶风</title>
-    <link>https://laurel-he.github.io/categories/docker/</link>
+    <link>https://YOURNAME.github.io/categories/docker/</link>
     <description>Recent content in docker on 瑶风</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 21 Apr 2020 21:03:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/docker/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 21 Apr 2020 21:03:10 +0000</lastBuildDate><atom:link href="https://YOURNAME.github.io/categories/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>《第一本docker书》学习笔记01</title>
-      <link>https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/docker/docker01/</link>
+      <link>https://YOURNAME.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/docker/docker01/</link>
       <pubDate>Tue, 21 Apr 2020 21:03:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/docker/docker01/</guid>
+      <guid>https://YOURNAME.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/docker/docker01/</guid>
       <description>Docker与配置管理 docker的核心组件 （1）docker客户端和服务器，也称为docker引擎 （2）docker镜像 （3）Registry （4）Docker容器 基本使用 docker info 查看docker程序是</description>
     </item>
     

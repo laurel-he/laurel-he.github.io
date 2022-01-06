@@ -2,116 +2,125 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Phps on 瑶风</title>
-    <link>https://laurel-he.github.io/php/</link>
+    <link>https://YOURNAME.github.io/php/</link>
     <description>Recent content in Phps on 瑶风</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 20 Nov 2021 18:27:44 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/php/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 20 Nov 2021 18:27:44 +0000</lastBuildDate><atom:link href="https://YOURNAME.github.io/php/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>swoole基本使用</title>
-      <link>https://laurel-he.github.io/php/swoole/basic/</link>
+      <link>https://YOURNAME.github.io/php/swoole/basic/</link>
       <pubDate>Sat, 20 Nov 2021 18:27:44 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/php/swoole/basic/</guid>
+      <guid>https://YOURNAME.github.io/php/swoole/basic/</guid>
       <description>本文参考swoole文档 安装 安装过程大概可以参考如下dockerfile: FROMalpine:latest# 替换镜像源并安装基础服务RUN sed -i &amp;#39;s/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g&amp;#39; /etc/apk/repositories \ &amp;amp;&amp;amp; apk add php7 php7-fpm php7-opcache php7-curl php7-pdo php7-gd php7-dev php7-mbstring php7-mysqli php7-json vim \ &amp;amp;&amp;amp; apk add gcc g++ make autoconf libc-dev# 挂载VOLUME [&amp;#34;/data&amp;#34;]# 安装swooleCO</description>
     </item>
     
     <item>
       <title>pcntl</title>
-      <link>https://laurel-he.github.io/php/pcntl/</link>
+      <link>https://YOURNAME.github.io/php/pcntl/</link>
       <pubDate>Sun, 26 Sep 2021 13:47:00 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/php/pcntl/</guid>
+      <guid>https://YOURNAME.github.io/php/pcntl/</guid>
       <description>pcntl_wait:等待或返回fork的子进程状态</description>
     </item>
     
     <item>
       <title>php多维数组相关处理</title>
-      <link>https://laurel-he.github.io/php/multiarr/</link>
+      <link>https://YOURNAME.github.io/php/multiarr/</link>
       <pubDate>Thu, 16 Apr 2020 18:27:44 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/php/multiarr/</guid>
+      <guid>https://YOURNAME.github.io/php/multiarr/</guid>
       <description>使用场景 在工作中遇到了两次需要把不确定维度的多维数组渲染出来的情况，且还需要修改值和结构，如果使用json-patch会受到限制（需要根据不同的情况打补丁，且由于结构不一定一致，打补丁可能会错误地修改</description>
     </item>
     
     <item>
       <title>有用的代码段-php篇</title>
-      <link>https://laurel-he.github.io/php/usefulcode1/</link>
+      <link>https://YOURNAME.github.io/php/usefulcode1/</link>
       <pubDate>Thu, 16 Jan 2020 12:34:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/php/usefulcode1/</guid>
+      <guid>https://YOURNAME.github.io/php/usefulcode1/</guid>
       <description>分步骤执行 &amp;lt;?php /** * @param mixed ...$args * @return bool * @throws Exception */ public function stepRun(...$args): bool { $count = $args[0]; $method = $args[1]; $step = array_key_exists(2, $args) ? $args[2] : 10; $limit = array_key_exists(3, $args) ? $args[3] : 10; $param = array_key_exists(4, $args) ? $args[4] : &amp;#39;&amp;#39;; $stepCount = ceil($count / $step); for ($nowStep = 0; $nowStep &amp;lt; $stepCount; $nowStep ++) { $this-&amp;gt;$method($limit, $nowStep * $step, $param); sleep(1); } sleep(1); return true; } ?&amp;gt;使用方法 &amp;lt;?php $this-&amp;gt;stepRun($groupChangeCount, &amp;#39;loopGetData&amp;#39;, 30, 30); ?&amp;gt;分析</description>
     </item>
     
     <item>
       <title>Laravel 日志系统</title>
-      <link>https://laurel-he.github.io/php/laravel/log/</link>
+      <link>https://YOURNAME.github.io/php/laravel/log/</link>
       <pubDate>Thu, 11 Apr 2019 15:23:44 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/php/laravel/log/</guid>
+      <guid>https://YOURNAME.github.io/php/laravel/log/</guid>
       <description>1 （自己摸索版本）5.2 1 定义路径 .env配置文件添加日志路径，例如 LOG_PATH=/tmp/paytest 2 启动文件添加日志路径 $app-&amp;gt;configureMonologUsing(function($logger){ $logger-&amp;gt;pushHandler(new \Monolog\Handler\RotatingFileHandler(env(&amp;#39;LOG_PATH&amp;#39;).&amp;#39;.log&amp;#39;), 10); return $logger; }); 2 官方文档 1 异常处理 介绍 当您启动一个新的 Laravel 项目时，错误和异常处理就已为您配置。 应用程序触发的所</description>
     </item>
     
     <item>
       <title>PHP常见算法</title>
-      <link>https://laurel-he.github.io/php/phpalg/</link>
+      <link>https://YOURNAME.github.io/php/phpalg/</link>
       <pubDate>Mon, 08 Apr 2019 18:27:44 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/php/phpalg/</guid>
+      <guid>https://YOURNAME.github.io/php/phpalg/</guid>
       <description>排序算法 1 冒泡排序 解析 从零开始，每一位和剩余位数比较，如果大于（小于）则交换，最后一位最终会是最大（最小）的。 代码 &amp;lt;?php $arr = [2,3,1,4,7,6,9]; var_dump(bubbleSort($arr)); function bubbleSort($arr) { $len = count($arr); for($i = 0;$i &amp;lt; $len; $i++) { for($j = $len - 1;$j &amp;gt; $i;$j--) { if($arr[$j] &amp;lt; $arr[$j-1]) { $tmp = $arr[$j]; $arr[$j ] = $arr[$j - 1]; $arr[$j - 1] =</description>
     </item>
     
     <item>
       <title>安装php sniffer</title>
-      <link>https://laurel-he.github.io/php/phppsr/</link>
+      <link>https://YOURNAME.github.io/php/phppsr/</link>
       <pubDate>Sun, 07 Apr 2019 18:27:44 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/php/phppsr/</guid>
+      <guid>https://YOURNAME.github.io/php/phppsr/</guid>
       <description>安装pear（参考文档：https://www.cnblogs.com/huangbx/p/php_codesniffer.html） 从以下网址：http://pear.php.net/go-pear</description>
     </item>
     
     <item>
       <title>一些php知识</title>
-      <link>https://laurel-he.github.io/php/laurel/</link>
+      <link>https://YOURNAME.github.io/php/laurel/</link>
       <pubDate>Thu, 28 Mar 2019 14:00:40 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/php/laurel/</guid>
+      <guid>https://YOURNAME.github.io/php/laurel/</guid>
       <description>argc和argv $argv代表传递的参数,$argc代表参数个数（相对路径+传的参数） 示例 &amp;lt;?php echo $argv[0]; echo &amp;#34;\n&amp;#34;; var_dump($argv[1]); echo &amp;#34;\n&amp;#34;; var_dump(intval($argv[2])); echo &amp;#34;\n&amp;#34;; echo $argv[3]; echo &amp;#34;\n&amp;#34;; echo $argc;</description>
     </item>
     
     <item>
       <title>各种奇怪的坑</title>
-      <link>https://laurel-he.github.io/php/2019_01_01/</link>
+      <link>https://YOURNAME.github.io/php/2019_01_01/</link>
       <pubDate>Fri, 01 Feb 2019 16:10:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/php/2019_01_01/</guid>
+      <guid>https://YOURNAME.github.io/php/2019_01_01/</guid>
       <description>1 strtotime() 描述 获取上个月的时间可以是date(&amp;lsquo;Y-m-d&amp;rsquo;,strtotime(&#39;-1 month&#39;));如果今天是31号而上个月没有31号，就会直接输出这个月1号； 解决办法 使用la</description>
     </item>
     
     <item>
       <title>fastadmin自定义角色组</title>
-      <link>https://laurel-he.github.io/php/test-my-site/</link>
+      <link>https://YOURNAME.github.io/php/test-my-site/</link>
       <pubDate>Thu, 31 Jan 2019 17:36:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/php/test-my-site/</guid>
+      <guid>https://YOURNAME.github.io/php/test-my-site/</guid>
       <description>之前使用fastadmin，自定义角色组，发现编辑/删除/修改等等权限可以直接权限管理中选择，然后用不同的角色登陆，会显示对应的权限按钮。此时有一个新的需求就是增加审核和批量审核，并且也增加对应的权限</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://laurel-he.github.io/php/swoole_coroutine_pdo_same/</link>
+      <link>https://YOURNAME.github.io/php/count/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/php/swoole_coroutine_pdo_same/</guid>
+      <guid>https://YOURNAME.github.io/php/count/</guid>
+      <description>记一次奇怪的事故。 一个数组，假设为$rangeData,传入的值为空，expode一下得到一个空数组，json_encode()打印下为 [&amp;quot;&amp;quot;]，但count这个值第一次判断大于1</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://YOURNAME.github.io/php/swoole_coroutine_pdo_same/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://YOURNAME.github.io/php/swoole_coroutine_pdo_same/</guid>
       <description>swoole连接池</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://laurel-he.github.io/php/test/</link>
+      <link>https://YOURNAME.github.io/php/test/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/php/test/</guid>
+      <guid>https://YOURNAME.github.io/php/test/</guid>
       <description>#!/bin/bash #j=$1 # 从501到489684 for ((i=504; i&amp;lt;=2000; i++)) do echo &amp;#34;INSERT INTO \`t_enquiry_item\` VALUES ($i, $i, 111, 10, 10, &amp;#39;2021-11-22 10:12:35&amp;#39;,&amp;#39;2021-11-26 17:10:25&amp;#39;); &amp;#34; &amp;gt;&amp;gt; &amp;#39;./data.sql&amp;#39; done</description>
     </item>
     

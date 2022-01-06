@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>elasticsearch on 瑶风</title>
-    <link>https://laurel-he.github.io/categories/elasticsearch/</link>
+    <link>https://YOURNAME.github.io/categories/elasticsearch/</link>
     <description>Recent content in elasticsearch on 瑶风</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 20 Nov 2021 18:27:44 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/elasticsearch/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 20 Nov 2021 18:27:44 +0000</lastBuildDate><atom:link href="https://YOURNAME.github.io/categories/elasticsearch/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>php下es基本使用</title>
-      <link>https://laurel-he.github.io/database/es/basic/</link>
+      <link>https://YOURNAME.github.io/database/es/basic/</link>
       <pubDate>Sat, 20 Nov 2021 18:27:44 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/database/es/basic/</guid>
+      <guid>https://YOURNAME.github.io/database/es/basic/</guid>
       <description>本文参考文档: es7.3文档 全文搜索引擎 Elasticsearch 入门教程 基础介绍 全文搜索属于最常见的需求，开源的 Elasticsearch是目前全文搜索引擎的首选。它可以快速地储存、搜索和分析海量数据。 安装 不同环境下安装方</description>
     </item>
     

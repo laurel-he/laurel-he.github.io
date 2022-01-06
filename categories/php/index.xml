@@ -2,71 +2,71 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>php on 瑶风</title>
-    <link>https://laurel-he.github.io/categories/php/</link>
+    <link>https://YOURNAME.github.io/categories/php/</link>
     <description>Recent content in php on 瑶风</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 30 Sep 2021 16:34:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/php/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 30 Sep 2021 16:34:10 +0000</lastBuildDate><atom:link href="https://YOURNAME.github.io/categories/php/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>laravel配置params选项如MYSQL_ATTR_USE_BUFFERED_QUERY等</title>
-      <link>https://laurel-he.github.io/post/laravel_err_01/</link>
+      <link>https://YOURNAME.github.io/post/laravel_err_01/</link>
       <pubDate>Thu, 30 Sep 2021 16:34:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/laravel_err_01/</guid>
+      <guid>https://YOURNAME.github.io/post/laravel_err_01/</guid>
       <description>以下内容已同步至CSDN 绝了，laravel使用的是illuminate/database作为orm，我们用的swoole，在使用过程中报了如下错误： SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffered queries are active. Consider using PDOStatement::fetchAll() 这个错误在网上一搜</description>
     </item>
     
     <item>
       <title>pcntl</title>
-      <link>https://laurel-he.github.io/php/pcntl/</link>
+      <link>https://YOURNAME.github.io/php/pcntl/</link>
       <pubDate>Sun, 26 Sep 2021 13:47:00 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/php/pcntl/</guid>
+      <guid>https://YOURNAME.github.io/php/pcntl/</guid>
       <description>pcntl_wait:等待或返回fork的子进程状态</description>
     </item>
     
     <item>
       <title>php多维数组相关处理</title>
-      <link>https://laurel-he.github.io/php/multiarr/</link>
+      <link>https://YOURNAME.github.io/php/multiarr/</link>
       <pubDate>Thu, 16 Apr 2020 18:27:44 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/php/multiarr/</guid>
+      <guid>https://YOURNAME.github.io/php/multiarr/</guid>
       <description>使用场景 在工作中遇到了两次需要把不确定维度的多维数组渲染出来的情况，且还需要修改值和结构，如果使用json-patch会受到限制（需要根据不同的情况打补丁，且由于结构不一定一致，打补丁可能会错误地修改</description>
     </item>
     
     <item>
       <title>Laravel 日志系统</title>
-      <link>https://laurel-he.github.io/php/laravel/log/</link>
+      <link>https://YOURNAME.github.io/php/laravel/log/</link>
       <pubDate>Thu, 11 Apr 2019 15:23:44 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/php/laravel/log/</guid>
+      <guid>https://YOURNAME.github.io/php/laravel/log/</guid>
       <description>1 （自己摸索版本）5.2 1 定义路径 .env配置文件添加日志路径，例如 LOG_PATH=/tmp/paytest 2 启动文件添加日志路径 $app-&amp;gt;configureMonologUsing(function($logger){ $logger-&amp;gt;pushHandler(new \Monolog\Handler\RotatingFileHandler(env(&amp;#39;LOG_PATH&amp;#39;).&amp;#39;.log&amp;#39;), 10); return $logger; }); 2 官方文档 1 异常处理 介绍 当您启动一个新的 Laravel 项目时，错误和异常处理就已为您配置。 应用程序触发的所</description>
     </item>
     
     <item>
       <title>PHP常见算法</title>
-      <link>https://laurel-he.github.io/php/phpalg/</link>
+      <link>https://YOURNAME.github.io/php/phpalg/</link>
       <pubDate>Mon, 08 Apr 2019 18:27:44 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/php/phpalg/</guid>
+      <guid>https://YOURNAME.github.io/php/phpalg/</guid>
       <description>排序算法 1 冒泡排序 解析 从零开始，每一位和剩余位数比较，如果大于（小于）则交换，最后一位最终会是最大（最小）的。 代码 &amp;lt;?php $arr = [2,3,1,4,7,6,9]; var_dump(bubbleSort($arr)); function bubbleSort($arr) { $len = count($arr); for($i = 0;$i &amp;lt; $len; $i++) { for($j = $len - 1;$j &amp;gt; $i;$j--) { if($arr[$j] &amp;lt; $arr[$j-1]) { $tmp = $arr[$j]; $arr[$j ] = $arr[$j - 1]; $arr[$j - 1] =</description>
     </item>
     
     <item>
       <title>安装php sniffer</title>
-      <link>https://laurel-he.github.io/php/phppsr/</link>
+      <link>https://YOURNAME.github.io/php/phppsr/</link>
       <pubDate>Sun, 07 Apr 2019 18:27:44 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/php/phppsr/</guid>
+      <guid>https://YOURNAME.github.io/php/phppsr/</guid>
       <description>安装pear（参考文档：https://www.cnblogs.com/huangbx/p/php_codesniffer.html） 从以下网址：http://pear.php.net/go-pear</description>
     </item>
     
     <item>
       <title>fastadmin自定义角色组</title>
-      <link>https://laurel-he.github.io/php/test-my-site/</link>
+      <link>https://YOURNAME.github.io/php/test-my-site/</link>
       <pubDate>Thu, 31 Jan 2019 17:36:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/php/test-my-site/</guid>
+      <guid>https://YOURNAME.github.io/php/test-my-site/</guid>
       <description>之前使用fastadmin，自定义角色组，发现编辑/删除/修改等等权限可以直接权限管理中选择，然后用不同的角色登陆，会显示对应的权限按钮。此时有一个新的需求就是增加审核和批量审核，并且也增加对应的权限</description>
     </item>
     

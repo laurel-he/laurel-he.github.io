@@ -2,80 +2,80 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Privates on 瑶风</title>
-    <link>https://laurel-he.github.io/private/</link>
+    <link>https://YOURNAME.github.io/private/</link>
     <description>Recent content in Privates on 瑶风</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 08 Jul 2020 20:00:40 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/private/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 08 Jul 2020 20:00:40 +0000</lastBuildDate><atom:link href="https://YOURNAME.github.io/private/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>学习计划</title>
-      <link>https://laurel-he.github.io/private/learn_main/</link>
+      <link>https://YOURNAME.github.io/private/learn_main/</link>
       <pubDate>Wed, 08 Jul 2020 20:00:40 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/private/learn_main/</guid>
+      <guid>https://YOURNAME.github.io/private/learn_main/</guid>
       <description>语言： 继续学习go python php 操作系统：深入了解linux 前端：es6 react 熟悉TCP/IP、HTTP等协议 socket网络编程开发 尝试对已完成的项目进行压测 1 设计模式 2 数据库设计及优化 3 操作系统(Linux，进</description>
     </item>
     
     <item>
       <title>减肥日记-介绍</title>
-      <link>https://laurel-he.github.io/private/fit01/</link>
+      <link>https://YOURNAME.github.io/private/fit01/</link>
       <pubDate>Thu, 23 May 2019 11:50:00 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/private/fit01/</guid>
+      <guid>https://YOURNAME.github.io/private/fit01/</guid>
       <description>创立原因及目标 我的表姐要在圣诞节前一天结婚（不是崇洋媚外，只是那时候恰好是个良辰吉日，我们老家又比较喜欢冬天结婚，这样很多亲戚都回家了）。算下来现在距离那天也差不多二百多天，我如果能够成功减肥，这样也</description>
     </item>
     
     <item>
       <title>重新实现monthly步骤</title>
-      <link>https://laurel-he.github.io/private/monthly/</link>
+      <link>https://YOURNAME.github.io/private/monthly/</link>
       <pubDate>Mon, 25 Mar 2019 09:41:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/private/monthly/</guid>
+      <guid>https://YOURNAME.github.io/private/monthly/</guid>
       <description>1 bi新建已收、已付、应收、应付表 CREATETABLE`order_product_set_pay`(`id`int(10)unsignedNOTNULL,`order_product_id`int(10)unsignedNOTNULL,`parent_order_product_id`int(10)unsignedDEFAULT&amp;#39;0&amp;#39;COMMENT&amp;#39;parent order_product_id&amp;#39;,`has_settlement`decimal(10,2)NOTNULLDEFAULT&amp;#39;0.00&amp;#39;,`should_settlement`decimal(10,2)NOTNULLDEFAULT&amp;#39;0.00&amp;#39;,`has_pay`decimal(10,2)NOTNULLDEFAULT&amp;#39;0.00&amp;#39;,`should_pay`decimal(10,2)NOTNULLDEFAULT&amp;#39;0.00&amp;#39;,`settlement_pay_time`timestampNOTNULLDEFAULT&amp;#39;0000-00-00 00:00:00&amp;#39;,`pay_pay_status`varchar(255)NOTNULLDEFAULT&amp;#39;Pending&amp;#39;,`pay_pay_time`timestampNOTNULLDEFAULT&amp;#39;0000-00-00 00:00:00&amp;#39;,PRIMARYKEY(`id`))ENGINE=InnoDBDEFAULTCHARSET=utf8;altertable`order_product_set_pay`dropprimarykey;altertable`order_product_set_pay`add`settlement_id`int(10)unsignedNOTNULL;2 从bi表中查询数据 1 已收 （总收）/比例 比例 = mysql查询优化 优化结果 SELECTop.order_product_id,op.parent_order_pr</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://laurel-he.github.io/private/2019-02-26/</link>
+      <link>https://YOURNAME.github.io/private/2019-02-26/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/private/2019-02-26/</guid>
+      <guid>https://YOURNAME.github.io/private/2019-02-26/</guid>
       <description>不能够开放 1 知识点 添加日志 引入logging包，引入log文件即可 logging.basicConfig(filename=&amp;#34;/tmp/bi_dsvcs/app.log&amp;#34;, level = logging.DEBUG) 有四种级别INFO, DEBUG, WARNING, ERROR, CRITICAL, FATAL 获取月份列表 需求 需要获取月份数据[&amp;lsquo;00&amp;rsquo;, &amp;lsquo;01&amp;rsquo;, &amp;lsquo;02&amp;rsquo;, &amp;lsquo;03&amp;rsquo;, &amp;lsquo;04&amp;rsquo;, &amp;lsquo;05&amp;rsquo;, &amp;lsquo;06&amp;rsquo;, &amp;lsquo;07&amp;rsquo;, &amp;lsquo;08&amp;rsquo;, &amp;lsquo;09&amp;rsquo;, &amp;lsquo;10&amp;rsquo;, &amp;lsquo;11&amp;rsquo;] 原本解</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://laurel-he.github.io/private/20190213/</link>
+      <link>https://YOURNAME.github.io/private/20190213/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/private/20190213/</guid>
+      <guid>https://YOURNAME.github.io/private/20190213/</guid>
       <description>一：导入数据 1. bi_etl:通过定时任务脚本将数据从源数据库导出： （1） 修改配置文件，执行dump_order.sh，导入部分测试数据 （2）其中mysqldump导出数据到文件中 （3）shell无法直</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://laurel-he.github.io/private/20190214/</link>
+      <link>https://YOURNAME.github.io/private/20190214/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/private/20190214/</guid>
+      <guid>https://YOURNAME.github.io/private/20190214/</guid>
       <description>1 计算规则（都在订单产品维度） 1 已收 （1）计算此订单产品所在的订单的所有已收款 （2）计算此订单产品所在的订单有多少订单产品 （3）所有已收款除以订单产品数量，平均得出每个订单产品的已收款 2 基础接口实现 1</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://laurel-he.github.io/private/cbti/</link>
+      <link>https://YOURNAME.github.io/private/cbti/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/private/cbti/</guid>
+      <guid>https://YOURNAME.github.io/private/cbti/</guid>
       <description>1）把这些令你感到焦虑的念头写下来； 年龄焦虑： 2）针对每一个念头，进行真实性评估； 3）用更加现实的想法来替代这些念头。 证据分析：支持它的证据有哪些？不支持它的证据有哪些？ 概率评估：综合双方面的证据，它</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://laurel-he.github.io/private/fit/</link>
+      <link>https://YOURNAME.github.io/private/fit/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/private/fit/</guid>
+      <guid>https://YOURNAME.github.io/private/fit/</guid>
       <description>title: 减肥 date: 2021-09-29 19:20:10 tags: 减肥 categories: 减肥 阶段 截至时间 时间 详情 1 21-10-09 10d 4-116-58 1 21-10-19 10d 3-113-56.5 1 21-10-29 10d 2-111-55.5 1 21-11-08 10d 1-110-55 1 21-11-18 10d 1-109-54.5 1 21-11-28 10d 1-108-54 1 21-12-08 10d 2-106-53 1 21-12-18 10d 2-104-52 1 21-12-28 10d 3-101-50.5 1 22-01-07 10d 2-99-49.5 1 22-01-17 10d 0.5-98.5-49.25 1 22-01-27 10d 0.5-98-49 1 22-02-06 10d 0-98-49</description>
     </item>
     

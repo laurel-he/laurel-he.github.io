@@ -2,80 +2,80 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>前端 on 瑶风</title>
-    <link>https://laurel-he.github.io/categories/%E5%89%8D%E7%AB%AF/</link>
+    <link>https://YOURNAME.github.io/categories/%E5%89%8D%E7%AB%AF/</link>
     <description>Recent content in 前端 on 瑶风</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 22 Oct 2019 18:37:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 22 Oct 2019 18:37:10 +0000</lastBuildDate><atom:link href="https://YOURNAME.github.io/categories/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>react学习-Props,state和组件树</title>
-      <link>https://laurel-he.github.io/frontend/react/react_06/</link>
+      <link>https://YOURNAME.github.io/frontend/react/react_06/</link>
       <pubDate>Tue, 22 Oct 2019 18:37:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/frontend/react/react_06/</guid>
+      <guid>https://YOURNAME.github.io/frontend/react/react_06/</guid>
       <description>react学习手册 属性验证 javascript是弱类型语言，可更改变量的类型，难以查找类型错误。</description>
     </item>
     
     <item>
       <title>react学习-基础</title>
-      <link>https://laurel-he.github.io/frontend/react/react_base/</link>
+      <link>https://YOURNAME.github.io/frontend/react/react_base/</link>
       <pubDate>Tue, 22 Oct 2019 18:37:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/frontend/react/react_base/</guid>
+      <guid>https://YOURNAME.github.io/frontend/react/react_base/</guid>
       <description>相关概念介绍 react ES6 DOM Redux react-route webpack</description>
     </item>
     
     <item>
       <title>react单元测试</title>
-      <link>https://laurel-he.github.io/frontend/react/reactunit/</link>
+      <link>https://YOURNAME.github.io/frontend/react/reactunit/</link>
       <pubDate>Mon, 29 Jul 2019 10:40:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/frontend/react/reactunit/</guid>
+      <guid>https://YOURNAME.github.io/frontend/react/reactunit/</guid>
       <description>测试 ESLint 代码检查（分析JavaScript代码）,JSHint和JSLint是用于分析JavaScript代码的原生工具，并且可以为用户提供格式化代码的反馈意见；</description>
     </item>
     
     <item>
       <title>fast-json-patch</title>
-      <link>https://laurel-he.github.io/frontend/fastjsonpatch/</link>
+      <link>https://YOURNAME.github.io/frontend/fastjsonpatch/</link>
       <pubDate>Fri, 26 Jul 2019 14:37:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/frontend/fastjsonpatch/</guid>
+      <guid>https://YOURNAME.github.io/frontend/fastjsonpatch/</guid>
       <description>fast-json-patch包使用 网上关于json-patch的中文介绍太少了，官方文档没有翻译版，所以写一下自己的学习文档，以下只是自己根据英文文档的理解，不保证正确。 基础操作 json patch几大基础</description>
     </item>
     
     <item>
       <title>typescript泛型</title>
-      <link>https://laurel-he.github.io/frontend/genericity/</link>
+      <link>https://YOURNAME.github.io/frontend/genericity/</link>
       <pubDate>Mon, 22 Jul 2019 20:37:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/frontend/genericity/</guid>
+      <guid>https://YOURNAME.github.io/frontend/genericity/</guid>
       <description>typescript泛型 介绍</description>
     </item>
     
     <item>
       <title>react学习-javascript函数式编程</title>
-      <link>https://laurel-he.github.io/frontend/react/react_02/</link>
+      <link>https://YOURNAME.github.io/frontend/react/react_02/</link>
       <pubDate>Tue, 09 Jul 2019 09:37:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/frontend/react/react_02/</guid>
+      <guid>https://YOURNAME.github.io/frontend/react/react_02/</guid>
       <description>react学习手册 Javascript函数式编程 基础概念 1 函数式编程： 函数是第一类成员，函数就是数据，可以像变量那样被保存，检索或者在应用程序内部传递。 （1）可以像声明变量一样声明函数；函数就是变量，</description>
     </item>
     
     <item>
       <title>react学习-es6基础特性</title>
-      <link>https://laurel-he.github.io/frontend/react/react_01/</link>
+      <link>https://YOURNAME.github.io/frontend/react/react_01/</link>
       <pubDate>Mon, 08 Jul 2019 09:37:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/frontend/react/react_01/</guid>
+      <guid>https://YOURNAME.github.io/frontend/react/react_01/</guid>
       <description>react学习手册 新特性 1 react开发者工具：react developer tools，可以查看网站react元素 2 yarn进行依赖管理：yarn.lock文件，可以使用yarn install安装，npm install yarn,yarn add [package-name],yarn remove [package-name]</description>
     </item>
     
     <item>
       <title>在github上使用Hexo 搭建个人博客</title>
-      <link>https://laurel-he.github.io/post/hexo/</link>
+      <link>https://YOURNAME.github.io/post/hexo/</link>
       <pubDate>Mon, 01 Apr 2019 11:03:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/hexo/</guid>
+      <guid>https://YOURNAME.github.io/post/hexo/</guid>
       <description>安装 简介 Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 安装前提 node.js git 安装步骤 npm install -g hexo-cli 建站 hexo init &amp;lt;folder&amp;gt; cd &amp;lt;folder&amp;gt; npm install 创建博客 hexo new</description>
     </item>
     
