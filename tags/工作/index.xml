@@ -2,35 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>工作 on 瑶风</title>
-    <link>https://YOURNAME.github.io/tags/%E5%B7%A5%E4%BD%9C/</link>
+    <link>https://laurel-he.github.io/tags/%E5%B7%A5%E4%BD%9C/</link>
     <description>Recent content in 工作 on 瑶风</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 30 Sep 2021 16:34:10 +0000</lastBuildDate><atom:link href="https://YOURNAME.github.io/tags/%E5%B7%A5%E4%BD%9C/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 30 Sep 2021 16:34:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/tags/%E5%B7%A5%E4%BD%9C/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>laravel配置params选项如MYSQL_ATTR_USE_BUFFERED_QUERY等</title>
-      <link>https://YOURNAME.github.io/post/laravel_err_01/</link>
+      <link>https://laurel-he.github.io/post/laravel_err_01/</link>
       <pubDate>Thu, 30 Sep 2021 16:34:10 +0000</pubDate>
       
-      <guid>https://YOURNAME.github.io/post/laravel_err_01/</guid>
+      <guid>https://laurel-he.github.io/post/laravel_err_01/</guid>
       <description>以下内容已同步至CSDN 绝了，laravel使用的是illuminate/database作为orm，我们用的swoole，在使用过程中报了如下错误： SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffered queries are active. Consider using PDOStatement::fetchAll() 这个错误在网上一搜</description>
     </item>
     
     <item>
       <title>gitflow command version</title>
-      <link>https://YOURNAME.github.io/post/git/</link>
+      <link>https://laurel-he.github.io/post/git/</link>
       <pubDate>Wed, 24 Apr 2019 21:03:10 +0000</pubDate>
       
-      <guid>https://YOURNAME.github.io/post/git/</guid>
+      <guid>https://laurel-he.github.io/post/git/</guid>
       <description>新建feature/hotfix进行项目开发 更新本地代码仓库缓存 git remote update git checkout develop git merge origin/develop git branch feature/20171012_hotel_enhance ##补充 1 删除分支 git branch &amp;ndash;delete &amp;ndash;remotes origin/feature/20190214_monthly git push origin :feature/20190214_monthly 2 add之后回退 git reset HEAD 3 撤销commit git commit &amp;ndash;amend 4 撤销已经commit但是没有</description>
     </item>
     
     <item>
       <title>gitflow command version</title>
-      <link>https://YOURNAME.github.io/post/githubguide/</link>
+      <link>https://laurel-he.github.io/post/githubguide/</link>
       <pubDate>Wed, 24 Apr 2019 21:03:10 +0000</pubDate>
       
-      <guid>https://YOURNAME.github.io/post/githubguide/</guid>
+      <guid>https://laurel-he.github.io/post/githubguide/</guid>
       <description></description>
     </item>
     

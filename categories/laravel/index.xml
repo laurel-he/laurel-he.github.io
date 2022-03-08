@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>laravel on 瑶风</title>
-    <link>https://YOURNAME.github.io/categories/laravel/</link>
+    <link>https://laurel-he.github.io/categories/laravel/</link>
     <description>Recent content in laravel on 瑶风</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 11 Apr 2019 15:23:44 +0000</lastBuildDate><atom:link href="https://YOURNAME.github.io/categories/laravel/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 11 Apr 2019 15:23:44 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/laravel/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Laravel 日志系统</title>
-      <link>https://YOURNAME.github.io/php/laravel/log/</link>
+      <link>https://laurel-he.github.io/php/laravel/log/</link>
       <pubDate>Thu, 11 Apr 2019 15:23:44 +0000</pubDate>
       
-      <guid>https://YOURNAME.github.io/php/laravel/log/</guid>
+      <guid>https://laurel-he.github.io/php/laravel/log/</guid>
       <description>1 （自己摸索版本）5.2 1 定义路径 .env配置文件添加日志路径，例如 LOG_PATH=/tmp/paytest 2 启动文件添加日志路径 $app-&amp;gt;configureMonologUsing(function($logger){ $logger-&amp;gt;pushHandler(new \Monolog\Handler\RotatingFileHandler(env(&amp;#39;LOG_PATH&amp;#39;).&amp;#39;.log&amp;#39;), 10); return $logger; }); 2 官方文档 1 异常处理 介绍 当您启动一个新的 Laravel 项目时，错误和异常处理就已为您配置。 应用程序触发的所</description>
     </item>
     

@@ -2,45 +2,54 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>COrc&#43;&#43;s on 瑶风</title>
-    <link>https://YOURNAME.github.io/corc&#43;&#43;/</link>
+    <link>https://laurel-he.github.io/corc&#43;&#43;/</link>
     <description>Recent content in COrc&#43;&#43;s on 瑶风</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 04 Sep 2021 16:34:10 +0000</lastBuildDate><atom:link href="https://YOURNAME.github.io/corc++/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 04 Sep 2021 16:34:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/corc++/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>表达式</title>
-      <link>https://YOURNAME.github.io/corc&#43;&#43;/c/03expression/</link>
+      <link>https://laurel-he.github.io/corc&#43;&#43;/c/03expression/</link>
       <pubDate>Sat, 04 Sep 2021 16:34:10 +0000</pubDate>
       
-      <guid>https://YOURNAME.github.io/corc&#43;&#43;/c/03expression/</guid>
+      <guid>https://laurel-he.github.io/corc&#43;&#43;/c/03expression/</guid>
       <description></description>
     </item>
     
     <item>
       <title>c语言基础介绍</title>
-      <link>https://YOURNAME.github.io/corc&#43;&#43;/c/basic/</link>
+      <link>https://laurel-he.github.io/corc&#43;&#43;/c/basic/</link>
       <pubDate>Wed, 04 Sep 2019 16:34:10 +0000</pubDate>
       
-      <guid>https://YOURNAME.github.io/corc&#43;&#43;/c/basic/</guid>
+      <guid>https://laurel-he.github.io/corc&#43;&#43;/c/basic/</guid>
       <description>本系列来自于中国大学MOOC的 程序设计入门C语言 学习视频总结 基础 学习程序设计的目的 通过学习程序设计，理解计算机如何工作，计算机擅长做什么，不擅长做什么。 计算机如何解决问题？ 告诉计算机的步骤，它会一步一</description>
     </item>
     
     <item>
       <title>第一周_开始编程</title>
-      <link>https://YOURNAME.github.io/corc&#43;&#43;/c/01first/</link>
+      <link>https://laurel-he.github.io/corc&#43;&#43;/c/01first/</link>
       <pubDate>Wed, 04 Sep 2019 16:34:10 +0000</pubDate>
       
-      <guid>https://YOURNAME.github.io/corc&#43;&#43;/c/01first/</guid>
-      <description>本系列来自于中国大学MOOC的 程序设计入门C语言 学习视频总结 第一个程序 #include &amp;lt;stdio.h&amp;gt; int main(int argc, char ** argv) { printf(&amp;#34;Hello Word\n&amp;#34;); int i = 0; scanf(&amp;#34;%d&amp;#34;, &amp;amp;i); printf(&amp;#34;The res is: %d&amp;#34;, i + 10); return 0; } 换行和空格不意味着任何问题。 编程工具可以使用codeblocks或原课件中推</description>
+      <guid>https://laurel-he.github.io/corc&#43;&#43;/c/01first/</guid>
+      <description>本系列是学习总结：中国大学MOOC的 程序设计入门C语言 第一个程序 #include &amp;lt;stdio.h&amp;gt; int main(int argc, char ** argv) { printf(&amp;#34;Hello Word\n&amp;#34;); int i = 0; scanf(&amp;#34;%d&amp;#34;, &amp;amp;i); printf(&amp;#34;The res is: %d&amp;#34;, i + 10); return 0; } 换行和空格不意味着任何问题。 编程工具可以使用codeblocks或原课件中推荐的是</description>
     </item>
     
     <item>
-      <title>第一周_计算</title>
-      <link>https://YOURNAME.github.io/corc&#43;&#43;/c/02%E8%AE%A1%E7%AE%97/</link>
+      <title>第三周_循环与判断</title>
+      <link>https://laurel-he.github.io/corc&#43;&#43;/c/03%E5%BE%AA%E7%8E%AF%E4%B8%8E%E5%88%A4%E6%96%AD/</link>
       <pubDate>Wed, 04 Sep 2019 16:34:10 +0000</pubDate>
       
-      <guid>https://YOURNAME.github.io/corc&#43;&#43;/c/02%E8%AE%A1%E7%AE%97/</guid>
-      <description>c语言32个关键字 类型 包含关键字 类型说明保留字 int,long,short,float,double,char,unsigned,signed,const,void,volatile,enum,struct,union 语句定义保留字 if,else,goto,switch,case,do,while,for,continue,break,return,default,typedef 存储类说明保留字 auto,register,extern,static 长度运算符保留字 sizeof 变量 如何输入数字运行？ 1 需要有个地方可以放置 2 有地方可以输入 3 可以对输入进行运算 一个简单的计算找零程</description>
+      <guid>https://laurel-he.github.io/corc&#43;&#43;/c/03%E5%BE%AA%E7%8E%AF%E4%B8%8E%E5%88%A4%E6%96%AD/</guid>
+      <description>本系列是学习总结：中国大学MOOC的程序设计入门C语言 计算时间差 第二周使用先计算分钟差值，然后使用了除法获取小时，取余获取分钟的方式。 采用直接计算的方式来获取，代码如下： #include &amp;lt;stdio.h&amp;gt; int main() { int hour1, minute1; int hour2, minute2; prin</description>
+    </item>
+    
+    <item>
+      <title>第二周_计算</title>
+      <link>https://laurel-he.github.io/corc&#43;&#43;/c/02%E8%AE%A1%E7%AE%97/</link>
+      <pubDate>Wed, 04 Sep 2019 16:34:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/corc&#43;&#43;/c/02%E8%AE%A1%E7%AE%97/</guid>
+      <description>本系列是学习总结：中国大学MOOC的程序设计入门C语言 c语言32个关键字 类型 包含关键字 类型说明保留字 int,long,short,float,double,char,unsigned,signed,const,void,volatile,enum,struct,union 语句定义保留字 if,else,goto,switch,case,do,while,for,continue,break,return,default,typedef 存储类说明保留字 auto,register,extern,static 长度运算符保留字 sizeof 变量 如何输入数字运行？ 1 需要有个地方可以放置 2</description>
     </item>
     
   </channel>

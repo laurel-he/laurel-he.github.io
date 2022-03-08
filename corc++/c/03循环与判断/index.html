@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="贺小娇" />
+	
+	
+	
+	<title>第三周_循环与判断 ｜ 瑶风</title>
+	
+    
+    
+    <meta name="description" content="本系列是学习总结：中国大学MOOC的程序设计入门C语言 计算时间差 第二周使用先计算分钟差值，然后使用了除法获取小时，取余获取分钟的方式。 采用直接计算的方式来获取，代码如下： #include &amp;lt;stdio.h&amp;gt; int main() { int hour1, minute1; int hour2, minute2; prin" />
+    
+
+    
+    
+    <meta name="keywords" content="Hugo, blog, php" />
+    
+
+	
+    
+    <link rel="shortcut icon" href="https://laurel-he.github.io/images/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/zozo.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/highlight.css" />
+
+    
+    
+</head>
+
+<body>
+    <div class="main animate__animated animate__fadeInDown">
+        <div class="nav_container animated fadeInDown">
+    <div class="site_nav" id="site_nav">
+        <ul>
+            
+            <li>
+                <a href="/">主页</a>
+            </li>
+            
+            <li>
+                <a href="/categories/">分类</a>
+            </li>
+            
+            <li>
+                <a href="/tags/">标签</a>
+            </li>
+            
+            <li>
+                <a href="/post/">其他</a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="menu_icon">
+        <a id="menu_icon"><i class="ri-menu-line"></i></a>
+    </div>
+</div>
+        <div class="header animated fadeInDown">
+    <div class="site_title_container">
+        <div class="site_title">
+            <h1>
+                <a href="https://laurel-he.github.io/">
+                    <span>瑶风</span>
+                </a>
+            </h1>
+        </div>
+        <div class="description">
+            <p class="sub_title">贺胖娇的编程之旅......</p>
+            <div class="my_socials">
+                
+                
+                <a href="https://github.com/laurel-he" title="github" target="_blank"><i class="ri-github-fill"></i></a>
+                
+                
+                
+                <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1570306409&amp;site=qq&amp;menu=yes" title="qq" target="_blank"><i class="ri-qq-fill"></i></a>
+                
+                
+                
+                <a href="https://stackoverflow.com/users/9809769/laurel-he" title="stack-overflow" target="_blank"><i class="ri-stack-overflow-fill"></i></a>
+                
+                
+                
+                <a href="https://weibo.com/u/3783884100" title="weibo" target="_blank"><i class="ri-weibo-fill"></i></a>
+                
+                
+                <a href="https://laurel-he.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
+                        class="ri-rss-fill"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="content">
+            <div class="post_page">
+                <div class="post animate__animated animate__fadeInDown">
+                    <div class="post_title post_detail_title">
+                        <h2><a href='/corc&#43;&#43;/c/03%E5%BE%AA%E7%8E%AF%E4%B8%8E%E5%88%A4%E6%96%AD/'>第三周_循环与判断</a></h2>
+                        <span class="date">2019.09.04</span>
+                    </div>
+                    <div class="post_content markdown"><p>本系列是学习总结：中国大学MOOC的<a href="https://www.icourse163.org/learn/ZJU-199001?tid=1465619444">程序设计入门C语言</a></p>
+<h2 id="计算时间差">计算时间差</h2>
+<p>第二周使用先计算分钟差值，然后使用了除法获取小时，取余获取分钟的方式。 <br>
+采用直接计算的方式来获取，代码如下：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span><span class="cp"></span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="kt">int</span> <span class="n">hour1</span><span class="p">,</span> <span class="n">minute1</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">hour2</span><span class="p">,</span> <span class="n">minute2</span><span class="p">;</span>
+	
+	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;请输入第一个小时分钟:</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+	<span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%d %d&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">hour1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">minute1</span><span class="p">);</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;请输入第二个小时分钟:</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+	<span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%d %d&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">hour2</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">minute2</span><span class="p">);</span>
+	
+	<span class="kt">int</span> <span class="n">ih</span> <span class="o">=</span> <span class="n">hour2</span> <span class="o">-</span> <span class="n">hour1</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">im</span> <span class="o">=</span> <span class="n">minute2</span> <span class="o">-</span> <span class="n">minute1</span><span class="p">;</span>
+	<span class="k">if</span> <span class="p">(</span><span class="n">im</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+		<span class="n">im</span> <span class="o">+=</span> <span class="mi">60</span><span class="p">;</span> 
+		<span class="n">ih</span> <span class="o">--</span><span class="p">;</span> 
+	<span class="p">}</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;时间差为：%d小时%d分钟&#34;</span><span class="p">,</span> <span class="n">ih</span><span class="p">,</span> <span class="n">im</span><span class="p">);</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h2 id="判断条件">判断条件</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span><span class="cp"></span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;5==3:%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">3</span><span class="p">);</span> <span class="c1">// 0
+</span><span class="c1"></span>	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;5 &gt;= 3:%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="mi">5</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">);</span> <span class="c1">// 1
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></div><p>所有关系运算的优先级比算术运算低，但是比赋值运算高（判断条件运算符优先级低于加减乘除运算，但高于赋值运算）。而在关系运算符中,==和!=的优先级比其他的低，而连续的关系运算是从左到右进行的。</p>
+<h2 id="注释">注释</h2>
+<p>//是C99的写法。ANSI C不支持
+/**/多行或者行内的注释。</p>
+<h2 id="else">else</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt; </span><span class="cp">
+</span><span class="cp"></span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="kt">int</span> <span class="n">price</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">bill</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;请输入售价：</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+	<span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">price</span><span class="p">);</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;请输入票面：</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+	<span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">bill</span><span class="p">);</span>
+	<span class="k">if</span> <span class="p">(</span><span class="n">bill</span> <span class="o">&gt;=</span> <span class="n">price</span><span class="p">)</span> <span class="p">{</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">&#34;找零：%d元&#34;</span><span class="p">,</span> <span class="n">bill</span> <span class="o">-</span> <span class="n">price</span><span class="p">);</span>		
+	<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">&#34;您的钱不够。&#34;</span><span class="p">);</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><h1 id="循环">循环</h1>
+<h2 id="while循环">while循环</h2>
+<p>计算正整数位数（注意，对于php这种弱类型的语言不适用）：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span><span class="cp"></span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="kt">int</span> <span class="n">number</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">number</span><span class="p">);</span>
+	<span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="n">number</span> <span class="o">/</span> <span class="mi">10</span><span class="p">;</span>
+	<span class="k">while</span> <span class="p">(</span><span class="n">count</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+		<span class="n">n</span><span class="o">++</span><span class="p">;</span>
+		<span class="n">count</span> <span class="o">/=</span>  <span class="mi">10</span><span class="p">;</span>
+	<span class="p">}</span>	
+	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;是%d位数&#34;</span><span class="p">,</span> <span class="n">n</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div><h2 id="do-while循环">do while循环</h2>
+<p>在进入循环的时候不做检查，而是先执行一轮循环体语句后再检查。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">do {
+    &lt;循环体语句&gt;
+} while (&lt;循环条件&gt;);
+</code></pre></div><h2 id="for循环">for循环</h2>
+</div>
+                    <div class="post_footer">
+                        
+                        <div class="meta">
+                            <div class="info">
+                                <span class="field tags">
+                                    <i class="ri-stack-line"></i>
+                                    
+                                    <a href="https://laurel-he.github.io/tags/%E5%AD%A6%E4%B9%A0/">学习</a>
+                                    
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                
+                
+<div class="doc_comments">
+    <div class="comments_block_title">发表评论</div>
+    <div id="vcomments"></div>
+</div>
+
+<link rel="stylesheet" href="https://laurel-he.github.io/css/comments.css" />
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
+<script type="text/javascript">
+    new Valine({
+        el: '#vcomments',
+        appId: 'SWEItAag34n7U5AR3T95AhRG-gzGzoHsz',
+        appKey: 'zAM901B4LKIxfrnTb7ie5e5K',
+        placeholder: '在此输入评论...',
+        visitor: 'true',
+    })
+</script>
+                
+            </div>
+        </div>
+    </div>
+    <a id="back_to_top" href="#" class="back_to_top"><i class="ri-arrow-up-s-line"></i></a>
+    <footer class="footer">
+    <div class="powered_by">
+        <a href="https://varkai.com">Designed by VarKai,</a>
+        <a href="http://www.gohugo.io/">Proudly published with Hugo</a>
+    </div>
+
+    <div class="footer_slogan">
+        <span>绝知此事要躬行</span>
+    </div>
+</footer>
+    <script src="https://laurel-he.github.io/js/jquery-3.5.1.min.js"></script>
+<link href="https://laurel-he.github.io/css/fancybox.min.css" rel="stylesheet">
+<script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
+<script src="https://laurel-he.github.io/js/zozo.js"></script>
+
+
+
+
+</body>
+
+</html>

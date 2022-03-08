@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>crontab on 瑶风</title>
-    <link>https://YOURNAME.github.io/categories/crontab/</link>
+    <link>https://laurel-he.github.io/categories/crontab/</link>
     <description>Recent content in crontab on 瑶风</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 10 Apr 2019 18:27:44 +0000</lastBuildDate><atom:link href="https://YOURNAME.github.io/categories/crontab/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 10 Apr 2019 18:27:44 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/crontab/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>crontab基本使用</title>
-      <link>https://YOURNAME.github.io/post/crontab/</link>
+      <link>https://laurel-he.github.io/post/crontab/</link>
       <pubDate>Wed, 10 Apr 2019 18:27:44 +0000</pubDate>
       
-      <guid>https://YOURNAME.github.io/post/crontab/</guid>
+      <guid>https://laurel-he.github.io/post/crontab/</guid>
       <description>1 简介 crond 是linux下用来周期性的执行某种任务或等待处理某些事件的一个守护进程，与windows下的计划任务类似，当安装完成操作系统后，默认会安装此服务 工具，并且会自动启动crond进程，crond进</description>
     </item>
     

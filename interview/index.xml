@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Interviews on 瑶风</title>
-    <link>https://YOURNAME.github.io/interview/</link>
+    <link>https://laurel-he.github.io/interview/</link>
     <description>Recent content in Interviews on 瑶风</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://YOURNAME.github.io/interview/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language><atom:link href="https://laurel-he.github.io/interview/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>https://YOURNAME.github.io/interview/tcpip/</link>
+      <link>https://laurel-he.github.io/interview/tcpip/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://YOURNAME.github.io/interview/tcpip/</guid>
+      <guid>https://laurel-he.github.io/interview/tcpip/</guid>
       <description>给小黄鸭讲明白TCP/IP协议 前言 我上家公司的CTO跟我说过一个道理，一件事情如果你能给一个从来没接触过的小学生讲明白，那么你就能够理解了。 所以我决定用这篇文章记录一下，假设本文有读者，且读者是一个技</description>
     </item>
     

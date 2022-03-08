@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>软件工程 on 瑶风</title>
+    <link>https://laurel-he.github.io/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/</link>
+    <description>Recent content in 软件工程 on 瑶风</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 01 Sep 2021 18:27:44 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>软件工程-01基础介绍</title>
+      <link>https://laurel-he.github.io/learn/softwareengineering/01basic/</link>
+      <pubDate>Wed, 01 Sep 2021 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/learn/softwareengineering/01basic/</guid>
+      <description>基础 包含概念介绍 代码，输入数据，输出数据，中间结果数据。 文档：规格说明，设计，法律，财务文档，管理计划，用户手册等。 特点 逻辑抽象 、不会损耗的、可移植的、复杂的、昂贵的 软件工程</description>
+    </item>
+    
+  </channel>
+</rss>

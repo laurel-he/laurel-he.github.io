@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>基础 on 瑶风</title>
-    <link>https://YOURNAME.github.io/categories/%E5%9F%BA%E7%A1%80/</link>
+    <link>https://laurel-he.github.io/categories/%E5%9F%BA%E7%A1%80/</link>
     <description>Recent content in 基础 on 瑶风</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 27 Feb 2020 18:00:00 +0000</lastBuildDate><atom:link href="https://YOURNAME.github.io/categories/%E5%9F%BA%E7%A1%80/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 27 Feb 2020 18:00:00 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/%E5%9F%BA%E7%A1%80/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>linux基础入门</title>
-      <link>https://YOURNAME.github.io/operatingsystem/linuxbase/</link>
+      <link>https://laurel-he.github.io/operatingsystem/linuxbase/</link>
       <pubDate>Thu, 27 Feb 2020 18:00:00 +0000</pubDate>
       
-      <guid>https://YOURNAME.github.io/operatingsystem/linuxbase/</guid>
+      <guid>https://laurel-he.github.io/operatingsystem/linuxbase/</guid>
       <description>学习心得，来自于蓝桥Linux基础入门 用户相关 查看当前用户 whoami:查看当前用户名 who am i:可以列出用户名，当前登录的伪终端以及当前伪终端的启动时间等 注意事项 在有些情况下who am i或者who mom lik</description>
     </item>
     

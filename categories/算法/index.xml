@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>算法 on 瑶风</title>
-    <link>https://YOURNAME.github.io/categories/%E7%AE%97%E6%B3%95/</link>
+    <link>https://laurel-he.github.io/categories/%E7%AE%97%E6%B3%95/</link>
     <description>Recent content in 算法 on 瑶风</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 03 Sep 2021 12:10:10 +0000</lastBuildDate><atom:link href="https://YOURNAME.github.io/categories/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 03 Sep 2021 12:10:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>原地算法</title>
-      <link>https://YOURNAME.github.io/acm/junioralgorithm/in-placealgorithm/</link>
+      <link>https://laurel-he.github.io/acm/junioralgorithm/in-placealgorithm/</link>
       <pubDate>Fri, 03 Sep 2021 12:10:10 +0000</pubDate>
       
-      <guid>https://YOURNAME.github.io/acm/junioralgorithm/in-placealgorithm/</guid>
+      <guid>https://laurel-he.github.io/acm/junioralgorithm/in-placealgorithm/</guid>
       <description>概念 在计算机科学中，一个原地算法（in-place algorithm）是一种使用小的，固定数量的额外之空间来转换资料的算法。 当算法执行时，输入的资料通常会被要输出的部分覆盖掉。 不是原地算法有时候称为非</description>
     </item>
     

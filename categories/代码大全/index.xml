@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>代码大全 on 瑶风</title>
-    <link>https://YOURNAME.github.io/categories/%E4%BB%A3%E7%A0%81%E5%A4%A7%E5%85%A8/</link>
+    <link>https://laurel-he.github.io/categories/%E4%BB%A3%E7%A0%81%E5%A4%A7%E5%85%A8/</link>
     <description>Recent content in 代码大全 on 瑶风</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 05 Oct 2019 10:40:10 +0000</lastBuildDate><atom:link href="https://YOURNAME.github.io/categories/%E4%BB%A3%E7%A0%81%E5%A4%A7%E5%85%A8/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 05 Oct 2019 10:40:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/%E4%BB%A3%E7%A0%81%E5%A4%A7%E5%85%A8/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>代码大全</title>
-      <link>https://YOURNAME.github.io/post/codecomplate_01/</link>
+      <link>https://laurel-he.github.io/post/codecomplate_01/</link>
       <pubDate>Sat, 05 Oct 2019 10:40:10 +0000</pubDate>
       
-      <guid>https://YOURNAME.github.io/post/codecomplate_01/</guid>
+      <guid>https://laurel-he.github.io/post/codecomplate_01/</guid>
       <description>前期准备 前期准备的重要性 不要立即开始写代码，要做好必要的需求分析和架构设计，写好需求文档和技术文档，防止浪费时间和精力制造错误的东西 需求核对表 针对功能需求： 1．是否详细定义了系统的全部输入，包括其来源</description>
     </item>
     

@@ -2,35 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>git on 瑶风</title>
-    <link>https://YOURNAME.github.io/categories/git/</link>
+    <link>https://laurel-he.github.io/categories/git/</link>
     <description>Recent content in git on 瑶风</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 20 Nov 2019 18:27:44 +0000</lastBuildDate><atom:link href="https://YOURNAME.github.io/categories/git/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 20 Nov 2019 18:27:44 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>版本管理工具git（1）-起步和基础</title>
-      <link>https://YOURNAME.github.io/tools/git/git_01/</link>
+      <link>https://laurel-he.github.io/tools/git/git_01/</link>
       <pubDate>Wed, 20 Nov 2019 18:27:44 +0000</pubDate>
       
-      <guid>https://YOURNAME.github.io/tools/git/git_01/</guid>
+      <guid>https://laurel-he.github.io/tools/git/git_01/</guid>
       <description>参考文档：git管理 起步 作用 版本管理，git是分布式版本控制系统，既可以本地管理又可以协同合作 特点 （1）直接记录快照，而非差异比较：Git对待数据更像一个快照流（在 Git 中，每当你提交更新或保存项目状态时</description>
     </item>
     
     <item>
       <title>gitflow command version</title>
-      <link>https://YOURNAME.github.io/post/git/</link>
+      <link>https://laurel-he.github.io/post/git/</link>
       <pubDate>Wed, 24 Apr 2019 21:03:10 +0000</pubDate>
       
-      <guid>https://YOURNAME.github.io/post/git/</guid>
+      <guid>https://laurel-he.github.io/post/git/</guid>
       <description>新建feature/hotfix进行项目开发 更新本地代码仓库缓存 git remote update git checkout develop git merge origin/develop git branch feature/20171012_hotel_enhance ##补充 1 删除分支 git branch &amp;ndash;delete &amp;ndash;remotes origin/feature/20190214_monthly git push origin :feature/20190214_monthly 2 add之后回退 git reset HEAD 3 撤销commit git commit &amp;ndash;amend 4 撤销已经commit但是没有</description>
     </item>
     
     <item>
       <title>gitflow command version</title>
-      <link>https://YOURNAME.github.io/post/githubguide/</link>
+      <link>https://laurel-he.github.io/post/githubguide/</link>
       <pubDate>Wed, 24 Apr 2019 21:03:10 +0000</pubDate>
       
-      <guid>https://YOURNAME.github.io/post/githubguide/</guid>
+      <guid>https://laurel-he.github.io/post/githubguide/</guid>
       <description></description>
     </item>
     

@@ -2,53 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>go on 瑶风</title>
-    <link>https://YOURNAME.github.io/categories/go/</link>
+    <link>https://laurel-he.github.io/categories/go/</link>
     <description>Recent content in go on 瑶风</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 25 Nov 2021 20:47:00 +0000</lastBuildDate><atom:link href="https://YOURNAME.github.io/categories/go/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 25 Nov 2021 20:47:00 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/go/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>go语言学习</title>
-      <link>https://YOURNAME.github.io/go/summary/</link>
+      <link>https://laurel-he.github.io/go/summary/</link>
       <pubDate>Thu, 25 Nov 2021 20:47:00 +0000</pubDate>
       
-      <guid>https://YOURNAME.github.io/go/summary/</guid>
+      <guid>https://laurel-he.github.io/go/summary/</guid>
       <description>参考文档： go文档 Go 语言教程 前言 知识查漏补缺第一站，学习go语言。 我去年曾经大概看过go语言的一些语法，但并没有实际操作过，因此，这里假定我需要做一个小的电商平台，一步一步来实现。 步骤 首先大概拆分下需</description>
     </item>
     
     <item>
       <title>(1)go基础学习-基础概念</title>
-      <link>https://YOURNAME.github.io/go/basic/basic/</link>
+      <link>https://laurel-he.github.io/go/basic/basic/</link>
       <pubDate>Fri, 27 Aug 2021 13:47:00 +0000</pubDate>
       
-      <guid>https://YOURNAME.github.io/go/basic/basic/</guid>
+      <guid>https://laurel-he.github.io/go/basic/basic/</guid>
       <description>参考文档： go文档 Go 语言教程 可以先看go语言学习路线图， 对大概学习路线有个了解。 基础概念 go语言特色 Go语言在多核并发上拥有原生的设计优势， Go语言从底层原生支持并发，无须第三方库、开发者的编程技巧和</description>
     </item>
     
     <item>
       <title>(2)go基础学习-基本使用</title>
-      <link>https://YOURNAME.github.io/go/basic/basicuse/</link>
+      <link>https://laurel-he.github.io/go/basic/basicuse/</link>
       <pubDate>Fri, 27 Aug 2021 13:47:00 +0000</pubDate>
       
-      <guid>https://YOURNAME.github.io/go/basic/basicuse/</guid>
+      <guid>https://laurel-he.github.io/go/basic/basicuse/</guid>
       <description>参考文档： go文档 Go 语言教程 简单的go语言程序 package main import &amp;#34;fmt&amp;#34; func main() { var age, name string = &amp;#34;18&amp;#34;, &amp;#34;Joe&amp;#34; var res = fmt.Sprintf(&amp;#34;my name is %s, and my age is %s&amp;#34;, name, age) fmt.Println(res) } func init() { fmt.Println(&amp;#34;test init&amp;#34;) } func varTest() { var funcName, funcTime string = &amp;#34;varTest&amp;#34;, &amp;#34;now&amp;#34; fmt.Println(funcName + funcTime) } 使用go run来执行 使用go build 来生成二进制文件 go语言</description>
     </item>
     
     <item>
       <title>gin框架使用</title>
-      <link>https://YOURNAME.github.io/go/gin/basic/</link>
+      <link>https://laurel-he.github.io/go/gin/basic/</link>
       <pubDate>Fri, 27 Aug 2021 13:47:00 +0000</pubDate>
       
-      <guid>https://YOURNAME.github.io/go/gin/basic/</guid>
+      <guid>https://laurel-he.github.io/go/gin/basic/</guid>
       <description></description>
     </item>
     
     <item>
       <title>go语言圣经-(1)入门</title>
-      <link>https://YOURNAME.github.io/go/basic/thegoprograming/01/</link>
+      <link>https://laurel-he.github.io/go/basic/thegoprograming/01/</link>
       <pubDate>Fri, 27 Aug 2021 13:47:00 +0000</pubDate>
       
-      <guid>https://YOURNAME.github.io/go/basic/thegoprograming/01/</guid>
+      <guid>https://laurel-he.github.io/go/basic/thegoprograming/01/</guid>
       <description>基本介绍 可以参考此文章：https://docs.hacknode.org/gopl-zh/ch0/ch0-02.html 基础使用 查看go版本 go version 引入代码 需要在环境变量中添加GOPATH目录，然后使用</description>
     </item>
     

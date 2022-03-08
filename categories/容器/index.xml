@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>容器 on 瑶风</title>
-    <link>https://YOURNAME.github.io/categories/%E5%AE%B9%E5%99%A8/</link>
+    <link>https://laurel-he.github.io/categories/%E5%AE%B9%E5%99%A8/</link>
     <description>Recent content in 容器 on 瑶风</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 21 May 2020 11:00:00 +0000</lastBuildDate><atom:link href="https://YOURNAME.github.io/categories/%E5%AE%B9%E5%99%A8/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 21 May 2020 11:00:00 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/%E5%AE%B9%E5%99%A8/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>kustomize使用文档</title>
-      <link>https://YOURNAME.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/k8s/kustomize01/</link>
+      <link>https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/k8s/kustomize01/</link>
       <pubDate>Thu, 21 May 2020 11:00:00 +0000</pubDate>
       
-      <guid>https://YOURNAME.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/k8s/kustomize01/</guid>
+      <guid>https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/k8s/kustomize01/</guid>
       <description></description>
     </item>
     
     <item>
       <title>kubenetes权威指南1-2章</title>
-      <link>https://YOURNAME.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/k8s/k8s01/</link>
+      <link>https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/k8s/k8s01/</link>
       <pubDate>Sat, 16 May 2020 18:00:00 +0000</pubDate>
       
-      <guid>https://YOURNAME.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/k8s/k8s01/</guid>
+      <guid>https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/k8s/k8s01/</guid>
       <description>kubenetes是什么 k8s是一个全新的基于容器技术的分布式架构领先方案，一个开放的开发平台，一个完备的分布式系统支撑平台 k8s重要资源对象介绍 Master 概念介绍 k8s中的Master指的是集群控制节点，在</description>
     </item>
     

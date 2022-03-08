@@ -2,98 +2,98 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>设计模式 on 瑶风</title>
-    <link>https://YOURNAME.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
+    <link>https://laurel-he.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
     <description>Recent content in 设计模式 on 瑶风</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 28 Nov 2021 17:40:10 +0000</lastBuildDate><atom:link href="https://YOURNAME.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 28 Nov 2021 17:40:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>设计模式学习——前言</title>
-      <link>https://YOURNAME.github.io/designpattern/basic/</link>
+      <link>https://laurel-he.github.io/designpattern/basic/</link>
       <pubDate>Sun, 28 Nov 2021 17:40:10 +0000</pubDate>
       
-      <guid>https://YOURNAME.github.io/designpattern/basic/</guid>
+      <guid>https://laurel-he.github.io/designpattern/basic/</guid>
       <description>参考文档： PHP 设计模式系列 基本介绍 设计模式分类 基本所有的设计模式书籍或文档都会介绍到一个概念，就是设计模式的类型。 设计模式分为创建型，结构型，行为型以及部分其他类型的设计模式 创建型模式 在软件工程中，创建</description>
     </item>
     
     <item>
       <title>单例模式</title>
-      <link>https://YOURNAME.github.io/designpattern/phpallpattern/design_singleton/</link>
+      <link>https://laurel-he.github.io/designpattern/phpallpattern/design_singleton/</link>
       <pubDate>Tue, 29 Oct 2019 17:40:10 +0000</pubDate>
       
-      <guid>https://YOURNAME.github.io/designpattern/phpallpattern/design_singleton/</guid>
+      <guid>https://laurel-he.github.io/designpattern/phpallpattern/design_singleton/</guid>
       <description>概念介绍 情景介绍 一个类只需要被实例化一次，但是不应该由调用方来判断是否被实例化过 基础介绍 所有类都有构造方法，不编码则系统默认生成空的构造方法，若有显示定义的构造方法，默认的构造方法就会失效。 类把构造方</description>
     </item>
     
     <item>
       <title>设计模式六大原则</title>
-      <link>https://YOURNAME.github.io/designpattern/others/codeprinceple/</link>
+      <link>https://laurel-he.github.io/designpattern/others/codeprinceple/</link>
       <pubDate>Mon, 07 Oct 2019 17:40:10 +0000</pubDate>
       
-      <guid>https://YOURNAME.github.io/designpattern/others/codeprinceple/</guid>
+      <guid>https://laurel-he.github.io/designpattern/others/codeprinceple/</guid>
       <description>本文参考了设计模式六大原则 单一职责原则（SPR:Single Responsibility Principle） 一个类应该有且仅有一个原因导致该类的变更，即一个类应该只负责一项职责 但是在实际工作中，职责是会扩散的，一个类可能会新增</description>
     </item>
     
     <item>
       <title>单例模式</title>
-      <link>https://YOURNAME.github.io/designpattern/phpallpattern/singlemode/</link>
+      <link>https://laurel-he.github.io/designpattern/phpallpattern/singlemode/</link>
       <pubDate>Sun, 06 Oct 2019 10:40:10 +0000</pubDate>
       
-      <guid>https://YOURNAME.github.io/designpattern/phpallpattern/singlemode/</guid>
+      <guid>https://laurel-he.github.io/designpattern/phpallpattern/singlemode/</guid>
       <description>基础介绍 概念介绍 作为对象的创建模式，单例模式确保某一个类只有一个实例，并且对外提供这个全局实例的访问入口。它不会创建实例副本，而是会向单例类内部存储的实例返回一个引用。 单例模式三要素 需要一个保存类的唯</description>
     </item>
     
     <item>
       <title>生产者消费者模式</title>
-      <link>https://YOURNAME.github.io/designpattern/phpallpattern/producerconsumer/</link>
+      <link>https://laurel-he.github.io/designpattern/phpallpattern/producerconsumer/</link>
       <pubDate>Sat, 05 Oct 2019 17:40:10 +0000</pubDate>
       
-      <guid>https://YOURNAME.github.io/designpattern/phpallpattern/producerconsumer/</guid>
+      <guid>https://laurel-he.github.io/designpattern/phpallpattern/producerconsumer/</guid>
       <description>基础概念 概念介绍 某块模块负责产生数据，这些数据由另一个模块来负责处理。产生数据的模块，就形象地称为生产者；而处理数据的模块，就称为消费者。 该模式还需要有一个缓冲区处于生产者和消费者之间，作为一个中介。</description>
     </item>
     
     <item>
       <title>命令模式</title>
-      <link>https://YOURNAME.github.io/designpattern/phpallpattern/commandmode/</link>
+      <link>https://laurel-he.github.io/designpattern/phpallpattern/commandmode/</link>
       <pubDate>Fri, 04 Oct 2019 17:40:10 +0000</pubDate>
       
-      <guid>https://YOURNAME.github.io/designpattern/phpallpattern/commandmode/</guid>
+      <guid>https://laurel-he.github.io/designpattern/phpallpattern/commandmode/</guid>
       <description>基础概念 基础介绍 （1）概念介绍： 命令模式（Command Pattern）是一种数据驱动的设计模式，它属于行为型模式。请求以命令的形式包裹在对象中，并传给调用对象。调用对象寻找可以处理该命令的合适的对象</description>
     </item>
     
     <item>
       <title>策略模式</title>
-      <link>https://YOURNAME.github.io/designpattern/phpallpattern/strategy/</link>
+      <link>https://laurel-he.github.io/designpattern/phpallpattern/strategy/</link>
       <pubDate>Mon, 29 Jul 2019 14:37:10 +0000</pubDate>
       
-      <guid>https://YOURNAME.github.io/designpattern/phpallpattern/strategy/</guid>
+      <guid>https://laurel-he.github.io/designpattern/phpallpattern/strategy/</guid>
       <description>概念 定义 策略模式定义了算法族，分别封装起来，让他们之间可以相互替换，该模式让算法独立于使用它的客户而独立变化 组成 1 抽象策略角色：策略类，通常由一个接口或者抽象类实现 2 具体策略角色：包装了相关的算法和行</description>
     </item>
     
     <item>
       <title>简单工厂模式</title>
-      <link>https://YOURNAME.github.io/designpattern/phpallpattern/simplefactory/</link>
+      <link>https://laurel-he.github.io/designpattern/phpallpattern/simplefactory/</link>
       <pubDate>Wed, 24 Jul 2019 10:40:10 +0000</pubDate>
       
-      <guid>https://YOURNAME.github.io/designpattern/phpallpattern/simplefactory/</guid>
+      <guid>https://laurel-he.github.io/designpattern/phpallpattern/simplefactory/</guid>
       <description>引入 实现计算器 代码实现 1 实现一个基础的计算器功能，代码见https://github.com/laurel-he/design_pattern/blob/master/simpleFactory/ca</description>
     </item>
     
     <item>
       <title>抽象工厂模式</title>
-      <link>https://YOURNAME.github.io/designpattern/phpallpattern/abstractfactory/</link>
+      <link>https://laurel-he.github.io/designpattern/phpallpattern/abstractfactory/</link>
       <pubDate>Mon, 22 Jul 2019 17:40:10 +0000</pubDate>
       
-      <guid>https://YOURNAME.github.io/designpattern/phpallpattern/abstractfactory/</guid>
+      <guid>https://laurel-he.github.io/designpattern/phpallpattern/abstractfactory/</guid>
       <description>参考：抽象工厂模式（Abstract Factory） 目的 在不指定具体类的情况下创建一系列相关或依赖对象。 通常创建的类都实现相同的接口。 抽象工厂的客户并不关心这些对象是如何创建的，它只是知道它们是如何一</description>
     </item>
     
     <item>
       <title>设计模式基础</title>
-      <link>https://YOURNAME.github.io/designpattern/others/basic/</link>
+      <link>https://laurel-he.github.io/designpattern/others/basic/</link>
       <pubDate>Sun, 07 Jul 2019 17:40:10 +0000</pubDate>
       
-      <guid>https://YOURNAME.github.io/designpattern/others/basic/</guid>
+      <guid>https://laurel-he.github.io/designpattern/others/basic/</guid>
       <description>本文参考了书籍《大话设计模式》/文章从招式与内功谈起——设计模式概述 以及系列文章PHP 设计模式系列 定义 在软件工程中，设计模式（Design Pattern）是对软件设计中普遍存在（反复出现）的各种问题，</description>
     </item>
     

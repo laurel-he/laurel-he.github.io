@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>代码整洁之道 on 瑶风</title>
-    <link>https://YOURNAME.github.io/categories/%E4%BB%A3%E7%A0%81%E6%95%B4%E6%B4%81%E4%B9%8B%E9%81%93/</link>
+    <link>https://laurel-he.github.io/categories/%E4%BB%A3%E7%A0%81%E6%95%B4%E6%B4%81%E4%B9%8B%E9%81%93/</link>
     <description>Recent content in 代码整洁之道 on 瑶风</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 07 Oct 2019 17:40:10 +0000</lastBuildDate><atom:link href="https://YOURNAME.github.io/categories/%E4%BB%A3%E7%A0%81%E6%95%B4%E6%B4%81%E4%B9%8B%E9%81%93/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 07 Oct 2019 17:40:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/%E4%BB%A3%E7%A0%81%E6%95%B4%E6%B4%81%E4%B9%8B%E9%81%93/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>代码整洁之道1-9章</title>
-      <link>https://YOURNAME.github.io/post/cleancode/</link>
+      <link>https://laurel-he.github.io/post/cleancode/</link>
       <pubDate>Mon, 07 Oct 2019 17:40:10 +0000</pubDate>
       
-      <guid>https://YOURNAME.github.io/post/cleancode/</guid>
+      <guid>https://laurel-he.github.io/post/cleancode/</guid>
       <description>需求描述 第一章：整洁代码 要有代码 代码呈现了需求的细节，将需求明确到机器可以执行的细节程度 糟糕的代码 不要产生糟糕的、混乱的代码，勒布朗法则：稍后等于永不 混乱的代价 花时间保持代码整洁不但有关效率，还有关生</description>
     </item>
     

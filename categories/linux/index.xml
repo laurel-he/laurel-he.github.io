@@ -2,53 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>linux on 瑶风</title>
-    <link>https://YOURNAME.github.io/categories/linux/</link>
+    <link>https://laurel-he.github.io/categories/linux/</link>
     <description>Recent content in linux on 瑶风</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 28 Mar 2021 14:03:27 +0000</lastBuildDate><atom:link href="https://YOURNAME.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 28 Mar 2021 14:03:27 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>lnmp环境搭建</title>
-      <link>https://YOURNAME.github.io/operatingsystem/linux/lnmp/</link>
+      <link>https://laurel-he.github.io/operatingsystem/linux/lnmp/</link>
       <pubDate>Sun, 28 Mar 2021 14:03:27 +0000</pubDate>
       
-      <guid>https://YOURNAME.github.io/operatingsystem/linux/lnmp/</guid>
+      <guid>https://laurel-he.github.io/operatingsystem/linux/lnmp/</guid>
       <description>参考文档： 百度百科:lnmp 问题背景 根据部分5W/1H原则来解释下问题背景（where/when/who基本不用说了,How单独起一个） LNMP环境是什么（What） lnmp环境通常就是指linux+</description>
     </item>
     
     <item>
       <title>awk</title>
-      <link>https://YOURNAME.github.io/operatingsystem/linux/awk/</link>
+      <link>https://laurel-he.github.io/operatingsystem/linux/awk/</link>
       <pubDate>Thu, 27 Feb 2020 18:00:00 +0000</pubDate>
       
-      <guid>https://YOURNAME.github.io/operatingsystem/linux/awk/</guid>
+      <guid>https://laurel-he.github.io/operatingsystem/linux/awk/</guid>
       <description>参考文档： awk 入门教程 Linux awk命令 知识点 （1）-F指定分隔符，例如：awk -F &#39;:&#39; &#39;{print $1}&#39; demo.log （2）$0代表当前行，即所有内容，例如：awk &#39;{print $0}&#39; demo.log将会输出demo.log的所有内容 （3）$ + 数字表示</description>
     </item>
     
     <item>
       <title>linux命令大全</title>
-      <link>https://YOURNAME.github.io/operatingsystem/linuxuse/</link>
+      <link>https://laurel-he.github.io/operatingsystem/linuxuse/</link>
       <pubDate>Thu, 27 Feb 2020 18:00:00 +0000</pubDate>
       
-      <guid>https://YOURNAME.github.io/operatingsystem/linuxuse/</guid>
+      <guid>https://laurel-he.github.io/operatingsystem/linuxuse/</guid>
       <description>文件操作 cat 描述 查看文件内容 参数 -n 或 –number 由 1 开始对所有输出的行数编号 -b 或 –number-nonblank 和 -n 相似，只不过对于空白行不编号 -s 或 –squeeze-blank 当遇到有连续两行以上的空</description>
     </item>
     
     <item>
       <title>linux基础入门</title>
-      <link>https://YOURNAME.github.io/operatingsystem/linuxbase/</link>
+      <link>https://laurel-he.github.io/operatingsystem/linuxbase/</link>
       <pubDate>Thu, 27 Feb 2020 18:00:00 +0000</pubDate>
       
-      <guid>https://YOURNAME.github.io/operatingsystem/linuxbase/</guid>
+      <guid>https://laurel-he.github.io/operatingsystem/linuxbase/</guid>
       <description>学习心得，来自于蓝桥Linux基础入门 用户相关 查看当前用户 whoami:查看当前用户名 who am i:可以列出用户名，当前登录的伪终端以及当前伪终端的启动时间等 注意事项 在有些情况下who am i或者who mom lik</description>
     </item>
     
     <item>
       <title>crontab基本使用</title>
-      <link>https://YOURNAME.github.io/post/crontab/</link>
+      <link>https://laurel-he.github.io/post/crontab/</link>
       <pubDate>Wed, 10 Apr 2019 18:27:44 +0000</pubDate>
       
-      <guid>https://YOURNAME.github.io/post/crontab/</guid>
+      <guid>https://laurel-he.github.io/post/crontab/</guid>
       <description>1 简介 crond 是linux下用来周期性的执行某种任务或等待处理某些事件的一个守护进程，与windows下的计划任务类似，当安装完成操作系统后，默认会安装此服务 工具，并且会自动启动crond进程，crond进</description>
     </item>
     

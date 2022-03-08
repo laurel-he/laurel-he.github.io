@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tools on 瑶风</title>
-    <link>https://YOURNAME.github.io/tools/</link>
+    <link>https://laurel-he.github.io/tools/</link>
     <description>Recent content in Tools on 瑶风</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 20 Nov 2019 18:27:44 +0000</lastBuildDate><atom:link href="https://YOURNAME.github.io/tools/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 20 Nov 2019 18:27:44 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/tools/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>版本管理工具git（1）-起步和基础</title>
-      <link>https://YOURNAME.github.io/tools/git/git_01/</link>
+      <link>https://laurel-he.github.io/tools/git/git_01/</link>
       <pubDate>Wed, 20 Nov 2019 18:27:44 +0000</pubDate>
       
-      <guid>https://YOURNAME.github.io/tools/git/git_01/</guid>
+      <guid>https://laurel-he.github.io/tools/git/git_01/</guid>
       <description>参考文档：git管理 起步 作用 版本管理，git是分布式版本控制系统，既可以本地管理又可以协同合作 特点 （1）直接记录快照，而非差异比较：Git对待数据更像一个快照流（在 Git 中，每当你提交更新或保存项目状态时</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://YOURNAME.github.io/tools/nginx/basic/</link>
+      <link>https://laurel-he.github.io/tools/nginx/basic/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://YOURNAME.github.io/tools/nginx/basic/</guid>
+      <guid>https://laurel-he.github.io/tools/nginx/basic/</guid>
       <description>nginx基本配置： 反向代理 upstream：定义一组服务器，可监听不同端口 location 负载均衡：url hash负载均衡，最小连接负载均衡 keepalived ip_hash负载策略 https配置：ssl keepalived双主热</description>
     </item>
     

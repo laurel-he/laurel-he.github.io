@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>gin on 瑶风</title>
-    <link>https://YOURNAME.github.io/categories/gin/</link>
+    <link>https://laurel-he.github.io/categories/gin/</link>
     <description>Recent content in gin on 瑶风</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 27 Aug 2021 13:47:00 +0000</lastBuildDate><atom:link href="https://YOURNAME.github.io/categories/gin/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 27 Aug 2021 13:47:00 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/gin/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>gin框架使用</title>
-      <link>https://YOURNAME.github.io/go/gin/basic/</link>
+      <link>https://laurel-he.github.io/go/gin/basic/</link>
       <pubDate>Fri, 27 Aug 2021 13:47:00 +0000</pubDate>
       
-      <guid>https://YOURNAME.github.io/go/gin/basic/</guid>
+      <guid>https://laurel-he.github.io/go/gin/basic/</guid>
       <description></description>
     </item>
     

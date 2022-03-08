@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="贺小娇" />
+	
+	
+	
+	<title>数据结构学习笔记-1 ｜ 瑶风</title>
+	
+    
+    
+    <meta name="description" content="数据结构学习系列都来自于中国大学MOOC上的浙江大学数据结构学习课程。原课程代码全部采用C语言实现，由于本菜平时最擅长（zhihuiyong）使用php，因此所有算法全部翻译成了php实现。课程链接：" />
+    
+
+    
+    
+    <meta name="keywords" content="Hugo, blog, php" />
+    
+
+	
+    
+    <link rel="shortcut icon" href="https://laurel-he.github.io/images/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/zozo.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/highlight.css" />
+
+    
+    
+</head>
+
+<body>
+    <div class="main animate__animated animate__fadeInDown">
+        <div class="nav_container animated fadeInDown">
+    <div class="site_nav" id="site_nav">
+        <ul>
+            
+            <li>
+                <a href="/">主页</a>
+            </li>
+            
+            <li>
+                <a href="/categories/">分类</a>
+            </li>
+            
+            <li>
+                <a href="/tags/">标签</a>
+            </li>
+            
+            <li>
+                <a href="/post/">其他</a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="menu_icon">
+        <a id="menu_icon"><i class="ri-menu-line"></i></a>
+    </div>
+</div>
+        <div class="header animated fadeInDown">
+    <div class="site_title_container">
+        <div class="site_title">
+            <h1>
+                <a href="https://laurel-he.github.io/">
+                    <span>瑶风</span>
+                </a>
+            </h1>
+        </div>
+        <div class="description">
+            <p class="sub_title">贺胖娇的编程之旅......</p>
+            <div class="my_socials">
+                
+                
+                <a href="https://github.com/laurel-he" title="github" target="_blank"><i class="ri-github-fill"></i></a>
+                
+                
+                
+                <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1570306409&amp;site=qq&amp;menu=yes" title="qq" target="_blank"><i class="ri-qq-fill"></i></a>
+                
+                
+                
+                <a href="https://stackoverflow.com/users/9809769/laurel-he" title="stack-overflow" target="_blank"><i class="ri-stack-overflow-fill"></i></a>
+                
+                
+                
+                <a href="https://weibo.com/u/3783884100" title="weibo" target="_blank"><i class="ri-weibo-fill"></i></a>
+                
+                
+                <a href="https://laurel-he.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
+                        class="ri-rss-fill"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="content">
+            <div class="post_page">
+                <div class="post animate__animated animate__fadeInDown">
+                    <div class="post_title post_detail_title">
+                        <h2><a href='/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/datastruct_01/'>数据结构学习笔记-1</a></h2>
+                        <span class="date">2021.07.20</span>
+                    </div>
+                    <div class="post_content markdown"><p>数据结构学习系列都来自于中国大学MOOC上的浙江大学数据结构学习课程。原课程代码全部采用C语言实现，由于本菜平时最擅长（zhihuiyong）使用php，因此所有算法全部翻译成了php实现。课程链接：<a href="https://www.icourse163.org/learn/ZJU-93001?tid=1464647442#/learn/announce">数据结构</a> <br>
+全文已同步发布到<a href="https://blog.csdn.net/qq_28391061/article/details/118090942">CSDN</a></p>
+<h2 id="定义">定义</h2>
+<p>（1）数据结构是数据对象，以及存在于该对象的实例和组成实例的数据元素之间的各种联系。这些联系可以通过定义和相关的函数来给出 <br>
+（2）数据结构是ADT(abstruct data type)的物理实现 <br>
+（3）数据结构是计算机存储，组织数据的方式，通常情况下，精心选择的数据结构可以带来最有效率的算法</p>
+<h2 id="示例">示例</h2>
+<h3 id="写程序实现一个函数printn打印从1-n之间的所有正整数">写程序实现一个函数printN，打印从1-N之间的所有正整数</h3>
+<p>。以下是两种实现方式的php实现代码：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
+<span class="k">function</span> <span class="nf">printN</span><span class="p">(</span><span class="nv">$n</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nv">$i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="nv">$i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">&lt;</span> <span class="nv">$n</span><span class="p">;</span> <span class="nv">$i</span><span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+        <span class="k">echo</span> <span class="nv">$i</span><span class="o">.</span> <span class="s2">&#34;</span><span class="se">\n\r</span><span class="s2">&#34;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="nv">$begin1</span> <span class="o">=</span> <span class="nx">microtime</span><span class="p">();</span>
+<span class="nx">printN</span><span class="p">(</span><span class="mi">10000</span><span class="p">);</span>
+<span class="nv">$end1</span> <span class="o">=</span> <span class="nx">microtime</span><span class="p">();</span>
+<span class="nv">$time1</span> <span class="o">=</span> <span class="nv">$end1</span> <span class="o">-</span> <span class="nv">$begin1</span><span class="p">;</span>
+
+
+<span class="k">function</span> <span class="nf">printM</span><span class="p">(</span><span class="nv">$m</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nv">$m</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">printM</span><span class="p">(</span><span class="nv">$m</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+        <span class="k">echo</span> <span class="nv">$m</span><span class="o">.</span> <span class="s2">&#34;</span><span class="se">\n\r</span><span class="s2">&#34;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="nv">$begin2</span> <span class="o">=</span> <span class="nx">microtime</span><span class="p">();</span>
+<span class="nx">printM</span><span class="p">(</span><span class="mi">10000</span><span class="p">);</span>
+<span class="nv">$end2</span> <span class="o">=</span> <span class="nx">microtime</span><span class="p">();</span>
+<span class="nv">$time2</span> <span class="o">=</span> <span class="nv">$end2</span> <span class="o">-</span> <span class="nv">$begin2</span><span class="p">;</span>
+
+<span class="k">echo</span> <span class="nv">$time2</span> <span class="o">-</span> <span class="nv">$time1</span><span class="p">;</span>
+</code></pre></div><p>递归和直接循环打印都可以实现，但是递归当数字大于1w左右就失败了，因为递归对空间的占用十分恐怖。解决问题方法的效率，也与空间的占用效率是有关的。</p>
+<h3 id="写程序计算给定多项式在给定点x处的值">写程序计算给定多项式在给定点x处的值</h3>
+<p>多项式：f(x) = a₀ + a₁x + a₂x² &hellip; + aₙ₋₁xⁿ⁻¹ + aₙxⁿ <br>
+使用php的两种实现方式：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
+
+<span class="k">function</span> <span class="nf">getPoly</span><span class="p">(</span><span class="nx">int</span> <span class="nv">$n</span><span class="p">,</span> <span class="k">array</span> <span class="nv">$a</span><span class="p">,</span> <span class="nx">float</span> <span class="nv">$x</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nv">$res</span> <span class="o">=</span> <span class="nv">$a</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+    <span class="k">for</span> <span class="p">(</span><span class="nv">$i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">&lt;=</span> <span class="nv">$n</span><span class="p">;</span> <span class="nv">$i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nv">$res</span> <span class="o">+=</span> <span class="nv">$a</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span> <span class="o">*</span> <span class="nx">pow</span><span class="p">(</span><span class="nv">$x</span><span class="p">,</span> <span class="nv">$i</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nv">$res</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nv">$poliArr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">];</span>
+<span class="nv">$n</span> <span class="o">=</span> <span class="nx">count</span><span class="p">(</span><span class="nv">$poliArr</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+<span class="nv">$x</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">;</span>
+
+<span class="k">function</span> <span class="nf">getPoly2</span><span class="p">(</span><span class="nx">int</span> <span class="nv">$n</span><span class="p">,</span> <span class="k">array</span> <span class="nv">$a</span><span class="p">,</span> <span class="nx">float</span> <span class="nv">$x</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nv">$p</span> <span class="o">=</span> <span class="nv">$a</span><span class="p">[</span><span class="nv">$n</span><span class="p">];</span>
+    <span class="k">for</span> <span class="p">(</span><span class="nv">$i</span> <span class="o">=</span> <span class="nv">$n</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">;</span> <span class="nv">$i</span><span class="o">--</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$p</span> <span class="o">=</span> <span class="nv">$a</span><span class="p">[</span><span class="nv">$i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="nv">$x</span> <span class="o">*</span> <span class="nv">$p</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nv">$p</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">echo</span> <span class="nx">getPoly</span><span class="p">(</span><span class="nv">$n</span><span class="p">,</span> <span class="nv">$poliArr</span><span class="p">,</span> <span class="nv">$x</span><span class="p">);</span>
+<span class="k">echo</span> <span class="s2">&#34;</span><span class="se">\n\r</span><span class="s2">&#34;</span><span class="p">;</span>
+<span class="k">echo</span> <span class="nx">getPoly2</span><span class="p">(</span><span class="nv">$n</span><span class="p">,</span> <span class="nv">$poliArr</span><span class="p">,</span> <span class="nv">$x</span><span class="p">);</span>
+</code></pre></div><p>getPoly比getPoly2的运行速度差了接近一个数量级，说明解决问题方法的效率，跟算法的精妙程度有关。</p>
+<h2 id="总结">总结</h2>
+<p>数据结构：数据在计算机中的组织方式 <br>
+数据对象必定与一系列加在其上的操作相关联，完成这些操作所用的方法叫算法</p>
+<h3 id="抽象数据类型abstract-data-type">抽象数据类型(Abstract Data Type)</h3>
+<h4 id="数据类型">数据类型</h4>
+<p>数据对象集、数据集合相关联的操作集</p>
+<h4 id="抽象">抽象</h4>
+<p>描述数据类型的方法不依赖于具体实现，与存放数据的机器无关，与数据存储的物理结构无关，跟实现操作的算法和编程语言均无关，只描述数据类型是什么，不涉及如何做到的问题</p>
+<h3 id="算法">算法</h3>
+<p>（1）一个有限指令集 <br>
+（2）接受一些输入（有时不需要输入） <br>
+（3）产生输出 <br>
+（4）一定在有限步骤之后终止 <br>
+（5）每一条指令必须 <br>
+a 有充分明确的目标，不可以有歧义  <br>
+b 要在计算机能处理的范围之内   <br>
+c 描述应不依赖于任何一种计算机的语言以及具体的实现方式</p>
+<h4 id="什么是好的算法">什么是好的算法</h4>
+<p>使用空间复杂度S(n)&ndash;（space）和时间复杂度T(n)&ndash;(time)来衡量,一般总的来说写作O(n)  <br>
+这两个数据和处理数据的规模相关 <br>
+在分析一般算法的效率时，通常关心两个复杂度：最坏情况复杂度，平均复杂度 <br>
+<strong>示例</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">function printM($m)
+{
+    if ($m) {
+        printM($m - 1);
+        echo $m. &#34;\n\r&#34;;
+}
+</code></pre></div><p>这个程序S(N) = C * N,因此当数据量大到一定程度，空间会用爆掉 <br>
+机器运算加减法比乘除法要快很多</p>
+</div>
+                    <div class="post_footer">
+                        
+                        <div class="meta">
+                            <div class="info">
+                                <span class="field tags">
+                                    <i class="ri-stack-line"></i>
+                                    
+                                    <a href="https://laurel-he.github.io/tags/%E5%AD%A6%E4%B9%A0/">学习</a>
+                                    
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                
+                
+<div class="doc_comments">
+    <div class="comments_block_title">发表评论</div>
+    <div id="vcomments"></div>
+</div>
+
+<link rel="stylesheet" href="https://laurel-he.github.io/css/comments.css" />
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
+<script type="text/javascript">
+    new Valine({
+        el: '#vcomments',
+        appId: 'SWEItAag34n7U5AR3T95AhRG-gzGzoHsz',
+        appKey: 'zAM901B4LKIxfrnTb7ie5e5K',
+        placeholder: '在此输入评论...',
+        visitor: 'true',
+    })
+</script>
+                
+            </div>
+        </div>
+    </div>
+    <a id="back_to_top" href="#" class="back_to_top"><i class="ri-arrow-up-s-line"></i></a>
+    <footer class="footer">
+    <div class="powered_by">
+        <a href="https://varkai.com">Designed by VarKai,</a>
+        <a href="http://www.gohugo.io/">Proudly published with Hugo</a>
+    </div>
+
+    <div class="footer_slogan">
+        <span>绝知此事要躬行</span>
+    </div>
+</footer>
+    <script src="https://laurel-he.github.io/js/jquery-3.5.1.min.js"></script>
+<link href="https://laurel-he.github.io/css/fancybox.min.css" rel="stylesheet">
+<script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
+<script src="https://laurel-he.github.io/js/zozo.js"></script>
+
+
+
+
+</body>
+
+</html>

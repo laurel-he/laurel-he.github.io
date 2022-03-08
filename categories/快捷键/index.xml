@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>快捷键 on 瑶风</title>
-    <link>https://YOURNAME.github.io/categories/%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+    <link>https://laurel-he.github.io/categories/%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
     <description>Recent content in 快捷键 on 瑶风</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 05 Mar 2019 13:25:21 +0000</lastBuildDate><atom:link href="https://YOURNAME.github.io/categories/%E5%BF%AB%E6%8D%B7%E9%94%AE/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Mar 2019 13:25:21 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/%E5%BF%AB%E6%8D%B7%E9%94%AE/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>一些快捷键</title>
-      <link>https://YOURNAME.github.io/post/hotkey/</link>
+      <link>https://laurel-he.github.io/post/hotkey/</link>
       <pubDate>Tue, 05 Mar 2019 13:25:21 +0000</pubDate>
       
-      <guid>https://YOURNAME.github.io/post/hotkey/</guid>
+      <guid>https://laurel-he.github.io/post/hotkey/</guid>
       <description>navicat for mysql 快捷键 1.ctrl+q 打开查询窗口 2.ctrl+/ 注释sql语句 3.ctrl+shift +/ 解除注释 4.ctrl+r 运行查询窗口的sql语句 5.ctrl+shift+r 只运行选中的sql语句 6.F6 打开一个mysql命令行窗口 7.ctrl+l 删除一行 8.ctrl+n 打开一个新的查询窗口 9.ctrl+w 关闭一个查询窗口 phpstrom</description>
     </item>
     
     <item>
       <title>vim学习笔记</title>
-      <link>https://YOURNAME.github.io/operatingsystem/vim/</link>
+      <link>https://laurel-he.github.io/operatingsystem/vim/</link>
       <pubDate>Thu, 28 Feb 2019 16:34:10 +0000</pubDate>
       
-      <guid>https://YOURNAME.github.io/operatingsystem/vim/</guid>
+      <guid>https://laurel-he.github.io/operatingsystem/vim/</guid>
       <description>光标移动 h 或 &amp;lt;- 表示向左 j 下 k 上 l 右 ctrl + f 屏幕向下移动一页 ctrl + b 向上移动一页 ctrl + d 向下移动半页 ctrl + u 向上移动半页 &amp;lsquo;+&amp;rsquo; 光标移动到非空格符的下一行 &amp;lsquo;-&amp;rsquo; 光标移动到非空格符的 n[space] n表示数字，光标向右移动n个字符 0或[</description>
     </item>
     
