@@ -6,7 +6,34 @@
     <description>Recent content in Goes on 瑶风</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 25 Nov 2021 20:47:00 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/go/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 08 Mar 2022 13:47:00 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/go/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>go语言中一些标志的含义</title>
+      <link>https://laurel-he.github.io/go/basic/thegoprograming/mark/</link>
+      <pubDate>Tue, 08 Mar 2022 13:47:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/go/basic/thegoprograming/mark/</guid>
+      <description>符号 符号 含义 解释 示例 := 短变量声明(blank identifier) 定义一个或多个变量并根据它们的初始值为这些变量赋予适当类型的语句 i := 1 _ 空标识符(blank identifier) 空标识符可用于任何语法需要变量名但程序逻辑不需要的时候 for _, arg</description>
+    </item>
+    
+    <item>
+      <title>go语言圣经-(1)入门-GIF动画</title>
+      <link>https://laurel-he.github.io/go/basic/thegoprograming/01_2/</link>
+      <pubDate>Tue, 08 Mar 2022 13:47:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/go/basic/thegoprograming/01_2/</guid>
+      <description>GIF动画</description>
+    </item>
+    
+    <item>
+      <title>go语言圣经-(1)入门-命令行参数、查找重复行</title>
+      <link>https://laurel-he.github.io/go/basic/thegoprograming/01_1/</link>
+      <pubDate>Mon, 07 Mar 2022 13:47:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/go/basic/thegoprograming/01_1/</guid>
+      <description>基本介绍 可以参考此文章：https://docs.hacknode.org/gopl-zh/ch0/ch0-02.html 基础使用 查看go版本 go version 引入代码 需要在环境变量中添加GOPATH目录，然后使用</description>
+    </item>
+    
     <item>
       <title>go语言学习</title>
       <link>https://laurel-he.github.io/go/summary/</link>
@@ -41,15 +68,6 @@
       
       <guid>https://laurel-he.github.io/go/gin/basic/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>go语言圣经-(1)入门</title>
-      <link>https://laurel-he.github.io/go/basic/thegoprograming/01/</link>
-      <pubDate>Fri, 27 Aug 2021 13:47:00 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/go/basic/thegoprograming/01/</guid>
-      <description>基本介绍 可以参考此文章：https://docs.hacknode.org/gopl-zh/ch0/ch0-02.html 基础使用 查看go版本 go version 引入代码 需要在环境变量中添加GOPATH目录，然后使用</description>
     </item>
     
     <item>
