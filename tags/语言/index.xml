@@ -1,12 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>语言 on 瑶风</title>
+    <title>语言 on xiaoJiao</title>
     <link>https://laurel-he.github.io/tags/%E8%AF%AD%E8%A8%80/</link>
-    <description>Recent content in 语言 on 瑶风</description>
+    <description>Recent content in 语言 on xiaoJiao</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 27 Aug 2021 13:47:00 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/tags/%E8%AF%AD%E8%A8%80/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 25 Apr 2022 13:47:00 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/tags/%E8%AF%AD%E8%A8%80/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>测试函数</title>
+      <link>https://laurel-he.github.io/go/test/testfunction/</link>
+      <pubDate>Mon, 25 Apr 2022 13:47:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/go/test/testfunction/</guid>
+      <description>格式要求 引入testing包 每个测试函数必须导入testing包。测试函数有如下的签名： func TestName(t *testing.T) { // ... } 测试函数的名字必须以Test开头，可选的后缀名必须以大写字母开头： 例如： func TestSin(t *testing.T) { /* ... */ } func TestCos(t *testing.T) { /*</description>
+    </item>
+    
+    <item>
+      <title>测试</title>
+      <link>https://laurel-he.github.io/go/test/basictest/</link>
+      <pubDate>Sun, 24 Apr 2022 13:47:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/go/test/basictest/</guid>
+      <description>*_test.go文件中，三种函数类型 测试函数、基准测试(benchmark)函数、示例函数 测试函数 一个测试函数是以Test为函数名前缀的函数，用于测试程序的一些逻辑行为是否正确； go test命令会调用</description>
+    </item>
+    
     <item>
       <title>(1)go基础学习-基础概念</title>
       <link>https://laurel-he.github.io/go/basic/basic/</link>

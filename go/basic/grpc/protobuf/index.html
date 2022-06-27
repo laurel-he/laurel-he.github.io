@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="贺小娇" />
+	
+	
+	
+	<title>ProtoBuf学习 ｜ xiaoJiao</title>
+	
+    
+    
+    <meta name="description" content="参考文档：Protobuf语法 概念 通俗地说，其实Protobuf就是一种数据传输格式，就像json,xml,yaml等等。官网介绍如下： 他是一种与语言无关、与平台无关，是一种可扩展的用于序列化和结构化" />
+    
+
+    
+    
+    <meta name="keywords" content="Hugo, blog, php" />
+    
+
+	
+    
+    <link rel="shortcut icon" href="https://laurel-he.github.io/images/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/zozo.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/highlight.css" />
+
+    
+    
+</head>
+
+<body>
+    <div class="main animate__animated animate__fadeInDown">
+        <div class="nav_container animated fadeInDown">
+    <div class="site_nav" id="site_nav">
+        <ul>
+            
+            <li>
+                <a href="/">主页</a>
+            </li>
+            
+            <li>
+                <a href="/categories/">分类</a>
+            </li>
+            
+            <li>
+                <a href="/tags/">标签</a>
+            </li>
+            
+            <li>
+                <a href="/post/">其他</a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="menu_icon">
+        <a id="menu_icon"><i class="ri-menu-line"></i></a>
+    </div>
+</div>
+        <div class="header animated fadeInDown">
+    <div class="site_title_container">
+        <div class="site_title">
+            <h1>
+                <a href="https://laurel-he.github.io/">
+                    <span>xiaoJiao</span>
+                </a>
+            </h1>
+        </div>
+        <div class="description">
+            <p class="sub_title">贺胖娇的编程之旅......</p>
+            <div class="my_socials">
+                
+                
+                <a href="https://github.com/laurel-he" title="github" target="_blank"><i class="ri-github-fill"></i></a>
+                
+                
+                
+                <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1570306409&amp;site=qq&amp;menu=yes" title="qq" target="_blank"><i class="ri-qq-fill"></i></a>
+                
+                
+                
+                <a href="https://stackoverflow.com/users/9809769/laurel-he" title="stack-overflow" target="_blank"><i class="ri-stack-overflow-fill"></i></a>
+                
+                
+                
+                <a href="https://weibo.com/u/3783884100" title="weibo" target="_blank"><i class="ri-weibo-fill"></i></a>
+                
+                
+                <a href="https://laurel-he.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
+                        class="ri-rss-fill"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="content">
+            <div class="post_page">
+                <div class="post animate__animated animate__fadeInDown">
+                    <div class="post_title post_detail_title">
+                        <h2><a href='/go/basic/grpc/protobuf/'>ProtoBuf学习</a></h2>
+                        <span class="date">2022.03.17</span>
+                    </div>
+                    <div class="post_content markdown"><p>参考文档：<a href="https://www.topgoer.com/%E5%BE%AE%E6%9C%8D%E5%8A%A1/gRPC/Protobuf%E8%AF%AD%E6%B3%95.html">Protobuf语法</a></p>
+<h1 id="概念">概念</h1>
+<p>通俗地说，其实Protobuf就是一种数据传输格式，就像json,xml,yaml等等。官网介绍如下：</p>
+<blockquote>
+<p>他是一种与语言无关、与平台无关，是一种可扩展的用于序列化和结构化数据的方法，常用于用于通信协议，数据存储等。
+他是一种灵活，高效，自动化的机制，用于序列化结构化数据，对比于 XML，他更小（310倍），更快（20100倍），更简单。</p>
+</blockquote>
+<h1 id="基本规范">基本规范</h1>
+<h3 id="文件以proto做为文件后缀除结构定义外的语句以分号结尾">文件以.proto做为文件后缀，除结构定义外的语句以分号结尾</h3>
+<h3 id="结构定义可以包含messageserviceenum">结构定义可以包含：message、service、enum</h3>
+<h3 id="rpc方法定义结尾的分号可有可无">rpc方法定义结尾的分号可有可无</h3>
+<h3 id="message命名采用驼峰命名方式字段命名采用小写字母加下划线分隔方式">message命名采用驼峰命名方式，字段命名采用小写字母加下划线分隔方式</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">message SongServerRequest {
+   required string song_name = 1; 
+}
+</code></pre></div><h3 id="enums类型名采用驼峰命名方式字段命名采用大写字母加下划线分隔方式">Enums类型名采用驼峰命名方式，字段命名采用大写字母加下划线分隔方式</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">enums Foo {
+    FIRST_VALUE = 1;
+    SECOND_VALUE = 2;
+}
+</code></pre></div><h3 id="service与rpc方法名统一采用驼峰式命名">Service与rpc方法名统一采用驼峰式命名</h3>
+<h2 id="字段规则">字段规则</h2>
+<h3 id="字段格式">字段格式</h3>
+<p>限定修饰符 | 数据类型 | 字段名称 | = | 字段编码值 | [字段默认值]</p>
+<h4 id="限定修饰符">限定修饰符</h4>
+<p>限定修饰符包含required\optional\repeated</p>
+<h5 id="required">required</h5>
+<p>表示是一个必须字段，必须相对于发送方，在发送消息之前必须设置该字段的值，对于接收方，必须能够识别该字段的意思。发送之前没有设置required字段或者无法识别required字段都会引发编解码异常，导致消息被丢弃</p>
+<h5 id="optional">Optional</h5>
+<p>表示是一个可选字段，可选对于发送方，在发送消息时，可以有选择性的设置或者不设置该字段的值。
+对于接收方，如果能够识别可选字段就进行相应的处理，如果无法识别，则忽略该字段，消息中的其它字段正常处理。
+&mdash;因为optional字段的特性，很多接口在升级版本中都把后来添加的字段都统一的设置为optional字段，这样老的版本无需升级程序也可以正常的与新的软件进行通信，只不过新的字段无法识别而已，因为并不是每个节点都需要新的功能，因此可以做到按需升级和平滑过渡</p>
+<h5 id="repeated">Repeated</h5>
+<p>表示该字段可以包含0~N个元素。其特性和optional一样，但是每一次可以包含多个值。可以看作是在传递一个数组的值</p>
+<h2 id="数据类型">数据类型</h2>
+<p>Protobuf定义了一套基本数据类型。几乎都可以映射到C++\Java等语言的基础数据类型</p>
+<table>
+<thead>
+<tr>
+<th>.proto</th>
+<th>C++</th>
+<th>Java</th>
+<th>Python</th>
+<th>Go</th>
+<th>Ruby</th>
+<th>C#</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>double</td>
+<td>double</td>
+<td>double</td>
+<td>float</td>
+<td>float64</td>
+<td>Float</td>
+<td>double</td>
+</tr>
+<tr>
+<td>float</td>
+<td>float</td>
+<td>float</td>
+<td>float</td>
+<td>float32</td>
+<td>Float</td>
+<td>float</td>
+</tr>
+<tr>
+<td>int32</td>
+<td>int32</td>
+<td>int</td>
+<td>int</td>
+<td>int32</td>
+<td>Fixnum or Bignum</td>
+<td>int</td>
+</tr>
+<tr>
+<td>int64</td>
+<td>int64</td>
+<td>long</td>
+<td>ing/long[3]</td>
+<td>int64</td>
+<td>Bignum</td>
+<td>long</td>
+</tr>
+<tr>
+<td>uint32</td>
+<td>uint32</td>
+<td>int[1]</td>
+<td>int/long[3]</td>
+<td>uint32</td>
+<td>Fixnum or Bignum</td>
+<td>uint</td>
+</tr>
+<tr>
+<td>uint64</td>
+<td>uint64</td>
+<td>long[1]</td>
+<td>int/long[3]</td>
+<td>uint64</td>
+<td>Bignum</td>
+<td>ulong</td>
+</tr>
+<tr>
+<td>sint32</td>
+<td>int32</td>
+<td>int</td>
+<td>intj</td>
+<td>int32</td>
+<td>Fixnum or Bignum</td>
+<td>int</td>
+</tr>
+<tr>
+<td>sint64</td>
+<td>int64</td>
+<td>long</td>
+<td>int/long[3]</td>
+<td>int64</td>
+<td>Bignum</td>
+<td>long</td>
+</tr>
+<tr>
+<td>fixed32</td>
+<td>uint32</td>
+<td>int[1]</td>
+<td>int</td>
+<td>uint32</td>
+<td>Fixnum or Bignum</td>
+<td>uint</td>
+</tr>
+<tr>
+<td>fixed64</td>
+<td>uint64</td>
+<td>long[1]</td>
+<td>int/long[3]</td>
+<td>uint64</td>
+<td>Bignum</td>
+<td>ulong</td>
+</tr>
+<tr>
+<td>sfixed32</td>
+<td>int32</td>
+<td>int</td>
+<td>int</td>
+<td>int32</td>
+<td>Fixnum or Bignum</td>
+<td>int</td>
+</tr>
+<tr>
+<td>sfixed64</td>
+<td>int64</td>
+<td>long</td>
+<td>int/long[3]</td>
+<td>int64</td>
+<td>Bignum</td>
+<td>long</td>
+</tr>
+<tr>
+<td>bool</td>
+<td>bool</td>
+<td>boolean</td>
+<td>boolean</td>
+<td>bool</td>
+<td>TrueClass/FalseClass</td>
+<td>bool</td>
+</tr>
+<tr>
+<td>string</td>
+<td>string</td>
+<td>String</td>
+<td>str/unicode[4]</td>
+<td>string</td>
+<td>String(UTF-8)</td>
+<td>string</td>
+</tr>
+<tr>
+<td>bytes</td>
+<td>string</td>
+<td>ByteString</td>
+<td>str</td>
+<td>[]byte</td>
+<td>String(ASCII-8BIT)</td>
+<td>ByteString</td>
+</tr>
+</tbody>
+</table>
+<h2 id="字段名称">字段名称</h2>
+<p>字段名称的命名与C、C++、Java等语言的变量命名方式几乎是相同的 <br>
+protobuf建议字段的命名采用以下划线分割的驼峰式。例如 first_name 而不是firstName</p>
+<h2 id="字段编码值">字段编码值</h2>
+<p>有了该值，通信双方才能互相识别对方的字段，相同的编码值，其限定修饰符和数据类型必须相同，编码值的取值范围为 1~2^32（4294967296）   <br>
+其中 1~15的编码时间和空间效率都是最高的，编码值越大，其编码的时间和空间效率就越低，所以建议把经常要传递的值把其字段编码设置为1-15之间的值  <br>
+1900~2000编码值为Google protobuf 系统内部保留值，建议不要在自己的项目中使用</p>
+<h2 id="字段默认值">字段默认值</h2>
+<p>当在传递数据时，对于required数据类型，如果用户没有设置值，则使用默认值传递到对端</p>
+<h1 id="service如何定义">Service如何定义</h1>
+</div>
+                    <div class="post_footer">
+                        
+                        <div class="meta">
+                            <div class="info">
+                                <span class="field tags">
+                                    <i class="ri-stack-line"></i>
+                                    
+                                    <a href="https://laurel-he.github.io/tags/%E5%AD%A6%E4%B9%A0/">学习</a>
+                                    
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                
+                
+<div class="doc_comments">
+    <div class="comments_block_title">发表评论</div>
+    <div id="vcomments"></div>
+</div>
+
+<link rel="stylesheet" href="https://laurel-he.github.io/css/comments.css" />
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
+<script type="text/javascript">
+    new Valine({
+        el: '#vcomments',
+        appId: 'SWEItAag34n7U5AR3T95AhRG-gzGzoHsz',
+        appKey: 'zAM901B4LKIxfrnTb7ie5e5K',
+        placeholder: '在此输入评论...',
+        visitor: 'true',
+    })
+</script>
+                
+            </div>
+        </div>
+    </div>
+    <a id="back_to_top" href="#" class="back_to_top"><i class="ri-arrow-up-s-line"></i></a>
+    <footer class="footer">
+    <div class="powered_by">
+        <a href="https://varkai.com">Designed by VarKai,</a>
+        <a href="http://www.gohugo.io/">Proudly published with Hugo</a>
+    </div>
+
+    <div class="footer_slogan">
+        <span>绝知此事要躬行</span>
+    </div>
+</footer>
+    <script src="https://laurel-he.github.io/js/jquery-3.5.1.min.js"></script>
+<link href="https://laurel-he.github.io/css/fancybox.min.css" rel="stylesheet">
+<script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
+<script src="https://laurel-he.github.io/js/zozo.js"></script>
+
+
+
+
+</body>
+
+</html>

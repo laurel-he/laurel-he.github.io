@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="贺小娇" />
+	
+	
+	
+	<title>go语言圣经-(2)入门-程序结构 ｜ xiaoJiao</title>
+	
+    
+    
+    <meta name="description" content="2.1命名 Go语言中的函数名、变量名、常量名、类型名、语句标号和包名等所有的命名，都遵循一个简单的命名规则：一个名字必须以一个字母（Unicode字母）或下划线开头，后面可以跟任意数量的字母、数字或下" />
+    
+
+    
+    
+    <meta name="keywords" content="Hugo, blog, php" />
+    
+
+	
+    
+    <link rel="shortcut icon" href="https://laurel-he.github.io/images/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/zozo.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/highlight.css" />
+
+    
+    
+</head>
+
+<body>
+    <div class="main animate__animated animate__fadeInDown">
+        <div class="nav_container animated fadeInDown">
+    <div class="site_nav" id="site_nav">
+        <ul>
+            
+            <li>
+                <a href="/">主页</a>
+            </li>
+            
+            <li>
+                <a href="/categories/">分类</a>
+            </li>
+            
+            <li>
+                <a href="/tags/">标签</a>
+            </li>
+            
+            <li>
+                <a href="/post/">其他</a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="menu_icon">
+        <a id="menu_icon"><i class="ri-menu-line"></i></a>
+    </div>
+</div>
+        <div class="header animated fadeInDown">
+    <div class="site_title_container">
+        <div class="site_title">
+            <h1>
+                <a href="https://laurel-he.github.io/">
+                    <span>xiaoJiao</span>
+                </a>
+            </h1>
+        </div>
+        <div class="description">
+            <p class="sub_title">贺胖娇的编程之旅......</p>
+            <div class="my_socials">
+                
+                
+                <a href="https://github.com/laurel-he" title="github" target="_blank"><i class="ri-github-fill"></i></a>
+                
+                
+                
+                <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1570306409&amp;site=qq&amp;menu=yes" title="qq" target="_blank"><i class="ri-qq-fill"></i></a>
+                
+                
+                
+                <a href="https://stackoverflow.com/users/9809769/laurel-he" title="stack-overflow" target="_blank"><i class="ri-stack-overflow-fill"></i></a>
+                
+                
+                
+                <a href="https://weibo.com/u/3783884100" title="weibo" target="_blank"><i class="ri-weibo-fill"></i></a>
+                
+                
+                <a href="https://laurel-he.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
+                        class="ri-rss-fill"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="content">
+            <div class="post_page">
+                <div class="post animate__animated animate__fadeInDown">
+                    <div class="post_title post_detail_title">
+                        <h2><a href='/go/basic/thegoprograming/02/'>go语言圣经-(2)入门-程序结构</a></h2>
+                        <span class="date">2022.03.07</span>
+                    </div>
+                    <div class="post_content markdown"><h1 id="21命名">2.1命名</h1>
+<p>Go语言中的函数名、变量名、常量名、类型名、语句标号和包名等所有的命名，都遵循一个简单的命名规则：一个名字必须以一个字母（Unicode字母）或下划线开头，后面可以跟任意数量的字母、数字或下划线。大写字母和小写字母是不同的：heapSort和Heapsort是两个不同的名字</p>
+<h2 id="定义位置">定义位置</h2>
+<p>如果一个名字是在函数内部定义，那么它就只在函数内部有效。如果是在函数外部定义，那么将在当前包的所有文件中都可以访问
+##名字的开头字母的大小写
+名字的开头字母的大小写决定了名字在包外的可见性。如果一个名字是大写字母开头的（译注：必须是在函数外部定义的包级名字；包级函数名本身也是包级名字），那么它将是导出的，也就是说可以被外部的包访问，例如fmt包的Printf函数就是导出的，可以在fmt包外部访问。包本身的名字一般总是用小写字母。</p>
+<h2 id="命名习惯">命名习惯</h2>
+<p>Go语言程序员推荐使用 驼峰式 命名</p>
+<h2 id="go语言关键字">go语言关键字</h2>
+<blockquote>
+<p>break      default       func     interface   select
+case       defer         go       map         struct
+chan       else          goto     package     switch
+const      fallthrough   if       range       type
+continue   for           import   return      var</p>
+</blockquote>
+<h2 id="预定义的名字">预定义的名字</h2>
+<blockquote>
+<p>内建常量: true false iota nil</p>
+</blockquote>
+<blockquote>
+<p>内建类型: int int8 int16 int32 int64
+uint uint8 uint16 uint32 uint64 uintptr
+float32 float64 complex128 complex64
+bool byte rune string error</p>
+</blockquote>
+<blockquote>
+<p>内建函数: make len cap new append copy close delete
+complex real imag
+panic recover</p>
+</blockquote>
+<h1 id="22-声明">2.2 声明</h1>
+<p>go语言主要有四种类型的声明语句，var(变量) const(常量) type(类型) func(函数) <br>
+示例：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="c1">// Boiling prints the boiling point of water.
+</span><span class="c1"></span><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="s">&#34;fmt&#34;</span>
+
+<span class="kd">const</span> <span class="nx">boilingF</span> <span class="p">=</span> <span class="mf">212.0</span> <span class="c1">//在包一级声明，整个main包里都可访问
+</span><span class="c1"></span>
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">f</span> <span class="p">=</span> <span class="nx">boilingF</span> <span class="c1">//局部声明，只能在main函数内部访问
+</span><span class="c1"></span>    <span class="kd">var</span> <span class="nx">c</span> <span class="p">=</span> <span class="p">(</span><span class="nx">f</span> <span class="o">-</span> <span class="mi">32</span><span class="p">)</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">/</span> <span class="mi">9</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;boiling point = %g°F or %g°C\n&#34;</span><span class="p">,</span> <span class="nx">f</span><span class="p">,</span> <span class="nx">c</span><span class="p">)</span>
+    <span class="c1">// Output:
+</span><span class="c1"></span>    <span class="c1">// boiling point = 212°F or 100°C
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></div><p>在包一级声明语句声明的名字可在整个包对应的每个源文件中访问，而不是仅仅在其声明语句所在的源文件中访问。  <br>
+相比之下，局部声明的名字就只能在函数内部很小的范围被访问</p>
+<h1 id="23-变量">2.3 变量</h1>
+<p>var 变量名字 类型 = 表达式 <br>
+其中“类型”或“= 表达式”两个部分可以省略其中的一个</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="cm">/**
+</span><span class="cm">声明单个变量
+</span><span class="cm">**/</span>
+<span class="kd">var</span> <span class="nx">name</span> <span class="kt">string</span> <span class="p">=</span> <span class="s">&#34;test&#34;</span> <span class="c1">//由于已经设置了值、确定了类型，因此这里可以不要string
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">nameA</span> <span class="p">=</span> <span class="s">&#34;test&#34;</span> 
+<span class="nx">nameB</span> <span class="o">:=</span> <span class="s">&#34;test1&#34;</span>
+<span class="kd">var</span> <span class="nx">nameC</span> <span class="kt">string</span>
+	
+<span class="kd">var</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">c</span> <span class="kt">int</span> <span class="c1">//声明一组变量
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">d</span><span class="p">,</span> <span class="nx">e</span><span class="p">,</span> <span class="nx">f</span> <span class="p">=</span> <span class="s">&#34;test&#34;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="kc">false</span> <span class="c1">//初始化一组变量
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">f</span><span class="p">,</span> <span class="nx">err</span> <span class="p">=</span> <span class="nx">os</span><span class="p">.</span><span class="nf">Open</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="c1">//调用一个函数，由函数返回的多个返回值初始化
+</span></code></pre></div><h2 id="231-简短变量声明">2.3.1 简短变量声明</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="nx">t</span> <span class="o">:=</span> <span class="mf">0.0</span> <span class="c1">//简短变量声明
+</span><span class="c1"></span><span class="nx">i</span><span class="p">,</span> <span class="nx">j</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="c1">//简短变量声明一组变量，应该限制只在可以提高代码可读性的地方使用
+</span><span class="c1"></span><span class="nx">f</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">os</span><span class="p">.</span><span class="nf">Open</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="c1">//调用一个函数，由函数返回的多个返回值初始化
+</span></code></pre></div><blockquote>
+<p>因为简洁和灵活的特点，简短变量声明被广泛用于大部分的局部变量的声明和初始化。var形式的声明语句往往是用于需要显式指定变量类型的地方，或者因为变量稍后会被重新赋值而初始值无关紧要的地方。</p>
+</blockquote>
+<p>简短变量声明左边的变量可能并不是全部都是刚刚声明的。如果有一些已经在相同的词法域声明过了
+，那么简短变量声明语句对这些已经声明过的变量就只有赋值行为了。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="nx">in</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">os</span><span class="p">.</span><span class="nf">Open</span><span class="p">(</span><span class="nx">infile</span><span class="p">)</span> <span class="c1">//声明了in和err变量并赋值
+</span><span class="c1">// ...
+</span><span class="c1"></span><span class="nx">out</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">os</span><span class="p">.</span><span class="nf">Create</span><span class="p">(</span><span class="nx">outfile</span><span class="p">)</span><span class="c1">//声明了out并赋值，对err只有赋值操作
+</span><span class="c1">//此时如果再次全部使用，不能编译通过
+</span><span class="c1"></span><span class="nx">out</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">os</span><span class="p">.</span><span class="nf">Open</span><span class="p">(</span><span class="nx">outfile</span><span class="p">)</span> <span class="c1">// compile error: no new variables
+</span><span class="c1">//解决的方法是第二个简短变量声明语句改用普通的多重赋值语句
+</span></code></pre></div><h3 id="232-指针">2.3.2 指针</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="nx">x</span> <span class="o">:=</span> <span class="mi">1</span>          <span class="c1">// x初始化为1
+</span><span class="c1"></span><span class="nx">p</span> <span class="o">:=</span> <span class="o">&amp;</span><span class="nx">x</span>         <span class="c1">// 值为取地址的x,那么p的类型为指针，指向x的存储地址
+</span><span class="c1"></span><span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="o">*</span><span class="nx">p</span><span class="p">)</span> <span class="c1">// &#34;1&#34;
+</span><span class="c1"></span><span class="o">*</span><span class="nx">p</span> <span class="p">=</span> <span class="mi">2</span>          <span class="c1">// p指针指向的地址（变量x存储的值）修改为2
+</span><span class="c1"></span><span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span>  <span class="c1">// &#34;2&#34;
+</span><span class="c1">//p为指针，*p是一个表达式，对应p指针指向的变量的值
+</span><span class="c1"></span>
+<span class="kd">var</span> <span class="nx">p</span> <span class="o">*</span><span class="kt">int</span>
+<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;p is: %v&#34;</span><span class="p">,</span> <span class="nx">p</span><span class="p">)</span> <span class="c1">//任何类型的指针的零值是nil:声明一个指针但不赋值，为nil
+</span></code></pre></div><h4 id="返回函数局部变量的地址">返回函数局部变量的地址</h4>
+<p>因为指针包含了一个变量的地址，因此如果将指针作为参数调用函数，那将可以在函数中通过该指针来更新变量的值。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">var</span> <span class="nx">p</span> <span class="p">=</span> <span class="nf">f</span><span class="p">()</span>
+
+<span class="kd">func</span> <span class="nf">f</span><span class="p">()</span> <span class="o">*</span><span class="kt">int</span> <span class="p">{</span>
+    <span class="nx">v</span> <span class="o">:=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="o">&amp;</span><span class="nx">v</span>
+<span class="p">}</span>
+
+<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nf">f</span><span class="p">()</span> <span class="o">==</span> <span class="nf">f</span><span class="p">())</span> <span class="c1">// &#34;false&#34; 
+</span></code></pre></div><h4 id="结论">结论</h4>
+<p>（1）对于聚合类型每个成员——比如结构体的每个字段、或者是数组的每个元素——也都是对应一个变量，因此可以被取地址。 <br>
+（2）即使变量由表达式临时生成，那么表达式也必须能接受&amp;取地址操作 <br>
+（3）任何类型的指针的零值都是nil。 <br>
+（4）指针之间也是可以进行相等测试的，只有当它们指向同一个变量或全部是nil时才相等</p>
+<h3 id="零值">零值</h3>
+<p>如果初始化表达式被省略，那么将用零值初始化该变量，以下列出各种类型变量对应的零值</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>对应零值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>数值类</td>
+<td>0</td>
+</tr>
+<tr>
+<td>布尔型</td>
+<td>false</td>
+</tr>
+<tr>
+<td>字符串</td>
+<td>''</td>
+</tr>
+<tr>
+<td>接口或引用类型（包括slice、指针、map、chan和函数）</td>
+<td>nil</td>
+</tr>
+<tr>
+<td>数组或结构体等聚合类型</td>
+<td>每个元素或字段都是对应该类型的零值</td>
+</tr>
+</tbody>
+</table>
+</div>
+                    <div class="post_footer">
+                        
+                        <div class="meta">
+                            <div class="info">
+                                <span class="field tags">
+                                    <i class="ri-stack-line"></i>
+                                    
+                                    <a href="https://laurel-he.github.io/tags/%E5%AD%A6%E4%B9%A0/">学习</a>
+                                    
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                
+                
+<div class="doc_comments">
+    <div class="comments_block_title">发表评论</div>
+    <div id="vcomments"></div>
+</div>
+
+<link rel="stylesheet" href="https://laurel-he.github.io/css/comments.css" />
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
+<script type="text/javascript">
+    new Valine({
+        el: '#vcomments',
+        appId: 'SWEItAag34n7U5AR3T95AhRG-gzGzoHsz',
+        appKey: 'zAM901B4LKIxfrnTb7ie5e5K',
+        placeholder: '在此输入评论...',
+        visitor: 'true',
+    })
+</script>
+                
+            </div>
+        </div>
+    </div>
+    <a id="back_to_top" href="#" class="back_to_top"><i class="ri-arrow-up-s-line"></i></a>
+    <footer class="footer">
+    <div class="powered_by">
+        <a href="https://varkai.com">Designed by VarKai,</a>
+        <a href="http://www.gohugo.io/">Proudly published with Hugo</a>
+    </div>
+
+    <div class="footer_slogan">
+        <span>绝知此事要躬行</span>
+    </div>
+</footer>
+    <script src="https://laurel-he.github.io/js/jquery-3.5.1.min.js"></script>
+<link href="https://laurel-he.github.io/css/fancybox.min.css" rel="stylesheet">
+<script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
+<script src="https://laurel-he.github.io/js/zozo.js"></script>
+
+
+
+
+</body>
+
+</html>

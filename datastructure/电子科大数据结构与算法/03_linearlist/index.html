@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="贺小娇" />
+	
+	
+	
+	<title>线性表 ｜ xiaoJiao</title>
+	
+    
+    
+    <meta name="description" content="基础定义 数据元素存在一对一的关系，特点是数据元素按照某种规定存在一个顺序关系，数据元素需要是同一种类型 ADT ADT List { 数据对象:{a~i|a~i∈ElementSet,i=1,2……n,n&amp;gt;=0} 数据关" />
+    
+
+    
+    
+    <meta name="keywords" content="Hugo, blog, php" />
+    
+
+	
+    
+    <link rel="shortcut icon" href="https://laurel-he.github.io/images/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/zozo.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/highlight.css" />
+
+    
+    
+</head>
+
+<body>
+    <div class="main animate__animated animate__fadeInDown">
+        <div class="nav_container animated fadeInDown">
+    <div class="site_nav" id="site_nav">
+        <ul>
+            
+            <li>
+                <a href="/">主页</a>
+            </li>
+            
+            <li>
+                <a href="/categories/">分类</a>
+            </li>
+            
+            <li>
+                <a href="/tags/">标签</a>
+            </li>
+            
+            <li>
+                <a href="/post/">其他</a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="menu_icon">
+        <a id="menu_icon"><i class="ri-menu-line"></i></a>
+    </div>
+</div>
+        <div class="header animated fadeInDown">
+    <div class="site_title_container">
+        <div class="site_title">
+            <h1>
+                <a href="https://laurel-he.github.io/">
+                    <span>xiaoJiao</span>
+                </a>
+            </h1>
+        </div>
+        <div class="description">
+            <p class="sub_title">贺胖娇的编程之旅......</p>
+            <div class="my_socials">
+                
+                
+                <a href="https://github.com/laurel-he" title="github" target="_blank"><i class="ri-github-fill"></i></a>
+                
+                
+                
+                <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1570306409&amp;site=qq&amp;menu=yes" title="qq" target="_blank"><i class="ri-qq-fill"></i></a>
+                
+                
+                
+                <a href="https://stackoverflow.com/users/9809769/laurel-he" title="stack-overflow" target="_blank"><i class="ri-stack-overflow-fill"></i></a>
+                
+                
+                
+                <a href="https://weibo.com/u/3783884100" title="weibo" target="_blank"><i class="ri-weibo-fill"></i></a>
+                
+                
+                <a href="https://laurel-he.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
+                        class="ri-rss-fill"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="content">
+            <div class="post_page">
+                <div class="post animate__animated animate__fadeInDown">
+                    <div class="post_title post_detail_title">
+                        <h2><a href='/datastructure/%E7%94%B5%E5%AD%90%E7%A7%91%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/03_linearlist/'>线性表</a></h2>
+                        <span class="date">2022.06.20</span>
+                    </div>
+                    <div class="post_content markdown"><h1 id="基础定义">基础定义</h1>
+<p>数据元素存在一对一的关系，特点是数据元素按照某种规定存在一个顺序关系，数据元素需要是同一种类型</p>
+<h2 id="adt">ADT</h2>
+<blockquote>
+<p>ADT List {
+数据对象:{a~i|a~i∈ElementSet,i=1,2……n,n&gt;=0} <br>
+数据关系:R1={&lt;a~(i-1),a~i&gt;|a~(i-1),a~i∈D,i=2,3&hellip;n}
+基本操作: <br>
+1 结构初始化操作：线性表的建立 <br>
+2 结构销毁操作：线性表的释放 <br>
+3 引用型操作：查询，定位，找直接前驱和直接后继
+4 加工型操作:插入、删除元素
+}ADT List</p>
+</blockquote>
+<h1 id="基本操作">基本操作</h1>
+<p>Status:枚举类型,操作结果</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">enum Status {
+success, //成功
+fail, //失败
+fatal, //内部自己错误，例如内存分配失败
+range_error, // 连续空间访问越界
+}
+</code></pre></div><p>ElemType：线性表的数据元素的类型 <br>
+SqlListPrt:线性表L的数据类型</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">/* 初始化和销毁操作 */
+Status List_Init(SqlListPtr L); //线性表初始化
+void List_destroy(SqlListPrt L); //线性表销毁
+void List_Clear(SqlListPrt L); //线性表清空
+
+/* 引用型操作 */
+bool List_Empty(SqlListPrt L); //线性表判空
+int List_Size(SqlListPrt L); //获取线性表长度
+Status List_Retrieval(SqlListPrt L, int pos, ElemType *elem); //从pos位置取数据，放到指针elem中
+Status List_Locate(SqlListPrt L, ElemType elem, int *post); //定位elem在L中的位置，并把结果返回给pos
+Status List_Prior(SqlListPrt L, int pos, ElemType *elem); //获取post位置元素的前驱并放入elem指针中
+Status List_Next(SqlListPrt L, int pos, ElemType *elem); //获取post位置元素的后继并放入elem指针中
+
+ 
+/* 加工型操作 */
+Status List_Insert(SqlListPrt L, int pos, ElemType elem); //pos位置插入元素elem
+Status List_Delete(SqlListPrt L, int pos); //pos位置删除元素
+
+</code></pre></div><h1 id="实例">实例</h1>
+<h2 id="合并线性表">合并线性表</h2>
+<h3 id="问题">问题</h3>
+<p>集合A和集合B分别用两个线性表LA和LB表示，求A∪B并用线性表LA表示</p>
+<h3 id="分析">分析</h3>
+<p>算法设计思想：从LB中逐一取出元素，判断是否在LA中，若不在则插入LA中</p>
+<h3 id="实现">实现</h3>
+<p>1 从LB中依次取出第i个元素：ListRetrieve(LB, i, &amp;elem)  <br>
+2 依次取出元素并判断在线性表a中是否存在:ListLocate(LA, elem, &amp;j) <br>
+3 不存在则直接插入:ListInsert(La, 1, elem):元素插入到“1”这个位置</p>
+<h3 id="代码">代码</h3>
+<p>根据以上步骤，使用go语言实现代码如下（原课程中使用c实现）：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="p">(</span>
+	<span class="s">&#34;fmt&#34;</span>
+<span class="p">)</span>
+
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span>  <span class="p">{</span>
+	<span class="nx">listA</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nf">TestListUnion</span><span class="p">()</span>
+	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;-2-----%v-\n&#34;</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span>
+	<span class="p">}</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;ret is: %v\n&#34;</span><span class="p">,</span> <span class="nx">listA</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">// BookList 由书籍信息组成的线性表
+</span><span class="c1"></span><span class="kd">type</span> <span class="nx">BookList</span> <span class="kd">struct</span> <span class="p">{</span>
+	<span class="nx">BookNode</span> <span class="kd">map</span><span class="p">[</span><span class="kt">int</span><span class="p">]</span><span class="nx">BookManage</span> <span class="s">`json:&#34;book_node&#34;`</span>
+<span class="p">}</span>
+
+<span class="c1">// BookManage 书籍信息
+</span><span class="c1"></span><span class="kd">type</span> <span class="nx">BookManage</span> <span class="kd">struct</span> <span class="p">{</span>
+	<span class="nx">Name</span>   <span class="kt">string</span> <span class="s">`json:&#34;name&#34;`</span>
+	<span class="nx">Year</span>   <span class="kt">string</span> <span class="s">`json:&#34;year&#34;`</span>
+	<span class="nx">Author</span> <span class="kt">string</span> <span class="s">`json:&#34;author&#34;`</span>
+<span class="p">}</span>
+
+<span class="cm">/**
+</span><span class="cm">合并线性表步骤：
+</span><span class="cm">1 从LB中依次取出第i个元素：ListRetrieve(LB, i, &amp;elem)
+</span><span class="cm">2 依次取出元素并判断在线性表a中是否存在:ListLocate(LA, elem, &amp;j)
+</span><span class="cm">3 不存在则直接插入:ListInsert(La, 1, elem):元素插入到“1”这个位置
+</span><span class="cm"> */</span>
+
+<span class="c1">// TestListUnion 合并线性表
+</span><span class="c1"></span><span class="kd">func</span> <span class="nf">TestListUnion</span><span class="p">()</span> <span class="p">(</span><span class="nx">BookList</span><span class="p">,</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">listA</span> <span class="o">:=</span> <span class="nx">BookList</span><span class="p">{</span>
+		<span class="nx">BookNode</span><span class="p">:</span> <span class="kd">map</span><span class="p">[</span><span class="kt">int</span><span class="p">]</span><span class="nx">BookManage</span><span class="p">{</span>
+			<span class="mi">0</span><span class="p">:</span> <span class="p">{</span><span class="nx">Name</span><span class="p">:</span> <span class="s">&#34;测试1&#34;</span><span class="p">,</span> <span class="nx">Year</span><span class="p">:</span> <span class="s">&#34;2011&#34;</span><span class="p">,</span> <span class="nx">Author</span><span class="p">:</span> <span class="s">&#34;author1&#34;</span><span class="p">},</span>
+			<span class="mi">1</span><span class="p">:</span> <span class="p">{</span><span class="nx">Name</span><span class="p">:</span> <span class="s">&#34;测试2&#34;</span><span class="p">,</span> <span class="nx">Year</span><span class="p">:</span> <span class="s">&#34;2012&#34;</span><span class="p">,</span> <span class="nx">Author</span><span class="p">:</span> <span class="s">&#34;author2&#34;</span><span class="p">},</span>
+			<span class="mi">2</span><span class="p">:</span> <span class="p">{</span><span class="nx">Name</span><span class="p">:</span> <span class="s">&#34;测试3&#34;</span><span class="p">,</span> <span class="nx">Year</span><span class="p">:</span> <span class="s">&#34;2013&#34;</span><span class="p">,</span> <span class="nx">Author</span><span class="p">:</span> <span class="s">&#34;author3&#34;</span><span class="p">},</span>
+		<span class="p">},</span>
+	<span class="p">}</span>
+	<span class="nx">listB</span> <span class="o">:=</span> <span class="nx">BookList</span><span class="p">{</span>
+		<span class="nx">BookNode</span><span class="p">:</span> <span class="kd">map</span><span class="p">[</span><span class="kt">int</span><span class="p">]</span><span class="nx">BookManage</span><span class="p">{</span>
+			<span class="mi">0</span><span class="p">:</span> <span class="p">{</span><span class="nx">Name</span><span class="p">:</span> <span class="s">&#34;测试4&#34;</span><span class="p">,</span> <span class="nx">Year</span><span class="p">:</span> <span class="s">&#34;2014&#34;</span><span class="p">,</span> <span class="nx">Author</span><span class="p">:</span> <span class="s">&#34;author4&#34;</span><span class="p">},</span>
+			<span class="mi">1</span><span class="p">:</span> <span class="p">{</span><span class="nx">Name</span><span class="p">:</span> <span class="s">&#34;测试5&#34;</span><span class="p">,</span> <span class="nx">Year</span><span class="p">:</span> <span class="s">&#34;2015&#34;</span><span class="p">,</span> <span class="nx">Author</span><span class="p">:</span> <span class="s">&#34;author5&#34;</span><span class="p">},</span>
+			<span class="mi">2</span><span class="p">:</span> <span class="p">{</span><span class="nx">Name</span><span class="p">:</span> <span class="s">&#34;测试6&#34;</span><span class="p">,</span> <span class="nx">Year</span><span class="p">:</span> <span class="s">&#34;2016&#34;</span><span class="p">,</span> <span class="nx">Author</span><span class="p">:</span> <span class="s">&#34;author6&#34;</span><span class="p">},</span>
+			<span class="mi">3</span><span class="p">:</span> <span class="p">{</span><span class="nx">Name</span><span class="p">:</span> <span class="s">&#34;测试2&#34;</span><span class="p">,</span> <span class="nx">Year</span><span class="p">:</span> <span class="s">&#34;2012&#34;</span><span class="p">,</span> <span class="nx">Author</span><span class="p">:</span> <span class="s">&#34;author2&#34;</span><span class="p">},</span>
+		<span class="p">},</span>
+	<span class="p">}</span>
+	<span class="nx">listBLen</span> <span class="o">:=</span> <span class="nb">len</span><span class="p">(</span><span class="nx">listB</span><span class="p">.</span><span class="nx">BookNode</span><span class="p">)</span>
+	<span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nx">listBLen</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+		<span class="kd">var</span> <span class="nx">tmpElem</span> <span class="nx">BookManage</span>
+		<span class="kd">var</span> <span class="nx">tmpPos</span> <span class="o">*</span><span class="kt">int</span>
+		
+		<span class="nf">ListRetrieve</span><span class="p">(</span><span class="nx">listB</span><span class="p">,</span> <span class="nx">i</span><span class="p">,</span> <span class="o">&amp;</span><span class="nx">tmpElem</span><span class="p">)</span>
+		<span class="kd">var</span> <span class="nx">pos</span> <span class="kt">int</span>
+		<span class="nf">ListLocate</span><span class="p">(</span><span class="nx">listA</span><span class="p">,</span> <span class="nx">tmpElem</span><span class="p">,</span> <span class="o">&amp;</span><span class="nx">pos</span><span class="p">)</span>
+		<span class="nx">tmpPos</span> <span class="p">=</span> <span class="o">&amp;</span><span class="nx">pos</span>
+		<span class="k">if</span> <span class="o">*</span><span class="nx">tmpPos</span> <span class="p">&gt;</span> <span class="mi">0</span> <span class="p">{</span>
+			<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;----2--repeart-----%v---%v\n&#34;</span><span class="p">,</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">pos</span><span class="p">)</span>
+		<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+			<span class="nx">listA</span> <span class="p">=</span> <span class="nf">ListInsert</span><span class="p">(</span><span class="nx">listA</span><span class="p">,</span> <span class="nx">tmpElem</span><span class="p">)</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+	<span class="k">return</span> <span class="nx">listA</span><span class="p">,</span> <span class="kc">nil</span>
+<span class="p">}</span>
+
+<span class="c1">// ListRetrieve 从LB中取出第i个元素
+</span><span class="c1"></span><span class="kd">func</span> <span class="nf">ListRetrieve</span><span class="p">(</span><span class="nx">listB</span> <span class="nx">BookList</span><span class="p">,</span> <span class="nx">i</span> <span class="kt">int</span><span class="p">,</span> <span class="nx">elem</span> <span class="o">*</span><span class="nx">BookManage</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">elem</span><span class="p">.</span><span class="nx">Name</span> <span class="p">=</span> <span class="nx">listB</span><span class="p">.</span><span class="nx">BookNode</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">Name</span>
+	<span class="nx">elem</span><span class="p">.</span><span class="nx">Year</span> <span class="p">=</span> <span class="nx">listB</span><span class="p">.</span><span class="nx">BookNode</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">Year</span>
+	<span class="nx">elem</span><span class="p">.</span><span class="nx">Author</span> <span class="p">=</span> <span class="nx">listB</span><span class="p">.</span><span class="nx">BookNode</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">Author</span>
+<span class="p">}</span>
+
+<span class="c1">// ListLocate 获取元素是否存在，以及位置
+</span><span class="c1"></span><span class="kd">func</span> <span class="nf">ListLocate</span><span class="p">(</span><span class="nx">listB</span> <span class="nx">BookList</span><span class="p">,</span> <span class="nx">elem</span> <span class="nx">BookManage</span><span class="p">,</span> <span class="nx">j</span> <span class="o">*</span><span class="kt">int</span><span class="p">)</span>  <span class="p">{</span>
+	<span class="kd">var</span> <span class="nx">retPos</span> <span class="kt">int</span>
+	<span class="k">for</span> <span class="nx">key</span><span class="p">,</span> <span class="nx">elemItem</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">listB</span><span class="p">.</span><span class="nx">BookNode</span> <span class="p">{</span>
+		<span class="k">if</span> <span class="nx">elemItem</span> <span class="o">==</span> <span class="nx">elem</span> <span class="p">{</span>
+			<span class="nx">retPos</span> <span class="p">=</span> <span class="nx">key</span> <span class="o">+</span> <span class="mi">1</span>
+			<span class="o">*</span><span class="nx">j</span> <span class="p">=</span> <span class="nx">retPos</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// ListInsert 不存在则插入数据
+</span><span class="c1"></span><span class="kd">func</span> <span class="nf">ListInsert</span><span class="p">(</span><span class="nx">ListA</span> <span class="nx">BookList</span><span class="p">,</span> <span class="nx">elem</span> <span class="nx">BookManage</span><span class="p">)</span> <span class="nx">BookList</span> <span class="p">{</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;------4--1------%v\n&#34;</span><span class="p">,</span> <span class="nx">elem</span><span class="p">)</span>
+	<span class="c1">// 这里只考虑在第一个位置插入数据，也就是 i 恒等于 0
+</span><span class="c1"></span>	<span class="kd">var</span> <span class="nx">newList</span> <span class="nx">BookList</span>
+	<span class="nx">newListManage</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">map</span><span class="p">[</span><span class="kt">int</span><span class="p">]</span><span class="nx">BookManage</span><span class="p">)</span>
+	<span class="nx">newListManage</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">=</span> <span class="nx">elem</span>
+	
+	<span class="k">for</span> <span class="nx">key</span><span class="p">,</span> <span class="nx">elemItem</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">ListA</span><span class="p">.</span><span class="nx">BookNode</span> <span class="p">{</span>
+		<span class="nx">newListManage</span><span class="p">[</span><span class="nx">key</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="p">=</span> <span class="nx">elemItem</span>
+	<span class="p">}</span>
+	<span class="nx">newList</span><span class="p">.</span><span class="nx">BookNode</span> <span class="p">=</span> <span class="nx">newListManage</span>
+	<span class="k">return</span> <span class="nx">newList</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+                    <div class="post_footer">
+                        
+                        <div class="meta">
+                            <div class="info">
+                                <span class="field tags">
+                                    <i class="ri-stack-line"></i>
+                                    
+                                    <a href="https://laurel-he.github.io/tags/%E5%AD%A6%E4%B9%A0/">学习</a>
+                                    
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                
+                
+<div class="doc_comments">
+    <div class="comments_block_title">发表评论</div>
+    <div id="vcomments"></div>
+</div>
+
+<link rel="stylesheet" href="https://laurel-he.github.io/css/comments.css" />
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
+<script type="text/javascript">
+    new Valine({
+        el: '#vcomments',
+        appId: 'SWEItAag34n7U5AR3T95AhRG-gzGzoHsz',
+        appKey: 'zAM901B4LKIxfrnTb7ie5e5K',
+        placeholder: '在此输入评论...',
+        visitor: 'true',
+    })
+</script>
+                
+            </div>
+        </div>
+    </div>
+    <a id="back_to_top" href="#" class="back_to_top"><i class="ri-arrow-up-s-line"></i></a>
+    <footer class="footer">
+    <div class="powered_by">
+        <a href="https://varkai.com">Designed by VarKai,</a>
+        <a href="http://www.gohugo.io/">Proudly published with Hugo</a>
+    </div>
+
+    <div class="footer_slogan">
+        <span>绝知此事要躬行</span>
+    </div>
+</footer>
+    <script src="https://laurel-he.github.io/js/jquery-3.5.1.min.js"></script>
+<link href="https://laurel-he.github.io/css/fancybox.min.css" rel="stylesheet">
+<script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
+<script src="https://laurel-he.github.io/js/zozo.js"></script>
+
+
+
+
+</body>
+
+</html>

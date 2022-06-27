@@ -1,12 +1,48 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>mongodb on 瑶风</title>
+    <title>mongodb on xiaoJiao</title>
     <link>https://laurel-he.github.io/categories/mongodb/</link>
-    <description>Recent content in mongodb on 瑶风</description>
+    <description>Recent content in mongodb on xiaoJiao</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 20 Oct 2019 18:27:44 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/mongodb/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 05 May 2022 20:27:44 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/mongodb/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>蓝桥教程-MongoDB基础教程</title>
+      <link>https://laurel-he.github.io/database/mongo/lanqiao_mongo_base/01basic/</link>
+      <pubDate>Thu, 05 May 2022 20:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/database/mongo/lanqiao_mongo_base/01basic/</guid>
+      <description>本系列基于对的学习笔记 第一章：数据库和集合基本操作 简介 MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富、最像关系数据库的。 在 MongoDB 中，一个数据库包含多个集合，类似于 MySQL 中一个数据</description>
+    </item>
+    
+    <item>
+      <title>蓝桥教程-MongoDB基础教程-文档基本操作</title>
+      <link>https://laurel-he.github.io/database/mongo/lanqiao_mongo_base/02operation/</link>
+      <pubDate>Thu, 05 May 2022 20:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/database/mongo/lanqiao_mongo_base/02operation/</guid>
+      <description>本系列基于对的学习笔记 第二章：文档基本操作 数据库操作 启动 启动 MongoDB 服务，因为 MongoDB 并不随系统一起启动， 可能以下命令运行后会等一小段的时间才会启动完毕 sudo service mongodb start 退出使用exit命令 删除数据库 &amp;gt; show dbs # 显示当前系统中</description>
+    </item>
+    
+    <item>
+      <title>蓝桥教程-MongoDB基础教程-查询、索引与聚合</title>
+      <link>https://laurel-he.github.io/database/mongo/lanqiao_mongo_base/03search/</link>
+      <pubDate>Thu, 05 May 2022 20:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/database/mongo/lanqiao_mongo_base/03search/</guid>
+      <description>本系列基于对的学习笔记 查询 条件操作符 大于小于条件操作符 如第一章所说，有$gt,$lt,$gte,$lte四种，分别表示大于，小于，大于等于，小于等于 type条件操作符 语法 $type:[key] 可选key及其含义 key 含义（括</description>
+    </item>
+    
+    <item>
+      <title>蓝桥教程-MongoDB基础教程-高级查询与索引</title>
+      <link>https://laurel-he.github.io/database/mongo/lanqiao_mongo_base/04highlevelindex/</link>
+      <pubDate>Thu, 05 May 2022 20:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/database/mongo/lanqiao_mongo_base/04highlevelindex/</guid>
+      <description>本系列基于对的学习笔记 索引查询 覆盖索引查询 概念 所有的查询字段都是索引的一部分；所有的查询返回字段在同一个索引中。 由于索引存在于 RAM 中，因而从索引中获取数据要比扫描文档更快。 示例 例如有一个索引： &amp;gt; db.users.ensureIndex({gender:1,user_name:1}) 该索引</description>
+    </item>
+    
     <item>
       <title>mongodb学习记录</title>
       <link>https://laurel-he.github.io/database/mongo/mongocomplex/</link>

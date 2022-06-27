@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="贺小娇" />
+	
+	
+	
+	<title>树 ｜ xiaoJiao</title>
+	
+    
+    
+    <meta name="description" content="参考文章：https://zhuanlan.zhihu.com/p/351240279 一些基本概念 结点的度 一个结点含有的子结点个数称为该结点的度; 树的度 一棵树中，最大结点的度称为树的度; 父结点 若一个结" />
+    
+
+    
+    
+    <meta name="keywords" content="Hugo, blog, php" />
+    
+
+	
+    
+    <link rel="shortcut icon" href="https://laurel-he.github.io/images/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/zozo.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/highlight.css" />
+
+    
+    
+</head>
+
+<body>
+    <div class="main animate__animated animate__fadeInDown">
+        <div class="nav_container animated fadeInDown">
+    <div class="site_nav" id="site_nav">
+        <ul>
+            
+            <li>
+                <a href="/">主页</a>
+            </li>
+            
+            <li>
+                <a href="/categories/">分类</a>
+            </li>
+            
+            <li>
+                <a href="/tags/">标签</a>
+            </li>
+            
+            <li>
+                <a href="/post/">其他</a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="menu_icon">
+        <a id="menu_icon"><i class="ri-menu-line"></i></a>
+    </div>
+</div>
+        <div class="header animated fadeInDown">
+    <div class="site_title_container">
+        <div class="site_title">
+            <h1>
+                <a href="https://laurel-he.github.io/">
+                    <span>xiaoJiao</span>
+                </a>
+            </h1>
+        </div>
+        <div class="description">
+            <p class="sub_title">贺胖娇的编程之旅......</p>
+            <div class="my_socials">
+                
+                
+                <a href="https://github.com/laurel-he" title="github" target="_blank"><i class="ri-github-fill"></i></a>
+                
+                
+                
+                <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1570306409&amp;site=qq&amp;menu=yes" title="qq" target="_blank"><i class="ri-qq-fill"></i></a>
+                
+                
+                
+                <a href="https://stackoverflow.com/users/9809769/laurel-he" title="stack-overflow" target="_blank"><i class="ri-stack-overflow-fill"></i></a>
+                
+                
+                
+                <a href="https://weibo.com/u/3783884100" title="weibo" target="_blank"><i class="ri-weibo-fill"></i></a>
+                
+                
+                <a href="https://laurel-he.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
+                        class="ri-rss-fill"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="content">
+            <div class="post_page">
+                <div class="post animate__animated animate__fadeInDown">
+                    <div class="post_title post_detail_title">
+                        <h2><a href='/datastructure/tree/01basic/'>树</a></h2>
+                        <span class="date">2022.06.20</span>
+                    </div>
+                    <div class="post_content markdown"><p>参考文章：https://zhuanlan.zhihu.com/p/351240279</p>
+<h1 id="一些基本概念">一些基本概念</h1>
+<h2 id="结点的度">结点的度</h2>
+<p>一个结点含有的子结点个数称为该结点的度;</p>
+<h2 id="树的度">树的度</h2>
+<p>一棵树中，最大结点的度称为树的度;</p>
+<h2 id="父结点">父结点</h2>
+<p>若一个结点含有子结点，则这个结点称为其子结点的父结点;</p>
+<h2 id="深度">深度</h2>
+<p>对于任意结点n,n的深度为从根到n的唯一路径长，根结点的深度为0;</p>
+<h2 id="高度">高度</h2>
+<p>对于任意结点n,n的高度为从n到一片树叶的最长路径长，所有树叶的高度为0;</p>
+<h2 id="阶数">阶数</h2>
+<p>一个节点最多有多少个孩子节点。(一般用字母m表示)</p>
+<h2 id="关键字">关键字</h2>
+<p>节点上的数值就是关键字</p>
+<h1 id="树的特点">树的特点</h1>
+<p>（1）每个结点或者无子结点或者只有有限个子结点; <br>
+（2）有一个特殊的结点,它没有父结点，称为根结点; <br>
+（3）每一个非根节点有且只有一个父节点;  <br>
+（4）树里面没有环路</p>
+<h1 id="树的种类">树的种类</h1>
+<h2 id="按照有序性分">按照有序性分</h2>
+<h3 id="无序树">无序树</h3>
+<p>树中任意节点的子结点之间没有顺序关系</p>
+<h3 id="有序树">有序树</h3>
+<p>树中任意节点的子结点之间有顺序关系</p>
+<h2 id="按照节点包含子树个数">按照节点包含子树个数</h2>
+<h3 id="二叉树">二叉树</h3>
+<p>每个节点最多含有两个子树的树称为二叉树;</p>
+<h4 id="二叉查找树-bstbinary-sortsearch-tree">二叉查找树 BST(Binary Sort/Search Tree)</h4>
+<p>又被成为二叉排序树。 <br>
+首先它是一颗二叉树，若左子树不空，则左子树上所有结点的值均小于它的根结点的值; <br>
+若右子树不空，则右子树上所有结点的值均大于它的根结点的值;左、右子树也分别为二叉排序树;</p>
+<h4 id="满二叉树">满二叉树</h4>
+<p>描述1：叶节点除外的所有节点均含有两个子树的树被称为满二叉树 <br>
+描述2：一棵深度为k且有(2^k-1)个结点的二叉树称为满二叉树 <br>
+以上两种描述含义相同 <br>
+根据二叉树的性质2, 满二叉树每一层的结点个数都达到了最大值, 即满二叉树的第i层上有2^(i-1)个结点 (i≥1)</p>
+<h4 id="完全二叉树">完全二叉树</h4>
+<p>如果一颗二叉树除去最后一层节点为满二叉树，且最后一层的结点依次从左到右分布 <br>
+满二叉树是完全二叉树的特殊形态，即一棵树如果是满二叉树，那么必定是完全二叉树</p>
+<h4 id="霍夫曼树">霍夫曼树</h4>
+<p>带权路径最短的二叉树</p>
+<h4 id="红黑树">红黑树</h4>
+<p>红黑树是一颗特殊的二叉查找树，每个节点都是黑色或者红色，根节点、叶子节点是黑色。 <br>
+如果一个节点是红色的，则它的子节点必须是黑色的。</p>
+<h4 id="平衡二叉树avl">平衡二叉树(AVL)</h4>
+<p>一 棵空树或它的左右两个子树的高度差的绝对值不超过1，并且左右两个子树都是一棵平衡二叉树</p>
+<h3 id="b树">B树</h3>
+<h4 id="b-树">B-树</h4>
+<p>B-树，也称为B树，是一种平衡的多叉树(可以对比一下平衡二叉查找树)，它比较适用于对外查找。 <br>
+m阶B-数特征： <br>
+（1）根结点至少有两个子女;  <br>
+（2）每个非根节点所包含的关键字个数 j 满足：⌈m/2⌉ - 1 &lt;= j &lt;= m - 1.(⌈⌉表示向上取整) <br>
+（3）有k个关键字(关键字按递增次序排列)的非叶结点恰好有k+1个孩子。 <br>
+（4）所有的叶子结点都位于同一层。</p>
+<h4 id="b树-1">B+树</h4>
+<p>B+树是B-树的变体，也是一颗多路搜索树。一棵m阶的B+树主要有这些特点： <br>
+（1）每个结点至多有m个子女; <br>
+（2）非根节点关键值个数范围：⌈m/2⌉ - 1 &lt;= k &lt;= m-1 <br>
+（3）相邻叶子节点是通过指针连起来的，并且是关键字大小排序的。</p>
+<h4 id="b树和b-树的主要区别">B+树和B-树的主要区别</h4>
+<p>（1）B-树内部节点是保存数据的;而B+树内部节点是不保存数据的，只作索引作用，它的叶子节点才保存数据。 <br>
+（2）B+树相邻的叶子节点之间是通过链表指针连起来的，B-树却不是。 <br>
+（3）查找过程中，B-树在找到具体的数值以后就结束，而B+树则需要通过索引找到叶子结点中的数据才结束 <br>
+（4）B-树中任何一个关键字出现且只出现在一个结点中，而B+树可以出现多次。</p>
+<h1 id="二叉树遍历">二叉树遍历</h1>
+<p>先序、中序、后序遍历，其中每一层子树都按照此顺序</p>
+<h2 id="先序遍历">先序遍历</h2>
+<p>又称先根遍历，遍历顺序是根左右</p>
+<h2 id="中序遍历">中序遍历</h2>
+<p>又称中根遍历，顺序是左根右</p>
+<h2 id="后序遍历">后序遍历</h2>
+<p>又称后根遍历，顺序是左右根</p>
+</div>
+                    <div class="post_footer">
+                        
+                        <div class="meta">
+                            <div class="info">
+                                <span class="field tags">
+                                    <i class="ri-stack-line"></i>
+                                    
+                                    <a href="https://laurel-he.github.io/tags/%E5%AD%A6%E4%B9%A0/">学习</a>
+                                    
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                
+                
+<div class="doc_comments">
+    <div class="comments_block_title">发表评论</div>
+    <div id="vcomments"></div>
+</div>
+
+<link rel="stylesheet" href="https://laurel-he.github.io/css/comments.css" />
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
+<script type="text/javascript">
+    new Valine({
+        el: '#vcomments',
+        appId: 'SWEItAag34n7U5AR3T95AhRG-gzGzoHsz',
+        appKey: 'zAM901B4LKIxfrnTb7ie5e5K',
+        placeholder: '在此输入评论...',
+        visitor: 'true',
+    })
+</script>
+                
+            </div>
+        </div>
+    </div>
+    <a id="back_to_top" href="#" class="back_to_top"><i class="ri-arrow-up-s-line"></i></a>
+    <footer class="footer">
+    <div class="powered_by">
+        <a href="https://varkai.com">Designed by VarKai,</a>
+        <a href="http://www.gohugo.io/">Proudly published with Hugo</a>
+    </div>
+
+    <div class="footer_slogan">
+        <span>绝知此事要躬行</span>
+    </div>
+</footer>
+    <script src="https://laurel-he.github.io/js/jquery-3.5.1.min.js"></script>
+<link href="https://laurel-he.github.io/css/fancybox.min.css" rel="stylesheet">
+<script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
+<script src="https://laurel-he.github.io/js/zozo.js"></script>
+
+
+
+
+</body>
+
+</html>

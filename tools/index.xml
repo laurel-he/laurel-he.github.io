@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tools on 瑶风</title>
+    <title>Tools on xiaoJiao</title>
     <link>https://laurel-he.github.io/tools/</link>
-    <description>Recent content in Tools on 瑶风</description>
+    <description>Recent content in Tools on xiaoJiao</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 20 Nov 2019 18:27:44 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/tools/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 27 Apr 2022 18:27:44 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/tools/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>httpie</title>
+      <link>https://laurel-he.github.io/tools/httpie/</link>
+      <pubDate>Wed, 27 Apr 2022 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/tools/httpie/</guid>
+      <description>介绍 无意中在公众号《Java技术栈》中看见了一篇文章 不知道这是什么东西，深入搜索了下发现可能挺好用，因此试着使用一下 安装 我使用的是wsl下的linux18.04，具体看版本使用lsb_release -</description>
+    </item>
+    
     <item>
       <title>版本管理工具git（1）-起步和基础</title>
       <link>https://laurel-he.github.io/tools/git/git_01/</link>

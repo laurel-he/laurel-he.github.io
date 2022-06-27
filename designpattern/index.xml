@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Designpatterns on 瑶风</title>
+    <title>Designpatterns on xiaoJiao</title>
     <link>https://laurel-he.github.io/designpattern/</link>
-    <description>Recent content in Designpatterns on 瑶风</description>
+    <description>Recent content in Designpatterns on xiaoJiao</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sun, 28 Nov 2021 17:40:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/designpattern/index.xml" rel="self" type="application/rss+xml" />

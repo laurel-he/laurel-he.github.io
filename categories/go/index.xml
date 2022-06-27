@@ -1,12 +1,48 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>go on 瑶风</title>
+    <title>go on xiaoJiao</title>
     <link>https://laurel-he.github.io/categories/go/</link>
-    <description>Recent content in go on 瑶风</description>
+    <description>Recent content in go on xiaoJiao</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 08 Mar 2022 13:47:00 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/go/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 25 Apr 2022 13:47:00 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/go/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>测试函数</title>
+      <link>https://laurel-he.github.io/go/test/testfunction/</link>
+      <pubDate>Mon, 25 Apr 2022 13:47:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/go/test/testfunction/</guid>
+      <description>格式要求 引入testing包 每个测试函数必须导入testing包。测试函数有如下的签名： func TestName(t *testing.T) { // ... } 测试函数的名字必须以Test开头，可选的后缀名必须以大写字母开头： 例如： func TestSin(t *testing.T) { /* ... */ } func TestCos(t *testing.T) { /*</description>
+    </item>
+    
+    <item>
+      <title>测试</title>
+      <link>https://laurel-he.github.io/go/test/basictest/</link>
+      <pubDate>Sun, 24 Apr 2022 13:47:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/go/test/basictest/</guid>
+      <description>*_test.go文件中，三种函数类型 测试函数、基准测试(benchmark)函数、示例函数 测试函数 一个测试函数是以Test为函数名前缀的函数，用于测试程序的一些逻辑行为是否正确； go test命令会调用</description>
+    </item>
+    
+    <item>
+      <title>GRPC学习文档</title>
+      <link>https://laurel-he.github.io/go/basic/grpc/grpc/</link>
+      <pubDate>Thu, 17 Mar 2022 13:47:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/go/basic/grpc/grpc/</guid>
+      <description>What(GRPC是什么)? RPC 定义 要想知道GRPC是什么，首先得知道RPC是什么。 RPC（Remote Procedure Call）— 远程过程调用,它是一种通过网络从远程计算机程序上请求服务，而不需要了解底层网络技术的</description>
+    </item>
+    
+    <item>
+      <title>ProtoBuf学习</title>
+      <link>https://laurel-he.github.io/go/basic/grpc/protobuf/</link>
+      <pubDate>Thu, 17 Mar 2022 13:47:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/go/basic/grpc/protobuf/</guid>
+      <description>参考文档：Protobuf语法 概念 通俗地说，其实Protobuf就是一种数据传输格式，就像json,xml,yaml等等。官网介绍如下： 他是一种与语言无关、与平台无关，是一种可扩展的用于序列化和结构化</description>
+    </item>
+    
     <item>
       <title>go语言中一些标志的含义</title>
       <link>https://laurel-he.github.io/go/basic/thegoprograming/mark/</link>
@@ -22,7 +58,7 @@
       <pubDate>Tue, 08 Mar 2022 13:47:00 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/go/basic/thegoprograming/01_2/</guid>
-      <description>GIF动画</description>
+      <description>GIF动画 生成利萨如图形的gif动画。 // Lissajous generates GIF animations of random Lissajous figures. package main import ( &amp;#34;image&amp;#34; &amp;#34;image/color&amp;#34; &amp;#34;image/gif&amp;#34; &amp;#34;io&amp;#34; &amp;#34;math&amp;#34; &amp;#34;math/rand&amp;#34; &amp;#34;os&amp;#34; ) var palette = []color.Color{color.White, color.Black} const ( whiteIndex = 0 // first color in palette blackIndex = 1 // next color in palette ) func main() { // The sequence of images is deterministic unless we seed // the pseudo-random number generator using the current time. // Thanks to Randall McPherson for pointing out the omission. rand.Seed(time.Now().UTC().UnixNano()) lissajous(os.Stdout) } func</description>
     </item>
     
     <item>
@@ -32,6 +68,15 @@
       
       <guid>https://laurel-he.github.io/go/basic/thegoprograming/01_1/</guid>
       <description>基本介绍 可以参考此文章：https://docs.hacknode.org/gopl-zh/ch0/ch0-02.html 基础使用 查看go版本 go version 引入代码 需要在环境变量中添加GOPATH目录，然后使用</description>
+    </item>
+    
+    <item>
+      <title>go语言圣经-(2)入门-程序结构</title>
+      <link>https://laurel-he.github.io/go/basic/thegoprograming/02/</link>
+      <pubDate>Mon, 07 Mar 2022 13:47:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/go/basic/thegoprograming/02/</guid>
+      <description>2.1命名 Go语言中的函数名、变量名、常量名、类型名、语句标号和包名等所有的命名，都遵循一个简单的命名规则：一个名字必须以一个字母（Unicode字母）或下划线开头，后面可以跟任意数量的字母、数字或下</description>
     </item>
     
     <item>
@@ -59,15 +104,6 @@
       
       <guid>https://laurel-he.github.io/go/basic/basicuse/</guid>
       <description>参考文档： go文档 Go 语言教程 简单的go语言程序 package main import &amp;#34;fmt&amp;#34; func main() { var age, name string = &amp;#34;18&amp;#34;, &amp;#34;Joe&amp;#34; var res = fmt.Sprintf(&amp;#34;my name is %s, and my age is %s&amp;#34;, name, age) fmt.Println(res) } func init() { fmt.Println(&amp;#34;test init&amp;#34;) } func varTest() { var funcName, funcTime string = &amp;#34;varTest&amp;#34;, &amp;#34;now&amp;#34; fmt.Println(funcName + funcTime) } 使用go run来执行 使用go build 来生成二进制文件 go语言</description>
-    </item>
-    
-    <item>
-      <title>gin框架使用</title>
-      <link>https://laurel-he.github.io/go/gin/basic/</link>
-      <pubDate>Fri, 27 Aug 2021 13:47:00 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/go/gin/basic/</guid>
-      <description></description>
     </item>
     
   </channel>

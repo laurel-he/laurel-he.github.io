@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="贺小娇" />
+	
+	
+	
+	<title>蓝桥教程-MongoDB基础教程-查询、索引与聚合 ｜ xiaoJiao</title>
+	
+    
+    
+    <meta name="description" content="本系列基于对的学习笔记 查询 条件操作符 大于小于条件操作符 如第一章所说，有$gt,$lt,$gte,$lte四种，分别表示大于，小于，大于等于，小于等于 type条件操作符 语法 $type:[key] 可选key及其含义 key 含义（括" />
+    
+
+    
+    
+    <meta name="keywords" content="Hugo, blog, php" />
+    
+
+	
+    
+    <link rel="shortcut icon" href="https://laurel-he.github.io/images/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/zozo.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/highlight.css" />
+
+    
+    
+</head>
+
+<body>
+    <div class="main animate__animated animate__fadeInDown">
+        <div class="nav_container animated fadeInDown">
+    <div class="site_nav" id="site_nav">
+        <ul>
+            
+            <li>
+                <a href="/">主页</a>
+            </li>
+            
+            <li>
+                <a href="/categories/">分类</a>
+            </li>
+            
+            <li>
+                <a href="/tags/">标签</a>
+            </li>
+            
+            <li>
+                <a href="/post/">其他</a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="menu_icon">
+        <a id="menu_icon"><i class="ri-menu-line"></i></a>
+    </div>
+</div>
+        <div class="header animated fadeInDown">
+    <div class="site_title_container">
+        <div class="site_title">
+            <h1>
+                <a href="https://laurel-he.github.io/">
+                    <span>xiaoJiao</span>
+                </a>
+            </h1>
+        </div>
+        <div class="description">
+            <p class="sub_title">贺胖娇的编程之旅......</p>
+            <div class="my_socials">
+                
+                
+                <a href="https://github.com/laurel-he" title="github" target="_blank"><i class="ri-github-fill"></i></a>
+                
+                
+                
+                <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1570306409&amp;site=qq&amp;menu=yes" title="qq" target="_blank"><i class="ri-qq-fill"></i></a>
+                
+                
+                
+                <a href="https://stackoverflow.com/users/9809769/laurel-he" title="stack-overflow" target="_blank"><i class="ri-stack-overflow-fill"></i></a>
+                
+                
+                
+                <a href="https://weibo.com/u/3783884100" title="weibo" target="_blank"><i class="ri-weibo-fill"></i></a>
+                
+                
+                <a href="https://laurel-he.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
+                        class="ri-rss-fill"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="content">
+            <div class="post_page">
+                <div class="post animate__animated animate__fadeInDown">
+                    <div class="post_title post_detail_title">
+                        <h2><a href='/database/mongo/lanqiao_mongo_base/03search/'>蓝桥教程-MongoDB基础教程-查询、索引与聚合</a></h2>
+                        <span class="date">2022.05.05</span>
+                    </div>
+                    <div class="post_content markdown"><p>本系列基于对<img src="https://www.lanqiao.cn/courses/12" alt="MongoDB基础教程">的学习笔记</p>
+<h1 id="查询">查询</h1>
+<h2 id="条件操作符">条件操作符</h2>
+<h3 id="大于小于条件操作符">大于小于条件操作符</h3>
+<p>如第一章所说，有$gt,$lt,$gte,$lte四种，分别表示大于，小于，大于等于，小于等于</p>
+<h3 id="type条件操作符">type条件操作符</h3>
+<h4 id="语法">语法</h4>
+<p>$type:[key]</p>
+<h4 id="可选key及其含义">可选key及其含义</h4>
+<table>
+<thead>
+<tr>
+<th>key</th>
+<th>含义（括号中代表也可使用此字符查询）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>双精度型(double)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>字符串(string)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>对象(object)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>数组(array)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>二进制数据(binary data)</td>
+</tr>
+<tr>
+<td>7</td>
+<td>对象 ID(object id)</td>
+</tr>
+<tr>
+<td>8</td>
+<td>布尔类型(boolean)</td>
+</tr>
+<tr>
+<td>9</td>
+<td>日期(date)</td>
+</tr>
+<tr>
+<td>10</td>
+<td>空(null)</td>
+</tr>
+<tr>
+<td>11</td>
+<td>正则表达式(regular expression)</td>
+</tr>
+<tr>
+<td>13</td>
+<td>JS 代码(javascript)</td>
+</tr>
+<tr>
+<td>14</td>
+<td>符号(symbol)</td>
+</tr>
+<tr>
+<td>15</td>
+<td>有作用域的 JS 代码(javaScript with scope)</td>
+</tr>
+<tr>
+<td>16</td>
+<td>32 位整型数(32-bit integer)</td>
+</tr>
+<tr>
+<td>17</td>
+<td>时间戳(timestamp)</td>
+</tr>
+<tr>
+<td>18</td>
+<td>64 位整型数(64-bit integer)</td>
+</tr>
+<tr>
+<td>-1</td>
+<td>最小值(min key)</td>
+</tr>
+<tr>
+<td>127</td>
+<td>最大值(max key)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="limit与skip">limit与skip</h2>
+<h3 id="示例">示例</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">&gt; db.shiyanlou.find().limit(1).skip(1)
+</code></pre></div><h2 id="sort">sort</h2>
+<h3 id="语法-1">语法</h3>
+<p>db.COLLECTION_NAME.find().sort({KEY:1|-1}) <br>
+升序：1     降序：-1</p>
+<h3 id="示例-1">示例</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">&gt; db.shiyanlou.find().sort({&#34;time&#34;:1})
+</code></pre></div><h1 id="索引">索引</h1>
+<h2 id="添加索引">添加索引</h2>
+<h3 id="介绍">介绍</h3>
+<p>索引是特殊的数据结构，索引存储在一个易于遍历读取的数据集合中，
+索引是对数据库集合中一个文档或多个文档的值进行排序的一种结构。</p>
+<h3 id="语法-2">语法</h3>
+<p>db.COLLECTION_NAME.ensureIndex({KEY:1|-1})</p>
+<h3 id="示例-2">示例</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">&gt; db.shiyanlou.ensureIndex({&#34;name&#34;:1})
+</code></pre></div><h3 id="可选参数">可选参数</h3>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>background</td>
+<td>Boolean</td>
+<td>建立索引要不要阻塞其他数据库操作，默认为 false</td>
+</tr>
+<tr>
+<td>unique</td>
+<td>Boolean</td>
+<td>建立的索引是否唯一，默认 false</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>索引的名称，若未指定，系统自动生成</td>
+</tr>
+<tr>
+<td>dropDups</td>
+<td>Boolean</td>
+<td>建立唯一索引时，是否删除重复记录，默认 flase</td>
+</tr>
+<tr>
+<td>sparse</td>
+<td>Boolean</td>
+<td>对文档不存在的字段数据不启用索引，默认 false</td>
+</tr>
+<tr>
+<td>expireAfterSeconds</td>
+<td>integer</td>
+<td>设置集合的生存时间，单位为秒</td>
+</tr>
+<tr>
+<td>v</td>
+<td>index version</td>
+<td>索引的版本号</td>
+</tr>
+<tr>
+<td>weights</td>
+<td>document</td>
+<td>索引权重值，范围为 1 到 99999</td>
+</tr>
+<tr>
+<td>default-language</td>
+<td>string</td>
+<td>默认为英语</td>
+</tr>
+<tr>
+<td>language_override</td>
+<td>string</td>
+<td>默认值为 language</td>
+</tr>
+</tbody>
+</table>
+<h2 id="查看索引">查看索引</h2>
+<h3 id="获取索引">获取索引</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">db.collection_name.getIndexes() # 获取collection_name集合的所有索引
+db.collection_name.getIndexSpecs()
+</code></pre></div><h3 id="查看那些key有索引">查看那些key有索引</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">db.dev.getIndexKeys()
+</code></pre></div><h3 id="查看集合中索引大小">查看集合中索引大小</h3>
+<h4 id="语法-3">语法</h4>
+<p>db.collection_name.totalIndexSize([ detail ] (可选参数))</p>
+<h4 id="示例-3">示例</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">db.collection_name.totalIndexSize() # 查看总的索引大小，传入0或不传或传入false
+db.collection_name.totalIndexSize(1) # 分别查看所有索引大小，传入除0或false的任意数据
+</code></pre></div><h2 id="修改索引">修改索引</h2>
+<p>mongodb没有专门的修改索引函数，可以先删除再新增</p>
+<h2 id="删除索引">删除索引</h2>
+<h3 id="语法-4">语法</h3>
+<p>db.collection_name.dropIndex(&ldquo;索引名称&rdquo;)</p>
+<h3 id="删除全部索引">删除全部索引</h3>
+<h4 id="语法-5">语法</h4>
+<p>db.collection_name.dropIndexes()</p>
+<h2 id="重建索引">重建索引</h2>
+<h3 id="使用场景">使用场景</h3>
+<p>重建索引可以： <br>
+（1）减少索引的存储空间，减少索引碎片 <br>
+（2）优化索引的查询效率 <br>
+（3）一般在<strong>数据大量变化</strong>后，会使用重建索引来提升性能。
+重建索引是删除原索引重新创建的过程，不建议反复使用</p>
+<h3 id="语法-6">语法</h3>
+<p>db.collection_name.reIndex()</p>
+<h1 id="聚合">聚合</h1>
+<h2 id="语法-7">语法</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">db.COLLECTION_NAME.aggregate({
+$match:{x:1},
+{limit:NUM},
+$group:{_id:$age}
+})
+</code></pre></div><h2 id="参数">参数</h2>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$match</td>
+<td>查询，跟 find 一样</td>
+</tr>
+<tr>
+<td>$limit</td>
+<td>限制显示结果数量</td>
+</tr>
+<tr>
+<td>$skip</td>
+<td>忽略结果数量</td>
+</tr>
+<tr>
+<td>$sort</td>
+<td>排序</td>
+</tr>
+<tr>
+<td>$group</td>
+<td>按照给定表达式组合结果</td>
+</tr>
+<tr>
+<td>$unwind</td>
+<td>将文档中的某一个数组类型字段拆分成多条，每条包含数组中的一个值</td>
+</tr>
+<tr>
+<td>$geoNear</td>
+<td>输出接近某一地理位置的有序文档</td>
+</tr>
+</tbody>
+</table>
+<h2 id="聚合表达式">聚合表达式</h2>
+<p>|名称|	描述|
+|$sum|	计算总和|
+|$avg|	计算平均值|
+|$min和$max|	计算最小值和最大值|
+|$push|	在结果文档中插入值到一个数组|
+|$addToSet|	在结果文档中插入值到一个数组，但不创建副本|
+|$first|	根据资源文档的排序获取第一个文档数据|
+|$last	|根据资源文档的排序获取最后一个文档数据|</p>
+<h2 id="管道">管道</h2>
+<p>MongoDB 的聚合管道将 MongoDB 文档在一个管道处理完毕后将结果传递给下一个管道处理。
+管道操作是可以重复的。</p>
+<h3 id="示例-4">示例</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">db.shiyanlou.aggregate([{$match:{user_id:{$gt:0,$lte:2}}},{$group:{_id:&#34;user&#34;,count:{$sum:1}}}])
+{&#34;_id&#34;:&#34;user&#34;,&#34;count&#34;:2}
+</code></pre></div><p>/**</p>
+<ul>
+<li>Paste one or more documents here
+*/</li>
+<li></li>
+</ul>
+<p>mongo &ldquo;mongodb://{username}:{password}@{hostname}:{port}/{dbname}?authSource=admin&rdquo;
+mongo &ldquo;mongodb://hexiaojiao:jiao@127.0.0.1:27017/{dbname}?authSource=admin&rdquo;
+mongo &ldquo;mongodb://hexiaojiao:jiao@127.0.0.1:27017/test?authSource=admin&rdquo;</p>
+<p>mongodb://root:handhand@1.15.176.24:27017/admin?authSource=admin</p>
+<p>uint32_field_type 22 枚举
+11 字符串
+32 日期
+12 枚举（关联线索归属人？）
+31 具体时间
+21 字符串（联系人归属人？）
+13 照片</p>
+<p>optional uint32 uint32_field_type   = 3; // 字段类型，仅限查询时使用，
+1-文本列表，11-短文本，12-枚举值(多选)，13-图片，21-整数，22-枚举值(单选)，
+31-日期时间，32-日期，41-实数，51-长文本</p>
+<p>|data.records |array |数据记录 |</p>
+<p>education 学历</p>
+<p>关注状态无法对应
+关注公众号无法对应
+leadsOwner 12 关联线索归属人无法对应</p>
+<pre><code>  高中 20
+</code></pre>
+<p>男20  初中 40
+大学 40</p>
+<pre><code> 高中 30
+</code></pre>
+<p>女80 初中 50
+大学 20</p>
+<p>bson.D{
+{&quot;$project&quot;, bson.D{
+{&quot;_id&quot;, 1},
+{&ldquo;err_down_notice&rdquo;, 1},
+{&ldquo;update_time&rdquo;, 1},
+}},
+},
+bson.D{
+{&quot;$match&quot;, bson.D{{&ldquo;task_id&rdquo;, bson.D{
+{&quot;$in&quot;, recordsIds},
+}}, {&ldquo;report_status&rdquo;, ReportStatusErr}}},
+},
+bson.D{
+{&quot;$group&quot;, bson.D{
+{&quot;_id&quot;, &ldquo;$task_id&rdquo;},
+{&ldquo;err_down_notice&rdquo;, bson.D{
+{&quot;$sum&quot;, 1},
+}},
+}},
+},
+bson.D{
+{&quot;$sort&quot;, bson.D{{&ldquo;update_time&rdquo;, -1}}},
+},
+}</p>
+<p>db.tbl_mock_user_data.aggregate([
+{ &ldquo;$match&rdquo;: { &ldquo;task_id&rdquo;: { &ldquo;$in&rdquo;: null }}},
+{ &ldquo;$group&rdquo;: {
+&ldquo;_id&rdquo;: {
+&ldquo;task_id&rdquo;: &ldquo;$task_id&rdquo;
+},
+&ldquo;count&rdquo;: { &ldquo;$sum&rdquo;: 1 }
+}}
+])</p>
+</div>
+                    <div class="post_footer">
+                        
+                    </div>
+                </div>
+                
+                
+                
+<div class="doc_comments">
+    <div class="comments_block_title">发表评论</div>
+    <div id="vcomments"></div>
+</div>
+
+<link rel="stylesheet" href="https://laurel-he.github.io/css/comments.css" />
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
+<script type="text/javascript">
+    new Valine({
+        el: '#vcomments',
+        appId: 'SWEItAag34n7U5AR3T95AhRG-gzGzoHsz',
+        appKey: 'zAM901B4LKIxfrnTb7ie5e5K',
+        placeholder: '在此输入评论...',
+        visitor: 'true',
+    })
+</script>
+                
+            </div>
+        </div>
+    </div>
+    <a id="back_to_top" href="#" class="back_to_top"><i class="ri-arrow-up-s-line"></i></a>
+    <footer class="footer">
+    <div class="powered_by">
+        <a href="https://varkai.com">Designed by VarKai,</a>
+        <a href="http://www.gohugo.io/">Proudly published with Hugo</a>
+    </div>
+
+    <div class="footer_slogan">
+        <span>绝知此事要躬行</span>
+    </div>
+</footer>
+    <script src="https://laurel-he.github.io/js/jquery-3.5.1.min.js"></script>
+<link href="https://laurel-he.github.io/css/fancybox.min.css" rel="stylesheet">
+<script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
+<script src="https://laurel-he.github.io/js/zozo.js"></script>
+
+
+
+
+</body>
+
+</html>

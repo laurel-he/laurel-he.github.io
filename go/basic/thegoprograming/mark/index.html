@@ -8,7 +8,7 @@
 	
 	
 	
-	<title>go语言中一些标志的含义 ｜ 瑶风</title>
+	<title>go语言中一些标志的含义 ｜ xiaoJiao</title>
 	
     
     
@@ -67,7 +67,7 @@
         <div class="site_title">
             <h1>
                 <a href="https://laurel-he.github.io/">
-                    <span>瑶风</span>
+                    <span>xiaoJiao</span>
                 </a>
             </h1>
         </div>
@@ -169,7 +169,7 @@
 <h1 id="一些特殊数据类型">一些特殊数据类型</h1>
 <p>|数据类型|名称|含义|示例|
 |map|map|是一个无序的key/value对的集合，其中所有的key都是不同的，然后通过给定的key可以在常数时间复杂度内检索、更新或删除对应的value|ages := make(map[string]int)|
-|byte slice|字节切片||sliceRet := ioutil.ReadFile(arg)|
+|byte slice|字节切片||[]color.Color{&hellip;} 或 ioutil.ReadFile(arg)|
 |struct|结构体|||</p>
 <h1 id="声明">声明</h1>
 <p>|名称|含义|示例|
@@ -260,6 +260,33 @@
 <h1 id="注意事项">注意事项</h1>
 <p>(1)++是语句而不是表达式，因此j = i++非法，且++和&ndash;只能放在变量名后，++i非法。大多数语言中，语句和表达式的区别在于，语句不返回结果，执行语句只是为了产生副作用，而表达式总是返回结果，而通常没有副作用。 <br>
 (2)go语言只有for循环这一种循环语句，但有多种形式</p>
+<h2 id="三种引号">三种引号</h2>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>符号</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>单引号</td>
+<td>''</td>
+<td>rune(int32)类型，单引号里面是单个字符，对应的值为该字符的ASCII值</td>
+</tr>
+<tr>
+<td>双引号</td>
+<td>&quot;&quot;</td>
+<td>字符串,内部可以包含转义字符</td>
+</tr>
+<tr>
+<td>反引号</td>
+<td>``</td>
+<td>原生含义，可以多行，不支持转义</td>
+</tr>
+</tbody>
+</table>
 </div>
                     <div class="post_footer">
                         

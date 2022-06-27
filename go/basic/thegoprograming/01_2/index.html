@@ -8,11 +8,11 @@
 	
 	
 	
-	<title>go语言圣经-(1)入门-GIF动画 ｜ 瑶风</title>
+	<title>go语言圣经-(1)入门-GIF动画 ｜ xiaoJiao</title>
 	
     
     
-    <meta name="description" content="GIF动画" />
+    <meta name="description" content="GIF动画 生成利萨如图形的gif动画。 // Lissajous generates GIF animations of random Lissajous figures. package main import ( &amp;#34;image&amp;#34; &amp;#34;image/color&amp;#34; &amp;#34;image/gif&amp;#34; &amp;#34;io&amp;#34; &amp;#34;math&amp;#34; &amp;#34;math/rand&amp;#34; &amp;#34;os&amp;#34; ) var palette = []color.Color{color.White, color.Black} const ( whiteIndex = 0 // first color in palette blackIndex = 1 // next color in palette ) func main() { // The sequence of images is deterministic unless we seed // the pseudo-random number generator using the current time. // Thanks to Randall McPherson for pointing out the omission. rand.Seed(time.Now().UTC().UnixNano()) lissajous(os.Stdout) } func" />
     
 
     
@@ -67,7 +67,7 @@
         <div class="site_title">
             <h1>
                 <a href="https://laurel-he.github.io/">
-                    <span>瑶风</span>
+                    <span>xiaoJiao</span>
                 </a>
             </h1>
         </div>
@@ -105,6 +105,101 @@
                         <span class="date">2022.03.08</span>
                     </div>
                     <div class="post_content markdown"><h1 id="gif动画">GIF动画</h1>
+<p>生成利萨如图形的gif动画。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="c1">// Lissajous generates GIF animations of random Lissajous figures.
+</span><span class="c1"></span><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="p">(</span>
+    <span class="s">&#34;image&#34;</span>
+    <span class="s">&#34;image/color&#34;</span>
+    <span class="s">&#34;image/gif&#34;</span>
+    <span class="s">&#34;io&#34;</span>
+    <span class="s">&#34;math&#34;</span>
+    <span class="s">&#34;math/rand&#34;</span>
+    <span class="s">&#34;os&#34;</span>
+<span class="p">)</span>
+
+<span class="kd">var</span> <span class="nx">palette</span> <span class="p">=</span> <span class="p">[]</span><span class="nx">color</span><span class="p">.</span><span class="nx">Color</span><span class="p">{</span><span class="nx">color</span><span class="p">.</span><span class="nx">White</span><span class="p">,</span> <span class="nx">color</span><span class="p">.</span><span class="nx">Black</span><span class="p">}</span>
+
+<span class="kd">const</span> <span class="p">(</span>
+    <span class="nx">whiteIndex</span> <span class="p">=</span> <span class="mi">0</span> <span class="c1">// first color in palette
+</span><span class="c1"></span>    <span class="nx">blackIndex</span> <span class="p">=</span> <span class="mi">1</span> <span class="c1">// next color in palette
+</span><span class="c1"></span><span class="p">)</span>
+
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// The sequence of images is deterministic unless we seed
+</span><span class="c1"></span>    <span class="c1">// the pseudo-random number generator using the current time.
+</span><span class="c1"></span>    <span class="c1">// Thanks to Randall McPherson for pointing out the omission.
+</span><span class="c1"></span>    <span class="nx">rand</span><span class="p">.</span><span class="nf">Seed</span><span class="p">(</span><span class="nx">time</span><span class="p">.</span><span class="nf">Now</span><span class="p">().</span><span class="nf">UTC</span><span class="p">().</span><span class="nf">UnixNano</span><span class="p">())</span>
+    <span class="nf">lissajous</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Stdout</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">lissajous</span><span class="p">(</span><span class="nx">out</span> <span class="nx">io</span><span class="p">.</span><span class="nx">Writer</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="p">(</span>
+        <span class="nx">cycles</span>  <span class="p">=</span> <span class="mi">5</span>     <span class="c1">// number of complete x oscillator revolutions
+</span><span class="c1"></span>        <span class="nx">res</span>     <span class="p">=</span> <span class="mf">0.001</span> <span class="c1">// angular resolution
+</span><span class="c1"></span>        <span class="nx">size</span>    <span class="p">=</span> <span class="mi">100</span>   <span class="c1">// image canvas covers [-size..+size]
+</span><span class="c1"></span>        <span class="nx">nframes</span> <span class="p">=</span> <span class="mi">64</span>    <span class="c1">// number of animation frames
+</span><span class="c1"></span>        <span class="nx">delay</span>   <span class="p">=</span> <span class="mi">8</span>     <span class="c1">// delay between frames in 10ms units
+</span><span class="c1"></span>    <span class="p">)</span>
+
+    <span class="nx">freq</span> <span class="o">:=</span> <span class="nx">rand</span><span class="p">.</span><span class="nf">Float64</span><span class="p">()</span> <span class="o">*</span> <span class="mf">3.0</span> <span class="c1">// relative frequency of y oscillator
+</span><span class="c1"></span>    <span class="nx">anim</span> <span class="o">:=</span> <span class="nx">gif</span><span class="p">.</span><span class="nx">GIF</span><span class="p">{</span><span class="nx">LoopCount</span><span class="p">:</span> <span class="nx">nframes</span><span class="p">}</span>
+    <span class="nx">phase</span> <span class="o">:=</span> <span class="mf">0.0</span> <span class="c1">// phase difference
+</span><span class="c1"></span>    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nx">nframes</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+        <span class="nx">rect</span> <span class="o">:=</span> <span class="nx">image</span><span class="p">.</span><span class="nf">Rect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="nx">size</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="nx">size</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+        <span class="nx">img</span> <span class="o">:=</span> <span class="nx">image</span><span class="p">.</span><span class="nf">NewPaletted</span><span class="p">(</span><span class="nx">rect</span><span class="p">,</span> <span class="nx">palette</span><span class="p">)</span>
+        <span class="k">for</span> <span class="nx">t</span> <span class="o">:=</span> <span class="mf">0.0</span><span class="p">;</span> <span class="nx">t</span> <span class="p">&lt;</span> <span class="nx">cycles</span><span class="o">*</span><span class="mi">2</span><span class="o">*</span><span class="nx">math</span><span class="p">.</span><span class="nx">Pi</span><span class="p">;</span> <span class="nx">t</span> <span class="o">+=</span> <span class="nx">res</span> <span class="p">{</span>
+            <span class="nx">x</span> <span class="o">:=</span> <span class="nx">math</span><span class="p">.</span><span class="nf">Sin</span><span class="p">(</span><span class="nx">t</span><span class="p">)</span>
+            <span class="nx">y</span> <span class="o">:=</span> <span class="nx">math</span><span class="p">.</span><span class="nf">Sin</span><span class="p">(</span><span class="nx">t</span><span class="o">*</span><span class="nx">freq</span> <span class="o">+</span> <span class="nx">phase</span><span class="p">)</span>
+            <span class="nx">img</span><span class="p">.</span><span class="nf">SetColorIndex</span><span class="p">(</span><span class="nx">size</span><span class="o">+</span><span class="nb">int</span><span class="p">(</span><span class="nx">x</span><span class="o">*</span><span class="nx">size</span><span class="o">+</span><span class="mf">0.5</span><span class="p">),</span> <span class="nx">size</span><span class="o">+</span><span class="nb">int</span><span class="p">(</span><span class="nx">y</span><span class="o">*</span><span class="nx">size</span><span class="o">+</span><span class="mf">0.5</span><span class="p">),</span>
+                <span class="nx">blackIndex</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="nx">phase</span> <span class="o">+=</span> <span class="mf">0.1</span>
+        <span class="nx">anim</span><span class="p">.</span><span class="nx">Delay</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">anim</span><span class="p">.</span><span class="nx">Delay</span><span class="p">,</span> <span class="nx">delay</span><span class="p">)</span>
+        <span class="nx">anim</span><span class="p">.</span><span class="nx">Image</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">anim</span><span class="p">.</span><span class="nx">Image</span><span class="p">,</span> <span class="nx">img</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="nx">gif</span><span class="p">.</span><span class="nf">EncodeAll</span><span class="p">(</span><span class="nx">out</span><span class="p">,</span> <span class="o">&amp;</span><span class="nx">anim</span><span class="p">)</span> <span class="c1">// NOTE: ignoring encoding errors
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></div><h2 id="注意事项">注意事项</h2>
+<p>目前常量声明的值必须是一个数字值、字符串或者一个固定的boolean值</p>
+<h1 id="15获取url">1.5获取url</h1>
+<p>net/http包可获取url</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="p">(</span>
+	<span class="s">&#34;fmt&#34;</span>
+	<span class="s">&#34;io/ioutil&#34;</span>
+	<span class="s">&#34;net/http&#34;</span>
+	<span class="s">&#34;os&#34;</span>
+<span class="p">)</span>
+
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span>  <span class="p">{</span>
+	<span class="nx">urls</span> <span class="o">:=</span> <span class="nx">os</span><span class="p">.</span><span class="nx">Args</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+
+	<span class="k">for</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">url</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">urls</span> <span class="p">{</span>
+		<span class="nx">resp</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">http</span><span class="p">.</span><span class="nf">Get</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span>
+		<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+			<span class="nx">fmt</span><span class="p">.</span><span class="nf">Fprintf</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Stderr</span><span class="p">,</span> <span class="s">&#34;request err: %v&#34;</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span>
+			<span class="nx">os</span><span class="p">.</span><span class="nf">Exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+		<span class="p">}</span>
+
+		<span class="nx">req</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">ioutil</span><span class="p">.</span><span class="nf">ReadAll</span><span class="p">(</span><span class="nx">resp</span><span class="p">.</span><span class="nx">Body</span><span class="p">)</span>
+		<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+			<span class="nx">fmt</span><span class="p">.</span><span class="nf">Fprintf</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Stderr</span><span class="p">,</span> <span class="s">&#34;response err: %v&#34;</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span>
+			<span class="nx">os</span><span class="p">.</span><span class="nf">Exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+		<span class="p">}</span>
+		<span class="nx">resp</span><span class="p">.</span><span class="nx">Body</span><span class="p">.</span><span class="nf">Close</span><span class="p">()</span>
+		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;return data is: %v&#34;</span><span class="p">,</span> <span class="nx">req</span><span class="p">)</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><h2 id="练习-17">练习 1.7</h2>
+<p>函数调用io.Copy(dst, src)会从src中读取内容，并将读到的结果写入到dst中，使用这个函数替代掉例子中的ioutil.ReadAll来拷贝响应结构体到os.Stdout，避免申请一个缓冲区（例子中的b）来存储。记得处理io.Copy返回结果中的错误。</p>
+<h2 id="练习18">练习1.8</h2>
+<p>修改fetch这个范例，如果输入的url参数没有 http:// 前缀的话，为这个url加上该前缀。你可能会用到strings.HasPrefix这个函数。</p>
+<h2 id="练习19">练习1.9</h2>
+<p>修改fetch打印出HTTP协议的状态码，可以从resp.Status变量得到该状态码。</p>
+<h1 id="16-并发获取多个url">1.6 并发获取多个URL</h1>
 </div>
                     <div class="post_footer">
                         

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="贺小娇" />
+	
+	
+	
+	<title> ｜ xiaoJiao</title>
+	
+    
+    
+    <meta name="description" content="(1)创建proto目录，例如proto/marketing/activity/basic (2)编写proto文件，这里是live_online.proto (3)编译proto: 这里两个变量假设为(1" />
+    
+
+    
+    
+    <meta name="keywords" content="Hugo, blog, php" />
+    
+
+	
+    
+    <link rel="shortcut icon" href="https://laurel-he.github.io/images/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/zozo.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/highlight.css" />
+
+    
+    
+</head>
+
+<body>
+    <div class="main animate__animated animate__fadeInDown">
+        <div class="nav_container animated fadeInDown">
+    <div class="site_nav" id="site_nav">
+        <ul>
+            
+            <li>
+                <a href="/">主页</a>
+            </li>
+            
+            <li>
+                <a href="/categories/">分类</a>
+            </li>
+            
+            <li>
+                <a href="/tags/">标签</a>
+            </li>
+            
+            <li>
+                <a href="/post/">其他</a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="menu_icon">
+        <a id="menu_icon"><i class="ri-menu-line"></i></a>
+    </div>
+</div>
+        <div class="header animated fadeInDown">
+    <div class="site_title_container">
+        <div class="site_title">
+            <h1>
+                <a href="https://laurel-he.github.io/">
+                    <span>xiaoJiao</span>
+                </a>
+            </h1>
+        </div>
+        <div class="description">
+            <p class="sub_title">贺胖娇的编程之旅......</p>
+            <div class="my_socials">
+                
+                
+                <a href="https://github.com/laurel-he" title="github" target="_blank"><i class="ri-github-fill"></i></a>
+                
+                
+                
+                <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1570306409&amp;site=qq&amp;menu=yes" title="qq" target="_blank"><i class="ri-qq-fill"></i></a>
+                
+                
+                
+                <a href="https://stackoverflow.com/users/9809769/laurel-he" title="stack-overflow" target="_blank"><i class="ri-stack-overflow-fill"></i></a>
+                
+                
+                
+                <a href="https://weibo.com/u/3783884100" title="weibo" target="_blank"><i class="ri-weibo-fill"></i></a>
+                
+                
+                <a href="https://laurel-he.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
+                        class="ri-rss-fill"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="content">
+            <div class="post_page">
+                <div class="post animate__animated animate__fadeInDown">
+                    <div class="post_title post_detail_title">
+                        <h2><a href='/go/basic/use/'></a></h2>
+                        <span class="date">0001.01.01</span>
+                    </div>
+                    <div class="post_content markdown"><p>(1)创建proto目录，例如proto/marketing/activity/basic
+(2)编写proto文件，这里是live_online.proto
+(3)编译proto: 
+这里两个变量假设为(1),(2),(1)代表proto文件的相对路径，(2)代表trpc-go的绝对路径
+moss gen proto -f (1) -o (2)
+moss gen proto -f marketing/activity/basic/live_online.proto -o /mnt/g/goProject/trpc-go/
+(4)以上步骤执行完后，会在目标目录（例如本次是在/mnt/g/project/go/trpc-go/marketing/activity/basic）
+下生成三个文件，fields_manage_mock.go  fields_manage.pb.go  fields_manage.trpc.go
+(5)正常此时应该先提交，这样go get拿到的会是正确的代码，目前折中办法是先提交到自己的分支然后拉取，例如：
+go get git.tencent.com/ivy/protobuf/trpc-go/marketing/activity/basic@feature/5.2/live_online/detail_jiao</p>
+<p>偶尔会有问题
+go mod download git.tencent.com/ivy/protobuf/trpc-go/marketing/activity/basic@feature/5.2/live_online/detail_jiao
+(5)进入自己的开发目录，生成项目：
+moss gen project -d basic -m activity &ndash;server basic &ndash;service LiveOnline -p restful -f -v
+moss gen project -d basic -m activity &ndash;server basic &ndash;service FieldsList -p restful -f -v</p>
+<p>go get <a href="https://git.tencent.com/ivy/protobuf/trpc-go/basic/privilege/func_privilege@$YOUR_PB_DEV_BRANCH_NAME">https://git.tencent.com/ivy/protobuf/trpc-go/basic/privilege/func_privilege@$YOUR_PB_DEV_BRANCH_NAME</a>
+常见错误：
+（1）exec: &ldquo;protoc-gen-go&rdquo;: executable file not found in $PATH
+需要安装protoc-gen-go， ubuntu命令为：sudo apt install golang-goprotobuf-dev
+（2）compile: version &ldquo;go1.17.15&rdquo; does not match go tool version &ldquo;go1.15.6&rdquo;
+go和go tool不匹配，可能安装过两次go，dpkg &ndash;list | grep go查看安装的go tool,卸载
+<a href="https://qdrl.qq.com/vmVRV8V1">https://qdrl.qq.com/vmVRV8V1</a>
+（3）有一个域名（google.golang.org/protobuf/proto）用的google的，会报错proto类型不对，这里手动修改
+如果无法安装gotests,尝试export GOPROXY=https://goproxy.cn
+单测：
+mockgen -source internal/repo/meeting_store/api.go -destination internal/repo/meeting_store/api_mock.go -package meeting_store
+不同：
+（1）google.golang.org/protobuf v1.25.0
+（2）</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">`</span><span class="n">tar_meeting_store</span><span class="o">`</span><span class="w">  </span><span class="p">(</span><span class="w">
+</span><span class="w">  </span><span class="o">`</span><span class="n">FId</span><span class="o">`</span><span class="w"> </span><span class="kt">int</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span><span class="w"> </span><span class="k">UNSIGNED</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="no">NULL</span><span class="w"> </span><span class="kp">AUTO_INCREMENT</span><span class="w"> </span><span class="n">COMMENT</span><span class="w"> </span><span class="s1">&#39;Id&#39;</span><span class="p">,</span><span class="w">
+</span><span class="w">  </span><span class="o">`</span><span class="n">FPlatform</span><span class="o">`</span><span class="w"> </span><span class="kt">int</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="no">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">COMMENT</span><span class="w"> </span><span class="s1">&#39;平台:1腾讯会议2微吼3展示互动&#39;</span><span class="p">,</span><span class="w">
+</span><span class="w">  </span><span class="o">`</span><span class="n">FSecretId</span><span class="o">`</span><span class="w"> </span><span class="kt">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span><span class="w"> </span><span class="k">CHARACTER</span><span class="w"> </span><span class="kt">SET</span><span class="w"> </span><span class="n">utf8</span><span class="w"> </span><span class="k">COLLATE</span><span class="w"> </span><span class="n">utf8_general_ci</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="no">NULL</span><span class="w"> </span><span class="n">COMMENT</span><span class="w"> </span><span class="s1">&#39;secretId或appId&#39;</span><span class="p">,</span><span class="w">
+</span><span class="w">  </span><span class="o">`</span><span class="n">FSecretKey</span><span class="o">`</span><span class="w"> </span><span class="kt">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span><span class="w"> </span><span class="k">CHARACTER</span><span class="w"> </span><span class="kt">SET</span><span class="w"> </span><span class="n">utf8</span><span class="w"> </span><span class="k">COLLATE</span><span class="w"> </span><span class="n">utf8_general_ci</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="no">NULL</span><span class="w"> </span><span class="n">COMMENT</span><span class="w"> </span><span class="s1">&#39;私钥&#39;</span><span class="p">,</span><span class="w">
+</span><span class="w">  </span><span class="o">`</span><span class="n">FSalt</span><span class="o">`</span><span class="w">  </span><span class="kt">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span><span class="w"> </span><span class="k">CHARACTER</span><span class="w"> </span><span class="kt">SET</span><span class="w"> </span><span class="n">utf8</span><span class="w"> </span><span class="k">COLLATE</span><span class="w"> </span><span class="n">utf8_general_ci</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="no">NULL</span><span class="w"> </span><span class="n">COMMENT</span><span class="w"> </span><span class="s1">&#39;私钥加密salt&#39;</span><span class="p">,</span><span class="w">
+</span><span class="w">  </span><span class="o">`</span><span class="n">FType</span><span class="o">`</span><span class="w"> </span><span class="kt">int</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="no">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">COMMENT</span><span class="w"> </span><span class="s1">&#39;会议类型:0腾讯1微吼&#39;</span><span class="p">,</span><span class="w">
+</span><span class="w">  </span><span class="o">`</span><span class="n">FStatus</span><span class="o">`</span><span class="w"> </span><span class="kt">int</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="no">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">COMMENT</span><span class="w"> </span><span class="s1">&#39;状态:0正常1已编辑2已删除3其他&#39;</span><span class="p">,</span><span class="w">
+</span><span class="w">  </span><span class="o">`</span><span class="n">FMeetingDetail</span><span class="o">`</span><span class="w"> </span><span class="kt">varchar</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span><span class="w"> </span><span class="k">CHARACTER</span><span class="w"> </span><span class="kt">SET</span><span class="w"> </span><span class="n">utf8</span><span class="w"> </span><span class="k">COLLATE</span><span class="w"> </span><span class="n">utf8_general_ci</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="no">NULL</span><span class="w"> </span><span class="n">COMMENT</span><span class="w"> </span><span class="s1">&#39;会议参数详情&#39;</span><span class="p">,</span><span class="w">
+</span><span class="w">  </span><span class="o">`</span><span class="n">FCreateUser</span><span class="o">`</span><span class="w"> </span><span class="kt">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span><span class="w"> </span><span class="k">CHARACTER</span><span class="w"> </span><span class="kt">SET</span><span class="w"> </span><span class="n">utf8</span><span class="w"> </span><span class="k">COLLATE</span><span class="w"> </span><span class="n">utf8_general_ci</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="no">NULL</span><span class="w"> </span><span class="n">COMMENT</span><span class="w"> </span><span class="s1">&#39;创建人id&#39;</span><span class="p">,</span><span class="w">
+</span><span class="w">  </span><span class="o">`</span><span class="n">FCreateTime</span><span class="o">`</span><span class="w"> </span><span class="kt">timestamp</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="no">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span><span class="w"> </span><span class="n">COMMENT</span><span class="w"> </span><span class="s1">&#39;创建时间&#39;</span><span class="p">,</span><span class="w">
+</span><span class="w">  </span><span class="o">`</span><span class="n">FUpdateTime</span><span class="o">`</span><span class="w"> </span><span class="kt">timestamp</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="no">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">UPDATE</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="n">COMMENT</span><span class="w"> </span><span class="s1">&#39;编辑时间&#39;</span><span class="p">,</span><span class="w">
+</span><span class="w">  </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="n">FId</span><span class="o">`</span><span class="p">)</span><span class="w"> </span><span class="k">USING</span><span class="w"> </span><span class="n">BTREE</span><span class="p">,</span><span class="w">
+</span><span class="w">  </span><span class="k">UNIQUE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="o">`</span><span class="n">type_mettingId</span><span class="o">`</span><span class="p">(</span><span class="o">`</span><span class="n">FType</span><span class="o">`</span><span class="p">,</span><span class="w"> </span><span class="o">`</span><span class="n">FSecretId</span><span class="o">`</span><span class="p">)</span><span class="w"> </span><span class="k">USING</span><span class="w"> </span><span class="n">BTREE</span><span class="p">,</span><span class="w">
+</span><span class="w">  </span><span class="k">INDEX</span><span class="w"> </span><span class="o">`</span><span class="n">type_meetingId_createUser</span><span class="o">`</span><span class="p">(</span><span class="o">`</span><span class="n">FType</span><span class="o">`</span><span class="p">,</span><span class="w"> </span><span class="o">`</span><span class="n">FSecretId</span><span class="o">`</span><span class="p">,</span><span class="w"> </span><span class="o">`</span><span class="n">FCreateUser</span><span class="o">`</span><span class="p">)</span><span class="w"> </span><span class="k">USING</span><span class="w"> </span><span class="n">BTREE</span><span class="w">
+</span><span class="w"></span><span class="p">)</span><span class="w"> </span><span class="kp">ENGINE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">InnoDB</span><span class="w"> </span><span class="kp">AUTO_INCREMENT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="k">CHARACTER</span><span class="w"> </span><span class="kt">SET</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">utf8</span><span class="w"> </span><span class="k">COLLATE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">utf8_general_ci</span><span class="w"> </span><span class="n">COMMENT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;会议记录列表&#39;</span><span class="w"> </span><span class="n">ROW_FORMAT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Compact</span><span class="p">;</span><span class="w">
+</span><span class="w">
+</span></code></pre></div><p>|label |string |字段名称 |
+|type |string |字段类型：datetime日期，string文本框等 |
+|name |string |api名称 |
+|required |bool |必填项 |
+|searchable |bool |可搜索 |
+|sortable |bool |可排序 |
+|filterable |bool |可筛选 |
+|desc |string |字段说明 |
+|invisible |bool |是否启用 |</p>
+<p>{
+&ldquo;type&rdquo;:&ldquo;TEXT&rdquo;,
+&ldquo;label&rdquo;:&ldquo;文本字段名&rdquo;,
+&ldquo;key&rdquo;:&ldquo;textOnlineTest&rdquo;,
+&ldquo;description&rdquo;:&ldquo;文本字段说明test&rdquo;,
+&ldquo;placeHolder&rdquo;:&ldquo;文本字段占位test&rdquo;,
+&ldquo;attributes&rdquo;:{
+&ldquo;max_len&rdquo;:&ldquo;120&rdquo;,
+&ldquo;default&rdquo;:&quot;&quot;,
+&ldquo;min_len&rdquo;:&ldquo;10&rdquo;,
+&ldquo;reg_pattern&rdquo;:&ldquo;regex &lsquo;'&rdquo;,
+&ldquo;usedInForm&rdquo;:true
+},
+&ldquo;belongType&rdquo;:1000
+}</p>
+</div>
+                    <div class="post_footer">
+                        
+                    </div>
+                </div>
+                
+                
+                
+<div class="doc_comments">
+    <div class="comments_block_title">发表评论</div>
+    <div id="vcomments"></div>
+</div>
+
+<link rel="stylesheet" href="https://laurel-he.github.io/css/comments.css" />
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
+<script type="text/javascript">
+    new Valine({
+        el: '#vcomments',
+        appId: 'SWEItAag34n7U5AR3T95AhRG-gzGzoHsz',
+        appKey: 'zAM901B4LKIxfrnTb7ie5e5K',
+        placeholder: '在此输入评论...',
+        visitor: 'true',
+    })
+</script>
+                
+            </div>
+        </div>
+    </div>
+    <a id="back_to_top" href="#" class="back_to_top"><i class="ri-arrow-up-s-line"></i></a>
+    <footer class="footer">
+    <div class="powered_by">
+        <a href="https://varkai.com">Designed by VarKai,</a>
+        <a href="http://www.gohugo.io/">Proudly published with Hugo</a>
+    </div>
+
+    <div class="footer_slogan">
+        <span>绝知此事要躬行</span>
+    </div>
+</footer>
+    <script src="https://laurel-he.github.io/js/jquery-3.5.1.min.js"></script>
+<link href="https://laurel-he.github.io/css/fancybox.min.css" rel="stylesheet">
+<script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
+<script src="https://laurel-he.github.io/js/zozo.js"></script>
+
+
+
+
+</body>
+
+</html>

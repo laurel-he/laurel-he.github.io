@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="贺小娇" />
+	
+	
+	
+	<title>蓝桥教程-MongoDB基础教程 ｜ xiaoJiao</title>
+	
+    
+    
+    <meta name="description" content="本系列基于对的学习笔记 第一章：数据库和集合基本操作 简介 MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富、最像关系数据库的。 在 MongoDB 中，一个数据库包含多个集合，类似于 MySQL 中一个数据" />
+    
+
+    
+    
+    <meta name="keywords" content="Hugo, blog, php" />
+    
+
+	
+    
+    <link rel="shortcut icon" href="https://laurel-he.github.io/images/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/zozo.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/highlight.css" />
+
+    
+    
+</head>
+
+<body>
+    <div class="main animate__animated animate__fadeInDown">
+        <div class="nav_container animated fadeInDown">
+    <div class="site_nav" id="site_nav">
+        <ul>
+            
+            <li>
+                <a href="/">主页</a>
+            </li>
+            
+            <li>
+                <a href="/categories/">分类</a>
+            </li>
+            
+            <li>
+                <a href="/tags/">标签</a>
+            </li>
+            
+            <li>
+                <a href="/post/">其他</a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="menu_icon">
+        <a id="menu_icon"><i class="ri-menu-line"></i></a>
+    </div>
+</div>
+        <div class="header animated fadeInDown">
+    <div class="site_title_container">
+        <div class="site_title">
+            <h1>
+                <a href="https://laurel-he.github.io/">
+                    <span>xiaoJiao</span>
+                </a>
+            </h1>
+        </div>
+        <div class="description">
+            <p class="sub_title">贺胖娇的编程之旅......</p>
+            <div class="my_socials">
+                
+                
+                <a href="https://github.com/laurel-he" title="github" target="_blank"><i class="ri-github-fill"></i></a>
+                
+                
+                
+                <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1570306409&amp;site=qq&amp;menu=yes" title="qq" target="_blank"><i class="ri-qq-fill"></i></a>
+                
+                
+                
+                <a href="https://stackoverflow.com/users/9809769/laurel-he" title="stack-overflow" target="_blank"><i class="ri-stack-overflow-fill"></i></a>
+                
+                
+                
+                <a href="https://weibo.com/u/3783884100" title="weibo" target="_blank"><i class="ri-weibo-fill"></i></a>
+                
+                
+                <a href="https://laurel-he.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
+                        class="ri-rss-fill"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="content">
+            <div class="post_page">
+                <div class="post animate__animated animate__fadeInDown">
+                    <div class="post_title post_detail_title">
+                        <h2><a href='/database/mongo/lanqiao_mongo_base/01basic/'>蓝桥教程-MongoDB基础教程</a></h2>
+                        <span class="date">2022.05.05</span>
+                    </div>
+                    <div class="post_content markdown"><p>本系列基于对<img src="https://www.lanqiao.cn/courses/12" alt="MongoDB基础教程">的学习笔记</p>
+<h1 id="第一章数据库和集合基本操作">第一章：数据库和集合基本操作</h1>
+<h2 id="简介">简介</h2>
+<p>MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富、最像关系数据库的。</p>
+<p>在 MongoDB 中，一个数据库包含多个集合，类似于 MySQL 中一个数据库包含多个表；一个集合包含多个文档，类似于 MySQL 中一个表包含多条数据。</p>
+<p>可以把集合记为表，文档记为一条记录</p>
+<h2 id="使用">使用</h2>
+<h4 id="启动mongodb服务">启动mongodb服务</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">sudo service mongodb start
+</code></pre></div><h3 id="命令行进入mongodb">命令行进入mongodb</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">mongo
+</code></pre></div><h4 id="查看数据库列表">查看数据库列表</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">show dbs
+</code></pre></div><h4 id="查看当前数据库对象或集合">查看当前数据库对象或集合</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">db
+</code></pre></div><h4 id="连接到指定数据库">连接到指定数据库</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">use test # 连接到test数据库，如果没有，新建
+</code></pre></div><h4 id="销毁数据库">销毁数据库</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">db.dropDatabase()
+</code></pre></div><h2 id="集合操作">集合操作</h2>
+<h4 id="创建集合">创建集合</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">use test
+db.createCollection(&#34;users&#34;)
+</code></pre></div><h4 id="查看创建的集合">查看创建的集合</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">show collections
+</code></pre></div><h4 id="删除集合">删除集合</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">show collections
+db.users.drop()
+</code></pre></div><h2 id="集合crud操作">集合CRUD操作</h2>
+<h3 id="插入操作">插入操作</h3>
+<p>在插入数据的时候可能需要多行输入,
+注意括号不要直接输入完整的一对，可以先敲出左边括号，然后回车写数据，
+等数据全部写完后再补充右括号，因为 mongodb shell 会把右括号判断为指令结束，
+不等输入数据就执行语句。</p>
+<h4 id="insert插入操作">insert插入操作</h4>
+<p>插入数据时，如果 users 集合没有创建会自动创建。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">&gt; use mydb
+switched to db mydb
+&gt; db.users.insert([
+... { name : &#34;jam&#34;,
+... email : &#34;jam@qq.com&#34;
+... },
+... { name : &#34;tom&#34;,
+... email : &#34;tom@qq.com&#34;
+... }
+... ])
+</code></pre></div><h5 id="save操作">save操作</h5>
+<p>插入数据时，如果 users 集合没有创建会自动创建</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">&gt; use mydb2
+switched to db mydb2
+&gt; db.users.save([
+... { name : &#34;jam&#34;,
+... email : &#34;jam@qq.com&#34;
+... },
+... { name : &#34;tom&#34;,
+... email : &#34;tom@qq.com&#34;
+... }
+... ])
+</code></pre></div><p>insert 和 save 的区别：为了方便记忆，可以先从字面上进行理解，insert 是插入，侧重于新增一个记录的含义；save 是保存，可以保存一个新的记录，也可以保存对一个记录的修改。因此，insert 不能插入一条已经存在的记录，如果已经有了一条记录(以主键为准)，insert 操作会报错，而使用 save 指令则会更新原记录。</p>
+<h3 id="查询">查询</h3>
+<h4 id="全量查询">全量查询</h4>
+<p>查询操作使用命令：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">db.COLLECTION_NAME.find() # 会返回集合中所有文档，实际应用中很少见
+</code></pre></div><h4 id="美观返回">美观返回</h4>
+<p>pretty()语句使返回值更美观</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">db.COLLECTION_NAME.find().pretty()
+</code></pre></div><p>可以通过设置，始终以pretty方式返回：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">echo</span> <span class="s2">&#34;DBQuery.prototype._prettyShell = true&#34;</span> &gt;&gt; ~/.mongorc.js
+</code></pre></div><h4 id="mongodb中的and">mongoDb中的AND</h4>
+<p>MongoDB 不需要类似于其他数据库的 AND 运算符，
+当 find() 中传入多个键值对时，MongoDB 就会将其作为 AND 查询处理。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">&gt; db.post.find({&#34;by&#34;:&#34;shiyanlou&#34;,&#34;to&#34;: &#34;chenshi&#34;}).pretty()
+</code></pre></div><p>这条语句对应的关系型数据库语句是：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="o">`</span><span class="n">post_db</span><span class="o">`</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="o">`</span><span class="k">by</span><span class="o">`</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;shiyanlou&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="o">`</span><span class="k">to</span><span class="o">`</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;chenshi&#39;</span><span class="w">
+</span></code></pre></div><h4 id="mongodb中的or">mongoDb中的OR</h4>
+<p>MongoDB 中，OR 查询语句以 $or 作为关键词，用法如下：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">&gt; db.post.find(
+  {
+    $or: [
+      {key1: value1}, {key2:value2}
+    ]
+  }
+).pretty()
+</code></pre></div><h4 id="同时使用and和or">同时使用AND和OR</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">&gt; db.post.find({
+    &#34;likes&#34;: {$gt:10},
+    $or: [
+        {&#34;by&#34;: &#34;shiyanlou&#34;},
+        {&#34;title&#34;: &#34;MongoDB Overview&#34;}
+    ]
+}).pretty()
+</code></pre></div><h4 id="模糊查询">模糊查询</h4>
+<p>MongoDB 的模糊查询可以用正则匹配的方式实现</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># 以 &#39;start&#39; 开头的匹配式：</span>
+<span class="o">{</span><span class="s2">&#34;name&#34;</span>:/^start/<span class="o">}</span>
+
+<span class="c1"># 以 &#39;tail&#39; 结尾的匹配式：</span>
+<span class="o">{</span><span class="s2">&#34;name&#34;</span>:/tail$/<span class="o">}</span>
+</code></pre></div><h4 id="大于小于符号">大于小于符号</h4>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>含义</th>
+<th>记忆原词</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>gt</td>
+<td>大于</td>
+<td>greater than</td>
+</tr>
+<tr>
+<td>lt</td>
+<td>小于</td>
+<td>less than</td>
+</tr>
+<tr>
+<td>gte</td>
+<td>大于等于</td>
+<td>greater than equal</td>
+</tr>
+<tr>
+<td>lte</td>
+<td>小于等于</td>
+<td>less than equal</td>
+</tr>
+</tbody>
+</table>
+<h2 id="注意事项">注意事项</h2>
+<p>数据库名可以是任何字符，但是不能有空格、点号和 $ 字符。</p>
+</div>
+                    <div class="post_footer">
+                        
+                    </div>
+                </div>
+                
+                
+                
+<div class="doc_comments">
+    <div class="comments_block_title">发表评论</div>
+    <div id="vcomments"></div>
+</div>
+
+<link rel="stylesheet" href="https://laurel-he.github.io/css/comments.css" />
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
+<script type="text/javascript">
+    new Valine({
+        el: '#vcomments',
+        appId: 'SWEItAag34n7U5AR3T95AhRG-gzGzoHsz',
+        appKey: 'zAM901B4LKIxfrnTb7ie5e5K',
+        placeholder: '在此输入评论...',
+        visitor: 'true',
+    })
+</script>
+                
+            </div>
+        </div>
+    </div>
+    <a id="back_to_top" href="#" class="back_to_top"><i class="ri-arrow-up-s-line"></i></a>
+    <footer class="footer">
+    <div class="powered_by">
+        <a href="https://varkai.com">Designed by VarKai,</a>
+        <a href="http://www.gohugo.io/">Proudly published with Hugo</a>
+    </div>
+
+    <div class="footer_slogan">
+        <span>绝知此事要躬行</span>
+    </div>
+</footer>
+    <script src="https://laurel-he.github.io/js/jquery-3.5.1.min.js"></script>
+<link href="https://laurel-he.github.io/css/fancybox.min.css" rel="stylesheet">
+<script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
+<script src="https://laurel-he.github.io/js/zozo.js"></script>
+
+
+
+
+</body>
+
+</html>

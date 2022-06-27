@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="贺小娇" />
+	
+	
+	
+	<title>蓝桥教程-MongoDB基础教程-高级查询与索引 ｜ xiaoJiao</title>
+	
+    
+    
+    <meta name="description" content="本系列基于对的学习笔记 索引查询 覆盖索引查询 概念 所有的查询字段都是索引的一部分；所有的查询返回字段在同一个索引中。 由于索引存在于 RAM 中，因而从索引中获取数据要比扫描文档更快。 示例 例如有一个索引： &amp;gt; db.users.ensureIndex({gender:1,user_name:1}) 该索引" />
+    
+
+    
+    
+    <meta name="keywords" content="Hugo, blog, php" />
+    
+
+	
+    
+    <link rel="shortcut icon" href="https://laurel-he.github.io/images/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/zozo.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/highlight.css" />
+
+    
+    
+</head>
+
+<body>
+    <div class="main animate__animated animate__fadeInDown">
+        <div class="nav_container animated fadeInDown">
+    <div class="site_nav" id="site_nav">
+        <ul>
+            
+            <li>
+                <a href="/">主页</a>
+            </li>
+            
+            <li>
+                <a href="/categories/">分类</a>
+            </li>
+            
+            <li>
+                <a href="/tags/">标签</a>
+            </li>
+            
+            <li>
+                <a href="/post/">其他</a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="menu_icon">
+        <a id="menu_icon"><i class="ri-menu-line"></i></a>
+    </div>
+</div>
+        <div class="header animated fadeInDown">
+    <div class="site_title_container">
+        <div class="site_title">
+            <h1>
+                <a href="https://laurel-he.github.io/">
+                    <span>xiaoJiao</span>
+                </a>
+            </h1>
+        </div>
+        <div class="description">
+            <p class="sub_title">贺胖娇的编程之旅......</p>
+            <div class="my_socials">
+                
+                
+                <a href="https://github.com/laurel-he" title="github" target="_blank"><i class="ri-github-fill"></i></a>
+                
+                
+                
+                <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1570306409&amp;site=qq&amp;menu=yes" title="qq" target="_blank"><i class="ri-qq-fill"></i></a>
+                
+                
+                
+                <a href="https://stackoverflow.com/users/9809769/laurel-he" title="stack-overflow" target="_blank"><i class="ri-stack-overflow-fill"></i></a>
+                
+                
+                
+                <a href="https://weibo.com/u/3783884100" title="weibo" target="_blank"><i class="ri-weibo-fill"></i></a>
+                
+                
+                <a href="https://laurel-he.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
+                        class="ri-rss-fill"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="content">
+            <div class="post_page">
+                <div class="post animate__animated animate__fadeInDown">
+                    <div class="post_title post_detail_title">
+                        <h2><a href='/database/mongo/lanqiao_mongo_base/04highlevelindex/'>蓝桥教程-MongoDB基础教程-高级查询与索引</a></h2>
+                        <span class="date">2022.05.05</span>
+                    </div>
+                    <div class="post_content markdown"><p>本系列基于对<img src="https://www.lanqiao.cn/courses/12" alt="MongoDB基础教程">的学习笔记</p>
+<h1 id="索引查询">索引查询</h1>
+<h2 id="覆盖索引查询">覆盖索引查询</h2>
+<h3 id="概念">概念</h3>
+<p>所有的查询字段都是索引的一部分；所有的查询返回字段在同一个索引中。</p>
+<p>由于索引存在于 RAM 中，因而从索引中获取数据要比扫描文档更快。</p>
+<h3 id="示例">示例</h3>
+<p>例如有一个索引：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">&gt; db.users.ensureIndex({gender:1,user_name:1})
+</code></pre></div><p>该索引会覆盖下面的查询：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">db.users.find({gender:&#34;M&#34;},{user_name:1,_id:0})
+</code></pre></div><p>由于默认会有_id被查出来，因此不排除_id就不会使用覆盖索引</p>
+<h2 id="高级索引">高级索引</h2>
+<h3 id="对数组建立索引">对数组建立索引</h3>
+<p>对数组字段创建索引时，内部会对数组中每个字段依次建立索引，可以直接检索字段</p>
+<h4 id="示例-1">示例</h4>
+<p>tags字段是一个数组</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">{
+   &#34;address&#34;: {
+      &#34;city&#34;: &#34;chengdu&#34;,
+      &#34;province&#34;: &#34;sichuan&#34;,
+      &#34;pincode&#34;: &#34;123&#34;
+   },
+   &#34;tags&#34;: [
+      &#34;music&#34;,
+      &#34;cricket&#34;,
+      &#34;blogs&#34;
+   ],
+   &#34;name&#34;: &#34;clound&#34;
+}
+</code></pre></div><p>建立了以下索引：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">db.users.ensureIndex({&#34;tags&#34;:1})
+</code></pre></div><p>检索字段时直接搜索也能用到索引：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">&gt; db.users.find({tags:&#34;cricket&#34;}) # 索引会加快这个命令的搜索速度
+</code></pre></div><p>可以使用explain命令查看索引使用情况（和mysql类似）</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">&gt; db.users.find({tags:&#34;cricket&#34;}).explain()
+</code></pre></div><h3 id="索引子文档字段">索引子文档字段</h3>
+<p>为子文档的字段建立索引：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">db.users.ensureIndex({&#34;address.city&#34;:1,&#34;address.province&#34;:1,&#34;address.pincode&#34;:1})
+</code></pre></div><p>创建了索引后，使用子文档检索会命中索引：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">db.users.find({&#34;address.city&#34;:&#34;chengdu&#34;})
+&gt; db.users.find({&#34;address.city&#34;:&#34;chengdu&#34;,&#34;address.province&#34;:&#34;sichuan&#34;}) # 按照顺序也能命中索引
+</code></pre></div><h1 id="原子操作">原子操作</h1>
+<h2 id="概念-1">概念</h2>
+<p>所谓原子操作，就是要么执行成功，要么执行失败，
+执行成功完成既定任务，执行失败还原执行前的状态。</p>
+<h2 id="常见原子操作">常见原子操作</h2>
+<table>
+<thead>
+<tr>
+<th>操作</th>
+<th>使用</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$set</td>
+<td>{ $set : { field : value } }</td>
+<td>用来指定一个键并更新键值，若键不存在则创建</td>
+</tr>
+<tr>
+<td>$unset</td>
+<td>{ $unset : { field : 1} }</td>
+<td>用来删除一个键</td>
+</tr>
+<tr>
+<td>$inc</td>
+<td>{ $inc : { field : value } }</td>
+<td>$inc 可以对文档的某个值为数字型（只能为满足要求的数字）的键进行增减的操作</td>
+</tr>
+<tr>
+<td>$push</td>
+<td>{ $push : { field : value } }</td>
+<td>把 value 追加到 field 里面去，field 一定要是数组类型才行，如果 field 不存在，会新增一个数组类型加进去</td>
+</tr>
+<tr>
+<td>$pushAll</td>
+<td>{ $pushAll : { field : value_array } }</td>
+<td>同 $push ，只是一次可以追加多个值到一个数组字段内</td>
+</tr>
+<tr>
+<td>$pull</td>
+<td>{ $pull : { field : _value } }</td>
+<td>从数组 field 内删除一个等于 value 值</td>
+</tr>
+<tr>
+<td>$addToSet</td>
+<td>{ $addToSet : { field : value } }</td>
+<td>增加一个值到数组内，而且只有当这个值不在数组内才增加</td>
+</tr>
+<tr>
+<td>$pop</td>
+<td>{ $pop : { field : 1 } }</td>
+<td>删除数组的第一个或最后一个元素</td>
+</tr>
+<tr>
+<td>$rename</td>
+<td>{ $rename : { old_field_name : new_field_name } }</td>
+<td>修改字段名称</td>
+</tr>
+<tr>
+<td>$bit</td>
+<td>{$bit : { field : {and : 5}}}</td>
+<td>位操作，integer 类型</td>
+</tr>
+</tbody>
+</table>
+<h1 id="查询分析">查询分析</h1>
+<h2 id="explain">explain</h2>
+<p>explain() 操作提供了查询信息，使用索引及查询统计等。有利于我们对索引的优化</p>
+<h2 id="hint">hint()</h2>
+<p>强制命中索引，语法：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">db.worker.find({age:30},{age:1,_id:0}).hint({age:1,salary:1})
+</code></pre></div><p>db.createUser({user:&ldquo;hexiaojiao&rdquo;,pwd:&ldquo;jiao&rdquo;,roles:[&ldquo;root&rdquo;]})</p>
+</div>
+                    <div class="post_footer">
+                        
+                    </div>
+                </div>
+                
+                
+                
+<div class="doc_comments">
+    <div class="comments_block_title">发表评论</div>
+    <div id="vcomments"></div>
+</div>
+
+<link rel="stylesheet" href="https://laurel-he.github.io/css/comments.css" />
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
+<script type="text/javascript">
+    new Valine({
+        el: '#vcomments',
+        appId: 'SWEItAag34n7U5AR3T95AhRG-gzGzoHsz',
+        appKey: 'zAM901B4LKIxfrnTb7ie5e5K',
+        placeholder: '在此输入评论...',
+        visitor: 'true',
+    })
+</script>
+                
+            </div>
+        </div>
+    </div>
+    <a id="back_to_top" href="#" class="back_to_top"><i class="ri-arrow-up-s-line"></i></a>
+    <footer class="footer">
+    <div class="powered_by">
+        <a href="https://varkai.com">Designed by VarKai,</a>
+        <a href="http://www.gohugo.io/">Proudly published with Hugo</a>
+    </div>
+
+    <div class="footer_slogan">
+        <span>绝知此事要躬行</span>
+    </div>
+</footer>
+    <script src="https://laurel-he.github.io/js/jquery-3.5.1.min.js"></script>
+<link href="https://laurel-he.github.io/css/fancybox.min.css" rel="stylesheet">
+<script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
+<script src="https://laurel-he.github.io/js/zozo.js"></script>
+
+
+
+
+</body>
+
+</html>

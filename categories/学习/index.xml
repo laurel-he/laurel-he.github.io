@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>学习 on 瑶风</title>
+    <title>学习 on xiaoJiao</title>
     <link>https://laurel-he.github.io/categories/%E5%AD%A6%E4%B9%A0/</link>
-    <description>Recent content in 学习 on 瑶风</description>
+    <description>Recent content in 学习 on xiaoJiao</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 30 Sep 2021 16:34:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
@@ -27,10 +27,10 @@
     
     <item>
       <title>数据结构学习笔记-1</title>
-      <link>https://laurel-he.github.io/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/datastruct_01/</link>
+      <link>https://laurel-he.github.io/datastructure/datastruct_01/</link>
       <pubDate>Tue, 20 Jul 2021 16:34:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/datastruct_01/</guid>
+      <guid>https://laurel-he.github.io/datastructure/datastruct_01/</guid>
       <description>数据结构学习系列都来自于中国大学MOOC上的浙江大学数据结构学习课程。原课程代码全部采用C语言实现，由于本菜平时最擅长（zhihuiyong）使用php，因此所有算法全部翻译成了php实现。课程链接：</description>
     </item>
     

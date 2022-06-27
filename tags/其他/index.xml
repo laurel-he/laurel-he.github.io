@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>其他 on xiaoJiao</title>
+    <link>https://laurel-he.github.io/tags/%E5%85%B6%E4%BB%96/</link>
+    <description>Recent content in 其他 on xiaoJiao</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 08 Mar 2022 19:47:00 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/tags/%E5%85%B6%E4%BB%96/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>魔方还原</title>
+      <link>https://laurel-he.github.io/other/rubikscube/</link>
+      <pubDate>Tue, 08 Mar 2022 19:47:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/other/rubikscube/</guid>
+      <description>魔方右手公式：上左下右 左手公式：上右下左 底部白色十字 找到棱边带白色的，调整到十字 白色十字对应边 有相邻的同色对应边 一个在左一个正面，右手公式 有相对的同色对应边 一个正面一个背面，右手公式 第一层 找到顶部白色</description>
+    </item>
+    
+  </channel>
+</rss>
