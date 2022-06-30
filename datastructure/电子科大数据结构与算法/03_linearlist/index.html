@@ -17,7 +17,7 @@
 
     
     
-    <meta name="keywords" content="Hugo, blog, php" />
+    <meta name="keywords" content="Hugo, blog, php, go" />
     
 
 	
@@ -39,22 +39,6 @@
         <div class="nav_container animated fadeInDown">
     <div class="site_nav" id="site_nav">
         <ul>
-            
-            <li>
-                <a href="/">主页</a>
-            </li>
-            
-            <li>
-                <a href="/categories/">分类</a>
-            </li>
-            
-            <li>
-                <a href="/tags/">标签</a>
-            </li>
-            
-            <li>
-                <a href="/post/">其他</a>
-            </li>
             
         </ul>
     </div>
@@ -259,7 +243,13 @@ Status List_Delete(SqlListPrt L, int pos); //pos位置删除元素
 	<span class="k">return</span> <span class="nx">newList</span>
 <span class="p">}</span>
 
-</code></pre></div></div>
+</code></pre></div><h2 id="合并有序表">合并有序表</h2>
+<h3 id="问题-1">问题</h3>
+<p>已知线性表LA和LB都按非递减顺序排列，将两个线性表合成一个线性表LC，并且LC也按非递减顺序排列</p>
+<h3 id="分析-1">分析</h3>
+<p>初始化LC为空，依次比较LA和LB中的元素，将较小的元素插入到LC末尾中，直到一个线性表扫描完毕，将另一个线性表的所有剩余元素依次插入到LC末尾中</p>
+<h3 id="代码-1">代码</h3>
+</div>
                     <div class="post_footer">
                         
                         <div class="meta">

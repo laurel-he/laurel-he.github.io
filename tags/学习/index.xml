@@ -6,7 +6,16 @@
     <description>Recent content in 学习 on xiaoJiao</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 20 Jun 2022 18:27:44 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/tags/%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Jun 2022 19:27:44 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/tags/%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>一些基本计算</title>
+      <link>https://laurel-he.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97/</link>
+      <pubDate>Tue, 28 Jun 2022 19:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97/</guid>
+      <description>按位与 按位与运算符&amp;quot;&amp;amp;&amp;ldquo;是双目运算符。其功能是参与运算的两数各对应的二进位相与。只有对应的两个二进位均为1时，结果位才为1 ，否则为0。参与运算的数以补码方式出现。 例如：9</description>
+    </item>
+    
     <item>
       <title>函数与极限</title>
       <link>https://laurel-he.github.io/%E9%AB%98%E6%95%B0/01_%E5%87%BD%E6%95%B0%E4%B8%8E%E6%9E%81%E9%99%90/</link>

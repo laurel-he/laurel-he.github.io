@@ -17,7 +17,7 @@
 
     
     
-    <meta name="keywords" content="Hugo, blog, php" />
+    <meta name="keywords" content="Hugo, blog, php, go" />
     
 
 	
@@ -39,22 +39,6 @@
         <div class="nav_container animated fadeInDown">
     <div class="site_nav" id="site_nav">
         <ul>
-            
-            <li>
-                <a href="/">主页</a>
-            </li>
-            
-            <li>
-                <a href="/categories/">分类</a>
-            </li>
-            
-            <li>
-                <a href="/tags/">标签</a>
-            </li>
-            
-            <li>
-                <a href="/post/">其他</a>
-            </li>
             
         </ul>
     </div>
@@ -211,7 +195,28 @@ touch file<span class="o">{</span>1..5<span class="o">}</span>.txt
 rename <span class="s1">&#39;s/\.txt/\.ct/&#39;</span> *.txt
 <span class="c1"># 批量替换成大写</span>
 rename <span class="s1">&#39;y/a-z/A-Z/&#39;</span> *.ct
-</code></pre></div></div>
+</code></pre></div><h2 id="目录权限">目录权限</h2>
+<h3 id="可读权限">可读权限:</h3>
+<p>如果目录没有可读权限, 则无法用ls等命令查看目录中的文件内容</p>
+<h3 id="可写权限">可写权限</h3>
+<p>如果目录没有可写权限, 则无法在目录中创建文件, 也无法在目录中删除文件</p>
+<h3 id="可执行权限">可执行权限:</h3>
+<p>如果目录没有可执行权限, 则无法cd到目录中</p>
+<h3 id="默认权限">默认权限</h3>
+<p>文件的默认权限是0666，目录的默认权限是0777，最终默认权限需要和权限掩码共同计算</p>
+<h4 id="权限掩码">权限掩码</h4>
+<p><code>umask</code>可以查看权限掩码，非root用户默认umask为0002，root用户默认为0022，可修改</p>
+<h4 id="最终默认权限计算">最终默认权限计算</h4>
+<p>将umask按位取反，再与起始权限按位与，得到最终的权限。</p>
+<h3 id="粘滞位">粘滞位</h3>
+<p>粘滞位为t，例如给其他用户加粘滞位： <br>
+<code>chmod o+t [目录]</code>
+当一个目录被设置粘滞位后该目录下的文件只能由：
+(1)root用户删除 <br>
+(2)该文件的拥有者删除 <br>
+(3)目录的拥有者删除 <br>
+即使对应文件被设置成0777,只要不符合以上条件，用户都不能删除目录下的文件</p>
+</div>
                     <div class="post_footer">
                         
                         <div class="meta">
