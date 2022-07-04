@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2022 on xiaoJiao</title>
+    <link>https://laurel-he.github.io/year/2022/</link>
+    <description>Recent content in 2022 on xiaoJiao</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 28 Jun 2022 19:27:44 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/year/2022/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>一些基本计算</title>
+      <link>https://laurel-he.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97/</link>
+      <pubDate>Tue, 28 Jun 2022 19:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97/</guid>
+      <description>按位与 按位与运算符&amp;quot;&amp;amp;&amp;ldquo;是双目运算符。其功能是参与运算的两数各对应的二进位相与。只有对应的两个二进位均为1时，结果位才为1 ，否则为0。参与运算的数以补码方式出现。 例如：9</description>
+    </item>
+    
+    <item>
+      <title>函数与极限</title>
+      <link>https://laurel-he.github.io/%E9%AB%98%E6%95%B0/01_%E5%87%BD%E6%95%B0%E4%B8%8E%E6%9E%81%E9%99%90/</link>
+      <pubDate>Mon, 20 Jun 2022 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/%E9%AB%98%E6%95%B0/01_%E5%87%BD%E6%95%B0%E4%B8%8E%E6%9E%81%E9%99%90/</guid>
+      <description>函数 分段函数 自变量在不同的变化范围中，对应法则用不同的式子表示的函数成为分段函数 函数的特性 有界性 函数y=sin(x)在(-∞,+∞)内是有界的 函数y=tan(x)在(-π/2,π/2)内是无界的 单调性</description>
+    </item>
+    
+    <item>
+      <title>初等函数</title>
+      <link>https://laurel-he.github.io/%E9%AB%98%E6%95%B0/00_%E5%88%9D%E7%AD%89%E5%87%BD%E6%95%B0/</link>
+      <pubDate>Mon, 20 Jun 2022 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/%E9%AB%98%E6%95%B0/00_%E5%88%9D%E7%AD%89%E5%87%BD%E6%95%B0/</guid>
+      <description>分类 幂函数 y=x^α,其中α∈R是常数 指数函数 y=α^x, (a&amp;gt;0, a≠1) 如果指数是分数，1/2代表平方根，1/3代表立方根,1/4代表四次方根，以此类推 更复杂的分数，可看错幂乘以分数，例如3/2可看做3*</description>
+    </item>
+    
+    <item>
+      <title>基本概念</title>
+      <link>https://laurel-he.github.io/datastructure/%E7%94%B5%E5%AD%90%E7%A7%91%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/01_basic/</link>
+      <pubDate>Mon, 20 Jun 2022 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/datastructure/%E7%94%B5%E5%AD%90%E7%A7%91%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/01_basic/</guid>
+      <description>相关术语 数据 所有能够被计算机识别的符号的集合 数据元素 数据集合的一个个个体 数据对象 具有相同性质的数据元素的组合 数据项 数据结构中讨论的最小结构 数据结构 数据元素极其相互关系，数据结构由一个四元组来表示 Data_Structure = (D,</description>
+    </item>
+    
+    <item>
+      <title>基础</title>
+      <link>https://laurel-he.github.io/database/learn/01basic/</link>
+      <pubDate>Mon, 20 Jun 2022 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/database/learn/01basic/</guid>
+      <description>模式、外模式、内模式 模式 数据抽象成E-R图：即逻辑层，逻辑层的数据模式称为模式 外模式 视图层从某个或某类用户角度出发，只描述与其相关的部分，视图层的数据模式称为外模式 内模式 物理层描述数据实际上如何在磁盘</description>
+    </item>
+    
+    <item>
+      <title>树</title>
+      <link>https://laurel-he.github.io/datastructure/tree/01basic/</link>
+      <pubDate>Mon, 20 Jun 2022 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/datastructure/tree/01basic/</guid>
+      <description>参考文章：https://zhuanlan.zhihu.com/p/351240279 一些基本概念 结点的度 一个结点含有的子结点个数称为该结点的度; 树的度 一棵树中，最大结点的度称为树的度; 父结点 若一个结</description>
+    </item>
+    
+    <item>
+      <title>算法复杂度分析</title>
+      <link>https://laurel-he.github.io/datastructure/%E7%94%B5%E5%AD%90%E7%A7%91%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/02_complexity/</link>
+      <pubDate>Mon, 20 Jun 2022 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/datastructure/%E7%94%B5%E5%AD%90%E7%A7%91%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/02_complexity/</guid>
+      <description>好算法的特性 正确性 最基础的特性 可读性 清晰，容易阅读和修改 健壮性 对异常情况下处理能力的评价 高效性 求解同样问题的不同算法所占时间和空间的评价 时间复杂度 对输入做规定： 最坏情况下的时间复杂度 最好情况下的时间复</description>
+    </item>
+    
+    <item>
+      <title>线性表</title>
+      <link>https://laurel-he.github.io/datastructure/%E7%94%B5%E5%AD%90%E7%A7%91%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/03_linearlist/</link>
+      <pubDate>Mon, 20 Jun 2022 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/datastructure/%E7%94%B5%E5%AD%90%E7%A7%91%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/03_linearlist/</guid>
+      <description>基础定义 数据元素存在一对一的关系，特点是数据元素按照某种规定存在一个顺序关系，数据元素需要是同一种类型 ADT ADT List { 数据对象:{a~i|a~i∈ElementSet,i=1,2……n,n&amp;gt;=0} 数据关</description>
+    </item>
+    
+    <item>
+      <title>b树</title>
+      <link>https://laurel-he.github.io/datastructure/btree/</link>
+      <pubDate>Wed, 01 Jun 2022 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/datastructure/btree/</guid>
+      <description>平衡二叉树 概念 平衡二叉树是基于二分法的策略提高数据的查找速度的二叉树的数据结构； 特点 平衡二叉树是采用二分法思维把数据按规则组装成一个树形结构的数据，用这个树形结构的数据减少无关数据的检索，大大的提升了</description>
+    </item>
+    
+    <item>
+      <title>蓝桥教程-MongoDB基础教程</title>
+      <link>https://laurel-he.github.io/database/mongo/lanqiao_mongo_base/01basic/</link>
+      <pubDate>Thu, 05 May 2022 20:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/database/mongo/lanqiao_mongo_base/01basic/</guid>
+      <description>本系列基于对的学习笔记 第一章：数据库和集合基本操作 简介 MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富、最像关系数据库的。 在 MongoDB 中，一个数据库包含多个集合，类似于 MySQL 中一个数据</description>
+    </item>
+    
+    <item>
+      <title>蓝桥教程-MongoDB基础教程-文档基本操作</title>
+      <link>https://laurel-he.github.io/database/mongo/lanqiao_mongo_base/02operation/</link>
+      <pubDate>Thu, 05 May 2022 20:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/database/mongo/lanqiao_mongo_base/02operation/</guid>
+      <description>本系列基于对的学习笔记 第二章：文档基本操作 数据库操作 启动 启动 MongoDB 服务，因为 MongoDB 并不随系统一起启动， 可能以下命令运行后会等一小段的时间才会启动完毕 sudo service mongodb start 退出使用exit命令 删除数据库 &amp;gt; show dbs # 显示当前系统中</description>
+    </item>
+    
+    <item>
+      <title>蓝桥教程-MongoDB基础教程-查询、索引与聚合</title>
+      <link>https://laurel-he.github.io/database/mongo/lanqiao_mongo_base/03search/</link>
+      <pubDate>Thu, 05 May 2022 20:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/database/mongo/lanqiao_mongo_base/03search/</guid>
+      <description>本系列基于对的学习笔记 查询 条件操作符 大于小于条件操作符 如第一章所说，有$gt,$lt,$gte,$lte四种，分别表示大于，小于，大于等于，小于等于 type条件操作符 语法 $type:[key] 可选key及其含义 key 含义（括</description>
+    </item>
+    
+    <item>
+      <title>蓝桥教程-MongoDB基础教程-高级查询与索引</title>
+      <link>https://laurel-he.github.io/database/mongo/lanqiao_mongo_base/04highlevelindex/</link>
+      <pubDate>Thu, 05 May 2022 20:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/database/mongo/lanqiao_mongo_base/04highlevelindex/</guid>
+      <description>本系列基于对的学习笔记 索引查询 覆盖索引查询 概念 所有的查询字段都是索引的一部分；所有的查询返回字段在同一个索引中。 由于索引存在于 RAM 中，因而从索引中获取数据要比扫描文档更快。 示例 例如有一个索引： &amp;gt; db.users.ensureIndex({gender:1,user_name:1}) 该索引</description>
+    </item>
+    
+    <item>
+      <title>试着制作一台计算机吧</title>
+      <link>https://laurel-he.github.io/learn/howtorunofcomputer/chapter2/</link>
+      <pubDate>Wed, 27 Apr 2022 13:47:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/learn/howtorunofcomputer/chapter2/</guid>
+      <description>热身问题 CPU是什么的缩写 Hz是表示什么的单位 Z80 CPU是多少比特的CPU</description>
+    </item>
+    
+    <item>
+      <title>计算机三大原则</title>
+      <link>https://laurel-he.github.io/learn/howtorunofcomputer/chapter1/</link>
+      <pubDate>Tue, 26 Apr 2022 13:47:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/learn/howtorunofcomputer/chapter1/</guid>
+      <description>热身问题 硬件和软件的区别是什么 自行作答 硬件看得见，摸得着，例如cpu，硬盘等等，是真实存在的 软件是通过硬件才能表现出来的，例如运算程序等等 标准答案 软件是一种逻辑的产品，与硬件产品有本质的区别. 硬件是看</description>
+    </item>
+    
+    <item>
+      <title>计算机是怎样跑起来的</title>
+      <link>https://laurel-he.github.io/learn/howtorunofcomputer/prelearn/</link>
+      <pubDate>Tue, 26 Apr 2022 13:47:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/learn/howtorunofcomputer/prelearn/</guid>
+      <description>这一系列是对书籍《计算机是怎样跑起来的》的学习笔记。 我为什么要在成为程序员的第四年学习这本“基础”书籍？ 因为我发现我的基础非常薄弱，也许我有幸有一丁点学习技巧，所以让我在实际工作中哪怕遇到不会的问题也</description>
+    </item>
+    
+    <item>
+      <title>测试函数</title>
+      <link>https://laurel-he.github.io/go/test/testfunction/</link>
+      <pubDate>Mon, 25 Apr 2022 13:47:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/go/test/testfunction/</guid>
+      <description>格式要求 引入testing包 每个测试函数必须导入testing包。测试函数有如下的签名： func TestName(t *testing.T) { // ... } 测试函数的名字必须以Test开头，可选的后缀名必须以大写字母开头： 例如： func TestSin(t *testing.T) { /* ... */ } func TestCos(t *testing.T) { /*</description>
+    </item>
+    
+    <item>
+      <title>测试</title>
+      <link>https://laurel-he.github.io/go/test/basictest/</link>
+      <pubDate>Sun, 24 Apr 2022 13:47:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/go/test/basictest/</guid>
+      <description>*_test.go文件中，三种函数类型 测试函数、基准测试(benchmark)函数、示例函数 测试函数 一个测试函数是以Test为函数名前缀的函数，用于测试程序的一些逻辑行为是否正确； go test命令会调用</description>
+    </item>
+    
+    <item>
+      <title>GRPC学习文档</title>
+      <link>https://laurel-he.github.io/go/basic/grpc/grpc/</link>
+      <pubDate>Thu, 17 Mar 2022 13:47:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/go/basic/grpc/grpc/</guid>
+      <description>What(GRPC是什么)? RPC 定义 要想知道GRPC是什么，首先得知道RPC是什么。 RPC（Remote Procedure Call）— 远程过程调用,它是一种通过网络从远程计算机程序上请求服务，而不需要了解底层网络技术的</description>
+    </item>
+    
+    <item>
+      <title>ProtoBuf学习</title>
+      <link>https://laurel-he.github.io/go/basic/grpc/protobuf/</link>
+      <pubDate>Thu, 17 Mar 2022 13:47:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/go/basic/grpc/protobuf/</guid>
+      <description>参考文档：Protobuf语法 概念 通俗地说，其实Protobuf就是一种数据传输格式，就像json,xml,yaml等等。官网介绍如下： 他是一种与语言无关、与平台无关，是一种可扩展的用于序列化和结构化</description>
+    </item>
+    
+    <item>
+      <title>魔方还原</title>
+      <link>https://laurel-he.github.io/other/rubikscube/</link>
+      <pubDate>Tue, 08 Mar 2022 19:47:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/other/rubikscube/</guid>
+      <description>魔方右手公式：上左下右 左手公式：上右下左 底部白色十字 找到棱边带白色的，调整到十字 白色十字对应边 有相邻的同色对应边 一个在左一个正面，右手公式 有相对的同色对应边 一个正面一个背面，右手公式 第一层 找到顶部白色</description>
+    </item>
+    
+    <item>
+      <title>软件工程-01基础介绍</title>
+      <link>https://laurel-he.github.io/learn/softwareengineering/01basic/</link>
+      <pubDate>Wed, 01 Sep 2021 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/learn/softwareengineering/01basic/</guid>
+      <description>基础 包含概念介绍 代码，输入数据，输出数据，中间结果数据。 文档：规格说明，设计，法律，财务文档，管理计划，用户手册等。 特点 逻辑抽象 、不会损耗的、可移植的、复杂的、昂贵的 软件工程</description>
+    </item>
+    
+  </channel>
+</rss>

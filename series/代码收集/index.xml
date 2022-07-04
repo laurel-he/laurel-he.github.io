@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>代码收集 on xiaoJiao</title>
+    <link>https://laurel-he.github.io/series/%E4%BB%A3%E7%A0%81%E6%94%B6%E9%9B%86/</link>
+    <description>Recent content in 代码收集 on xiaoJiao</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 25 Feb 2020 20:10:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/series/%E4%BB%A3%E7%A0%81%E6%94%B6%E9%9B%86/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>计算相关</title>
+      <link>https://laurel-he.github.io/post/codecollect/</link>
+      <pubDate>Tue, 25 Feb 2020 20:10:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/post/codecollect/</guid>
+      <description>1 计算矩形是否相交 描述 给定两个矩形的左上角起始点坐标和矩形的宽，高，计算这两个矩形是否相交 分析 1 矩形1左上角坐标p1,右下角坐标p2,矩形2左上角坐标p3,右下角坐标p4 2 M点坐标为P1与P3点在X方</description>
+    </item>
+    
+    <item>
+      <title>运行相关</title>
+      <link>https://laurel-he.github.io/post/codecollect2/</link>
+      <pubDate>Tue, 25 Feb 2020 20:10:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/post/codecollect2/</guid>
+      <description>1 下载数据 描述 根据链接下载文件 代码 &amp;lt;?php function downloadOldFile($url,$rename,$ext){ $file_path = &amp;#39;public/images/age_60-120/&amp;#39;; $ch = curl_init($url); curl_setopt($ch, CURLOPT_HEADER, 0); curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); curl_setopt($ch, CURLOPT_BINARYTRANSFER, 1); $rawdata=curl_exec ($ch); curl_close ($ch); // 使用中文文件名需要转码 $fp = fopen($file_path. $rename .&amp;#34;.&amp;#34;.$ext,&amp;#39;w&amp;#39;); fwrite($fp, $rawdata); fclose($fp); // 返回路径 return $_SERVER[&amp;#39;DOCUMENT_ROOT&amp;#39;].$file_path.$rename.&amp;#34;.&amp;#34;.$ext; } ?&amp;gt;2 按步骤执行方法 描述 经常有需求：分页执行脚本，例如前1000条执行</description>
+    </item>
+    
+  </channel>
+</rss>

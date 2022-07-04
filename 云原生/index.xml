@@ -58,7 +58,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/docker/docker/</guid>
-      <description>title: docker使用心得 date: 2019-04-24 21:03:10 tags: 使用心得 categories: docker 准备工作 1 前提条件 ubuntu内核版本高于 3.10 uname -r 2 安装docker 本文是基于ubuntu的，基于centos安装路径博客如下： centos windows wget -qO- https://get.docker.com/ | sh 当要以非root用</description>
+      <description>title: docker使用心得 date: 2019-04-24 21:03:10 year: 2019 series: 基础 tags: 使用心得 categories: docker 准备工作 1 前提条件 ubuntu内核版本高于 3.10 uname -r 2 安装docker 本文是基于ubuntu的，基于centos安装路径博客如下： centos windows wget -qO- https://get.docker.com/ | sh 当要以非</description>
     </item>
     
     <item>

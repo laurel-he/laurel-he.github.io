@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="贺小娇" />
+	
+	
+	
+	<title>php下es基本使用 ｜ xiaoJiao</title>
+	
+    
+    
+    <meta name="description" content="本文参考文档: es7.3文档 全文搜索引擎 Elasticsearch 入门教程 基础介绍 全文搜索属于最常见的需求，开源的 Elasticsearch是目前全文搜索引擎的首选。它可以快速地储存、搜索和分析海量数据。 安装 不同环境下安装方" />
+    
+
+    
+    
+    <meta name="keywords" content="Hugo, blog, php, go" />
+    
+
+	
+    
+    <link rel="shortcut icon" href="https://laurel-he.github.io/images/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/zozo.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/highlight.css" />
+
+    
+    
+</head>
+
+<body>
+    <div class="main animate__animated animate__fadeInDown">
+        <div class="nav_container animated fadeInDown">
+    <div class="site_nav" id="site_nav">
+        <ul>
+            
+            <li>
+                <a href="/">主页</a>
+            </li>
+            
+            <li>
+                <a href="/categories/">分类</a>
+            </li>
+            
+            <li>
+                <a href="/tags/">标签</a>
+            </li>
+            
+            <li>
+                <a href="/year/">按年</a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="menu_icon">
+        <a id="menu_icon"><i class="ri-menu-line"></i></a>
+    </div>
+</div>
+        <div class="header animated fadeInDown">
+    <div class="site_title_container">
+        <div class="site_title">
+            <h1>
+                <a href="https://laurel-he.github.io/">
+                    <span>xiaoJiao</span>
+                </a>
+            </h1>
+        </div>
+        <div class="description">
+            <p class="sub_title">贺胖娇的编程之旅......</p>
+            <div class="my_socials">
+                
+                
+                <a href="https://github.com/laurel-he" title="github" target="_blank"><i class="ri-github-fill"></i></a>
+                
+                
+                
+                <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1570306409&amp;site=qq&amp;menu=yes" title="qq" target="_blank"><i class="ri-qq-fill"></i></a>
+                
+                
+                
+                <a href="https://stackoverflow.com/users/9809769/laurel-he" title="stack-overflow" target="_blank"><i class="ri-stack-overflow-fill"></i></a>
+                
+                
+                
+                <a href="https://weibo.com/u/3783884100" title="weibo" target="_blank"><i class="ri-weibo-fill"></i></a>
+                
+                
+                <a href="https://laurel-he.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
+                        class="ri-rss-fill"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="content">
+            <div class="post_page">
+                <div class="post animate__animated animate__fadeInDown">
+                    <div class="post_title post_detail_title">
+                        <h2><a href='/database/es/md_basic/'>php下es基本使用</a></h2>
+                        <span class="date">2021.11.20</span>
+                    </div>
+                    <div class="post_content markdown"><p><strong>本文参考文档:</strong> <br>
+<a href="https://learnku.com/docs/elasticsearch73/7.3/data-in-documents-and-indices/6446">es7.3文档</a> <br>
+<a href="http://www.ruanyifeng.com/blog/2017/08/elasticsearch.html">全文搜索引擎 Elasticsearch 入门教程</a></p>
+<h2 id="基础介绍">基础介绍</h2>
+<p>全文搜索属于最常见的需求，开源的 Elasticsearch是目前全文搜索引擎的首选。它可以快速地储存、搜索和分析海量数据。</p>
+<h2 id="安装">安装</h2>
+<p>不同环境下安装方式不同，可以采用下载安装包，apt-get，yum安装等各种方法，在wsl下linux安装需要注意，wsl下的Linux系统没有使用systemd，可以尝试用SysV init的命令代替systemd，或者安装systemd命令 <br>
+安装完后直接执行curl localhost:9200可以获取到es基本信息，例如我执行后结果如下：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+  <span class="nt">&#34;name&#34;</span> <span class="p">:</span> <span class="s2">&#34;MS-RWTYITLHLCWO&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;cluster_name&#34;</span> <span class="p">:</span> <span class="s2">&#34;elasticsearch&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;cluster_uuid&#34;</span> <span class="p">:</span> <span class="s2">&#34;j9WVJcIFRq6bEa3bwXCARA&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;version&#34;</span> <span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&#34;number&#34;</span> <span class="p">:</span> <span class="s2">&#34;7.15.2&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;build_flavor&#34;</span> <span class="p">:</span> <span class="s2">&#34;default&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;build_type&#34;</span> <span class="p">:</span> <span class="s2">&#34;deb&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;build_hash&#34;</span> <span class="p">:</span> <span class="s2">&#34;93d5a7f6192e8a1a12e154a2b81bf6fa7309da0c&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;build_date&#34;</span> <span class="p">:</span> <span class="s2">&#34;2021-11-04T14:04:42.515624022Z&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;build_snapshot&#34;</span> <span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&#34;lucene_version&#34;</span> <span class="p">:</span> <span class="s2">&#34;8.9.0&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;minimum_wire_compatibility_version&#34;</span> <span class="p">:</span> <span class="s2">&#34;6.8.0&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;minimum_index_compatibility_version&#34;</span> <span class="p">:</span> <span class="s2">&#34;6.0.0-beta1&#34;</span>
+  <span class="p">},</span>
+  <span class="nt">&#34;tagline&#34;</span> <span class="p">:</span> <span class="s2">&#34;You Know, for Search&#34;</span>
+<span class="p">}</span>
+</code></pre></div><h2 id="使用">使用</h2>
+<h3 id="引入包">引入包</h3>
+<p>正常通过Restful API方式使用在各个文档中都有详细介绍，在此省略，说一下在php中如何使用。 <br>
+在laravel或yii2等主流框架中都有自己使用es的包，例如yiisoft/yii2-elasticsearch或basemkhirat/elasticsearch等等，但假设使用的是自研框架呢？ <br>
+目前我使用的是基于swoole开发的自研框架，引入了elasticsearch/elasticsearch包，在composer require elasticsearch/elasticsearch时，会自动根据php版本引入包</p>
+<h3 id="配置">配置</h3>
+<h3 id="连接池">连接池</h3>
+<p>index:索引是文档的容器，是一类文档的集合
+type：可以理解成关系数据库中Table，不建议使用
+Document：Index 里面单条的记录称为Document（文档）。等同于关系型数据库表中的行。
+id：Doc的主键。在写入的时候，可以指定该Doc的ID值，如果不指定，则系统自动生成一个唯一的UUID值。
+body
+endpoint</p>
+</div>
+                    <div class="post_footer">
+                        
+                        <div class="meta">
+                            <div class="info">
+                                <span class="field tags">
+                                    <i class="ri-stack-line"></i>
+                                    
+                                    <a href="https://laurel-he.github.io/tags/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/">搜索引擎</a>
+                                    
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                
+                
+<div class="doc_comments">
+    <div class="comments_block_title">发表评论</div>
+    <div id="vcomments"></div>
+</div>
+
+<link rel="stylesheet" href="https://laurel-he.github.io/css/comments.css" />
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
+<script type="text/javascript">
+    new Valine({
+        el: '#vcomments',
+        appId: 'SWEItAag34n7U5AR3T95AhRG-gzGzoHsz',
+        appKey: 'zAM901B4LKIxfrnTb7ie5e5K',
+        placeholder: '在此输入评论...',
+        visitor: 'true',
+    })
+</script>
+                
+            </div>
+        </div>
+    </div>
+    <a id="back_to_top" href="#" class="back_to_top"><i class="ri-arrow-up-s-line"></i></a>
+    <footer class="footer">
+    <div class="powered_by">
+        <a href="https://varkai.com">Designed by VarKai,</a>
+        <a href="http://www.gohugo.io/">Proudly published with Hugo</a>
+    </div>
+
+    <div class="footer_slogan">
+        <span>绝知此事要躬行</span>
+    </div>
+</footer>
+    <script src="https://laurel-he.github.io/js/jquery-3.5.1.min.js"></script>
+<link href="https://laurel-he.github.io/css/fancybox.min.css" rel="stylesheet">
+<script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
+<script src="https://laurel-he.github.io/js/zozo.js"></script>
+
+
+
+
+</body>
+
+</html>

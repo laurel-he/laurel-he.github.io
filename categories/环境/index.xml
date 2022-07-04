@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>环境 on xiaoJiao</title>
+    <link>https://laurel-he.github.io/categories/%E7%8E%AF%E5%A2%83/</link>
+    <description>Recent content in 环境 on xiaoJiao</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 28 Mar 2021 14:03:27 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/%E7%8E%AF%E5%A2%83/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>lnmp环境搭建</title>
+      <link>https://laurel-he.github.io/operatingsystem/linux/lnmp/</link>
+      <pubDate>Sun, 28 Mar 2021 14:03:27 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/operatingsystem/linux/lnmp/</guid>
+      <description>参考文档： 百度百科:lnmp 问题背景 根据部分5W/1H原则来解释下问题背景（where/when/who基本不用说了,How单独起一个） LNMP环境是什么（What） lnmp环境通常就是指linux+</description>
+    </item>
+    
+  </channel>
+</rss>

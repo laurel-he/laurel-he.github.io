@@ -179,11 +179,56 @@
     </item>
     
     <item>
-      <title>设计模式学习——前言</title>
-      <link>https://laurel-he.github.io/designpattern/basic/</link>
+      <title>使用go编写webassembly</title>
+      <link>https://laurel-he.github.io/go/webassembly_go_1/</link>
+      <pubDate>Fri, 10 Dec 2021 12:34:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/go/webassembly_go_1/</guid>
+      <description>使用go编写webassembly并在浏览器执行 参考博客 用go写WebAssembly入门 下载安装 go 编写测试文件hello.go package main import &amp;#34;fmt&amp;#34; func main() { fmt.Println(&amp;#34;Hello World!&amp;#34;) } 生成wasm文件 GOARCH=wasm GOOS=js go build -o hello.wasm hello.go 在windows下需要</description>
+    </item>
+    
+    <item>
+      <title>给小黄鸭讲明白TCP/IP协议</title>
+      <link>https://laurel-he.github.io/interview/tcpip/</link>
+      <pubDate>Fri, 10 Dec 2021 12:34:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/interview/tcpip/</guid>
+      <description>前言 我上家公司的CTO跟我说过一个道理，一件事情如果你能给一个从来没接触过的小学生讲明白，那么你就能够理解了。 所以我决定用这篇文章记录一下，假设本文有读者，且读者是一个技术小白，那么希望他看完本文后能</description>
+    </item>
+    
+    <item>
+      <title>操作系统（东北大学）- 01 概述</title>
+      <link>https://laurel-he.github.io/operatingsystem/leanopesys2/guide/</link>
       <pubDate>Sun, 28 Nov 2021 17:40:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/designpattern/basic/</guid>
+      <guid>https://laurel-he.github.io/operatingsystem/leanopesys2/guide/</guid>
+      <description>操作系统 基本概念 需要学习： 操作系统是如何工作的 操作系统内部算法和数据结构 设计操作系统过程中的问题和解决方案 学习目的 操作系统的基本概念，基本结构及运行环境 操作系统原理，设计方法和实现技术 概述 操作系统：管</description>
+    </item>
+    
+    <item>
+      <title>操作系统（哈工大李治军老师）32讲（全）- 01 概述</title>
+      <link>https://laurel-he.github.io/operatingsystem/learnopesys/summary/</link>
+      <pubDate>Sun, 28 Nov 2021 17:40:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/operatingsystem/learnopesys/summary/</guid>
+      <description>来源： 本系列来源于操作系统（哈工大李治军老师）32讲（全）的学习笔记： 操作系统 蓝桥-操作系统练习 操作系统概述 计算机的基本组成： 用计算机这个工具来解决一些实际问题。 操作系统：计算机硬件和应用之间的一层软</description>
+    </item>
+    
+    <item>
+      <title>操作系统（哈工大李治军老师）32讲（全）- 02 操作系统引导</title>
+      <link>https://laurel-he.github.io/operatingsystem/learnopesys/guide/</link>
+      <pubDate>Sun, 28 Nov 2021 17:40:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/operatingsystem/learnopesys/guide/</guid>
+      <description>来源： 本系列来源于操作系统（哈工大李治军老师）32讲（全）的学习笔记： 操作系统 蓝桥-操作系统练习 课程目标 了解操作系统提供的接口 操作系统内部操作 思索 计算机如何工作的（取指执行）？ 思索过程-&amp;gt;变成程</description>
+    </item>
+    
+    <item>
+      <title>设计模式学习——前言</title>
+      <link>https://laurel-he.github.io/designpattern/learnbasic/</link>
+      <pubDate>Sun, 28 Nov 2021 17:40:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/designpattern/learnbasic/</guid>
       <description>参考文档： PHP 设计模式系列 基本介绍 设计模式分类 基本所有的设计模式书籍或文档都会介绍到一个概念，就是设计模式的类型。 设计模式分为创建型，结构型，行为型以及部分其他类型的设计模式 创建型模式 在软件工程中，创建</description>
     </item>
     
@@ -198,20 +243,11 @@
     
     <item>
       <title>swoole基本使用</title>
-      <link>https://laurel-he.github.io/php/swoole/basic/</link>
+      <link>https://laurel-he.github.io/php/swoole/swoolebasic/</link>
       <pubDate>Sat, 20 Nov 2021 18:27:44 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/php/swoole/basic/</guid>
+      <guid>https://laurel-he.github.io/php/swoole/swoolebasic/</guid>
       <description>本文参考swoole文档 安装 安装过程大概可以参考如下dockerfile: FROMalpine:latest# 替换镜像源并安装基础服务RUN sed -i &amp;#39;s/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g&amp;#39; /etc/apk/repositories \ &amp;amp;&amp;amp; apk add php7 php7-fpm php7-opcache php7-curl php7-pdo php7-gd php7-dev php7-mbstring php7-mysqli php7-json vim \ &amp;amp;&amp;amp; apk add gcc g++ make autoconf libc-dev# 挂载VOLUME [&amp;#34;/data&amp;#34;]# 安装swooleCO</description>
-    </item>
-    
-    <item>
-      <title>什么是数据结构</title>
-      <link>https://laurel-he.github.io/datastructure/route/01_introduce/</link>
-      <pubDate>Sat, 02 Oct 2021 18:27:44 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/datastructure/route/01_introduce/</guid>
-      <description></description>
     </item>
     
     <item>
@@ -324,10 +360,10 @@
     
     <item>
       <title>(1)go基础学习-基础概念</title>
-      <link>https://laurel-he.github.io/go/basic/basic/</link>
+      <link>https://laurel-he.github.io/go/basic/gobasic/</link>
       <pubDate>Fri, 27 Aug 2021 13:47:00 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/go/basic/basic/</guid>
+      <guid>https://laurel-he.github.io/go/basic/gobasic/</guid>
       <description>参考文档： go文档 Go 语言教程 可以先看go语言学习路线图， 对大概学习路线有个了解。 基础概念 go语言特色 Go语言在多核并发上拥有原生的设计优势， Go语言从底层原生支持并发，无须第三方库、开发者的编程技巧和</description>
     </item>
     
@@ -347,6 +383,15 @@
       
       <guid>https://laurel-he.github.io/acm/%E7%89%9B%E5%AE%A2%E7%BD%91/mysql/having_group/</guid>
       <description>题目解答 题目来源 牛客网： 分组过滤练习题 参考文章： Mysql中having和where的区别 MySQL聚合函数 MySQL count()函数 题目解析 输入： drop table if exists user_profile; CREATE TABLE user_profile ( id int NOT NULL, device_id int NOT NULL, gender varchar(14) NOT NULL, age int , university varchar(32) NOT NULL, gpa</description>
+    </item>
+    
+    <item>
+      <title>kafka学习</title>
+      <link>https://laurel-he.github.io/queue/kafka/</link>
+      <pubDate>Tue, 27 Jul 2021 09:35:00 +0800</pubDate>
+      
+      <guid>https://laurel-he.github.io/queue/kafka/</guid>
+      <description>环境安装 直接按照文档下载安装。需要注意的是： zookeeper直接使用curl或者wget下载的文件很可能会损坏，导致解压出错。 可以浏览器直接下载，下载好后通过scp传入到服务器中。 安装的时候，pyt</description>
     </item>
     
     <item>
@@ -395,6 +440,15 @@
     </item>
     
     <item>
+      <title>lnmp环境搭建</title>
+      <link>https://laurel-he.github.io/operatingsystem/linux/lnmp/</link>
+      <pubDate>Sun, 28 Mar 2021 14:03:27 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/operatingsystem/linux/lnmp/</guid>
+      <description>参考文档： 百度百科:lnmp 问题背景 根据部分5W/1H原则来解释下问题背景（where/when/who基本不用说了,How单独起一个） LNMP环境是什么（What） lnmp环境通常就是指linux+</description>
+    </item>
+    
+    <item>
       <title>第一周_绪论</title>
       <link>https://laurel-he.github.io/datastructure/%E8%A5%BF%E5%AE%89%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%A6%E6%85%95%E8%AF%BE/01%E7%BB%AA%E8%AE%BA/</link>
       <pubDate>Tue, 19 Jan 2021 16:34:10 +0000</pubDate>
@@ -419,15 +473,6 @@
       
       <guid>https://laurel-he.github.io/acm/leetcode/566remouldmatrix/</guid>
       <description>题目来源:566. 重塑矩阵 题目描述 难度 简单 描述 在 MATLAB 中，有一个非常有用的函数 reshape ，它可以将一个m x n 矩阵重塑为另一个大小不同（r x c）的新矩阵，但保留其原始数据。 给你一个由二维数组 mat 表示的m x n 矩阵，以及</description>
-    </item>
-    
-    <item>
-      <title>目录</title>
-      <link>https://laurel-he.github.io/post/total/</link>
-      <pubDate>Thu, 03 Sep 2020 16:10:10 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/post/total/</guid>
-      <description>目录： 1 刷题 2 设计模式 3 数据库 4 操作系统 5 php 6 go 7 python 8 前端 9 云原生 10 消息队列 11 学习</description>
     </item>
     
     <item>
@@ -476,6 +521,15 @@
     </item>
     
     <item>
+      <title>php多维数组相关处理</title>
+      <link>https://laurel-he.github.io/php/multiarr/</link>
+      <pubDate>Thu, 16 Apr 2020 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/php/multiarr/</guid>
+      <description>使用场景 在工作中遇到了两次需要把不确定维度的多维数组渲染出来的情况，且还需要修改值和结构，如果使用json-patch会受到限制（需要根据不同的情况打补丁，且由于结构不一定一致，打补丁可能会错误地修改</description>
+    </item>
+    
+    <item>
       <title>awk</title>
       <link>https://laurel-he.github.io/operatingsystem/linux/awk/</link>
       <pubDate>Thu, 27 Feb 2020 18:00:00 +0000</pubDate>
@@ -512,12 +566,12 @@
     </item>
     
     <item>
-      <title>运行相关</title>
-      <link>https://laurel-he.github.io/post/codecollect2/</link>
-      <pubDate>Tue, 25 Feb 2020 20:10:10 +0000</pubDate>
+      <title>有用的代码段-php篇</title>
+      <link>https://laurel-he.github.io/php/usefulcode1/</link>
+      <pubDate>Thu, 16 Jan 2020 12:34:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/codecollect2/</guid>
-      <description>1 下载数据 描述 根据链接下载文件 代码 &amp;lt;?php function downloadOldFile($url,$rename,$ext){ $file_path = &amp;#39;public/images/age_60-120/&amp;#39;; $ch = curl_init($url); curl_setopt($ch, CURLOPT_HEADER, 0); curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); curl_setopt($ch, CURLOPT_BINARYTRANSFER, 1); $rawdata=curl_exec ($ch); curl_close ($ch); // 使用中文文件名需要转码 $fp = fopen($file_path. $rename .&amp;#34;.&amp;#34;.$ext,&amp;#39;w&amp;#39;); fwrite($fp, $rawdata); fclose($fp); // 返回路径 return $_SERVER[&amp;#39;DOCUMENT_ROOT&amp;#39;].$file_path.$rename.&amp;#34;.&amp;#34;.$ext; } ?&amp;gt;2 按步骤执行方法 描述 经常有需求：分页执行脚本，例如前1000条执行</description>
+      <guid>https://laurel-he.github.io/php/usefulcode1/</guid>
+      <description>分步骤执行 &amp;lt;?php /** * @param mixed ...$args * @return bool * @throws Exception */ public function stepRun(...$args): bool { $count = $args[0]; $method = $args[1]; $step = array_key_exists(2, $args) ? $args[2] : 10; $limit = array_key_exists(3, $args) ? $args[3] : 10; $param = array_key_exists(4, $args) ? $args[4] : &amp;#39;&amp;#39;; $stepCount = ceil($count / $step); for ($nowStep = 0; $nowStep &amp;lt; $stepCount; $nowStep ++) { $this-&amp;gt;$method($limit, $nowStep * $step, $param); sleep(1); } sleep(1); return true; } ?&amp;gt;使用方法 &amp;lt;?php $this-&amp;gt;stepRun($groupChangeCount, &amp;#39;loopGetData&amp;#39;, 30, 30); ?&amp;gt;分析</description>
     </item>
     
     <item>
@@ -611,6 +665,24 @@
     </item>
     
     <item>
+      <title>PHP常见算法</title>
+      <link>https://laurel-he.github.io/php/phpalg/</link>
+      <pubDate>Mon, 08 Apr 2019 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/php/phpalg/</guid>
+      <description>排序算法 1 冒泡排序 解析 从零开始，每一位和剩余位数比较，如果大于（小于）则交换，最后一位最终会是最大（最小）的。 代码 &amp;lt;?php $arr = [2,3,1,4,7,6,9]; var_dump(bubbleSort($arr)); function bubbleSort($arr) { $len = count($arr); for($i = 0;$i &amp;lt; $len; $i++) { for($j = $len - 1;$j &amp;gt; $i;$j--) { if($arr[$j] &amp;lt; $arr[$j-1]) { $tmp = $arr[$j]; $arr[$j ] = $arr[$j - 1]; $arr[$j - 1] =</description>
+    </item>
+    
+    <item>
+      <title>安装php sniffer</title>
+      <link>https://laurel-he.github.io/php/phppsr/</link>
+      <pubDate>Sun, 07 Apr 2019 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/php/phppsr/</guid>
+      <description>安装pear（参考文档：https://www.cnblogs.com/huangbx/p/php_codesniffer.html） 从以下网址：http://pear.php.net/go-pear</description>
+    </item>
+    
+    <item>
       <title>mysql必知必会学习笔记-2-检索数据</title>
       <link>https://laurel-he.github.io/database/mysql/mysqlmustknown_02/</link>
       <pubDate>Wed, 03 Apr 2019 18:27:44 +0000</pubDate>
@@ -629,6 +701,87 @@
     </item>
     
     <item>
+      <title>一些php知识</title>
+      <link>https://laurel-he.github.io/php/laurel/</link>
+      <pubDate>Thu, 28 Mar 2019 14:00:40 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/php/laurel/</guid>
+      <description>argc和argv $argv代表传递的参数,$argc代表参数个数（相对路径+传的参数） 示例 &amp;lt;?php echo $argv[0]; echo &amp;#34;\n&amp;#34;; var_dump($argv[1]); echo &amp;#34;\n&amp;#34;; var_dump(intval($argv[2])); echo &amp;#34;\n&amp;#34;; echo $argv[3]; echo &amp;#34;\n&amp;#34;; echo $argc;</description>
+    </item>
+    
+    <item>
+      <title>python数据结构之集合</title>
+      <link>https://laurel-he.github.io/python/pythonset/</link>
+      <pubDate>Fri, 15 Mar 2019 13:52:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/python/pythonset/</guid>
+      <description>介绍 集合是一个无序的不重复的元素序列 操作 创建集合： {}或set()，创建一个空集合必须用set()，{}创建空字典(set(&amp;ldquo;asdgf&amp;rdquo;)会创建[&amp;lsquo;a&amp;rsquo</description>
+    </item>
+    
+    <item>
+      <title>python数据结构之列表</title>
+      <link>https://laurel-he.github.io/python/pythonlist/</link>
+      <pubDate>Fri, 15 Mar 2019 13:47:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/python/pythonlist/</guid>
+      <description>介绍 可以作为一个方括号内的逗号分隔值出现，列表的数据项不需要具有相同的类型 操作 （1）取值： list[0], list[0:3] （list[-2]代表读取列表中倒数第二个元素） （2）更新列表 添加元素：append&amp;ndash;&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>python数据结构</title>
+      <link>https://laurel-he.github.io/python/pythonstructure/</link>
+      <pubDate>Fri, 15 Mar 2019 09:47:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/python/pythonstructure/</guid>
+      <description>列表(List) python list deque双向队列 python deque 集合 python set</description>
+    </item>
+    
+    <item>
+      <title>python数据结构之双向队列</title>
+      <link>https://laurel-he.github.io/python/pythondeque/</link>
+      <pubDate>Fri, 15 Mar 2019 09:47:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/python/pythondeque/</guid>
+      <description>介绍 两端都可以操作的序列 基本操作 创建： import collections d = collections.deque() 往右边添加一个元素： d.append(1) d.append(&amp;lsquo;adc&amp;rsquo;) 往左添加一个元素： d.appendleft(3) 清空队列： d.clear 浅拷贝： d1 = d.copy() 返回指定元素的出现次数： d.count(1) 从队列右边扩展一个列表的元素： d.extend([3,4,5]) 从队列左边扩展一个列表的</description>
+    </item>
+    
+    <item>
+      <title>补充python基础知识</title>
+      <link>https://laurel-he.github.io/python/python_base/</link>
+      <pubDate>Thu, 14 Mar 2019 15:26:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/python/python_base/</guid>
+      <description>##python运算符 幂 返回x的y次幂 10**20 取整除 //:返回商的整数部分，向下取整</description>
+    </item>
+    
+    <item>
+      <title>python Generators</title>
+      <link>https://laurel-he.github.io/python/generators/</link>
+      <pubDate>Thu, 14 Mar 2019 14:41:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/python/generators/</guid>
+      <description>##迭代器Iterator 迭代器是一个可以让程序员遍历一个容器的对象，一个迭代器在遍历并读取一个容器的数据元素时不会执行一个迭代。 迭代器三个部分 可迭代对象 迭代器 迭代 可迭代对象 python中的任意对象，</description>
+    </item>
+    
+    <item>
+      <title>python debugger</title>
+      <link>https://laurel-he.github.io/python/python_debugger/</link>
+      <pubDate>Thu, 14 Mar 2019 11:48:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/python/python_debugger/</guid>
+      <description>##准备 来源 http://python.jobbole.com/81184/ 初始代码 import sys def add(num1=0, num2=0): return int(num1) + int(num2) def sub(num1=0, num2=0): return int(num1) - int(num2) def main(): #Assuming our inputs are valid numbers print sys.argv addition = add(sys.argv[1], sys.argv[2]) print addition subtraction = sub(sys.argv[1], sys.argv[2]) print subtraction if __name__ == &amp;#39;__main__&amp;#39;: main() 基础用法 import pdb pdb.set_trace() //设置断点 在程序中添加断点 import pdb import sys def add(num1=0, num2=0): return int(num1) + int(num2) def sub(num1=0, num2=0): return int(num1) - int(num2) def main(): #Assuming our inputs are valid</description>
+    </item>
+    
+    <item>
+      <title>python进阶</title>
+      <link>https://laurel-he.github.io/python/python/</link>
+      <pubDate>Thu, 14 Mar 2019 10:36:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/python/python/</guid>
+      <description>*args和**kwargs *args *args和**kwargs主要用于函数定义，可以将不定数量的参数传递给一个函数 举例 输入： def test_var_args(f_arg, *argv): print(&amp;#34;first normal arg:&amp;#34;, f_arg) for arg in argv: print(&amp;#34;another arg through *argv:&amp;#34;, arg) test_var_args(&amp;#39;yasoob&amp;#39;, &amp;#39;python&amp;#39;, &amp;#39;eggs&amp;#39;, &amp;#39;test&amp;#39;) 输出： first normal arg: yasoob another arg through *argv: python another arg through *argv: eggs another arg through</description>
+    </item>
+    
+    <item>
       <title>python100例学习笔记</title>
       <link>https://laurel-he.github.io/python/20190202/</link>
       <pubDate>Sat, 02 Feb 2019 13:25:21 +0000</pubDate>
@@ -644,6 +797,15 @@
       
       <guid>https://laurel-he.github.io/php/2019_01_01/</guid>
       <description>1 strtotime() 描述 获取上个月的时间可以是date(&amp;lsquo;Y-m-d&amp;rsquo;,strtotime(&#39;-1 month&#39;));如果今天是31号而上个月没有31号，就会直接输出这个月1号； 解决办法 使用la</description>
+    </item>
+    
+    <item>
+      <title>fastadmin自定义角色组</title>
+      <link>https://laurel-he.github.io/php/test-my-site/</link>
+      <pubDate>Thu, 31 Jan 2019 17:36:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/php/test-my-site/</guid>
+      <description>之前使用fastadmin，自定义角色组，发现编辑/删除/修改等等权限可以直接权限管理中选择，然后用不同的角色登陆，会显示对应的权限按钮。此时有一个新的需求就是增加审核和批量审核，并且也增加对应的权限</description>
     </item>
     
   </channel>

@@ -2,7 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://laurel-he.github.io/year/2022/</loc>
+    <lastmod>2022-06-28T19:27:44+00:00</lastmod>
+  </url><url>
     <loc>https://laurel-he.github.io/categories/</loc>
+    <lastmod>2022-06-28T19:27:44+00:00</lastmod>
+  </url><url>
+    <loc>https://laurel-he.github.io/series/</loc>
     <lastmod>2022-06-28T19:27:44+00:00</lastmod>
   </url><url>
     <loc>https://laurel-he.github.io/tags/</loc>
@@ -11,7 +17,13 @@
     <loc>https://laurel-he.github.io/</loc>
     <lastmod>2022-06-28T19:27:44+00:00</lastmod>
   </url><url>
+    <loc>https://laurel-he.github.io/year/</loc>
+    <lastmod>2022-06-28T19:27:44+00:00</lastmod>
+  </url><url>
     <loc>https://laurel-he.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97/</loc>
+    <lastmod>2022-06-28T19:27:44+00:00</lastmod>
+  </url><url>
+    <loc>https://laurel-he.github.io/series/%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2022-06-28T19:27:44+00:00</lastmod>
   </url><url>
     <loc>https://laurel-he.github.io/tags/%E5%AD%A6%E4%B9%A0/</loc>
@@ -41,7 +53,13 @@
     <loc>https://laurel-he.github.io/database/learn/01basic/</loc>
     <lastmod>2022-06-20T18:27:44+00:00</lastmod>
   </url><url>
+    <loc>https://laurel-he.github.io/series/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
+    <lastmod>2022-06-20T18:27:44+00:00</lastmod>
+  </url><url>
     <loc>https://laurel-he.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
+    <lastmod>2022-06-20T18:27:44+00:00</lastmod>
+  </url><url>
+    <loc>https://laurel-he.github.io/series/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
     <lastmod>2022-06-20T18:27:44+00:00</lastmod>
   </url><url>
     <loc>https://laurel-he.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
@@ -56,11 +74,23 @@
     <loc>https://laurel-he.github.io/datastructure/%E7%94%B5%E5%AD%90%E7%A7%91%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/03_linearlist/</loc>
     <lastmod>2022-06-20T18:27:44+00:00</lastmod>
   </url><url>
+    <loc>https://laurel-he.github.io/series/%E8%80%83%E7%A0%94/</loc>
+    <lastmod>2022-06-20T18:27:44+00:00</lastmod>
+  </url><url>
     <loc>https://laurel-he.github.io/categories/%E9%AB%98%E6%95%B0/</loc>
     <lastmod>2022-06-20T18:27:44+00:00</lastmod>
   </url><url>
     <loc>https://laurel-he.github.io/%E9%AB%98%E6%95%B0/</loc>
     <lastmod>2022-06-20T18:27:44+00:00</lastmod>
+  </url><url>
+    <loc>https://laurel-he.github.io/datastructure/btree/</loc>
+    <lastmod>2022-06-01T18:27:44+00:00</lastmod>
+  </url><url>
+    <loc>https://laurel-he.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
+    <lastmod>2022-06-01T18:27:44+00:00</lastmod>
+  </url><url>
+    <loc>https://laurel-he.github.io/categories/%E6%A0%91/</loc>
+    <lastmod>2022-06-01T18:27:44+00:00</lastmod>
   </url><url>
     <loc>https://laurel-he.github.io/categories/mongodb/</loc>
     <lastmod>2022-05-05T20:27:44+00:00</lastmod>
@@ -77,10 +107,16 @@
     <loc>https://laurel-he.github.io/database/mongo/lanqiao_mongo_base/04highlevelindex/</loc>
     <lastmod>2022-05-05T20:27:44+00:00</lastmod>
   </url><url>
+    <loc>https://laurel-he.github.io/year/2019/</loc>
+    <lastmod>2022-04-27T18:27:44+00:00</lastmod>
+  </url><url>
     <loc>https://laurel-he.github.io/tools/httpie/</loc>
     <lastmod>2022-04-27T18:27:44+00:00</lastmod>
   </url><url>
     <loc>https://laurel-he.github.io/tools/</loc>
+    <lastmod>2022-04-27T18:27:44+00:00</lastmod>
+  </url><url>
+    <loc>https://laurel-he.github.io/series/%E5%9F%BA%E7%A1%80%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2022-04-27T18:27:44+00:00</lastmod>
   </url><url>
     <loc>https://laurel-he.github.io/tags/%E5%B7%A5%E5%85%B7/</loc>
@@ -93,6 +129,9 @@
     <lastmod>2022-04-27T13:47:00+00:00</lastmod>
   </url><url>
     <loc>https://laurel-he.github.io/tags/%E4%B9%A6%E7%B1%8D/</loc>
+    <lastmod>2022-04-27T13:47:00+00:00</lastmod>
+  </url><url>
+    <loc>https://laurel-he.github.io/series/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2022-04-27T13:47:00+00:00</lastmod>
   </url><url>
     <loc>https://laurel-he.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%98%AF%E6%80%8E%E6%A0%B7%E8%B7%91%E8%B5%B7%E6%9D%A5%E7%9A%84/</loc>
@@ -119,8 +158,14 @@
     <loc>https://laurel-he.github.io/tags/%E8%AF%AD%E8%A8%80/</loc>
     <lastmod>2022-04-25T13:47:00+00:00</lastmod>
   </url><url>
+    <loc>https://laurel-he.github.io/series/%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2022-04-25T13:47:00+00:00</lastmod>
+  </url><url>
     <loc>https://laurel-he.github.io/go/test/basictest/</loc>
     <lastmod>2022-04-24T13:47:00+00:00</lastmod>
+  </url><url>
+    <loc>https://laurel-he.github.io/series/go/</loc>
+    <lastmod>2022-03-17T13:47:00+00:00</lastmod>
   </url><url>
     <loc>https://laurel-he.github.io/categories/grpc/</loc>
     <lastmod>2022-03-17T13:47:00+00:00</lastmod>
@@ -140,8 +185,14 @@
     <loc>https://laurel-he.github.io/categories/%E5%85%B6%E4%BB%96/</loc>
     <lastmod>2022-03-08T19:47:00+00:00</lastmod>
   </url><url>
+    <loc>https://laurel-he.github.io/series/%E5%B7%A5%E4%BD%9C%E6%97%A0%E5%85%B3/</loc>
+    <lastmod>2022-03-08T19:47:00+00:00</lastmod>
+  </url><url>
     <loc>https://laurel-he.github.io/other/rubikscube/</loc>
     <lastmod>2022-03-08T19:47:00+00:00</lastmod>
+  </url><url>
+    <loc>https://laurel-he.github.io/year/2021/</loc>
+    <lastmod>2022-03-08T13:47:00+00:00</lastmod>
   </url><url>
     <loc>https://laurel-he.github.io/go/basic/thegoprograming/mark/</loc>
     <lastmod>2022-03-08T13:47:00+00:00</lastmod>
@@ -155,13 +206,31 @@
     <loc>https://laurel-he.github.io/go/basic/thegoprograming/02/</loc>
     <lastmod>2022-03-07T13:47:00+00:00</lastmod>
   </url><url>
+    <loc>https://laurel-he.github.io/interview/</loc>
+    <lastmod>2021-12-10T12:34:10+00:00</lastmod>
+  </url><url>
+    <loc>https://laurel-he.github.io/go/webassembly_go_1/</loc>
+    <lastmod>2021-12-10T12:34:10+00:00</lastmod>
+  </url><url>
+    <loc>https://laurel-he.github.io/series/%E5%8D%8F%E8%AE%AE/</loc>
+    <lastmod>2021-12-10T12:34:10+00:00</lastmod>
+  </url><url>
+    <loc>https://laurel-he.github.io/categories/%E5%8D%8F%E8%AE%AE/</loc>
+    <lastmod>2021-12-10T12:34:10+00:00</lastmod>
+  </url><url>
+    <loc>https://laurel-he.github.io/tags/%E5%9F%BA%E7%A1%80/</loc>
+    <lastmod>2021-12-10T12:34:10+00:00</lastmod>
+  </url><url>
+    <loc>https://laurel-he.github.io/interview/tcpip/</loc>
+    <lastmod>2021-12-10T12:34:10+00:00</lastmod>
+  </url><url>
     <loc>https://laurel-he.github.io/designpattern/</loc>
     <lastmod>2021-11-28T17:40:10+00:00</lastmod>
   </url><url>
     <loc>https://laurel-he.github.io/operatingsystem/</loc>
     <lastmod>2021-11-28T17:40:10+00:00</lastmod>
   </url><url>
-    <loc>https://laurel-he.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</loc>
+    <loc>https://laurel-he.github.io/series/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</loc>
     <lastmod>2021-11-28T17:40:10+00:00</lastmod>
   </url><url>
     <loc>https://laurel-he.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</loc>
@@ -176,10 +245,13 @@
     <loc>https://laurel-he.github.io/operatingsystem/learnopesys/guide/</loc>
     <lastmod>2021-11-28T17:40:10+00:00</lastmod>
   </url><url>
+    <loc>https://laurel-he.github.io/series/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
+    <lastmod>2021-11-28T17:40:10+00:00</lastmod>
+  </url><url>
     <loc>https://laurel-he.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
     <lastmod>2021-11-28T17:40:10+00:00</lastmod>
   </url><url>
-    <loc>https://laurel-he.github.io/designpattern/basic/</loc>
+    <loc>https://laurel-he.github.io/designpattern/learnbasic/</loc>
     <lastmod>2021-11-28T17:40:10+00:00</lastmod>
   </url><url>
     <loc>https://laurel-he.github.io/go/summary/</loc>
@@ -188,23 +260,23 @@
     <loc>https://laurel-he.github.io/categories/elasticsearch/</loc>
     <lastmod>2021-11-20T18:27:44+00:00</lastmod>
   </url><url>
+    <loc>https://laurel-he.github.io/series/php/</loc>
+    <lastmod>2021-11-20T18:27:44+00:00</lastmod>
+  </url><url>
     <loc>https://laurel-he.github.io/php/</loc>
     <lastmod>2021-11-20T18:27:44+00:00</lastmod>
   </url><url>
-    <loc>https://laurel-he.github.io/database/es/basic/</loc>
+    <loc>https://laurel-he.github.io/database/es/md_basic/</loc>
     <lastmod>2021-11-20T18:27:44+00:00</lastmod>
   </url><url>
     <loc>https://laurel-he.github.io/categories/swoole/</loc>
     <lastmod>2021-11-20T18:27:44+00:00</lastmod>
   </url><url>
-    <loc>https://laurel-he.github.io/php/swoole/basic/</loc>
+    <loc>https://laurel-he.github.io/php/swoole/swoolebasic/</loc>
     <lastmod>2021-11-20T18:27:44+00:00</lastmod>
   </url><url>
     <loc>https://laurel-he.github.io/tags/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/</loc>
     <lastmod>2021-11-20T18:27:44+00:00</lastmod>
-  </url><url>
-    <loc>https://laurel-he.github.io/datastructure/route/01_introduce/</loc>
-    <lastmod>2021-10-02T18:27:44+00:00</lastmod>
   </url><url>
     <loc>https://laurel-he.github.io/datastructure/base/</loc>
     <lastmod>2021-10-02T18:27:44+00:00</lastmod>
@@ -245,7 +317,10 @@
     <loc>https://laurel-he.github.io/acm/</loc>
     <lastmod>2021-09-03T19:10:10+00:00</lastmod>
   </url><url>
-    <loc>https://laurel-he.github.io/categories/leetcode%E5%88%B7%E9%A2%98/</loc>
+    <loc>https://laurel-he.github.io/series/leetcode%E5%88%B7%E9%A2%98/</loc>
+    <lastmod>2021-09-03T19:10:10+00:00</lastmod>
+  </url><url>
+    <loc>https://laurel-he.github.io/categories/%E5%88%B7%E9%A2%98/</loc>
     <lastmod>2021-09-03T19:10:10+00:00</lastmod>
   </url><url>
     <loc>https://laurel-he.github.io/acm/leetcode/118pascalstriangle/</loc>
@@ -257,14 +332,8 @@
     <loc>https://laurel-he.github.io/categories/%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2021-09-03T12:10:10+00:00</lastmod>
   </url><url>
-    <loc>https://laurel-he.github.io/datastructure/btree/</loc>
-    <lastmod>2021-09-01T18:27:44+00:00</lastmod>
-  </url><url>
-    <loc>https://laurel-he.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
-    <lastmod>2021-09-01T18:27:44+00:00</lastmod>
-  </url><url>
-    <loc>https://laurel-he.github.io/categories/%E6%A0%91/</loc>
-    <lastmod>2021-09-01T18:27:44+00:00</lastmod>
+    <loc>https://laurel-he.github.io/series/%E7%AE%97%E6%B3%95%E5%BA%94%E7%94%A8/</loc>
+    <lastmod>2021-09-03T12:10:10+00:00</lastmod>
   </url><url>
     <loc>https://laurel-he.github.io/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/</loc>
     <lastmod>2021-09-01T18:27:44+00:00</lastmod>
@@ -284,7 +353,7 @@
     <loc>https://laurel-he.github.io/acm/leetcode/121buyshares/</loc>
     <lastmod>2021-08-31T16:10:10+00:00</lastmod>
   </url><url>
-    <loc>https://laurel-he.github.io/go/basic/basic/</loc>
+    <loc>https://laurel-he.github.io/go/basic/gobasic/</loc>
     <lastmod>2021-08-27T13:47:00+00:00</lastmod>
   </url><url>
     <loc>https://laurel-he.github.io/go/basic/basicuse/</loc>
@@ -296,11 +365,20 @@
     <loc>https://laurel-he.github.io/acm/%E7%89%9B%E5%AE%A2%E7%BD%91/mysql/having_group/</loc>
     <lastmod>2021-08-27T13:47:00+00:00</lastmod>
   </url><url>
-    <loc>https://laurel-he.github.io/categories/%E5%88%B7%E9%A2%98/</loc>
-    <lastmod>2021-08-27T13:47:00+00:00</lastmod>
-  </url><url>
     <loc>https://laurel-he.github.io/post/hugo/</loc>
     <lastmod>2021-08-12T16:10:10+00:00</lastmod>
+  </url><url>
+    <loc>https://laurel-he.github.io/queue/kafka/</loc>
+    <lastmod>2021-07-27T09:35:00+08:00</lastmod>
+  </url><url>
+    <loc>https://laurel-he.github.io/queue/</loc>
+    <lastmod>2021-07-27T09:35:00+08:00</lastmod>
+  </url><url>
+    <loc>https://laurel-he.github.io/categories/%E9%98%9F%E5%88%97/</loc>
+    <lastmod>2021-07-27T09:35:00+08:00</lastmod>
+  </url><url>
+    <loc>https://laurel-he.github.io/year/2020/</loc>
+    <lastmod>2021-07-20T16:34:10+00:00</lastmod>
   </url><url>
     <loc>https://laurel-he.github.io/operatingsystem/opratingsystem_01/</loc>
     <lastmod>2021-07-20T16:34:10+00:00</lastmod>
@@ -332,6 +410,9 @@
     <loc>https://laurel-he.github.io/database/mysql/mysqllock/</loc>
     <lastmod>2021-03-28T14:03:27+00:00</lastmod>
   </url><url>
+    <loc>https://laurel-he.github.io/categories/%E7%8E%AF%E5%A2%83/</loc>
+    <lastmod>2021-03-28T14:03:27+00:00</lastmod>
+  </url><url>
     <loc>https://laurel-he.github.io/datastructure/%E8%A5%BF%E5%AE%89%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%A6%E6%85%95%E8%AF%BE/01%E7%BB%AA%E8%AE%BA/</loc>
     <lastmod>2021-01-19T16:34:10+00:00</lastmod>
   </url><url>
@@ -339,9 +420,6 @@
     <lastmod>2020-09-03T16:10:10+00:00</lastmod>
   </url><url>
     <loc>https://laurel-he.github.io/acm/leetcode/566remouldmatrix/</loc>
-    <lastmod>2020-09-03T16:10:10+00:00</lastmod>
-  </url><url>
-    <loc>https://laurel-he.github.io/post/total/</loc>
     <lastmod>2020-09-03T16:10:10+00:00</lastmod>
   </url><url>
     <loc>https://laurel-he.github.io/acm/leetcode/350arrat/</loc>
@@ -386,9 +464,6 @@
     <loc>https://laurel-he.github.io/php/multiarr/</loc>
     <lastmod>2020-04-16T18:27:44+00:00</lastmod>
   </url><url>
-    <loc>https://laurel-he.github.io/tags/%E5%B7%A5%E4%BD%9C%E7%BB%8F%E9%AA%8C/</loc>
-    <lastmod>2020-04-16T18:27:44+00:00</lastmod>
-  </url><url>
     <loc>https://laurel-he.github.io/operatingsystem/linux/awk/</loc>
     <lastmod>2020-02-27T18:00:00+00:00</lastmod>
   </url><url>
@@ -407,6 +482,9 @@
     <loc>https://laurel-he.github.io/categories/%E6%96%87%E4%BB%B6%E7%9B%B8%E5%85%B3/</loc>
     <lastmod>2020-02-27T18:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://laurel-he.github.io/series/%E4%BB%A3%E7%A0%81%E6%94%B6%E9%9B%86/</loc>
+    <lastmod>2020-02-25T20:10:10+00:00</lastmod>
+  </url><url>
     <loc>https://laurel-he.github.io/categories/%E6%9C%89%E7%94%A8%E4%BB%A3%E7%A0%81%E6%AE%B5%E6%94%B6%E9%9B%86/</loc>
     <lastmod>2020-02-25T20:10:10+00:00</lastmod>
   </url><url>
@@ -422,6 +500,9 @@
     <loc>https://laurel-he.github.io/tags/tips/</loc>
     <lastmod>2020-01-16T19:34:10+00:00</lastmod>
   </url><url>
+    <loc>https://laurel-he.github.io/series/%E5%89%8D%E7%AB%AF/</loc>
+    <lastmod>2020-01-16T19:34:10+00:00</lastmod>
+  </url><url>
     <loc>https://laurel-he.github.io/categories/%E5%B7%A5%E4%BD%9C%E7%BB%8F%E9%AA%8C/</loc>
     <lastmod>2020-01-16T19:34:10+00:00</lastmod>
   </url><url>
@@ -430,12 +511,6 @@
   </url><url>
     <loc>https://laurel-he.github.io/php/usefulcode1/</loc>
     <lastmod>2020-01-16T12:34:10+00:00</lastmod>
-  </url><url>
-    <loc>https://laurel-he.github.io/tags/go/</loc>
-    <lastmod>2019-12-10T12:34:10+00:00</lastmod>
-  </url><url>
-    <loc>https://laurel-he.github.io/go/webassembly_go_1/</loc>
-    <lastmod>2019-12-10T12:34:10+00:00</lastmod>
   </url><url>
     <loc>https://laurel-he.github.io/tags/%E6%B5%8B%E8%AF%95/</loc>
     <lastmod>2019-12-10T12:34:10+00:00</lastmod>
@@ -512,7 +587,7 @@
     <loc>https://laurel-he.github.io/corc&#43;&#43;/c/02%E8%AE%A1%E7%AE%97/</loc>
     <lastmod>2019-09-04T16:34:10+00:00</lastmod>
   </url><url>
-    <loc>https://laurel-he.github.io/categories/%E5%B7%A5%E4%BD%9C/</loc>
+    <loc>https://laurel-he.github.io/categories/%E5%AE%9E%E4%BE%8B/</loc>
     <lastmod>2019-08-15T10:27:44+00:00</lastmod>
   </url><url>
     <loc>https://laurel-he.github.io/frontend/json/</loc>
@@ -548,10 +623,13 @@
     <loc>https://laurel-he.github.io/designpattern/phpallpattern/abstractfactory/</loc>
     <lastmod>2019-07-22T17:40:10+00:00</lastmod>
   </url><url>
-    <loc>https://laurel-he.github.io/tags/demo/</loc>
+    <loc>https://laurel-he.github.io/frontend/demo_01/</loc>
     <lastmod>2019-07-18T09:37:10+00:00</lastmod>
   </url><url>
-    <loc>https://laurel-he.github.io/frontend/demo_01/</loc>
+    <loc>https://laurel-he.github.io/tags/%E5%89%8D%E7%AB%AF/</loc>
+    <lastmod>2019-07-18T09:37:10+00:00</lastmod>
+  </url><url>
+    <loc>https://laurel-he.github.io/tags/%E5%AE%9E%E4%BE%8B/</loc>
     <lastmod>2019-07-18T09:37:10+00:00</lastmod>
   </url><url>
     <loc>https://laurel-he.github.io/frontend/react/react_02/</loc>
@@ -560,7 +638,7 @@
     <loc>https://laurel-he.github.io/frontend/react/react_01/</loc>
     <lastmod>2019-07-08T09:37:10+00:00</lastmod>
   </url><url>
-    <loc>https://laurel-he.github.io/designpattern/others/basic/</loc>
+    <loc>https://laurel-he.github.io/designpattern/others/designbasic/</loc>
     <lastmod>2019-07-07T17:40:10+00:00</lastmod>
   </url><url>
     <loc>https://laurel-he.github.io/tags/%E5%87%8F%E8%82%A5/</loc>
@@ -579,6 +657,12 @@
     <lastmod>2019-05-23T11:50:00+00:00</lastmod>
   </url><url>
     <loc>https://laurel-he.github.io/post/lanp/</loc>
+    <lastmod>2019-04-28T14:00:40+00:00</lastmod>
+  </url><url>
+    <loc>https://laurel-he.github.io/tags/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</loc>
+    <lastmod>2019-04-28T14:00:40+00:00</lastmod>
+  </url><url>
+    <loc>https://laurel-he.github.io/categories/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</loc>
     <lastmod>2019-04-28T14:00:40+00:00</lastmod>
   </url><url>
     <loc>https://laurel-he.github.io/post/git/</loc>
@@ -686,7 +770,7 @@
     <loc>https://laurel-he.github.io/categories/hbase/</loc>
     <lastmod>2019-02-28T11:03:10+00:00</lastmod>
   </url><url>
-    <loc>https://laurel-he.github.io/post/hbase_01/</loc>
+    <loc>https://laurel-he.github.io/database/hbase/hbase_01/</loc>
     <lastmod>2019-02-28T11:03:10+00:00</lastmod>
   </url><url>
     <loc>https://laurel-he.github.io/tags/%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</loc>
@@ -708,11 +792,7 @@
   </url><url>
     <loc>https://laurel-he.github.io/database/basic/</loc>
   </url><url>
-    <loc>https://laurel-he.github.io/database/mysql/slow/</loc>
-  </url><url>
     <loc>https://laurel-he.github.io/database/redis/basic/</loc>
-  </url><url>
-    <loc>https://laurel-he.github.io/designpattern/phpallpattern/02/</loc>
   </url><url>
     <loc>https://laurel-he.github.io/designpattern/type_build/</loc>
   </url><url>
@@ -725,8 +805,6 @@
     <loc>https://laurel-he.github.io/go/test/%E5%89%8D%E7%AB%AF%E6%A0%A1%E9%AA%8C%E7%9B%B8%E5%85%B3/</loc>
   </url><url>
     <loc>https://laurel-he.github.io/go/test/%E7%94%A8%E4%BE%8B/</loc>
-  </url><url>
-    <loc>https://laurel-he.github.io/interview/tcpip/</loc>
   </url><url>
     <loc>https://laurel-he.github.io/note/profile/</loc>
   </url><url>
@@ -771,8 +849,6 @@
     <loc>https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/docker/docker/</loc>
   </url><url>
     <loc>https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/docker/wsl_docker/</loc>
-  </url><url>
-    <loc>https://laurel-he.github.io/interview/</loc>
   </url><url>
     <loc>https://laurel-he.github.io/note/</loc>
   </url><url>

@@ -62,6 +62,15 @@
     </item>
     
     <item>
+      <title>python Generators</title>
+      <link>https://laurel-he.github.io/python/generators/</link>
+      <pubDate>Thu, 14 Mar 2019 14:41:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/python/generators/</guid>
+      <description>##迭代器Iterator 迭代器是一个可以让程序员遍历一个容器的对象，一个迭代器在遍历并读取一个容器的数据元素时不会执行一个迭代。 迭代器三个部分 可迭代对象 迭代器 迭代 可迭代对象 python中的任意对象，</description>
+    </item>
+    
+    <item>
       <title>python debugger</title>
       <link>https://laurel-he.github.io/python/python_debugger/</link>
       <pubDate>Thu, 14 Mar 2019 11:48:10 +0000</pubDate>

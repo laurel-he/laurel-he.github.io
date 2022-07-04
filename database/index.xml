@@ -54,10 +54,10 @@
     
     <item>
       <title>php下es基本使用</title>
-      <link>https://laurel-he.github.io/database/es/basic/</link>
+      <link>https://laurel-he.github.io/database/es/md_basic/</link>
       <pubDate>Sat, 20 Nov 2021 18:27:44 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/database/es/basic/</guid>
+      <guid>https://laurel-he.github.io/database/es/md_basic/</guid>
       <description>本文参考文档: es7.3文档 全文搜索引擎 Elasticsearch 入门教程 基础介绍 全文搜索属于最常见的需求，开源的 Elasticsearch是目前全文搜索引擎的首选。它可以快速地储存、搜索和分析海量数据。 安装 不同环境下安装方</description>
     </item>
     
@@ -152,21 +152,21 @@
     </item>
     
     <item>
+      <title>Hbase基础命令</title>
+      <link>https://laurel-he.github.io/database/hbase/hbase_01/</link>
+      <pubDate>Thu, 28 Feb 2019 11:03:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/database/hbase/hbase_01/</guid>
+      <description>Hbase基础命令 启动和停止Hbase 启动 hbase/bin ./start-hbase.sh 关闭 hbase/bin ./stop-hbase.sh 使用Hbase 连接Hbase bin/hbase shell 创建表 create &amp;lsquo;test&amp;rsquo; （创建表需要添加列簇） create &amp;lsquo;表名&amp;rsquo; &amp;lsquo;列簇名1&amp;rsquo; &amp;lsquo</description>
+    </item>
+    
+    <item>
       <title></title>
       <link>https://laurel-he.github.io/database/basic/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/database/basic/</guid>
       <description>分布式数据库中间件（比如 ShardingSphere）对关系型单机数据库进行分库分表和读写分离或者直接使用 分布式数据库。</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://laurel-he.github.io/database/mysql/slow/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/database/mysql/slow/</guid>
-      <description>发送商品过期消息mysql慢查询解决方案 背景 方案一：先限制数据量再查询 发消息只需要七天前-六天前的数据，可以先根据时间排序，然后获取到七天前的现在以及六天前的现在的最近的id，只对id在这个范围内的数</description>
     </item>
     
     <item>

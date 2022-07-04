@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>数据库 on xiaoJiao</title>
+    <link>https://laurel-he.github.io/series/%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
+    <description>Recent content in 数据库 on xiaoJiao</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 20 Jun 2022 18:27:44 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/series/%E6%95%B0%E6%8D%AE%E5%BA%93/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>基础</title>
+      <link>https://laurel-he.github.io/database/learn/01basic/</link>
+      <pubDate>Mon, 20 Jun 2022 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/database/learn/01basic/</guid>
+      <description>模式、外模式、内模式 模式 数据抽象成E-R图：即逻辑层，逻辑层的数据模式称为模式 外模式 视图层从某个或某类用户角度出发，只描述与其相关的部分，视图层的数据模式称为外模式 内模式 物理层描述数据实际上如何在磁盘</description>
+    </item>
+    
+    <item>
+      <title>蓝桥教程-MongoDB基础教程</title>
+      <link>https://laurel-he.github.io/database/mongo/lanqiao_mongo_base/01basic/</link>
+      <pubDate>Thu, 05 May 2022 20:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/database/mongo/lanqiao_mongo_base/01basic/</guid>
+      <description>本系列基于对的学习笔记 第一章：数据库和集合基本操作 简介 MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富、最像关系数据库的。 在 MongoDB 中，一个数据库包含多个集合，类似于 MySQL 中一个数据</description>
+    </item>
+    
+    <item>
+      <title>蓝桥教程-MongoDB基础教程-文档基本操作</title>
+      <link>https://laurel-he.github.io/database/mongo/lanqiao_mongo_base/02operation/</link>
+      <pubDate>Thu, 05 May 2022 20:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/database/mongo/lanqiao_mongo_base/02operation/</guid>
+      <description>本系列基于对的学习笔记 第二章：文档基本操作 数据库操作 启动 启动 MongoDB 服务，因为 MongoDB 并不随系统一起启动， 可能以下命令运行后会等一小段的时间才会启动完毕 sudo service mongodb start 退出使用exit命令 删除数据库 &amp;gt; show dbs # 显示当前系统中</description>
+    </item>
+    
+    <item>
+      <title>蓝桥教程-MongoDB基础教程-查询、索引与聚合</title>
+      <link>https://laurel-he.github.io/database/mongo/lanqiao_mongo_base/03search/</link>
+      <pubDate>Thu, 05 May 2022 20:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/database/mongo/lanqiao_mongo_base/03search/</guid>
+      <description>本系列基于对的学习笔记 查询 条件操作符 大于小于条件操作符 如第一章所说，有$gt,$lt,$gte,$lte四种，分别表示大于，小于，大于等于，小于等于 type条件操作符 语法 $type:[key] 可选key及其含义 key 含义（括</description>
+    </item>
+    
+    <item>
+      <title>蓝桥教程-MongoDB基础教程-高级查询与索引</title>
+      <link>https://laurel-he.github.io/database/mongo/lanqiao_mongo_base/04highlevelindex/</link>
+      <pubDate>Thu, 05 May 2022 20:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/database/mongo/lanqiao_mongo_base/04highlevelindex/</guid>
+      <description>本系列基于对的学习笔记 索引查询 覆盖索引查询 概念 所有的查询字段都是索引的一部分；所有的查询返回字段在同一个索引中。 由于索引存在于 RAM 中，因而从索引中获取数据要比扫描文档更快。 示例 例如有一个索引： &amp;gt; db.users.ensureIndex({gender:1,user_name:1}) 该索引</description>
+    </item>
+    
+    <item>
+      <title>php下es基本使用</title>
+      <link>https://laurel-he.github.io/database/es/md_basic/</link>
+      <pubDate>Sat, 20 Nov 2021 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/database/es/md_basic/</guid>
+      <description>本文参考文档: es7.3文档 全文搜索引擎 Elasticsearch 入门教程 基础介绍 全文搜索属于最常见的需求，开源的 Elasticsearch是目前全文搜索引擎的首选。它可以快速地储存、搜索和分析海量数据。 安装 不同环境下安装方</description>
+    </item>
+    
+    <item>
+      <title>mql数据导入导出</title>
+      <link>https://laurel-he.github.io/database/mysql/%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA/</link>
+      <pubDate>Sun, 28 Mar 2021 14:03:27 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/database/mysql/%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA/</guid>
+      <description>mysqldump mysqldump -u 用户名 -p [&amp;ndash;opt] DATABASENAME [Table] &amp;gt;导出SQL文件名 source</description>
+    </item>
+    
+    <item>
+      <title>mysql引擎</title>
+      <link>https://laurel-he.github.io/database/mysql/mysqlengine/</link>
+      <pubDate>Sun, 28 Mar 2021 14:03:27 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/database/mysql/mysqlengine/</guid>
+      <description>参考文档： Mysql四种常见数据库引擎 MySQL引擎是什么 数据库存储引擎是数据库底层软件组织，数据库管理系统（DBMS）使用数据引擎进行创建、查询、更新和删除数据。不同的存储引擎提供不同的存储机制、索</description>
+    </item>
+    
+    <item>
+      <title>mysql锁</title>
+      <link>https://laurel-he.github.io/database/mysql/mysqllock/</link>
+      <pubDate>Sun, 28 Mar 2021 14:03:27 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/database/mysql/mysqllock/</guid>
+      <description>为什么需要加锁？</description>
+    </item>
+    
+    <item>
+      <title>mongodb学习记录</title>
+      <link>https://laurel-he.github.io/database/mongo/mongocomplex/</link>
+      <pubDate>Sun, 20 Oct 2019 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/database/mongo/mongocomplex/</guid>
+      <description>参考文档 http://www.mongoing.com/docs/reference/operator/aggregation/interface.html https://www.cnblogs.com/zhoujie/p/mongo1.html https://www.docs4dev.com/docs/zh/mongodb/v3.6/reference/tutorial-text-search-in-aggregation.html mongodb精准匹配 假设有需求如下：数据为多层级的数组，需要精准匹配到某一个层级，并进行更新或新增等操作，如何实现？ 实现方式 当Mongodb版本大于3.6.1，实现将会非常简单，因为m</description>
+    </item>
+    
+    <item>
+      <title>Mysql分库分表</title>
+      <link>https://laurel-he.github.io/database/mysql/mysqlmerge/</link>
+      <pubDate>Mon, 08 Apr 2019 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/database/mysql/mysqlmerge/</guid>
+      <description>本文参考MySQL：互联网公司常用分库分表方案汇总！ 水平分割和垂直分割 把表数据分成多少多少条，叫做水平分割 表的字段很长，把部分大字段分到另外一个表中，叫垂直分割 瓶颈 IO瓶颈 第一种：磁盘读IO瓶颈，热点</description>
+    </item>
+    
+    <item>
+      <title>mysql必知必会学习笔记-2-检索数据</title>
+      <link>https://laurel-he.github.io/database/mysql/mysqlmustknown_02/</link>
+      <pubDate>Wed, 03 Apr 2019 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/database/mysql/mysqlmustknown_02/</guid>
+      <description>select语句 -- 简单的查询 selectprod_namefromta_name;-- 查询几个列 selectprod_id,prod_namefromtb_name;-- 查询所有列，一般不建议，检索不需要的列通常会降低检索和应用程序的性能 select*fromtb_name;-- 只返回不同的值 selectdistinctxxx_idfromtb_name;-- 返回前5行 selectprod_namefromtb_namelimit5;-- 限制开始行和行数，例如从第3行开始，返回5行 selectprod_namefromtb_namelimit3,5;-- 从Mysql5</description>
+    </item>
+    
+    <item>
+      <title>mongodb使用</title>
+      <link>https://laurel-he.github.io/database/mongo/mongo1/</link>
+      <pubDate>Tue, 02 Apr 2019 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/database/mongo/mongo1/</guid>
+      <description>基础 列出所有数据库:show dbs; 列出所有表：show tables;或show collections; 查询所有数据：db.taname.find().pretty(); 查询指定列所有数据：db.tbname.find({},{</description>
+    </item>
+    
+    <item>
+      <title>mysql必知必会学习笔记-1-基础概念</title>
+      <link>https://laurel-he.github.io/database/mysql/mysqlmustknown_01/</link>
+      <pubDate>Tue, 02 Apr 2019 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/database/mysql/mysqlmustknown_01/</guid>
+      <description>基础复习 本书大概通读了一遍，内容几乎都是我知道或者学过的，但是我依然想再详细阅读一遍，并且跟着书中的示例来实际操作下，打牢基础。以下是学习笔记。 概念 定义 数据库 数据库是用来保存有组织的数据的容器 表 某种特</description>
+    </item>
+    
+    <item>
+      <title>mysql索引优化</title>
+      <link>https://laurel-he.github.io/database/mysql/mysqlindex/</link>
+      <pubDate>Tue, 02 Apr 2019 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/database/mysql/mysqlindex/</guid>
+      <description>1 查看查询语句执行效率 语法 explain select … from … [where &amp;hellip;] 示例 explain select * from news; 只查询一行数据： comment: &amp;lt;&amp;gt; (![const](../../images/mysqlIndex/const.png)) 查询多行数据：执行查询 comment: &amp;lt;&amp;gt; (![towrow](../../images/mysqlIndex/towrow.png)) 执行explain: 2 属性详解 属性 作用 id SELECT的查询序列号 select_type SELECT的查询序列号 table 显示</description>
+    </item>
+    
+    <item>
+      <title>mysql数据库维护</title>
+      <link>https://laurel-he.github.io/database/mysql/mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BB%B4%E6%8A%A4/</link>
+      <pubDate>Thu, 28 Mar 2019 14:03:27 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/database/mysql/mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BB%B4%E6%8A%A4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hbase基础命令</title>
+      <link>https://laurel-he.github.io/database/hbase/hbase_01/</link>
+      <pubDate>Thu, 28 Feb 2019 11:03:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/database/hbase/hbase_01/</guid>
+      <description>Hbase基础命令 启动和停止Hbase 启动 hbase/bin ./start-hbase.sh 关闭 hbase/bin ./stop-hbase.sh 使用Hbase 连接Hbase bin/hbase shell 创建表 create &amp;lsquo;test&amp;rsquo; （创建表需要添加列簇） create &amp;lsquo;表名&amp;rsquo; &amp;lsquo;列簇名1&amp;rsquo; &amp;lsquo</description>
+    </item>
+    
+  </channel>
+</rss>

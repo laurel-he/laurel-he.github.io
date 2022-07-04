@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>基础 on xiaoJiao</title>
+    <link>https://laurel-he.github.io/series/%E5%9F%BA%E7%A1%80/</link>
+    <description>Recent content in 基础 on xiaoJiao</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 28 Jun 2022 19:27:44 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/series/%E5%9F%BA%E7%A1%80/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>一些基本计算</title>
+      <link>https://laurel-he.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97/</link>
+      <pubDate>Tue, 28 Jun 2022 19:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97/</guid>
+      <description>按位与 按位与运算符&amp;quot;&amp;amp;&amp;ldquo;是双目运算符。其功能是参与运算的两数各对应的二进位相与。只有对应的两个二进位均为1时，结果位才为1 ，否则为0。参与运算的数以补码方式出现。 例如：9</description>
+    </item>
+    
+    <item>
+      <title>kafka学习</title>
+      <link>https://laurel-he.github.io/queue/kafka/</link>
+      <pubDate>Tue, 27 Jul 2021 09:35:00 +0800</pubDate>
+      
+      <guid>https://laurel-he.github.io/queue/kafka/</guid>
+      <description>环境安装 直接按照文档下载安装。需要注意的是： zookeeper直接使用curl或者wget下载的文件很可能会损坏，导致解压出错。 可以浏览器直接下载，下载好后通过scp传入到服务器中。 安装的时候，pyt</description>
+    </item>
+    
+    <item>
+      <title>kustomize使用文档</title>
+      <link>https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/k8s/kustomize01/</link>
+      <pubDate>Thu, 21 May 2020 11:00:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/k8s/kustomize01/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kubenetes权威指南1-2章</title>
+      <link>https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/k8s/k8s01/</link>
+      <pubDate>Sat, 16 May 2020 18:00:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/k8s/k8s01/</guid>
+      <description>kubenetes是什么 k8s是一个全新的基于容器技术的分布式架构领先方案，一个开放的开发平台，一个完备的分布式系统支撑平台 k8s重要资源对象介绍 Master 概念介绍 k8s中的Master指的是集群控制节点，在</description>
+    </item>
+    
+    <item>
+      <title>《第一本docker书》学习笔记01</title>
+      <link>https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/docker/docker01/</link>
+      <pubDate>Tue, 21 Apr 2020 21:03:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/docker/docker01/</guid>
+      <description>Docker与配置管理 docker的核心组件 （1）docker客户端和服务器，也称为docker引擎 （2）docker镜像 （3）Registry （4）Docker容器 基本使用 docker info 查看docker程序是</description>
+    </item>
+    
+    <item>
+      <title>代码整洁之道1-9章</title>
+      <link>https://laurel-he.github.io/post/cleancode/</link>
+      <pubDate>Mon, 07 Oct 2019 17:40:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/post/cleancode/</guid>
+      <description>需求描述 第一章：整洁代码 要有代码 代码呈现了需求的细节，将需求明确到机器可以执行的细节程度 糟糕的代码 不要产生糟糕的、混乱的代码，勒布朗法则：稍后等于永不 混乱的代价 花时间保持代码整洁不但有关效率，还有关生</description>
+    </item>
+    
+    <item>
+      <title>代码大全</title>
+      <link>https://laurel-he.github.io/post/codecomplate_01/</link>
+      <pubDate>Sat, 05 Oct 2019 10:40:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/post/codecomplate_01/</guid>
+      <description>前期准备 前期准备的重要性 不要立即开始写代码，要做好必要的需求分析和架构设计，写好需求文档和技术文档，防止浪费时间和精力制造错误的东西 需求核对表 针对功能需求： 1．是否详细定义了系统的全部输入，包括其来源</description>
+    </item>
+    
+    <item>
+      <title>virtualbox搭建LANP环境（ubuntu）</title>
+      <link>https://laurel-he.github.io/post/lanp/</link>
+      <pubDate>Sun, 28 Apr 2019 14:00:40 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/post/lanp/</guid>
+      <description>1 基础软件下载 virtual box ubuntu(ubuntu server) 2 安装ubuntu (1)virtualbox创建虚拟电脑 注意：最好重新设置virtualbox-&amp;gt;管理-&amp;gt;全局设定-&amp;gt;默认虚拟电脑位置 (2)启动，网络设置成网络</description>
+    </item>
+    
+    <item>
+      <title>crontab基本使用</title>
+      <link>https://laurel-he.github.io/post/crontab/</link>
+      <pubDate>Wed, 10 Apr 2019 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/post/crontab/</guid>
+      <description>1 简介 crond 是linux下用来周期性的执行某种任务或等待处理某些事件的一个守护进程，与windows下的计划任务类似，当安装完成操作系统后，默认会安装此服务 工具，并且会自动启动crond进程，crond进</description>
+    </item>
+    
+  </channel>
+</rss>

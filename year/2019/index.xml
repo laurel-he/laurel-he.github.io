@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2019 on xiaoJiao</title>
+    <link>https://laurel-he.github.io/year/2019/</link>
+    <description>Recent content in 2019 on xiaoJiao</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 27 Apr 2022 18:27:44 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/year/2019/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>httpie</title>
+      <link>https://laurel-he.github.io/tools/httpie/</link>
+      <pubDate>Wed, 27 Apr 2022 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/tools/httpie/</guid>
+      <description>介绍 无意中在公众号《Java技术栈》中看见了一篇文章 不知道这是什么东西，深入搜索了下发现可能挺好用，因此试着使用一下 安装 我使用的是wsl下的linux18.04，具体看版本使用lsb_release -</description>
+    </item>
+    
+    <item>
+      <title>pcntl</title>
+      <link>https://laurel-he.github.io/php/pcntl/</link>
+      <pubDate>Sun, 26 Sep 2021 13:47:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/php/pcntl/</guid>
+      <description>pcntl_wait:等待或返回fork的子进程状态</description>
+    </item>
+    
+    <item>
+      <title>hugo搭建github个人博客</title>
+      <link>https://laurel-he.github.io/post/hugo/</link>
+      <pubDate>Thu, 12 Aug 2021 16:10:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/post/hugo/</guid>
+      <description>之前个人博客是使用的hexo搭建的，经常会出各种bug，而且时不时的升级，导致npm 也要对应，因此放弃，使用hugo,hugo是基于go语言开发的。 步骤 下载安装 非常简单，略（如果是windows需要加</description>
+    </item>
+    
+    <item>
+      <title>php多维数组相关处理</title>
+      <link>https://laurel-he.github.io/php/multiarr/</link>
+      <pubDate>Thu, 16 Apr 2020 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/php/multiarr/</guid>
+      <description>使用场景 在工作中遇到了两次需要把不确定维度的多维数组渲染出来的情况，且还需要修改值和结构，如果使用json-patch会受到限制（需要根据不同的情况打补丁，且由于结构不一定一致，打补丁可能会错误地修改</description>
+    </item>
+    
+    <item>
+      <title>计算相关</title>
+      <link>https://laurel-he.github.io/post/codecollect/</link>
+      <pubDate>Tue, 25 Feb 2020 20:10:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/post/codecollect/</guid>
+      <description>1 计算矩形是否相交 描述 给定两个矩形的左上角起始点坐标和矩形的宽，高，计算这两个矩形是否相交 分析 1 矩形1左上角坐标p1,右下角坐标p2,矩形2左上角坐标p3,右下角坐标p4 2 M点坐标为P1与P3点在X方</description>
+    </item>
+    
+    <item>
+      <title>有用的代码段-ts篇</title>
+      <link>https://laurel-he.github.io/frontend/usefulcode2/</link>
+      <pubDate>Thu, 16 Jan 2020 19:34:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/frontend/usefulcode2/</guid>
+      <description>查询数组中值相等的 modules.modules.find(item =&amp;gt; item.route === route).chinese ref调用子组件 &amp;lt;FacePointsMarkTool ref={com =&amp;gt; this.com = com} customRightRender={this.customRightRender} hideSaved={this.handleHideSaved} dataSource={dataSource} loadMore={this.getFaceData} isShowFacePlus saveFaceData={this.saveFaceData}&amp;gt;&amp;lt;/FacePointsMarkTool&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>版本管理工具git（1）-起步和基础</title>
+      <link>https://laurel-he.github.io/tools/git/git_01/</link>
+      <pubDate>Wed, 20 Nov 2019 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/tools/git/git_01/</guid>
+      <description>参考文档：git管理 起步 作用 版本管理，git是分布式版本控制系统，既可以本地管理又可以协同合作 特点 （1）直接记录快照，而非差异比较：Git对待数据更像一个快照流（在 Git 中，每当你提交更新或保存项目状态时</description>
+    </item>
+    
+    <item>
+      <title>react学习-Props,state和组件树</title>
+      <link>https://laurel-he.github.io/frontend/react/react_06/</link>
+      <pubDate>Tue, 22 Oct 2019 18:37:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/frontend/react/react_06/</guid>
+      <description>react学习手册 属性验证 javascript是弱类型语言，可更改变量的类型，难以查找类型错误。</description>
+    </item>
+    
+    <item>
+      <title>react学习-基础</title>
+      <link>https://laurel-he.github.io/frontend/react/react_base/</link>
+      <pubDate>Tue, 22 Oct 2019 18:37:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/frontend/react/react_base/</guid>
+      <description>相关概念介绍 react ES6 DOM Redux react-route webpack</description>
+    </item>
+    
+    <item>
+      <title>mongodb学习记录</title>
+      <link>https://laurel-he.github.io/database/mongo/mongocomplex/</link>
+      <pubDate>Sun, 20 Oct 2019 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/database/mongo/mongocomplex/</guid>
+      <description>参考文档 http://www.mongoing.com/docs/reference/operator/aggregation/interface.html https://www.cnblogs.com/zhoujie/p/mongo1.html https://www.docs4dev.com/docs/zh/mongodb/v3.6/reference/tutorial-text-search-in-aggregation.html mongodb精准匹配 假设有需求如下：数据为多层级的数组，需要精准匹配到某一个层级，并进行更新或新增等操作，如何实现？ 实现方式 当Mongodb版本大于3.6.1，实现将会非常简单，因为m</description>
+    </item>
+    
+    <item>
+      <title>代码整洁之道1-9章</title>
+      <link>https://laurel-he.github.io/post/cleancode/</link>
+      <pubDate>Mon, 07 Oct 2019 17:40:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/post/cleancode/</guid>
+      <description>需求描述 第一章：整洁代码 要有代码 代码呈现了需求的细节，将需求明确到机器可以执行的细节程度 糟糕的代码 不要产生糟糕的、混乱的代码，勒布朗法则：稍后等于永不 混乱的代价 花时间保持代码整洁不但有关效率，还有关生</description>
+    </item>
+    
+    <item>
+      <title>设计模式六大原则</title>
+      <link>https://laurel-he.github.io/designpattern/others/codeprinceple/</link>
+      <pubDate>Mon, 07 Oct 2019 17:40:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/designpattern/others/codeprinceple/</guid>
+      <description>本文参考了设计模式六大原则 单一职责原则（SPR:Single Responsibility Principle） 一个类应该有且仅有一个原因导致该类的变更，即一个类应该只负责一项职责 但是在实际工作中，职责是会扩散的，一个类可能会新增</description>
+    </item>
+    
+    <item>
+      <title>单例模式</title>
+      <link>https://laurel-he.github.io/designpattern/phpallpattern/singlemode/</link>
+      <pubDate>Sun, 06 Oct 2019 10:40:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/designpattern/phpallpattern/singlemode/</guid>
+      <description>基础介绍 概念介绍 作为对象的创建模式，单例模式确保某一个类只有一个实例，并且对外提供这个全局实例的访问入口。它不会创建实例副本，而是会向单例类内部存储的实例返回一个引用。 单例模式三要素 需要一个保存类的唯</description>
+    </item>
+    
+    <item>
+      <title>生产者消费者模式</title>
+      <link>https://laurel-he.github.io/designpattern/phpallpattern/producerconsumer/</link>
+      <pubDate>Sat, 05 Oct 2019 17:40:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/designpattern/phpallpattern/producerconsumer/</guid>
+      <description>基础概念 概念介绍 某块模块负责产生数据，这些数据由另一个模块来负责处理。产生数据的模块，就形象地称为生产者；而处理数据的模块，就称为消费者。 该模式还需要有一个缓冲区处于生产者和消费者之间，作为一个中介。</description>
+    </item>
+    
+    <item>
+      <title>代码大全</title>
+      <link>https://laurel-he.github.io/post/codecomplate_01/</link>
+      <pubDate>Sat, 05 Oct 2019 10:40:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/post/codecomplate_01/</guid>
+      <description>前期准备 前期准备的重要性 不要立即开始写代码，要做好必要的需求分析和架构设计，写好需求文档和技术文档，防止浪费时间和精力制造错误的东西 需求核对表 针对功能需求： 1．是否详细定义了系统的全部输入，包括其来源</description>
+    </item>
+    
+    <item>
+      <title>命令模式</title>
+      <link>https://laurel-he.github.io/designpattern/phpallpattern/commandmode/</link>
+      <pubDate>Fri, 04 Oct 2019 17:40:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/designpattern/phpallpattern/commandmode/</guid>
+      <description>基础概念 基础介绍 （1）概念介绍： 命令模式（Command Pattern）是一种数据驱动的设计模式，它属于行为型模式。请求以命令的形式包裹在对象中，并传给调用对象。调用对象寻找可以处理该命令的合适的对象</description>
+    </item>
+    
+    <item>
+      <title>生成json映射表</title>
+      <link>https://laurel-he.github.io/frontend/json/</link>
+      <pubDate>Thu, 15 Aug 2019 10:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/frontend/json/</guid>
+      <description>生成json映射表代码 &amp;lt;?php $dic = [ &amp;#39;qd&amp;#39; =&amp;gt; [...], &amp;#39;mp&amp;#39; =&amp;gt; [... 100], &amp;#39;jl&amp;#39; =&amp;gt; [...], &amp;#39;sb&amp;#39; =&amp;gt; [..., 50, 60, 70, 85, 100], &amp;#39;ly&amp;#39; =&amp;gt; [..., 50, 60, 70, 85, 100], &amp;#39;dy&amp;#39; =&amp;gt; [...0, 50, 60, 70, 85, 100], &amp;#39;sl&amp;#39; =&amp;gt; [...55, 60, 65, 70, 85, 100], &amp;#39;xl&amp;#39; =&amp;gt; [... 50, 55, 65, 75, 85, 100], &amp;#39;vl&amp;#39; =&amp;gt; [...50, 60, 70, 80, 90, 100], &amp;#39;rh&amp;#39; =&amp;gt; [... 100] ]; function getJson($dic) { $res = []; foreach($dic as $k =&amp;gt; $v){ $res[$k] = []; foreach($v as $key =&amp;gt; $val) { $res[$k][&amp;#39;mapV&amp;#39;][$key]</description>
+    </item>
+    
+    <item>
+      <title>策略模式</title>
+      <link>https://laurel-he.github.io/designpattern/phpallpattern/strategy/</link>
+      <pubDate>Mon, 29 Jul 2019 14:37:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/designpattern/phpallpattern/strategy/</guid>
+      <description>概念 定义 策略模式定义了算法族，分别封装起来，让他们之间可以相互替换，该模式让算法独立于使用它的客户而独立变化 组成 1 抽象策略角色：策略类，通常由一个接口或者抽象类实现 2 具体策略角色：包装了相关的算法和行</description>
+    </item>
+    
+    <item>
+      <title>react单元测试</title>
+      <link>https://laurel-he.github.io/frontend/react/reactunit/</link>
+      <pubDate>Mon, 29 Jul 2019 10:40:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/frontend/react/reactunit/</guid>
+      <description>测试 ESLint 代码检查（分析JavaScript代码）,JSHint和JSLint是用于分析JavaScript代码的原生工具，并且可以为用户提供格式化代码的反馈意见；</description>
+    </item>
+    
+    <item>
+      <title>fast-json-patch</title>
+      <link>https://laurel-he.github.io/frontend/fastjsonpatch/</link>
+      <pubDate>Fri, 26 Jul 2019 14:37:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/frontend/fastjsonpatch/</guid>
+      <description>fast-json-patch包使用 网上关于json-patch的中文介绍太少了，官方文档没有翻译版，所以写一下自己的学习文档，以下只是自己根据英文文档的理解，不保证正确。 基础操作 json patch几大基础</description>
+    </item>
+    
+    <item>
+      <title>简单工厂模式</title>
+      <link>https://laurel-he.github.io/designpattern/phpallpattern/simplefactory/</link>
+      <pubDate>Wed, 24 Jul 2019 10:40:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/designpattern/phpallpattern/simplefactory/</guid>
+      <description>引入 实现计算器 代码实现 1 实现一个基础的计算器功能，代码见https://github.com/laurel-he/design_pattern/blob/master/simpleFactory/ca</description>
+    </item>
+    
+    <item>
+      <title>typescript泛型</title>
+      <link>https://laurel-he.github.io/frontend/genericity/</link>
+      <pubDate>Mon, 22 Jul 2019 20:37:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/frontend/genericity/</guid>
+      <description>typescript泛型 介绍</description>
+    </item>
+    
+    <item>
+      <title>demo实例</title>
+      <link>https://laurel-he.github.io/frontend/demo_01/</link>
+      <pubDate>Thu, 18 Jul 2019 09:37:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/frontend/demo_01/</guid>
+      <description>js正则表达式 let patt = /[顺丰]/; let reg = new RegExp(patt, &amp;#39;i&amp;#39;); const company = (reg.test(record.remark) === true) ? &amp;#39;shunfeng&amp;#39; : &amp;#39;annengwuliu&amp;#39; console.log(&amp;#39;re test-=-----&amp;#39;, company); const num = record.remark.replace(/[^0-9]/ig, &amp;#34;&amp;#34;) 递归读取层级json getAllKey (obj: any, name: string, moduleName?: string): any[] { const arr: any[] = [] if (Object.keys(obj)) { let keys = Object.keys(obj); let i = 0; return keys.map((items) =&amp;gt; { i++; if (obj[items] instanceof Object) { // console.log(&amp;#34;obj[items]:&amp;#34;, items); let itemRes = items; if (obj[items][&amp;#39;type&amp;#39;]) { // console.log(&amp;#39;it is number:&amp;#39;,</description>
+    </item>
+    
+    <item>
+      <title>react学习-javascript函数式编程</title>
+      <link>https://laurel-he.github.io/frontend/react/react_02/</link>
+      <pubDate>Tue, 09 Jul 2019 09:37:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/frontend/react/react_02/</guid>
+      <description>react学习手册 Javascript函数式编程 基础概念 1 函数式编程： 函数是第一类成员，函数就是数据，可以像变量那样被保存，检索或者在应用程序内部传递。 （1）可以像声明变量一样声明函数；函数就是变量，</description>
+    </item>
+    
+    <item>
+      <title>react学习-es6基础特性</title>
+      <link>https://laurel-he.github.io/frontend/react/react_01/</link>
+      <pubDate>Mon, 08 Jul 2019 09:37:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/frontend/react/react_01/</guid>
+      <description>react学习手册 新特性 1 react开发者工具：react developer tools，可以查看网站react元素 2 yarn进行依赖管理：yarn.lock文件，可以使用yarn install安装，npm install yarn,yarn add [package-name],yarn remove [package-name]</description>
+    </item>
+    
+    <item>
+      <title>设计模式基础</title>
+      <link>https://laurel-he.github.io/designpattern/others/designbasic/</link>
+      <pubDate>Sun, 07 Jul 2019 17:40:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/designpattern/others/designbasic/</guid>
+      <description>本文参考了书籍《大话设计模式》/文章从招式与内功谈起——设计模式概述 以及系列文章PHP 设计模式系列 定义 在软件工程中，设计模式（Design Pattern）是对软件设计中普遍存在（反复出现）的各种问题，</description>
+    </item>
+    
+    <item>
+      <title>virtualbox搭建LANP环境（ubuntu）</title>
+      <link>https://laurel-he.github.io/post/lanp/</link>
+      <pubDate>Sun, 28 Apr 2019 14:00:40 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/post/lanp/</guid>
+      <description>1 基础软件下载 virtual box ubuntu(ubuntu server) 2 安装ubuntu (1)virtualbox创建虚拟电脑 注意：最好重新设置virtualbox-&amp;gt;管理-&amp;gt;全局设定-&amp;gt;默认虚拟电脑位置 (2)启动，网络设置成网络</description>
+    </item>
+    
+    <item>
+      <title>gitflow command version</title>
+      <link>https://laurel-he.github.io/post/git/</link>
+      <pubDate>Wed, 24 Apr 2019 21:03:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/post/git/</guid>
+      <description>新建feature/hotfix进行项目开发 更新本地代码仓库缓存 git remote update git checkout develop git merge origin/develop git branch feature/20171012_hotel_enhance ##补充 1 删除分支 git branch &amp;ndash;delete &amp;ndash;remotes origin/feature/20190214_monthly git push origin :feature/20190214_monthly 2 add之后回退 git reset HEAD 3 撤销commit git commit &amp;ndash;amend 4 撤销已经commit但是没有</description>
+    </item>
+    
+    <item>
+      <title>gitflow command version</title>
+      <link>https://laurel-he.github.io/post/githubguide/</link>
+      <pubDate>Wed, 24 Apr 2019 21:03:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/post/githubguide/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Laravel 日志系统</title>
+      <link>https://laurel-he.github.io/php/laravel/log/</link>
+      <pubDate>Thu, 11 Apr 2019 15:23:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/php/laravel/log/</guid>
+      <description>1 （自己摸索版本）5.2 1 定义路径 .env配置文件添加日志路径，例如 LOG_PATH=/tmp/paytest 2 启动文件添加日志路径 $app-&amp;gt;configureMonologUsing(function($logger){ $logger-&amp;gt;pushHandler(new \Monolog\Handler\RotatingFileHandler(env(&amp;#39;LOG_PATH&amp;#39;).&amp;#39;.log&amp;#39;), 10); return $logger; }); 2 官方文档 1 异常处理 介绍 当您启动一个新的 Laravel 项目时，错误和异常处理就已为您配置。 应用程序触发的所</description>
+    </item>
+    
+    <item>
+      <title>crontab基本使用</title>
+      <link>https://laurel-he.github.io/post/crontab/</link>
+      <pubDate>Wed, 10 Apr 2019 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/post/crontab/</guid>
+      <description>1 简介 crond 是linux下用来周期性的执行某种任务或等待处理某些事件的一个守护进程，与windows下的计划任务类似，当安装完成操作系统后，默认会安装此服务 工具，并且会自动启动crond进程，crond进</description>
+    </item>
+    
+    <item>
+      <title>Mysql分库分表</title>
+      <link>https://laurel-he.github.io/database/mysql/mysqlmerge/</link>
+      <pubDate>Mon, 08 Apr 2019 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/database/mysql/mysqlmerge/</guid>
+      <description>本文参考MySQL：互联网公司常用分库分表方案汇总！ 水平分割和垂直分割 把表数据分成多少多少条，叫做水平分割 表的字段很长，把部分大字段分到另外一个表中，叫垂直分割 瓶颈 IO瓶颈 第一种：磁盘读IO瓶颈，热点</description>
+    </item>
+    
+    <item>
+      <title>PHP常见算法</title>
+      <link>https://laurel-he.github.io/php/phpalg/</link>
+      <pubDate>Mon, 08 Apr 2019 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/php/phpalg/</guid>
+      <description>排序算法 1 冒泡排序 解析 从零开始，每一位和剩余位数比较，如果大于（小于）则交换，最后一位最终会是最大（最小）的。 代码 &amp;lt;?php $arr = [2,3,1,4,7,6,9]; var_dump(bubbleSort($arr)); function bubbleSort($arr) { $len = count($arr); for($i = 0;$i &amp;lt; $len; $i++) { for($j = $len - 1;$j &amp;gt; $i;$j--) { if($arr[$j] &amp;lt; $arr[$j-1]) { $tmp = $arr[$j]; $arr[$j ] = $arr[$j - 1]; $arr[$j - 1] =</description>
+    </item>
+    
+    <item>
+      <title>安装php sniffer</title>
+      <link>https://laurel-he.github.io/php/phppsr/</link>
+      <pubDate>Sun, 07 Apr 2019 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/php/phppsr/</guid>
+      <description>安装pear（参考文档：https://www.cnblogs.com/huangbx/p/php_codesniffer.html） 从以下网址：http://pear.php.net/go-pear</description>
+    </item>
+    
+    <item>
+      <title>mysql必知必会学习笔记-2-检索数据</title>
+      <link>https://laurel-he.github.io/database/mysql/mysqlmustknown_02/</link>
+      <pubDate>Wed, 03 Apr 2019 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/database/mysql/mysqlmustknown_02/</guid>
+      <description>select语句 -- 简单的查询 selectprod_namefromta_name;-- 查询几个列 selectprod_id,prod_namefromtb_name;-- 查询所有列，一般不建议，检索不需要的列通常会降低检索和应用程序的性能 select*fromtb_name;-- 只返回不同的值 selectdistinctxxx_idfromtb_name;-- 返回前5行 selectprod_namefromtb_namelimit5;-- 限制开始行和行数，例如从第3行开始，返回5行 selectprod_namefromtb_namelimit3,5;-- 从Mysql5</description>
+    </item>
+    
+    <item>
+      <title>mongodb使用</title>
+      <link>https://laurel-he.github.io/database/mongo/mongo1/</link>
+      <pubDate>Tue, 02 Apr 2019 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/database/mongo/mongo1/</guid>
+      <description>基础 列出所有数据库:show dbs; 列出所有表：show tables;或show collections; 查询所有数据：db.taname.find().pretty(); 查询指定列所有数据：db.tbname.find({},{</description>
+    </item>
+    
+    <item>
+      <title>mysql必知必会学习笔记-1-基础概念</title>
+      <link>https://laurel-he.github.io/database/mysql/mysqlmustknown_01/</link>
+      <pubDate>Tue, 02 Apr 2019 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/database/mysql/mysqlmustknown_01/</guid>
+      <description>基础复习 本书大概通读了一遍，内容几乎都是我知道或者学过的，但是我依然想再详细阅读一遍，并且跟着书中的示例来实际操作下，打牢基础。以下是学习笔记。 概念 定义 数据库 数据库是用来保存有组织的数据的容器 表 某种特</description>
+    </item>
+    
+    <item>
+      <title>mysql索引优化</title>
+      <link>https://laurel-he.github.io/database/mysql/mysqlindex/</link>
+      <pubDate>Tue, 02 Apr 2019 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/database/mysql/mysqlindex/</guid>
+      <description>1 查看查询语句执行效率 语法 explain select … from … [where &amp;hellip;] 示例 explain select * from news; 只查询一行数据： comment: &amp;lt;&amp;gt; (![const](../../images/mysqlIndex/const.png)) 查询多行数据：执行查询 comment: &amp;lt;&amp;gt; (![towrow](../../images/mysqlIndex/towrow.png)) 执行explain: 2 属性详解 属性 作用 id SELECT的查询序列号 select_type SELECT的查询序列号 table 显示</description>
+    </item>
+    
+    <item>
+      <title>在github上使用Hexo 搭建个人博客</title>
+      <link>https://laurel-he.github.io/post/hexo/</link>
+      <pubDate>Mon, 01 Apr 2019 11:03:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/post/hexo/</guid>
+      <description>安装 简介 Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 安装前提 node.js git 安装步骤 npm install -g hexo-cli 建站 hexo init &amp;lt;folder&amp;gt; cd &amp;lt;folder&amp;gt; npm install 创建博客 hexo new</description>
+    </item>
+    
+    <item>
+      <title>mysql数据库维护</title>
+      <link>https://laurel-he.github.io/database/mysql/mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BB%B4%E6%8A%A4/</link>
+      <pubDate>Thu, 28 Mar 2019 14:03:27 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/database/mysql/mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BB%B4%E6%8A%A4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>各方法实现微信机器人对比</title>
+      <link>https://laurel-he.github.io/post/wechat/</link>
+      <pubDate>Thu, 28 Mar 2019 14:03:27 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/post/wechat/</guid>
+      <description>wxpy 直接排除，只有极少数人的微信可以使用，无法用来实现机器人； 图灵机器人 图灵机器人可以接入微信，也可以实现群管理，但是是通过第三方来实现的 功能 详解 是否必要 接入微信公众号 群自动回复 是 主动触发回复 主动往群里</description>
+    </item>
+    
+    <item>
+      <title>一些php知识</title>
+      <link>https://laurel-he.github.io/php/laurel/</link>
+      <pubDate>Thu, 28 Mar 2019 14:00:40 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/php/laurel/</guid>
+      <description>argc和argv $argv代表传递的参数,$argc代表参数个数（相对路径+传的参数） 示例 &amp;lt;?php echo $argv[0]; echo &amp;#34;\n&amp;#34;; var_dump($argv[1]); echo &amp;#34;\n&amp;#34;; var_dump(intval($argv[2])); echo &amp;#34;\n&amp;#34;; echo $argv[3]; echo &amp;#34;\n&amp;#34;; echo $argc;</description>
+    </item>
+    
+    <item>
+      <title>python数据结构之集合</title>
+      <link>https://laurel-he.github.io/python/pythonset/</link>
+      <pubDate>Fri, 15 Mar 2019 13:52:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/python/pythonset/</guid>
+      <description>介绍 集合是一个无序的不重复的元素序列 操作 创建集合： {}或set()，创建一个空集合必须用set()，{}创建空字典(set(&amp;ldquo;asdgf&amp;rdquo;)会创建[&amp;lsquo;a&amp;rsquo</description>
+    </item>
+    
+    <item>
+      <title>python数据结构之列表</title>
+      <link>https://laurel-he.github.io/python/pythonlist/</link>
+      <pubDate>Fri, 15 Mar 2019 13:47:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/python/pythonlist/</guid>
+      <description>介绍 可以作为一个方括号内的逗号分隔值出现，列表的数据项不需要具有相同的类型 操作 （1）取值： list[0], list[0:3] （list[-2]代表读取列表中倒数第二个元素） （2）更新列表 添加元素：append&amp;ndash;&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>python数据结构</title>
+      <link>https://laurel-he.github.io/python/pythonstructure/</link>
+      <pubDate>Fri, 15 Mar 2019 09:47:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/python/pythonstructure/</guid>
+      <description>列表(List) python list deque双向队列 python deque 集合 python set</description>
+    </item>
+    
+    <item>
+      <title>python数据结构之双向队列</title>
+      <link>https://laurel-he.github.io/python/pythondeque/</link>
+      <pubDate>Fri, 15 Mar 2019 09:47:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/python/pythondeque/</guid>
+      <description>介绍 两端都可以操作的序列 基本操作 创建： import collections d = collections.deque() 往右边添加一个元素： d.append(1) d.append(&amp;lsquo;adc&amp;rsquo;) 往左添加一个元素： d.appendleft(3) 清空队列： d.clear 浅拷贝： d1 = d.copy() 返回指定元素的出现次数： d.count(1) 从队列右边扩展一个列表的元素： d.extend([3,4,5]) 从队列左边扩展一个列表的</description>
+    </item>
+    
+    <item>
+      <title>补充python基础知识</title>
+      <link>https://laurel-he.github.io/python/python_base/</link>
+      <pubDate>Thu, 14 Mar 2019 15:26:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/python/python_base/</guid>
+      <description>##python运算符 幂 返回x的y次幂 10**20 取整除 //:返回商的整数部分，向下取整</description>
+    </item>
+    
+    <item>
+      <title>python Generators</title>
+      <link>https://laurel-he.github.io/python/generators/</link>
+      <pubDate>Thu, 14 Mar 2019 14:41:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/python/generators/</guid>
+      <description>##迭代器Iterator 迭代器是一个可以让程序员遍历一个容器的对象，一个迭代器在遍历并读取一个容器的数据元素时不会执行一个迭代。 迭代器三个部分 可迭代对象 迭代器 迭代 可迭代对象 python中的任意对象，</description>
+    </item>
+    
+    <item>
+      <title>python debugger</title>
+      <link>https://laurel-he.github.io/python/python_debugger/</link>
+      <pubDate>Thu, 14 Mar 2019 11:48:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/python/python_debugger/</guid>
+      <description>##准备 来源 http://python.jobbole.com/81184/ 初始代码 import sys def add(num1=0, num2=0): return int(num1) + int(num2) def sub(num1=0, num2=0): return int(num1) - int(num2) def main(): #Assuming our inputs are valid numbers print sys.argv addition = add(sys.argv[1], sys.argv[2]) print addition subtraction = sub(sys.argv[1], sys.argv[2]) print subtraction if __name__ == &amp;#39;__main__&amp;#39;: main() 基础用法 import pdb pdb.set_trace() //设置断点 在程序中添加断点 import pdb import sys def add(num1=0, num2=0): return int(num1) + int(num2) def sub(num1=0, num2=0): return int(num1) - int(num2) def main(): #Assuming our inputs are valid</description>
+    </item>
+    
+    <item>
+      <title>python进阶</title>
+      <link>https://laurel-he.github.io/python/python/</link>
+      <pubDate>Thu, 14 Mar 2019 10:36:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/python/python/</guid>
+      <description>*args和**kwargs *args *args和**kwargs主要用于函数定义，可以将不定数量的参数传递给一个函数 举例 输入： def test_var_args(f_arg, *argv): print(&amp;#34;first normal arg:&amp;#34;, f_arg) for arg in argv: print(&amp;#34;another arg through *argv:&amp;#34;, arg) test_var_args(&amp;#39;yasoob&amp;#39;, &amp;#39;python&amp;#39;, &amp;#39;eggs&amp;#39;, &amp;#39;test&amp;#39;) 输出： first normal arg: yasoob another arg through *argv: python another arg through *argv: eggs another arg through</description>
+    </item>
+    
+    <item>
+      <title>一些快捷键</title>
+      <link>https://laurel-he.github.io/post/hotkey/</link>
+      <pubDate>Tue, 05 Mar 2019 13:25:21 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/post/hotkey/</guid>
+      <description>navicat for mysql 快捷键 1.ctrl+q 打开查询窗口 2.ctrl+/ 注释sql语句 3.ctrl+shift +/ 解除注释 4.ctrl+r 运行查询窗口的sql语句 5.ctrl+shift+r 只运行选中的sql语句 6.F6 打开一个mysql命令行窗口 7.ctrl+l 删除一行 8.ctrl+n 打开一个新的查询窗口 9.ctrl+w 关闭一个查询窗口 phpstrom</description>
+    </item>
+    
+    <item>
+      <title>vim学习笔记</title>
+      <link>https://laurel-he.github.io/operatingsystem/vim/</link>
+      <pubDate>Thu, 28 Feb 2019 16:34:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/operatingsystem/vim/</guid>
+      <description>光标移动 h 或 &amp;lt;- 表示向左 j 下 k 上 l 右 ctrl + f 屏幕向下移动一页 ctrl + b 向上移动一页 ctrl + d 向下移动半页 ctrl + u 向上移动半页 &amp;lsquo;+&amp;rsquo; 光标移动到非空格符的下一行 &amp;lsquo;-&amp;rsquo; 光标移动到非空格符的 n[space] n表示数字，光标向右移动n个字符 0或[</description>
+    </item>
+    
+    <item>
+      <title>Hbase基础命令</title>
+      <link>https://laurel-he.github.io/database/hbase/hbase_01/</link>
+      <pubDate>Thu, 28 Feb 2019 11:03:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/database/hbase/hbase_01/</guid>
+      <description>Hbase基础命令 启动和停止Hbase 启动 hbase/bin ./start-hbase.sh 关闭 hbase/bin ./stop-hbase.sh 使用Hbase 连接Hbase bin/hbase shell 创建表 create &amp;lsquo;test&amp;rsquo; （创建表需要添加列簇） create &amp;lsquo;表名&amp;rsquo; &amp;lsquo;列簇名1&amp;rsquo; &amp;lsquo</description>
+    </item>
+    
+    <item>
+      <title>python100例学习笔记</title>
+      <link>https://laurel-he.github.io/python/20190202/</link>
+      <pubDate>Sat, 02 Feb 2019 13:25:21 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/python/20190202/</guid>
+      <description>四个数组成不重复三位数 描述 有四个数字，1,2,3,4，能组成多少个不重复的三位数 思考 原文分析：将所有的数字排列组合后去掉不满足条件的列 代码 num = 1; for i in range(1,5): for j in range(1,5): for k in range(1,5): if(i != k) and (i != j) and (j != k): print i,j,k num = num</description>
+    </item>
+    
+    <item>
+      <title>各种奇怪的坑</title>
+      <link>https://laurel-he.github.io/php/2019_01_01/</link>
+      <pubDate>Fri, 01 Feb 2019 16:10:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/php/2019_01_01/</guid>
+      <description>1 strtotime() 描述 获取上个月的时间可以是date(&amp;lsquo;Y-m-d&amp;rsquo;,strtotime(&#39;-1 month&#39;));如果今天是31号而上个月没有31号，就会直接输出这个月1号； 解决办法 使用la</description>
+    </item>
+    
+    <item>
+      <title>fastadmin自定义角色组</title>
+      <link>https://laurel-he.github.io/php/test-my-site/</link>
+      <pubDate>Thu, 31 Jan 2019 17:36:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/php/test-my-site/</guid>
+      <description>之前使用fastadmin，自定义角色组，发现编辑/删除/修改等等权限可以直接权限管理中选择，然后用不同的角色登陆，会显示对应的权限按钮。此时有一个新的需求就是增加审核和批量审核，并且也增加对应的权限</description>
+    </item>
+    
+  </channel>
+</rss>

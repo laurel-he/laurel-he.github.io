@@ -26,15 +26,6 @@
     </item>
     
     <item>
-      <title>目录</title>
-      <link>https://laurel-he.github.io/post/total/</link>
-      <pubDate>Thu, 03 Sep 2020 16:10:10 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/post/total/</guid>
-      <description>目录： 1 刷题 2 设计模式 3 数据库 4 操作系统 5 php 6 go 7 python 8 前端 9 云原生 10 消息队列 11 学习</description>
-    </item>
-    
-    <item>
       <title>计算相关</title>
       <link>https://laurel-he.github.io/post/codecollect/</link>
       <pubDate>Tue, 25 Feb 2020 20:10:10 +0000</pubDate>
@@ -149,15 +140,6 @@
       
       <guid>https://laurel-he.github.io/post/hotkey/</guid>
       <description>navicat for mysql 快捷键 1.ctrl+q 打开查询窗口 2.ctrl+/ 注释sql语句 3.ctrl+shift +/ 解除注释 4.ctrl+r 运行查询窗口的sql语句 5.ctrl+shift+r 只运行选中的sql语句 6.F6 打开一个mysql命令行窗口 7.ctrl+l 删除一行 8.ctrl+n 打开一个新的查询窗口 9.ctrl+w 关闭一个查询窗口 phpstrom</description>
-    </item>
-    
-    <item>
-      <title>Hbase基础命令</title>
-      <link>https://laurel-he.github.io/post/hbase_01/</link>
-      <pubDate>Thu, 28 Feb 2019 11:03:10 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/post/hbase_01/</guid>
-      <description>Hbase基础命令 启动和停止Hbase 启动 hbase/bin ./start-hbase.sh 关闭 hbase/bin ./stop-hbase.sh 使用Hbase 连接Hbase bin/hbase shell 创建表 create &amp;lsquo;test&amp;rsquo; （创建表需要添加列簇） create &amp;lsquo;表名&amp;rsquo; &amp;lsquo;列簇名1&amp;rsquo; &amp;lsquo</description>
     </item>
     
     <item>

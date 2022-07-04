@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>实例 on xiaoJiao</title>
+    <link>https://laurel-he.github.io/categories/%E5%AE%9E%E4%BE%8B/</link>
+    <description>Recent content in 实例 on xiaoJiao</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 15 Aug 2019 10:27:44 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/%E5%AE%9E%E4%BE%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>生成json映射表</title>
+      <link>https://laurel-he.github.io/frontend/json/</link>
+      <pubDate>Thu, 15 Aug 2019 10:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/frontend/json/</guid>
+      <description>生成json映射表代码 &amp;lt;?php $dic = [ &amp;#39;qd&amp;#39; =&amp;gt; [...], &amp;#39;mp&amp;#39; =&amp;gt; [... 100], &amp;#39;jl&amp;#39; =&amp;gt; [...], &amp;#39;sb&amp;#39; =&amp;gt; [..., 50, 60, 70, 85, 100], &amp;#39;ly&amp;#39; =&amp;gt; [..., 50, 60, 70, 85, 100], &amp;#39;dy&amp;#39; =&amp;gt; [...0, 50, 60, 70, 85, 100], &amp;#39;sl&amp;#39; =&amp;gt; [...55, 60, 65, 70, 85, 100], &amp;#39;xl&amp;#39; =&amp;gt; [... 50, 55, 65, 75, 85, 100], &amp;#39;vl&amp;#39; =&amp;gt; [...50, 60, 70, 80, 90, 100], &amp;#39;rh&amp;#39; =&amp;gt; [... 100] ]; function getJson($dic) { $res = []; foreach($dic as $k =&amp;gt; $v){ $res[$k] = []; foreach($v as $key =&amp;gt; $val) { $res[$k][&amp;#39;mapV&amp;#39;][$key]</description>
+    </item>
+    
+  </channel>
+</rss>

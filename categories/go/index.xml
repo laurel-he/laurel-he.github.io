@@ -80,6 +80,15 @@
     </item>
     
     <item>
+      <title>使用go编写webassembly</title>
+      <link>https://laurel-he.github.io/go/webassembly_go_1/</link>
+      <pubDate>Fri, 10 Dec 2021 12:34:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/go/webassembly_go_1/</guid>
+      <description>使用go编写webassembly并在浏览器执行 参考博客 用go写WebAssembly入门 下载安装 go 编写测试文件hello.go package main import &amp;#34;fmt&amp;#34; func main() { fmt.Println(&amp;#34;Hello World!&amp;#34;) } 生成wasm文件 GOARCH=wasm GOOS=js go build -o hello.wasm hello.go 在windows下需要</description>
+    </item>
+    
+    <item>
       <title>go语言学习</title>
       <link>https://laurel-he.github.io/go/summary/</link>
       <pubDate>Thu, 25 Nov 2021 20:47:00 +0000</pubDate>
@@ -90,10 +99,10 @@
     
     <item>
       <title>(1)go基础学习-基础概念</title>
-      <link>https://laurel-he.github.io/go/basic/basic/</link>
+      <link>https://laurel-he.github.io/go/basic/gobasic/</link>
       <pubDate>Fri, 27 Aug 2021 13:47:00 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/go/basic/basic/</guid>
+      <guid>https://laurel-he.github.io/go/basic/gobasic/</guid>
       <description>参考文档： go文档 Go 语言教程 可以先看go语言学习路线图， 对大概学习路线有个了解。 基础概念 go语言特色 Go语言在多核并发上拥有原生的设计优势， Go语言从底层原生支持并发，无须第三方库、开发者的编程技巧和</description>
     </item>
     

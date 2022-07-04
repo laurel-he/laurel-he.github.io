@@ -35,24 +35,6 @@
     </item>
     
     <item>
-      <title>目录</title>
-      <link>https://laurel-he.github.io/post/total/</link>
-      <pubDate>Thu, 03 Sep 2020 16:10:10 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/post/total/</guid>
-      <description>目录： 1 刷题 2 设计模式 3 数据库 4 操作系统 5 php 6 go 7 python 8 前端 9 云原生 10 消息队列 11 学习</description>
-    </item>
-    
-    <item>
-      <title>使用go编写webassembly</title>
-      <link>https://laurel-he.github.io/go/webassembly_go_1/</link>
-      <pubDate>Tue, 10 Dec 2019 12:34:10 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/go/webassembly_go_1/</guid>
-      <description>使用go编写webassembly并在浏览器执行 参考博客 用go写WebAssembly入门 下载安装 go 编写测试文件hello.go package main import &amp;#34;fmt&amp;#34; func main() { fmt.Println(&amp;#34;Hello World!&amp;#34;) } 生成wasm文件 GOARCH=wasm GOOS=js go build -o hello.wasm hello.go 在windows下需要</description>
-    </item>
-    
-    <item>
       <title>测试</title>
       <link>https://laurel-he.github.io/post/unittest/</link>
       <pubDate>Tue, 10 Dec 2019 12:34:10 +0000</pubDate>
@@ -180,20 +162,11 @@
     
     <item>
       <title>设计模式基础</title>
-      <link>https://laurel-he.github.io/designpattern/others/basic/</link>
+      <link>https://laurel-he.github.io/designpattern/others/designbasic/</link>
       <pubDate>Sun, 07 Jul 2019 17:40:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/designpattern/others/basic/</guid>
+      <guid>https://laurel-he.github.io/designpattern/others/designbasic/</guid>
       <description>本文参考了书籍《大话设计模式》/文章从招式与内功谈起——设计模式概述 以及系列文章PHP 设计模式系列 定义 在软件工程中，设计模式（Design Pattern）是对软件设计中普遍存在（反复出现）的各种问题，</description>
-    </item>
-    
-    <item>
-      <title>各种奇怪的坑</title>
-      <link>https://laurel-he.github.io/php/2019_01_01/</link>
-      <pubDate>Fri, 01 Feb 2019 16:10:10 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/php/2019_01_01/</guid>
-      <description>1 strtotime() 描述 获取上个月的时间可以是date(&amp;lsquo;Y-m-d&amp;rsquo;,strtotime(&#39;-1 month&#39;));如果今天是31号而上个月没有31号，就会直接输出这个月1号； 解决办法 使用la</description>
     </item>
     
   </channel>

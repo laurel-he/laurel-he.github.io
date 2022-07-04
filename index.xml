@@ -80,6 +80,15 @@
     </item>
     
     <item>
+      <title>b树</title>
+      <link>https://laurel-he.github.io/datastructure/btree/</link>
+      <pubDate>Wed, 01 Jun 2022 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/datastructure/btree/</guid>
+      <description>平衡二叉树 概念 平衡二叉树是基于二分法的策略提高数据的查找速度的二叉树的数据结构； 特点 平衡二叉树是采用二分法思维把数据按规则组装成一个树形结构的数据，用这个树形结构的数据减少无关数据的检索，大大的提升了</description>
+    </item>
+    
+    <item>
       <title>蓝桥教程-MongoDB基础教程</title>
       <link>https://laurel-he.github.io/database/mongo/lanqiao_mongo_base/01basic/</link>
       <pubDate>Thu, 05 May 2022 20:27:44 +0000</pubDate>
@@ -233,6 +242,24 @@
     </item>
     
     <item>
+      <title>使用go编写webassembly</title>
+      <link>https://laurel-he.github.io/go/webassembly_go_1/</link>
+      <pubDate>Fri, 10 Dec 2021 12:34:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/go/webassembly_go_1/</guid>
+      <description>使用go编写webassembly并在浏览器执行 参考博客 用go写WebAssembly入门 下载安装 go 编写测试文件hello.go package main import &amp;#34;fmt&amp;#34; func main() { fmt.Println(&amp;#34;Hello World!&amp;#34;) } 生成wasm文件 GOARCH=wasm GOOS=js go build -o hello.wasm hello.go 在windows下需要</description>
+    </item>
+    
+    <item>
+      <title>给小黄鸭讲明白TCP/IP协议</title>
+      <link>https://laurel-he.github.io/interview/tcpip/</link>
+      <pubDate>Fri, 10 Dec 2021 12:34:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/interview/tcpip/</guid>
+      <description>前言 我上家公司的CTO跟我说过一个道理，一件事情如果你能给一个从来没接触过的小学生讲明白，那么你就能够理解了。 所以我决定用这篇文章记录一下，假设本文有读者，且读者是一个技术小白，那么希望他看完本文后能</description>
+    </item>
+    
+    <item>
       <title>操作系统（东北大学）- 01 概述</title>
       <link>https://laurel-he.github.io/operatingsystem/leanopesys2/guide/</link>
       <pubDate>Sun, 28 Nov 2021 17:40:10 +0000</pubDate>
@@ -261,10 +288,10 @@
     
     <item>
       <title>设计模式学习——前言</title>
-      <link>https://laurel-he.github.io/designpattern/basic/</link>
+      <link>https://laurel-he.github.io/designpattern/learnbasic/</link>
       <pubDate>Sun, 28 Nov 2021 17:40:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/designpattern/basic/</guid>
+      <guid>https://laurel-he.github.io/designpattern/learnbasic/</guid>
       <description>参考文档： PHP 设计模式系列 基本介绍 设计模式分类 基本所有的设计模式书籍或文档都会介绍到一个概念，就是设计模式的类型。 设计模式分为创建型，结构型，行为型以及部分其他类型的设计模式 创建型模式 在软件工程中，创建</description>
     </item>
     
@@ -279,29 +306,20 @@
     
     <item>
       <title>php下es基本使用</title>
-      <link>https://laurel-he.github.io/database/es/basic/</link>
+      <link>https://laurel-he.github.io/database/es/md_basic/</link>
       <pubDate>Sat, 20 Nov 2021 18:27:44 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/database/es/basic/</guid>
+      <guid>https://laurel-he.github.io/database/es/md_basic/</guid>
       <description>本文参考文档: es7.3文档 全文搜索引擎 Elasticsearch 入门教程 基础介绍 全文搜索属于最常见的需求，开源的 Elasticsearch是目前全文搜索引擎的首选。它可以快速地储存、搜索和分析海量数据。 安装 不同环境下安装方</description>
     </item>
     
     <item>
       <title>swoole基本使用</title>
-      <link>https://laurel-he.github.io/php/swoole/basic/</link>
+      <link>https://laurel-he.github.io/php/swoole/swoolebasic/</link>
       <pubDate>Sat, 20 Nov 2021 18:27:44 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/php/swoole/basic/</guid>
+      <guid>https://laurel-he.github.io/php/swoole/swoolebasic/</guid>
       <description>本文参考swoole文档 安装 安装过程大概可以参考如下dockerfile: FROMalpine:latest# 替换镜像源并安装基础服务RUN sed -i &amp;#39;s/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g&amp;#39; /etc/apk/repositories \ &amp;amp;&amp;amp; apk add php7 php7-fpm php7-opcache php7-curl php7-pdo php7-gd php7-dev php7-mbstring php7-mysqli php7-json vim \ &amp;amp;&amp;amp; apk add gcc g++ make autoconf libc-dev# 挂载VOLUME [&amp;#34;/data&amp;#34;]# 安装swooleCO</description>
-    </item>
-    
-    <item>
-      <title>什么是数据结构</title>
-      <link>https://laurel-he.github.io/datastructure/route/01_introduce/</link>
-      <pubDate>Sat, 02 Oct 2021 18:27:44 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/datastructure/route/01_introduce/</guid>
-      <description></description>
     </item>
     
     <item>
@@ -377,15 +395,6 @@
     </item>
     
     <item>
-      <title>b树</title>
-      <link>https://laurel-he.github.io/datastructure/btree/</link>
-      <pubDate>Wed, 01 Sep 2021 18:27:44 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/datastructure/btree/</guid>
-      <description>平衡二叉树 概念 平衡二叉树是基于二分法的策略提高数据的查找速度的二叉树的数据结构； 特点 平衡二叉树是采用二分法思维把数据按规则组装成一个树形结构的数据，用这个树形结构的数据减少无关数据的检索，大大的提升了</description>
-    </item>
-    
-    <item>
       <title>软件工程-01基础介绍</title>
       <link>https://laurel-he.github.io/learn/softwareengineering/01basic/</link>
       <pubDate>Wed, 01 Sep 2021 18:27:44 +0000</pubDate>
@@ -432,10 +441,10 @@
     
     <item>
       <title>(1)go基础学习-基础概念</title>
-      <link>https://laurel-he.github.io/go/basic/basic/</link>
+      <link>https://laurel-he.github.io/go/basic/gobasic/</link>
       <pubDate>Fri, 27 Aug 2021 13:47:00 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/go/basic/basic/</guid>
+      <guid>https://laurel-he.github.io/go/basic/gobasic/</guid>
       <description>参考文档： go文档 Go 语言教程 可以先看go语言学习路线图， 对大概学习路线有个了解。 基础概念 go语言特色 Go语言在多核并发上拥有原生的设计优势， Go语言从底层原生支持并发，无须第三方库、开发者的编程技巧和</description>
     </item>
     
@@ -464,6 +473,15 @@
       
       <guid>https://laurel-he.github.io/post/hugo/</guid>
       <description>之前个人博客是使用的hexo搭建的，经常会出各种bug，而且时不时的升级，导致npm 也要对应，因此放弃，使用hugo,hugo是基于go语言开发的。 步骤 下载安装 非常简单，略（如果是windows需要加</description>
+    </item>
+    
+    <item>
+      <title>kafka学习</title>
+      <link>https://laurel-he.github.io/queue/kafka/</link>
+      <pubDate>Tue, 27 Jul 2021 09:35:00 +0800</pubDate>
+      
+      <guid>https://laurel-he.github.io/queue/kafka/</guid>
+      <description>环境安装 直接按照文档下载安装。需要注意的是： zookeeper直接使用curl或者wget下载的文件很可能会损坏，导致解压出错。 可以浏览器直接下载，下载好后通过scp传入到服务器中。 安装的时候，pyt</description>
     </item>
     
     <item>
@@ -572,15 +590,6 @@
       
       <guid>https://laurel-he.github.io/acm/leetcode/566remouldmatrix/</guid>
       <description>题目来源:566. 重塑矩阵 题目描述 难度 简单 描述 在 MATLAB 中，有一个非常有用的函数 reshape ，它可以将一个m x n 矩阵重塑为另一个大小不同（r x c）的新矩阵，但保留其原始数据。 给你一个由二维数组 mat 表示的m x n 矩阵，以及</description>
-    </item>
-    
-    <item>
-      <title>目录</title>
-      <link>https://laurel-he.github.io/post/total/</link>
-      <pubDate>Thu, 03 Sep 2020 16:10:10 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/post/total/</guid>
-      <description>目录： 1 刷题 2 设计模式 3 数据库 4 操作系统 5 php 6 go 7 python 8 前端 9 云原生 10 消息队列 11 学习</description>
     </item>
     
     <item>
@@ -707,15 +716,6 @@
       
       <guid>https://laurel-he.github.io/php/usefulcode1/</guid>
       <description>分步骤执行 &amp;lt;?php /** * @param mixed ...$args * @return bool * @throws Exception */ public function stepRun(...$args): bool { $count = $args[0]; $method = $args[1]; $step = array_key_exists(2, $args) ? $args[2] : 10; $limit = array_key_exists(3, $args) ? $args[3] : 10; $param = array_key_exists(4, $args) ? $args[4] : &amp;#39;&amp;#39;; $stepCount = ceil($count / $step); for ($nowStep = 0; $nowStep &amp;lt; $stepCount; $nowStep ++) { $this-&amp;gt;$method($limit, $nowStep * $step, $param); sleep(1); } sleep(1); return true; } ?&amp;gt;使用方法 &amp;lt;?php $this-&amp;gt;stepRun($groupChangeCount, &amp;#39;loopGetData&amp;#39;, 30, 30); ?&amp;gt;分析</description>
-    </item>
-    
-    <item>
-      <title>使用go编写webassembly</title>
-      <link>https://laurel-he.github.io/go/webassembly_go_1/</link>
-      <pubDate>Tue, 10 Dec 2019 12:34:10 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/go/webassembly_go_1/</guid>
-      <description>使用go编写webassembly并在浏览器执行 参考博客 用go写WebAssembly入门 下载安装 go 编写测试文件hello.go package main import &amp;#34;fmt&amp;#34; func main() { fmt.Println(&amp;#34;Hello World!&amp;#34;) } 生成wasm文件 GOARCH=wasm GOOS=js go build -o hello.wasm hello.go 在windows下需要</description>
     </item>
     
     <item>
@@ -963,10 +963,10 @@
     
     <item>
       <title>设计模式基础</title>
-      <link>https://laurel-he.github.io/designpattern/others/basic/</link>
+      <link>https://laurel-he.github.io/designpattern/others/designbasic/</link>
       <pubDate>Sun, 07 Jul 2019 17:40:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/designpattern/others/basic/</guid>
+      <guid>https://laurel-he.github.io/designpattern/others/designbasic/</guid>
       <description>本文参考了书籍《大话设计模式》/文章从招式与内功谈起——设计模式概述 以及系列文章PHP 设计模式系列 定义 在软件工程中，设计模式（Design Pattern）是对软件设计中普遍存在（反复出现）的各种问题，</description>
     </item>
     
@@ -1224,10 +1224,10 @@
     
     <item>
       <title>Hbase基础命令</title>
-      <link>https://laurel-he.github.io/post/hbase_01/</link>
+      <link>https://laurel-he.github.io/database/hbase/hbase_01/</link>
       <pubDate>Thu, 28 Feb 2019 11:03:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/post/hbase_01/</guid>
+      <guid>https://laurel-he.github.io/database/hbase/hbase_01/</guid>
       <description>Hbase基础命令 启动和停止Hbase 启动 hbase/bin ./start-hbase.sh 关闭 hbase/bin ./stop-hbase.sh 使用Hbase 连接Hbase bin/hbase shell 创建表 create &amp;lsquo;test&amp;rsquo; （创建表需要添加列簇） create &amp;lsquo;表名&amp;rsquo; &amp;lsquo;列簇名1&amp;rsquo; &amp;lsquo</description>
     </item>
     
@@ -1278,15 +1278,6 @@
     
     <item>
       <title></title>
-      <link>https://laurel-he.github.io/database/mysql/slow/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/database/mysql/slow/</guid>
-      <description>发送商品过期消息mysql慢查询解决方案 背景 方案一：先限制数据量再查询 发消息只需要七天前-六天前的数据，可以先根据时间排序，然后获取到七天前的现在以及六天前的现在的最近的id，只对id在这个范围内的数</description>
-    </item>
-    
-    <item>
-      <title></title>
       <link>https://laurel-he.github.io/database/redis/basic/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -1295,15 +1286,6 @@
 redis-server /etc/redis/redis.conf
  Could not connect to Redis at 127.0.0.1:6379: Connection refused:
  </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://laurel-he.github.io/designpattern/phpallpattern/02/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/designpattern/phpallpattern/02/</guid>
-      <description>几种工厂模式 包括抽象工厂模式，工厂方法模式，简单工厂模式和静态工厂模式在内，都是属于创建型模式， 那么它们都是什么意思呢？ 抽象工厂模式 在不指定具体类的情况下创建一系列相关或依赖对象。 通常创建的类都实现相</description>
     </item>
     
     <item>
@@ -1358,15 +1340,6 @@ redis-server /etc/redis/redis.conf
       
       <guid>https://laurel-he.github.io/go/test/%E7%94%A8%E4%BE%8B/</guid>
       <description>（1）任务列表：暂无问题 ## （2）执行任务： a 根据id执行任务 xx ## b 根据数据执行任务 xx ## （3）编辑任务：## a 编辑基础信息 ## b 编辑详细信息 xx ### （4）删除任务记录 ## （5）抽样下载 xx ## a 根据id抽样下载 xx ##</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://laurel-he.github.io/interview/tcpip/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/interview/tcpip/</guid>
-      <description>给小黄鸭讲明白TCP/IP协议 前言 我上家公司的CTO跟我说过一个道理，一件事情如果你能给一个从来没接触过的小学生讲明白，那么你就能够理解了。 所以我决定用这篇文章记录一下，假设本文有读者，且读者是一个技</description>
     </item>
     
     <item>
@@ -1555,7 +1528,7 @@ redis-server /etc/redis/redis.conf
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/docker/docker/</guid>
-      <description>title: docker使用心得 date: 2019-04-24 21:03:10 tags: 使用心得 categories: docker 准备工作 1 前提条件 ubuntu内核版本高于 3.10 uname -r 2 安装docker 本文是基于ubuntu的，基于centos安装路径博客如下： centos windows wget -qO- https://get.docker.com/ | sh 当要以非root用</description>
+      <description>title: docker使用心得 date: 2019-04-24 21:03:10 year: 2019 series: 基础 tags: 使用心得 categories: docker 准备工作 1 前提条件 ubuntu内核版本高于 3.10 uname -r 2 安装docker 本文是基于ubuntu的，基于centos安装路径博客如下： centos windows wget -qO- https://get.docker.com/ | sh 当要以非</description>
     </item>
     
     <item>

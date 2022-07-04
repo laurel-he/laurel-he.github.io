@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>前端 on xiaoJiao</title>
+    <link>https://laurel-he.github.io/series/%E5%89%8D%E7%AB%AF/</link>
+    <description>Recent content in 前端 on xiaoJiao</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 16 Jan 2020 19:34:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/series/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>有用的代码段-ts篇</title>
+      <link>https://laurel-he.github.io/frontend/usefulcode2/</link>
+      <pubDate>Thu, 16 Jan 2020 19:34:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/frontend/usefulcode2/</guid>
+      <description>查询数组中值相等的 modules.modules.find(item =&amp;gt; item.route === route).chinese ref调用子组件 &amp;lt;FacePointsMarkTool ref={com =&amp;gt; this.com = com} customRightRender={this.customRightRender} hideSaved={this.handleHideSaved} dataSource={dataSource} loadMore={this.getFaceData} isShowFacePlus saveFaceData={this.saveFaceData}&amp;gt;&amp;lt;/FacePointsMarkTool&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>react学习-Props,state和组件树</title>
+      <link>https://laurel-he.github.io/frontend/react/react_06/</link>
+      <pubDate>Tue, 22 Oct 2019 18:37:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/frontend/react/react_06/</guid>
+      <description>react学习手册 属性验证 javascript是弱类型语言，可更改变量的类型，难以查找类型错误。</description>
+    </item>
+    
+    <item>
+      <title>react学习-基础</title>
+      <link>https://laurel-he.github.io/frontend/react/react_base/</link>
+      <pubDate>Tue, 22 Oct 2019 18:37:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/frontend/react/react_base/</guid>
+      <description>相关概念介绍 react ES6 DOM Redux react-route webpack</description>
+    </item>
+    
+    <item>
+      <title>生成json映射表</title>
+      <link>https://laurel-he.github.io/frontend/json/</link>
+      <pubDate>Thu, 15 Aug 2019 10:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/frontend/json/</guid>
+      <description>生成json映射表代码 &amp;lt;?php $dic = [ &amp;#39;qd&amp;#39; =&amp;gt; [...], &amp;#39;mp&amp;#39; =&amp;gt; [... 100], &amp;#39;jl&amp;#39; =&amp;gt; [...], &amp;#39;sb&amp;#39; =&amp;gt; [..., 50, 60, 70, 85, 100], &amp;#39;ly&amp;#39; =&amp;gt; [..., 50, 60, 70, 85, 100], &amp;#39;dy&amp;#39; =&amp;gt; [...0, 50, 60, 70, 85, 100], &amp;#39;sl&amp;#39; =&amp;gt; [...55, 60, 65, 70, 85, 100], &amp;#39;xl&amp;#39; =&amp;gt; [... 50, 55, 65, 75, 85, 100], &amp;#39;vl&amp;#39; =&amp;gt; [...50, 60, 70, 80, 90, 100], &amp;#39;rh&amp;#39; =&amp;gt; [... 100] ]; function getJson($dic) { $res = []; foreach($dic as $k =&amp;gt; $v){ $res[$k] = []; foreach($v as $key =&amp;gt; $val) { $res[$k][&amp;#39;mapV&amp;#39;][$key]</description>
+    </item>
+    
+    <item>
+      <title>react单元测试</title>
+      <link>https://laurel-he.github.io/frontend/react/reactunit/</link>
+      <pubDate>Mon, 29 Jul 2019 10:40:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/frontend/react/reactunit/</guid>
+      <description>测试 ESLint 代码检查（分析JavaScript代码）,JSHint和JSLint是用于分析JavaScript代码的原生工具，并且可以为用户提供格式化代码的反馈意见；</description>
+    </item>
+    
+    <item>
+      <title>fast-json-patch</title>
+      <link>https://laurel-he.github.io/frontend/fastjsonpatch/</link>
+      <pubDate>Fri, 26 Jul 2019 14:37:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/frontend/fastjsonpatch/</guid>
+      <description>fast-json-patch包使用 网上关于json-patch的中文介绍太少了，官方文档没有翻译版，所以写一下自己的学习文档，以下只是自己根据英文文档的理解，不保证正确。 基础操作 json patch几大基础</description>
+    </item>
+    
+    <item>
+      <title>typescript泛型</title>
+      <link>https://laurel-he.github.io/frontend/genericity/</link>
+      <pubDate>Mon, 22 Jul 2019 20:37:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/frontend/genericity/</guid>
+      <description>typescript泛型 介绍</description>
+    </item>
+    
+    <item>
+      <title>demo实例</title>
+      <link>https://laurel-he.github.io/frontend/demo_01/</link>
+      <pubDate>Thu, 18 Jul 2019 09:37:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/frontend/demo_01/</guid>
+      <description>js正则表达式 let patt = /[顺丰]/; let reg = new RegExp(patt, &amp;#39;i&amp;#39;); const company = (reg.test(record.remark) === true) ? &amp;#39;shunfeng&amp;#39; : &amp;#39;annengwuliu&amp;#39; console.log(&amp;#39;re test-=-----&amp;#39;, company); const num = record.remark.replace(/[^0-9]/ig, &amp;#34;&amp;#34;) 递归读取层级json getAllKey (obj: any, name: string, moduleName?: string): any[] { const arr: any[] = [] if (Object.keys(obj)) { let keys = Object.keys(obj); let i = 0; return keys.map((items) =&amp;gt; { i++; if (obj[items] instanceof Object) { // console.log(&amp;#34;obj[items]:&amp;#34;, items); let itemRes = items; if (obj[items][&amp;#39;type&amp;#39;]) { // console.log(&amp;#39;it is number:&amp;#39;,</description>
+    </item>
+    
+    <item>
+      <title>react学习-javascript函数式编程</title>
+      <link>https://laurel-he.github.io/frontend/react/react_02/</link>
+      <pubDate>Tue, 09 Jul 2019 09:37:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/frontend/react/react_02/</guid>
+      <description>react学习手册 Javascript函数式编程 基础概念 1 函数式编程： 函数是第一类成员，函数就是数据，可以像变量那样被保存，检索或者在应用程序内部传递。 （1）可以像声明变量一样声明函数；函数就是变量，</description>
+    </item>
+    
+    <item>
+      <title>react学习-es6基础特性</title>
+      <link>https://laurel-he.github.io/frontend/react/react_01/</link>
+      <pubDate>Mon, 08 Jul 2019 09:37:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/frontend/react/react_01/</guid>
+      <description>react学习手册 新特性 1 react开发者工具：react developer tools，可以查看网站react元素 2 yarn进行依赖管理：yarn.lock文件，可以使用yarn install安装，npm install yarn,yarn add [package-name],yarn remove [package-name]</description>
+    </item>
+    
+  </channel>
+</rss>

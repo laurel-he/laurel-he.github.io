@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2020 on xiaoJiao</title>
+    <link>https://laurel-he.github.io/year/2020/</link>
+    <description>Recent content in 2020 on xiaoJiao</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 20 Jul 2021 16:34:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/year/2020/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>操作系统（1）-基础和vim操作</title>
+      <link>https://laurel-he.github.io/operatingsystem/opratingsystem_01/</link>
+      <pubDate>Tue, 20 Jul 2021 16:34:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/operatingsystem/opratingsystem_01/</guid>
+      <description>本系列来源于蓝桥：https://www.lanqiao.cn/courses/2610 同系列文已发布在CSDN 命令行中的shell通配符 字符 含义 * 匹配0或多个字符 ? 匹配任意一个字符 [list] 匹配 list 中的任意单</description>
+    </item>
+    
+    <item>
+      <title>操作系统（2）-进程管理</title>
+      <link>https://laurel-he.github.io/operatingsystem/opratingsystem_02/</link>
+      <pubDate>Tue, 20 Jul 2021 16:34:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/operatingsystem/opratingsystem_02/</guid>
+      <description>蓝桥操作系统课程的学习笔记 top 实时查看进程的状态 top第一行 内容 解释 top 表示当前程序的名称 14:11:28 当前系统的时间 up 231 days, 20:31 表示改机器已经启动了多长时间 1 user 表示当前系统只有一个用户 load average: 0.24, 0.32, 0.19 分别对应1、5、15分钟</description>
+    </item>
+    
+    <item>
+      <title>lnmp环境搭建</title>
+      <link>https://laurel-he.github.io/operatingsystem/linux/lnmp/</link>
+      <pubDate>Sun, 28 Mar 2021 14:03:27 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/operatingsystem/linux/lnmp/</guid>
+      <description>参考文档： 百度百科:lnmp 问题背景 根据部分5W/1H原则来解释下问题背景（where/when/who基本不用说了,How单独起一个） LNMP环境是什么（What） lnmp环境通常就是指linux+</description>
+    </item>
+    
+    <item>
+      <title>kustomize使用文档</title>
+      <link>https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/k8s/kustomize01/</link>
+      <pubDate>Thu, 21 May 2020 11:00:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/k8s/kustomize01/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kubenetes权威指南1-2章</title>
+      <link>https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/k8s/k8s01/</link>
+      <pubDate>Sat, 16 May 2020 18:00:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/k8s/k8s01/</guid>
+      <description>kubenetes是什么 k8s是一个全新的基于容器技术的分布式架构领先方案，一个开放的开发平台，一个完备的分布式系统支撑平台 k8s重要资源对象介绍 Master 概念介绍 k8s中的Master指的是集群控制节点，在</description>
+    </item>
+    
+    <item>
+      <title>《第一本docker书》学习笔记01</title>
+      <link>https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/docker/docker01/</link>
+      <pubDate>Tue, 21 Apr 2020 21:03:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/docker/docker01/</guid>
+      <description>Docker与配置管理 docker的核心组件 （1）docker客户端和服务器，也称为docker引擎 （2）docker镜像 （3）Registry （4）Docker容器 基本使用 docker info 查看docker程序是</description>
+    </item>
+    
+    <item>
+      <title>awk</title>
+      <link>https://laurel-he.github.io/operatingsystem/linux/awk/</link>
+      <pubDate>Thu, 27 Feb 2020 18:00:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/operatingsystem/linux/awk/</guid>
+      <description>参考文档： awk 入门教程 Linux awk命令 知识点 （1）-F指定分隔符，例如：awk -F &#39;:&#39; &#39;{print $1}&#39; demo.log （2）$0代表当前行，即所有内容，例如：awk &#39;{print $0}&#39; demo.log将会输出demo.log的所有内容 （3）$ + 数字表示</description>
+    </item>
+    
+    <item>
+      <title>linux命令大全</title>
+      <link>https://laurel-he.github.io/operatingsystem/linuxuse/</link>
+      <pubDate>Thu, 27 Feb 2020 18:00:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/operatingsystem/linuxuse/</guid>
+      <description>文件操作 cat 描述 查看文件内容 参数 -n 或 –number 由 1 开始对所有输出的行数编号 -b 或 –number-nonblank 和 -n 相似，只不过对于空白行不编号 -s 或 –squeeze-blank 当遇到有连续两行以上的空</description>
+    </item>
+    
+    <item>
+      <title>linux基础入门</title>
+      <link>https://laurel-he.github.io/operatingsystem/linuxbase/</link>
+      <pubDate>Thu, 27 Feb 2020 18:00:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/operatingsystem/linuxbase/</guid>
+      <description>学习心得，来自于蓝桥Linux基础入门 用户相关 查看当前用户 whoami:查看当前用户名 who am i:可以列出用户名，当前登录的伪终端以及当前伪终端的启动时间等 注意事项 在有些情况下who am i或者who mom lik</description>
+    </item>
+    
+    <item>
+      <title>运行相关</title>
+      <link>https://laurel-he.github.io/post/codecollect2/</link>
+      <pubDate>Tue, 25 Feb 2020 20:10:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/post/codecollect2/</guid>
+      <description>1 下载数据 描述 根据链接下载文件 代码 &amp;lt;?php function downloadOldFile($url,$rename,$ext){ $file_path = &amp;#39;public/images/age_60-120/&amp;#39;; $ch = curl_init($url); curl_setopt($ch, CURLOPT_HEADER, 0); curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); curl_setopt($ch, CURLOPT_BINARYTRANSFER, 1); $rawdata=curl_exec ($ch); curl_close ($ch); // 使用中文文件名需要转码 $fp = fopen($file_path. $rename .&amp;#34;.&amp;#34;.$ext,&amp;#39;w&amp;#39;); fwrite($fp, $rawdata); fclose($fp); // 返回路径 return $_SERVER[&amp;#39;DOCUMENT_ROOT&amp;#39;].$file_path.$rename.&amp;#34;.&amp;#34;.$ext; } ?&amp;gt;2 按步骤执行方法 描述 经常有需求：分页执行脚本，例如前1000条执行</description>
+    </item>
+    
+    <item>
+      <title>有用的代码段-php篇</title>
+      <link>https://laurel-he.github.io/php/usefulcode1/</link>
+      <pubDate>Thu, 16 Jan 2020 12:34:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/php/usefulcode1/</guid>
+      <description>分步骤执行 &amp;lt;?php /** * @param mixed ...$args * @return bool * @throws Exception */ public function stepRun(...$args): bool { $count = $args[0]; $method = $args[1]; $step = array_key_exists(2, $args) ? $args[2] : 10; $limit = array_key_exists(3, $args) ? $args[3] : 10; $param = array_key_exists(4, $args) ? $args[4] : &amp;#39;&amp;#39;; $stepCount = ceil($count / $step); for ($nowStep = 0; $nowStep &amp;lt; $stepCount; $nowStep ++) { $this-&amp;gt;$method($limit, $nowStep * $step, $param); sleep(1); } sleep(1); return true; } ?&amp;gt;使用方法 &amp;lt;?php $this-&amp;gt;stepRun($groupChangeCount, &amp;#39;loopGetData&amp;#39;, 30, 30); ?&amp;gt;分析</description>
+    </item>
+    
+  </channel>
+</rss>
