@@ -48,7 +48,7 @@
 	
     
     
-    <meta name="description" content="二阶行列式 1 $$ \left| \begin{array}{cccc} 1 &amp;amp; 0 &amp;amp; 0 \ -5 &amp;amp; 2 &amp;amp; 3\ 3 &amp;amp; 3 &amp;amp; 5 \end{array} \right| $$ 2 $ \left[ \begin{array}{cccc} 1 &amp;amp; 2 &amp;amp; \cdots &amp;amp; 4 \ 7 &amp;amp; 6 &amp;amp;{\cdot^{\cdot^{\cdot}}} &amp;amp; 5 \ \vdots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots \ 8 &amp;amp; 9 &amp;amp; \cdots &amp;amp; 0 \ \end{array} \right] $ 3 $$ \left| \begin{array}{cccc} 1 &amp;amp; 0 &amp;amp; 0 \\ -5 &amp;amp; 2 &amp;amp; 3\\ 3 &amp;amp; 3 &amp;amp; 5 \end{array} \right| $$ 4 $\sum_{i=0}^N\int_{a}^{b}g(t,i)\text{d}t$ 5 $$\sum_{i=0}N\int_{a}{b}g(t,i)\text{d}t$$ 6 $$\begin{cases} a_1x&#43;b_1y&#43;c_1z=d_1\ a_2x&#43;b_2y&#43;c_2z=d_2\ a_3x&#43;b_3y&#43;c_3z=d_3\ \end{cases} $$" />
+    <meta name="description" content="二阶行列式 1 例如以下二元线性方程组 $$\begin{cases} a_{11}x_1&#43;a_{12}x_2=b_1\\ a_{21}x_1&#43;a_{22}x_2=b_2\\ \end{cases} $$ 2 使用消元法可以得到上式中x_1和x_2的解 x_1=(b_1a_{22}-a_{12}b_2)/(a_{11}a_{22}-a_{12}a_{21}) x_2=(b_2a_{11}-a_{21}b_1)/(a_{11}a_{22}-a_{12}a_{21}) 3 $$ \left| \begin{array}{cccc} 1 &amp;amp; 0 &amp;amp; 0 \ -5 &amp;amp; 2 &amp;amp; 3\ 3 &amp;amp; 3 &amp;amp; 5 \end{array} \right| $$ 2 $ \left[ \begin{array}{cccc} 1 &amp;amp; 2 &amp;amp; \cdots &amp;amp; 4 \ 7 &amp;amp; 6 &amp;amp;{\cdot^{\cdot^{\cdot}}} &amp;amp; 5 \ \vdots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots \ 8 &amp;amp; 9 &amp;amp;" />
     
 
     
@@ -145,8 +145,17 @@
                         <span class="date">2022.06.20</span>
                     </div>
                     <div class="post_content markdown"><h1 id="二阶行列式">二阶行列式</h1>
-<p>1</p>
-<p>$$
+<p>1 例如以下二元线性方程组</p>
+<div>$$\begin{cases}
+a_{11}x_1+a_{12}x_2=b_1\\
+a_{21}x_1+a_{22}x_2=b_2\\
+\end{cases}
+$$</div>
+<p>2 使用消元法可以得到上式中<div>x_1</div>和<div>x_2</div>的解</p>
+<div>x_1=(b_1a_{22}-a_{12}b_2)/(a_{11}a_{22}-a_{12}a_{21})</div>
+<div>x_2=(b_2a_{11}-a_{21}b_1)/(a_{11}a_{22}-a_{12}a_{21})</div>
+<p>3 
+$$
 \left|
 \begin{array}{cccc}
 1  &amp;  0   &amp; 0 \<br>

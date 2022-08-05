@@ -40,7 +40,16 @@
       <pubDate>Mon, 20 Jun 2022 18:27:44 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/postgraduate/302%E6%95%B0%E5%AD%A6%E4%BA%8C/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/001_%E8%A1%8C%E5%88%97%E5%BC%8F/</guid>
-      <description>二阶行列式 1 $$ \left| \begin{array}{cccc} 1 &amp;amp; 0 &amp;amp; 0 \ -5 &amp;amp; 2 &amp;amp; 3\ 3 &amp;amp; 3 &amp;amp; 5 \end{array} \right| $$ 2 $ \left[ \begin{array}{cccc} 1 &amp;amp; 2 &amp;amp; \cdots &amp;amp; 4 \ 7 &amp;amp; 6 &amp;amp;{\cdot^{\cdot^{\cdot}}} &amp;amp; 5 \ \vdots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots \ 8 &amp;amp; 9 &amp;amp; \cdots &amp;amp; 0 \ \end{array} \right] $ 3 $$ \left| \begin{array}{cccc} 1 &amp;amp; 0 &amp;amp; 0 \\ -5 &amp;amp; 2 &amp;amp; 3\\ 3 &amp;amp; 3 &amp;amp; 5 \end{array} \right| $$ 4 $\sum_{i=0}^N\int_{a}^{b}g(t,i)\text{d}t$ 5 $$\sum_{i=0}N\int_{a}{b}g(t,i)\text{d}t$$ 6 $$\begin{cases} a_1x+b_1y+c_1z=d_1\ a_2x+b_2y+c_2z=d_2\ a_3x+b_3y+c_3z=d_3\ \end{cases} $$</description>
+      <description>二阶行列式 1 例如以下二元线性方程组 $$\begin{cases} a_{11}x_1+a_{12}x_2=b_1\\ a_{21}x_1+a_{22}x_2=b_2\\ \end{cases} $$ 2 使用消元法可以得到上式中x_1和x_2的解 x_1=(b_1a_{22}-a_{12}b_2)/(a_{11}a_{22}-a_{12}a_{21}) x_2=(b_2a_{11}-a_{21}b_1)/(a_{11}a_{22}-a_{12}a_{21}) 3 $$ \left| \begin{array}{cccc} 1 &amp;amp; 0 &amp;amp; 0 \ -5 &amp;amp; 2 &amp;amp; 3\ 3 &amp;amp; 3 &amp;amp; 5 \end{array} \right| $$ 2 $ \left[ \begin{array}{cccc} 1 &amp;amp; 2 &amp;amp; \cdots &amp;amp; 4 \ 7 &amp;amp; 6 &amp;amp;{\cdot^{\cdot^{\cdot}}} &amp;amp; 5 \ \vdots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots \ 8 &amp;amp; 9 &amp;amp;</description>
+    </item>
+    
+    <item>
+      <title>行列式</title>
+      <link>https://laurel-he.github.io/postgraduate/302%E6%95%B0%E5%AD%A6%E4%BA%8C/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/mathjax/</link>
+      <pubDate>Mon, 20 Jun 2022 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/postgraduate/302%E6%95%B0%E5%AD%A6%E4%BA%8C/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/mathjax/</guid>
+      <description></description>
     </item>
     
   </channel>
