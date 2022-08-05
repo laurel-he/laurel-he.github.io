@@ -48,7 +48,7 @@
 	
     
     
-    <meta name="description" content="二阶行列式 1 例如以下二元线性方程组 $$\begin{cases} a_{11}x_1&#43;a_{12}x_2=b_1\\ a_{21}x_1&#43;a_{22}x_2=b_2\\ \end{cases} $$ 2 使用消元法可以得到上式中x_1和x_2的解 x_1=(b_1a_{22}-a_{12}b_2)/(a_{11}a_{22}-a_{12}a_{21}) x_2=(b_2a_{11}-a_{21}b_1)/(a_{11}a_{22}-a_{12}a_{21}) 3 $$ \left| \begin{array}{cccc} 1 &amp;amp; 0 &amp;amp; 0 \ -5 &amp;amp; 2 &amp;amp; 3\ 3 &amp;amp; 3 &amp;amp; 5 \end{array} \right| $$ 2 $ \left[ \begin{array}{cccc} 1 &amp;amp; 2 &amp;amp; \cdots &amp;amp; 4 \ 7 &amp;amp; 6 &amp;amp;{\cdot^{\cdot^{\cdot}}} &amp;amp; 5 \ \vdots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots \ 8 &amp;amp; 9 &amp;amp;" />
+    <meta name="description" content="二阶行列式 1 例如以下二元线性方程组 $$\begin{cases} a_{11}x_1&#43;a_{12}x_2=b_1\\ a_{21}x_1&#43;a_{22}x_2=b_2\\ \end{cases} $$ 2 使用消元法可以得到上式中\( x_1 \)和\( $$x_2$$ \)的解 x_1=(b_1a_{22}-a_{12}b_2)/(a_{11}a_{22}-a_{12}a_{21}) x_2=(b_2a_{11}-a_{21}b_1)/(a_{11}a_{22}-a_{12}a_{21}) 3 $$ \left| \begin{array}{cccc} 1 &amp;amp; 0 &amp;amp; 0 \ -5 &amp;amp; 2 &amp;amp; 3\ 3 &amp;amp; 3 &amp;amp; 5 \end{array} \right| $$ 2 $ \left[ \begin{array}{cccc} 1 &amp;amp; 2 &amp;amp; \cdots &amp;amp; 4 \ 7 &amp;amp; 6 &amp;amp;{\cdot^{\cdot^{\cdot}}} &amp;amp; 5 \ \vdots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots \" />
     
 
     
@@ -102,7 +102,32 @@
         <a id="menu_icon"><i class="ri-menu-line"></i></a>
     </div>
 </div>
-        <div class="header animated fadeInDown">
+        <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    // Fix <code> tags after MathJax finishes running. This is a
+    // hack to overcome a shortcoming of Markdown. Discussion at
+    // https://github.com/mojombo/jekyll/issues/199
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i &lt; all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+<div class="header animated fadeInDown">
     <div class="site_title_container">
         <div class="site_title">
             <h1>
@@ -151,7 +176,7 @@ a_{11}x_1+a_{12}x_2=b_1\\
 a_{21}x_1+a_{22}x_2=b_2\\
 \end{cases}
 $$</div>
-<p>2 使用消元法可以得到上式中<div>x_1</div>和<div>x_2</div>的解</p>
+<p>2 使用消元法可以得到上式中<code>\( x_1 \)</code>和<code>\( $$x_2$$ \)</code>的解</p>
 <div>x_1=(b_1a_{22}-a_{12}b_2)/(a_{11}a_{22}-a_{12}a_{21})</div>
 <div>x_2=(b_2a_{11}-a_{21}b_1)/(a_{11}a_{22}-a_{12}a_{21})</div>
 <p>3 
@@ -210,6 +235,7 @@ $$</p>
 $$</div>
 <p>9 <br>
 <code>$\sum_{i=0}^N\int_{a}^{b}g(t,i)\text{d}t$</code></p>
+<p>10 asdasd<code>\( $$\sum_{i=0}N\int_{a}{b}g(t,i)\text{d}t$$ \)</code>aaa</p>
 </div>
                     <div class="post_footer">
                         
