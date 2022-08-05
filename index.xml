@@ -6,32 +6,86 @@
     <description>Recent content on xiaoJiao</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 28 Jun 2022 19:27:44 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 02 Aug 2022 21:47:00 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>考研-数据结构-出题范围</title>
+      <link>https://laurel-he.github.io/postgraduate/874%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%BC%E5%90%88/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%87%BA%E9%A2%98%E8%8C%83%E5%9B%B4/</link>
+      <pubDate>Tue, 02 Aug 2022 21:47:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/postgraduate/874%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%BC%E5%90%88/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%87%BA%E9%A2%98%E8%8C%83%E5%9B%B4/</guid>
+      <description>2019 408 计算机专业基础综合 选择题 1 根据式子计算时间复杂度 2 树转化为二叉树，遍历序列 3 树和二叉树的先序、中序、后序遍历，按层遍历 4 哈夫曼编码与哈夫曼树,节点数与符号数计算 5 非空平衡二叉树(AVL)树 6 删除非</description>
+    </item>
+    
+    <item>
+      <title>PostgreSql使用</title>
+      <link>https://laurel-he.github.io/database/postgresql/01use/</link>
+      <pubDate>Tue, 02 Aug 2022 09:47:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/database/postgresql/01use/</guid>
+      <description>参考文档： 官方介绍 官方文档</description>
+    </item>
+    
+    <item>
+      <title>一个普通go项目的流程</title>
+      <link>https://laurel-he.github.io/go/pipeline/</link>
+      <pubDate>Tue, 02 Aug 2022 09:47:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/go/pipeline/</guid>
+      <description>需求概述 假设目前有一个普通的项目，一个图书馆管理系统，后端语言使用go，前端使用react，需要做到前后端分离。 数据库可以使用mongoDB或者mysql等等随便什么开源的库，但明确要求，假设这是一个</description>
+    </item>
+    
+    <item>
+      <title>GRPC学习文档</title>
+      <link>https://laurel-he.github.io/go/basic/grpc/grpc/</link>
+      <pubDate>Wed, 27 Jul 2022 13:47:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/go/basic/grpc/grpc/</guid>
+      <description>What(GRPC是什么)? RPC 定义 要想知道GRPC是什么，首先得知道RPC是什么。 RPC（Remote Procedure Call）— 远程过程调用,它是一种通过网络从远程计算机程序上请求服务，而不需要了解底层网络技术的</description>
+    </item>
+    
+    <item>
+      <title>minBlog系统接受</title>
+      <link>https://laurel-he.github.io/mypro/blog/intro/</link>
+      <pubDate>Wed, 20 Jul 2022 19:40:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/mypro/blog/intro/</guid>
+      <description>介绍 项目背景 （1）系统学习了大约一周多时间的go，加上前段时间在没学习的情况下强行用go写了几个需求，我觉得我需要实际项目练手 （2）我目前既在使用csdn,牛客网的博客系统等，也在使用自建的基于hug</description>
+    </item>
+    
+    <item>
+      <title>建站流程</title>
+      <link>https://laurel-he.github.io/mypro/blog/createweb/</link>
+      <pubDate>Wed, 20 Jul 2022 19:40:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/mypro/blog/createweb/</guid>
+      <description>本文介绍如何建立一个网站，以aliyun为例 域名申请 购买ecs workbench连接需要添加安全组规则 需要将80端口和22端口加入安全组规则</description>
+    </item>
+    
     <item>
       <title>一些基本计算</title>
-      <link>https://laurel-he.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97/</link>
+      <link>https://laurel-he.github.io/base/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97/</link>
       <pubDate>Tue, 28 Jun 2022 19:27:44 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97/</guid>
+      <guid>https://laurel-he.github.io/base/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97/</guid>
       <description>按位与 按位与运算符&amp;quot;&amp;amp;&amp;ldquo;是双目运算符。其功能是参与运算的两数各对应的二进位相与。只有对应的两个二进位均为1时，结果位才为1 ，否则为0。参与运算的数以补码方式出现。 例如：9</description>
     </item>
     
     <item>
       <title>函数与极限</title>
-      <link>https://laurel-he.github.io/%E9%AB%98%E6%95%B0/01_%E5%87%BD%E6%95%B0%E4%B8%8E%E6%9E%81%E9%99%90/</link>
+      <link>https://laurel-he.github.io/postgraduate/302%E6%95%B0%E5%AD%A6%E4%BA%8C/%E9%AB%98%E6%95%B0/02_%E5%87%BD%E6%95%B0%E4%B8%8E%E6%9E%81%E9%99%90/</link>
       <pubDate>Mon, 20 Jun 2022 18:27:44 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/%E9%AB%98%E6%95%B0/01_%E5%87%BD%E6%95%B0%E4%B8%8E%E6%9E%81%E9%99%90/</guid>
+      <guid>https://laurel-he.github.io/postgraduate/302%E6%95%B0%E5%AD%A6%E4%BA%8C/%E9%AB%98%E6%95%B0/02_%E5%87%BD%E6%95%B0%E4%B8%8E%E6%9E%81%E9%99%90/</guid>
       <description>函数 分段函数 自变量在不同的变化范围中，对应法则用不同的式子表示的函数成为分段函数 函数的特性 有界性 函数y=sin(x)在(-∞,+∞)内是有界的 函数y=tan(x)在(-π/2,π/2)内是无界的 单调性</description>
     </item>
     
     <item>
       <title>初等函数</title>
-      <link>https://laurel-he.github.io/%E9%AB%98%E6%95%B0/00_%E5%88%9D%E7%AD%89%E5%87%BD%E6%95%B0/</link>
+      <link>https://laurel-he.github.io/postgraduate/302%E6%95%B0%E5%AD%A6%E4%BA%8C/%E9%AB%98%E6%95%B0/01_%E5%88%9D%E7%AD%89%E5%87%BD%E6%95%B0/</link>
       <pubDate>Mon, 20 Jun 2022 18:27:44 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/%E9%AB%98%E6%95%B0/00_%E5%88%9D%E7%AD%89%E5%87%BD%E6%95%B0/</guid>
-      <description>分类 幂函数 y=x^α,其中α∈R是常数 指数函数 y=α^x, (a&amp;gt;0, a≠1) 如果指数是分数，1/2代表平方根，1/3代表立方根,1/4代表四次方根，以此类推 更复杂的分数，可看错幂乘以分数，例如3/2可看做3*</description>
+      <guid>https://laurel-he.github.io/postgraduate/302%E6%95%B0%E5%AD%A6%E4%BA%8C/%E9%AB%98%E6%95%B0/01_%E5%88%9D%E7%AD%89%E5%87%BD%E6%95%B0/</guid>
+      <description>引用资料 百度百科基本初等函数定义 定义 初等函数是有基本初等函数经过有限次的四则运算和复合运算所得到的函数。 基本初等函数和初等函数在其定义区间内均未连续函数。 不是初等函数的函数，成为非初等函数,如狄利克雷</description>
     </item>
     
     <item>
@@ -41,6 +95,15 @@
       
       <guid>https://laurel-he.github.io/datastructure/%E7%94%B5%E5%AD%90%E7%A7%91%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/01_basic/</guid>
       <description>相关术语 数据 所有能够被计算机识别的符号的集合 数据元素 数据集合的一个个个体 数据对象 具有相同性质的数据元素的组合 数据项 数据结构中讨论的最小结构 数据结构 数据元素极其相互关系，数据结构由一个四元组来表示 Data_Structure = (D,</description>
+    </item>
+    
+    <item>
+      <title>基本概念</title>
+      <link>https://laurel-he.github.io/postgraduate/302%E6%95%B0%E5%AD%A6%E4%BA%8C/%E9%AB%98%E6%95%B0/00_%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</link>
+      <pubDate>Mon, 20 Jun 2022 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/postgraduate/302%E6%95%B0%E5%AD%A6%E4%BA%8C/%E9%AB%98%E6%95%B0/00_%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</guid>
+      <description>太久没有接触到数学相关知识了，这里回忆一些基本概念 函数 函数的近代定义是给定一个数集A，假设其中的元素为x，对A中的元素x施加对应法则f，记作f（x），得到另一数集B，假设B中的元素为y，则y与x之间的</description>
     </item>
     
     <item>
@@ -77,6 +140,15 @@
       
       <guid>https://laurel-he.github.io/datastructure/%E7%94%B5%E5%AD%90%E7%A7%91%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/03_linearlist/</guid>
       <description>基础定义 数据元素存在一对一的关系，特点是数据元素按照某种规定存在一个顺序关系，数据元素需要是同一种类型 ADT ADT List { 数据对象:{a~i|a~i∈ElementSet,i=1,2……n,n&amp;gt;=0} 数据关</description>
+    </item>
+    
+    <item>
+      <title>行列式</title>
+      <link>https://laurel-he.github.io/postgraduate/302%E6%95%B0%E5%AD%A6%E4%BA%8C/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/001_%E8%A1%8C%E5%88%97%E5%BC%8F/</link>
+      <pubDate>Mon, 20 Jun 2022 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/postgraduate/302%E6%95%B0%E5%AD%A6%E4%BA%8C/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/001_%E8%A1%8C%E5%88%97%E5%BC%8F/</guid>
+      <description>二阶行列式 1 $$ \left| \begin{array}{cccc} 1 &amp;amp; 0 &amp;amp; 0 \ -5 &amp;amp; 2 &amp;amp; 3\ 3 &amp;amp; 3 &amp;amp; 5 \end{array} \right| $$ 2 $ \left[ \begin{array}{cccc} 1 &amp;amp; 2 &amp;amp; \cdots &amp;amp; 4 \ 7 &amp;amp; 6 &amp;amp;{\cdot^{\cdot^{\cdot}}} &amp;amp; 5 \ \vdots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots \ 8 &amp;amp; 9 &amp;amp; \cdots &amp;amp; 0 \ \end{array} \right] $ 3 $$ \left| \begin{array}{cccc} 1 &amp;amp; 0 &amp;amp; 0 \\ -5 &amp;amp; 2 &amp;amp; 3\\ 3 &amp;amp; 3 &amp;amp; 5 \end{array} \right| $$ 4 $\sum_{i=0}^N\int_{a}^{b}g(t,i)\text{d}t$ 5 $$\sum_{i=0}N\int_{a}{b}g(t,i)\text{d}t$$ 6 $$\begin{cases} a_1x+b_1y+c_1z=d_1\ a_2x+b_2y+c_2z=d_2\ a_3x+b_3y+c_3z=d_3\ \end{cases} $$</description>
     </item>
     
     <item>
@@ -135,28 +207,28 @@
     
     <item>
       <title>试着制作一台计算机吧</title>
-      <link>https://laurel-he.github.io/learn/howtorunofcomputer/chapter2/</link>
+      <link>https://laurel-he.github.io/base/howtorunofcomputer/chapter2/</link>
       <pubDate>Wed, 27 Apr 2022 13:47:00 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/learn/howtorunofcomputer/chapter2/</guid>
+      <guid>https://laurel-he.github.io/base/howtorunofcomputer/chapter2/</guid>
       <description>热身问题 CPU是什么的缩写 Hz是表示什么的单位 Z80 CPU是多少比特的CPU</description>
     </item>
     
     <item>
       <title>计算机三大原则</title>
-      <link>https://laurel-he.github.io/learn/howtorunofcomputer/chapter1/</link>
+      <link>https://laurel-he.github.io/base/howtorunofcomputer/chapter1/</link>
       <pubDate>Tue, 26 Apr 2022 13:47:00 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/learn/howtorunofcomputer/chapter1/</guid>
+      <guid>https://laurel-he.github.io/base/howtorunofcomputer/chapter1/</guid>
       <description>热身问题 硬件和软件的区别是什么 自行作答 硬件看得见，摸得着，例如cpu，硬盘等等，是真实存在的 软件是通过硬件才能表现出来的，例如运算程序等等 标准答案 软件是一种逻辑的产品，与硬件产品有本质的区别. 硬件是看</description>
     </item>
     
     <item>
       <title>计算机是怎样跑起来的</title>
-      <link>https://laurel-he.github.io/learn/howtorunofcomputer/prelearn/</link>
+      <link>https://laurel-he.github.io/base/howtorunofcomputer/prelearn/</link>
       <pubDate>Tue, 26 Apr 2022 13:47:00 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/learn/howtorunofcomputer/prelearn/</guid>
+      <guid>https://laurel-he.github.io/base/howtorunofcomputer/prelearn/</guid>
       <description>这一系列是对书籍《计算机是怎样跑起来的》的学习笔记。 我为什么要在成为程序员的第四年学习这本“基础”书籍？ 因为我发现我的基础非常薄弱，也许我有幸有一丁点学习技巧，所以让我在实际工作中哪怕遇到不会的问题也</description>
     </item>
     
@@ -176,15 +248,6 @@
       
       <guid>https://laurel-he.github.io/go/test/basictest/</guid>
       <description>*_test.go文件中，三种函数类型 测试函数、基准测试(benchmark)函数、示例函数 测试函数 一个测试函数是以Test为函数名前缀的函数，用于测试程序的一些逻辑行为是否正确； go test命令会调用</description>
-    </item>
-    
-    <item>
-      <title>GRPC学习文档</title>
-      <link>https://laurel-he.github.io/go/basic/grpc/grpc/</link>
-      <pubDate>Thu, 17 Mar 2022 13:47:00 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/go/basic/grpc/grpc/</guid>
-      <description>What(GRPC是什么)? RPC 定义 要想知道GRPC是什么，首先得知道RPC是什么。 RPC（Remote Procedure Call）— 远程过程调用,它是一种通过网络从远程计算机程序上请求服务，而不需要了解底层网络技术的</description>
     </item>
     
     <item>
@@ -270,19 +333,28 @@
     
     <item>
       <title>操作系统（哈工大李治军老师）32讲（全）- 01 概述</title>
-      <link>https://laurel-he.github.io/operatingsystem/learnopesys/summary/</link>
+      <link>https://laurel-he.github.io/postgraduate/874%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%BC%E5%90%88/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/summary/</link>
       <pubDate>Sun, 28 Nov 2021 17:40:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/operatingsystem/learnopesys/summary/</guid>
+      <guid>https://laurel-he.github.io/postgraduate/874%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%BC%E5%90%88/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/summary/</guid>
       <description>来源： 本系列来源于操作系统（哈工大李治军老师）32讲（全）的学习笔记： 操作系统 蓝桥-操作系统练习 操作系统概述 计算机的基本组成： 用计算机这个工具来解决一些实际问题。 操作系统：计算机硬件和应用之间的一层软</description>
     </item>
     
     <item>
-      <title>操作系统（哈工大李治军老师）32讲（全）- 02 操作系统引导</title>
-      <link>https://laurel-he.github.io/operatingsystem/learnopesys/guide/</link>
+      <title>操作系统（哈工大李治军老师）32讲（全）- 01 概述</title>
+      <link>https://laurel-he.github.io/postgraduate/874%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%BC%E5%90%88/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E6%95%99%E6%9D%90_%E6%B1%A4%E5%AD%90%E7%80%9B/01%E7%BB%AA%E8%AE%BA/</link>
       <pubDate>Sun, 28 Nov 2021 17:40:10 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/operatingsystem/learnopesys/guide/</guid>
+      <guid>https://laurel-he.github.io/postgraduate/874%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%BC%E5%90%88/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E6%95%99%E6%9D%90_%E6%B1%A4%E5%AD%90%E7%80%9B/01%E7%BB%AA%E8%AE%BA/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>操作系统（哈工大李治军老师）32讲（全）- 02 操作系统引导</title>
+      <link>https://laurel-he.github.io/postgraduate/874%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%BC%E5%90%88/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/guide/</link>
+      <pubDate>Sun, 28 Nov 2021 17:40:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/postgraduate/874%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%BC%E5%90%88/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/guide/</guid>
       <description>来源： 本系列来源于操作系统（哈工大李治军老师）32讲（全）的学习笔记： 操作系统 蓝桥-操作系统练习 课程目标 了解操作系统提供的接口 操作系统内部操作 思索 计算机如何工作的（取指执行）？ 思索过程-&amp;gt;变成程</description>
     </item>
     
@@ -1443,6 +1515,24 @@ redis-server /etc/redis/redis.conf
     
     <item>
       <title></title>
+      <link>https://laurel-he.github.io/postgraduate/874%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%BC%E5%90%88/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/01main/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/postgraduate/874%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%BC%E5%90%88/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/01main/</guid>
+      <description>树转化为二叉树 从根节点，从上到下： 1 将节点的孩子放在左子树 2 将节点的兄弟放在右子树 AVL树 平衡二叉树：</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://laurel-he.github.io/postgraduate/main/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/postgraduate/main/</guid>
+      <description>川大研究生： ① 101 思想政治理论 ② 204 英语（二） ③ 302 数学（二） ④ 874 计算机科学专业基础综合 874 计算机科学专业基础综合：数据结构与算法分析、操作系统、计算机网络 302 数学（二）高数、线性代数 可招收少干。复试科目：C语</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://laurel-he.github.io/private/2019-02-26/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -1483,7 +1573,7 @@ redis-server /etc/redis/redis.conf
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/private/fit/</guid>
-      <description>title: 减肥 date: 2021-09-29 19:20:10 tags: 减肥 categories: 减肥 阶段 截至时间 时间 详情 1 21-10-09 10d 4-116-58 1 21-10-19 10d 3-113-56.5 1 21-10-29 10d 2-111-55.5 1 21-11-08 10d 1-110-55 1 21-11-18 10d 1-109-54.5 1 21-11-28 10d 1-108-54 1 21-12-08 10d 2-106-53 1 21-12-18 10d 2-104-52 1 21-12-28 10d 3-101-50.5 1 22-01-07 10d 2-99-49.5 1 22-01-17 10d 0.5-98.5-49.25 1 22-01-27 10d 0.5-98-49 1 22-02-06 10d 0-98-49</description>
+      <description>title: 减肥 date: 2022-07-11 19:20:10 tags: 减肥 categories: 减肥 27个周期，每个周期7天，共189天 分为7个阶段 阶段一：调整期 介绍 调整期，7天。 （1）每天按时睡眠(最晚不超过12:30，且一天至少7小时睡眠) （2）按时吃饭 完成情况 2022-</description>
     </item>
     
     <item>
@@ -1529,6 +1619,15 @@ redis-server /etc/redis/redis.conf
       
       <guid>https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/docker/docker/</guid>
       <description>title: docker使用心得 date: 2019-04-24 21:03:10 year: 2019 series: 基础 tags: 使用心得 categories: docker 准备工作 1 前提条件 ubuntu内核版本高于 3.10 uname -r 2 安装docker 本文是基于ubuntu的，基于centos安装路径博客如下： centos windows wget -qO- https://get.docker.com/ | sh 当要以非</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/docker/lnmp/baselnmp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/docker/lnmp/baselnmp/</guid>
+      <description>title: docker搭建基础lnmp环境 date: 2022-04-24 21:03:10 year: 2022 series: 基础 tags: 环境搭建 categories: docker #安装服务和扩展FROMalpine:3.13RUN sed -i &amp;#39;s/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g&amp;#39; /etc/apk/repositories#使用sed工具将字符串dl-cdn</description>
     </item>
     
     <item>

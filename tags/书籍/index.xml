@@ -9,28 +9,28 @@
     <lastBuildDate>Wed, 27 Apr 2022 13:47:00 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/tags/%E4%B9%A6%E7%B1%8D/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>试着制作一台计算机吧</title>
-      <link>https://laurel-he.github.io/learn/howtorunofcomputer/chapter2/</link>
+      <link>https://laurel-he.github.io/base/howtorunofcomputer/chapter2/</link>
       <pubDate>Wed, 27 Apr 2022 13:47:00 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/learn/howtorunofcomputer/chapter2/</guid>
+      <guid>https://laurel-he.github.io/base/howtorunofcomputer/chapter2/</guid>
       <description>热身问题 CPU是什么的缩写 Hz是表示什么的单位 Z80 CPU是多少比特的CPU</description>
     </item>
     
     <item>
       <title>计算机三大原则</title>
-      <link>https://laurel-he.github.io/learn/howtorunofcomputer/chapter1/</link>
+      <link>https://laurel-he.github.io/base/howtorunofcomputer/chapter1/</link>
       <pubDate>Tue, 26 Apr 2022 13:47:00 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/learn/howtorunofcomputer/chapter1/</guid>
+      <guid>https://laurel-he.github.io/base/howtorunofcomputer/chapter1/</guid>
       <description>热身问题 硬件和软件的区别是什么 自行作答 硬件看得见，摸得着，例如cpu，硬盘等等，是真实存在的 软件是通过硬件才能表现出来的，例如运算程序等等 标准答案 软件是一种逻辑的产品，与硬件产品有本质的区别. 硬件是看</description>
     </item>
     
     <item>
       <title>计算机是怎样跑起来的</title>
-      <link>https://laurel-he.github.io/learn/howtorunofcomputer/prelearn/</link>
+      <link>https://laurel-he.github.io/base/howtorunofcomputer/prelearn/</link>
       <pubDate>Tue, 26 Apr 2022 13:47:00 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/learn/howtorunofcomputer/prelearn/</guid>
+      <guid>https://laurel-he.github.io/base/howtorunofcomputer/prelearn/</guid>
       <description>这一系列是对书籍《计算机是怎样跑起来的》的学习笔记。 我为什么要在成为程序员的第四年学习这本“基础”书籍？ 因为我发现我的基础非常薄弱，也许我有幸有一丁点学习技巧，所以让我在实际工作中哪怕遇到不会的问题也</description>
     </item>
     

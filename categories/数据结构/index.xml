@@ -6,7 +6,16 @@
     <description>Recent content in 数据结构 on xiaoJiao</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 20 Jun 2022 18:27:44 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 02 Aug 2022 21:47:00 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>考研-数据结构-出题范围</title>
+      <link>https://laurel-he.github.io/postgraduate/874%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%BC%E5%90%88/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%87%BA%E9%A2%98%E8%8C%83%E5%9B%B4/</link>
+      <pubDate>Tue, 02 Aug 2022 21:47:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/postgraduate/874%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%BC%E5%90%88/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%87%BA%E9%A2%98%E8%8C%83%E5%9B%B4/</guid>
+      <description>2019 408 计算机专业基础综合 选择题 1 根据式子计算时间复杂度 2 树转化为二叉树，遍历序列 3 树和二叉树的先序、中序、后序遍历，按层遍历 4 哈夫曼编码与哈夫曼树,节点数与符号数计算 5 非空平衡二叉树(AVL)树 6 删除非</description>
+    </item>
+    
     <item>
       <title>基本概念</title>
       <link>https://laurel-he.github.io/datastructure/%E7%94%B5%E5%AD%90%E7%A7%91%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/01_basic/</link>

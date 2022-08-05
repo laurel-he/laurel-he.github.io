@@ -6,7 +6,43 @@
     <description>Recent content in go on xiaoJiao</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 25 Apr 2022 13:47:00 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/go/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 02 Aug 2022 09:47:00 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/go/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>一个普通go项目的流程</title>
+      <link>https://laurel-he.github.io/go/pipeline/</link>
+      <pubDate>Tue, 02 Aug 2022 09:47:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/go/pipeline/</guid>
+      <description>需求概述 假设目前有一个普通的项目，一个图书馆管理系统，后端语言使用go，前端使用react，需要做到前后端分离。 数据库可以使用mongoDB或者mysql等等随便什么开源的库，但明确要求，假设这是一个</description>
+    </item>
+    
+    <item>
+      <title>GRPC学习文档</title>
+      <link>https://laurel-he.github.io/go/basic/grpc/grpc/</link>
+      <pubDate>Wed, 27 Jul 2022 13:47:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/go/basic/grpc/grpc/</guid>
+      <description>What(GRPC是什么)? RPC 定义 要想知道GRPC是什么，首先得知道RPC是什么。 RPC（Remote Procedure Call）— 远程过程调用,它是一种通过网络从远程计算机程序上请求服务，而不需要了解底层网络技术的</description>
+    </item>
+    
+    <item>
+      <title>minBlog系统接受</title>
+      <link>https://laurel-he.github.io/mypro/blog/intro/</link>
+      <pubDate>Wed, 20 Jul 2022 19:40:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/mypro/blog/intro/</guid>
+      <description>介绍 项目背景 （1）系统学习了大约一周多时间的go，加上前段时间在没学习的情况下强行用go写了几个需求，我觉得我需要实际项目练手 （2）我目前既在使用csdn,牛客网的博客系统等，也在使用自建的基于hug</description>
+    </item>
+    
+    <item>
+      <title>建站流程</title>
+      <link>https://laurel-he.github.io/mypro/blog/createweb/</link>
+      <pubDate>Wed, 20 Jul 2022 19:40:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/mypro/blog/createweb/</guid>
+      <description>本文介绍如何建立一个网站，以aliyun为例 域名申请 购买ecs workbench连接需要添加安全组规则 需要将80端口和22端口加入安全组规则</description>
+    </item>
+    
     <item>
       <title>测试函数</title>
       <link>https://laurel-he.github.io/go/test/testfunction/</link>
@@ -23,15 +59,6 @@
       
       <guid>https://laurel-he.github.io/go/test/basictest/</guid>
       <description>*_test.go文件中，三种函数类型 测试函数、基准测试(benchmark)函数、示例函数 测试函数 一个测试函数是以Test为函数名前缀的函数，用于测试程序的一些逻辑行为是否正确； go test命令会调用</description>
-    </item>
-    
-    <item>
-      <title>GRPC学习文档</title>
-      <link>https://laurel-he.github.io/go/basic/grpc/grpc/</link>
-      <pubDate>Thu, 17 Mar 2022 13:47:00 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/go/basic/grpc/grpc/</guid>
-      <description>What(GRPC是什么)? RPC 定义 要想知道GRPC是什么，首先得知道RPC是什么。 RPC（Remote Procedure Call）— 远程过程调用,它是一种通过网络从远程计算机程序上请求服务，而不需要了解底层网络技术的</description>
     </item>
     
     <item>

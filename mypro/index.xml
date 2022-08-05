@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MyProes on xiaoJiao</title>
+    <link>https://laurel-he.github.io/mypro/</link>
+    <description>Recent content in MyProes on xiaoJiao</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 20 Jul 2022 19:40:10 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/mypro/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>minBlog系统接受</title>
+      <link>https://laurel-he.github.io/mypro/blog/intro/</link>
+      <pubDate>Wed, 20 Jul 2022 19:40:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/mypro/blog/intro/</guid>
+      <description>介绍 项目背景 （1）系统学习了大约一周多时间的go，加上前段时间在没学习的情况下强行用go写了几个需求，我觉得我需要实际项目练手 （2）我目前既在使用csdn,牛客网的博客系统等，也在使用自建的基于hug</description>
+    </item>
+    
+    <item>
+      <title>建站流程</title>
+      <link>https://laurel-he.github.io/mypro/blog/createweb/</link>
+      <pubDate>Wed, 20 Jul 2022 19:40:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/mypro/blog/createweb/</guid>
+      <description>本文介绍如何建立一个网站，以aliyun为例 域名申请 购买ecs workbench连接需要添加安全组规则 需要将80端口和22端口加入安全组规则</description>
+    </item>
+    
+  </channel>
+</rss>

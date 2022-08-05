@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Postgraduates on xiaoJiao</title>
+    <link>https://laurel-he.github.io/postgraduate/</link>
+    <description>Recent content in Postgraduates on xiaoJiao</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 02 Aug 2022 21:47:00 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/postgraduate/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>考研-数据结构-出题范围</title>
+      <link>https://laurel-he.github.io/postgraduate/874%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%BC%E5%90%88/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%87%BA%E9%A2%98%E8%8C%83%E5%9B%B4/</link>
+      <pubDate>Tue, 02 Aug 2022 21:47:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/postgraduate/874%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%BC%E5%90%88/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%87%BA%E9%A2%98%E8%8C%83%E5%9B%B4/</guid>
+      <description>2019 408 计算机专业基础综合 选择题 1 根据式子计算时间复杂度 2 树转化为二叉树，遍历序列 3 树和二叉树的先序、中序、后序遍历，按层遍历 4 哈夫曼编码与哈夫曼树,节点数与符号数计算 5 非空平衡二叉树(AVL)树 6 删除非</description>
+    </item>
+    
+    <item>
+      <title>函数与极限</title>
+      <link>https://laurel-he.github.io/postgraduate/302%E6%95%B0%E5%AD%A6%E4%BA%8C/%E9%AB%98%E6%95%B0/02_%E5%87%BD%E6%95%B0%E4%B8%8E%E6%9E%81%E9%99%90/</link>
+      <pubDate>Mon, 20 Jun 2022 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/postgraduate/302%E6%95%B0%E5%AD%A6%E4%BA%8C/%E9%AB%98%E6%95%B0/02_%E5%87%BD%E6%95%B0%E4%B8%8E%E6%9E%81%E9%99%90/</guid>
+      <description>函数 分段函数 自变量在不同的变化范围中，对应法则用不同的式子表示的函数成为分段函数 函数的特性 有界性 函数y=sin(x)在(-∞,+∞)内是有界的 函数y=tan(x)在(-π/2,π/2)内是无界的 单调性</description>
+    </item>
+    
+    <item>
+      <title>初等函数</title>
+      <link>https://laurel-he.github.io/postgraduate/302%E6%95%B0%E5%AD%A6%E4%BA%8C/%E9%AB%98%E6%95%B0/01_%E5%88%9D%E7%AD%89%E5%87%BD%E6%95%B0/</link>
+      <pubDate>Mon, 20 Jun 2022 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/postgraduate/302%E6%95%B0%E5%AD%A6%E4%BA%8C/%E9%AB%98%E6%95%B0/01_%E5%88%9D%E7%AD%89%E5%87%BD%E6%95%B0/</guid>
+      <description>引用资料 百度百科基本初等函数定义 定义 初等函数是有基本初等函数经过有限次的四则运算和复合运算所得到的函数。 基本初等函数和初等函数在其定义区间内均未连续函数。 不是初等函数的函数，成为非初等函数,如狄利克雷</description>
+    </item>
+    
+    <item>
+      <title>基本概念</title>
+      <link>https://laurel-he.github.io/postgraduate/302%E6%95%B0%E5%AD%A6%E4%BA%8C/%E9%AB%98%E6%95%B0/00_%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</link>
+      <pubDate>Mon, 20 Jun 2022 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/postgraduate/302%E6%95%B0%E5%AD%A6%E4%BA%8C/%E9%AB%98%E6%95%B0/00_%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</guid>
+      <description>太久没有接触到数学相关知识了，这里回忆一些基本概念 函数 函数的近代定义是给定一个数集A，假设其中的元素为x，对A中的元素x施加对应法则f，记作f（x），得到另一数集B，假设B中的元素为y，则y与x之间的</description>
+    </item>
+    
+    <item>
+      <title>行列式</title>
+      <link>https://laurel-he.github.io/postgraduate/302%E6%95%B0%E5%AD%A6%E4%BA%8C/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/001_%E8%A1%8C%E5%88%97%E5%BC%8F/</link>
+      <pubDate>Mon, 20 Jun 2022 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/postgraduate/302%E6%95%B0%E5%AD%A6%E4%BA%8C/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/001_%E8%A1%8C%E5%88%97%E5%BC%8F/</guid>
+      <description>二阶行列式 1 $$ \left| \begin{array}{cccc} 1 &amp;amp; 0 &amp;amp; 0 \ -5 &amp;amp; 2 &amp;amp; 3\ 3 &amp;amp; 3 &amp;amp; 5 \end{array} \right| $$ 2 $ \left[ \begin{array}{cccc} 1 &amp;amp; 2 &amp;amp; \cdots &amp;amp; 4 \ 7 &amp;amp; 6 &amp;amp;{\cdot^{\cdot^{\cdot}}} &amp;amp; 5 \ \vdots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots \ 8 &amp;amp; 9 &amp;amp; \cdots &amp;amp; 0 \ \end{array} \right] $ 3 $$ \left| \begin{array}{cccc} 1 &amp;amp; 0 &amp;amp; 0 \\ -5 &amp;amp; 2 &amp;amp; 3\\ 3 &amp;amp; 3 &amp;amp; 5 \end{array} \right| $$ 4 $\sum_{i=0}^N\int_{a}^{b}g(t,i)\text{d}t$ 5 $$\sum_{i=0}N\int_{a}{b}g(t,i)\text{d}t$$ 6 $$\begin{cases} a_1x+b_1y+c_1z=d_1\ a_2x+b_2y+c_2z=d_2\ a_3x+b_3y+c_3z=d_3\ \end{cases} $$</description>
+    </item>
+    
+    <item>
+      <title>操作系统（哈工大李治军老师）32讲（全）- 01 概述</title>
+      <link>https://laurel-he.github.io/postgraduate/874%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%BC%E5%90%88/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/summary/</link>
+      <pubDate>Sun, 28 Nov 2021 17:40:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/postgraduate/874%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%BC%E5%90%88/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/summary/</guid>
+      <description>来源： 本系列来源于操作系统（哈工大李治军老师）32讲（全）的学习笔记： 操作系统 蓝桥-操作系统练习 操作系统概述 计算机的基本组成： 用计算机这个工具来解决一些实际问题。 操作系统：计算机硬件和应用之间的一层软</description>
+    </item>
+    
+    <item>
+      <title>操作系统（哈工大李治军老师）32讲（全）- 01 概述</title>
+      <link>https://laurel-he.github.io/postgraduate/874%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%BC%E5%90%88/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E6%95%99%E6%9D%90_%E6%B1%A4%E5%AD%90%E7%80%9B/01%E7%BB%AA%E8%AE%BA/</link>
+      <pubDate>Sun, 28 Nov 2021 17:40:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/postgraduate/874%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%BC%E5%90%88/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E6%95%99%E6%9D%90_%E6%B1%A4%E5%AD%90%E7%80%9B/01%E7%BB%AA%E8%AE%BA/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>操作系统（哈工大李治军老师）32讲（全）- 02 操作系统引导</title>
+      <link>https://laurel-he.github.io/postgraduate/874%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%BC%E5%90%88/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/guide/</link>
+      <pubDate>Sun, 28 Nov 2021 17:40:10 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/postgraduate/874%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%BC%E5%90%88/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/guide/</guid>
+      <description>来源： 本系列来源于操作系统（哈工大李治军老师）32讲（全）的学习笔记： 操作系统 蓝桥-操作系统练习 课程目标 了解操作系统提供的接口 操作系统内部操作 思索 计算机如何工作的（取指执行）？ 思索过程-&amp;gt;变成程</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://laurel-he.github.io/postgraduate/874%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%BC%E5%90%88/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/01main/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/postgraduate/874%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%BC%E5%90%88/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/01main/</guid>
+      <description>树转化为二叉树 从根节点，从上到下： 1 将节点的孩子放在左子树 2 将节点的兄弟放在右子树 AVL树 平衡二叉树：</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://laurel-he.github.io/postgraduate/main/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/postgraduate/main/</guid>
+      <description>川大研究生： ① 101 思想政治理论 ② 204 英语（二） ③ 302 数学（二） ④ 874 计算机科学专业基础综合 874 计算机科学专业基础综合：数据结构与算法分析、操作系统、计算机网络 302 数学（二）高数、线性代数 可招收少干。复试科目：C语</description>
+    </item>
+    
+  </channel>
+</rss>

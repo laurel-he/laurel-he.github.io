@@ -6,11 +6,11 @@
     <description>Recent content in go on xiaoJiao</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 17 Mar 2022 13:47:00 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/series/go/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 27 Jul 2022 13:47:00 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/series/go/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GRPC学习文档</title>
       <link>https://laurel-he.github.io/go/basic/grpc/grpc/</link>
-      <pubDate>Thu, 17 Mar 2022 13:47:00 +0000</pubDate>
+      <pubDate>Wed, 27 Jul 2022 13:47:00 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/go/basic/grpc/grpc/</guid>
       <description>What(GRPC是什么)? RPC 定义 要想知道GRPC是什么，首先得知道RPC是什么。 RPC（Remote Procedure Call）— 远程过程调用,它是一种通过网络从远程计算机程序上请求服务，而不需要了解底层网络技术的</description>

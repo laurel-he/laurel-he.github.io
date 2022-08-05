@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="贺小娇" />
+	
+	
+	
+	<title>操作系统（哈工大李治军老师）32讲（全）- 01 概述 ｜ xiaoJiao</title>
+	
+    
+    
+    <meta name="description" content="来源： 本系列来源于操作系统（哈工大李治军老师）32讲（全）的学习笔记： 操作系统 蓝桥-操作系统练习 操作系统概述 计算机的基本组成： 用计算机这个工具来解决一些实际问题。 操作系统：计算机硬件和应用之间的一层软" />
+    
+
+    
+    
+    <meta name="keywords" content="Hugo, blog, php, go" />
+    
+
+	
+    
+    <link rel="shortcut icon" href="https://laurel-he.github.io/images/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/zozo.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/highlight.css" />
+
+    
+    
+</head>
+
+<body>
+    <div class="main animate__animated animate__fadeInDown">
+        <div class="nav_container animated fadeInDown">
+    <div class="site_nav" id="site_nav">
+        <ul>
+            
+            <li>
+                <a href="/">主页</a>
+            </li>
+            
+            <li>
+                <a href="/categories/">分类</a>
+            </li>
+            
+            <li>
+                <a href="/tags/">标签</a>
+            </li>
+            
+            <li>
+                <a href="/year/">按年</a>
+            </li>
+            
+            <li>
+                <a href="/series/">系列</a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="menu_icon">
+        <a id="menu_icon"><i class="ri-menu-line"></i></a>
+    </div>
+</div>
+        <div class="header animated fadeInDown">
+    <div class="site_title_container">
+        <div class="site_title">
+            <h1>
+                <a href="https://laurel-he.github.io/">
+                    <span>xiaoJiao</span>
+                </a>
+            </h1>
+        </div>
+        <div class="description">
+            <p class="sub_title">贺胖娇的编程之旅......</p>
+            <div class="my_socials">
+                
+                
+                <a href="https://github.com/laurel-he" title="github" target="_blank"><i class="ri-github-fill"></i></a>
+                
+                
+                
+                <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1570306409&amp;site=qq&amp;menu=yes" title="qq" target="_blank"><i class="ri-qq-fill"></i></a>
+                
+                
+                
+                <a href="https://stackoverflow.com/users/9809769/laurel-he" title="stack-overflow" target="_blank"><i class="ri-stack-overflow-fill"></i></a>
+                
+                
+                
+                <a href="https://weibo.com/u/3783884100" title="weibo" target="_blank"><i class="ri-weibo-fill"></i></a>
+                
+                
+                <a href="https://laurel-he.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
+                        class="ri-rss-fill"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="content">
+            <div class="post_page">
+                <div class="post animate__animated animate__fadeInDown">
+                    <div class="post_title post_detail_title">
+                        <h2><a href='/postgraduate/874%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%BC%E5%90%88/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/summary/'>操作系统（哈工大李治军老师）32讲（全）- 01 概述</a></h2>
+                        <span class="date">2021.11.28</span>
+                    </div>
+                    <div class="post_content markdown"><p>来源： <br>
+本系列来源于操作系统（哈工大李治军老师）32讲（全）的学习笔记： <br>
+<a href="https://www.lanqiao.cn/courses/115/learning/?id=374">操作系统</a> <br>
+<a href="https://www.lanqiao.cn/courses/115/learning/?id=374">蓝桥-操作系统练习</a></p>
+<h1 id="操作系统概述">操作系统概述</h1>
+<p>计算机的基本组成： <br>
+
+
+<div class="fancybox">
+    <a data-fancybox="gallery" href="https://laurel-he.github.io/images/linux/computer.png" data-caption="">
+        <img src="https://laurel-he.github.io/images/linux/computer.png" />
+    </a>
+</div>
+用计算机这个工具来解决一些实际问题。 <br>
+操作系统：计算机硬件和应用之间的一层软件，方便使用硬件：如cpu，内存，终端，磁盘，网络，电源，多cpu</p>
+<h2 id="操作系统课程要学些什么">操作系统课程要学些什么</h2>
+
+
+<div class="fancybox">
+    <a data-fancybox="gallery" href="https://laurel-he.github.io/images/linux/2_1.png" data-caption="">
+        <img src="https://laurel-he.github.io/images/linux/2_1.png" />
+    </a>
+</div>
+<h2 id="课程目标">课程目标</h2>
+<p>能改操作系统，四个实验： <br>
+实验一：扩展线程：实现线程调度 <br>
+实验二：实现系统调用：将整个接口剥掉，添加
+实验三：实现虚存管理：扩展实现内存管理 <br>
+实验四：扩展文件系统：扩展实现一个文件管理</p>
+<h2 id="实验楼题目">实验楼题目</h2>
+<p><a href="http://www.shiyanlou.com/courses/115">http://www.shiyanlou.com/courses/115</a> <br>
+完成其中的实验项目一：熟悉实验环境。 <br>
+基本命令：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># 环境  hit-oslab 集成环境    </span>
+<span class="c1"># 安装位置 /home/shiyanlou/    </span>
+<span class="c1"># 编译器：GCC    </span>
+<span class="c1"># 调试器：GDB 调试器    </span>
+
+<span class="c1"># 解压到指定目录</span>
+tar -zxvf hit-oslab-linux-20110823.tar.gz <span class="se">\
+</span><span class="se"></span>  -C /home/shiyanlou/
+
+<span class="c1"># 编译内核</span>
+<span class="nb">cd</span> ./linux-0.11/
+make
+
+<span class="c1"># 在bochs中运行编译好的内核</span>
+<span class="c1"># 注意是在上层目录</span>
+<span class="c1"># 刚刚编译是在 oslab/linux-0.11/ 文件夹下</span>
+$ <span class="nb">cd</span> ~/oslab/
+<span class="c1"># 执行 run 脚本</span>
+$ ./run
+</code></pre></div><p>汇编级调试：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># 确认在 oslab 目录下</span>
+<span class="nb">cd</span> ~/oslab/
+
+<span class="c1"># 运行脚本前确定已经关闭刚刚运行的 Bochs</span>
+./dbg-asm
+</code></pre></div><p>C语言级调试：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># 首先执行</span>
+<span class="nb">cd</span> ~/oslab
+./dbg-c
+
+<span class="c1"># 再打开一个终端窗口，执行</span>
+<span class="nb">cd</span> ~/oslab
+./rungdb
+</code></pre></div><h3 id="文件交换">文件交换</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># 启动挂载脚本</span>
+<span class="nb">cd</span> ~/oslab/
+sudo ./mount-hdc
+
+<span class="c1"># 进入挂载到 Ubuntu 上的目录</span>
+<span class="nb">cd</span> ~/oslab/hdc
+<span class="c1"># 查看内容</span>
+ls -al
+
+<span class="c1"># 读写完毕后，卸载系统</span>
+<span class="nb">cd</span> ~/oslab/
+<span class="c1"># 卸载</span>
+sudo umount hdc
+</code></pre></div><p>注意 1：不要在 0.11 内核运行的时候 mount 镜像文件，否则可能会损坏文件系统。同理，也不要在已经 mount 的时候运行 0.11 内核。</p>
+<p>注意 2：在关闭 Bochs 之前，需要先在 0.11 的命令行运行 “sync”，确保所有缓存数据都存盘后，再关闭 Bochs。</p>
+</div>
+                    <div class="post_footer">
+                        
+                        <div class="meta">
+                            <div class="info">
+                                <span class="field tags">
+                                    <i class="ri-stack-line"></i>
+                                    
+                                    <a href="https://laurel-he.github.io/tags/%E5%AD%A6%E4%B9%A0/">学习</a>
+                                    
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                
+                
+<div class="doc_comments">
+    <div class="comments_block_title">发表评论</div>
+    <div id="vcomments"></div>
+</div>
+
+<link rel="stylesheet" href="https://laurel-he.github.io/css/comments.css" />
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
+<script type="text/javascript">
+    new Valine({
+        el: '#vcomments',
+        appId: 'SWEItAag34n7U5AR3T95AhRG-gzGzoHsz',
+        appKey: 'zAM901B4LKIxfrnTb7ie5e5K',
+        placeholder: '在此输入评论...',
+        visitor: 'true',
+    })
+</script>
+                
+            </div>
+        </div>
+    </div>
+    <a id="back_to_top" href="#" class="back_to_top"><i class="ri-arrow-up-s-line"></i></a>
+    <footer class="footer">
+    <div class="powered_by">
+        <a href="https://varkai.com">Designed by VarKai,</a>
+        <a href="http://www.gohugo.io/">Proudly published with Hugo</a>
+    </div>
+
+    <div class="footer_slogan">
+        <span>绝知此事要躬行</span>
+    </div>
+</footer>
+    <script src="https://laurel-he.github.io/js/jquery-3.5.1.min.js"></script>
+<link href="https://laurel-he.github.io/css/fancybox.min.css" rel="stylesheet">
+<script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
+<script src="https://laurel-he.github.io/js/zozo.js"></script>
+
+
+
+
+</body>
+
+</html>

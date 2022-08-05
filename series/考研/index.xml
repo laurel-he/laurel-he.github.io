@@ -9,20 +9,38 @@
     <lastBuildDate>Mon, 20 Jun 2022 18:27:44 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/series/%E8%80%83%E7%A0%94/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>函数与极限</title>
-      <link>https://laurel-he.github.io/%E9%AB%98%E6%95%B0/01_%E5%87%BD%E6%95%B0%E4%B8%8E%E6%9E%81%E9%99%90/</link>
+      <link>https://laurel-he.github.io/postgraduate/302%E6%95%B0%E5%AD%A6%E4%BA%8C/%E9%AB%98%E6%95%B0/02_%E5%87%BD%E6%95%B0%E4%B8%8E%E6%9E%81%E9%99%90/</link>
       <pubDate>Mon, 20 Jun 2022 18:27:44 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/%E9%AB%98%E6%95%B0/01_%E5%87%BD%E6%95%B0%E4%B8%8E%E6%9E%81%E9%99%90/</guid>
+      <guid>https://laurel-he.github.io/postgraduate/302%E6%95%B0%E5%AD%A6%E4%BA%8C/%E9%AB%98%E6%95%B0/02_%E5%87%BD%E6%95%B0%E4%B8%8E%E6%9E%81%E9%99%90/</guid>
       <description>函数 分段函数 自变量在不同的变化范围中，对应法则用不同的式子表示的函数成为分段函数 函数的特性 有界性 函数y=sin(x)在(-∞,+∞)内是有界的 函数y=tan(x)在(-π/2,π/2)内是无界的 单调性</description>
     </item>
     
     <item>
       <title>初等函数</title>
-      <link>https://laurel-he.github.io/%E9%AB%98%E6%95%B0/00_%E5%88%9D%E7%AD%89%E5%87%BD%E6%95%B0/</link>
+      <link>https://laurel-he.github.io/postgraduate/302%E6%95%B0%E5%AD%A6%E4%BA%8C/%E9%AB%98%E6%95%B0/01_%E5%88%9D%E7%AD%89%E5%87%BD%E6%95%B0/</link>
       <pubDate>Mon, 20 Jun 2022 18:27:44 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/%E9%AB%98%E6%95%B0/00_%E5%88%9D%E7%AD%89%E5%87%BD%E6%95%B0/</guid>
-      <description>分类 幂函数 y=x^α,其中α∈R是常数 指数函数 y=α^x, (a&amp;gt;0, a≠1) 如果指数是分数，1/2代表平方根，1/3代表立方根,1/4代表四次方根，以此类推 更复杂的分数，可看错幂乘以分数，例如3/2可看做3*</description>
+      <guid>https://laurel-he.github.io/postgraduate/302%E6%95%B0%E5%AD%A6%E4%BA%8C/%E9%AB%98%E6%95%B0/01_%E5%88%9D%E7%AD%89%E5%87%BD%E6%95%B0/</guid>
+      <description>引用资料 百度百科基本初等函数定义 定义 初等函数是有基本初等函数经过有限次的四则运算和复合运算所得到的函数。 基本初等函数和初等函数在其定义区间内均未连续函数。 不是初等函数的函数，成为非初等函数,如狄利克雷</description>
+    </item>
+    
+    <item>
+      <title>基本概念</title>
+      <link>https://laurel-he.github.io/postgraduate/302%E6%95%B0%E5%AD%A6%E4%BA%8C/%E9%AB%98%E6%95%B0/00_%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</link>
+      <pubDate>Mon, 20 Jun 2022 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/postgraduate/302%E6%95%B0%E5%AD%A6%E4%BA%8C/%E9%AB%98%E6%95%B0/00_%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</guid>
+      <description>太久没有接触到数学相关知识了，这里回忆一些基本概念 函数 函数的近代定义是给定一个数集A，假设其中的元素为x，对A中的元素x施加对应法则f，记作f（x），得到另一数集B，假设B中的元素为y，则y与x之间的</description>
+    </item>
+    
+    <item>
+      <title>行列式</title>
+      <link>https://laurel-he.github.io/postgraduate/302%E6%95%B0%E5%AD%A6%E4%BA%8C/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/001_%E8%A1%8C%E5%88%97%E5%BC%8F/</link>
+      <pubDate>Mon, 20 Jun 2022 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/postgraduate/302%E6%95%B0%E5%AD%A6%E4%BA%8C/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/001_%E8%A1%8C%E5%88%97%E5%BC%8F/</guid>
+      <description>二阶行列式 1 $$ \left| \begin{array}{cccc} 1 &amp;amp; 0 &amp;amp; 0 \ -5 &amp;amp; 2 &amp;amp; 3\ 3 &amp;amp; 3 &amp;amp; 5 \end{array} \right| $$ 2 $ \left[ \begin{array}{cccc} 1 &amp;amp; 2 &amp;amp; \cdots &amp;amp; 4 \ 7 &amp;amp; 6 &amp;amp;{\cdot^{\cdot^{\cdot}}} &amp;amp; 5 \ \vdots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots \ 8 &amp;amp; 9 &amp;amp; \cdots &amp;amp; 0 \ \end{array} \right] $ 3 $$ \left| \begin{array}{cccc} 1 &amp;amp; 0 &amp;amp; 0 \\ -5 &amp;amp; 2 &amp;amp; 3\\ 3 &amp;amp; 3 &amp;amp; 5 \end{array} \right| $$ 4 $\sum_{i=0}^N\int_{a}^{b}g(t,i)\text{d}t$ 5 $$\sum_{i=0}N\int_{a}{b}g(t,i)\text{d}t$$ 6 $$\begin{cases} a_1x+b_1y+c_1z=d_1\ a_2x+b_2y+c_2z=d_2\ a_3x+b_3y+c_3z=d_3\ \end{cases} $$</description>
     </item>
     
   </channel>

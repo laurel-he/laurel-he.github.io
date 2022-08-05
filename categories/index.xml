@@ -6,7 +6,34 @@
     <description>Recent content in Categories on xiaoJiao</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 28 Jun 2022 19:27:44 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 02 Aug 2022 21:47:00 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>数据结构</title>
+      <link>https://laurel-he.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
+      <pubDate>Tue, 02 Aug 2022 21:47:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>go</title>
+      <link>https://laurel-he.github.io/categories/go/</link>
+      <pubDate>Tue, 02 Aug 2022 09:47:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/categories/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PostgreSql</title>
+      <link>https://laurel-he.github.io/categories/postgresql/</link>
+      <pubDate>Tue, 02 Aug 2022 09:47:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/categories/postgresql/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>计算机组成原理</title>
       <link>https://laurel-he.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/</link>
@@ -26,11 +53,11 @@
     </item>
     
     <item>
-      <title>数据结构</title>
-      <link>https://laurel-he.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
+      <title>线性代数</title>
+      <link>https://laurel-he.github.io/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/</link>
       <pubDate>Mon, 20 Jun 2022 18:27:44 +0000</pubDate>
       
-      <guid>https://laurel-he.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</guid>
+      <guid>https://laurel-he.github.io/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/</guid>
       <description></description>
     </item>
     
@@ -76,15 +103,6 @@
       <pubDate>Wed, 27 Apr 2022 13:47:00 +0000</pubDate>
       
       <guid>https://laurel-he.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%98%AF%E6%80%8E%E6%A0%B7%E8%B7%91%E8%B5%B7%E6%9D%A5%E7%9A%84/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>go</title>
-      <link>https://laurel-he.github.io/categories/go/</link>
-      <pubDate>Mon, 25 Apr 2022 13:47:00 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/categories/go/</guid>
       <description></description>
     </item>
     

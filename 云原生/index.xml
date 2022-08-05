@@ -63,6 +63,15 @@
     
     <item>
       <title></title>
+      <link>https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/docker/lnmp/baselnmp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/docker/lnmp/baselnmp/</guid>
+      <description>title: docker搭建基础lnmp环境 date: 2022-04-24 21:03:10 year: 2022 series: 基础 tags: 环境搭建 categories: docker #安装服务和扩展FROMalpine:3.13RUN sed -i &amp;#39;s/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g&amp;#39; /etc/apk/repositories#使用sed工具将字符串dl-cdn</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://laurel-he.github.io/%E4%BA%91%E5%8E%9F%E7%94%9F/docker/wsl_docker/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       

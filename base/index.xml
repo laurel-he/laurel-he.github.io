@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>bases on xiaoJiao</title>
+    <link>https://laurel-he.github.io/base/</link>
+    <description>Recent content in bases on xiaoJiao</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 28 Jun 2022 19:27:44 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/base/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>一些基本计算</title>
+      <link>https://laurel-he.github.io/base/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97/</link>
+      <pubDate>Tue, 28 Jun 2022 19:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/base/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97/</guid>
+      <description>按位与 按位与运算符&amp;quot;&amp;amp;&amp;ldquo;是双目运算符。其功能是参与运算的两数各对应的二进位相与。只有对应的两个二进位均为1时，结果位才为1 ，否则为0。参与运算的数以补码方式出现。 例如：9</description>
+    </item>
+    
+    <item>
+      <title>试着制作一台计算机吧</title>
+      <link>https://laurel-he.github.io/base/howtorunofcomputer/chapter2/</link>
+      <pubDate>Wed, 27 Apr 2022 13:47:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/base/howtorunofcomputer/chapter2/</guid>
+      <description>热身问题 CPU是什么的缩写 Hz是表示什么的单位 Z80 CPU是多少比特的CPU</description>
+    </item>
+    
+    <item>
+      <title>计算机三大原则</title>
+      <link>https://laurel-he.github.io/base/howtorunofcomputer/chapter1/</link>
+      <pubDate>Tue, 26 Apr 2022 13:47:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/base/howtorunofcomputer/chapter1/</guid>
+      <description>热身问题 硬件和软件的区别是什么 自行作答 硬件看得见，摸得着，例如cpu，硬盘等等，是真实存在的 软件是通过硬件才能表现出来的，例如运算程序等等 标准答案 软件是一种逻辑的产品，与硬件产品有本质的区别. 硬件是看</description>
+    </item>
+    
+    <item>
+      <title>计算机是怎样跑起来的</title>
+      <link>https://laurel-he.github.io/base/howtorunofcomputer/prelearn/</link>
+      <pubDate>Tue, 26 Apr 2022 13:47:00 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/base/howtorunofcomputer/prelearn/</guid>
+      <description>这一系列是对书籍《计算机是怎样跑起来的》的学习笔记。 我为什么要在成为程序员的第四年学习这本“基础”书籍？ 因为我发现我的基础非常薄弱，也许我有幸有一丁点学习技巧，所以让我在实际工作中哪怕遇到不会的问题也</description>
+    </item>
+    
+  </channel>
+</rss>

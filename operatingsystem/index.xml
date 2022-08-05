@@ -17,24 +17,6 @@
     </item>
     
     <item>
-      <title>操作系统（哈工大李治军老师）32讲（全）- 01 概述</title>
-      <link>https://laurel-he.github.io/operatingsystem/learnopesys/summary/</link>
-      <pubDate>Sun, 28 Nov 2021 17:40:10 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/operatingsystem/learnopesys/summary/</guid>
-      <description>来源： 本系列来源于操作系统（哈工大李治军老师）32讲（全）的学习笔记： 操作系统 蓝桥-操作系统练习 操作系统概述 计算机的基本组成： 用计算机这个工具来解决一些实际问题。 操作系统：计算机硬件和应用之间的一层软</description>
-    </item>
-    
-    <item>
-      <title>操作系统（哈工大李治军老师）32讲（全）- 02 操作系统引导</title>
-      <link>https://laurel-he.github.io/operatingsystem/learnopesys/guide/</link>
-      <pubDate>Sun, 28 Nov 2021 17:40:10 +0000</pubDate>
-      
-      <guid>https://laurel-he.github.io/operatingsystem/learnopesys/guide/</guid>
-      <description>来源： 本系列来源于操作系统（哈工大李治军老师）32讲（全）的学习笔记： 操作系统 蓝桥-操作系统练习 课程目标 了解操作系统提供的接口 操作系统内部操作 思索 计算机如何工作的（取指执行）？ 思索过程-&amp;gt;变成程</description>
-    </item>
-    
-    <item>
       <title>操作系统（1）-基础和vim操作</title>
       <link>https://laurel-he.github.io/operatingsystem/opratingsystem_01/</link>
       <pubDate>Tue, 20 Jul 2021 16:34:10 +0000</pubDate>
