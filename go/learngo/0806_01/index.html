@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <script type="text/javascript"
+        async
+        src="https://cdnjs.cloudflare.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [['$','$']],
+            displayMath: [['$$','$$']],
+            processEscapes: true,
+            processEnvironments: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            TeX: { equationNumbers: { autoNumber: "AMS" },
+                extensions: ["AMSmath.js", "AMSsymbols.js"] }
+        }
+    });
+
+    MathJax.Hub.Queue(function() {
+        
+        
+        
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i = 0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<style>
+    code.has-jax {
+        font: inherit;
+        font-size: 100%;
+        background: inherit;
+        border: inherit;
+        color: #515151;
+    }
+</style>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="贺小娇" />
+	
+	
+	
+	<title>学习go_20220806_01 ｜ xiaoJiao</title>
+	
+    
+    
+    <meta name="description" content="go语言基础 介绍 专为并发而生，编译型语言，强类型语言。 语法简洁：学习曲线平缓。 代码风格统一，开发效率高。 特点 25个关键字，支持复合不支持继承。 基本程序结构 应用程序入口，必须是main包的main方法，" />
+    
+
+    
+    
+    <meta name="keywords" content="Hugo, blog, php, go" />
+    
+
+	
+    
+    <link rel="shortcut icon" href="https://laurel-he.github.io/images/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/zozo.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/highlight.css" />
+
+    
+    
+</head>
+
+<body>
+    <div class="main animate__animated animate__fadeInDown">
+        <div class="nav_container animated fadeInDown">
+    <div class="site_nav" id="site_nav">
+        <ul>
+            
+            <li>
+                <a href="/">主页</a>
+            </li>
+            
+            <li>
+                <a href="/categories/">分类</a>
+            </li>
+            
+            <li>
+                <a href="/tags/">标签</a>
+            </li>
+            
+            <li>
+                <a href="/year/">按年</a>
+            </li>
+            
+            <li>
+                <a href="/series/">系列</a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="menu_icon">
+        <a id="menu_icon"><i class="ri-menu-line"></i></a>
+    </div>
+</div>
+        
+<div class="header animated fadeInDown">
+    <div class="site_title_container">
+        <div class="site_title">
+            <h1>
+                <a href="https://laurel-he.github.io/">
+                    <span>xiaoJiao</span>
+                </a>
+            </h1>
+        </div>
+        <div class="description">
+            <p class="sub_title">贺胖娇的编程之旅......</p>
+            <div class="my_socials">
+                
+                
+                <a href="https://github.com/laurel-he" title="github" target="_blank"><i class="ri-github-fill"></i></a>
+                
+                
+                
+                <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1570306409&amp;site=qq&amp;menu=yes" title="qq" target="_blank"><i class="ri-qq-fill"></i></a>
+                
+                
+                
+                <a href="https://stackoverflow.com/users/9809769/laurel-he" title="stack-overflow" target="_blank"><i class="ri-stack-overflow-fill"></i></a>
+                
+                
+                
+                <a href="https://weibo.com/u/3783884100" title="weibo" target="_blank"><i class="ri-weibo-fill"></i></a>
+                
+                
+                <a href="https://laurel-he.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
+                        class="ri-rss-fill"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="content">
+            <div class="post_page">
+                <div class="post animate__animated animate__fadeInDown">
+                    <div class="post_title post_detail_title">
+                        <h2><a href='/go/learngo/0806_01/'>学习go_20220806_01</a></h2>
+                        <span class="date">2022.08.06</span>
+                    </div>
+                    <div class="post_content markdown"><h1 id="go语言基础">go语言基础</h1>
+<h2 id="介绍">介绍</h2>
+<p>专为并发而生，编译型语言，强类型语言。 <br>
+语法简洁：学习曲线平缓。 <br>
+代码风格统一，开发效率高。</p>
+<h2 id="特点">特点</h2>
+<p>25个关键字，支持复合不支持继承。</p>
+<h2 id="基本程序结构">基本程序结构</h2>
+<p>应用程序入口，必须是main包的main方法，文件名不一定是main</p>
+<h3 id="与其他编程语言的差异">与其他编程语言的差异</h3>
+<p>GO中main函数不支持任何返回值 <br>
+通过os.Exit来返回状态</p>
+<h4 id="示例testgo">示例：test.go</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="p">(</span>
+	<span class="s">&#34;fmt&#34;</span>
+	<span class="s">&#34;os&#34;</span>
+<span class="p">)</span>
+
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Args</span><span class="p">)</span>
+	<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Args</span><span class="p">)</span> <span class="p">&gt;</span> <span class="mi">1</span> <span class="p">{</span>
+		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;os args&#34;</span><span class="p">,</span> <span class="nx">os</span><span class="p">.</span><span class="nx">Args</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+	<span class="p">}</span>
+	<span class="nx">os</span><span class="p">.</span><span class="nf">Exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div><p>执行golang程序：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">go run test.go // 直接运行
+go build test.go // 编译
+go run test.go 123 456 789 //带参数:os.Args
+echo $? //输出上次运行结果，例如以上示例，exit(0)，输出0，其他值输出1
+</code></pre></div><h3 id="编写测试程序">编写测试程序</h3>
+<p>_test.go结尾的文件，方法Test开头，使用testing包的T注入参数，例如：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="p">(</span>
+	<span class="s">&#34;testing&#34;</span>
+<span class="p">)</span>
+
+<span class="kd">func</span> <span class="nf">TestEcho</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
+	<span class="kd">var</span> <span class="nx">a</span> <span class="kt">int</span>
+	<span class="nx">t</span><span class="p">.</span><span class="nf">Logf</span><span class="p">(</span><span class="s">&#34;the value of a is: %d&#34;</span><span class="p">,</span> <span class="nx">a</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div><h3 id="快速设置连续值">快速设置连续值</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="p">(</span>
+	<span class="s">&#34;testing&#34;</span>
+<span class="p">)</span>
+
+<span class="kd">const</span> <span class="p">(</span>
+	<span class="nx">Monday</span> <span class="p">=</span> <span class="kc">iota</span> <span class="o">+</span> <span class="mi">1</span>
+	<span class="nx">Tuesday</span>
+	<span class="nx">Wednesday</span>
+	<span class="nx">Thursday</span>
+	<span class="nx">Friday</span>
+	<span class="nx">Saturday</span>
+	<span class="nx">Sunday</span>
+<span class="p">)</span>
+
+<span class="kd">const</span> <span class="p">(</span>
+	<span class="nx">Open</span> <span class="p">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="kc">iota</span>
+	<span class="nx">Close</span>
+	<span class="nx">Pending</span>
+<span class="p">)</span>
+
+<span class="kd">func</span> <span class="nf">TestEcho</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
+	<span class="kd">var</span> <span class="nx">a</span> <span class="kt">int</span>
+	<span class="nx">t</span><span class="p">.</span><span class="nf">Logf</span><span class="p">(</span><span class="s">&#34;the value of a is: %d\n&#34;</span><span class="p">,</span> <span class="nx">a</span><span class="p">)</span>                 <span class="c1">// 0
+</span><span class="c1"></span>	<span class="nx">t</span><span class="p">.</span><span class="nf">Logf</span><span class="p">(</span><span class="s">&#34;the value of Monday is: %d\n&#34;</span><span class="p">,</span> <span class="nx">Monday</span><span class="p">)</span>       <span class="c1">//1
+</span><span class="c1"></span>	<span class="nx">t</span><span class="p">.</span><span class="nf">Logf</span><span class="p">(</span><span class="s">&#34;the value of Tuesday is: %d\n&#34;</span><span class="p">,</span> <span class="nx">Tuesday</span><span class="p">)</span>     <span class="c1">//2
+</span><span class="c1"></span>	<span class="nx">t</span><span class="p">.</span><span class="nf">Logf</span><span class="p">(</span><span class="s">&#34;the value of Wednesday is: %d\n&#34;</span><span class="p">,</span> <span class="nx">Wednesday</span><span class="p">)</span> <span class="c1">//3
+</span><span class="c1"></span>	<span class="nx">t</span><span class="p">.</span><span class="nf">Logf</span><span class="p">(</span><span class="s">&#34;the value of Thursday is: %d\n&#34;</span><span class="p">,</span> <span class="nx">Thursday</span><span class="p">)</span>   <span class="c1">//4
+</span><span class="c1"></span>	<span class="nx">t</span><span class="p">.</span><span class="nf">Logf</span><span class="p">(</span><span class="s">&#34;the value of Friday is: %d\n&#34;</span><span class="p">,</span> <span class="nx">Friday</span><span class="p">)</span>       <span class="c1">//5
+</span><span class="c1"></span>	<span class="nx">t</span><span class="p">.</span><span class="nf">Logf</span><span class="p">(</span><span class="s">&#34;the value of Saturday is: %d\n&#34;</span><span class="p">,</span> <span class="nx">Saturday</span><span class="p">)</span>   <span class="c1">//6
+</span><span class="c1"></span>	<span class="nx">t</span><span class="p">.</span><span class="nf">Logf</span><span class="p">(</span><span class="s">&#34;the value of Sunday is: %d\n&#34;</span><span class="p">,</span> <span class="nx">Sunday</span><span class="p">)</span>       <span class="c1">//7
+</span><span class="c1"></span>
+	<span class="nx">t</span><span class="p">.</span><span class="nf">Logf</span><span class="p">(</span><span class="s">&#34;the value of Open is: %d\n&#34;</span><span class="p">,</span> <span class="nx">Open</span><span class="p">)</span>       <span class="c1">// 1
+</span><span class="c1"></span>	<span class="nx">t</span><span class="p">.</span><span class="nf">Logf</span><span class="p">(</span><span class="s">&#34;the value of Close is: %d\n&#34;</span><span class="p">,</span> <span class="nx">Close</span><span class="p">)</span>     <span class="c1">//2
+</span><span class="c1"></span>	<span class="nx">t</span><span class="p">.</span><span class="nf">Logf</span><span class="p">(</span><span class="s">&#34;the value of Pending is: %d\n&#34;</span><span class="p">,</span> <span class="nx">Pending</span><span class="p">)</span> <span class="c1">//4
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></div><p>iota是以0初始值0开始的自增值，左移代表 y=x^2 y=x &laquo; 1</p>
+<h2 id="基本数据类型">基本数据类型</h2>
+<table>
+<thead>
+<tr>
+<th>数据类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bool</td>
+</tr>
+<tr>
+<td>string</td>
+</tr>
+<tr>
+<td>int int8 int16 int32 int64</td>
+</tr>
+<tr>
+<td>uint uint8 uint16 uint32 uint64 uintptr</td>
+</tr>
+<tr>
+<td>byte // alias for uint8</td>
+</tr>
+<tr>
+<td>rune // alias for int32,represents a Unicode code point</td>
+</tr>
+<tr>
+<td>float32 float64</td>
+</tr>
+<tr>
+<td>complex64 complex128</td>
+</tr>
+</tbody>
+</table>
+<h3 id="int和uint以及int和int8等等的区别">int和uint，以及int和int8等等的区别</h3>
+<p>int和机器本身有关，例如32位系统，那么int占4个字节，64位系统，int占8字节 <br>
+以64位系统为例，各种int所占字节为： <br>
+int // 8 <br>
+int8 // 1 <br>
+int16 //2 <br>
+int32 //4 <br>
+int64 //8 <br>
+一个字节是8位，可以理解为int后的数字除以8，得到对应的字节数。</p>
+<h4 id="扩展知识表示范围">扩展知识：表示范围</h4>
+<p>int8:-128~127 <br>
+分析：int8代表8位int,也就是一个字节。其中一位符号位，7位二进制位，那么范围是：-2^7~2^7-1 <br>
+uint8:2^8=256</p>
+<h4 id="byte和rune">byte和rune</h4>
+<p>byte （实际上是 uint8 的别名），代表 UTF-8 字符串 的 单个 字节的值，用来储存ASCII码，表示一个ASCII码字符 <br>
+une（实际上是int32），代表单个 Unicode字符，常用来处理unicode或utf-8字符（一切字符），就是rune的使用范围更大</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="p">(</span>
+	<span class="s">&#34;testing&#34;</span>
+	<span class="s">&#34;unsafe&#34;</span>
+<span class="p">)</span>
+
+<span class="kd">func</span> <span class="nf">TestEcho</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
+	<span class="c1">//testString := &#34;testStrings&#34;
+</span><span class="c1"></span>
+	<span class="nx">sliceByteStr1</span> <span class="o">:=</span> <span class="p">[]</span><span class="nb">uint8</span><span class="p">(</span><span class="s">&#34;测试abc123&#34;</span><span class="p">)</span> <span class="c1">// 或者[]byte(&#34;测试abc123&#34;)
+</span><span class="c1"></span>	<span class="nx">sliceRuneStr1</span> <span class="o">:=</span> <span class="p">[]</span><span class="nb">int32</span><span class="p">(</span><span class="s">&#34;测试abc123&#34;</span><span class="p">)</span> <span class="c1">// 或者[]rune(&#34;测试abc123&#34;)
+</span><span class="c1"></span>
+	<span class="nx">t</span><span class="p">.</span><span class="nf">Logf</span><span class="p">(</span><span class="s">&#34;the size of sliceByteStr1 is: %d\n&#34;</span><span class="p">,</span> <span class="nx">unsafe</span><span class="p">.</span><span class="nf">Sizeof</span><span class="p">(</span><span class="nx">sliceByteStr1</span><span class="p">))</span> <span class="c1">//24
+</span><span class="c1"></span>	<span class="nx">t</span><span class="p">.</span><span class="nf">Logf</span><span class="p">(</span><span class="s">&#34;the len of sliceByteStr1 is: %d\n&#34;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="nx">sliceByteStr1</span><span class="p">))</span> <span class="c1">// 12
+</span><span class="c1"></span>	<span class="nx">t</span><span class="p">.</span><span class="nf">Logf</span><span class="p">(</span><span class="s">&#34;the size of sliceRuneStr1 is: %d\n&#34;</span><span class="p">,</span> <span class="nx">unsafe</span><span class="p">.</span><span class="nf">Sizeof</span><span class="p">(</span><span class="nx">sliceRuneStr1</span><span class="p">))</span> <span class="c1">//24
+</span><span class="c1"></span>	<span class="nx">t</span><span class="p">.</span><span class="nf">Logf</span><span class="p">(</span><span class="s">&#34;the len of sliceRuneStr1 is: %d\n&#34;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="nx">sliceRuneStr1</span><span class="p">))</span> <span class="c1">//8
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></div><h4 id="类型转换">类型转换</h4>
+<p>1 不允许隐式类型转换 <br>
+2 别名之间不能直接转换</p>
+<h4 id="类型别名">类型别名</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">type</span> <span class="nx">MyInt</span> <span class="kt">int64</span> <span class="c1">//也可以是结构体等
+</span></code></pre></div><h3 id="算术运算符">算术运算符</h3>
+<p>不支持前置的++和&ndash;</p>
+<h3 id="比较运算符">比较运算符</h3>
+<p>相同维数和相同个数的数组才可以比较。 <br>
+每个值都相等，数组才相等</p>
+<h3 id="数组">数组</h3>
+<p>例如</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="nx">a</span> <span class="o">:=</span> <span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="kt">string</span><span class="p">{</span><span class="s">&#34;a&#34;</span><span class="p">,</span> <span class="s">&#34;b&#34;</span><span class="p">,</span> <span class="s">&#34;c&#34;</span><span class="p">}</span>
+<span class="nx">b</span> <span class="o">:=</span> <span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
+<span class="kd">var</span> <span class="nx">c</span> <span class="p">[</span><span class="mi">10</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span><span class="kt">int</span>
+</code></pre></div><h2 id="位运算符">位运算符</h2>
+<p>与其他语言位运算符一致，有一个特殊点：</p>
+<h3 id="按位置零">&amp;^按位置零</h3>
+<p>只要右边为1，无论左边是什么都清零 <br>
+右边为0，左边是什么就是什么 <br>
+1 &amp;^ 0 &ndash; 1 <br>
+1 &amp;^ 1 &ndash; 0  <br>
+0 &amp;^ 0 &ndash; 0 <br>
+0 &amp;^ 1 &ndash; 0 <br>
+例如清空读、写、可执行权限：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="p">(</span>
+	<span class="s">&#34;testing&#34;</span>
+	<span class="s">&#34;unsafe&#34;</span>
+<span class="p">)</span>
+
+<span class="cm">/**
+</span><span class="cm">7: 0111
+</span><span class="cm">读：100
+</span><span class="cm">写: 010
+</span><span class="cm">执行:001
+</span><span class="cm">*/</span>
+<span class="kd">const</span> <span class="p">(</span>
+	<span class="nx">Execute</span> <span class="p">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="kc">iota</span>
+	<span class="nx">Writable</span>
+	<span class="nx">Readable</span>
+<span class="p">)</span>
+
+<span class="kd">func</span> <span class="nf">TestClear</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">origin</span> <span class="o">:=</span> <span class="mi">7</span>
+	<span class="nx">t</span><span class="p">.</span><span class="nf">Logf</span><span class="p">(</span><span class="s">&#34;Execute: %v\n&#34;</span><span class="p">,</span> <span class="nx">origin</span><span class="o">&amp;^</span><span class="nx">Execute</span><span class="p">)</span> <span class="c1">//6
+</span><span class="c1"></span>	<span class="nx">t</span><span class="p">.</span><span class="nf">Logf</span><span class="p">(</span><span class="s">&#34;Writable: %v\n&#34;</span><span class="p">,</span> <span class="nx">origin</span><span class="o">&amp;^</span><span class="nx">Writable</span><span class="p">)</span> <span class="c1">//5
+</span><span class="c1"></span>	<span class="nx">t</span><span class="p">.</span><span class="nf">Logf</span><span class="p">(</span><span class="s">&#34;Readable: %v\n&#34;</span><span class="p">,</span> <span class="nx">origin</span><span class="o">&amp;^</span><span class="nx">Readable</span><span class="p">)</span> <span class="c1">//3
+</span><span class="c1"></span><span class="p">}</span>
+
+</code></pre></div><h2 id="循环">循环</h2>
+<p>只有for循环</p>
+<h3 id="普通完整for循环">普通完整for循环</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+<span class="p">}</span>
+</code></pre></div><h3 id="类似其他编程语言while循环">类似其他编程语言while循环</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="c1">// 相当于while(i&lt;10)
+</span><span class="c1"></span><span class="k">for</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="mi">10</span> <span class="p">{</span> <span class="nx">i</span><span class="o">++</span>
+<span class="p">}</span>
+</code></pre></div><h3 id="无限循环">无限循环</h3>
+<p>一般内部需要有退出机制，或者就是常驻进程</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="c1">//相当于while(true)
+</span><span class="c1"></span><span class="k">for</span> <span class="p">{</span>
+<span class="p">}</span>
+</code></pre></div><h2 id="if">if</h2>
+<p>1 condition表达式结果必须为布尔值 <br>
+2 支持变量赋值</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">//写法一
+if condition {
+}
+//写法二
+if var declaration; condition {
+  // code
+}
+</code></pre></div><h2 id="数组和切片">数组和切片</h2>
+<p>常用集合：数组、切片、map</p>
+<h3 id="定义">定义</h3>
+<h4 id="数组-1">数组</h4>
+<p>在go语言中，代表有固定长度的连续空间</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="nx">a</span> <span class="o">:=</span> <span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
+<span class="nx">b</span> <span class="o">:=</span> <span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span> <span class="c1">// ...不指定个数
+</span></code></pre></div><p>截取数组：<br>
+例如a为:<code>a:=[...]int{1,2,3,4,5}</code>
+a[开始索引(包含):结束索引(不包含)] <br>
+a[1:len(a)] //2 3 4 5  <br>
+a[1:] // 2 3 4 5
+a[:3] // 1 2 3</p>
+<h4 id="切片">切片</h4>
+<p>一种结构，包含三种属性： <br>
+ptr指针:*Elem <br>
+len长度:len(a):int <br>
+cap数组容量:cap(a):int,递增顺序为2^n,例如1,2,4,8 <br>
+底层用数组实现 <br>
+示例：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">var</span> <span class="nx">a</span> <span class="p">[]</span><span class="kt">int</span> 
+<span class="nx">a</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span> <span class="c1">// append相当于拷贝一个副本进行操作，因此必须使用原参数接收值
+</span><span class="c1"></span>
+<span class="nx">s1</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">int</span><span class="p">{}</span>
+<span class="nx">s1</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
+<span class="nx">s3</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">([]</span><span class="kt">int</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="c1">//[]type, len, cap
+</span></code></pre></div><p>特别地，截取切片的，计算cap:初始空间到最终空间的长度</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nf">TestSlice</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">a</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">}</span>
+	<span class="nx">t</span><span class="p">.</span><span class="nf">Logf</span><span class="p">(</span><span class="s">&#34;cap(a): %v\n&#34;</span><span class="p">,</span> <span class="nb">cap</span><span class="p">(</span><span class="nx">a</span><span class="p">))</span> <span class="c1">// 12
+</span><span class="c1"></span>	<span class="nx">t</span><span class="p">.</span><span class="nf">Logf</span><span class="p">(</span><span class="s">&#34;cap a[1:3]: %v\n&#34;</span><span class="p">,</span> <span class="nb">cap</span><span class="p">(</span><span class="nx">a</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]))</span> <span class="c1">// 11
+</span><span class="c1"></span>	<span class="nx">t</span><span class="p">.</span><span class="nf">Logf</span><span class="p">(</span><span class="s">&#34;cap a[3:9]: %v\n&#34;</span><span class="p">,</span> <span class="nb">cap</span><span class="p">(</span><span class="nx">a</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">9</span><span class="p">]))</span> <span class="c1">// 9
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></div><p>引用了切片或数组，底层数据修改了，那么截取的引用也会变化</p>
+<h4 id="数组和切片的比较">数组和切片的比较</h4>
+<p>容量是否可伸缩 <br>
+是否可以进行比较</p>
+<h2 id="map">map</h2>
+<p>初始化或声明：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="nx">m0</span> <span class="o">:=</span> <span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span><span class="s">&#34;one&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s">&#34;two&#34;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
+<span class="nx">m1</span> <span class="o">:=</span> <span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">int</span>
+<span class="nx">m2</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">int</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="c1">//第二个参数是容量，不是长度
+</span></code></pre></div><p>类似于<code>make(map[string]int, 10)</code>,第二个参数是指定容量，但无法使用cap方法获取容量。 <br>
+map初始化无法指定长度，因为无法填充入默认值。</p>
+<h3 id="与其他编程语言的差异-1">与其他编程语言的差异</h3>
+<p>无法通过值是否是nil来判断是否有值，因为默认都会是空字符串，判断key是否存在的方法：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="c1">// 必须这样判断是否存在
+</span><span class="c1"></span><span class="k">if</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">ok</span> <span class="o">:=</span> <span class="nx">m0</span><span class="p">[</span><span class="s">&#34;four&#34;</span><span class="p">];</span> <span class="nx">ok</span> <span class="p">{</span>
+    <span class="nx">t</span><span class="p">.</span><span class="nf">Log</span><span class="p">(</span><span class="s">&#34;exixts&#34;</span><span class="p">)</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="nx">t</span><span class="p">.</span><span class="nf">Log</span><span class="p">(</span><span class="s">&#34;not exixts&#34;</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div><h4 id="遍历">遍历</h4>
+<p>遍历时一个参数是key，两个参数是key, value</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nf">TestSlice</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">m2</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">int</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+	<span class="nx">m2</span> <span class="p">=</span> <span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span><span class="s">&#34;one&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s">&#34;two&#34;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s">&#34;three&#34;</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
+	<span class="k">for</span> <span class="nx">v</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">m2</span> <span class="p">{</span>
+		<span class="nx">t</span><span class="p">.</span><span class="nf">Logf</span><span class="p">(</span><span class="s">&#34;range one item res is: %v&#34;</span><span class="p">,</span> <span class="nx">v</span><span class="p">)</span> <span class="c1">// one two three
+</span><span class="c1"></span>	<span class="p">}</span>
+	<span class="k">for</span> <span class="nx">k</span><span class="p">,</span> <span class="nx">v</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">m2</span> <span class="p">{</span>
+		<span class="nx">t</span><span class="p">.</span><span class="nf">Logf</span><span class="p">(</span><span class="s">&#34;range one key item res is: %v&#34;</span><span class="p">,</span> <span class="nx">k</span><span class="p">)</span> <span class="c1">//one two three
+</span><span class="c1"></span>		<span class="nx">t</span><span class="p">.</span><span class="nf">Logf</span><span class="p">(</span><span class="s">&#34;range one value item res is: %v&#34;</span><span class="p">,</span> <span class="nx">v</span><span class="p">)</span> <span class="c1">// 1 2 3
+</span><span class="c1"></span>	<span class="p">}</span>
+	<span class="nx">t</span><span class="p">.</span><span class="nf">Logf</span><span class="p">(</span><span class="s">&#34;m2 len: %v\n&#34;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="nx">m2</span><span class="p">))</span>
+<span class="p">}</span>
+</code></pre></div><h4 id="map与工厂模式">map与工厂模式</h4>
+<p>在go语言中，函数可以出现在任何地方。 <br>
+map的value也可以是函数。 <br>
+与go的Dock type接口方式一起，可以方便地实现单一方法对象的工厂模式。 <br>
+示例代码：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nf">TestMapWithValueFunc</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">m</span> <span class="o">:=</span> <span class="kd">map</span><span class="p">[</span><span class="kt">int</span><span class="p">]</span><span class="kd">func</span><span class="p">(</span><span class="nx">op</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span><span class="p">{}</span>
+	<span class="nx">m</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">=</span> <span class="kd">func</span><span class="p">(</span><span class="nx">op</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="nx">op</span>
+	<span class="p">}</span>
+	<span class="nx">m</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="p">=</span> <span class="kd">func</span><span class="p">(</span><span class="nx">op</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="nx">op</span> <span class="o">*</span> <span class="nx">op</span>
+	<span class="p">}</span>
+	<span class="nx">m</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="p">=</span> <span class="kd">func</span><span class="p">(</span><span class="nx">op</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="nx">op</span> <span class="o">*</span> <span class="nx">op</span> <span class="o">*</span> <span class="nx">op</span>
+	<span class="p">}</span>
+	<span class="nx">t</span><span class="p">.</span><span class="nf">Log</span><span class="p">(</span><span class="nx">m</span><span class="p">[</span><span class="mi">1</span><span class="p">](</span><span class="mi">2</span><span class="p">),</span> <span class="nx">m</span><span class="p">[</span><span class="mi">2</span><span class="p">](</span><span class="mi">2</span><span class="p">),</span> <span class="nx">m</span><span class="p">[</span><span class="mi">3</span><span class="p">](</span><span class="mi">2</span><span class="p">))</span>
+<span class="p">}</span>
+</code></pre></div><h4 id="实现set">实现Set</h4>
+<p>1 元素的唯一性(map本身已实现) <br>
+2 基本操作： <br>
+a. 添加元素:直接设置，例如m1[1]=&ldquo;1&rdquo; <br>
+b. 判断元素是否存在：通过上文例如:<code>if _, ok := m[&quot;one&quot;]; ok {}</code><br>
+c. 删除元素:<code>delete(map, key)</code>，例如<code>delete(m1, &quot;one&quot;)</code> <br>
+d. 元素个数:len</p>
+</div>
+                    <div class="post_footer">
+                        
+                        <div class="meta">
+                            <div class="info">
+                                <span class="field tags">
+                                    <i class="ri-stack-line"></i>
+                                    
+                                    <a href="https://laurel-he.github.io/tags/%E5%AD%A6%E4%B9%A0/">学习</a>
+                                    
+                                    <a href="https://laurel-he.github.io/tags/%E8%AF%AD%E8%A8%80/">语言</a>
+                                    
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                
+                
+<div class="doc_comments">
+    <div class="comments_block_title">发表评论</div>
+    <div id="vcomments"></div>
+</div>
+
+<link rel="stylesheet" href="https://laurel-he.github.io/css/comments.css" />
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
+<script type="text/javascript">
+    new Valine({
+        el: '#vcomments',
+        appId: 'SWEItAag34n7U5AR3T95AhRG-gzGzoHsz',
+        appKey: 'zAM901B4LKIxfrnTb7ie5e5K',
+        placeholder: '在此输入评论...',
+        visitor: 'true',
+    })
+</script>
+                
+            </div>
+        </div>
+    </div>
+    <a id="back_to_top" href="#" class="back_to_top"><i class="ri-arrow-up-s-line"></i></a>
+    <footer class="footer">
+    <script type="text/javascript"
+            src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    <style>
+        code.has-jax {font: inherit;
+            font-size: 100%;
+            background: inherit;
+            border: inherit;
+            color: #515151;}
+    </style>
+    <div class="powered_by">
+        <a href="https://varkai.com">Designed by VarKai,</a>
+        <a href="http://www.gohugo.io/">Proudly published with Hugo</a>
+    </div>
+
+    <div class="footer_slogan">
+        <span>绝知此事要躬行</span>
+    </div>
+</footer>
+    <script src="https://laurel-he.github.io/js/jquery-3.5.1.min.js"></script>
+<link href="https://laurel-he.github.io/css/fancybox.min.css" rel="stylesheet">
+<script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
+<script src="https://laurel-he.github.io/js/zozo.js"></script>
+
+
+
+
+</body>
+
+</html>

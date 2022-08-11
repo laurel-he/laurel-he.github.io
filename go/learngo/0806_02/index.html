@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <script type="text/javascript"
+        async
+        src="https://cdnjs.cloudflare.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [['$','$']],
+            displayMath: [['$$','$$']],
+            processEscapes: true,
+            processEnvironments: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            TeX: { equationNumbers: { autoNumber: "AMS" },
+                extensions: ["AMSmath.js", "AMSsymbols.js"] }
+        }
+    });
+
+    MathJax.Hub.Queue(function() {
+        
+        
+        
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i = 0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<style>
+    code.has-jax {
+        font: inherit;
+        font-size: 100%;
+        background: inherit;
+        border: inherit;
+        color: #515151;
+    }
+</style>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="贺小娇" />
+	
+	
+	
+	<title>学习go_20220806_02 ｜ xiaoJiao</title>
+	
+    
+    
+    <meta name="description" content="函数式编程 与其他编程语言的差异 1 可以有多个返回值 2 所有参数都是值传递:slice,map,channel会有传引用的错觉 3 函数可以作为变量的值 4 函数可以作为参数和返回值 可变参数 ...传过来的参数，例如" />
+    
+
+    
+    
+    <meta name="keywords" content="Hugo, blog, php, go" />
+    
+
+	
+    
+    <link rel="shortcut icon" href="https://laurel-he.github.io/images/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/zozo.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/highlight.css" />
+
+    
+    
+</head>
+
+<body>
+    <div class="main animate__animated animate__fadeInDown">
+        <div class="nav_container animated fadeInDown">
+    <div class="site_nav" id="site_nav">
+        <ul>
+            
+            <li>
+                <a href="/">主页</a>
+            </li>
+            
+            <li>
+                <a href="/categories/">分类</a>
+            </li>
+            
+            <li>
+                <a href="/tags/">标签</a>
+            </li>
+            
+            <li>
+                <a href="/year/">按年</a>
+            </li>
+            
+            <li>
+                <a href="/series/">系列</a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="menu_icon">
+        <a id="menu_icon"><i class="ri-menu-line"></i></a>
+    </div>
+</div>
+        
+<div class="header animated fadeInDown">
+    <div class="site_title_container">
+        <div class="site_title">
+            <h1>
+                <a href="https://laurel-he.github.io/">
+                    <span>xiaoJiao</span>
+                </a>
+            </h1>
+        </div>
+        <div class="description">
+            <p class="sub_title">贺胖娇的编程之旅......</p>
+            <div class="my_socials">
+                
+                
+                <a href="https://github.com/laurel-he" title="github" target="_blank"><i class="ri-github-fill"></i></a>
+                
+                
+                
+                <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1570306409&amp;site=qq&amp;menu=yes" title="qq" target="_blank"><i class="ri-qq-fill"></i></a>
+                
+                
+                
+                <a href="https://stackoverflow.com/users/9809769/laurel-he" title="stack-overflow" target="_blank"><i class="ri-stack-overflow-fill"></i></a>
+                
+                
+                
+                <a href="https://weibo.com/u/3783884100" title="weibo" target="_blank"><i class="ri-weibo-fill"></i></a>
+                
+                
+                <a href="https://laurel-he.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
+                        class="ri-rss-fill"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="content">
+            <div class="post_page">
+                <div class="post animate__animated animate__fadeInDown">
+                    <div class="post_title post_detail_title">
+                        <h2><a href='/go/learngo/0806_02/'>学习go_20220806_02</a></h2>
+                        <span class="date">2022.08.06</span>
+                    </div>
+                    <div class="post_content markdown"><h1 id="函数式编程">函数式编程</h1>
+<h2 id="与其他编程语言的差异">与其他编程语言的差异</h2>
+<p>1 可以有多个返回值 <br>
+2 所有参数都是值传递:slice,map,channel会有传引用的错觉 <br>
+3 函数可以作为变量的值 <br>
+4 函数可以作为参数和返回值</p>
+<h3 id="可变参数">可变参数</h3>
+<p><code>...</code>传过来的参数，例如求和：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nf">TestSum</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">sumFunc</span> <span class="o">:=</span> <span class="kd">func</span><span class="p">(</span><span class="nx">args</span> <span class="o">...</span><span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
+		<span class="kd">var</span> <span class="nx">ret</span> <span class="kt">int</span>
+		<span class="k">for</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">op</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">args</span> <span class="p">{</span>
+			<span class="nx">ret</span> <span class="o">+=</span> <span class="nx">op</span>
+		<span class="p">}</span>
+		<span class="k">return</span> <span class="nx">ret</span>
+	<span class="p">}</span>
+	<span class="nx">t</span><span class="p">.</span><span class="nf">Logf</span><span class="p">(</span><span class="s">&#34;the sum is: %v\n&#34;</span><span class="p">,</span> <span class="nf">sumFunc</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="p">}</span>
+</code></pre></div><h3 id="defer函数">defer函数</h3>
+<p>1 panic后defer会继续执行 <br>
+2 os.Exit()会直接退出，defer不会执行</p>
+<h3 id="示例装饰者模式实现计时功能">示例：装饰者模式实现计时功能</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nf">getTimeSpent</span><span class="p">(</span><span class="nx">inner</span> <span class="kd">func</span><span class="p">(</span><span class="nx">op</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span><span class="p">)</span> <span class="kd">func</span><span class="p">(</span><span class="nx">op</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
+	<span class="k">return</span> <span class="kd">func</span><span class="p">(</span><span class="nx">n</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
+		<span class="nx">start</span> <span class="o">:=</span> <span class="nx">time</span><span class="p">.</span><span class="nf">Now</span><span class="p">()</span>
+		<span class="nx">ret</span> <span class="o">:=</span> <span class="nf">inner</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span>
+		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;time spent: &#34;</span><span class="p">,</span> <span class="nx">time</span><span class="p">.</span><span class="nf">Since</span><span class="p">(</span><span class="nx">start</span><span class="p">).</span><span class="nf">Seconds</span><span class="p">())</span>
+		<span class="k">return</span> <span class="nx">ret</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">runSlow</span><span class="p">(</span><span class="nx">op</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
+	<span class="nx">time</span><span class="p">.</span><span class="nf">Sleep</span><span class="p">(</span><span class="nx">time</span><span class="p">.</span><span class="nx">Second</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;runSlow run...&#34;</span><span class="p">)</span>
+	<span class="k">return</span> <span class="nx">op</span> <span class="o">*</span> <span class="nx">op</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">runFast</span><span class="p">(</span><span class="nx">op</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
+	<span class="nx">time</span><span class="p">.</span><span class="nf">Sleep</span><span class="p">(</span><span class="nx">time</span><span class="p">.</span><span class="nx">Second</span> <span class="o">*</span> <span class="mi">1</span><span class="p">)</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;runFast run...&#34;</span><span class="p">)</span>
+	<span class="k">return</span> <span class="nx">op</span> <span class="o">*</span> <span class="nx">op</span> <span class="o">*</span> <span class="nx">op</span>
+<span class="p">}</span>
+<span class="kd">func</span> <span class="nf">TestTimer</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">tsSf</span> <span class="o">:=</span> <span class="nf">getTimeSpent</span><span class="p">(</span><span class="nx">runSlow</span><span class="p">)</span>
+	<span class="nx">tsFs</span> <span class="o">:=</span> <span class="nf">getTimeSpent</span><span class="p">(</span><span class="nx">runFast</span><span class="p">)</span>
+	<span class="nx">t</span><span class="p">.</span><span class="nf">Log</span><span class="p">(</span><span class="s">&#34;exec....&#34;</span><span class="p">)</span>
+
+	<span class="nx">t</span><span class="p">.</span><span class="nf">Logf</span><span class="p">(</span><span class="s">&#34;runSlow ret is : %v\n&#34;</span><span class="p">,</span> <span class="nf">tsSf</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+	<span class="nx">t</span><span class="p">.</span><span class="nf">Logf</span><span class="p">(</span><span class="s">&#34;runFast ret is : %v\n&#34;</span><span class="p">,</span> <span class="nf">tsFs</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="p">}</span>
+</code></pre></div><p>以上请求的输出是：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">=== RUN   TestTimer
+    main_test.go:61: exec....
+runSlow run...
+time spent:  3.0143102
+    main_test.go:63: runSlow ret is : 100
+runFast run...
+time spent:  1.0120686
+    main_test.go:64: runFast ret is : 1000
+--- PASS: TestTimer (4.03s)
+PASS
+
+Process finished with the exit code 0
+</code></pre></div><h2 id="defer">defer</h2>
+<p>defer执行顺序是栈 <br>
+defer中函数如果包含的参数也是函数，会直接使用函数的值作为参数执行，而不是稍后执行</p>
+<h1 id="面向对象编程">面向对象编程</h1>
+<h2 id="结构体">结构体</h2>
+<h3 id="定义">定义</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="c1">// 例如定义结构体：学生
+</span><span class="c1"></span><span class="kd">type</span> <span class="nx">Student</span> <span class="nx">Struct</span> <span class="p">{</span>
+     <span class="nx">Age</span>  <span class="kt">int</span>
+     <span class="nx">Name</span> <span class="kt">string</span>
+<span class="p">}</span>
+</code></pre></div><h3 id="初始化">初始化</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="nx">e</span>  <span class="o">:=</span> <span class="nx">Student</span><span class="p">{</span><span class="mi">18</span><span class="p">,</span> <span class="s">&#34;Tom&#34;</span><span class="p">}</span> <span class="c1">// 直接根据结构初始化，不建议
+</span><span class="c1"></span><span class="nx">e1</span> <span class="o">:=</span> <span class="nx">Student</span><span class="p">{</span><span class="nx">Age</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span> <span class="nx">Name</span><span class="p">:</span> <span class="s">&#34;Tom&#34;</span><span class="p">}</span>
+<span class="nx">e2</span> <span class="o">:=</span> <span class="nb">new</span><span class="p">(</span><span class="nx">Student</span><span class="p">)</span> <span class="c1">//这里返回的是指针/引用，相当于e := &amp;Student{}
+</span><span class="c1"></span><span class="nx">e2</span><span class="p">.</span><span class="nx">Age</span> <span class="p">=</span> <span class="mi">18</span>
+<span class="nx">e2</span><span class="p">.</span><span class="nx">Nane</span> <span class="p">=</span> <span class="s">&#34;Tom&#34;</span>
+</code></pre></div><h2 id="方法">方法</h2>
+<h3 id="定义-1">定义</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="c1">// 在实例对应方法被调用时，实例成员会进行值复制
+</span><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">e</span> <span class="nx">Employee</span><span class="p">)</span> <span class="nf">String</span><span class="p">()</span> <span class="kt">string</span> <span class="p">{</span>
+     <span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;Name: %s&#34;</span><span class="p">,</span> <span class="nx">e</span><span class="p">.</span><span class="nx">Name</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="c1">// 通常为避免内存拷贝，使用第二种调用方式
+</span><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">e</span> <span class="o">*</span><span class="nx">Employee</span><span class="p">)</span> <span class="nf">String</span><span class="p">()</span> <span class="kt">string</span> <span class="p">{</span>
+     <span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;Name: %s&#34;</span><span class="p">,</span> <span class="nx">e</span><span class="p">.</span><span class="nx">Name</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div><h2 id="接口">接口</h2>
+<p>与其他编程语言的差别： <br>
+1 接口为非入侵性，实现不依赖于接口定义 <br>
+2 所以接口的定义可以包含在接口使用者包内</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">type</span> <span class="nx">Phone</span> <span class="kd">interface</span> <span class="p">{</span>
+	<span class="nf">Call</span><span class="p">()</span> <span class="kt">string</span>
+<span class="p">}</span>
+
+<span class="kd">type</span> <span class="nx">AndroidPhone</span> <span class="kd">struct</span> <span class="p">{</span>
+<span class="p">}</span>
+
+<span class="kd">type</span> <span class="nx">Iphone</span> <span class="kd">struct</span> <span class="p">{</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="p">(</span><span class="nx">nokia</span> <span class="nx">AndroidPhone</span><span class="p">)</span> <span class="nf">Call</span><span class="p">()</span> <span class="kt">string</span> <span class="p">{</span>
+	<span class="k">return</span> <span class="s">&#34;nokia is calling...&#34;</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="p">(</span><span class="nx">iphone7</span> <span class="nx">Iphone</span><span class="p">)</span> <span class="nf">Call</span><span class="p">()</span> <span class="kt">string</span> <span class="p">{</span>
+	<span class="k">return</span> <span class="s">&#34;iphone7 is calling...&#34;</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">TestNewPhone</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
+	<span class="kd">var</span> <span class="nx">phone</span> <span class="nx">Phone</span>
+	<span class="nx">phone</span> <span class="p">=</span> <span class="nb">new</span><span class="p">(</span><span class="nx">AndroidPhone</span><span class="p">)</span>
+	<span class="nx">t</span><span class="p">.</span><span class="nf">Logf</span><span class="p">(</span><span class="s">&#34;1: android: %s\n&#34;</span><span class="p">,</span> <span class="nx">phone</span><span class="p">.</span><span class="nf">Call</span><span class="p">())</span> <span class="c1">// android: nokia is calling...
+</span><span class="c1"></span>
+	<span class="nx">phone</span> <span class="p">=</span> <span class="nb">new</span><span class="p">(</span><span class="nx">Iphone</span><span class="p">)</span>
+	<span class="nx">t</span><span class="p">.</span><span class="nf">Logf</span><span class="p">(</span><span class="s">&#34;2: iphone: %s\n&#34;</span><span class="p">,</span> <span class="nx">phone</span><span class="p">.</span><span class="nf">Call</span><span class="p">())</span> <span class="c1">// iphone: iphone7 is calling...
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></div><h3 id="确保程序实现接口">确保程序实现接口</h3>
+<p>上一个示例中可以采用如下方法确保实现了接口：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">var</span> <span class="nx">_</span> <span class="nx">Phone</span> <span class="p">=</span> <span class="o">&amp;</span><span class="nx">AndroidPhone</span><span class="p">{}</span>
+</code></pre></div><h2 id="自定义类型">自定义类型</h2>
+<p>1 type IntconvFunc func(n int) int <br>
+2 type MyPoint int <br>
+例如之前的获取时间差代码，可以改写为：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">var</span> <span class="nx">GetInner</span> <span class="kd">func</span><span class="p">(</span><span class="nx">op</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span>
+<span class="kd">func</span> <span class="nf">getTimeSpent</span><span class="p">(</span><span class="nx">inner</span> <span class="nx">GetInner</span><span class="p">)</span> <span class="nx">GetInner</span> <span class="p">{</span>
+	<span class="k">return</span> <span class="kd">func</span><span class="p">(</span><span class="nx">n</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
+		<span class="nx">start</span> <span class="o">:=</span> <span class="nx">time</span><span class="p">.</span><span class="nf">Now</span><span class="p">()</span>
+		<span class="nx">ret</span> <span class="o">:=</span> <span class="nf">inner</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span>
+		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;time spent: &#34;</span><span class="p">,</span> <span class="nx">time</span><span class="p">.</span><span class="nf">Since</span><span class="p">(</span><span class="nx">start</span><span class="p">).</span><span class="nf">Seconds</span><span class="p">())</span>
+		<span class="k">return</span> <span class="nx">ret</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><h2 id="匿名类型嵌入">匿名类型嵌入</h2>
+<p>1 注意不是继承</p>
+<h2 id="go多态实现">go多态实现</h2>
+<p>依旧以上文为例，实现类似多态的功能：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">type</span> <span class="nx">Phone</span> <span class="kd">interface</span> <span class="p">{</span>
+	<span class="nf">Photo</span><span class="p">()</span> <span class="kt">string</span>
+<span class="p">}</span>
+
+<span class="kd">type</span> <span class="nx">AndroidPhone</span> <span class="kd">struct</span> <span class="p">{</span>
+<span class="p">}</span>
+
+<span class="kd">type</span> <span class="nx">Iphone</span> <span class="kd">struct</span> <span class="p">{</span>
+<span class="p">}</span>
+
+
+<span class="kd">func</span> <span class="p">(</span><span class="nx">nokia</span> <span class="nx">AndroidPhone</span><span class="p">)</span> <span class="nf">Photo</span><span class="p">()</span> <span class="kt">string</span> <span class="p">{</span>
+	<span class="k">return</span> <span class="s">&#34;nokia is photograph...&#34;</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="p">(</span><span class="nx">iphone7</span> <span class="nx">Iphone</span><span class="p">)</span> <span class="nf">Photo</span><span class="p">()</span> <span class="kt">string</span> <span class="p">{</span>
+	<span class="k">return</span> <span class="s">&#34;iphone7 is photograph...&#34;</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">photoUseDiffPhone</span><span class="p">(</span><span class="nx">inter</span> <span class="nx">Phone</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;interface : %T, res: %s\n&#34;</span><span class="p">,</span> <span class="nx">inter</span><span class="p">,</span> <span class="nx">inter</span><span class="p">.</span><span class="nf">Photo</span><span class="p">())</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">TestDiffInterface</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">android</span> <span class="o">:=</span> <span class="o">&amp;</span><span class="nx">AndroidPhone</span><span class="p">{}</span>
+	<span class="nx">iphone</span> <span class="o">:=</span> <span class="o">&amp;</span><span class="nx">Iphone</span><span class="p">{}</span>
+	<span class="nf">photoUseDiffPhone</span><span class="p">(</span><span class="nx">android</span><span class="p">)</span>
+	<span class="nf">photoUseDiffPhone</span><span class="p">(</span><span class="nx">iphone</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div><h2 id="空接口与断言">空接口与断言</h2>
+<p>1 空接口可以表示任何类型 <br>
+2 通过断言将空接口转化为指定类型</p>
+<h3 id="空接口示例">空接口示例</h3>
+<p>设置一个类型为空接口<code>interface{}</code>,初始化或赋值是可以给定任意类型</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">type</span> <span class="nx">NilInterfaceTest</span> <span class="kd">struct</span> <span class="p">{</span>
+	<span class="nx">Name</span>        <span class="kt">string</span>
+	<span class="nx">Age</span>         <span class="kt">int8</span>
+	<span class="nx">PhoneNumber</span> <span class="kd">interface</span><span class="p">{}</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">TestNilInterface</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">a</span> <span class="o">:=</span> <span class="nx">NilInterfaceTest</span><span class="p">{</span><span class="nx">Name</span><span class="p">:</span> <span class="s">&#34;Tom&#34;</span><span class="p">,</span> <span class="nx">Age</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span> <span class="nx">PhoneNumber</span><span class="p">:</span> <span class="mi">13333333333</span><span class="p">}</span>
+	<span class="nx">b</span> <span class="o">:=</span> <span class="nx">NilInterfaceTest</span><span class="p">{</span><span class="nx">Name</span><span class="p">:</span> <span class="s">&#34;Jerry&#34;</span><span class="p">,</span> <span class="nx">Age</span><span class="p">:</span> <span class="mi">17</span><span class="p">,</span> <span class="nx">PhoneNumber</span><span class="p">:</span> <span class="s">&#34;011-73313&#34;</span><span class="p">}</span>
+	<span class="nx">t</span><span class="p">.</span><span class="nf">Logf</span><span class="p">(</span><span class="s">&#34;nil interface as int: %v\n&#34;</span><span class="p">,</span> <span class="nx">a</span><span class="p">)</span>    <span class="c1">// nil interface as int: {Tom 18 13333333333}
+</span><span class="c1"></span>	<span class="nx">t</span><span class="p">.</span><span class="nf">Logf</span><span class="p">(</span><span class="s">&#34;nil interface as string: %v\n&#34;</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="c1">// nil interface as string: {Jerry 17 011-73313}
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></div><h3 id="断言示例">断言示例</h3>
+<h4 id="断言判断接口类型">断言判断接口类型</h4>
+<p>注意，断言是用来判断接口的，类似<code>a := 10</code>这种，无法使用断言</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="c1">// 断言
+</span><span class="c1"></span><span class="nx">v</span><span class="p">,</span> <span class="nx">ok</span> <span class="o">:=</span> <span class="nx">p</span><span class="p">.(</span><span class="kt">int</span><span class="p">)</span> <span class="c1">// ok为true是表示成功
+</span><span class="c1">// 具体使用
+</span><span class="c1"></span><span class="kd">func</span> <span class="nf">TestAssertData</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
+	<span class="kd">var</span> <span class="nx">a</span> <span class="kd">interface</span><span class="p">{}</span>
+	<span class="kd">var</span> <span class="nx">b</span> <span class="kd">interface</span><span class="p">{}</span>
+	<span class="nx">a</span> <span class="p">=</span> <span class="mi">10</span>
+	<span class="nx">b</span> <span class="p">=</span> <span class="s">&#34;test&#34;</span>
+	<span class="nx">aAssert</span><span class="p">,</span> <span class="nx">ok</span> <span class="o">:=</span> <span class="nx">a</span><span class="p">.(</span><span class="kt">int</span><span class="p">)</span>
+	<span class="nx">t</span><span class="p">.</span><span class="nf">Logf</span><span class="p">(</span><span class="s">&#34;assert a %v, ret %v\n&#34;</span><span class="p">,</span> <span class="nx">aAssert</span><span class="p">,</span> <span class="nx">ok</span><span class="p">)</span>
+	<span class="nx">bAssert</span><span class="p">,</span> <span class="nx">ok</span> <span class="o">:=</span> <span class="nx">b</span><span class="p">.(</span><span class="kt">int</span><span class="p">)</span>
+	<span class="nx">t</span><span class="p">.</span><span class="nf">Logf</span><span class="p">(</span><span class="s">&#34;assert b %v, ret %v\n&#34;</span><span class="p">,</span> <span class="nx">bAssert</span><span class="p">,</span> <span class="nx">ok</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div><h4 id="最佳实践">最佳实践</h4>
+<p>使用switch p.(type)判断空接口的类型：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nf">getType</span><span class="p">(</span><span class="nx">p</span> <span class="kd">interface</span><span class="p">{},</span> <span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">switch</span> <span class="nx">p</span><span class="p">.(</span><span class="kd">type</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">case</span> <span class="kt">string</span><span class="p">:</span>
+		<span class="nx">t</span><span class="p">.</span><span class="nf">Log</span><span class="p">(</span><span class="s">&#34;the type is string...&#34;</span><span class="p">)</span>
+	<span class="k">case</span> <span class="kt">int</span><span class="p">:</span>
+		<span class="nx">t</span><span class="p">.</span><span class="nf">Log</span><span class="p">(</span><span class="s">&#34;the type is int...&#34;</span><span class="p">)</span>
+	<span class="k">default</span><span class="p">:</span>
+		<span class="nx">t</span><span class="p">.</span><span class="nf">Log</span><span class="p">(</span><span class="s">&#34;the type is other...&#34;</span><span class="p">)</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">TestAssertType</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
+	<span class="kd">var</span> <span class="nx">p</span> <span class="kd">interface</span><span class="p">{}</span>
+	<span class="kd">var</span> <span class="nx">q</span> <span class="kd">interface</span><span class="p">{}</span>
+	<span class="nx">p</span> <span class="p">=</span> <span class="mi">12</span>
+	<span class="nx">q</span> <span class="p">=</span> <span class="s">&#34;test&#34;</span>
+	<span class="nf">getType</span><span class="p">(</span><span class="nx">p</span><span class="p">,</span> <span class="nx">t</span><span class="p">)</span> <span class="c1">// the type is int...
+</span><span class="c1"></span>	<span class="nf">getType</span><span class="p">(</span><span class="nx">q</span><span class="p">,</span> <span class="nx">t</span><span class="p">)</span> <span class="c1">// the type is string...
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></div><h3 id="go接口最佳实践">go接口最佳实践</h3>
+<p>保持接口最小，较大的接口定义，可以组合较小的接口</p>
+<h2 id="错误处理">错误处理</h2>
+<h3 id="error">error</h3>
+<p>内部自己定义的错误，要想程序稳健，尽量不要错过处理任何一个error</p>
+<h4 id="与其他编程语言的差异-1">与其他编程语言的差异</h4>
+<p>1 没有异常机制 <br>
+2 error类型实现了error接口 <br>
+3 可以通过error.New来快速创建错误实例</p>
+<h4 id="最佳实践-1">最佳实践</h4>
+<p>定义不同的错误常量，以便于判断错误类型,函数最后一个返回值最好设置为nil，方便接收方判断</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nf">divisionData</span><span class="p">(</span><span class="nx">divisor</span> <span class="kt">int32</span><span class="p">,</span> <span class="nx">dividend</span> <span class="kt">int32</span><span class="p">)</span> <span class="p">(</span><span class="kt">float32</span><span class="p">,</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
+	<span class="kd">var</span> <span class="nx">DividendZeroError</span> <span class="kt">error</span> <span class="p">=</span> <span class="nx">errors</span><span class="p">.</span><span class="nf">New</span><span class="p">(</span><span class="s">&#34;dividend cannot be 0&#34;</span><span class="p">)</span>
+	<span class="k">if</span> <span class="nx">dividend</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">DividendZeroError</span>
+	<span class="p">}</span>
+	<span class="k">return</span> <span class="nb">float32</span><span class="p">(</span><span class="nx">divisor</span><span class="p">)</span> <span class="o">/</span> <span class="nb">float32</span><span class="p">(</span><span class="nx">dividend</span><span class="p">),</span> <span class="kc">nil</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">TestErrorMessage</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
+	<span class="kd">var</span> <span class="nx">a</span> <span class="kt">int32</span> <span class="p">=</span> <span class="mi">3</span>
+	<span class="kd">var</span> <span class="nx">b</span> <span class="kt">int32</span> <span class="p">=</span> <span class="mi">6</span>
+	<span class="nx">ret</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nf">divisionData</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span>
+	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+		<span class="nx">t</span><span class="p">.</span><span class="nf">Logf</span><span class="p">(</span><span class="s">&#34;device error: %v\n&#34;</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span>
+	<span class="p">}</span>
+	<span class="nx">t</span><span class="p">.</span><span class="nf">Logf</span><span class="p">(</span><span class="s">&#34;device ret: %v\n&#34;</span><span class="p">,</span> <span class="nx">ret</span><span class="p">)</span> <span class="c1">// device ret: 0.5
+</span><span class="c1"></span>
+	<span class="kd">var</span> <span class="nx">c</span> <span class="kt">int32</span> <span class="p">=</span> <span class="mi">3</span>
+	<span class="kd">var</span> <span class="nx">d</span> <span class="kt">int32</span> <span class="p">=</span> <span class="mi">0</span>
+	<span class="nx">ret</span><span class="p">,</span> <span class="nx">err</span> <span class="p">=</span> <span class="nf">divisionData</span><span class="p">(</span><span class="nx">c</span><span class="p">,</span> <span class="nx">d</span><span class="p">)</span>
+	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+		<span class="nx">t</span><span class="p">.</span><span class="nf">Logf</span><span class="p">(</span><span class="s">&#34;device error: %v\n&#34;</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span> <span class="c1">// device error: Dividend cannot be 0
+</span><span class="c1"></span>	<span class="p">}</span>
+	<span class="nx">t</span><span class="p">.</span><span class="nf">Logf</span><span class="p">(</span><span class="s">&#34;device ret: %v\n&#34;</span><span class="p">,</span> <span class="nx">ret</span><span class="p">)</span> <span class="c1">// device ret: 0
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></div><h2 id="panic的处理">panic的处理</h2>
+<p>1 不可恢复的错误 <br>
+2 退出前会调用defer指定的函数</p>
+<h3 id="panic与osexit的区别">panic与os.Exit()的区别</h3>
+<p>1 os.Exit()退出时不会调用defer指定的函数 <br>
+2 os.Exit()退出时不输出当前调用栈信息</p>
+<h2 id="recover">recover</h2>
+<p>Recover 是一个Go语言的内建函数，可以让进入宕机流程中的 goroutine 恢复过来，recover 仅在延迟函数 defer 中有效，在正常的执行过程中，调用 recover 会返回 nil 并且没有其他任何效果，如果当前的 goroutine 陷入恐慌，调用 recover 可以捕获到 panic 的输入值，并且恢复正常的执行。</p>
+<p>recover可能会形成僵尸服务进程，导致health check失效</p>
+<h1 id="模块化和包">模块化和包</h1>
+<h2 id="package">package</h2>
+<p>1 基本复用模块单元，以首字母大写表明可被包外部访问 <br>
+2 代码的package可以和所在目录不一致 <br>
+3 同一个目录里的package名称要保持一致</p>
+<h2 id="init">init</h2>
+<p>可以有多个init,按照顺序执行 <br>
+package引入的init先执行，按照顺序执行 <br>
+在main执行前，所有init都会被执行</p>
+<h1 id="go语言进阶">go语言进阶</h1>
+<h2 id="并发编程模式">并发编程模式</h2>
+<h3 id="mpg">MPG</h3>
+</div>
+                    <div class="post_footer">
+                        
+                        <div class="meta">
+                            <div class="info">
+                                <span class="field tags">
+                                    <i class="ri-stack-line"></i>
+                                    
+                                    <a href="https://laurel-he.github.io/tags/%E5%AD%A6%E4%B9%A0/">学习</a>
+                                    
+                                    <a href="https://laurel-he.github.io/tags/%E8%AF%AD%E8%A8%80/">语言</a>
+                                    
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                
+                
+<div class="doc_comments">
+    <div class="comments_block_title">发表评论</div>
+    <div id="vcomments"></div>
+</div>
+
+<link rel="stylesheet" href="https://laurel-he.github.io/css/comments.css" />
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
+<script type="text/javascript">
+    new Valine({
+        el: '#vcomments',
+        appId: 'SWEItAag34n7U5AR3T95AhRG-gzGzoHsz',
+        appKey: 'zAM901B4LKIxfrnTb7ie5e5K',
+        placeholder: '在此输入评论...',
+        visitor: 'true',
+    })
+</script>
+                
+            </div>
+        </div>
+    </div>
+    <a id="back_to_top" href="#" class="back_to_top"><i class="ri-arrow-up-s-line"></i></a>
+    <footer class="footer">
+    <script type="text/javascript"
+            src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    <style>
+        code.has-jax {font: inherit;
+            font-size: 100%;
+            background: inherit;
+            border: inherit;
+            color: #515151;}
+    </style>
+    <div class="powered_by">
+        <a href="https://varkai.com">Designed by VarKai,</a>
+        <a href="http://www.gohugo.io/">Proudly published with Hugo</a>
+    </div>
+
+    <div class="footer_slogan">
+        <span>绝知此事要躬行</span>
+    </div>
+</footer>
+    <script src="https://laurel-he.github.io/js/jquery-3.5.1.min.js"></script>
+<link href="https://laurel-he.github.io/css/fancybox.min.css" rel="stylesheet">
+<script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
+<script src="https://laurel-he.github.io/js/zozo.js"></script>
+
+
+
+
+</body>
+
+</html>

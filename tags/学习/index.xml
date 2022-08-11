@@ -6,7 +6,34 @@
     <description>Recent content in 学习 on xiaoJiao</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 02 Aug 2022 09:47:00 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/tags/%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 06 Aug 2022 20:57:44 +0000</lastBuildDate><atom:link href="https://laurel-he.github.io/tags/%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>学习go_20220806_02</title>
+      <link>https://laurel-he.github.io/go/learngo/0806_02/</link>
+      <pubDate>Sat, 06 Aug 2022 20:57:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/go/learngo/0806_02/</guid>
+      <description>函数式编程 与其他编程语言的差异 1 可以有多个返回值 2 所有参数都是值传递:slice,map,channel会有传引用的错觉 3 函数可以作为变量的值 4 函数可以作为参数和返回值 可变参数 ...传过来的参数，例如</description>
+    </item>
+    
+    <item>
+      <title>学习go_20220806_01</title>
+      <link>https://laurel-he.github.io/go/learngo/0806_01/</link>
+      <pubDate>Sat, 06 Aug 2022 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/go/learngo/0806_01/</guid>
+      <description>go语言基础 介绍 专为并发而生，编译型语言，强类型语言。 语法简洁：学习曲线平缓。 代码风格统一，开发效率高。 特点 25个关键字，支持复合不支持继承。 基本程序结构 应用程序入口，必须是main包的main方法，</description>
+    </item>
+    
+    <item>
+      <title>学习go_20220806_扩展_指针</title>
+      <link>https://laurel-he.github.io/go/learngo/pointer/</link>
+      <pubDate>Sat, 06 Aug 2022 18:27:44 +0000</pubDate>
+      
+      <guid>https://laurel-he.github.io/go/learngo/pointer/</guid>
+      <description>参考文档： Go语言指针 获取变量在内存中的地址 例如： func TestGetValAddr(t *testing.T) { a := 120 t.Logf(&amp;#34;the addr of a is : %v&amp;#34;, &amp;amp;a) } 输出：the addr of a is : 0xc00000a338,其中地址不是固定的 什么是指针 一个指针变量指向了一个值的内存地址，在指针</description>
+    </item>
+    
     <item>
       <title>一个普通go项目的流程</title>
       <link>https://laurel-he.github.io/go/pipeline/</link>

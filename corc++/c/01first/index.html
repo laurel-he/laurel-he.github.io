@@ -164,7 +164,7 @@
 </span><span class="cp"></span>
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
 <span class="p">{</span>
-    <span class="n">printf</span><span class="p">(</span><span class="err">&#39;</span><span class="n">Hello</span> <span class="n">World</span><span class="o">!</span><span class="err">\</span><span class="n">n</span><span class="err">&#39;</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Hello World!</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
 
     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
@@ -181,10 +181,14 @@ int main()
   //这里是框架内的代码
   return 0;
 }
-</code></pre></div><h3 id="错误提示">错误提示</h3>
+</code></pre></div><p>所有的C代码都必须有这几行</p>
+<h3 id="错误提示">错误提示</h3>
 <p>对于错误的代码会给出提示，对于c语言来说换行不意味着任何事，所以报错的行数不一定是出错的那行。</p>
 <h3 id="对于0">对于0</h3>
 <p>手写0和o难以分辨，于是0中间有个小点或者有条斜线，用以区分。</p>
+<h2 id="编译">编译</h2>
+<p>例如文件叫learn.c,执行<code>gcc learn.c</code>，不指定名称的情况下，生成的可执行文件都是a.out <br>
+执行方式为：<code>./a.out</code></p>
 <h2 id="做一些计算">做一些计算</h2>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
 </span><span class="cp"></span>
