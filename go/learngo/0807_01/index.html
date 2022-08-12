@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <script type="text/javascript"
+        async
+        src="https://cdnjs.cloudflare.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [['$','$']],
+            displayMath: [['$$','$$']],
+            processEscapes: true,
+            processEnvironments: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            TeX: { equationNumbers: { autoNumber: "AMS" },
+                extensions: ["AMSmath.js", "AMSsymbols.js"] }
+        }
+    });
+
+    MathJax.Hub.Queue(function() {
+        
+        
+        
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i = 0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<style>
+    code.has-jax {
+        font: inherit;
+        font-size: 100%;
+        background: inherit;
+        border: inherit;
+        color: #515151;
+    }
+</style>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="贺小娇" />
+	
+	
+	
+	<title>学习go_20220807_01 ｜ xiaoJiao</title>
+	
+    
+    
+    <meta name="description" content="Lock go语言中有两种锁：互斥锁和读写锁 互斥锁Mutex 常用于对并发资源的限制 如果不加锁，在协程中并发执行，最后结果可能非预期： func TestLock(t *testing.T) { counter := 0 for i := 0; i &amp;lt; 500; i&#43;&#43; { go func() { counter&#43;&#43; }() } t.Logf(&amp;#34;counter %d\n&amp;#34;, counter) // 结果几乎都不是500 } 使" />
+    
+
+    
+    
+    <meta name="keywords" content="Hugo, blog, php, go" />
+    
+
+	
+    
+    <link rel="shortcut icon" href="https://laurel-he.github.io/images/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/zozo.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://laurel-he.github.io/css/highlight.css" />
+
+    
+    
+</head>
+
+<body>
+    <div class="main animate__animated animate__fadeInDown">
+        <div class="nav_container animated fadeInDown">
+    <div class="site_nav" id="site_nav">
+        <ul>
+            
+            <li>
+                <a href="/">主页</a>
+            </li>
+            
+            <li>
+                <a href="/categories/">分类</a>
+            </li>
+            
+            <li>
+                <a href="/tags/">标签</a>
+            </li>
+            
+            <li>
+                <a href="/year/">按年</a>
+            </li>
+            
+            <li>
+                <a href="/series/">系列</a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="menu_icon">
+        <a id="menu_icon"><i class="ri-menu-line"></i></a>
+    </div>
+</div>
+        
+<div class="header animated fadeInDown">
+    <div class="site_title_container">
+        <div class="site_title">
+            <h1>
+                <a href="https://laurel-he.github.io/">
+                    <span>xiaoJiao</span>
+                </a>
+            </h1>
+        </div>
+        <div class="description">
+            <p class="sub_title">贺胖娇的编程之旅......</p>
+            <div class="my_socials">
+                
+                
+                <a href="https://github.com/laurel-he" title="github" target="_blank"><i class="ri-github-fill"></i></a>
+                
+                
+                
+                <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1570306409&amp;site=qq&amp;menu=yes" title="qq" target="_blank"><i class="ri-qq-fill"></i></a>
+                
+                
+                
+                <a href="https://stackoverflow.com/users/9809769/laurel-he" title="stack-overflow" target="_blank"><i class="ri-stack-overflow-fill"></i></a>
+                
+                
+                
+                <a href="https://weibo.com/u/3783884100" title="weibo" target="_blank"><i class="ri-weibo-fill"></i></a>
+                
+                
+                <a href="https://laurel-he.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
+                        class="ri-rss-fill"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="content">
+            <div class="post_page">
+                <div class="post animate__animated animate__fadeInDown">
+                    <div class="post_title post_detail_title">
+                        <h2><a href='/go/learngo/0807_01/'>学习go_20220807_01</a></h2>
+                        <span class="date">2022.08.07</span>
+                    </div>
+                    <div class="post_content markdown"><h2 id="lock">Lock</h2>
+<p>go语言中有两种锁：互斥锁和读写锁</p>
+<h3 id="互斥锁mutex">互斥锁Mutex</h3>
+<p>常用于对并发资源的限制 <br>
+如果不加锁，在协程中并发执行，最后结果可能非预期：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nf">TestLock</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">counter</span> <span class="o">:=</span> <span class="mi">0</span>
+	<span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="mi">500</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+		<span class="k">go</span> <span class="kd">func</span><span class="p">()</span> <span class="p">{</span>
+			<span class="nx">counter</span><span class="o">++</span>
+		<span class="p">}()</span>
+	<span class="p">}</span>
+	<span class="nx">t</span><span class="p">.</span><span class="nf">Logf</span><span class="p">(</span><span class="s">&#34;counter %d\n&#34;</span><span class="p">,</span> <span class="nx">counter</span><span class="p">)</span> <span class="c1">// 结果几乎都不是500
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></div><p>使用Mutex加锁后执行：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nf">TestMutexLock</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">counter</span> <span class="o">:=</span> <span class="mi">0</span>
+	<span class="kd">var</span> <span class="nx">mut</span> <span class="nx">sync</span><span class="p">.</span><span class="nx">Mutex</span>
+	<span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="mi">500</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+		<span class="k">go</span> <span class="kd">func</span><span class="p">()</span> <span class="p">{</span>
+			<span class="k">defer</span> <span class="kd">func</span><span class="p">()</span> <span class="p">{</span>
+				<span class="nx">mut</span><span class="p">.</span><span class="nf">Unlock</span><span class="p">()</span>
+			<span class="p">}()</span>
+			<span class="nx">mut</span><span class="p">.</span><span class="nf">Lock</span><span class="p">()</span>
+			<span class="nx">counter</span><span class="o">++</span>
+		<span class="p">}()</span>
+	<span class="p">}</span>
+	<span class="nx">time</span><span class="p">.</span><span class="nf">Sleep</span><span class="p">(</span><span class="nx">time</span><span class="p">.</span><span class="nx">Second</span> <span class="o">*</span> <span class="mi">1</span><span class="p">)</span> <span class="c1">// 这里不加sleep结果不一定正确
+</span><span class="c1"></span>	<span class="nx">t</span><span class="p">.</span><span class="nf">Logf</span><span class="p">(</span><span class="s">&#34;counter %d\n&#34;</span><span class="p">,</span> <span class="nx">counter</span><span class="p">)</span> <span class="c1">// 当sleep 1s且循环次数不算特别大时，结果是正确的
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></div><p>会注意到，使用Mutex加锁后，在最后输出结果前sleep了1s，如果不执行sleep，结果大概率是不正确的，为什么呢？ <br>
+因为主协程可能执行得比较快，导致还没计算出真正的结果就已经输出，因此sleep <br>
+但这里可以提出一个新的问题，如何界定这个sleep的时间？有没有可能sleep设置得不够？因此引出新的方式WaitGroup</p>
+<h4 id="waitgroup">WaitGroup</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nf">TestMutexWaitGroup</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">counter</span> <span class="o">:=</span> <span class="mi">0</span>
+	<span class="kd">var</span> <span class="nx">mut</span> <span class="nx">sync</span><span class="p">.</span><span class="nx">Mutex</span>
+	<span class="kd">var</span> <span class="nx">wg</span> <span class="nx">sync</span><span class="p">.</span><span class="nx">WaitGroup</span>
+	<span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="mi">500</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+		<span class="nx">wg</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+		<span class="k">go</span> <span class="kd">func</span><span class="p">()</span> <span class="p">{</span>
+			<span class="k">defer</span> <span class="kd">func</span><span class="p">()</span> <span class="p">{</span>
+				<span class="nx">mut</span><span class="p">.</span><span class="nf">Unlock</span><span class="p">()</span>
+			<span class="p">}()</span>
+			<span class="nx">mut</span><span class="p">.</span><span class="nf">Lock</span><span class="p">()</span>
+			<span class="nx">counter</span><span class="o">++</span>
+			<span class="nx">wg</span><span class="p">.</span><span class="nf">Done</span><span class="p">()</span>
+		<span class="p">}()</span>
+	<span class="p">}</span>
+	<span class="nx">wg</span><span class="p">.</span><span class="nf">Wait</span><span class="p">()</span>
+	<span class="nx">t</span><span class="p">.</span><span class="nf">Logf</span><span class="p">(</span><span class="s">&#34;counter %d\n&#34;</span><span class="p">,</span> <span class="nx">counter</span><span class="p">)</span> <span class="c1">// 结果几乎都不是500
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></div><h3 id="读写锁rwmutex">读写锁RWMutex</h3>
+<p>1 RWLock读是非互斥锁，写是互斥锁  <br>
+2 读写锁的读锁可以重入，在已经有读锁的情况下，可以任意加锁 <br>
+3 在读锁没有全部解锁的情况下，写操作会阻塞直到所有读锁解锁 <br>
+4 写锁定的情况下，其他协程的读写都会被阻塞，直到写锁解锁 <br>
+5 读写锁本身是互斥的，读需要写锁都解锁，写需要读锁都解锁</p>
+<h2 id="channel">channel</h2>
+<h3 id="无buffer的channel">无buffer的channel</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nf">server</span><span class="p">()</span> <span class="kt">string</span> <span class="p">{</span>
+	<span class="nx">time</span><span class="p">.</span><span class="nf">Sleep</span><span class="p">(</span><span class="nx">time</span><span class="p">.</span><span class="nx">Second</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;run server...&#34;</span><span class="p">)</span>
+	<span class="k">return</span> <span class="s">&#34;server&#34;</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">serverChan</span><span class="p">()</span> <span class="kd">chan</span> <span class="kt">string</span> <span class="p">{</span>
+	<span class="nx">chanTest</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">chan</span> <span class="kt">string</span><span class="p">)</span>
+	<span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+		<span class="k">go</span> <span class="kd">func</span><span class="p">()</span> <span class="p">{</span>
+			<span class="nx">ret</span> <span class="o">:=</span> <span class="nf">server</span><span class="p">()</span>
+			<span class="nx">chanTest</span> <span class="o">&lt;-</span> <span class="nx">ret</span>
+		<span class="p">}()</span>
+	<span class="p">}</span>
+	<span class="k">return</span> <span class="nx">chanTest</span>
+<span class="p">}</span>
+<span class="kd">func</span> <span class="nf">TestChannel</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">retChan</span> <span class="o">:=</span> <span class="nf">serverChan</span><span class="p">()</span>
+	<span class="nx">t</span><span class="p">.</span><span class="nf">Log</span><span class="p">(</span><span class="o">&lt;-</span><span class="nx">retChan</span><span class="p">)</span>
+<span class="p">}</span>
+
+</code></pre></div><h3 id="有buffer的channel">有buffer的channel</h3>
+<p>以上代码，make chan的时候提供buffer长度：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="nx">chanTest</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">chan</span> <span class="kt">string</span><span class="p">)</span>
+</code></pre></div><h3 id="select">select</h3>
+<p>select中的case表示随机取到其中一个，当包含time.After时，会看是否到达设置的时间，到达则表示超时，执行对应代码</p>
+<h4 id="多渠道选择">多渠道选择</h4>
+<p>多个渠道，随机执行：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nf">TestSelectChan</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">retCh1</span> <span class="o">:=</span> <span class="nf">serverChan</span><span class="p">()</span>
+	<span class="nx">retCh2</span> <span class="o">:=</span> <span class="nf">anotherServerChan</span><span class="p">()</span>
+	<span class="nx">time</span><span class="p">.</span><span class="nf">Sleep</span><span class="p">(</span><span class="nx">time</span><span class="p">.</span><span class="nx">Second</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
+	<span class="k">select</span> <span class="p">{</span>
+	<span class="k">case</span> <span class="nx">ret</span> <span class="o">:=</span> <span class="o">&lt;-</span><span class="nx">retCh1</span><span class="p">:</span>
+		<span class="nx">t</span><span class="p">.</span><span class="nf">Logf</span><span class="p">(</span><span class="s">&#34;ret: %v\n&#34;</span><span class="p">,</span> <span class="nx">ret</span><span class="p">)</span>
+	<span class="k">case</span> <span class="nx">ret</span> <span class="o">:=</span> <span class="o">&lt;-</span><span class="nx">retCh2</span><span class="p">:</span>
+		<span class="nx">t</span><span class="p">.</span><span class="nf">Logf</span><span class="p">(</span><span class="s">&#34;ret: %v\n&#34;</span><span class="p">,</span> <span class="nx">ret</span><span class="p">)</span>
+	<span class="k">case</span> <span class="o">&lt;-</span><span class="nx">time</span><span class="p">.</span><span class="nf">After</span><span class="p">(</span><span class="nx">time</span><span class="p">.</span><span class="nx">Second</span> <span class="o">*</span> <span class="mi">1</span><span class="p">):</span>
+		<span class="nx">t</span><span class="p">.</span><span class="nf">Log</span><span class="p">(</span><span class="s">&#34;break......&#34;</span><span class="p">)</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><h4 id="超时控制">超时控制</h4>
+<p>上文中的<code>case &lt;-time.After(time.Second * 1)</code>即为超时控制</p>
+<h4 id="channel的关闭与广播">channel的关闭与广播</h4>
+<p>向关闭的channel发送数据，会导致panic：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nf">closeChan</span><span class="p">()</span> <span class="kd">chan</span> <span class="kt">string</span> <span class="p">{</span>
+	<span class="nx">chanTest</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">chan</span> <span class="kt">string</span><span class="p">)</span>
+	<span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+		<span class="k">go</span> <span class="kd">func</span><span class="p">()</span> <span class="p">{</span>
+			<span class="nx">chanTest</span> <span class="o">&lt;-</span> <span class="s">&#34;aaa&#34;</span>
+		<span class="p">}()</span>
+	<span class="p">}</span>
+	<span class="nb">close</span><span class="p">(</span><span class="nx">chanTest</span><span class="p">)</span>
+	<span class="k">return</span> <span class="nx">chanTest</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">TestSendCloseToChannelPanic</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nf">closeChan</span><span class="p">()</span>
+<span class="p">}</span>
+</code></pre></div><p>事实上，以上代码看起来好像是最后才关闭的chan，但实际上协程可能没执行完，当for循环的次数足够多，几乎都会出现以下报错：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">panic: send on closed channel
+</code></pre></div><p>对于此案例来说，要想解决问题，可以尝试之前用过的加锁方式：</p>
+<h4 id="判断channel是否正常">判断channel是否正常</h4>
+</div>
+                    <div class="post_footer">
+                        
+                        <div class="meta">
+                            <div class="info">
+                                <span class="field tags">
+                                    <i class="ri-stack-line"></i>
+                                    
+                                    <a href="https://laurel-he.github.io/tags/%E5%AD%A6%E4%B9%A0/">学习</a>
+                                    
+                                    <a href="https://laurel-he.github.io/tags/%E8%AF%AD%E8%A8%80/">语言</a>
+                                    
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                
+                
+<div class="doc_comments">
+    <div class="comments_block_title">发表评论</div>
+    <div id="vcomments"></div>
+</div>
+
+<link rel="stylesheet" href="https://laurel-he.github.io/css/comments.css" />
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
+<script type="text/javascript">
+    new Valine({
+        el: '#vcomments',
+        appId: 'SWEItAag34n7U5AR3T95AhRG-gzGzoHsz',
+        appKey: 'zAM901B4LKIxfrnTb7ie5e5K',
+        placeholder: '在此输入评论...',
+        visitor: 'true',
+    })
+</script>
+                
+            </div>
+        </div>
+    </div>
+    <a id="back_to_top" href="#" class="back_to_top"><i class="ri-arrow-up-s-line"></i></a>
+    <footer class="footer">
+    <script type="text/javascript"
+            src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    <style>
+        code.has-jax {font: inherit;
+            font-size: 100%;
+            background: inherit;
+            border: inherit;
+            color: #515151;}
+    </style>
+    <div class="powered_by">
+        <a href="https://varkai.com">Designed by VarKai,</a>
+        <a href="http://www.gohugo.io/">Proudly published with Hugo</a>
+    </div>
+
+    <div class="footer_slogan">
+        <span>绝知此事要躬行</span>
+    </div>
+</footer>
+    <script src="https://laurel-he.github.io/js/jquery-3.5.1.min.js"></script>
+<link href="https://laurel-he.github.io/css/fancybox.min.css" rel="stylesheet">
+<script src="https://laurel-he.github.io/js/fancybox.min.js"></script>
+<script src="https://laurel-he.github.io/js/zozo.js"></script>
+
+
+
+
+</body>
+
+</html>
